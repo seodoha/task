@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+body {height: 100vh;overflow: hidden;}
+section {position: relative;height: 100%;}
+article {position: absolute;top: 100%;left: 0;right: 0;height: 100%;}
+article:first-of-type {top: 0;background: url(../images/temp/bg01.jpg) no-repeat center;background-size: 100% 100%;}
+article:nth-of-type(2) {background: url(../images/temp/bg02.jpg) no-repeat center;background-size: 100% 100%;}
+article:nth-of-type(3) {background: url(../images/temp/bg03.jpg) no-repeat center;background-size: 100% 100%;}
+article:nth-of-type(4) {background: url(../images/temp/bg04.jpg) no-repeat center;background-size: 100% 100%;}
+
+aside {position: fixed;right: 40px;top: 50%;transform: translateY(-50%);z-index: 99;}
+aside li {line-height: 0;font-size: 0;}
+aside li a {width: 12px;height: 12px;border-radius: 15px;transition: all 0.3s;font-size: 0;background-color: #000;border: 1px solid #fff}
+aside li ~li {margin-top: 10px;}
+aside li.on a {height: 30px;}
