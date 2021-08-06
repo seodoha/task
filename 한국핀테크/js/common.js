@@ -165,6 +165,8 @@ App.Gnb = (function () {
             $(window).on('load resize', function(){
                 if ( $(window).width() > 768 ) {
                     $mo_gnb.fadeOut('fast');
+                    scrollAble();
+                    $(window).off('mousewheel');
                     $header.removeClass('fixed');
                 } else {
                     fixHeader();
@@ -177,6 +179,7 @@ App.Gnb = (function () {
                     scrollTop >= $contentsPosi ? $header.addClass('fixed') : $header.removeClass('fixed');
                 });
             }
+            
         }
     }
 })();
