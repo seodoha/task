@@ -17,9 +17,6 @@ function scrollAble() {
 
 $(document).ready(function(){
     App.Common.init();
-    App.Gnb.init();
-    $('.tab-wrap').length && App.Tab.init();
-    // App.Popup.init();
 });
 
 //---------------------------------------------------------------------------------------
@@ -61,53 +58,37 @@ App.Common = (function() {
                 var a = $(window).scrollTop(),
                     c = 0,
                     d = -50,
-                    _value = a * ( d - c ) / _sec01Top + c;
+                    _sec01Value = a * ( d - c ) / _sec01Top + c;
                     
-                    _value > -50 && $mainVi.css('top', _value + "%");
-                    a > _sec01Top ? $sec01.css({'position' : 'fixed', 'top' : '0'}) : $sec01.css({'position' : 'absolute', 'top' : _sec01Top});
-                    a > _sec02Top ? $sec02.css({'position' : 'fixed', 'top' : '0'}) : $sec02.css({'position' : 'absolute', 'top' : _sec02Top});
-                    a > _sec03Top ? $sec03.css({'position' : 'fixed', 'top' : '0'}) : $sec03.css({'position' : 'absolute', 'top' : _sec03Top});
-                    a > _sec04Top ? $sec04.css({'position' : 'fixed', 'top' : '0'}) : $sec04.css({'position' : 'absolute', 'top' : _sec04Top});
+                    // console.log(a);
+
+                    _sec01Value > -50 && $mainVi.css('top', _sec01Value + "%");
+                    if ( a > _sec01Top && a < _sec02Top) {
+                        a = a - $(window).height();
+                        var _sec02Value = a * ( d - c ) / _sec01Top + c;
+                        $sec01.css({'position' : 'fixed', 'top' : _sec02Value + "%"});
+                    } else {
+                        $sec01.css({'position' : 'absolute', 'top' : _sec01Top});
+                    }
+
+                    if ( a > _sec02Top && a < _sec03Top ) {
+                        a = a - $(window).height() * 2;
+                        var _sec03Value = a * ( d - c ) / _sec01Top + c;
+                        $sec02.css({'position' : 'fixed', 'top' : _sec03Value + "%"});
+                    } else {
+                        $sec02.css({'position' : 'absolute', 'top' : _sec02Top});
+                    }
+
+                    if ( a > _sec03Top && a < _sec04Top ) {
+                        a = a - $(window).height() * 3;
+                        var _sec04Value = a * ( d - c ) / _sec01Top + c;
+                        $sec03.css({'position' : 'fixed', 'top' : _sec04Value + "%"});
+                    } else {
+                        $sec03.css({'position' : 'absolute', 'top' : _sec03Top});
+                    }
+
         
             });
         },
-    }
-})();
-
-//---------------------------------------------------------------------------------------
-// GNB
-//---------------------------------------------------------------------------------------
-App.Gnb = (function () {
-    var self;
-    return {
-        init: function () {
-            self = this;
-            self.mobile();
-            self.pc();
-            
-        },
-        pc : function () {
-           
-        },
-        mobile: function () {
-            
-            
-        }
-    }
-})();
-
-//---------------------------------------------------------------------------------------
-// Carousel (swiper)
-//---------------------------------------------------------------------------------------
-App.Carousel = (function(){
-    var self, name, type;
-    
-    return { 
-        init : function(carousel_name, option, type) {
-            self = this;
-            name = carousel_name;
-            
-            new Swiper(name, option);
-        }
     }
 })();

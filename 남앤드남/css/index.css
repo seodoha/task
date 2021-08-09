@@ -2,9 +2,9 @@
 
 body {height: 100vh;}
 main {padding-top: 100vh;height: 100%;}
-section {position: absolute;width: 100%;height: 100vh;left: 0;top: 0;}
-.mainVi {position: fixed;left: 0;right: 0;top: 0;background: url(../images/temp/bg01.jpg) no-repeat center;background-size: 100% 100%;z-index: -1;}
-.sec01 {background: url(../images/temp/bg02.jpg) no-repeat center;background-size: 100% 100%;}
-.sec02 {background: url(../images/temp/bg03.jpg) no-repeat center;background-size: 100% 100%;}
-.sec03 {background: url(../images/temp/bg04.jpg) no-repeat center;background-size: 100% 100%;}
-.sec04 {background: url(../images/temp/bg05.jpg) no-repeat center;background-size: 100% 100%;}
+section {position: absolute;left: 0;top: 0;width: 100%;height: 100vh;background-repeat: no-repeat;background-size: 100% 100%;}
+.mainVi {position: fixed;left: 0;right: 0;top: 0;background-image: url(../images/temp/bg01.jpg);z-index: -1;}
+.sec01 {background-image: url(../images/temp/bg02.jpg);}
+.sec02 {background-image: url(../images/temp/bg03.jpg);}
+.sec03 {background-image: url(../images/temp/bg04.jpg);}
+.sec04 {background-image: url(../images/temp/bg05.jpg);}
