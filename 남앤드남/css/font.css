@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+
+/**
+	기본 서체
+**/
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 200;
+	src:url('../font/NotoSansKR-Light.eot');
+	src:url('../font/NotoSansKR-Light.eot?#iefix') format('embedded-opentype'),
+	url('../font/NotoSansKR-Light.woff2') format('woff2'),
+	url('../font/NotoSansKR-Light.woff') format('woff'),
+	url('../font/NotoSansKR-Light.otf') format('opentype'),
+	url('../font/NotoSansKR-Light.svg') format('svg');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	src:url('../font/NotoSansKR-Regular.eot');
+	src:url('../font/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../font/NotoSansKR-Regular.woff2') format('woff2'),
+	url('../font/NotoSansKR-Regular.woff') format('woff'),
+	url('../font/NotoSansKR-Regular.otf') format('opentype'),
+	url('../font/NotoSansKR-Regular.svg') format('svg');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 600;
+	src:url('../font/NotoSansKR-Bold.eot');
+	src:url('../font/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../font/NotoSansKR-Bold.woff2') format('woff2'),
+	url('../font/NotoSansKR-Bold.woff') format('woff'),
+	url('../font/NotoSansKR-Bold.otf') format('opentype'),
+	url('../font/NotoSansKR-Bold.svg') format('svg');
+}
+/**
+	영문 및 숫자 표기 시
+**/
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 200;
+	src:url('../font/Lato-Light.eot');
+	src:url('../font/Lato-Light.eot?#iefix') format('embedded-opentype'),
+	url('../font/Lato-Light.woff2') format('woff2'),
+	url('../font/Lato-Light.woff') format('woff'),
+	url('../font/Lato-Light.ttf') format('truetype'),
+	url('../font/Lato-Light.svg#Lato') format('svg');
+}
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src:url('../font/Lato-Regular.eot');
+	src:url('../font/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../font/Lato-Regular.woff2') format('woff2'),
+	url('../font/Lato-Regular.woff') format('woff'),
+	url('../font/Lato-Regular.ttf') format('truetype'),
+	url('../font/Lato-Regular.svg#Lato') format('svg');
+}
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 600;
+	src:url('../font/Lato-Bold.eot');
+	src:url('../font/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../font/Lato-Bold.woff2') format('woff2'),
+	url('../font/Lato-Bold.woff') format('woff'),
+	url('../font/Lato-Bold.ttf') format('truetype'),
+	url('../font/Lato-Bold.svg#Lato') format('svg');
+}
