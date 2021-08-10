@@ -7,7 +7,7 @@
 /*** Common ***/
 * {margin:0;padding:0;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;outline: none;word-break: keep-all;}
 html,body {min-height:100vh;-webkit-margin-start:0;-webkit-padding-start:0px;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;}
-body {position: relative;min-width: 1340px;max-width: 1920px;background: #fff;font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", "돋움", Dotum,"굴림", Gulim, Tahoma, Verdana, Geneva, sans-serif, Apple Gothic,AppleGothic;font-size: 14px;font-weight: 400;color: #111;-webkit-text-size-adjust: none;font-smoothing: antialiased;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+body {position: relative;min-width: 1340px;max-width: 1920px;background: #fff;font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", "돋움", Dotum,"굴림", Gulim, Tahoma, Verdana, Geneva, sans-serif, Apple Gothic,AppleGothic;font-size: 14px;font-weight: 400;color: #000;-webkit-text-size-adjust: none;font-smoothing: antialiased;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
 img,
 fieldset,
 button {border: none}

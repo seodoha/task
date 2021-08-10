@@ -8,20 +8,86 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="robots" content="index, follow">
-    <title>fullpage 스크립트 작업</title>
+    <title>남앤드남인터내셔널</title>
     <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     
     <div id="wrap">
+        <header>
+            <h1 class="logo">
+                <a href="#">
+                    <img src="./images/common/logo.png" alt="남앤드남인터내셔널">
+                    <img src="./images/common/logo_on.png" alt="남앤드남인터내셔널" class="active01">
+                </a>
+            </h1>
+            <button class="btnMenu">메뉴버튼</button>
+        </header>
         <main>
-            <section class="mainVi">01</section>
-            <section class="sec01">02</section>
-            <section class="sec02">03</section>
+            <section class="mainVi">
+                <div class="swiper-container mainViSlide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide bg01">
+                            <div>
+                                <strong>Global REACH 컨설팅 전문 기업</strong>
+                                <span>고객의 곁에서<br/>성공에 집중합니다</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg02">
+                            <div>
+                                <strong>인간과 자연, 그리고 고객 성공을 위한 컨설팅</strong>
+                                <span>고객의 곁에서<br/>성공에 집중합니다</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg03">
+                            <div>
+                                <strong>지속 가능한 미래를 위한 비즈니스</strong>
+                                <span>고객을 위한 지속가능한<br/>가치를 지켜갑니다</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="typeList">
+                    <li><a href="#"><strong>화관법</strong></a></li>
+                    <li><a href="#"><strong>화평법</strong></a></li>
+                    <li><a href="#"><strong>화학제품안전법</strong></a></li>
+                    <li><a href="#"><strong>GHS/CLP/SDS</strong></a></li>
+                </ul>
+            </section>
+            <section class="sec01">
+                <div class="inner">
+                    <dl class="gridSet">
+                        <dt>
+                            <sup>01</sup>
+                            <strong>시작</strong>
+                        </dt>
+                        <dd>
+                            <span class="txt01">2008년부터 한국 기업의<br/>해외 진출을 도와온 남앤드남 인터내셔널</span>
+                            <span class="txt02">K-REACH에서 그 노하우를 이어갑니다.</span>
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+            <section class="sec02">
+                <div class="inner">
+                    <dl class="gridSet">
+                        <dt>
+                            <sup>02</sup>
+                            <strong>경험</strong>
+                        </dt>
+                        <dd>
+                            <span class="txt01">고객의 믿음과 함께해 온<br>남앤드남 인터내셔널의<br>컨설팅 솔루션</span>
+                        </dd>
+                    </dl>
+                </div>
+            </section>
             <section class="sec03">04</section>
             <section class="sec04">05</section>
         </main>
