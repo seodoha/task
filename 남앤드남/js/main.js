@@ -10,15 +10,23 @@ $(document).ready(function(){
 // Main
 //---------------------------------------------------------------------------------------
 App.Main = (function () {
-    var self;    
-    
+    var self;
+
     return {
         init: function () {
             self = this;
             self.sectionInit();
             self.sectionScroll();
-            self.slide();
             self.scrollAni();
+
+            new Swiper('.mainViSlide', {
+                slidesPerView: 1,
+                effect: "fade",
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                },
+            });
         },
         sectionInit: function() {
             $('section').each(function(index, item){
@@ -32,10 +40,12 @@ App.Main = (function () {
                 $sec02 = $('.sec02'),
                 $sec03 = $('.sec03'),
                 $sec04 = $('.sec04'),
-                _sec01Top = $('.sec01').offset().top,
-                _sec02Top = $('.sec02').offset().top,
-                _sec03Top = $('.sec03').offset().top,
-                _sec04Top = $('.sec04').offset().top;
+                $sec05 = $('.sec05'),
+                _sec01Top = $sec01.offset().top,
+                _sec02Top = $sec02.offset().top,
+                _sec03Top = $sec03.offset().top,
+                _sec04Top = $sec04.offset().top,
+                _sec05Top = $sec05.offset().top;
 
             $(window).on('scroll', function() {
                 var a = $(window).scrollTop(),
@@ -49,7 +59,7 @@ App.Main = (function () {
                 if ( a > _sec01Top && a < _sec02Top) {
                     a = a - $(window).height();
                     var _sec02Value = a * ( d - c ) / _sec01Top + c;
-                    $sec01.addClass('ani').css({'position' : 'fixed', 'top' : _sec02Value + "%"});
+                    $sec01.css({'position' : 'fixed', 'top' : _sec02Value + "%"});
                     $header.addClass('index01');
                 } else {
                     $sec01.css({'position' : 'absolute', 'top' : _sec01Top});
@@ -71,26 +81,37 @@ App.Main = (function () {
                 } else {
                     $sec03.css({'position' : 'absolute', 'top' : _sec03Top});
                 }
+
+                if ( a > _sec04Top && a < _sec05Top ) {
+                    a = a - $(window).height() * 4;
+                    var _sec05Value = a * ( d - c ) / _sec01Top + c;
+                    $sec04.css({'position' : 'fixed', 'top' : _sec05Value + "%"});
+                } else {
+                    $sec04.css({'position' : 'absolute', 'top' : _sec04Top});
+                }
             });
         },
-        slide: function() {
-            var mainSwiper, 
-                main_opt;
-
-            /** 메인 비주얼 **/
-            main_opt = {
-                slidesPerView: 1,
-                effect: "fade",
-                loop: true,
-                autoplay: {
-                    delay: 5000,
-                },
-            };
-            mainSwiper = new Swiper('.mainViSlide', main_opt);
-            
-        },
         scrollAni: function() {
+            var $sec01 = $('.sec01'),
+                $sec02 = $('.sec02'),
+                $sec03 = $('.sec03'),
+                $sec04 = $('.sec04'),
+                $sec05 = $('.sec05'),
+                _sec01Top = $sec01.offset().top - 500,
+                _sec02Top = $sec02.offset().top - 500,
+                _sec03Top = $sec03.offset().top - 500,
+                _sec04Top = $sec04.offset().top - 500,
+                _sec05Top = $sec05.offset().top - 500;
 
+            $(window).on('scroll', function() {
+                var scTop = $(window).scrollTop();
+
+                scTop > _sec01Top && $sec01.addClass('ani');
+                scTop > _sec02Top && $sec02.addClass('ani');
+                scTop > _sec03Top && $sec03.addClass('ani');
+                scTop > _sec04Top && $sec04.addClass('ani');
+                scTop > _sec05Top && $sec05.addClass('ani');
+            });
         },
     }
 })();
