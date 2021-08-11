@@ -1,11 +1,7 @@
-/**	Main 퍼블 사용 js **/
-
 'use strict';
 
 $(document).ready(function(){
     App.Main.init();
-
-    
 });
 
 //---------------------------------------------------------------------------------------
@@ -62,31 +58,53 @@ App.Main = (function () {
                     a = a - $(window).height();
                     var _sec02Value = a * ( d - c ) / _sec01Top + c;
                     $header.addClass('index01');
-                    $sec01.css({'position' : 'fixed', 'top' : _sec02Value + "%"});
+                    $sec01.css({
+                        'position' : 'fixed',
+                        'top' : _sec02Value + "%",
+                    });
                 } else {
                     $header.removeClass('index01');
-                    $sec01.css({'position' : 'absolute', 'top' : _sec01Top});
+                    $sec01.css({
+                        'position' : 'absolute',
+                        'top' : _sec01Top,
+                        'opacity' : '' + a / 900
+                    });
                 }
 
                 if ( a > _sec02Top && a < _sec03Top ) {
-                    $sec02.css({'position' : 'fixed', 'top' : 0});
+                    $sec02.css({
+                        'position' : 'fixed',
+                        'top' : 0
+                    });
                     a = a - $(window).height() * 2 - 600;
                     var _sec03Value = a * ( d - c ) / _sec01Top + c;
                     
                     if ( $(window).scrollTop() > _sec02Top + 600 ) {
-                        $sec02.css({'top' : _sec03Value + "%"});
+                        $sec02.css({
+                            'top' : _sec03Value + "%"
+                        });
                     }
 
                 } else {
-                    $sec02.css({'position' : 'absolute', 'top' : _sec02Top});
+                    $sec02.css({
+                        'position' : 'absolute',
+                        'top' : _sec02Top,
+                        'opacity' : '' + a / 900
+                    });
                 }
 
                 if ( a > _sec03Top ) {
                     a = a - $(window).height() * 3;
                     var _sec04Value = a * ( d - c ) / _sec01Top + c;
-                    $sec03.css({'position' : 'fixed', 'top' : _sec04Value + "%"});
+                    $sec03.css({
+                        'position' : 'fixed',
+                        'top' : _sec04Value + "%"
+                    });
                 } else {
-                    $sec03.css({'position' : 'absolute', 'top' : _sec03Top});
+                    $sec03.css({
+                        'position' : 'absolute',
+                        'top' : _sec03Top
+                    });
                 }                
             });
         },
@@ -103,7 +121,7 @@ App.Main = (function () {
             $(window).on('scroll', function(e) {
                 var scTop = $(window).scrollTop();
 
-                scTop > _sec01Top && $sec01.addClass('ani');
+                scTop > _sec01Top ? $sec01.addClass('ani') : $sec01.removeClass('ani');
                 if ( scTop > _sec02Top ) {
                     $sec02.addClass('ani');
                     
@@ -200,10 +218,14 @@ App.Main = (function () {
                             }, 1000);
                         }
                     }
-    
+                } else {
+                    $sec02.removeClass('ani');
+                    $secInfo.eq(0).removeClass('active').stop().animate({
+                        'top':'-80%',
+                        'opacity':'0',
+                        'z-index':'-1'
+                    }, 200);
                 }
-
-
             });
         },
     }
