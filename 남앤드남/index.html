@@ -11,17 +11,15 @@
     <title>남앤드남인터내셔널</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
-    <link rel="stylesheet" href="./css/odometer-theme-default.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/swiper.min.js"></script>
-    <script src="js/odometer.min.js"></script>
+    <script src="js/countUp.umd.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
-    
     <div id="wrap">
         <header>
             <h1 class="logo">
@@ -58,10 +56,46 @@
                     </div>
                 </div>
                 <ul class="typeList">
-                    <li><a href="#"><strong>화관법</strong></a></li>
-                    <li><a href="#"><strong>화평법</strong></a></li>
-                    <li><a href="#"><strong>화학제품안전법</strong></a></li>
-                    <li><a href="#"><strong>GHS/CLP/SDS</strong></a></li>
+                    <li>
+                        <a href="#">
+                            <strong>화평법</strong>
+                            <span class="aniBox aniCircle01">
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <strong>화관법</strong>
+                            <span class="aniBox"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <strong>화학제품안전법</strong>
+                            <span class="aniBox"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <strong>국외물질규제</strong>
+                            <span class="aniBox"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <strong>GHS/CLP/SDS</strong>
+                            <span class="aniBox"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <strong>자문 및 교육</strong>
+                            <span class="aniBox"></span>
+                        </a>
+                    </li>
                 </ul>
             </section>
             <section class="sec01">
@@ -92,19 +126,19 @@
 
                             <div class="sec02Info">
                                 <em>Client</em>
-                                <strong class="odometer">0</strong>
+                                <strong id="count01">0</strong>
                                 <span class="txt03">남앤드남과 신뢰로 함께한 세계 각국의 고객사<br>한국, 미국, 유럽, 중국 등 세계 각국의 고객사들과<br>신뢰로 함께하였습니다.</span>
                             </div>
 
                             <div class="sec02Info">
                                 <em>Chemicals</em>
-                                <strong class="odometer odometer02">0</strong>
+                                <strong id="count02">0</strong>
                                 <span class="txt03">등록 업무를 대리한 화학물의 수<br>오랜 기간 수 많은 화학물질 등록 업무 경험을<br>축적하였습니다.</span>
                             </div>
 
                             <div class="sec02Info">
                                 <em>Representative</em>
-                                <strong class="odometer odometer03">40</strong>
+                                <strong id="count03">0</strong>
                                 <span class="txt03">남앤드남이 대표로 등록한 화학물 가짓수<br>협의체를 주도하여 대표자로서<br>화학물질 등록에 성공하였습니다.</span>
                             </div>
                         </dd>
@@ -112,10 +146,68 @@
                 </div>
             </section>
             <section class="sec03">
-
+                <div class="inner">
+                    <dl class="gridSet">
+                        <dt>
+                            <sup>03</sup>
+                            <h2>가치</h2>
+                            <ul class="tabList">
+                                <li class="on"><a href="#">법률정보</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자료실</a></li>
+                            </ul>
+                        </dt>
+                        <dd>
+                            <div class="tabContents">
+                                <div class="on">
+                                    <ul class="noticeList">
+                                        <li>
+                                            <span class="date">07.21</span>
+                                            <strong>안전확인대상생활화학제품의 정보공개에 관한 고시 제정(안) 행정예고 (환경부공고제2021-390호)</strong>
+                                            <a href="#" class="more">READ MORE</a>
+                                        </li>
+                                        <li>
+                                            <span class="date">07.21</span>
+                                            <strong>안전확인대상생활화 학제품의 정보공개에 관한 고시 제정(안) 행정예고 (환경부공고제2021-390호)</strong>
+                                            <a href="#" class="more">READ MORE</a>
+                                        </li>
+                                        <li>
+                                            <span class="date">07.21</span>
+                                            <strong>안전확인대상생활화학제품의 정보공개에 관한 고시 제정(안) 행정예고 (환경부공고제2021-390호)</strong>
+                                            <a href="#" class="more">READ MORE</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="bussinessInfo">
+                        <button class="btnTop">상위</button> 
+                        <ul>
+                             <li><a href="#">면책공고</a></li>
+                             <li><a href="#">NNI협의체시스템</a></li>
+                             <li><a href="#">MY포털</a></li>
+                         </ul>
+                         <address>
+                             <span>서울시 중구 서소문로 95 정안빌딩 4층 (우 04516)</span>
+                             <span>Tel : 02-779-5477</span>
+                             <span>Fax : 02-753-5279</span>
+                         </address>
+                     </div>
+                </div>
             </section>
         </main>
+        <footer>
+            <div class="inner">
+                <strong>고객 성공의 길,<br>남앤드남인터내셔널이 함께하겠습니다.</strong>
+            </div>
+        </footer>
     </div>
-    
+    <div class="scrollProgress">
+        <div class="progressBar"><span></span></div>
+        <span>SCROLL DOWN</span>
+    </div>
 </body>
 </html>

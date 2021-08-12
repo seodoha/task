@@ -31,6 +31,13 @@ App.Common = (function() {
             self.common();
         },
         common : function() {
+            $('.btnTop').on('click', function() {
+                $('html,body').stop().animate({'scrollTop' : '0'});
+                $('footer').css({
+                    'opacity':'0',
+                    'z-index':'-1'
+                });
+            });
         },
         
     }
