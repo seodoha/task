@@ -29,6 +29,13 @@ App.Main = (function () {
                     delay: 5000,
                 },
             });
+
+            $('.btnMenu').on('click', function(){
+                $('#gnb').stop().fadeIn('fast');
+            });
+            $('#gnb').on('click', function(){
+                $(this).stop().fadeOut('fast');
+            });
         },
         sectionInit: function() {
             var sumHeight = 0,
@@ -38,7 +45,7 @@ App.Main = (function () {
                 $('.typeList').animate({
                     scrollTop : 800
                 }, 1400);
-            }, 500);
+            }, 200);
 
             $('.progressBar span').css({'height':'25%'});
 
@@ -148,6 +155,7 @@ App.Main = (function () {
                 _sec02Posi02 = $sec02.offset().top + 1000,
                 _sec02Posi03 = $sec02.offset().top + 1800,
                 _sec03Posi = $sec03.offset().top + 1500,
+                _sec03Posi02 = $sec03.offset().top + 2200,
                 _count01 = new countUp.CountUp('count01', 120),
                 _count02 = new countUp.CountUp('count02', 2000),
                 _count03 = new countUp.CountUp('count03', 40),
@@ -257,11 +265,15 @@ App.Main = (function () {
                                 'z-index': '0'
                             }, 200);
                             if ( !_count03Flag ) {
-                                _count03.start();
-                                _count03Flag = true;
+                                setTimeout(function() {
+                                    _count03.start();
+                                    _count03Flag = true;
+                                }, 700);
                             } else {
-                                _count03.reset();
-                                _count03.update(40);
+                                setTimeout(function() {
+                                    _count03.reset();
+                                    _count03.update(40);
+                                }, 700);
                             }
                         }
                     }
@@ -283,7 +295,7 @@ App.Main = (function () {
                         $sec03.removeClass('ani');
                     }
 
-                    scTop > _sec03Posi ? $footer.addClass('ani') : $footer.removeClass('ani');
+                    scTop > _sec03Posi02 ? $footer.addClass('ani') : $footer.removeClass('ani');
                     
                 } else {
                     $sec02.removeClass('ani');
