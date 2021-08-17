@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select</title>
-    <link rel="stylesheet" href="jquery.mCustomScrollbar.min.css">
     <style>
         * {margin: 0;padding: 0;box-sizing: border-box;}
         li {list-style: none;}
@@ -25,7 +24,6 @@
         .mCSB_container {width: 100%;}
     </style>
     <script src="../jquery-1.12.0.min.js"></script>
-    <script src="jquery.mCustomScrollbar.concat.min.js"></script>
 </head>
 <body>
     <section>
@@ -83,7 +81,7 @@
                 $scrollCount = $custom.prev().attr('data-scroll');
 
             $('.select-item').stop().slideUp('fast');
-            $list.css({'height' : $itemH * $scrollCount}).mCustomScrollbar();
+            $list.css({'height' : $itemH * $scrollCount});
 
 
             $(this).parent().toggleClass('on');
