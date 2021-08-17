@@ -85,8 +85,6 @@
             $parent.find('li').removeClass('select');
             $(this).addClass('select');
             $parent.stop().slideUp('fast').siblings('.label').text($txt);
-
-            console.log($(this).closest('.customSelectWrap').prev());
             $select.find('option').eq(index).prop('selected', true);
         });
     </script>
