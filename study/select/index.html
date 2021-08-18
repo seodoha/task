@@ -87,9 +87,7 @@
                     maxCount = Number('-' + ($('li', this).length - viewCount)),
                     $track = $('.scrollBar .track',this);
 
-                console.log($('li', this).length);
-                console.log(viewCount);
-
+                    console.log(wheelCount);
                 if ( wheel > 0 ) {
                     if ( wheelCount < 0 ) wheelCount++;
                 } else {
@@ -129,6 +127,7 @@
             let $parent = $(this).closest('.select-item'),
                 $txt = $(this).text(),
                 $select = $(this).closest('.customSelectWrap').prev(),
+                $scrollCount = $(this).closest('.customSelectWrap').prev().attr('data-scroll'),
                 index = $(this).index();
 
             $parent.find('li').removeClass('select');
@@ -136,6 +135,10 @@
             $parent.stop().slideUp('fast').siblings('.label').text($txt);
             $('.customSelectWrap').removeClass('on');
             $select.find('option').eq(index).prop('selected', true);
+            
+            wheelCount = '-' + (index - ($scrollCount - 1));
+            $(this).parent().css({'top': wheelCount * 40 });
+
         });
 
         $('body').on('click', function(e){
