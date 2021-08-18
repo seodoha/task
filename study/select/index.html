@@ -16,35 +16,41 @@
         .customSelectWrap button {display: block;position: relative;padding: 0 38px 0 10px;width: 100%;line-height: 38px;border: 1px solid #ddd;background-color: #f8f8f8;overflow: hidden;text-overflow: ellipsis;user-select: none;font-weight: 400;font-size: 12px;cursor: pointer;white-space: nowrap;}
         .customSelectWrap button::after {content: " ";position: absolute;right: 10px;top: 50%;transform: translateY(-50%);width: 0;height: 0;border: 4px solid transparent;border-top-color: #BBB;border-bottom: none;}
         .customSelectWrap.on button::after {border-top: none;border-bottom: 4px solid #bbb;}
-        .customSelectWrap .select-item {display: none;position: absolute;width: 100%;border: 1px solid #ddd;z-index: 1;overflow: auto;}
+        .customSelectWrap .select-item {display: none;position: absolute;width: 100%;z-index: 1;overflow: hidden;}
+        .customSelectWrap .select-item ul {position: absolute;width: 100%;border: 1px solid #ddd;}
+        /* .customSelectWrap .select-item ul::-webkit-scrollbar {display: none;} */
         .customSelectWrap .select-item li {padding: 10px;font-size: 12px;line-height: 20px;background-color: #f8f8f8;cursor: pointer;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
         .customSelectWrap .select-item li.select,
         .customSelectWrap .select-item li:hover {background-color: #D0D0D0;}
         .customSelectWrap .select-item li ~ li {border-top: 1px solid #ddd;}
-        .mCSB_container {width: 100%;}
+        .scrollBar {position: absolute;right: 0;top: 0;width: 10px;height: 100%;background-color: violet;}
+        .scrollBar .track {position: absolute;left: 50%;top: 0;margin: 5px 0 10px -3px;width: 6px;height: 40px;border-radius: 10px;background-color: aqua;}
     </style>
     <script src="../jquery-1.12.0.min.js"></script>
 </head>
 <body>
     <section>
-        <select data-module="customSelect" data-scroll="3">
+        <select data-module="customSelect" data-scroll="5">
             <option value="realmadrid">레알마드리드</option>
             <option value="barcelona">바르셀로나</option>
-            <option value="valencia" selected>발렌시아</option>
+            <option value="valencia">발렌시아</option>
             <option value="atmadrid">아틀레티코마드리드</option>
             <option value="sevilla">세비야</option>
+            <option value="sociedad">레알소시에다드</option>
+            <option value="betis" selected>베티스</option>
         </select>
         <br><br>
-        <select data-module="customSelect" data-scroll="4">
-            <option value="">인터밀란</option>
-            <option value="">유벤투스</option>
-            <option value="">AC밀란</option>
-            <option value="">로마</option>
+        <select data-module="customSelect" data-scroll="3">
+            <option value="interMilan">인터밀란</option>
+            <option value="juventus">유벤투스</option>
+            <option value="milan">AC밀란</option>
+            <option value="asRoma" selected>AS로마</option>
         </select>
     </section>
     <script>
         $('[data-module="customSelect"]').length && customSelect();
-        
+        let wheelCount = 0;
+
         function customSelect() {
             let $el = $('[data-module="customSelect"]');
 
@@ -52,7 +58,7 @@
                 let itemW = $(elItem).width(),
                     $customSelect = '<div class="customSelectWrap">',
                     $lab = '<button class="label">',
-                    $opt = '<ul class="select-item">';
+                    $opt = '<div class="select-item"><ul>';
 
                 if ( $(elItem).find('option').length > 0 ) {
                     $(elItem).find('option').each(function(index, item) {
@@ -66,30 +72,61 @@
                         }
 
                     });
-                    $opt += '</ul>';
+                    $opt += '</ul></div>';
                 }
                 
                 $customSelect = $customSelect + $lab + $opt + '</div>';
                 $(elItem).addClass('hide-select').after($customSelect);
             })
-        }
+        };
+
+        function selectScroll() {
+            $('.select-item').on('scroll mousewheel', function(e){
+                let wheel = e.originalEvent.wheelDelta,
+                    viewCount = $(this).parent().prev().attr('data-scroll'),
+                    maxCount = Number('-' + ($('li', this).length - viewCount)),
+                    $track = $('.scrollBar .track',this);
+
+                console.log($('li', this).length);
+                console.log(viewCount);
+
+                if ( wheel > 0 ) {
+                    if ( wheelCount < 0 ) wheelCount++;
+                } else {
+                    if ( wheelCount > maxCount ) wheelCount--;
+                }
+                
+                $('ul', this).css({'top': wheelCount * 40});
+                $track.css({'top':-(wheelCount * 40 * 2 + 5)});
+            });
+        };
 
         $('.customSelectWrap button').on('click', function(){
             let $itemH = '40',
                 $custom = $(this).parent(),
-                $list = $(this).siblings('.select-item'),
-                $scrollCount = $custom.prev().attr('data-scroll');
+                $list = $(this).siblings('.select-item').find('ul'),
+                $listCount = $(this).siblings('.select-item').find('ul > li').length,
+                $scrollCount = $custom.prev().attr('data-scroll'),
+                selectIndex = $list.find('li.select').index(),
+                $track = $list.siblings('.scrollBar').find('.track');
 
             $('.select-item').stop().slideUp('fast');
-            $list.css({'height' : $itemH * $scrollCount});
-
-
+            $list.parent().css({'height' : $itemH * $scrollCount + 4});
+            
             $(this).parent().toggleClass('on');
-            $(this).siblings('ul').stop().slideToggle('fast');
+            $(this).siblings('.select-item').stop().slideToggle('fast');
+            
+            wheelCount = '-' + (selectIndex - ($scrollCount - 1));
+            $list.css({'top': wheelCount * 40 });
+            
+            if ( $scrollCount < $listCount && $custom.find('.scrollBar').length <= 0 ) {
+                $list.after('<span class="scrollBar"><span class="track" style="top:' + -(wheelCount * 40 * 2 + 5) + 'px"></span></span>');
+            }
+
         });
 
         $('.select-item li').on('click', function(){
-            let $parent = $(this).parent(),
+            let $parent = $(this).closest('.select-item'),
                 $txt = $(this).text(),
                 $select = $(this).closest('.customSelectWrap').prev(),
                 index = $(this).index();
@@ -108,6 +145,8 @@
                 $('.select-item').stop().slideUp('fast');
             }
         });
+        
+        selectScroll();
     </script>
     </script>
 </body>
