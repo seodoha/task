@@ -87,7 +87,7 @@
                     maxCount = Number('-' + ($('li', this).length - viewCount)),
                     $track = $('.scrollBar .track',this);
 
-                    console.log(wheelCount);
+                    // console.log(wheelCount);
                 if ( wheel > 0 ) {
                     if ( wheelCount < 0 ) wheelCount++;
                 } else {
@@ -114,7 +114,8 @@
             $(this).parent().toggleClass('on');
             $(this).siblings('.select-item').stop().slideToggle('fast');
             
-            wheelCount = '-' + (selectIndex - ($scrollCount - 1));
+            wheelCount = selectIndex - ($scrollCount - 1) > 0 ? '-' + (selectIndex - ($scrollCount - 1)) : 0;
+            
             $list.css({'top': wheelCount * 40 });
             
             if ( $scrollCount < $listCount && $custom.find('.scrollBar').length <= 0 ) {
