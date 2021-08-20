@@ -168,8 +168,8 @@ let moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.M
 
                 $jq('ul', this).css({'top': app.customSelect.wheelCount * 41});
                 app.customSelect.wheelCount != maxCount ? $track.css({'top':app.customSelect.scrollWheel * app.customSelect.wheelCount + '%'}) : $track.css({'top':'calc(100% - 40px)'});
-                console.log(`스크롤 wheelCount : ${app.customSelect.wheelCount}`);
-                console.log(`maxCount : ${maxCount}`);
+                // console.log(`스크롤 wheelCount : ${app.customSelect.wheelCount}`);
+                // console.log(`maxCount : ${maxCount}`);
             });
         },
     };
