@@ -1,4 +1,4 @@
-let moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.MSStream;
+
 
 ;const app = (function(app, $jq, $window){
 
@@ -10,14 +10,15 @@ let moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.M
         wheelCount: 0,
         scrollWheel: 0,
         itemH: 41,
+        moDevice: false,
         init: function () {
             this.madeSelect();
             this.clickEvent();
-            moDevice ? this.touchScroll() : this.selectScroll();
+            this.deviceCheck() ? this.touchScroll() : this.selectScroll();
             $window.on('resize', function(){
-                moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.MSStream;
+                console.log(app.customSelect.deviceCheck());
                 $jq('.select-item').off();
-                moDevice ? app.customSelect.touchScroll() : app.customSelect.selectScroll();
+                app.customSelect.deviceCheck() ? app.customSelect.touchScroll() : app.customSelect.selectScroll();
             });
         },
         madeSelect: function() {
@@ -146,32 +147,49 @@ let moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.M
                 scrollH;
 
             $jq('.select-item').on('touchstart', function(e){
-                // console.log(`터치 스타트 : ${e.originalEvent.touches[0]}`);
                 touchStartY = e.originalEvent.touches[0].pageY;
+                // console.log('터치 스타트' + e.originalEvent.touches[0]);
+            });
+
+            $jq('.select-item').on('touchmove', function(e){
+                console.log(e.originalEvent.changedTouches[0].clientY);
+                
+                if ( e.originalEvent.changedTouches[0].pageY > 0 ) {
+                    $jq('ul', this).css({'top':'0'});
+                    $jq('.scrollBar .track',this).css({'top':'0'});
+                } else if ( e.originalEvent.changedTouches[0].pageY > 123 ) {
+                    // $jq('ul', this).css({'top':'calc(100% - 41px)'});
+                    $jq('.scrollBar .track',this).css({'top':'calc(100% - 41px)'});
+                } else {
+                    // $jq('ul', this).css({'top':e.originalEvent.changedTouches[0].pageY});
+                    $jq('.scrollBar .track',this).css({'top':e.originalEvent.changedTouches[0].pageY});
+                }
             });
             
-            $jq('.select-item').on('touchend', function(e){
-                // console.log(`터치 후 : ${e.originalEvent.changedTouches[0].pageY}`);
-                
-                touchEndY = e.originalEvent.changedTouches[0].pageY,
-                $track = $jq('.scrollBar .track',this),
-                viewCount = $jq(this).parent().prev().attr('data-scroll'),
-                maxCount = Number('-' + ($jq('li', this).length - viewCount)),
-                scrollH = app.customSelect.itemH * viewCount,
-                app.customSelect.scrollWheel = parseInt(((scrollH - app.customSelect.itemH) / maxCount) / scrollH * 100);
+            // $jq('.select-item').on('touchend', function(e){
+            //     touchEndY = e.originalEvent.changedTouches[0].pageY,
+            //     $track = $jq('.scrollBar .track',this),
+            //     viewCount = $jq(this).parent().prev().attr('data-scroll'),
+            //     maxCount = Number('-' + ($jq('li', this).length - viewCount)),
+            //     scrollH = app.customSelect.itemH * viewCount,
+            //     app.customSelect.scrollWheel = parseInt(((scrollH - app.customSelect.itemH) / maxCount) / scrollH * 100);
 
-                if ( touchStartY < touchEndY && app.customSelect.wheelCount < 0 ) {    // 위로
-                    if ( Math.abs(touchStartY - touchEndY) > 20 ) app.customSelect.wheelCount++;
-                } else {    // 아래로
-                    if ( app.customSelect.wheelCount > maxCount && Math.abs(touchStartY - touchEndY) > 20 ) app.customSelect.wheelCount--;
-                }
+            //     if ( touchStartY < touchEndY && app.customSelect.wheelCount < 0 ) {    // 위로
+            //         if ( Math.abs(touchStartY - touchEndY) > 20 ) app.customSelect.wheelCount++;
+            //     } else {    // 아래로
+            //         if ( app.customSelect.wheelCount > maxCount && Math.abs(touchStartY - touchEndY) > 20 ) app.customSelect.wheelCount--;
+            //     }
 
-                $jq('ul', this).css({'top': app.customSelect.wheelCount * 41});
-                app.customSelect.wheelCount != maxCount ? $track.css({'top':app.customSelect.scrollWheel * app.customSelect.wheelCount + '%'}) : $track.css({'top':'calc(100% - 40px)'});
-                // console.log(`스크롤 wheelCount : ${app.customSelect.wheelCount}`);
-                // console.log(`maxCount : ${maxCount}`);
-            });
+            //     $jq('ul', this).css({'top': app.customSelect.wheelCount * 41});
+            //     app.customSelect.wheelCount != maxCount ? $track.css({'top':app.customSelect.scrollWheel * app.customSelect.wheelCount + '%'}) : $track.css({'top':'calc(100% - 40px)'});
+            //     // console.log(`스크롤 wheelCount : ${app.customSelect.wheelCount}`);
+            //     // console.log(`maxCount : ${maxCount}`);
+            // });
         },
+        deviceCheck: function() {
+            this.moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.MSStream;
+            return this.moDevice;
+        }
     };
 
     return app.init();
