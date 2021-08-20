@@ -94,6 +94,8 @@ let moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.M
                     scrollCount = $jq(this).closest('.customSelectWrap').prev().attr('data-scroll'),
                     index = $jq(this).index();
     
+                console.log(index);
+
                 $parent.find('li').removeClass('select');
                 $jq(this).addClass('select');
                 $parent.stop().slideUp('fast').siblings('.label').text(txt);
@@ -101,7 +103,7 @@ let moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.M
                 $select.find('option').eq(index).prop('selected', true);
                 
                 app.customSelect.wheelCount = '-' + (index - (scrollCount - 1));
-                $jq(this).parent().css({'top': app.customSelect.wheelCount * 40 });
+                $jq(this).parent().css({'top': app.customSelect.wheelCount * 40});
             });
     
             $jq('body').on('click', function(e){
@@ -131,8 +133,8 @@ let moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.M
                 
                 $jq('ul', this).css({'top': app.customSelect.wheelCount * 41});
                 app.customSelect.wheelCount != maxCount ? $track.css({'top':app.customSelect.scrollWheel * app.customSelect.wheelCount + '%'}) : $track.css({'top':'calc(100% - 40px)'});
-                // console.log(`스크롤 wheelCount : ${app.customSelect.wheelCount}`);
-                // console.log(`maxCount : ${maxCount}`);
+                console.log(`스크롤 wheelCount : ${app.customSelect.wheelCount}`);
+                console.log(`maxCount : ${maxCount}`);
             });
         },
         touchScroll: function() {
@@ -144,12 +146,13 @@ let moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.M
                 scrollH;
 
             $jq('.select-item').on('touchstart', function(e){
-                // console.log(`터치 스타트 : ${e.originalEvent.touches[0].pageY}`);
+                // console.log(`터치 스타트 : ${e.originalEvent.touches[0]}`);
                 touchStartY = e.originalEvent.touches[0].pageY;
             });
             
             $jq('.select-item').on('touchend', function(e){
                 // console.log(`터치 후 : ${e.originalEvent.changedTouches[0].pageY}`);
+                
                 touchEndY = e.originalEvent.changedTouches[0].pageY,
                 $track = $jq('.scrollBar .track',this),
                 viewCount = $jq(this).parent().prev().attr('data-scroll'),
@@ -157,14 +160,16 @@ let moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.M
                 scrollH = app.customSelect.itemH * viewCount,
                 app.customSelect.scrollWheel = parseInt(((scrollH - app.customSelect.itemH) / maxCount) / scrollH * 100);
 
-                if ( (touchStartY - touchEndY) > 0 ) {    // 위로
-                    if ( app.customSelect.wheelCount > maxCount ) app.customSelect.wheelCount--;
+                if ( touchStartY < touchEndY && app.customSelect.wheelCount < 0 ) {    // 위로
+                    if ( Math.abs(touchStartY - touchEndY) > 20 ) app.customSelect.wheelCount++;
                 } else {    // 아래로
-                    if ( app.customSelect.wheelCount < 0 ) app.customSelect.wheelCount++;
+                    if ( app.customSelect.wheelCount > maxCount && Math.abs(touchStartY - touchEndY) > 20 ) app.customSelect.wheelCount--;
                 }
 
                 $jq('ul', this).css({'top': app.customSelect.wheelCount * 41});
                 app.customSelect.wheelCount != maxCount ? $track.css({'top':app.customSelect.scrollWheel * app.customSelect.wheelCount + '%'}) : $track.css({'top':'calc(100% - 40px)'});
+                console.log(`스크롤 wheelCount : ${app.customSelect.wheelCount}`);
+                console.log(`maxCount : ${maxCount}`);
             });
         },
     };
