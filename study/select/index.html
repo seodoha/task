@@ -24,14 +24,14 @@
         .customSelectWrap .select-item li:hover {background-color: #D0D0D0;}
         .customSelectWrap .select-item li ~ li {border-top: 1px solid #ddd;}
         .scrollBar {position: absolute;right: 0;top: 0;width: 10px;height: 100%;background-color: violet;}
-        .scrollBar .track {position: absolute;left: 50%;top: 0;margin: 5px 0 10px -3px;width: 6px;height: 40px;border-radius: 10px;background-color: aqua;}
+        .scrollBar .track {position: absolute;left: 50%;top: 0;margin: 0 0 0 -3px;width: 6px;height: 40px;border-radius: 10px;background-color: aqua;transition: top 0.3s;}
     </style>
     <script src="../jquery-1.12.0.min.js"></script>
 </head>
 <body>
     <section>
-        <select data-module="customSelect" data-scroll="5">
-            <option value="realmadrid" selected>레알마드리드</option>
+        <select data-module="customSelect" data-scroll="3">
+            <option value="realmadrid">레알마드리드</option>
             <option value="barcelona">바르셀로나</option>
             <option value="valencia">발렌시아</option>
             <option value="atmadrid">아틀레티코마드리드</option>
@@ -44,7 +44,7 @@
             <option value="deportivo">데포르티보</option>
             <option value="rayo">라요</option>
             <option value="leganes">레가네스</option>
-            <option value="espanyol">에스파뇰</option>
+            <option value="espanyol" selected>에스파뇰</option>
         </select>
         <br><br>
         <select data-module="customSelect" data-scroll="2">
@@ -55,8 +55,12 @@
         </select>
     </section>
     <script>
+        let wheelCount = 0,
+            scrollWheel = 0,
+            itemH = 41;
+
         $('[data-module="customSelect"]').length && customSelect();
-        let wheelCount = 0;
+        selectScroll();
 
         function customSelect() {
             let $el = $('[data-module="customSelect"]');
@@ -88,63 +92,79 @@
         };
 
         function selectScroll() {
-            $('.select-item').on('scroll mousewheel', function(e){
-                let wheel = e.originalEvent.wheelDelta,
-                    viewCount = $(this).parent().prev().attr('data-scroll'),
-                    maxCount = Number('-' + ($('li', this).length - viewCount)),
-                    $track = $('.scrollBar .track',this);
+            let wheel, viewCount, maxCount, $track, scrollH;
 
-                if ( wheel > 0 ) {
+            $('.select-item').on('scroll mousewheel', function(e){
+                $track = $('.scrollBar .track',this),
+                wheel = e.originalEvent.wheelDelta,
+                viewCount = $(this).parent().prev().attr('data-scroll'),
+                maxCount = Number('-' + ($('li', this).length - viewCount)),
+                scrollH = itemH * viewCount,
+                scrollWheel = parseInt(((scrollH - itemH) / maxCount) / scrollH * 100);
+
+                if ( wheel > 0 ) {    // 위로
                     if ( wheelCount < 0 ) wheelCount++;
-                } else {
+                } else {    // 아래로
                     if ( wheelCount > maxCount ) wheelCount--;
                 }
                 
                 $('ul', this).css({'top': wheelCount * 41});
-                $track.css({'top':-(wheelCount * 41)});
-                console.log(`스크롤 wheelCount : ${wheelCount}`);
+                wheelCount != maxCount ? $track.css({'top':scrollWheel * wheelCount + '%'}) : $track.css({'top':'calc(100% - 40px)'});
+                // console.log(`스크롤 wheelCount : ${wheelCount}`);
+                // console.log(`maxCount : ${maxCount}`);
             });
         };
 
         $('.customSelectWrap button').on('click', function(){
-            let itemH = '41',
-                $custom = $(this).parent(),
+            let $custom = $(this).parent(),
                 $list = $(this).siblings('.select-item').find('ul'),
                 $track = $list.siblings('.scrollBar').find('.track'),
                 listLength = $(this).siblings('.select-item').find('ul > li').length,
                 scrollCount = $custom.prev().attr('data-scroll'),
                 selectIndex = $list.find('li.select').index(),
-                listHeight = itemH * scrollCount;
-
+                listHeight = itemH * scrollCount,
+                scrollH = itemH * scrollCount,
+                maxCount = Number('-' + ($list.find('li').length - scrollCount));
+                
             $('.select-item').stop().slideUp('fast');
             $list.parent().css({'height' : listHeight});
             
             $(this).parent().toggleClass('on');
             $(this).siblings('.select-item').stop().slideToggle('fast');
-            
+                
+            scrollWheel = parseInt(((scrollH - itemH) / maxCount) / scrollH * 100);
             wheelCount = selectIndex - (scrollCount - 1) > 0 ? '-' + (selectIndex - (scrollCount - 1)) : 0;
             $list.css({'top': wheelCount * 41});
             
-            if ( scrollCount < listLength && $custom.find('.scrollBar').length <= 0 ) {
-                $list.after('<span class="scrollBar"><span class="track" style="top:' + ((selectIndex+1) / listLength) * 100 + '%"></span></span>');
-            } else {
-                $track.css({'top':((selectIndex+1) / listLength) * 100 + '%'});
-            }
 
-            console.log(`버튼 클릭 후 wheelCount : ${wheelCount}`);
+            if ( scrollCount < listLength && $custom.find('.scrollBar').length <= 0 ) {
+                if ( wheelCount != maxCount ) {
+                    $list.after('<span class="scrollBar"><span class="track" style="top:' + scrollWheel * wheelCount + '%"></span></span>');
+                } else {
+                    $list.after('<span class="scrollBar"><span class="track" style="top:calc(100% - 40px)"></span></span>');
+                }
+            } else {
+                if ( wheelCount != maxCount ) {
+                    $track.css({'top':scrollWheel * wheelCount + '%'});
+                } else {
+                    $track.css({'top':'calc(100% - 40px)'});
+                }
+            }
+            // console.log(`maxCount : ${maxCount}`);
+            // console.log(`버튼 클릭 후 wheelCount : ${wheelCount}`);
 
         });
 
         $('.select-item li').on('click', function(){
             let $parent = $(this).closest('.select-item'),
-                $txt = $(this).text(),
                 $select = $(this).closest('.customSelectWrap').prev(),
+                txt = $(this).text(),
                 scrollCount = $(this).closest('.customSelectWrap').prev().attr('data-scroll'),
                 index = $(this).index();
 
             $parent.find('li').removeClass('select');
             $(this).addClass('select');
-            $parent.stop().slideUp('fast').siblings('.label').text($txt);
+            $parent.stop().slideUp('fast').siblings('.label').text(txt);
             $('.customSelectWrap').removeClass('on');
             $select.find('option').eq(index).prop('selected', true);
             
@@ -160,7 +180,6 @@
             }
         });
         
-        selectScroll();
     </script>
     </script>
 </body>
