@@ -133,60 +133,53 @@
                 
                 $jq('ul', this).css({'top': app.customSelect.wheelCount * 41});
                 app.customSelect.wheelCount != maxCount ? $track.css({'top':app.customSelect.scrollWheel * app.customSelect.wheelCount + '%'}) : $track.css({'top':'calc(100% - 40px)'});
-                console.log(`스크롤 wheelCount : ${app.customSelect.wheelCount}`);
-                console.log(`maxCount : ${maxCount}`);
+                // console.log(app.customSelect.scrollWheel);
+                // console.log(`스크롤 wheelCount : ${app.customSelect.wheelCount}`);
+                // console.log(`maxCount : ${maxCount}`);
             });
         },
         touchScroll: function() {
-            let pageY = 0,
-                moveY = 0;
+            let screenY = 0,
+                moveY = 0,
+                viewCount,
+                maxCount,
+                viewH,
+                maxH,
+                scrollH,
+                $track;
 
-            // $jq('.select-item').on('touchstart', function(e){
-            //     console.log(`Start moveY의 값:::: ${moveY}`);
-            //     $jq('ul', this).css({'top':moveY});
-            // });
+            $jq('.select-item').on('touchstart', function(e){
+                screenY = e.originalEvent.touches[0].screenY;
+            });
 
             $jq('.select-item').on('touchmove', function(e){
-                console.log(e.originalEvent.changedTouches[0]);
+                $track = $jq('.scrollBar .track',this),
+                viewCount = $jq(this).parent().prev().attr('data-scroll'),
+                maxCount = Number('-' + ($jq('li', this).length - viewCount)),
+                viewH = viewCount * app.customSelect.itemH,
+                maxH = $(this).find('li').length * app.customSelect.itemH,
+                scrollH = app.customSelect.itemH * maxCount,
+                app.customSelect.scrollWheel = parseInt(((scrollH - app.customSelect.itemH) / maxCount) / scrollH * 100);
+
+                // console.log(maxH);
                 
-                // if ( e.originalEvent.changedTouches[0].pageY > 0 ) {
-                //     $jq('ul', this).css({'top':'0'});
-                //     $jq('.scrollBar .track',this).css({'top':'0'});
-                // } else if ( e.originalEvent.changedTouches[0].pageY > 123 ) {
-                //     // $jq('ul', this).css({'top':'calc(100% - 41px)'});
-                //     $jq('.scrollBar .track',this).css({'top':'calc(100% - 41px)'});
-                // } else {
-                //     // $jq('ul', this).css({'top':e.originalEvent.changedTouches[0].pageY});
-                //     $jq('.scrollBar .track',this).css({'top':e.originalEvent.changedTouches[0].pageY});
-                // }
-                if (pageY === 0) {
-                    console.log('==========================================================================================');
-                    pageY = e.originalEvent.changedTouches[0].screenY;
-                } else {
-                    moveY = Number($jq('ul', this).css('top').split('px')[0]);
-                    // console.log(`전 moveY의 값:::: ${moveY}`);
-                    // console.log(`후 moveY의 값:::: ${pageY - e.originalEvent.changedTouches[0].pageY}`);
-                    // console.log(`pageY의 값:::: ${pageY}`);
-                    // console.log(`e.originalEvent.changedTouches[0].pageY의 값:::: ${e.originalEvent.changedTouches[0].pageY}`);
+                moveY = parseInt($jq('ul', this).css('top'));
+                moveY -= screenY - e.originalEvent.changedTouches[0].screenY;
 
-                    moveY -= pageY - e.originalEvent.changedTouches[0].screenY;
-                    // $jq('ul', this).css({'top':moveY});
-                    // pageY = e.originalEvent.changedTouches[0].pageY;
+                if ( moveY < 0 && moveY > scrollH ) {
+                    screenY = e.originalEvent.changedTouches[0].screenY;
+                    $jq('ul', this).css({'top':moveY});
 
-                    if ( moveY < 0 ) {
-                        $jq('ul', this).css({'top':moveY});
-                        pageY = e.originalEvent.changedTouches[0].screenY;
-                        // console.clear();
-                        // console.log(`moveY의 값:::: ${moveY}`);
-                        // console.log(`후후후후후후 pageY의 값:::: ${pageY}`);
-                        // console.log(`e.originalEvent.changedTouches[0].pageY의 값:::: ${e.originalEvent.changedTouches[0].pageY}`);
-                    }
-
+                    // $track.css({'top':moveY / -50 + '%'})
+                    console.log(-(moveY / (maxH - viewH) * 100));
+                    // $track.css({'top':-(moveY / (maxH - viewH) * 100) + '%'});
+                    parseInt(-(moveY / (maxH - viewH) * 100) + '%') < 70 ? $track.css({'top':-(moveY / (maxH - viewH) * 100) + '%'}) : $track.css({'top':'calc(100% - 40px)'});
                 }
+                
             });
             
             // $jq('.select-item').on('touchend', function(e){
-            //     touchEndY = e.originalEvent.changedTouches[0].pageY,
+            //     touchEndY = e.originalEvent.changedTouches[0].screenY,
             //     $track = $jq('.scrollBar .track',this),
             //     viewCount = $jq(this).parent().prev().attr('data-scroll'),
             //     maxCount = Number('-' + ($jq('li', this).length - viewCount)),
