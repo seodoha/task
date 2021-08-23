@@ -161,8 +161,6 @@
                 scrollH = app.customSelect.itemH * maxCount,
                 app.customSelect.scrollWheel = parseInt(((scrollH - app.customSelect.itemH) / maxCount) / scrollH * 100);
 
-                // console.log(maxH);
-                
                 moveY = parseInt($jq('ul', this).css('top'));
                 moveY -= screenY - e.originalEvent.changedTouches[0].screenY;
 
@@ -170,33 +168,10 @@
                     screenY = e.originalEvent.changedTouches[0].screenY;
                     $jq('ul', this).css({'top':moveY});
 
-                    // $track.css({'top':moveY / -50 + '%'})
-                    console.log(-(moveY / (maxH - viewH) * 100));
-                    // $track.css({'top':-(moveY / (maxH - viewH) * 100) + '%'});
                     parseInt(-(moveY / (maxH - viewH) * 100) + '%') < 70 ? $track.css({'top':-(moveY / (maxH - viewH) * 100) + '%'}) : $track.css({'top':'calc(100% - 40px)'});
                 }
                 
             });
-            
-            // $jq('.select-item').on('touchend', function(e){
-            //     touchEndY = e.originalEvent.changedTouches[0].screenY,
-            //     $track = $jq('.scrollBar .track',this),
-            //     viewCount = $jq(this).parent().prev().attr('data-scroll'),
-            //     maxCount = Number('-' + ($jq('li', this).length - viewCount)),
-            //     scrollH = app.customSelect.itemH * viewCount,
-            //     app.customSelect.scrollWheel = parseInt(((scrollH - app.customSelect.itemH) / maxCount) / scrollH * 100);
-
-            //     if ( touchStartY < touchEndY && app.customSelect.wheelCount < 0 ) {    // 위로
-            //         if ( Math.abs(touchStartY - touchEndY) > 20 ) app.customSelect.wheelCount++;
-            //     } else {    // 아래로
-            //         if ( app.customSelect.wheelCount > maxCount && Math.abs(touchStartY - touchEndY) > 20 ) app.customSelect.wheelCount--;
-            //     }
-
-            //     $jq('ul', this).css({'top': app.customSelect.wheelCount * 41});
-            //     app.customSelect.wheelCount != maxCount ? $track.css({'top':app.customSelect.scrollWheel * app.customSelect.wheelCount + '%'}) : $track.css({'top':'calc(100% - 40px)'});
-            //     // console.log(`스크롤 wheelCount : ${app.customSelect.wheelCount}`);
-            //     // console.log(`maxCount : ${maxCount}`);
-            // });
         },
         deviceCheck: function() {
             this.moDevice = /iPad|iPhone|iPod|Android/.test(navigator.userAgent) && !window.MSStream;
