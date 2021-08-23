@@ -16,7 +16,6 @@
             this.clickEvent();
             this.deviceCheck() ? this.touchScroll() : this.selectScroll();
             $window.on('resize', function(){
-                console.log(app.customSelect.deviceCheck());
                 $jq('.select-item').off();
                 app.customSelect.deviceCheck() ? app.customSelect.touchScroll() : app.customSelect.selectScroll();
             });
@@ -139,30 +138,50 @@
             });
         },
         touchScroll: function() {
-            let touchStartY,
-                touchEndY,
-                viewCount, 
-                maxCount, 
-                $track, 
-                scrollH;
+            let pageY = 0,
+                moveY = 0;
 
-            $jq('.select-item').on('touchstart', function(e){
-                touchStartY = e.originalEvent.touches[0].pageY;
-                // console.log('터치 스타트' + e.originalEvent.touches[0]);
-            });
+            // $jq('.select-item').on('touchstart', function(e){
+            //     console.log(`Start moveY의 값:::: ${moveY}`);
+            //     $jq('ul', this).css({'top':moveY});
+            // });
 
             $jq('.select-item').on('touchmove', function(e){
-                console.log(e.originalEvent.changedTouches[0].clientY);
+                console.log(e.originalEvent.changedTouches[0]);
                 
-                if ( e.originalEvent.changedTouches[0].pageY > 0 ) {
-                    $jq('ul', this).css({'top':'0'});
-                    $jq('.scrollBar .track',this).css({'top':'0'});
-                } else if ( e.originalEvent.changedTouches[0].pageY > 123 ) {
-                    // $jq('ul', this).css({'top':'calc(100% - 41px)'});
-                    $jq('.scrollBar .track',this).css({'top':'calc(100% - 41px)'});
+                // if ( e.originalEvent.changedTouches[0].pageY > 0 ) {
+                //     $jq('ul', this).css({'top':'0'});
+                //     $jq('.scrollBar .track',this).css({'top':'0'});
+                // } else if ( e.originalEvent.changedTouches[0].pageY > 123 ) {
+                //     // $jq('ul', this).css({'top':'calc(100% - 41px)'});
+                //     $jq('.scrollBar .track',this).css({'top':'calc(100% - 41px)'});
+                // } else {
+                //     // $jq('ul', this).css({'top':e.originalEvent.changedTouches[0].pageY});
+                //     $jq('.scrollBar .track',this).css({'top':e.originalEvent.changedTouches[0].pageY});
+                // }
+                if (pageY === 0) {
+                    console.log('==========================================================================================');
+                    pageY = e.originalEvent.changedTouches[0].screenY;
                 } else {
-                    // $jq('ul', this).css({'top':e.originalEvent.changedTouches[0].pageY});
-                    $jq('.scrollBar .track',this).css({'top':e.originalEvent.changedTouches[0].pageY});
+                    moveY = Number($jq('ul', this).css('top').split('px')[0]);
+                    // console.log(`전 moveY의 값:::: ${moveY}`);
+                    // console.log(`후 moveY의 값:::: ${pageY - e.originalEvent.changedTouches[0].pageY}`);
+                    // console.log(`pageY의 값:::: ${pageY}`);
+                    // console.log(`e.originalEvent.changedTouches[0].pageY의 값:::: ${e.originalEvent.changedTouches[0].pageY}`);
+
+                    moveY -= pageY - e.originalEvent.changedTouches[0].screenY;
+                    // $jq('ul', this).css({'top':moveY});
+                    // pageY = e.originalEvent.changedTouches[0].pageY;
+
+                    if ( moveY < 0 ) {
+                        $jq('ul', this).css({'top':moveY});
+                        pageY = e.originalEvent.changedTouches[0].screenY;
+                        // console.clear();
+                        // console.log(`moveY의 값:::: ${moveY}`);
+                        // console.log(`후후후후후후 pageY의 값:::: ${pageY}`);
+                        // console.log(`e.originalEvent.changedTouches[0].pageY의 값:::: ${e.originalEvent.changedTouches[0].pageY}`);
+                    }
+
                 }
             });
             

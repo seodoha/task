@@ -14,7 +14,7 @@
         .hide-select {position: absolute;overflow: hidden;width: 0;height: 0;border: 0;}
         .customSelectWrap {position: relative;width: 200px;}
         .customSelectWrap button {display: block;position: relative;padding: 0 38px 0 10px;width: 100%;line-height: 38px;border: 1px solid #ddd;background-color: #f8f8f8;overflow: hidden;text-overflow: ellipsis;user-select: none;font-weight: 400;font-size: 12px;cursor: pointer;white-space: nowrap;}
-        .customSelectWrap button::after {content: " ";position: absolute;right: 10px;top: 50%;transform: translateY(-50%);width: 0;height: 0;border: 4px solid transparent;border-top-color: #BBB;border-bottom: none;}
+        .customSelectWrap button::after {content: '';position: absolute;right: 10px;top: 50%;transform: translateY(-50%);width: 0;height: 0;border: 4px solid transparent;border-top-color: #BBB;border-bottom: none;}
         .customSelectWrap.on button::after {border-top: none;border-bottom: 4px solid #bbb;}
         .customSelectWrap .select-item {display: none;position: absolute;width: 100%;z-index: 1;overflow: hidden;}
         .customSelectWrap .select-item ul {position: absolute;width: 100%;border-width: 0 1px 1px 1px;border-style: solid;border-color: #ddd;}
