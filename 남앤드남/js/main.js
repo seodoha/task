@@ -52,7 +52,7 @@ App.Main = (function () {
             $('section').each(function(index, item){
                 var height = $(item).index() * $(window).height();
                 if ( index == 3 ) {
-                    height = height + 2000;
+                    height = height + 6000;
                 }
                 sumHeight = sumHeight + height;
                 $(item).css({ 'top' :  height});
@@ -110,10 +110,10 @@ App.Main = (function () {
                         'position' : 'fixed',
                         'top' : 0
                     });
-                    a = a - $(window).height() * 2 - 2000;
+                    a = a - $(window).height() * 2 - 6000;
                     var _sec03Value = a * ( d - c ) / _sec01Top + c;
                     $mainVi.css({'opacity':'0'});
-                    if ( $(window).scrollTop() > _sec02Top + 2000 ) {
+                    if ( $(window).scrollTop() > _sec02Top + 6000 ) {
                         $sec02.css({
                             'top' : _sec03Value + "%"
                         });
@@ -127,7 +127,7 @@ App.Main = (function () {
 
                 if ( a > _sec03Top ) {
                     $('.progressBar span').css({'height':'100%'});
-                    a = a - $(window).height() * 3 - 2000;
+                    a = a - $(window).height() * 3 - 6000;
                     var _sec04Value = a * ( d - c ) / _sec01Top + c;
                     $sec03.css({
                         'position' : 'fixed',
@@ -151,11 +151,10 @@ App.Main = (function () {
                 _sec01Top = $sec01.offset().top - 400,
                 _sec02Top = $sec02.offset().top - 400,
                 _sec03Top = $sec03.offset().top - 400,
-                _sec02Posi01 = $sec02.offset().top + 200,
-                _sec02Posi02 = $sec02.offset().top + 1000,
-                _sec02Posi03 = $sec02.offset().top + 1800,
-                _sec03Posi = $sec03.offset().top + 1500,
-                _sec03Posi02 = $sec03.offset().top + 2200,
+                _sec02Posi01 = $sec02.offset().top + 1500,
+                _sec02Posi02 = $sec02.offset().top + 3000,
+                _sec02Posi03 = $sec02.offset().top + 4500,
+                _sec03Posi = $sec03.offset().top + 2200,
                 _count01 = new countUp.CountUp('count01', 120),
                 _count02 = new countUp.CountUp('count02', 2000),
                 _count03 = new countUp.CountUp('count03', 40),
@@ -295,7 +294,7 @@ App.Main = (function () {
                         $sec03.removeClass('ani');
                     }
 
-                    scTop > _sec03Posi02 ? $footer.addClass('ani') : $footer.removeClass('ani');
+                    scTop > _sec03Posi ? $footer.addClass('ani') : $footer.removeClass('ani');
                     
                 } else {
                     $sec02.removeClass('ani');
