@@ -1,4 +1,4 @@
-
+'use strict';
 
 ;const app = (function(app, $jq, $window){
 
@@ -94,7 +94,7 @@
                     scrollCount = $jq(this).closest('.customSelectWrap').prev().attr('data-scroll'),
                     index = $jq(this).index();
     
-                console.log(index);
+                // console.log(index);
 
                 $parent.find('li').removeClass('select');
                 $jq(this).addClass('select');
@@ -179,6 +179,6 @@
         }
     };
 
-    return app.init();
+    app.init();
 
 }(window.app || {}, jQuery, $(window)));
