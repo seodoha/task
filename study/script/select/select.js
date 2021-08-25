@@ -180,5 +180,6 @@
     };
 
     app.init();
+    return app;
 
 }(window.app || {}, jQuery, $(window)));
