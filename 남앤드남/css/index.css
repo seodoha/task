@@ -3,23 +3,40 @@
 body {height: 100vh;}
 main {padding-top: 100vh;height: 100%;}
 section {position: absolute;left: 0;top: 0;width: 100%;height: 100vh;overflow: hidden;}
-.scrollProgress {position: fixed;bottom: 40px;left: 60px;z-index: 99;}
-.scrollProgress .progressBar {position: relative;width: 1px;height: 200px;margin-bottom: 104px;background: #fff;}
-.scrollProgress .progressBar span {position: absolute;top: 0;left: 0;width: 100%;height: 0;background: #3B6DEC;transition: all 0.6s;}
-.scrollProgress > span {display: block;font-size: 14px;font-weight: 600;line-height: 1.5;color: #fff;}
-
+.sec-navi {position: fixed;top: 50%;left: 70px;z-index: 99;transform: translateY(-50%);}
+.sec-navi ul li ~ li {margin-top: 16px;}
+.sec-navi ul li {font-size: 0;}
+.sec-navi ul li a {position: relative;width: 20px;height: 20px;transition: all 0.3s;}
+.sec-navi ul li a::before {content: '';position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);width: 6px;height: 6px;background-color: #fff;border-radius: 50%;transition: all 0.3s;}
+.sec-navi ul li.on a {border-radius: 50%;border: 1px solid #fff;}
+.sec-navi.gray ul li a::before {background-color: #bbb;}
+.sec-navi.gray ul li.on a {border-color: #bbb;}
 
 .mainVi {position: fixed;left: 0;right: 0;top: 0;}
 .mainViSlide {height: 100%;}
 .mainViSlide .swiper-slide {background-repeat: no-repeat;background-position: center;background-size: cover;}
-.mainViSlide .swiper-slide div {position: absolute;left: 292px;bottom: 180px;color: #fff;letter-spacing: -2px;}
+.mainViSlide .swiper-slide div {position: absolute;left: 292px;bottom: 183px;color: #fff;letter-spacing: -2px;}
 .mainViSlide .swiper-slide div > * {opacity: 0;transform: translateY(30%);-webkit-transform: translateY(30%);transition: all 1.1s;}
-.mainViSlide .swiper-slide strong {display: block;margin-bottom: 18px;font-size: 32px;font-weight: 600;line-height: 1.2;}
+.mainViSlide .swiper-slide strong {display: block;margin-bottom: 5px;font-size: 24px;font-weight: 600;line-height: 1.2;}
 .mainViSlide .swiper-slide span {font-size: 80px;font-weight: 200;line-height: 1.5;transition-delay: 0.2s;text-shadow: 0 0 10px rgb(255 255 255 / 20%);}
 .mainViSlide .swiper-slide.swiper-slide-active div > * {opacity: 1;transform: translateY(0);-webkit-transform: translateY(0);}
-.mainViSlide .bg01 {background-image: url(../images/main/mainbg01.png);}
-.mainViSlide .bg02 {background-image: url(../images/main/mainbg02.png);} 
-.mainViSlide .bg03 {background-image: url(../images/main/mainbg03.png);}
+.mainViSlide .swiper-button-next,
+.mainViSlide .swiper-button-prev {display: inline-block;position: relative;top: auto;width: 36px;height: 36px;margin-top: 0;vertical-align: middle;}
+.mainViSlide .swiper-button-next {background: url(../images/main/ico_play.svg) no-repeat center;}
+.mainViSlide .swiper-button-prev {margin-right: 20px;background: url(../images/main/ico_vi_arr.svg) no-repeat center;}
+.mainViSlide .swiper-util {position: absolute;left: 292px;bottom: 112px;z-index: 1;font-size: 0;}
+.mainViSlide .swiper-util > * {display: inline-block;vertical-align: middle;}
+.mainViSlide .swiper-util .current,
+.mainViSlide .swiper-util .total {font-size: 16px;font-family: 'Pretendard';font-weight: 600;color: #fff;vertical-align: middle;}
+.mainViSlide .swiper-util .timeBar {display: inline-block;position: relative;width: 130px;height: 1px;margin: 0 20px;background-color: rgba(255,255,255,0.2);vertical-align: middle;overflow: hidden;}
+.mainViSlide .swiper-util .timeBar .bar {position:absolute;left: 0;top: 0;width: 0;height: 100%;background-color: #fff;transition: width 0.3s;}
+.mainViSlide .swiper-util .swiper-remote {position: relative;width: 20px;height: 20px;margin: 0 20px;background: url(../images/main/ico_pause.svg) no-repeat center;font-size: 0;}
+.mainViSlide .swiper-util .swiper-remote.play {background: transparent;}
+.mainViSlide .swiper-util .swiper-remote.play::before {content: '';position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%) rotate(90deg);width: 0;height: 0;border-bottom: 8px solid #fff;border-right: 8px solid transparent;border-left: 8px solid transparent;}
+
+#wrap .mainViSlide .videoBox {position: absolute;left: 0;top: 0;right: 0;bottom: 0;}
+#wrap .mainViSlide .videoBox video {position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);min-width: 100%;min-height: 100%;width: auto;height: auto;}
+
 .mainVi .typeList {position: absolute;right: 0;top: 0;height: 100%;overflow: auto;z-index: 20;line-height: 0;-ms-overflow-style: none;scrollbar-width: none;border-left: 1px solid rgba(255,255,255,0.2);animation: aniFadeIn 1.5s;}
 @keyframes aniFadeIn {
     from {opacity: 0;transform: translateY(40%);-webkit-transform: translateY(40%);}
@@ -29,7 +46,7 @@ section {position: absolute;left: 0;top: 0;width: 100%;height: 100vh;overflow: h
 .mainVi .typeList a {position: relative;width: 636px;height: 300px;transition: all 0.6s;}
 .mainVi .typeList a strong {position: absolute;left: 33px;bottom: 72px;padding-right: 62px;font-size: 32px;font-weight: 400;line-height: 1.2;color: #fff;transition: all 0.6s;}
 .mainVi .typeList a strong::after {content: '';position: absolute;right: 0;bottom: 15px;width: 33px;height: 9px;background: url(../images/common/ico_rnb_arrow.png) no-repeat center;opacity: 0;transition: all 0.6s;}
-.mainVi .typeList a:hover {background-color: rgba(25,67,204,0.8);}
+.mainVi .typeList a:hover {background-color: rgba(7,149,84,0.8);}
 .mainVi .typeList a:hover strong {font-weight: 600;}
 .mainVi .typeList a:hover strong::after {opacity: 1;}
 .aniBox {position: absolute;bottom: 20px;right: 120px;width: 144px;height: 144px;}

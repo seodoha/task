@@ -1,0 +1,4 @@
+<svg id="btn_indi_arrow_left" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <rect id="area" width="36" height="36" fill="red" opacity="0"/>
+  <path id="chevron-left" d="M17.866,25.732,8,15.866,17.866,6h0" transform="translate(1.865 1.064)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="1"/>
+</svg>
