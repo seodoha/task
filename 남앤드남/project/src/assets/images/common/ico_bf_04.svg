@@ -1,0 +1,18 @@
+<svg id="ico_bf_04" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="그룹_1772" data-name="그룹 1772" transform="translate(-448 -94)">
+        <g id="그룹_1687" data-name="그룹 1687" transform="translate(-2 -3)">
+            <path id="패스_7076" data-name="패스 7076" class="cls-2" d="M0 0h65v90H0z" transform="translate(478 112)"/>
+            <g id="그룹_1686" data-name="그룹 1686" transform="translate(496 126)">
+                <circle id="타원_277" data-name="타원 277" class="cls-2" cx="14.5" cy="14.5" r="14.5"/>
+                <path id="패스_6910" data-name="패스 6910" class="cls-2" d="m7495.225 500.183 5.953 5.239 10.573-10.041" transform="translate(-7489.22 -486.098)"/>
+            </g>
+            <path id="패스_6912" data-name="패스 6912" class="cls-2" d="M7477.145 527.622c.447-.079 39 0 39 0" transform="translate(-6986.146 -354.587)"/>
+            <path id="패스_6913" data-name="패스 6913" class="cls-2" d="M7477.145 527.622c.447-.079 39 0 39 0" transform="translate(-6986.146 -342.587)"/>
+        </g>
+    </g>
+</svg>

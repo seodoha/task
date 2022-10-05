@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./pages/ko/includes/head.html', {
+        metaDescription: 'insights',
+        pageTitle : 'Hwawoo - insights',
+        cssPath : '../../../assets/ko/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="insights-wrap">
+        @@include('./pages/ko/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main" class="detail-insights">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+                <div class="inner-wrap narrow detail-contents-layout">
+                    <div class="detail-head-layout ">
+                        <div class="date-util">
+                            <ul class="list-util">
+                                <li class="title">저서</li>
+                                <li class="writer">임승순, 김용택</li>
+                                <li class="source">박영사</li>
+                                <li class="date">2022.04.18</li>
+                            </ul>
+                        </div>
+                        <h3 class="typo-title-01">
+                            조세법 (2022년 개정판)
+                        </h3>
+                    </div>
+                    <div class="detail-body-layout">
+                        <p>
+                            '조세법' 2022년 개정판이 발간되었습니다.
+                            조세법을 다룬 이론서인 '조세법'은 1999년 초판 발행 이후 해마다 개정되는 세법과 추가된 판례, 연구논문 등을 게재하는 등 최신 법률정보를 충실히 반영해 조세법을
+                            공부하는 학생, 법률 및 회계 종사자, 국세청 공무원들의 필독서로 인정받고 있습니다.
+                        </p>
+                    </div>
+                    <div class="detail-body-contents02">
+                        <div class="tit-wrap">
+                            <h3 class="typo-title-01">첨부파일</h3>
+                        </div>
+                        <ul class="board-text-list down">
+                            <li>
+                                <a href="#" class="tit" title="첨부파일 다운로드" download>조세법 (2022년판).pdf</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="detail-paging-layout">
+                        <!-- 이전 게시글이 있을경우 -->
+                        <!-- <a href="#" class="list-item prev">
+                            <span class="mobile txt">이전글</span>
+                            <strong class="detail-title">[웨비나] Taxonomy에서 찾아보는 혁신경제 [웨비나] Taxonomy에서 찾아보는 혁신경제 [웨비나] Taxonomy에서 찾아보는 혁신경제</strong>
+                        </a> -->
+
+                        <!-- 이전 게시글이 없을 경우 -->
+                        <div class="no-list-item prev">
+                            <span class="mobile txt">이전글</span>
+                            <strong>이전글이 없습니다</strong>
+                        </div>
+
+                        <div class="box-btn">
+                            <a href="#" class="btn-back-list" title="뒤로 가기" aria-label="뒤로 가기"><i></i>BACK TO LIST</a>
+                        </div>
+
+                        <!-- 다음 게시글이 있을경우 -->
+                        <a href="#" class="list-item next">
+                            <span class="mobile txt">다음글</span>
+                            <strong class="detail-title">[웨비나] 중대재해처벌법 이렇게 대응한다 2 [웨비나] 중대재해처벌법 이렇게 대응한다 2 [웨비나] 중대재해처벌법 이렇게 대응한다 2 </strong>
+                        </a>
+
+                        <!-- 다음 게시글이 없을 경우 -->
+                        <!-- <div class="no-list-item next">
+                            <span class="mobile txt">다음글</span>
+                            <strong>다음글이 없습니다</strong>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        @@include('./pages/ko/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/ko/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

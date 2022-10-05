@@ -1,7 +1,0 @@
-<svg id="btn_indi_pause" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
-  <rect id="area" width="36" height="36" fill="red" opacity="0"/>
-  <g id="그룹_248" data-name="그룹 248" transform="translate(13.293 10.066)">
-    <rect id="사각형_275" data-name="사각형 275" width="1" height="16" transform="translate(-0.293 -0.066)" fill="#fff"/>
-    <rect id="사각형_276" data-name="사각형 276" width="1" height="16" transform="translate(7.707 -0.066)" fill="#fff"/>
-  </g>
-</svg>

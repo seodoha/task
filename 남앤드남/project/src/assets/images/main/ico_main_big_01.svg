@@ -1,0 +1,15 @@
+<svg id="ico_main_big_01" xmlns="http://www.w3.org/2000/svg" width="548" height="548" viewBox="0 0 548 548">
+    <defs>
+        <style>
+            .cls-2,.cls-3{fill:none;stroke:#fff;stroke-miterlimit:10}.cls-3{stroke-dasharray:4 4}
+        </style>
+    </defs>
+    <g id="그룹_1658" data-name="그룹 1658" transform="translate(-882.369 -143.363)">
+        <circle id="타원_46" data-name="타원 46" class="cls-2" cx="240" cy="240" r="240" transform="translate(916.369 177.363)"/>
+        <ellipse id="타원_47" data-name="타원 47" class="cls-3" cx="85.661" cy="240" rx="85.661" ry="240" transform="translate(1070.709 177.363)"/>
+        <ellipse id="타원_48" data-name="타원 48" class="cls-3" cx="179.026" cy="240" rx="179.026" ry="240" transform="translate(977.344 177.363)"/>
+        <path id="선_57" data-name="선 57" class="cls-2" transform="translate(916.369 417.363)" d="M0 0h480"/>
+        <path id="선_58" data-name="선 58" class="cls-2" transform="translate(965.115 272.355)" d="M0 0h383.823"/>
+        <path id="선_59" data-name="선 59" class="cls-2" transform="translate(965.115 562.371)" d="M0 0h383.823"/>
+    </g>
+</svg>

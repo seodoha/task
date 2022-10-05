@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+    <circle data-name="타원 109" cx="50" cy="50" r="50" style="fill:#111"/>
+    <path data-name="선 145" transform="translate(29 49.707)" style="fill:none;stroke:#fff;stroke-width:2px" d="M40 0H0"/>
+    <path data-name="패스 403" d="m23.847.707 16 16-16 16" style="stroke-miterlimit:10;fill:none;stroke:#fff;stroke-width:2px" transform="translate(29 33)"/>
+</svg>

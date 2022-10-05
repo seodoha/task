@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+body {
+    color: #1c1c1c;
+    font-family: $font;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0rem;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.scrOff {
+    // position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.en {font-family: $en;}
+
+.mobile {display: none !important;}
+
+.dimmed {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(22,22,22,0.4);
+}
+
+// SKIP NAVIGATION
+#nav-skip {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+
+    a {
+        position: absolute;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        line-height: 1;
+
+        &:hover,
+        &:focus,
+        &:active {
+        display: block;
+        z-index: 10;
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+        background: #333;
+        color: #fff;
+        }
+    }
+}

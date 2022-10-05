@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+.header{
+    background:$white;
+    transition: background-color 0.4s linear;
+    &.is-scroll, &.is-gnbOpen{
+        background:$white;
+        transition: background-color 0.4s linear;
+        .header-wrap{
+            border-bottom:1px solid $gray2;
+            & + .lnb-wrap{border-top:0;}
+        }
+    }
+    position:fixed;
+    z-index:30;
+    width:100%;
+    &-wrap{
+        position:relative; 
+        width:100%;
+        height:15rem;
+        .logo{
+            position:absolute;
+            top:5.8rem;
+            left:7rem;
+            width:110px;
+            height:35px;
+            z-index:30;
+            background-image:url('/assets/images/common/gnb_logo_color.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size:110px 35px;
+            img{
+                width:100%;
+            }
+            a{
+                display: block;
+                height: 100%;
+            }
+        }
+        .gnb-btn{
+            position:absolute; 
+            top:5.6rem;
+            right:7rem;
+            width:4rem;
+            height:4rem;
+            cursor:pointer;
+            &>i{
+                position:relative;
+                display:block;
+                padding:0; 
+                margin:1rem 0 0 0;
+                width:100%;
+                height:2px;
+                background:$gray8;              
+            }
+            &>i:first-child{
+                margin-top:0.6rem;
+            }
+        }
+        .lang-select{
+            position:absolute;
+            top:4.5rem;
+            right:12.8rem;
+        }
+    }
+}
+/*header Lnb select*/
+.select-wrap{
+    position:relative;
+    display:inline-block;   
+    .select-title{
+        position:relative;
+        font-size:2rem;
+        font-weight:700;
+        line-height:3.6rem;
+        padding:1.4rem 6.5rem 1.4rem 3rem;
+        cursor: pointer;
+        @include ellipsis;
+        &:after{
+            content:'';
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            right:3rem;
+            width:2.4rem;
+            height:2.4rem;
+            background-image:url('/assets/images/common/btn_gnb_global_open_b.svg');
+            background-repeat: no-repeat; 
+            background-size:2.4rem 2.4rem;
+            transition:transform 0.4s ease;
+        }
+        &.is-active{
+            &:after{
+                transform:translateY(-50%) rotate(180deg);
+            }          
+        }
+    }     
+}
+.select-list-wrap{
+    display:none;
+    position:absolute;
+    z-index:30;
+    width:100%;
+    border:1px solid $gray3;
+    background:$white;
+    @include fontSize('fontS03');
+    font-weight:500;
+    .select-list{
+        &__items{                
+            &>a{
+                display:block;
+                padding:2rem 3.2rem;
+                &:hover{
+                    background:$grayGreen1;
+                    color:$accent;
+                }
+            }
+        }
+    }
+}

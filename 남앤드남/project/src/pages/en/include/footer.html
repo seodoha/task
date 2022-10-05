@@ -1,0 +1,23 @@
+<div id="footer" class="footer">
+    <div class="footer-wrap">
+@@if(pageMain === true){
+        <div class="footer-menu">
+            <ul class="footer-menuList">
+                <li class="footer-menuList__items"><a href="javascript:void(0)" target="_blank">NNI Council System</a></li>
+                <li class="footer-menuList__items"><a href="javascript:void(0)" onclick="uiCommon.popup.open('.popup-f1')">Disclaimer</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <div class="footer-info__address">4th floor, Jeongan Bldg., 95 Seosomun-ro, Jung-gu, Seoul, 04516 Korea</div>
+            <div class="footer-info__tel">Tel : 02-779-5477</div>
+            <div class="footer-info__fax">Fax : 02-753-5279</div>
+        </div>
+}
+        <div class="footer-copylight">©Copyright 2021. Nam & Nam International Co. Ltd. All rights reserved.</div>
+    </div>
+</div>
+@@if(pageMain === false){
+<div class="goTop">
+    <button class="btn-top"><span class="hidden">go top</span></button>
+</div>
+}

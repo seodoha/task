@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('./pages/en/includes/head.html', { metaDescription: 'The Firm', pageTitle : 'Hwawoo - Location', cssPath :
+        '../../../assets/en/css/common.min.css' })
+    </head>
+
+    <body>
+        <!--Menu별 클래스 추가 -->
+        <div id="wrap" class="firm-wrap">
+            @@include('./pages/en/includes/header.html')
+
+            <!--Menu의 각 페이지별 클래스 추가-->
+            <main id="main" class="office-wrap domestic">
+                <section id="container">
+                    <h2 class="hidden">본문</h2>
+
+                    <div class="page-heading-layout">
+                        <div class="inner-wrap">
+                            <ol class="breadcrumbs">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">The Firm</a></li>
+                                <li class="current box-tooltip">
+                                    <button type="button">Location</button>
+                                    <div class="view-tooltip">
+                                        <ul class="custom-scroll">
+                                            <li><a href="#" title="Introduction 메뉴로 이동" aria-label="Introduction 메뉴로 이동">Introduction</a></li>
+                                            <li><a href="#" title="History 메뉴로 이동" aria-label="History 메뉴로 이동">History</a></li>
+                                            <li><a href="#" title="Award 메뉴로 이동" aria-label="Award 메뉴로 이동">Award</a></li>
+                                            <li><a href="#" title="Overseas Offices 메뉴로 이동" aria-label="Overseas Offices 메뉴로 이동">Overseas Offices</a></li>
+                                            <li><a href="#" title="Location 메뉴로 이동" aria-label="Location 메뉴로 이동" class="on">Location</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ol>
+                            <h3 class="typo-heading-02 en">Location</h3>
+                        </div>
+                    </div>
+                    <!--end of page-heading-layout-->
+
+                    <div class="inner-wrap">
+                        <div class="grid-layout">
+                            <div class="left pc">
+                                <h4 class="office-tit hidden">교통편안내</h4>
+                            </div>
+                            <div class="right">
+                                <div class="map-info">
+                                    <ul class="info-txt">
+                                        <li class="addr">
+                                            <span>
+                                                <em>Address</em>
+                                                (06164) Floors 6, 17, 18, 19, 22, 23 & 34, ASEM Tower, 517 Yeongdong-daero, Gangnam-gu, Seoul
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <strong>TEL</strong>
+                                            <span>02-6003-7000</span>
+                                        </li>
+                                        <li>
+                                            <strong>FAX</strong>
+                                            <span>02-6003-7800</span>
+                                        </li>
+                                        <li>
+                                            <strong>E-MAIL</strong>
+                                            <a href="mailto:hwawoo@hwawoo.com">hwawoo@hwawoo.com</a>
+                                        </li>
+                                    </ul>
+                                    <div class="map-area">
+                                        <!--map api 들어갈 영역-->
+                                        <img src="../../../assets/en/images/temp/map_api.png" alt="" />
+                                    </div>
+                                </div>
+                                <!--end of map-info-->
+                                <div class="box-traffic">
+                                    <dl>
+                                        <dt>Subway</dt>
+                                        <dd>
+                                            <ul class="subway">
+                                                <li>
+                                                    <em class="green">Line 2</em>
+                                                    Walk 6-7 minutes in the direction of Yeong-dong Bridge from Exit No. 6 <br class="pc">of Subway Line 2 (Samseong Station)
+                                                </li>
+                                                <li>
+                                                    <em class="brown">Line 9</em>
+                                                    Walk 2-3 minutes in the direction of ASEM Tower from Exit No. 7 <br class="pc">of Subway Line 9 (Bongeunsa Station)
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                        <dt>Bus</dt>
+                                        <dd>
+                                            <p>Get off the stops at KEPCO, COEX (East Gate), and Grand Intercontinental Hotel</p>
+                                            <ul class="bus">
+                                                <li>
+                                                    <em class="green">Branch Line (Green)</em>
+                                                    2415, 3217, 3411, 3412, 3414, 4318, Gangnam 01, Gangnam 06
+                                                </li>
+                                                <li>
+                                                    <em class="blue">Main Line (Blue)</em>
+                                                    146, 301, 351, 352, 401
+                                                </li>
+                                                <li>
+                                                    <em class="red">Metropolitan Line (red)</em>
+                                                    9407, 9414, 9507, 9607
+                                                </li>
+                                                <li>
+                                                    <em>Airport Bus</em>
+                                                    6006, City Airport Terminal
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Car</dt>
+                                        <dd>
+                                            <p>Make a U-turn at the cross-section on Bongeunsa-ro or turn right from the cross-section on Bongeunsa-ro and drive straight for 100M</p>
+                                            <ul>
+                                                <li>· Entrance to underground parking space: Enter from the direction of Bongeunsa (COEX North) and turn into ASEM Tower</li>
+                                                <li>· Park in the orange zone on underground floors 2, 3 & 4</li>
+                                            </ul>
+                                            <a href="#" download="" class="btn-txt-download" title="Location information">Location information</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end of grid-layout-->
+                    </div>
+                    <!--end of inner-wrap-->
+                </section>
+            </main>
+
+            @@include('./pages/en/includes/footer.html')
+        </div>
+
+        <!-- SCRIPT IMPORT -->
+        @@include('./pages/en/includes/scriptImport.html', {pageMain : false,})
+    </body>
+</html>

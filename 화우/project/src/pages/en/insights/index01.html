@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./pages/en/includes/head.html', {
+        metaDescription: 'insights',
+        pageTitle : 'Hwawoo - insights',
+        cssPath : '../../../assets/en/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="insights-wrap">
+        @@include('./pages/en/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">insights</a></li>
+                            <!--2022.09.20 퍼블 수정-->
+                            <li><a href="#">News</a></li>
+                            <!-- <li class="current box-tooltip">
+                                <button type="button">News</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="News 메뉴로 이동" aria-label="News 메뉴로 이동" class="on">News</a></li>
+                                        <li><a href="#" title="Newsletters 메뉴로 이동" aria-label="Newsletters 메뉴로 이동">Newsletters</a></li>
+                                        <li><a href="#" title="Publications 메뉴로 이동" aria-label="Publications 메뉴로 이동">Publications</a></li>
+                                    </ul>
+                                </div>
+                            </li> -->
+                            <li class="current box-tooltip">
+                                <button type="button">In the Media</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="In the Media 메뉴로 이동" aria-label="In the Media 메뉴로 이동" class="on">In the Media</a></li>
+                                        <li><a href="#" title="Seminars/Events 메뉴로 이동" aria-label="Seminars/Events 메뉴로 이동">Seminars/Events</a></li>
+                                        <li><a href="#" title="Firm News 메뉴로 이동" aria-label="Firm News 메뉴로 이동">Firm News</a></li>
+                                        <li><a href="#" title="Recent Matters 메뉴로 이동" aria-label="Recent Matters 메뉴로 이동">Recent Matters</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02">In the Media</h3>
+                        <!--2022.09.20 탭추가-->
+                        <div class="tab-wrap depth-tab">
+                            <ul class="tab-list underline">
+                                <li><a href="#" class="on">News</a></li>
+                                <li><a href="#">Newsletters</a></li>
+                                <li><a href="#">Publications</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end of inner-wrap-->
+                </div>
+                <!--end of page-heading-layout-->
+                <article class="arti01">
+                    <div class="inner-wrap">
+                        <form>
+                            <fieldset class="page-search-layout">
+                                <legend>Practice Areas Search</legend>
+                                <div class="box-input-wrap with-select ty-border">
+                                    <div class="box-select">
+                                        <select>
+                                            <option value="">ALL</option>
+                                            <option value="">TITLE</option>
+                                            <option value="">CONTENTS</option>
+                                            <option value="">MEDIA</option>
+                                        </select>
+                                    </div>
+                                    <div class="box-input ty-search">
+                                        <input type="text" placeholder="Please enter a search Term." title="Please enter a search Term.">
+                                        <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                        <button type="search" class="icon-search-big"><span>Search</span></button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <ul class="board-card-list ty03">
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">분주한 로펌들...임금피크제 판결, 유탄 어디까지 튀나</strong>
+                                            <p class="txt">대법원 임금피크제 판결 당일 법무법인 화우가 노동그룹, 기업자문그룹, 금융그룹 변호사들을 중심으로 TF를 ...</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#임금피크제</a></li>
+                                            <li><a href="#">#노무노사</a></li>
+                                            <li><a href="#">#인사 · 노동</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">M&A를 할 때에도 이전가격 이슈 검토가 필요하다</strong>
+                                            <p class="txt">법무법인 화우의 신상현 미국회계사가 Articles한 조세칼럼이 머니투데이 the L에 게재되었습니다.</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#조세</a></li>
+                                            <li><a href="#">#경영</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">로펌마다 ‘임금피크제 자문·소송’ 대응 분주</strong>
+                                            <p class="txt">임금피크제의 유·무효 기준을 제시한 대법원 첫 판결 관련 법조계 동향 등에 대한 법무법인 화우 ...</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#조세</a></li>
+                                            <li><a href="#">#경영</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">"새 합수단, 가상자산 구조부터 연구해야"</strong>
+                                            <p class="txt">합수단 부활에 대한 법무법인 화우 김영기 변호사 (증권범죄합동수사단 직전 단장)의 견해가 담긴 ...</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#조세</a></li>
+                                            <li><a href="#">#경영</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">분주한 로펌들...임금피크제 판결, 유탄 어디까지 튀나</strong>
+                                            <p class="txt">대법원 임금피크제 판결 당일 법무법인 화우가 노동그룹, 기업자문그룹, 금융그룹 변호사들을 중심으로 TF를 ...</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#임금피크제</a></li>
+                                            <li><a href="#">#노무노사</a></li>
+                                            <li><a href="#">#인사 · 노동</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">M&A를 할 때에도 이전가격 이슈 검토가 필요하다</strong>
+                                            <p class="txt">법무법인 화우의 신상현 미국회계사가 Articles한 조세칼럼이 머니투데이 the L에 게재되었습니다.</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#조세</a></li>
+                                            <li><a href="#">#경영</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">로펌마다 ‘임금피크제 자문·소송’ 대응 분주</strong>
+                                            <p class="txt">임금피크제의 유·무효 기준을 제시한 대법원 첫 판결 관련 법조계 동향 등에 대한 법무법인 화우 ...</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#조세</a></li>
+                                            <li><a href="#">#경영</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">"새 합수단, 가상자산 구조부터 연구해야"</strong>
+                                            <p class="txt">합수단 부활에 대한 법무법인 화우 김영기 변호사 (증권범죄합동수사단 직전 단장)의 견해가 담긴 ...</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#조세</a></li>
+                                            <li><a href="#">#경영</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">분주한 로펌들...임금피크제 판결, 유탄 어디까지 튀나</strong>
+                                            <p class="txt">대법원 임금피크제 판결 당일 법무법인 화우가 노동그룹, 기업자문그룹, 금융그룹 변호사들을 중심으로 TF를 ...</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#임금피크제</a></li>
+                                            <li><a href="#">#노무노사</a></li>
+                                            <li><a href="#">#인사 · 노동</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">M&A를 할 때에도 이전가격 이슈 검토가 필요하다</strong>
+                                            <p class="txt">법무법인 화우의 신상현 미국회계사가 Articles한 조세칼럼이 머니투데이 the L에 게재되었습니다.</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#조세</a></li>
+                                            <li><a href="#">#경영</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">로펌마다 ‘임금피크제 자문·소송’ 대응 분주</strong>
+                                            <p class="txt">임금피크제의 유·무효 기준을 제시한 대법원 첫 판결 관련 법조계 동향 등에 대한 법무법인 화우 ...</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#조세</a></li>
+                                            <li><a href="#">#경영</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">"새 합수단, 가상자산 구조부터 연구해야"</strong>
+                                            <p class="txt">합수단 부활에 대한 법무법인 화우 김영기 변호사 (증권범죄합동수사단 직전 단장)의 견해가 담긴 ...</p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <ul class="list-hashtag">
+                                            <li><a href="#">#조세</a></li>
+                                            <li><a href="#">#경영</a></li>
+                                        </ul>
+                                        <ul class="list-util">
+                                            <li>월간노동법률</li>
+                                            <li class="date">2022.04.18</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="box-btn box-board-more">
+                                <button type="button" class="btn-circle-ani btn-fold"><i></i>MORE</button>
+                            </div>
+                             <!--Search결과가 없는 case-->
+                            <!-- <div class="no-result-wrap">
+                                <strong>No Result Found.</strong>
+                            </div> -->
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        @@include('./pages/en/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/en/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

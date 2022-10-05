@@ -1,0 +1,151 @@
+<!-- header -->
+<header id="header" class="header">
+    <div class="header-wrap">
+        <h1 class="logo">
+            <a href="javascript:void(0)">
+                <span class="hidden">NAM&NAM International</span>
+            </a>
+        </h1>
+        <div class="lang-select select-wrap">
+            <div class="select-title">KOR</div>
+            <div class="select-list-wrap">
+                <ul class="select-list">
+                    <li class="select-list__items"><a href="javascript:void(0)">KOR</a></li>
+                    <li class="select-list__items on"><a href="javascript:void(0)">ENG</a></li>
+                    <li class="select-list__items"><a href="javascript:void(0)">CHN</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="gnb-btn">
+            <i></i><i></i><i></i>
+        </div>
+        <div class="gnb" data-gnb = @@gnbLocation>
+            <h1 class="gnb-logo">
+                <a href="javascript:void(0)">
+                    <span class="hidden">NAM&NAM International</span>
+                </a>
+            </h1>
+            <button class="gnb-close"><span class="hidden">close</span></button>
+            <div class="pc_gnbImage"></div>          
+            <div class="gnb-wrap">
+                <div class="gnb-list-wrap">
+                    <ul class="gnb-list gnb-1depth">
+                        <li class="gnb-1depth__items business">
+                            <a href="javascript:void(0)">Field of work</a>
+                            <ul class="gnb-list gnb-2depth">
+                                <li class="gnb-2depth__items"><a href="javascript:void(0)">Business introduction</a></li>
+                                <li class="gnb-2depth__items"><a href="javascript:void(0)">K-REACH</a></li>
+                                <li class="gnb-2depth__items"><a href="javascript:void(0)">Chemical Control Act (CCA)</a></li>
+                                <li class="gnb-2depth__items"><a href="javascript:void(0)">Chemical Product Safety Act</a></li>
+                                <li class="gnb-2depth__items"><a href="javascript:void(0)">Overseas Chemical Regulations</a></li>
+                                <li class="gnb-2depth__items"><a href="javascript:void(0)">GHS/CLP/SDS</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-1depth__items customer">
+                            <a href="javascript:void(0)">Service Center</a>
+                            <ul class="gnb-list gnb-2depth">
+                                <li class="gnb-2depth__items"><a href="javascript:void(0)">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-1depth__items company">
+                            <a href="javascript:void(0)">Company<br>Introduction</a>
+                            <ul class="gnb-list gnb-2depth">
+                                <li class="gnb-2depth__items"><a href="javascript:void(0)">Company Overview</a></li>
+                                <li class="gnb-2depth__items"><a href="javascript:void(0)">History</a></li>
+                                <li class="gnb-2depth__items"><a href="javascript:void(0)">Affiliated company</a></li>
+                                <li class="gnb-2depth__items"><a href="javascript:void(0)">Social contribution</a></li>
+                            </ul>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="gnb-footer">
+                    <ul class="gnb-footer__lang">
+                        <li><a href="javascript:void(0)">KOR</a></li>
+                        <li><a href="javascript:void(0)" class="on">ENG</a></li>
+                        <li><a href="javascript:void(0)">CHN</a></li>
+                    </ul>
+                </div>
+            </div>           
+        </div>
+    </div>
+    @@if(lnbLocation != 'none'){
+    <div class="lnb lnb-wrap" data-lnb = @@lnbLocation>
+        <div class="lnb-inner">
+            <div class="home"><a href="javascript:void(0)"><span class="hidden">HOME</span></a></div> 
+            <div class="lnb-1depth select-wrap">
+                <div class="select-title"></div>
+                <div class="select-list-wrap">
+                    <ul class="select-list">
+                        <li class="select-list__items business"><a href="javascript:void(0)">Field of work</a></li>
+                        <li class="select-list__items customer"><a href="javascript:void(0)">Service Center</a></li> 
+                        <li class="select-list__items company"><a href="javascript:void(0)">Company Introduction</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lnb-2depth select-wrap">
+                <div class="select-title"></div>
+                <div class="select-list-wrap">
+                    <ul class="select-list business"><!-- 업무 분야 -->
+                        <li class="select-list__items"><a href="javascript:void(0)">Business introduction</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">K-REACH</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Chemical Control Act (CCA)</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Chemical Product Safety Act</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Overseas Chemical Regulations</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">GHS/CLP/SDS</a></li>
+                    </ul>
+                    <ul class="select-list customer"><!-- 고객센터 -->
+                        <li class="select-list__items"><a href="javascript:void(0)">FAQ</a></li>
+                    </ul>
+                    <ul class="select-list company"><!-- 회사 소개 -->
+                        <li class="select-list__items"><a href="javascript:void(0)">Company Overview</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">History</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Affiliated company</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Social contribution</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lnb-3depth select-wrap">
+                <div class="select-title"></div>
+                <div class="select-list-wrap">
+                    <ul class="select-list"><!-- 업무분야 | 화평법 -->
+                        <li class="select-list__items"><a href="javascript:void(0)">OVERVIEW</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Pre-registration of Phase-in substances</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Registration of Phase-in substances</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Registration of Phase-in substances to be registered</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Registration and Notification of non-phase-in substances</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Registration Exemption Application</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Preparation of chemical registration data</a></li>
+                    </ul>
+                    <ul class="select-list"><!-- 업무분야 | 화관법 -->
+                        <li class="select-list__items"><a href="javascript:void(0)">OVERVIEW</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Verification of chemicals & Permision of hazarous substance</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Business permission</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Chemicals Statistical Survey</a></li>
+                    </ul>
+                    <ul class="select-list"><!-- 업무분야 | 화학제품안전법 -->
+                        <li class="select-list__items"><a href="javascript:void(0)">Household chemical products</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Biocidal substances</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Biocidal products</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Biocidal treatment products</a></li>
+                    </ul>
+                    <ul class="select-list"><!-- 업무분야 | 국외물질규제 -->
+                        <li class="select-list__items"><a href="javascript:void(0)">OVERVIEW</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Europe EU REACH</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Japan Chemical Substance Control Law (CSCL)</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">US TSCA</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Taiwan TCCA</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">China REACH</a></li>
+                    </ul>
+                    <ul class="select-list"><!-- 업무분야 | GHS/CLP/SDS -->
+                        <li class="select-list__items"><a href="javascript:void(0)">OVERVIEW</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">MSDS Service</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">Overseas SDS service</a></li>
+                        <li class="select-list__items"><a href="javascript:void(0)">MSDS authoring program(software) – “SDS_Pro”</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</header>
+<!--// header -->

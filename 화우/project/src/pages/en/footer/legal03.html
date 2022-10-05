@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./pages/en/includes/head.html', {
+        metaDescription: 'Footer',
+        pageTitle : 'Hwawoo - Legal notice',
+        cssPath : '../../../assets/en/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="etc-wrap">
+        @@include('./pages/en/includes/header.html')
+
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Legal notice</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">Disclaimer</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="Limited Liability 메뉴로 이동" aria-label="Limited Liability 메뉴로 이동">Limited Liability</a></li>
+                                        <li><a href="#" title="Privacy Policy 메뉴로 이동" aria-label="Privacy Policy 메뉴로 이동">Privacy Policy</a></li>
+                                        <li><a href="#" title="Disclaimer 메뉴로 이동" aria-label="Disclaimer 메뉴로 이동" class="on">Disclaimer</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02">Legal notice</h3>
+                    </div>
+                </div>
+
+                <article class="arti01">
+                    <div class="inner-wrap">
+
+                        <div class="tab-wrap">
+                            <ul class="tab-list">
+                                <li><a href="javascript:;">Limited Liability</a></li>
+                                <li><a href="javascript:;">Privacy Policy</a></li>
+                                <li><a href="javascript:;" class="on">Disclaimer</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="terms-wrap">
+                                    <h4 class="typo-title-01">Disclaimer</h4>
+                                    <p class="typo-title-02">
+                                        This website provides general information about Yoon & Yang LLC (hereinafter “Yoon & Yang”), and is by no means intended to provide legal advice or conduct promotional activities.
+                                    </p>
+                                    <p class="terms-txt01">
+                                        Yoon & Yang expressly disclaims all liability with respect of actions or not taken based on any information obtained via this website.
+                                    </p>
+                                    <p class="terms-txt01">
+                                        Please contact directly Yoon & Yang for if you have any inquiries related to information posted on this website or if you intend to take any action based on such information.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        @@include('./pages/en/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/en/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

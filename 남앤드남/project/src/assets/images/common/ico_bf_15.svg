@@ -1,0 +1,17 @@
+<svg id="ico_bf_15" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="그룹_1783" data-name="그룹 1783" transform="translate(-447 -97)">
+        <path id="사각형_1151" data-name="사각형 1151" class="cls-2" transform="translate(475 112)" d="M0 0h65v90H0z"/>
+        <g id="그룹_1759" data-name="그룹 1759" transform="translate(475.539 112.426)">
+            <path id="사각형_1152" data-name="사각형 1152" class="cls-2" transform="translate(8.461 10.574)" d="M0 0h21.775v26H0z"/>
+            <g id="그룹_1749" data-name="그룹 1749" transform="translate(40.461 21.789)">
+                <path id="패스_7046" data-name="패스 7046" class="cls-2" d="M7895.456 6135.654h14" transform="translate(-7895.456 -6127.657)"/>
+                <path id="패스_7048" data-name="패스 7048" class="cls-2" d="M7895.456 6135.654h14" transform="translate(-7895.456 -6135.654)"/>
+            </g>
+        </g>
+    </g>
+</svg>

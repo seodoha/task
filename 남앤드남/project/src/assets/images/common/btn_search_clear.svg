@@ -1,0 +1,12 @@
+<svg id="btn_search_clear" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-miterlimit:10;stroke-width:2px}
+        </style>
+    </defs>
+    <circle id="Oval" cx="12" cy="12" r="12" style="fill:#f8f8f8"/>
+    <g id="Icon_search_Clear_X" data-name="Icon / search / Clear / X" transform="translate(6 6)">
+        <path id="Path_66" data-name="Path 66" class="cls-2" d="M12 0 0 12"/>
+        <path id="Path_66-2" data-name="Path 66" class="cls-2" d="m0 0 12 12"/>
+    </g>
+</svg>

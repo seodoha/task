@@ -1,0 +1,12 @@
+<svg id="ico_file_download_b" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{stroke-width:2px;fill:none;stroke:#111;stroke-miterlimit:10}
+        </style>
+    </defs>
+    <g id="그룹_850" data-name="그룹 850" transform="translate(0 -2)">
+        <path id="패스_245" data-name="패스 245" class="cls-2" d="m18 12-6 6-6-6"/>
+        <path id="선_110" data-name="선 110" class="cls-2" transform="translate(12 6)" d="M0 12V0"/>
+        <path id="선_111" data-name="선 111" class="cls-2" transform="translate(4 21)" d="M0 0h16"/>
+    </g>
+</svg>

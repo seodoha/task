@@ -1,0 +1,23 @@
+<svg id="ico_service_01" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#274b48;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="icon" transform="translate(-453 -90)">
+        <g id="그룹_1772" data-name="그룹 1772" transform="translate(2 1)">
+            <g id="그룹_1687" data-name="그룹 1687" transform="translate(-2 -3)">
+                <g id="그룹_1686" data-name="그룹 1686" transform="translate(490 140)">
+                    <circle id="타원_277" data-name="타원 277" class="cls-2" cx="11.5" cy="11.5" r="11.5"/>
+                    <path id="패스_6910" data-name="패스 6910" class="cls-2" d="m7495.226 499.047 4.6 4 8.175-7.667" transform="translate(-7490.462 -488.018)"/>
+                </g>
+                <path id="패스_7082" data-name="패스 7082" class="cls-2" d="M475.843 131.568v70.106h65v-28.381" transform="translate(2.157 -4.674)"/>
+                <g id="그룹_1771" data-name="그룹 1771" transform="rotate(-144 568.933 236.57)">
+                    <path id="합치기_1" data-name="합치기 1" d="M0 55V11.251L5 0l5 11.251V55z" transform="translate(636.741 258)" style="stroke-linejoin:round;fill:none;stroke:#274b48;stroke-width:2px"/>
+                </g>
+            </g>
+        </g>
+        <path id="패스_7159" data-name="패스 7159" class="cls-2" d="M540.843 132.26v-20.586h-45.431" transform="translate(2.157 -6.674)"/>
+        <path id="패스_6906" data-name="패스 6906" d="M1175.3 628.972v19.568h19.853z" transform="rotate(-90 574.592 725.564)" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#274b48;stroke-width:2px"/>
+    </g>
+</svg>

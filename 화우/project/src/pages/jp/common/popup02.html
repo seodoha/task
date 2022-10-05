@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        @@include('./pages/jp/includes/head.html',
+        { metaDescription: 'Solutions', pageTitle : 'Hwawoo - Alert', cssPath :
+        '../../../assets/jp/css/common.min.css' })
+    </head>
+    <body>
+        <div id="wrap" style="padding: 2rem;">
+            <button data-pop="test-popup" style="padding: 2rem;border: 1px solid #000;">팝업 오픈</button>
+        </div>
+
+        <!--국제정보보호인증 팝업-->
+        <div id="test-popup" class="layer-popup-wrap">
+            <div class="layer-popup">
+                <div class="popup-header">
+                    <h4 class="tit">국제정보보호인증 ISO 27001</h4>
+                    <span class="right">
+                        <button class="icon-close popup-close"><span>닫기</span></button>
+                    </span>
+                </div>
+                <div class="popup-body">
+                    <div class="box-img">
+                        <img src="../../../assets/jp/images/sub/certification.png" alt="국제정보보호인증 ISO 27001" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/jp/includes/scriptImport.html', {pageMain : false,})
+    </body>
+</html>
+
+
+
+
+
+
+

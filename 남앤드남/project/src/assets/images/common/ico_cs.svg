@@ -1,0 +1,16 @@
+<svg id="ico_cs" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <rect id="area" width="48" height="48" fill="red" opacity="0"/>
+  <g id="그룹_261" data-name="그룹 261" transform="translate(261.207 217.732)">
+    <rect id="사각형_304" data-name="사각형 304" width="24" height="2" transform="translate(-249.207 -175.732)" fill="#111"/>
+    <g id="사각형_302" data-name="사각형 302" transform="translate(-257.207 -209.732)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <rect width="40" height="28" stroke="none"/>
+      <rect x="-1" y="-1" width="42" height="30" fill="none"/>
+    </g>
+    <g id="사각형_303" data-name="사각형 303" transform="translate(-245.207 -181.732)" fill="none" stroke="#000" stroke-width="2">
+      <rect width="16" height="8" stroke="none"/>
+      <rect x="1" y="1" width="14" height="6" fill="none"/>
+    </g>
+    <rect id="사각형_305" data-name="사각형 305" width="22" height="2" transform="translate(-248.207 -199.732)" fill="#111"/>
+    <rect id="사각형_318" data-name="사각형 318" width="14" height="2" transform="translate(-248.207 -193.732)" fill="#111"/>
+  </g>
+</svg>

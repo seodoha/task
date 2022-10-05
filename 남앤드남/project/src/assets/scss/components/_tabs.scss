@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+.tab-list {
+    // width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    font-size: 0;
+    .tab-list__item {
+        display: inline-block;
+        padding: 0 2rem;
+        &:first-of-type{
+            padding-left: 0;
+        }
+        a{
+            @include fontSize('fontS04');
+            position:relative;
+            display: inline-block;
+            padding-bottom: 0.4rem;
+            color:$gray6;
+            &.on{
+                color:$gray8;
+                font-weight:700;
+                &:after{
+                    content:'';
+                    position:absolute;
+                    bottom:0;
+                    left:0;
+                    width:100%;
+                    height:2px;
+                    background:$gray8;
+                }
+            }
+        }
+    }
+    //scrollbar custom
+    scrollbar-width: thin;
+    scrollbar-color: #ddd #eee;
+    scrollbar-arrow-color: #eee;
+    scrollbar-Face-Color: #ddd;
+    scrollbar-Track-Color: #eee;
+    scrollbar-DarkShadow-Color: #eee;
+    scrollbar-Highlight-Color: #eee;
+    scrollbar-Shadow-Color: #eee;
+    //chrome
+    &::-webkit-scrollbar{width:2px; height:2px;}
+    &::-webkit-scrollbar-thumb{background:#bbb;}
+    &::-webkit-scrollbar-track{background:#eee;}   
+    &:-webkit-scrollbar{width:0; height:0;}
+}
+.dv-mobile .tab-list::-webkit-scrollbar{width:0; height:0; display:none;}
+
+@include response('tablet') {
+    /*tab menu*/
+    .tab-listWrap{
+        width:calc(100% + 6rem);
+        margin-left:-3rem;
+        .tab-list{
+            padding:0 3rem;
+        }
+    }
+    .tab-list {
+        width: 100%;
+        .tab-list__item {
+            padding: 0 1.6rem;
+            a{
+                @include fontSize('fontS04');
+            }
+        }
+    }
+}
+
+@include response('mobile') {
+    /*tab menu*/
+    .tab-listWrap{
+        width:calc(100% + 6.4rem);
+        margin-left:-3.2rem;
+        .tab-list{
+            padding:0 3.2rem;
+        }
+    }
+    .tab-list {
+        width: 100%;
+        .tab-list__item {
+            padding: 0 1.2rem;
+            a{
+                @include fontSize('fontS03');
+            }
+        }
+    }
+}

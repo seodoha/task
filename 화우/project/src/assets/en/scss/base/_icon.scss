@@ -1,0 +1,61 @@
+// ICON
+// 아이콘 태그 안에 <span> 으로 설명 추가
+[class^="icon-"] {
+    transition: all 0.2s;
+    > span {
+        @include hidden;
+    }
+}
+
+// _svg.scss 에 SVG 등록해야 함
+.icon {
+    &-search {
+        @include svgIcon(2.8rem, 2.8rem, $icon-search);
+        &-white { @include svgIcon(2.8rem, 2.8rem, $icon-search-white); }
+        &-big { @include svgIcon(3.8rem, 3.8rem, $icon-search-big); }
+    }
+    &-close {
+        @include svgIcon(4.6rem, 4.6rem, $icon-close);
+        &-white { @include svgIcon(4.6rem, 4.6rem, $icon-close-white); }
+    }
+    &-sns { @include svgIcon(3.2rem, 3.2rem, $icon-sns); }
+    &-facebook { @include svgIcon(2.8rem, 2.8rem, $icon-facebook); }
+    &-twitter { @include svgIcon(2.8rem, 2.8rem, $icon-twitter); }
+    &-text-reset { @include svgIcon(3.2rem, 3.2rem, $icon-text-reset); }
+    &-text-delete { @include svgIcon(1.8rem, 1.8rem, $icon-text-delete); }
+    &-print {
+        @include svgIcon(3.2rem, 3.2rem, $icon-print);
+        &:hover {@include svgIcon(3.2rem, 3.2rem, $icon-print-on);}
+    }
+    &-share {
+        @include svgIcon(3.2rem, 3.2rem, $icon-share);
+        &:hover {@include svgIcon(3.2rem, 3.2rem, $icon-share-on);}
+    }
+    &-kakaotalk { @include svgIcon(2.8rem, 2.8rem, $icon-kakaotalk); }
+    &-line { @include svgIcon(2.8rem, 2.8rem, $icon-line); }
+    &-linkedin { @include svgIcon(2.8rem, 2.8rem, $icon-linkedin); }
+    &-youtube { @include svgIcon(2.8rem, 2.8rem, $icon-youtube); }
+    &-online { @include svgIcon(2.8rem, 2.8rem, $icon-online); }
+    &-pdf {
+        @include svgIcon(3.2rem, 3.2rem, $icon-pdf);
+        &:hover {@include svgIcon(3.2rem, 3.2rem, $icon-pdf-on);}
+    }
+    &-papers{ @include svgIcon(3.2rem, 3.2rem, $icon-papers); }
+    &-pin { @include svgIcon(2.4rem, 2.4rem, $icon-pin); }
+    &-tag { @include svgIcon(2.8rem, 2.8rem, $icon-tag); }
+    &-check { @include svgIcon(2.4rem, 2.4rem, $icon-check-gray); }
+    &-check-gray { @include svgIcon(2.4rem, 2.4rem, $icon-check-gray); }
+    &-checked { @include svgIcon(2.4rem, 2.4rem, $icon-checked); }
+    &-radio { @include svgIcon(2.4rem, 2.4rem, $icon-radio); }
+    &-radio-off { @include svgIcon(2.4rem, 2.4rem, $icon-radio-off); }
+    &-radio-line { @include svgIcon(3.4rem, 3rem, $icon-radio-line); }
+    &-notice { @include svgIcon(2.8rem, 2.8rem, $icon-notice); }
+    &-book { @include svgIcon(12.1rem, 15.1rem, $icon-book); }
+    &-law { @include svgIcon(10rem, 10rem, $icon-law); }
+    &-study { @include svgIcon(10rem, 10rem, $icon-study); }
+    &-heart { @include svgIcon(10.5rem, 10rem, $icon-heart); }
+    &-education { @include svgIcon(10rem, 10rem, $icon-education); }
+    &-culture { @include svgIcon(10rem, 10rem, $icon-culture); }
+    &-map { @include svgIcon(2.8rem, 2.8rem, $icon-map); }
+
+}

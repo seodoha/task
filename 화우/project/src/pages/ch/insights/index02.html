@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zn">
+
+<head>
+    @@include('./pages/ch/includes/head.html', {
+        metaDescription: 'insights',
+        pageTitle : 'Hwawoo - insights',
+        cssPath : '../../../assets/ch/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="insights-wrap">
+        @@include('./pages/ch/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">insights</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">뉴스</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="뉴스 메뉴로 이동" aria-label="뉴스 메뉴로 이동" class="on">뉴스</a></li>
+                                        <li><a href="#" title="简报 메뉴로 이동" aria-label="简报 메뉴로 이동">简报</a></li>
+                                        <li><a href="#" title="贡献和研究材料 메뉴로 이동" aria-label="贡献和研究材料 메뉴로 이동">贡献和研究材料</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="current box-tooltip">
+                                <button type="button">研讨会/活动</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="媒体报道 메뉴로 이동" aria-label="媒体报道 메뉴로 이동">媒体报道</a></li>
+                                        <li><a href="#" title="研讨会/活动 메뉴로 이동" aria-label="研讨会/活动 메뉴로 이동" class="on">研讨会/活动</a></li>
+                                        <li><a href="#" title="和友消息 메뉴로 이동" aria-label="和友消息 메뉴로 이동">和友消息</a></li>
+                                        <li><a href="#" title="最近业务事例 메뉴로 이동" aria-label="最近业务事例 메뉴로 이동">最近业务事例</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02">研讨会/活动</h3>
+                    </div>
+                    <!--end of inner-wrap-->
+                </div>
+                <!--end of page-heading-layout-->
+                <article class="arti01">
+                    <div class="inner-wrap">
+                        <form>
+                            <fieldset class="page-search-layout">
+                                <legend>业务领域  검색</legend>
+                                <div class="box-input-wrap with-select ty-border">
+                                    <div class="box-select">
+                                        <select>
+                                            <option value="">ALL</option>
+                                            <option value="">TITLE</option>
+                                            <option value="">CONTENTS</option>
+                                            <option value="">MEDIA</option>
+                                        </select>
+                                    </div>
+                                    <div class="box-input ty-search">
+                                        <input type="text" placeholder="请输入搜索词" title="请输入搜索词">
+                                        <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                        <button type="search" class="icon-search-big"><span>검색</span></button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <ul class="board-card-list">
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">[로펌 패트롤] 법무법인 화우, 부동산건설 아우른 융복합 맞춤형 서비스</strong>
+                                            <p class="txt">
+                                                법무법인(유) 화우는 지난 5월 4일 세계적인 로펌 평가기관 Legal500과 ‘메타버스, NFT 및 블록체인 관련 분쟁대응 전략
+                                                법무법인(유) 화우는 지난 5월 4일 세계적인 로펌 평가기관 Legal500과 ‘메타버스, NFT 및 블록체인 관련 분쟁대응 전략
+                                            </p>
+                                            <span class="date">2022.04.18 (목) 14:00 ~ 16:00</span>
+                                        </div>
+                                    </a>
+                                    <div class="box-btn">
+                                        <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">중대재해 대응 TF</strong>
+                                            <p class="txt">법무법인(유) 화우의 중대재해 대응 TF를 소개합니다.</p>
+                                            <span class="date">2022.04.18 (목) 14:00 ~ 16:00</span>
+                                        </div>
+                                    </a>
+                                    <div class="box-btn">
+                                        <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">코오롱인더스트리의 골프웨어 사업부문 물적분할 자문</strong>
+                                            <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                            <span class="date">2022.04.18 (목) 14:00 ~ 16:00</span>
+                                        </div>
+                                    </a>
+                                    <div class="box-btn">
+                                        <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">[로펌 패트롤] 법무법인 화우, 부동산건설 아우른 융복합 맞춤형 서비스</strong>
+                                            <p class="txt">
+                                                법무법인(유) 화우는 지난 5월 4일 세계적인 로펌 평가기관 Legal500과 ‘메타버스, NFT 및 블록체인 관련 분쟁대응 전략
+                                                법무법인(유) 화우는 지난 5월 4일 세계적인 로펌 평가기관 Legal500과 ‘메타버스, NFT 및 블록체인 관련 분쟁대응 전략
+                                            </p>
+                                            <span class="date">2022.04.18 (목) 14:00 ~ 16:00</span>
+                                        </div>
+                                    </a>
+                                    <div class="box-btn">
+                                        <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">코오롱인더스트리의 골프웨어 사업부문 물적분할 자문</strong>
+                                            <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                            <span class="date">2022.04.18 (목) 14:00 ~ 16:00</span>
+                                        </div>
+                                    </a>
+                                    <div class="box-btn">
+                                        <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">에셋원자산운용 매각 자문</strong>
+                                            <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                            <span class="date">2022.04.18 (목) 14:00 ~ 16:00</span>
+                                        </div>
+                                    </a>
+                                    <div class="box-btn">
+                                        <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">[로펌 패트롤] 법무법인 화우, 부동산건설 아우른 융복합 맞춤형 서비스</strong>
+                                            <p class="txt">
+                                                법무법인(유) 화우는 지난 5월 4일 세계적인 로펌 평가기관 Legal500과 ‘메타버스, NFT 및 블록체인 관련 분쟁대응 전략
+                                                법무법인(유) 화우는 지난 5월 4일 세계적인 로펌 평가기관 Legal500과 ‘메타버스, NFT 및 블록체인 관련 분쟁대응 전략
+                                            </p>
+                                            <span class="date">2022.04.18 (목) 14:00 ~ 16:00</span>
+                                        </div>
+                                    </a>
+                                    <div class="box-btn">
+                                        <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">에셋원자산운용 매각 자문</strong>
+                                            <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                            <span class="date">2022.04.18 (목) 14:00 ~ 16:00</span>
+                                        </div>
+                                    </a>
+                                    <div class="box-btn">
+                                        <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                                    </div>
+                                </li>
+                                <li class="box-board-card">
+                                    <a href="#">
+                                        <div class="card-text-info">
+                                            <strong class="tit">[로펌 패트롤] 법무법인 화우, 부동산건설 아우른 융복합 맞춤형 서비스</strong>
+                                            <p class="txt">
+                                                법무법인(유) 화우는 지난 5월 4일 세계적인 로펌 평가기관 Legal500과 ‘메타버스, NFT 및 블록체인 관련 분쟁대응 전략
+                                                법무법인(유) 화우는 지난 5월 4일 세계적인 로펌 평가기관 Legal500과 ‘메타버스, NFT 및 블록체인 관련 분쟁대응 전략
+                                            </p>
+                                            <span class="date">2022.04.18 (목) 14:00 ~ 16:00</span>
+                                        </div>
+                                    </a>
+                                    <div class="box-btn">
+                                        <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <div class="box-btn box-board-more">
+                                <button type="button" class="btn-circle-ani btn-fold"><i></i>MORE</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        @@include('./pages/ch/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/ch/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

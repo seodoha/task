@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        @@include('./pages/cn/include/head.html',{
+        pageTitle : 'NAM&NAM | 500 error',
+		pageMain : false
+	})
+    </head>
+    <body class="chn">
+        <div id="wrap" class="wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/cn/include/header.html',{
+                    gnbLocation : 'business,0,0',
+                    lnbLocation : 'none'
+            })
+            <!-- container -->
+            <div id="container" class="container footerFix"><!-- no scrolling-->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap">
+                        <div class="error-wrap">
+                            <div class="error-inner">
+                                <div class="image"><img src="/assets/images/common/ico_500.svg" alt=""></div>
+                                <div class="title">服务器临时发生故障</div>
+                                <div class="text">
+                                    现在无法连接服务<br>请稍后再确认
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btns h-lg">刷新</button><button class="btns h-lg">转到主页</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--// container contents -->
+            </div>
+            <!--// container -->
+            @@include('./pages/cn/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        @@include('./pages/cn/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

@@ -1,0 +1,18 @@
+<svg id="ico_bf_02" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="그룹_1685" data-name="그룹 1685" transform="translate(-373 -95)">
+        <path id="패스_7082" data-name="패스 7082" class="cls-2" d="M496.82 111.674h-20.977v90h65v-42.887" transform="translate(-77.843 .326)"/>
+        <path id="패스_7159" data-name="패스 7159" class="cls-2" d="M540.843 120.008v-8.334h-20.828" transform="translate(-77.843 .326)"/>
+        <path id="사각형_1168" data-name="사각형 1168" class="cls-2" transform="translate(419 109)" d="M0 0h23v10H0z"/>
+        <g id="그룹_1771" data-name="그룹 1771" transform="rotate(-144 526.283 248.216)">
+            <path id="합치기_1" data-name="합치기 1" d="M0 55V11.251L5 0l5 11.251V55z" transform="translate(636.741 258)" style="stroke-linejoin:round;fill:none;stroke:#111;stroke-width:2px"/>
+        </g>
+        <path id="사각형_1169" data-name="사각형 1169" class="cls-2" transform="translate(410 142)" d="M0 0h8v8H0z"/>
+        <path id="사각형_1170" data-name="사각형 1170" class="cls-2" transform="translate(410 160)" d="M0 0h8v8H0z"/>
+        <path id="사각형_1171" data-name="사각형 1171" class="cls-2" transform="translate(410 178)" d="M0 0h8v8H0z"/>
+    </g>
+</svg>

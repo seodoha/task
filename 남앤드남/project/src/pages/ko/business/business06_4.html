@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/ko/include/head.html',{
+        pageTitle : '남앤드남 | GHS/CLP/SDS | MSDS 자동 작성 프로그램',
+		pageMain : false
+	})
+    </head>
+    <body>
+        <div id="wrap" class="wrap business-wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/ko/include/header.html',{
+                    gnbLocation : 'business,5,0',
+                    lnbLocation : 'business,5,4,3'
+            })
+            <!-- container -->
+            <div id="container" class="container">
+                <!-- container header -->
+                <div class="container-header business">                            
+                    <div class="container-header__title pc"><div><span>MSDS 자동 작성</span></div><div><span>프로그램</span></div></div>
+                    <div class="container-header__title mobile"><div><span>MSDS</span></div><div><span>자동 작성</span></div><div><span>프로그램</span></div></div>
+                    <div class="container-header__text empty"></div>
+                </div>
+                <!--// container header -->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap">
+                        <div class="layout-wrap only-header">
+                            <div class="layout-wrap-header">
+                                <button class="btns icon">
+                                    <i class="i-print"></i><em>인쇄하기</em>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- layout wrap -->
+                        <div class="layout-wrap type1">
+                            <div class="layout-wrap-header type-d1">
+                                <div class="layout-wrap-header__title">
+                                    SDS_PRO
+                                    <div class="guide-text">MSDS 자동작성 프로그램</div>
+                                </div>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <div class="layout-wrap-conts__image">
+                                    <img src="/assets/images/contents/msds_mockup_img@3x.jpg" title="">
+                                </div>
+                                <div class="layout-wrap-conts__text">
+                                    MSDS의 언어는 수출국의 공식언어로 작성이 요구되며, 국가별 GHS기준이 다르고 MSDS에 기재되는 법령 정보는 각 국의 
+                                    법령정보가 기재되어야 합니다. 특히 혼합물의 경우 GHS분류의 로직이 매우 복잡하며, MSDS 작성에 대하여 많은 소요 시간과 적지 않은 비용이 발생합니다.<br><br>
+                                    남앤드남인터내셔널의 MSDS 자동생성 프로그램 SDS_Pro는 빠른 시간 내 효과적으로 단일물질 및 혼합물질의 MSDS를 작성하고 전산화하여 관리할 수 있습니다.
+                                </div>
+                            </div>
+                        </div>
+                        <!--// layout wrap -->
+                        <!-- layout wrap -->
+                        <div class="layout-wrap type1">
+                            <div class="layout-wrap-header type-d1">
+                                <div class="layout-wrap-header__title">프로그램 특징</div>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <ul class="conts-list type7">
+                                    <li class="conts-list__items">
+                                        <div class="image"><img src="/assets/images/common/ico_bf_11.svg" title=""></div>
+                                        <div class="text">5개국 언어 작성 지원<br>(한국, 영어, 중국, 일본, 대만)</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="image"><img src="/assets/images/common/ico_bf_12.svg" title=""></div>
+                                        <div class="text">One - Click<br>경고표지(Label) 출력</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="image"><img src="/assets/images/common/ico_bf_13.svg" title=""></div>
+                                        <div class="text">관리자 페이지를 통한 항목 관리</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="image"><img src="/assets/images/common/ico_bf_14.svg" title=""></div>
+                                        <div class="text">고객사의 요구에 맞추어 물질 분류 등 설정/변경 가능</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="image"><img src="/assets/images/common/ico_bf_15.svg" title=""></div>
+                                        <div class="text">고객사의 단일물질 정보를 기초로 한 간단한 혼합물질 MSDS 작성</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="image"><img src="/assets/images/common/ico_bf_16.svg" title=""></div>
+                                        <div class="text">외국어 버튼 클릭으로 외국어 MSDS 작성</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="image"><img src="/assets/images/common/ico_bf_17.svg" title=""></div>
+                                        <div class="text">간편한 사용법을 통한 사용자 편의에 따른 커스터마이징 가능</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="image"><img src="/assets/images/common/ico_bf_18.svg" title=""></div>
+                                        <div class="text">서버설치 방식을 통한 내부 서버 사용으로 보안유지 용이</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--// layout wrap -->
+                        <!-- layout wrap -->
+                        <div class="layout-wrap type1">
+                            <div class="layout-wrap-header type-d1">
+                                <div class="layout-wrap-header__title">시스템 최소 사양</div>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <ul class="conts-list type5">
+                                    <li class="conts-list__items">
+                                        <div class="title">운영체제</div>
+                                        <div>Windows 10 이상</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="title">용량</div>
+                                        <div>최소 10GB</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="title">CPU</div>
+                                        <div>듀얼코어 이상</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="title">RAM</div>
+                                        <div>4GB 이상</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="title">웹 브라우저</div>
+                                        <div>Chrome</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--// layout wrap -->
+                        <div class="btn-wrap business-only-mobile">
+                            <button class="btns icon">
+                                <i class="i-file"></i><em>PDF 다운로드</em>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--// container contents -->
+                <!-- call center -->
+                <div class="call-center">
+                    <div class="call-center-wrap">
+                        <div>
+                            <div class="call-center__header">
+                                <div class="title">더 궁금한 점이 있으신가요?</div>
+                                <!-- 20220127 | br태그 삭제 -->
+                                <div class="text">
+                                    견적 요청 또는 문의사항을 전달해주세요.
+                                    각 업무분야별 담당자가 도와드리겠습니다.
+                                </div>                                
+                            </div>
+                            <div class="call-center__header">
+                                <div class="sub-title">GHS/CLP/SDS</div>
+                                <div class="title type1">02-6714-1148</div>
+                                <div class="text">
+                                    <span>GHS/CLP/SDS</span>
+                                    <span>평일 09:00 ~18:00 (주말/공휴일 휴무)</span>
+                                </div>                                
+                            </div>      
+                        </div>
+                        <div class="call-center-link">
+                            <div class="title">상담/문의 관련 메뉴</div>
+                            <div class="link-area">
+                                <a href="javascript:void(0)" class="btn-arrow download" title="SDS_PRO 제안서 PDF 다운로드"><span>브로셔 다운로드</span></a><!-- 2022.01.13 수정 -->
+                                <a href="javascript:void(0)" class="btn-arrow"><span>온라인 상담 바로가기</span></a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <!--// call center -->
+            </div>
+            <!--// container -->
+            @@include('./pages/ko/include/footer.html',{ 
+                pageMain : false
+            })
+        </div>
+        @@include('./pages/ko/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

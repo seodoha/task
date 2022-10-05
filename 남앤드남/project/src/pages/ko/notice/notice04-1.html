@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/ko/include/head.html',{
+        pageTitle : '남앤드남 | 소식자료 | 관련사이트',
+		pageMain : false
+	})
+    </head>
+    <body>
+        <div id="wrap" class="wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/ko/include/header.html',{
+                    gnbLocation : 'notice,3,0',
+                    lnbLocation : 'notice,3,0'
+            })
+            <!-- container -->
+            <div id="container" class="container">
+                <!-- container header -->
+                <div class="container-header">                            
+                    <div class="container-header__title"><div><span>관련</span></div><div><span>사이트</span></div></div>
+                    <div class="container-header__text pc">
+                        남앤드남 인터내셔널은 국내외기관과 상호신뢰를 기반으로 협력하는 것을 최우선으로 삼고 있으며 이를 위해 해당 기관들의 정보를 투명하게 
+                        공개하고 있습니다. 더 자세한 정보는 홈페이지를 통해 알아보실 수 있습니다. 
+                    </div>
+                    <div class="container-header__text mobile">
+                        남앤드남 인터내셔널은 국내외기관과 상호신뢰를 기반으로 협력하는 것을 최우선으로 삼고 있으며 이를 위해 해당 기관들의 정보를 투명하게 
+                        공개하고 있습니다. 더 자세한 정보는 홈페이지를 통해 알아보실 수 있습니다. 
+                    </div>
+                </div>
+                <!--// container header -->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap">
+                        <!-- tab wrap-->
+                        <div class="board-list-wrap">
+                            <div class="tab-listWrap">
+                                <ul class="tab-list">
+                                    <li class="tab-list__item"><a href="javascript:void(0)">국내</a></li>
+                                    <li class="tab-list__item"><a href="javascript:void(0)" class="on">국외</a></li>
+                                </ul>
+                            </div>
+                            <!-- box list -->
+                            <div class="box-list-wrap">
+                                <ul class="box-list">
+                                    <li class="box-list-items">
+                                        <div class="box-list-items__inner">
+                                            <div class="title">ECHA</div>
+                                            <div class="conts">
+                                                <div class="image-area">
+                                                    <img src="/assets/images/partner/table_card_logo_18@3x.png" alt="">
+                                                </div>                                               
+                                                <a href="https://echa.europa.eu/home" class="arr-btn" target="_blank"><em class="hidden">자세히 보기</em></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="box-list-items">
+                                        <div class="box-list-items__inner">
+                                            <div class="title">NITE-CHRIP</div>
+                                            <div class="conts">
+                                                <div class="image-area">
+                                                    <img src="/assets/images/partner/table_card_logo_19@3x.png" alt="">
+                                                </div>    
+                                                <a href="https://www.nite.go.jp/en/chem/chrip/chrip_search/systemTop" class="arr-btn" target="_blank"><em class="hidden">자세히 보기</em></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="box-list-items">
+                                        <div class="box-list-items__inner">
+                                            <div class="title">Safe work Australia</div>
+                                            <div class="conts">
+                                                <div class="image-area">
+                                                    <img src="/assets/images/partner/table_card_logo_20@3x.png" alt="">
+                                                </div>    
+                                                <a href="http://hcis.safeworkaustralia.gov.au/HazardousChemical" class="arr-btn" target="_blank"><em class="hidden">자세히 보기</em></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--// box list -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--// container contents -->
+            </div>
+            <!--// container -->
+            @@include('./pages/ko/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        @@include('./pages/ko/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

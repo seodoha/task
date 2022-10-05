@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./pages/en/includes/head.html', {
+        metaDescription: 'The Firm',
+        pageTitle : 'Hwawoo - Award',
+        cssPath : '../../../assets/en/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="firm-wrap">
+        @@include('./pages/en/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main" class="award-wrap">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">The Firm</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">Award</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="Introduction 메뉴로 이동" aria-label="Introduction 메뉴로 이동">Introduction</a></li>
+                                        <li><a href="#" title="History 메뉴로 이동" aria-label="History 메뉴로 이동">History</a></li>
+                                        <li><a href="#" title="Award 메뉴로 이동" aria-label="Award 메뉴로 이동" class="on">Award</a></li>
+                                        <li><a href="#" title="Overseas Offices 메뉴로 이동" aria-label="Overseas Offices 메뉴로 이동">Overseas Offices</a></li>
+                                        <li><a href="#" title="Directions 메뉴로 이동" aria-label="Directions 메뉴로 이동">Directions</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02 en">Award</h3>
+                    </div>
+                </div>
+                <!--end of page-heading-layout-->
+
+                <div class="inner-wrap">
+                    <ul class="list-award">
+                        <li>
+                            <a href="#">
+                                <div class="thumbnail"><img src="../../../assets/en/images/temp/award10.png" alt=""></div>
+                                <strong class="tit">
+                                    asialaw Awards 2021
+                                </strong>
+                                <span class="txt">Client Service Excellence Firm Awards: South Korea</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="thumbnail"><img src="../../../assets/en/images/temp/award09.png" alt=""></div>
+                                <strong class="tit">
+                                    asialaw Client Service Excellence 2021
+                                </strong>
+                                <span class="txt">5개 분야 Outstanding Firm: South Korea</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="thumbnail"><img src="../../../assets/en/images/temp/award11.png" alt=""></div>
+                                <strong class="tit">
+                                    In-House Community (IHC) 2021 Firms of the Year
+                                </strong>
+                                <span class="txt">6개 분야 Firm of the Year in South Korea</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="thumbnail"><img src="../../../assets/en/images/temp/award12.png" alt=""></div>
+                                <strong class="tit">
+                                    Asian Legal Business (ALB) Korea Law Awards 2021
+                                </strong>
+                                <span class="txt">M&A Deal of the Year</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="thumbnail"><img src="../../../assets/en/images/temp/award13.png" alt=""></div>
+                                <strong class="tit">
+                                    ALB IP Rankings 2018-2022
+                                </strong>
+                                <span class="txt">Patents, Copyright/Trademarks 분야 한국지역 Tier 1 선정</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="thumbnail"><img src="../../../assets/en/images/temp/award14.png" alt=""></div>
+                                <strong class="tit">
+                                    제4회 대한민국 법무대상 (2021)
+                                </strong>
+                                <span class="txt">자문대상, 송무대상, 공익상</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <div class="box-btn box-board-more">
+                        <button type="button" class="btn-circle-ani btn-fold"><i></i>MORE</button>
+                    </div>
+                </div>
+                <!--end of inner-wrap-->
+            </section>
+        </main>
+
+        @@include('./pages/en/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/en/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

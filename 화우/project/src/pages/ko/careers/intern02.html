@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./pages/ko/includes/head_only_pc.html', {
+        metaDescription: 'careers',
+        pageTitle : 'Hwawoo - careers',
+        cssPath : '../../../assets/ko/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="form-input-wrap">
+        @@include('./pages/ko/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <h3 class="typo-heading-02">국내 인턴 지원</h3>
+                    </div>
+                    <!--end of inner-wrap-->
+                </div>
+                <!--end of page-heading-layout-->
+
+                <form>
+                    <div class="box-contents-wrap inner-wrap narrow">
+                        <article>
+                            <ol class="list-step">
+                                <!--
+                                    완료된 단계에는 complete 클래스 추가,
+                                    진행중인 단계에는 ing 클래스 추가
+                                -->
+                                <li class="complete">
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>01</strong>
+                                        <span>개인정보 수집·이용 동의</span>
+                                    </div>
+                                </li>
+                                <li class="ing">
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>02</strong>
+                                        <span>기본정보</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>03</strong>
+                                        <span>상세지원정보</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>04</strong>
+                                        <span>서류제출</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </article>
+
+                        <article>
+                            <div class="form-input-layout">
+                                <div class="box-form-tit">
+                                    <h3 class="form-tit">로스쿨생 인턴</h3>
+                                </div>
+                                <dl class="form-dl">
+                                    <dt>
+                                        <h4 class="form-sub-tit">인적사항</h4>
+                                        <span><i class="important">*</i>필수입력사항</span>
+                                    </dt>
+                                    <dd>
+                                        <ul class="form-input-list">
+                                            <li>
+                                                <div class="box-photo-attach">
+                                                    <div class="thumb">
+                                                        <div class="guide-txt">
+                                                            <p>
+                                                                최근 3개월 이내 컬러사진<br>
+                                                                1MB 이내 bmp,png,<br>
+                                                                gif, jpg, jpeg 파일
+                                                            </p>
+                                                            <strong>147 x 180</strong>
+                                                        </div>
+                                                        <!--이미지 첨부했을 경우-->
+                                                        <!-- <img src="../../../assets/ko/images/temp/highlights01.png" alt="" /> -->
+                                                    </div>
+                                                    <div class="info">
+                                                        <div class="box-txt">
+                                                            <strong class="tit">지원자 사진 등록</strong>
+                                                            <p>파일명에 특수문자를 사용할 경우 오류가 발생할 수 있으니 주의 부탁드립니다.</p>
+                                                        </div>
+                                                        <div class="box-btn">
+                                                            <div class="box-file-wrap">
+                                                                <input type="file" id="file01">
+                                                                <label for="file01" class="btn btn-black">등록</label>
+                                                            </div>
+                                                            <button type="button" class="btn wAuto">삭제</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">희망인턴십<i class="important">*</i></strong>
+                                                <div class="cnts">
+                                                    <select class="select-ty">
+                                                        <option value="">인턴십 선택</option>
+                                                        <option value="">희망인턴십</option>
+                                                        <option value="">희망인턴십</option>
+                                                        <option value="">희망인턴십</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li class="error"> <!--에러났을경우 error 클래스 추가-->
+                                                <strong class="tit">국문성명<i class="important">*</i></strong>
+                                                <div class="cnts">
+                                                    <div class="box-input-wrap ty-error">  <!--에러났을경우 ty-error 클래스 추가-->
+                                                        <div class="box-input">
+                                                            <input type="text" placeholder="띄어쓰기 없이 입력" title="국문성명 입력">
+                                                            <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                                        </div>
+                                                        <p class="error-txt">정보를 입력하세요</p> <!--에러 문구 추가-->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">영문성명</strong>
+                                                <div class="cnts">
+                                                    <div class="box-input-wrap">
+                                                        <div class="box-input">
+                                                            <input type="text" placeholder="영문성명 입력" title="영문성명 입력">
+                                                            <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">생년월일<i class="important">*</i></strong>
+                                                <div class="cnts">
+                                                    <div class="box-grid">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input">
+                                                                <input type="text" placeholder="주민등록상 생년월일 입력(YYYYMMDD)" title="생년월일 입력">
+                                                                <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-radio-wrap ty02">
+                                                            <div class="radio-wrap">
+                                                                <label for="women">
+                                                                    <input type="radio" id="women" name="gender" checked>
+                                                                    <span class="radio-txt">여자</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio-wrap">
+                                                                <label for="men">
+                                                                    <input type="radio" id="men" name="gender">
+                                                                    <span class="radio-txt">남자</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">이메일<i class="important">*</i></strong>
+                                                <div class="cnts">
+                                                    <div class="box-input-wrap">
+                                                        <div class="box-input">
+                                                            <input type="text" placeholder="이메일주소 입력" title="이메일주소 입력">
+                                                            <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">휴대전화<i class="important">*</i></strong>
+                                                <div class="cnts">
+                                                    <div class="box-input-wrap">
+                                                        <div class="box-input">
+                                                            <input type="text" placeholder="휴대전화번호 입력(-없이 숫자만)" title="휴대전화 입력">
+                                                            <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">비상연락처</strong>
+                                                <div class="cnts">
+                                                    <div class="box-grid">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input">
+                                                                <input type="text" placeholder="휴대전화번호 입력(-없이 숫자만)" title="휴대전화번호 입력">
+                                                                <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input">
+                                                                <input type="text" placeholder="본인과의 관계" title="본인과의 관계 입력">
+                                                                <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">주소<i class="important">*</i></strong>
+                                                <div class="cnts">
+                                                    <div class="box-grid addr">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input">
+                                                                <input type="text" placeholder="현 주소 입력" title="현 주소 입력">
+                                                                <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                                            </div>
+                                                        </div>
+                                                        <a href="#" class="btn wAuto">우편번호 찾기</a>
+                                                    </div>
+                                                    <div class="box-grid">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input">
+                                                                <input type="text" title="현 주소 입력">
+                                                                <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input">
+                                                                <input type="text" title="현 주소 입력">
+                                                                <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!--end of form-input-list-->
+                                    </dd>
+                                </dl>
+                                <!--end of form-dl-->
+                            </div>
+                            <!--end of form-input-layout-->
+                        </article>
+
+                        <article>
+                            <div class="form-input-layout">
+                                <dl class="form-dl">
+                                    <dt>
+                                        <h4 class="form-sub-tit">병역사항</h4>
+                                    </dt>
+                                    <dd>
+                                        <ul class="form-input-list">
+                                            <li>
+                                                <strong class="tit">병역구분<i class="important">*</i></strong>
+                                                <div class="cnts">
+                                                    <div class="box-radio-wrap ty02">
+                                                        <div class="radio-wrap">
+                                                            <label for="m1">
+                                                                <input type="radio" id="m1" name="military" checked="">
+                                                                <span class="radio-txt">비대상</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio-wrap">
+                                                            <label for="m2">
+                                                                <input type="radio" id="m2" name="military">
+                                                                <span class="radio-txt">군필</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio-wrap">
+                                                            <label for="m3">
+                                                                <input type="radio" id="m3" name="military">
+                                                                <span class="radio-txt">미필</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio-wrap">
+                                                            <label for="m4">
+                                                                <input type="radio" id="m4" name="military">
+                                                                <span class="radio-txt">면제</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">복무기간<i class="important">*</i></strong>
+                                                <div class="cnts">
+                                                    <div class="box-grid ty02">
+                                                        <select class="select-ty">
+                                                            <option value="">년 선택</option>
+                                                            <option value="">2022</option>
+                                                            <option value="">2021</option>
+                                                        </select>
+                                                        <select class="select-ty">
+                                                            <option value="">월 선택</option>
+                                                            <option value="">1</option>
+                                                            <option value="">2</option>
+                                                            <option value="">3</option>
+                                                            <option value="">4</option>
+                                                            <option value="">5</option>
+                                                            <option value="">6</option>
+                                                            <option value="">7</option>
+                                                            <option value="">8</option>
+                                                            <option value="">9</option>
+                                                            <option value="">10</option>
+                                                            <option value="">11</option>
+                                                            <option value="">12</option>
+                                                        </select>
+                                                        ~
+                                                        <select class="select-ty">
+                                                            <option value="">년 선택</option>
+                                                            <option value="">1950</option>
+                                                            <option value="">1951</option>
+                                                        </select>
+                                                        <select class="select-ty">
+                                                            <option value="">월 선택</option>
+                                                            <option value="">1</option>
+                                                            <option value="">2</option>
+                                                            <option value="">3</option>
+                                                            <option value="">4</option>
+                                                            <option value="">5</option>
+                                                            <option value="">6</option>
+                                                            <option value="">7</option>
+                                                            <option value="">8</option>
+                                                            <option value="">9</option>
+                                                            <option value="">10</option>
+                                                            <option value="">11</option>
+                                                            <option value="">12</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">복무내용<i class="important">*</i></strong>
+                                                <div class="cnts">
+                                                    <div class="box-input-wrap full">
+                                                        <div class="box-input">
+                                                            <input type="text" placeholder="복무내용 입력" title="복무내용 입력">
+                                                            <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!--end of form-input-list-->
+                                    </dd>
+                                </dl>
+                                <!--end of form-dl-->
+                            </div>
+                            <!--end of form-input-layout-->
+                        </article>
+
+                        <div class="box-btn">
+                            <a href="#" class="btn btn-yellow">다음</a>
+                        </div>
+                    </div>
+                </form>
+
+            </section>
+        </main>
+
+        @@include('./pages/ko/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/ko/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

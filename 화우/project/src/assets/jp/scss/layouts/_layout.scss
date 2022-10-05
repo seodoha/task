@@ -1,0 +1,72 @@
+#wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &.isScroll {
+        header {
+            background-color: #fff !important;
+            &.ty-white {
+                .logo a {@include backgroundImg('../images/common/ci.svg', 'center', 'contain');}
+                .util {
+                    #menu li a {color: $black;}
+                    .box-lang {
+                        .btn-lang {
+                            color: $black;
+                            &::after {@include backgroundImg('../images/icon/ico-arrow-down.svg', 'center', 'contain');}
+                        }
+                    }
+                    .icon-search {@include svgIcon(2.8rem, 2.8rem, $icon-search);}
+                    .btn-hamburger {
+                        &::before,
+                        &::after,
+                        span {background-color: $black;}
+                    }
+                    .icon-map {@include svgIcon(2.8rem, 2.8rem, $icon-map);}
+                }
+            }
+        }
+        .page-heading-layout .breadcrumbs.sticky {top: 10rem;}
+    }
+    &.scrollDown {
+        header {transform: translate3d(0, -100%, 0);}
+        // header {top: -100%;}
+        .side-bar {
+            top: 0;
+            .btn-laywer-search {
+                height: 8rem;
+                span {display: none;}
+                &::after {bottom: 3rem;}
+            }
+        }
+        .page-heading-layout .breadcrumbs.sticky {top: 0;}
+    }
+}
+
+.inner-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 160rem;
+    margin: 0 auto;
+    &.narrow {max-width: 105.6rem;}
+}
+
+#main {
+    position: relative;
+    min-height: 100vh;
+    padding: var(--head) 0 var(--footer);
+    margin-bottom: var(--mfooter);
+    #container {padding: 10rem 0 20rem;}
+}
+
+@include response("mobile") {
+    #wrap {
+        &.isScroll {
+            .page-heading-layout .breadcrumbs.sticky {top: 7rem;}
+        }
+        &.scrollDown {
+            .side-bar {top: auto;}
+            .page-heading-layout .breadcrumbs.sticky {top: 0;}
+        }
+    }
+    #main #container {padding: 2rem 0 8rem;}
+}

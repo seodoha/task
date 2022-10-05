@@ -1,0 +1,41 @@
+<svg id="ico_service_02" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2,.cls-3{fill:none;stroke:#274b48;stroke-width:2px}.cls-3{stroke-linecap:square}
+        </style>
+    </defs>
+    <g id="icon" transform="translate(-451 -95)">
+        <g id="그룹_1746" data-name="그룹 1746" transform="translate(-5 -3)">
+            <g id="그룹_1853" data-name="그룹 1853" transform="translate(479 136)">
+                <path id="합치기_141" data-name="합치기 141" class="cls-2" d="M45.094 10.494H0V66.9h68V10.494h-7.7L58.977 0z" transform="rotate(180 28 24.951)"/>
+                <g id="법_저울" data-name="법 저울" transform="translate(.065 -4.839)">
+                    <path id="패스_7178" data-name="패스 7178" class="cls-2" d="M474.677 135.917h44" transform="translate(-474.742 -131.079)"/>
+                    <path id="패스_7179" data-name="패스 7179" class="cls-3" d="M490 132.454v32" transform="translate(-468.065 -132.615)"/>
+                    <path id="패스_7186" data-name="패스 7186" class="cls-2" d="M484.055 157.935h18" transform="translate(-471.119 -126.096)"/>
+                    <path id="패스_7187" data-name="패스 7187" class="cls-2" d="M484.055 157.935h8" transform="translate(-466.119 -158.096)"/>
+                    <g id="그룹_1856" data-name="그룹 1856" transform="translate(-.064 5.76)">
+                        <path id="빼기_69" data-name="빼기 69" class="cls-3" d="M6 6a6.007 6.007 0 0 1-6-6h12a6.007 6.007 0 0 1-6 6z" transform="translate(0 12)"/>
+                        <g id="그룹_1854" data-name="그룹 1854" transform="translate(.667)">
+                            <path id="패스_7183" data-name="패스 7183" class="cls-3" d="m9502.82 432.857-5.283 8" transform="translate(-9497.537 -432.857)"/>
+                            <path id="패스_7184" data-name="패스 7184" class="cls-3" d="m9497.536 432.857 5.283 8" transform="translate(-9492.149 -432.857)"/>
+                        </g>
+                    </g>
+                    <g id="그룹_1859" data-name="그룹 1859" transform="translate(31.936 5.76)">
+                        <path id="빼기_69-2" data-name="빼기 69" class="cls-3" d="M6 6a6.007 6.007 0 0 1-6-6h12a6.007 6.007 0 0 1-6 6z" transform="translate(0 12)"/>
+                        <g id="그룹_1854-2" data-name="그룹 1854" transform="translate(.667)">
+                            <path id="패스_7183-2" data-name="패스 7183" class="cls-3" d="m9502.82 432.857-5.283 8" transform="translate(-9497.537 -432.857)"/>
+                            <path id="패스_7184-2" data-name="패스 7184" class="cls-3" d="m9497.536 432.857 5.283 8" transform="translate(-9492.149 -432.857)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="그룹_1860" data-name="그룹 1860" transform="translate(-207 -295)">
+            <path id="합치기_142" data-name="합치기 142" class="cls-2" d="m-8764.7 57-11.838-8.942H-8815V32.41h29V0h29v48.059h-6.573L-8764.7 57z" transform="translate(9523.002 434.998)"/>
+            <g id="_-_-" data-name="- -" transform="translate(212 293)">
+                <path id="패스_7176" data-name="패스 7176" class="cls-2" d="M539.065 152.63h-13" transform="translate(6.935 .37)"/>
+                <path id="패스_7177" data-name="패스 7177" class="cls-2" d="M539.065 152.63h-13" transform="translate(6.935 8.37)"/>
+            </g>
+        </g>
+    </g>
+</svg>

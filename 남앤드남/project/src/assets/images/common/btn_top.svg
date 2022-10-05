@@ -1,0 +1,15 @@
+<svg id="btn_top" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <style>
+            .cls-3{fill:none;stroke:#fff;stroke-width:2px}
+        </style>
+    </defs>
+    <path id="사각형_267" data-name="사각형 267" style="fill:#2a2f35" d="M0 0h60v60H0z"/>
+    <g id="ico_top" transform="translate(-1636 -7721)">
+        <g id="arrow-up" transform="translate(1654 7739)">
+            <path id="패스_52" data-name="패스 52" class="cls-3" d="m18 9-6-6-6 6"/>
+            <path id="패스_53" data-name="패스 53" class="cls-3" d="M12 21V4"/>
+            <path id="패스_54" data-name="패스 54" class="cls-3" d="M12 3v1"/>
+        </g>
+    </g>
+</svg>

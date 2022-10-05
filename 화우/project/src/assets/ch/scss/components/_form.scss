@@ -1,0 +1,312 @@
+.box-input-wrap {
+    position: relative;
+    &.with-select {
+        display: flex;
+        align-items: center;
+        .box-select {
+            position: relative;
+            flex-shrink: 0;
+            width: 19rem;
+            background-color: #fff;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 3rem;
+                background-color: #ddd;
+            }
+            select {
+                width: 100%;
+                height: 7.2rem;
+                padding: 0 4.5rem 0 2rem;
+                outline: 0;
+                @include text(400, 1.8rem, 1.5);
+                background: url('../images/icon/ico-arrow-down03.svg') no-repeat right 2rem center;
+            }
+        }
+        .box-input {
+            flex-grow: 1;
+            input {border: none;}
+        }
+    }
+    &.ty-border {
+        .box-select {border: 0.2rem solid $black; border-right: none;}
+        .box-input {border: 0.2rem solid $black; border-left: none;}
+    }
+    &.ty-error {
+        .box-input input {
+            border-color: #FF5442 !important;
+        }
+        .error-txt {
+            display: block;
+            margin-top: 0.4rem;
+            @include text(400, 1.2rem, 1.8, #FF5442);
+        }
+    }
+    .box-input {
+        position: relative;
+        &.ty-search {
+            input {padding-right: 10.5rem;}
+            .icon-text-reset {right: 7.5rem;}
+        }
+        &.width-txt {
+            input {padding-right: 9.5rem;}
+            .icon-text-reset {right: 6rem;}
+        }
+        input {
+            &::placeholder{color: #999;}
+            &:disabled {background-color: #F5F5F5;}
+            width: 100%;
+            height: 7.2rem;
+            padding: 0 6.2rem 0 2rem;
+            background-color: #fff;
+            border: 0.2rem solid $black;
+            font-size: 2.4rem;
+            outline: 0;
+        }
+        .icon-text-reset {
+            display: none;
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .icon-search {
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2.8rem;
+            height: 2.8rem;
+            &-big {
+                position: absolute;
+                right: 2rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 3.8rem;
+                height: 3.8rem;
+            }
+        }
+        .txt {
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            @include text(400, 1.6rem, 1.6, #999);
+        }
+    }
+}
+
+.box-check-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4.7rem;
+    position: relative;
+    label {
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+    }
+    input[type="checkbox"] {@include hidden;}
+    .chk-txt { @include text(400, 1.6rem, 1.6);}
+    input:checked ~ .icon-check,
+    input:checked ~ .icon-check-gray {@include svgIcon(2.4rem, 2.4rem, $icon-checked);}
+    input:disabled ~ .icon-check {@include svgIcon(2.4rem, 2.4rem, $icon-check-gray);}
+
+    &.ty02 {
+        strong {padding-right: 1.5rem; font-weight: 700;}
+        &:nth-of-type(2) span {color: $gray-01;}
+    }
+}
+
+.box-radio-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 4.7rem;
+    .radio-wrap {
+        input[type="radio"] {@include hidden;}
+        input:checked ~ .radio-txt {
+            &::before {@include svgIcon(2.4rem, 2.4rem, $icon-radio);}
+            color: $black;
+        }
+        .radio-txt {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            &::before {
+                content: '';
+                @include svgIcon(2.4rem, 2.4rem, $icon-radio-off);
+            }
+            @include text(400, 1.6rem, 1.6, #555);
+            // transition: all 0.3s;
+        }
+    }
+    &.ty02 {
+        gap: 0;
+        .radio-wrap {
+            input:checked ~ .radio-txt {
+                &::before {
+                    display: block;
+                    flex-shrink: 0;
+                    @include svgIcon(2.4rem, 2.4rem, $icon-checked);
+                }
+                background-color: $accent;
+                border-color: $accent;
+                color: $black;
+            }
+            .radio-txt {
+                justify-content: center;
+                gap: 1rem;
+                min-width: 10.4rem;
+                height: 4.8rem;
+                padding: 1rem 2rem;
+                border: 1px solid #ddd;
+                border-width: 1px 0 1px 1px;
+                border-style: solid;
+                border-color: #ddd;
+                &::before {display: none;}
+                &.long {min-width: 13.3rem;}
+                @include text(400, 1.6rem, 1.6, #999);
+            }
+            &:last-of-type .radio-txt {border-right-width: 1px;}
+        }
+    }
+
+    &.ty03 {
+        gap: 6rem;
+        padding-top: 0 !important;
+        .radio-wrap {
+            input:checked ~ .radio-txt {
+                &::before {
+                    display: block;
+                    flex-shrink: 0;
+                    @include svgIcon(2.4rem, 2.4rem, $icon-radio-line);
+                }
+                color: $black;
+            }
+        }
+        .radio-txt {
+            padding-left: 0.4rem;
+            &::before { display: none;}
+            @include text(700, 4.2rem, 1.2,$gray-02);
+        }
+    }
+}
+
+.box-attach-wrap {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    .box-attach {
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+        input {display: none;}
+        .file-name {
+            width: 37.6rem;
+            height: 4.8rem;
+            padding: 1rem 2rem;
+            border: 1px solid #ddd;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            @include text(400, 1.6rem, 1.6, $gray-02);
+        }
+        label,.btn-black {padding: 1rem 3.5rem;}
+        .btn-black {@include text(400, 1.6rem, 1.6,#fff);}
+    }
+    .info-txt {
+        display: block;
+        margin-top: 1rem;
+        @include text(400, 1.2rem, 1.83, $gray-02);
+    }
+    .box-file-attached {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+        .box-attached-txt {
+            span {
+                display: inline;
+                @include text(400, 1.6rem, 1.6);
+            }
+            button {margin-left: 1rem; vertical-align: super;}
+        }
+    }
+}
+.select-ty {
+    padding: 1.1rem 4rem 1.1rem 2rem;
+    background: url('../images/icon/ico-arrow-down03.svg') no-repeat right 2rem center;
+    border: 1px solid #ddd;
+    @include text(400, 1.6rem, 1.6, #999);
+    &:disabled {background-color: #F5F5F5;}
+}
+
+.txtarea-ty {
+    width: 100%;
+    min-height: 14rem;
+    padding: 1rem 2rem;
+    border: 1px solid #ddd;
+    resize: none;
+    &::placeholder {@include text(400, 1.6rem, 1.6, #999);}
+    &:disabled {background-color: #F5F5F5;}
+}
+
+.box-file-wrap {
+    input[type="file"] {@include hidden;}
+}
+
+@include response("mobile") {
+    .box-input-wrap {
+        &.with-select {
+            flex-direction: column;
+            gap: 1.6rem;
+            .box-select {
+                width: 100%;
+                &::after {display: none;}
+                select {
+                    height: 5.4rem;
+                    @include text(400, 1.6rem, 1.5);
+                    background: url('../images/icon/ico-arrow-down03.svg') no-repeat right 2rem center;
+                }
+            }
+        }
+        &.ty-border {
+            .box-select {border: 0.1rem solid $black;}
+            .box-input { border: 0.1rem solid $black;}
+        }
+        .box-input {
+            &.ty-search {
+                input {padding-right: 9rem;}
+                .icon-text-reset {right: 5.5rem;}
+            }
+            input {
+                height: 5.4rem;
+                padding: 0 6rem 0 2rem;
+                border: 0.1rem solid $black;
+                font-size: 1.6rem;
+            }
+            .icon-text-reset {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+            .icon-search {
+                width: 2.8rem;
+                height: 2.8rem;
+                &-big {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
+        }
+    }
+    .box-check-wrap {
+        justify-content: flex-start;
+        .icon-check {width: 1.8rem; height: 1.8rem;}
+        .chk-txt { @include text(400, 1.4rem, 1.7);}
+        input:checked + .icon-check {@include svgIcon(1.8rem, 1.8rem, $icon-checked);}
+    }
+}

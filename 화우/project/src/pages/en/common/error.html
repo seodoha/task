@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include(
+            './pages/en/includes/head.html',
+            {
+                metaDescription: 'error',
+                pageTitle : 'Hwawoo - Error',
+                cssPath : '../../../assets/en/css/common.min.css'
+            }
+        )
+    </head>
+
+    <body>
+        <div id="wrap">
+            @@include('./pages/en/includes/header.html')
+
+            <main id="main">
+                <section id="container">
+                    <h2 class="hidden">본문</h2>
+
+                    <div class="error-wrap">
+                        <div class="inner-wrap">
+                            <div class="box-circle">
+                                <span class="c1"></span>
+                                <span class="c2"></span>
+                                <span class="c3"></span>
+                            </div>
+                            <div class="box-txt">
+                                <strong class="typo-heading-02">Page Not Found</strong>
+                                <p class="txt">
+                                    The page address is incorrect or<br>
+                                    The address of the requested page has been changed or deleted and cannot be found.
+                                </p>
+                                <a href="#" class="btn-circle-ani btn-view-all"><i></i>GO BACK HOME</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            @@include('./pages/en/includes/footer.html')
+        </div>
+
+        <!-- SCRIPT IMPORT -->
+        @@include('./pages/en/includes/scriptImport.html', {pageMain : false,})
+    </body>
+</html>

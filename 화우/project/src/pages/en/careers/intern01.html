@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./pages/en/includes/head_only_pc.html', {
+        metaDescription: 'careers',
+        pageTitle : 'Hwawoo - careers',
+        cssPath : '../../../assets/en/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="form-input-wrap careers-wrap">
+        @@include('./pages/en/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <h3 class="typo-heading-02">국내 인턴 지원</h3>
+                    </div>
+                    <!--end of inner-wrap-->
+                </div>
+                <!--end of page-heading-layout-->
+
+                <form>
+                    <div class="box-contents-wrap inner-wrap narrow">
+                        <article>
+                            <ol class="list-step">
+                                <!--
+                                    완료된 단계에는 complete 클래스 추가,
+                                    진행중인 단계에는 ing 클래스 추가
+                                -->
+                                <li class="ing">
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>01</strong>
+                                        <span>약관동의</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>02</strong>
+                                        <span>기본정보</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>03</strong>
+                                        <span>상세지원정보</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>04</strong>
+                                        <span>서류제출</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </article>
+
+                        <article>
+                            <div class="form-input-layout">
+                                <div class="box-agree-wrap">
+                                    <h4 class="typo-title-02">개인정보 수집 · 이용 동의</h4>
+                                    <div class="box-guide ty03">
+                                        <ul class="dot-list">
+                                            <li>
+                                                1. 법무법인(유) 화우(이하 “화우”)가 귀하로부터 수집하는 개인정보는 아래와 같습니다.
+                                                <ul>
+                                                    <li>필수정보: Name, 성별, 생년월일, 이메일, 전화번호, 주소, 긴급연락처</li>
+                                                    <li>선택정보: Education사항, Experience사항(근무지, 직책, 담당업무, 소득금액증명, 입사일 및 퇴사일, 근무연한, 근무태도·업무성과 등에 대한 평가 등), AwardsExperience, 외국어, Qualifications사항, 특기 및 연수사항, 긴급연락처, 병역, 기타 입사지원서에 귀하가 기재하는 항목</li>
+                                                </ul>
+                                            </li>
+                                            <li>2. 화우가 귀하로부터 수집하는 제1항 기재 개인정보는 실무수습, 교육, 채용, 정보제공 기타 이에 부수하는 업무 목적으로만 사용될 것입니다. </li>
+                                            <li>3. 화우는 귀하로부터 수집하는 개인정보를 제1항 기재 수집 및 이용 목적이 달성되면 지체 없이 파기할 예정입니다. 단, 법령 등에서 이와 달리 규정한 경우 해당 법령상의 보존기간을 준수한 후 폐기할 것입니다. </li>
+                                            <li>
+                                                4. 귀하는 본 동의를 거부할 권리가 있으나, 아래와 같은 불이익이 있을 수 있습니다.
+                                                <ul>
+                                                    <li>필수정보에 대한 부동의 시: 실무수습, 교육, 채용 절차가 진행되지 않으며 관련 정보도 제공 받지 못할 수 있습니다.</li>
+                                                    <li>선택정보에 대한 부동의 시: 실무수습, 교육, 채용 절차에서 해당 사항이 고려되지 않을 수 있습니다. </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="box-grid">
+                                        <div class="box-check-wrap ty02">
+                                            <div class="check-wrap">
+                                                <label for="agree01">
+                                                    <input type="checkbox" id="agree01" checked>
+                                                    <i class="icon-check-gray"></i>
+                                                    <strong class="important">필수</strong>
+                                                    <span class="chk-txt">필수정보 제공에 동의합니다.</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="box-check-wrap ty02">
+                                            <div class="check-wrap">
+                                                <label for="agree02">
+                                                    <input type="checkbox" id="agree02">
+                                                    <i class="icon-check-gray"></i>
+                                                    <strong class="chk-txt">선택</strong>
+                                                    <span class="chk-txt">선택정보 제공에 동의합니다.</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="box-check-wrap ty02">
+                                            <div class="check-wrap">
+                                                <label for="all">
+                                                    <input type="checkbox" id="all">
+                                                    <i class="icon-check-gray"></i>
+                                                    <strong class="chk-txt">모두동의</strong>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box-btn">
+                                    <a href="#" class="btn btn-yellow">다음</a>
+                                </div>
+
+                                <div class="box-notice">
+                                    <span class="notice-tit">입력시 주의사항 안내</span>
+                                    <ul class="dot-list">
+                                        <li>입사지원을 원하시는 분은 아래 내용에 따라 지원해 주시기 바랍니다.</li>
+                                        <li>지원서 작성 중 창을 닫게 되면 다시 처음부터 작성해 주셔야 하오니 유의해 주십시오.</li>
+                                        <li>최종제출 전에는 수정이 가능하나, 최종제출 후에는 수정이 불가능하오니 주의해 주시기 바랍니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </form>
+
+            </section>
+        </main>
+
+        @@include('./pages/en/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/en/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

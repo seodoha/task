@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+.accordion{
+    &-wrap{
+        border-top:2px solid $gray8;
+    }
+    &__items{
+        border-bottom:1px solid $gray3;
+        &.is-active{
+            .accordion__items__title{
+                color : $accent;
+                &:after{
+                    transform:translateY(-50%) rotate(180deg);
+                }
+            }
+        }     
+    }
+    &__items__title{
+        position:relative;
+        display:block;
+        padding:4.8rem 12.4rem;
+        color:$gray8;
+        @include fontSize('fontS05');
+        &:hover, &.on{
+            color : $accent;
+        }
+        &:before{
+            content:'Q';
+            position:absolute;
+            top:5rem;
+            left:4rem;
+            @include fontSize('fontS04');
+        }
+        &:after{
+            content:'';
+            position:absolute;
+            top:50%;
+            transform: translateY(-50%);
+            right:6.8rem;
+            width:2.4rem;
+            height:2.4rem;
+            background-image: url('/assets/images/common/btn_gnb_global_open_b.svg');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            transition:transform 0.4s ease;
+        }
+    }
+    &__items__conts{
+        position:relative;
+        display:none;
+        background:$gray1;
+        padding:4.8rem 12.4rem;
+        &:before{
+            content:'A';
+            position:absolute;
+            top:5rem;
+            left:4rem;
+            @include fontSize('fontS04');
+            color:$gray8;
+        }
+        .accordion__items-inner{
+            @include fontSize('fontS03');
+            line-height:1.5;
+        }
+    }
+}
+
+@include response('tablet'){
+    .accordion{
+        &__items__title{
+            padding:4rem 9rem;
+            @include fontSize('fontS03');
+            &:before{
+                top:4rem;
+                left:3rem;
+                @include fontSize('fontS03');
+            }
+            &:after{right:3rem;}
+        }
+        &__items__conts{
+            padding:4rem 9rem;
+            &:before{
+                top:4rem;
+                left:3rem;
+                @include fontSize('fontS03');
+            }
+            .accordion__items-inner{
+                @include fontSize('fontS02');
+            }
+        }
+    }
+}
+@include response('mobile') {
+    .accordion{
+        &__items__title{
+            // position:relative;
+            // display:block;
+            padding:3rem 6rem 3rem 3.6rem;
+            @include fontSize('fontS02');
+            // &:hover, &.on{
+            //     color : $accent;
+            // }
+            &:before{
+                // content:'Q';
+                // position:absolute;
+                top:3rem;
+                left:0.8rem;
+                @include fontSize('fontS02');
+            }
+            &:after{right:0.8rem;}
+        }
+        &__items__conts{
+            width:calc(100% + 6.4rem);
+            margin-left:-3.2rem;
+            padding:8rem 4rem 6rem 4rem;
+            &:before{
+                top:3.6rem;
+                left:4rem;
+                @include fontSize('fontS02');
+            }
+            .accordion__items-inner{
+                @include fontSize('fontS01');
+            }
+        }
+    }
+}

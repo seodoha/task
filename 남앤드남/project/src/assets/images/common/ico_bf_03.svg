@@ -1,0 +1,23 @@
+<svg id="ico_bf_03" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-4,.cls-5{fill:none;stroke:#111;stroke-width:2px}.cls-5{stroke-linecap:round}
+        </style>
+    </defs>
+    <g id="그룹_1692" data-name="그룹 1692" transform="translate(-575 -331)">
+        <g id="손" transform="translate(596 404)">
+            <g id="그룹_1691" data-name="그룹 1691" transform="translate(10.029 2.783)">
+                <path id="합치기_4" data-name="합치기 4" d="M28.4 26.134 0 22.35V.477h29.25a4.832 4.832 0 0 1 3.572 8.133 4.18 4.18 0 0 1-.487.468l-.177.2h.149L59.142.35c3.3-1.192 7.047.76 8.368 4.361s-.286 7.487-3.587 8.679l-35.3 12.768v.006h-.01l-.151.055z" style="stroke-linejoin:round;stroke:#111;stroke-width:2px;fill:none"/>
+                <path id="패스_6927" data-name="패스 6927" d="M-6730.448 29.868h-11.174" transform="translate(6762.575 -20.592)" style="fill:#fff;stroke:#111;stroke-width:2px"/>
+            </g>
+            <rect id="사각형_1114" data-name="사각형 1114" class="cls-4" width="10.029" height="27.885" rx="3"/>
+        </g>
+        <g id="방패" transform="translate(610 346)">
+            <path id="패스_6930" data-name="패스 6930" class="cls-4" d="m7495.226 500.76 6.926 5.869 12.3-11.248" transform="translate(-7479.841 -478.742)"/>
+            <g id="그룹_1821" data-name="그룹 1821" transform="translate(0 -.48)">
+                <path id="패스_7151" data-name="패스 7151" class="cls-5" d="m635.088 357.52-24.9 8.144 5.336 29.808 19.565 13.047" transform="translate(-610.187 -357.52)"/>
+                <path id="패스_7152" data-name="패스 7152" class="cls-5" d="m610.187 357.52 24.9 8.144-5.336 29.808-19.564 13.048" transform="translate(-585.088 -357.52)"/>
+            </g>
+        </g>
+    </g>
+</svg>

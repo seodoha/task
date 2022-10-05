@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>component | button</title>
+        <link rel="stylesheet" href="/assets/css/common.css">
+        <link rel="stylesheet" href="/assets/css/contents.css">
+    </head>
+    <body class="chn">
+        <button class="btns">확인</button>
+        <button class="btns c-green">확인</button>
+        <button class="btns" disabled>확인</button><br><br>
+        <button class="btns c-green w-lg">확인</button><br><br>
+        <button class="btns c-green w-xlg">확인</button><br><br>       
+        <button class="btns w-xlg h-lg">자세히 보기</button><br><br>
+        <button class="btns w-md h-xlg b-gray">목록</button><br><br>
+        <button class="btns c-green w-md h-xxlg">제출하기</button><br><br>
+        <button class="btns icon">
+            <i class="i-print"></i><em>인쇄하기</em>
+        </button><br><br>
+        <button class="btns w-md h-xlg icon m-btnBlock">
+            <i class="i-list"></i><em>목록</em>
+        </button><br><br>
+        <button class="btns icon">
+            <i class="i-file"></i><em>PDF 다운로드</em>
+        </button>
+        <br><br>
+        <div>파일 다운로드</div>
+        <a href="javascript:void(0)" class="btn-download" title="download">
+            <i></i>
+            <span>KMCA 화평법 온라인 교육 커리큘럼.jpgKMCA 화평법 온라인 교육 커리큘럼.jpgKMCA 화평법 온라인 교육 커리큘럼.jpg</span>
+        </a>
+        <br><br>
+        <button class="btn-top"><span class="hidden">위로 가기</span></button>
+        <br>
+        <!-- 파일첨부 input -->
+        <div class="btn-input-wrap btn-has-icon">
+            <label for="btn-attach1" class="btn-input-wrap__file btn-has-icon__parent">
+                <!-- <i class="btn-icon icon-attach">
+                    <img src="/assets/images/common/ico_plus.svg" alt="파일첨부">
+                </i> -->
+                <span>파일첨부</span>
+            </label>
+            <input type="file" id="btn-attach1">
+        </div>
+    </div>
+
+    <h2 class="guideTit">링크 버튼</h2>
+    <div class="guideBox">
+        <a href="javascript:void(0)" class="btn-contents-hover"><span class="hidden">바로가기</span></a>
+        <a href="javascript:void(0)" class="btn-link"><span class="hidden">바로가기</span></a>
+    </div>
+    <br>
+    <br>   
+    <div class="link-area">
+        <a href="javascript:void(0)" class="btn-arrow"><span>FAQ 바로가기</span></a>
+        <a href="javascript:void(0)" class="btn-arrow"><span>온라인 상담 바로가기 바로가기</span></a><br><br>
+        <a href="javascript:void(0)" class="btn-arrow download"><span>브로셔 다운로드</span></a>
+    </div> 
+    <br>
+    <div>
+        <a href="javascript:void(0)" class="btn-arrow underline"><span>온라인 상담 바로가기 바로가기</span></a>
+    </div>
+    <br> 
+    <div>
+        <a href="javascript:void(0)" class="btn-arrow underline arrow1"><span>TSCA Inventory 상세보기</span></a>
+    </div>
+    <br>
+    <br>
+        <script src="/assets/js/lib/jquery.import.js"></script>
+    </body>
+</html>

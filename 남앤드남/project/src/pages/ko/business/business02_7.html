@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/ko/include/head.html',{
+        pageTitle : '남앤드남 | 화평법 | 화학물질 등록 자료 준비',
+		pageMain : false
+	})
+    </head>
+    <body>
+        <div id="wrap" class="wrap business-wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/ko/include/header.html',{
+                    gnbLocation : 'business,1,0',
+                    lnbLocation : 'business,1,0,6'
+            })
+            <!-- container -->
+            <div id="container" class="container">
+                <!-- container header -->
+                <div class="container-header business">                            
+                    <div class="container-header__title"><div><span>화학물질 등록</span></div><div><span>자료 준비</span></div></div>
+                    <div class="container-header__text empty"></div>
+                </div>
+                <!--// container header -->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap">
+                        <!-- layout wrap -->
+                        <div class="layout-wrap layout-imgMap"><!-- 20220105 | class 추가 -->
+                            <div class="layout-wrap-header type-d col-2">
+                                <div class="tab-listWrap">
+                                    <ul class="tab-list">
+                                        <!-- 활성화 시 on 클래스 추가 -->
+                                        <li class="tab-list__item"><a href="javascript:void(0)" class="on">Data Gap Analysis</a></li>
+                                        <li class="tab-list__item"><a href="javascript:void(0)">Data Gap Filling</a></li>
+                                        <li class="tab-list__item"><a href="javascript:void(0)">위해성에 관한 자료(CSR) 작성</a></li>
+                                    </ul>
+                                </div>
+                                <button class="btns icon">
+                                    <i class="i-print"></i><em>인쇄하기</em>
+                                </button>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <div class="imgMap-wrap pc">
+                                    <div class="imgMap-imgwrap">
+                                        <img src="/assets/images/contents/flow_chart_2_7_1.svg" title="업무 흐름도">
+                                    </div>
+                                    <a href="javascript:void(0)" onclick="uiCommon.popup.open('.popup1')" class="imgMap-linkItems item1-18"></a>
+                                    <a href="javascript:void(0)" onclick="uiCommon.popup.open('.popup2')" class="imgMap-linkItems item1-19"></a>
+                                    <a href="javascript:void(0)" onclick="uiCommon.popup.open('.popup3')" class="imgMap-linkItems item1-20"></a>
+                                </div>    
+                                <div class="imgMap-wrap mobile">
+                                    <div class="tit-text">상세 내용은 웹사이트에서 확인해주세요.</div>
+                                    <div class="imgMap-imgwrap">
+                                        <img src="/assets/images/contents/flow_chart_2_7_1.svg" title="업무 흐름도">
+                                    </div>
+                                    <div class="imgMap-dimmed">
+                                        <a href="/assets/images/contents/flow_chart_2_7_1.svg" title="업무흐름도 자세히 보기">
+                                            터치 후 상하좌우 및<br>확대하여 보실 수 있습니다.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// layout wrap -->
+                        <div class="btn-wrap business-only-mobile">
+                            <button class="btns icon">
+                                <i class="i-file"></i><em>PDF 다운로드</em>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--// container contents -->
+                <!-- call center -->
+                <!-- 20220102 callcenter 수정 -->
+                <div class="call-center">
+                    <div class="call-center-wrap">
+                        <div>
+                            <div class="call-center__header">
+                                <div class="title">더 궁금한 점이 있으신가요?</div>
+                                <!-- 20220127 | br태그 삭제 -->
+                                <div class="text">
+                                    견적 요청 또는 문의사항을 전달해주세요.
+                                    각 업무분야별 담당자가 도와드리겠습니다.
+                                </div>                                
+                            </div>
+                            <div class="call-center__header">
+                                <div class="sub-title">화평법</div>
+                                <div class="title type1">02-6714-1091</div>
+                                <div class="text">
+                                    <span>화평법</span>
+                                    <span>평일 09:00 ~18:00 (주말/공휴일 휴무)</span>
+                                </div>                                
+                            </div>      
+                        </div>
+                        <div class="call-center-link">
+                            <div class="title">상담/문의 관련 메뉴</div>
+                            <div class="link-area">
+                                <a href="javascript:void(0)" class="btn-arrow"><span>FAQ 바로가기</span></a>
+                                <a href="javascript:void(0)" class="btn-arrow"><span>온라인 상담 바로가기</span></a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <!--// 20220102 callcenter 수정 -->
+            </div>
+            <!--// container -->
+            @@include('./pages/ko/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        <!-- popup1 -->
+        <div class="popup popup1"><!-- popup name 추가 ex)popup1 -->
+            <div class="popup__wrap popup__wrap-type1">
+                <div class="popup__title">최소 요구되는 시험항목 확인</div>
+                <div class="popup__conts">
+                    <ul class="list-dot">
+                        <li class="list-dot__items">화평법 시행규칙 [별표1] 시험자료의 제출방법에 근거 제출이 필요한 시험항목 파악</li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btns popup__close" onclick="uiCommon.popup.close('.popup1')">확인</button>
+                </div>
+            </div>
+        </div>
+        <!--// popup1 -->
+        <!-- popup2 -->
+        <div class="popup popup2"><!-- popup name 추가 ex)popup1 -->
+            <div class="popup__wrap popup__wrap-type1">
+                <div class="popup__title">면제 가능한 항목 파악</div>
+                <div class="popup__conts">
+                    <ul class="list-dot">
+                        <li class="list-dot__items">등록 신청자로부터 등록 신청물질에 대해 제조 공정, 원료, 사용용도 등 물질특성 파악에 필요한 정보 수집</li>
+                        <li class="list-dot__items">국립환경과학원고시 제2019-2호 [별표 2] 시험면제조건 근거하여 면제 가능성 파악</li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btns popup__close" onclick="uiCommon.popup.close('.popup2')">확인</button>
+                </div>
+            </div>
+        </div>
+        <!--// popup2 -->
+        <!-- popup3 -->
+        <div class="popup popup3"><!-- popup name 추가 ex)popup1 -->
+            <div class="popup__wrap popup__wrap-type1">
+                <div class="popup__title">시험항목별 시험자료 Collection/Data Gap 고려</div>
+                <div class="popup__conts">
+                    <ul class="list-dot">
+                        <li class="list-dot__items">기존 데이터 검색(문헌, 신뢰성 있는 사이트 등), 식별, 목록화, 유효성 검토</li>
+                        <li class="list-dot__items">환경부 Data gap 분석결과 Revision(필요 시)</li>
+                        <li class="list-dot__items">화평법 법적 요구에 대한 정합성 여부 분석</li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btns popup__close" onclick="uiCommon.popup.close('.popup3')">확인</button>
+                </div>
+            </div>
+        </div>
+        <!--// popup3 -->
+        @@include('./pages/ko/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zn">
+
+<head>
+    @@include('./pages/ch/includes/head_only_pc.html', {
+        metaDescription: 'insights',
+        pageTitle : 'Hwawoo - insights',
+        cssPath : '../../../assets/ch/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="insights-wrap">
+        @@include('./pages/ch/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+                <div class="inner-wrap narrow detail-contents-layout">
+                    <div class="page-heading-layout">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">insights</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">简报</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="뉴스 메뉴로 이동" aria-label="뉴스 메뉴로 이동">뉴스</a></li>
+                                        <li><a href="#" title="简报 메뉴로 이동" aria-label="简报 메뉴로 이동" class="on">简报</a></li>
+                                        <li><a href="#" title="贡献和研究材料 메뉴로 이동" aria-label="贡献和研究材料 메뉴로 이동">贡献和研究材料</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <!--end of inner-wrap-->
+                    </div>
+                    <!--end of page-heading-layout-->
+                    <div class="detail-head-layout">
+                        <h3 class="typo-title-01">Focus sector: ICT 하드웨어(전기, 전자, 반도체)섹터 환경 이슈</h3>
+                        <div class="date-util">
+                            <ul>
+                                <li class="title">简报</li>
+                                <li class="date">2022.04.18</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="detail-body-layout">
+                        <!--에디터 내용 들어갈 부분-->
+                        <div class="box-editor-wrap">
+                            <img src="../../../assets/ch/images/temp/newsletter01.png" alt="">
+                        </div>
+
+                        <!-- 관련분야 키워드 있을때 -->
+                        <dl class="relevant-area">
+                            <dt>业务领域 </dt>
+                            <dd><a href="#">#ESG</a></dd>
+                        </dl>
+                    </div>
+
+                    <div class="detail-paging-layout">
+                        <!-- 이전 게시글이 있을경우 -->
+                        <!-- <a href="#" class="list-item prev">
+                            <span class="mobile txt">이전글</span>
+                            <strong class="detail-title">[웨비나] Taxonomy에서 찾아보는 혁신경제 [웨비나] Taxonomy에서 찾아보는 혁신경제 [웨비나] Taxonomy에서 찾아보는 혁신경제</strong>
+                        </a> -->
+
+                        <!-- 이전 게시글이 없을 경우 -->
+                        <div class="no-list-item prev">
+                            <span class="mobile txt">이전글</span>
+                            <strong>There is no previous post.</strong>
+                        </div>
+
+                        <div class="box-btn">
+                            <a href="#" class="btn-back-list" title="뒤로 가기" aria-label="뒤로 가기"><i></i>BACK TO LIST</a>
+                        </div>
+
+                        <!-- 다음 게시글이 있을경우 -->
+                        <a href="#" class="list-item next">
+                            <span class="mobile txt">다음글</span>
+                            <strong class="detail-title">[웨비나] 중대재해처벌법 이렇게 대응한다 2 [웨비나] 중대재해처벌법 이렇게 대응한다 2 [웨비나] 중대재해처벌법 이렇게 대응한다 2 </strong>
+                        </a>
+
+                        <!-- 다음 게시글이 없을 경우 -->
+                        <!-- <div class="no-list-item next">
+                            <span class="mobile txt">다음글</span>
+                            <strong>다음글이 없습니다</strong>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        @@include('./pages/ch/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/ch/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

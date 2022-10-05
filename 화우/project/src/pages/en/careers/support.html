@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <head>
+            @@include('./pages/en/includes/head.html', {
+                metaDescription: 'careers',
+                pageTitle : 'Hwawoo - careers',
+                cssPath : '../../../assets/en/css/common.min.css'
+            })
+        </head>
+    </head>
+
+    <body>
+        <!--Menu별 클래스 추가 -->
+        <div id="wrap" class="careers-wrap">
+            @@include('./pages/en/includes/header.html')
+
+            <!--Menu의 각 페이지별 클래스 추가-->
+            <main id="main" class="support-wrap">
+                <section id="container">
+                    <h2 class="hidden">본문</h2>
+                    <div class="page-heading-layout">
+                        <div class="inner-wrap">
+                            <ol class="breadcrumbs">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li class="current box-tooltip">
+                                    <button type="button">지원</button>
+                                    <div class="view-tooltip">
+                                        <ul class="custom-scroll">
+                                            <li><a href="#" title="Recruitment 메뉴로 이동" aria-label="Recruitment 메뉴로 이동">Recruitment</a></li>
+                                            <li><a href="#" title="영입공고 메뉴로 이동" aria-label="영입공고 메뉴로 이동">영입공고</a></li>
+                                            <li><a href="#" title="지원 메뉴로 이동" aria-label="지원 메뉴로 이동" class="on">지원</a></li>
+                                            <li><a href="#" title="직원채용 메뉴로 이동" aria-label="직원채용 메뉴로 이동">직원채용</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ol>
+                            <h3 class="typo-heading-02">지원</h3>
+                        </div>
+                    </div>
+                    <!--end of page-heading-layout-->
+
+                    <article>
+                        <div class="inner-wrap">
+                            <div class="box-top">
+                                <strong class="typo-title-01">
+                                    법우법인 화우는 비전을 <br>
+                                    함께 실현할 유능한 인재를 <br>
+                                    영입하고자 합니다.
+                                </strong>
+                                <a href="#" class="btn-circle-ani btn-view-all"><i></i>view all</a>
+                            </div>
+                            <div class="box-bottom">
+                                <ul class="menu-list">
+                                    <li>
+                                        <dl>
+                                            <dt>변호사</dt>
+                                            <dd>
+                                                <div class="info">
+                                                    <strong class="name">신입 변호사</strong>
+                                                    <span class="type">로스쿨생/법무관</span>
+                                                </div>
+                                                <a href="#" class="btn-apply">APPLY</a>
+                                            </dd>
+                                            <dd>
+                                                <div class="info">
+                                                    <strong class="name">Experience 변호사</strong>
+                                                    <span class="type">재판연구원/Experience변호사</span>
+                                                </div>
+                                                <a href="#" class="btn-apply">APPLY</a>
+                                            </dd>
+                                            <dd>
+                                                <div class="info">
+                                                    <strong class="name">외국 변호사</strong>
+                                                    <span class="type">신입/Experience</span>
+                                                </div>
+                                                <a href="#" class="btn-apply">APPLY</a>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>기타전문가</dt>
+                                            <dd>
+                                                <div class="info">
+                                                    <strong class="name">변리사</strong>
+                                                </div>
+                                                <a href="#" class="btn-apply">APPLY</a>
+                                            </dd>
+                                            <dd>
+                                                <div class="info">
+                                                    <strong class="name">회계사</strong>
+                                                </div>
+                                                <a href="#" class="btn-apply">APPLY</a>
+                                            </dd>
+                                            <dd>
+                                                <div class="info">
+                                                    <strong class="name">세무사</strong>
+                                                </div>
+                                                <a href="#" class="btn-apply">APPLY</a>
+                                            </dd>
+                                            <dd>
+                                                <div class="info">
+                                                    <strong class="name">관세사</strong>
+                                                </div>
+                                                <a href="#" class="btn-apply">APPLY</a>
+                                            </dd>
+                                            <dd>
+                                                <div class="info">
+                                                    <strong class="name">노무사</strong>
+                                                </div>
+                                                <a href="#" class="btn-apply">APPLY</a>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>인턴</dt>
+                                            <dd>
+                                                <div class="info">
+                                                    <strong class="name">국내 로스쿨 인턴</strong>
+                                                    <span class="type">하계/동계</span>
+                                                </div>
+                                                <a href="#" class="btn-apply">APPLY</a>
+                                            </dd>
+                                            <dd>
+                                                <div class="info">
+                                                    <strong class="name">해외 로스쿨 인턴</strong>
+                                                    <span class="type">Summer/Winter</span>
+                                                </div>
+                                                <a href="#" class="btn-apply">APPLY</a>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                </section>
+            </main>
+
+            @@include('./pages/en/includes/footer.html')
+        </div>
+
+        <!-- SCRIPT IMPORT -->
+        @@include('./pages/en/includes/scriptImport.html', {pageMain : false,})
+    </body>
+</html>

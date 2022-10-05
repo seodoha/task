@@ -1,0 +1,45 @@
+<svg id="ico_bf_14" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="그룹_1781" data-name="그룹 1781" transform="translate(-455 -102)">
+        <g id="그룹_1733" data-name="그룹 1733" transform="translate(-1 -1)">
+            <g id="그룹_1729" data-name="그룹 1729" transform="translate(3)">
+                <g id="그룹_1728" data-name="그룹 1728" transform="translate(474 125)">
+                    <path id="패스_7038" data-name="패스 7038" class="cls-2" d="M480.038 126.7v41" transform="translate(-473.038 -90.704)"/>
+                    <path id="패스_7089" data-name="패스 7089" class="cls-2" d="M480.038 126.7v11" transform="translate(-473.038 -127.704)"/>
+                    <g id="그룹_1730" data-name="그룹 1730" transform="translate(1 15.131)">
+                        <path id="사각형_1150" data-name="사각형 1150" class="cls-2" transform="translate(0 -.131)" d="M0 0h12v16H0z"/>
+                        <path id="패스_7044" data-name="패스 7044" class="cls-2" d="M7749.7 6037.381h6" transform="translate(-7746.697 -6029.512)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="그룹_1806" data-name="그룹 1806" transform="translate(509 123)">
+            <g id="그룹_1729-2" data-name="그룹 1729">
+                <g id="그룹_1728-2" data-name="그룹 1728">
+                    <path id="패스_7038-2" data-name="패스 7038" class="cls-2" d="M480.038 167.7v-41" transform="translate(-474.038 -126.704)"/>
+                    <path id="패스_7089-2" data-name="패스 7089" class="cls-2" d="M480.038 137.7v-11" transform="translate(-474.038 -59.704)"/>
+                    <g id="그룹_1730-2" data-name="그룹 1730" transform="translate(0 46)">
+                        <path id="사각형_1150-2" data-name="사각형 1150" class="cls-2" d="M0 0h12v16H0z"/>
+                        <path id="패스_7044-2" data-name="패스 7044" class="cls-2" d="M7749.7 6037.381h6" transform="translate(-7746.697 -6029.381)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="그룹_1807" data-name="그룹 1807" transform="translate(541 123)">
+            <g id="그룹_1729-3" data-name="그룹 1729">
+                <g id="그룹_1728-3" data-name="그룹 1728">
+                    <path id="패스_7038-3" data-name="패스 7038" class="cls-2" d="M480.038 157.7v-31" transform="translate(-474.038 -126.704)"/>
+                    <path id="패스_7089-3" data-name="패스 7089" class="cls-2" d="M480.038 146.7v-20" transform="translate(-474.038 -69.704)"/>
+                    <g id="그룹_1730-3" data-name="그룹 1730" transform="translate(0 36)">
+                        <path id="사각형_1150-3" data-name="사각형 1150" class="cls-2" d="M0 0h12v16H0z"/>
+                        <path id="패스_7044-3" data-name="패스 7044" class="cls-2" d="M7749.7 6037.381h6" transform="translate(-7746.697 -6029.381)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,1155 @@
+@keyframes stroke {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#wrap.firm-wrap {
+    // 소개
+    .intro-wrap {
+        .box-visual {
+            position: relative;
+            padding-top: 7.8rem;
+            .typo-heading-01 {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                font-weight: 400;
+                font-family: $en;
+                line-height: 1.4;
+                transform: translateX(-50%);
+                white-space: nowrap;
+                em {
+                    display: block;
+                    &:last-of-type {padding-left: 11rem;}
+                    span {font-size: 6.2rem;}
+                }
+            }
+            .bg {
+                width: 100%;
+                height: 70rem;
+                background: url('../images/sub/intro-bg.png') no-repeat;
+                background-size: cover;
+                overflow: hidden;
+            }
+        }
+
+        .box-intro-txt {
+            position: relative;
+            padding-top: 15rem;
+            overflow: hidden;
+            .circle-ani {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 39.6rem;
+                width: 176rem;
+                height: 176rem;
+                background: linear-gradient(180deg, #FFE141 23.74%, rgba(245, 245, 245, 0) 95.43%);
+                border-radius: 50%;
+                z-index: -1;
+                transition: all 1.3s;
+                transform: scale(0);
+                transform-origin: top;
+                &.active {transform: scale(1);}
+            }
+            .before-txt {
+                position: absolute;
+                left: 0;
+                top: 116.5rem;
+                @include text(400, 16rem, 1.25);
+                font-family: $en;
+                opacity: 0.05;
+            }
+            .box-contents-wrap {
+                position: relative;
+                li {
+                    position: relative;
+                    &:first-of-type {
+                        max-width: 64.8rem;
+                        margin: 0 auto 0 43.2rem;
+                    }
+                    &:nth-of-type(2) {
+                        max-width: 51.2rem;
+                        margin: 0 43.2rem 0 auto;
+                    }
+                    &:last-of-type {
+                        max-width: 108rem;
+                        dl {float: right;}
+                    }
+                    img {width: 100%;}
+                    dl {
+                        padding: 6rem 3.6rem 0 0;
+                        dt {
+                            margin-bottom: 3rem;
+                            font-weight: 400;
+                            font-family: $en;
+                        }
+                        dd {@include text(400, 1.8rem, 1.66);}
+                    }
+                }
+            }
+        }
+    }
+
+    // 연혁
+    .history-wrap {
+        .box-layout {
+            display: flex;
+            position: relative;
+            padding-left: 11rem;
+            nav {
+                width: 27rem;
+                flex-shrink: 0;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.4rem;
+                    position: sticky;
+                    top: 10rem;
+                    z-index: 2;
+                    // transition: all 0.3s;
+                    li a,
+                    li button {
+                        display: inline-flex;
+                        align-items: center;
+                        position: relative;
+                        padding-left: 3.2rem;
+                        @include text(400, 2rem, 1.7, #999);
+                        transition: color 0.3s;
+                        span {
+                            font-family: $en;
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 0;
+                            height: 2px;
+                            background-color: $black;
+                            transition: width 0.3s;
+                        }
+                        &::after {
+                            content: "";
+                            width: 2.6rem;
+                            height: 2.6rem;
+                            margin-left: -1rem;
+                            border-radius: 50%;
+                            background: linear-gradient(180deg, #ffe141 20.13%, rgba(245, 245, 245, 0) 128.85%);
+                            transform: scale(0);
+                            z-index: -1;
+                            transition: all 0.3s;
+                        }
+                        &.on {
+                            @include text(700, 2rem, 1.7, $black);
+                            &::before {
+                                width: 1.6rem;
+                            }
+                            &::after {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+            }
+            .right {
+                flex-grow: 1;
+                width: calc(100% - 27rem);
+
+                .typo-heading-01 {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    padding-left: 13.6rem;
+                    font-family: $en;
+                    font-weight: 400;
+                    line-height: 1.25;
+                    z-index: 1;
+                    span:last-of-type {
+                        padding-left: 15rem;
+                    }
+                }
+
+                .box-contents-wrap {
+                    position: relative;
+                    padding: 21rem 16rem 0 24rem;
+                    margin-top: -5rem;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 205.3rem;
+                        background: linear-gradient(180deg, #f5f5f5 0%, rgba(245, 245, 245, 0) 100%);
+                        z-index: -1;
+                    }
+                    .circle {
+                        position: absolute;
+                        bottom: -79rem;
+                        left: -87rem;
+                        width: 176rem;
+                        height: 176rem;
+                        border-radius: 50%;
+                        background: linear-gradient(180deg, #ffe141 23.74%, rgba(245, 245, 245, 0) 95.43%);
+                        z-index: -1;
+                        transition: transform 1.3s;
+                        transform: scale(0);
+                        &.active {
+                            transform: scale(1);
+                            transform-origin: top;
+                        }
+                    }
+                    article {
+                        position: relative;
+                        overflow: hidden
+                    }
+                    .tit-dot {
+                        @include text(700, 5.6rem, 1.35);
+                    }
+
+                    .list-history {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        margin-top: 10rem;
+                        li {
+                            display: flex;
+                            @include text(400, 1.8rem, 1.4);
+                            .year {
+                                flex-shrink: 0;
+                                width: 13.5rem;
+                                @include text(600, 1.8rem, 1.4, $black, -0.01em);
+                                font-family: $en;
+                            }
+                        }
+                    }
+
+                    .ani-figure {
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        opacity: 0.3;
+                        svg {
+                            width: 22rem;
+                            height: 22rem;
+                            opacity: 0;
+                            transition: all 0.3s;
+                        }
+                        &.active {
+                            svg {opacity: 1;}
+                        }
+                    }
+
+                    .ch1 .ani-figure {
+                        svg:first-of-type {
+                            circle {
+                                stroke-dasharray: 1000;
+                                stroke-dashoffset: 1000;
+                            }
+                        }
+                        svg:last-of-type {
+                            margin-left: -7rem;
+                            transition-delay: 1s;
+                            circle {
+                                stroke-dasharray: 5 5;
+                                stroke-dashoffset: 100;
+                            }
+                        }
+                        &.active {
+                            svg:first-of-type circle {animation: stroke 1.5s ease-out forwards;}
+                            svg:last-of-type circle {animation: stroke 1.5s 1s ease-out forwards;}
+                        }
+                    }
+
+                    .ch2 .ani-figure {
+                        .box {
+                            position: relative;
+                            &:last-of-type {margin-left: -7rem;}
+                        }
+                        .line1 {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%,-50%);
+                            width: 19.3rem;
+                            height: 10.9rem;
+                            path {
+                                stroke-dasharray: 1000;
+                                stroke-dashoffset: 1000;
+                            }
+                        }
+                        .line2 {
+                            position: absolute;
+                            top: 0;
+                            path {
+                                stroke-dasharray: 1000;
+                                stroke-dashoffset: 1000;
+                            }
+                            &.ty01 {
+                                top: 0.9rem;
+                                left: 4.1rem;
+                                width: 2.9rem;
+                                height: 20.2rem;
+                            }
+                            &.ty02 {
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 0.3rem;
+                                height: 21.8rem;
+                            }
+                            &.ty03 {
+                                top: 0.9rem;
+                                right: 4.1rem;
+                                width: 2.9rem;
+                                height: 20.2rem;
+                            }
+                        }
+                        .svg-circle circle {
+                            stroke-dasharray: 1000;
+                            stroke-dashoffset: 1000;
+                        }
+                        .svg-circle.ty02 {transition-delay: 1s;}
+                        .dash-line {
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 0;
+                            height: 0.2rem;
+                            transition: width 0.3s;
+                            transition-delay: 2s;
+                            path {
+                                stroke-dasharray: 5 5;
+                                stroke-dashoffset: 1000;
+                            }
+                        }
+                        .dash-circle {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%,-50%);
+                            width: 3.8rem;
+                            height: 3.8rem;
+                            transition-delay: 2.5s;
+                        }
+                        &.active {
+                            .dash-line {width: 100%;}
+                            .line2 path {animation: stroke 2.5s 0.8s ease-out forwards;}
+                            .line1 path {animation: stroke 2.5s 0.5s ease-out forwards;}
+                            .svg-circle.ty01 circle {animation: stroke 1.5s ease-out forwards;}
+                            .svg-circle.ty02 circle {animation: stroke 1.5s 1s ease-out forwards;}
+                        }
+                    }
+
+                    .ch3 .ani-figure {
+                        padding-top: 5rem;
+                        margin-right: 2.2rem;
+                        .ani-circle {
+                            position: absolute;
+                            top: 0;
+                            transition: all 0.6s;
+                            &.c1 {
+                                left: -30%;
+                            }
+                            &.c2 {
+                                right: -30%;
+                                transition-delay: 0.5s;
+                            }
+                            &.c3 {
+                                top: auto;
+                                bottom: -30%;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                transition-delay: 1s;
+                            }
+                        }
+                        .triangle {
+                            width: 33.8rem;
+                            height: 29.7rem;
+                            path {
+                                stroke-dasharray: 1200;
+                                stroke-dashoffset: 1200;
+                            }
+                        }
+                        &.active {
+                            .ani-circle {
+                                &.c1 {
+                                    left: -2rem;
+                                }
+                                &.c2 {
+                                    right: -2.2rem;
+                                }
+                                &.c3 {
+                                    bottom: 0;
+                                }
+                            }
+                            .triangle path {animation: stroke 1.5s 1s ease-out forwards;}
+                        }
+                    }
+
+                    .ch4 .ani-figure {
+                        padding: 4.7rem 8rem 8.4rem 7.6rem;
+                        .ani-circle {
+                            position: absolute;
+                            top: 0;
+                            transition: all 0.6s;
+                            &.c1 {
+                                left: -30%;
+                            }
+                            &.c2 {
+                                right: -30%;
+                                transition-delay: 0.5s;
+                            }
+                            &.c3 {
+                                top: auto;
+                                bottom: -30%;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                transition-delay: 1s;
+                            }
+                            &.c4 {
+                                position: relative;
+                                circle {
+                                    stroke-dasharray: 1000;
+                                    stroke-dashoffset: 1000;
+                                }
+                            }
+                            &.c5 {
+                                top: 13.3rem;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 4rem;
+                                height: 4rem;
+                                circle {
+                                    stroke-dasharray: 1000;
+                                    stroke-dashoffset: 1000;
+                                }
+                            }
+                        }
+                        &.active {
+                            .ani-circle {
+                                &.c1 {
+                                    left: 0;
+                                }
+                                &.c2 {
+                                    right: 0;
+                                }
+                                &.c3 {
+                                    bottom: 0;
+                                }
+                                &.c4 {
+                                    circle {animation: stroke 1.5s 1s ease-out forwards;}
+                                }
+                                &.c5 {
+                                    circle {animation: stroke 3s 2s ease-out forwards;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 수상
+    .award-wrap {
+        .page-heading-layout {
+            margin-bottom: 8rem;
+        }
+        .list-award {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12rem 0;
+            margin-top: 12rem;
+            li {
+                display: flex;
+                justify-content: center;
+                width: 33.33%;
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &:hover {
+                        .thumbnail {
+                            border-style: solid;
+                            border-color: $accent;
+                            border-width: 0.4rem;
+                        }
+                        .tit, .txt {text-decoration: underline;}
+                    }
+                    .thumbnail {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 38.2rem;
+                        height: 38.2rem;
+                        border-radius: 50%;
+                        border: 1.5px dashed #ddd;
+                        overflow: hidden;
+                        img {
+                            max-width: 45%;
+                        }
+                    }
+                    .tit {
+                        margin: 6rem 0 1rem;
+                        @include text(400, 2.4rem, 1.5);
+                        font-family: $en;
+                        text-align: center;
+                    }
+                    .txt {
+                        @include text(400, 1.6rem, 1.6, #555);
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    // 사무소
+    .office-wrap {
+        &.domestic {
+            .grid-layout>.right .map-info .info-txt li.addr {
+                span {font-weight: 400;}
+            }
+        }
+        .tab-wrap .tab-list {
+            padding: 0;
+            margin-bottom: 15rem;
+            li a,
+            li button {
+                font-family: $en;
+                font-weight: 400;
+                &.on {
+                    font-weight: 600;
+                }
+            }
+        }
+        .grid-layout {
+            display: flex;
+            .office-tit {
+                @include text(700, 4.2rem, 1.33);
+            }
+            > .left {
+                flex-shrink: 0;
+                width: 35rem;
+            }
+            > .right {
+                flex-grow: 1;
+                .box-fold-wrap {
+                    margin-bottom: 12rem;
+                    padding-bottom: 6rem;
+                    border-bottom: 1px solid #ddd;
+                    .office-intro {
+                        .thumb {
+                            display: flex;
+                            align-items: center;
+                            img {
+                                width: 24rem;
+                            }
+                            .txt {
+                                margin-left: -2rem;
+                                z-index: -1;
+                                @include text(600, 8.6rem, 1.1, #f5f5f5);
+                                font-family: $en;
+                                span {
+                                    display: block;
+                                    &:last-of-type {
+                                        padding-left: 16rem;
+                                    }
+                                }
+                            }
+                        }
+                        .box-txt {
+                            margin: 12rem 0 0;
+                            // word-break: break-all;
+                            strong {
+                                @include text(700, 3.2rem, 1.43);
+                            }
+                            ul {
+                                display: flex;
+                                gap: 3.2rem;
+                                margin-top: 4rem;
+                                li {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 1.6rem;
+                                    width: 50%;
+                                    p {
+                                        @include text(400, 1.6rem, 1.75);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .map-info {
+                    .info-txt {
+                        display: flex;
+                        gap: 1rem 3rem;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        li {
+                            display: flex;
+                            &.addr {
+                                flex-direction: column;
+                                flex-shrink: 0;
+                                width: 100%;
+                                strong {
+                                    margin: 0 0 2rem;
+                                    @include text(700, 3.2rem, 1.3);
+                                    font-family: $font;
+                                }
+                                span {
+                                    @include text(700, 1.8rem, 1.82);
+                                    font-family: $font;
+                                    em {
+                                        flex-shrink: 0;
+                                        width: 11rem;
+                                        @include text(700, 1.8rem, 1.55);
+                                        font-family: $font;
+                                    }
+                                }
+                            }
+                            strong {
+                                display: block;
+                                margin-right: 0.8rem;
+                                @include text(700, 1.8rem, 1.55);
+                                font-family: $en;
+                            }
+                            span {
+                                display: flex;
+                                align-items: center;
+                                min-width: 12rem;
+                                @include text(400, 1.8rem, 1.55);
+                                & ~ span {
+                                    margin-top: 1.6rem;
+                                }
+                            }
+                            a {
+                                @include text(400, 1.8rem, 1.55);
+                                text-decoration: underline;
+                                & ~ a {
+                                    margin-top: 1.6rem;
+                                }
+                            }
+                        }
+                        & ~ .info-txt {
+                            margin-top: 4rem;
+                        }
+                    }
+                    .map-area {
+                        margin: 8rem 0 0;
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+                    .map-util {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        margin-top: 4rem;
+                    }
+                }
+                .box-traffic {
+                    display: flex;
+                    gap: 3.2rem;
+                    margin-top: 6rem;
+                    padding-top: 8rem;
+                    border-top: 1px solid #ddd;
+                    dl {
+                        display: flex;
+                        flex-direction: column;
+                        width: 50%;
+                        dt {
+                            margin-bottom: 2rem;
+                            @include text(700, 2.4rem, 1.15);
+                        }
+                        dd {
+                            margin-bottom: 3.2rem;
+                            .green {
+                                color: #3b9f37;
+                            }
+                            .brown {
+                                color: #b39627;
+                            }
+                            .blue {
+                                color: #0e62b7;
+                            }
+                            .red {
+                                color: #e11508;
+                            }
+                            p {
+                                display: flex;
+                                gap: 1.4rem;
+                                @include text(400, 1.6rem, 1.75);
+                                em {
+                                    @include text(700, 1.6rem, 1.75);
+                                }
+                                & ~ ul {
+                                    margin-top: 1rem;
+                                }
+                            }
+                            ul {
+                                li {
+                                    display: flex;
+                                    gap: 1.4rem;
+                                    @include text(400, 1.6rem, 2);
+                                    em {
+                                        @include text(700, 1.6rem, 2);
+                                    }
+                                }
+                                &.bus {
+                                    em {
+                                        flex-shrink: 0;
+                                        width: 8rem;
+                                    }
+                                }
+                            }
+                            .btn-txt-download {
+                                margin-top: 3.2rem;
+                            }
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include response("mobile") {
+    #wrap.firm-wrap {
+        &.scrollDown .history-wrap .box-layout {
+            nav ul {
+                top: 0;
+            }
+        }
+
+        // 소개
+        .intro-wrap {
+            .box-visual {
+                padding-top: 3rem;
+                .typo-heading-01 {
+                    left: 2.4rem;
+                    font-weight: 400;
+                    font-family: $en;
+                    line-height: 1.62;
+                    transform: none;
+                    white-space: wrap;
+                    em {
+                        &:last-of-type {padding-left: 0;}
+                        span {font-size: 2.4rem;}
+                    }
+                }
+                .bg {height: 18rem;}
+            }
+
+            .box-intro-txt {
+                padding-top: 10rem;
+                .circle-ani {
+                    top: 13rem;
+                    width: 142rem;
+                    height: 142rem;
+                }
+                .before-txt {
+                    top: 63.5rem;
+                    @include text(400, 4.8rem, 1.2);
+                }
+                .box-contents-wrap {
+                    position: relative;
+                    li {
+                        &:first-of-type {
+                            max-width: unset;
+                            padding-right: 2.4rem;
+                            margin: 0;
+                        }
+                        &:nth-of-type(2) {
+                            max-width: unset;
+                            padding-left: 2.4rem;
+                            margin: 0;
+                            dl {padding-left: 0;}
+                        }
+                        &:last-of-type {
+                            max-width: unset;
+                            padding-right: 2.4rem;
+                            dl {float: none;}
+                        }
+                        dl {
+                            padding: 4rem 2.4rem 0 2.4rem;
+                            dt {
+                                margin-bottom: 1.4rem;
+                                font-weight: 400;
+                                font-family: $en;
+                            }
+                            dd {@include text(400, 1.6rem, 1.88);}
+                        }
+                    }
+                }
+            }
+        }
+
+        // 연혁
+        .history-wrap {
+            .page-heading-layout {
+                margin-bottom: 3rem;
+            }
+            .box-layout {
+                flex-direction: column;
+                padding: 0;
+                nav {
+                    flex-shrink: 0;
+                    position: absolute;
+                    width: 100vw;
+                    height: 100%;
+                    ul {
+                        flex-direction: row;
+                        gap: 3rem;
+                        top: 7rem;
+                        padding-left: 2.4rem;
+                        background-color: #fff;
+                        overflow-x: auto;
+                        li {flex-shrink: 0;}
+                        li a,
+                        li button {
+                            display: flex;
+                            gap: 0.5rem;
+                            align-items: center;
+                            position: relative;
+                            padding: 0.8rem 0;
+                            @include text(700, 1.8rem, 1.9, #999);
+                            &::before {
+                                left: auto;
+                                right: 0;
+                                width: 0;
+                                height: 1px;
+                            }
+                            &::after {
+                                margin-left: -1.6rem;
+                            }
+                            &.on {
+                                padding: 0.8rem 3.6rem 0.8rem 0;
+                                color: $black;
+                                &::before {
+                                    width: 2.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right {
+                    width: 100%;
+                    margin-top: 9rem;
+
+                    .typo-heading-01 {
+                        padding-left: 2.2rem;
+                        font-weight: 600;
+                        span:last-of-type {
+                            padding-left: 3rem;
+                        }
+                    }
+
+                    .box-contents-wrap {
+                        position: relative;
+                        padding: 8rem 2.4rem 0;
+                        margin-top: -2rem;
+                        &::before {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .circle {
+                            bottom: 90rem;
+                            left: -74rem;
+                            width: 109.7rem;
+                            height: 109.7rem;
+                        }
+                        .tit-dot {
+                            @include text(600, 3.2rem, 1.3);
+                        }
+                        .list-history {
+                            gap: 3rem;
+                            margin-top: 0;
+                            li {
+                                flex-direction: column;
+                                gap: 1rem;
+                                @include text(400, 1.6rem, 1.62);
+                                .year {
+                                    width: 100%;
+                                    @include text(600, 1.6rem, 1.62, $black, -0.01em);
+                                }
+                            }
+                        }
+                        .ani-figure {
+                            display: inline-flex;
+                            position: relative;
+                            margin: 4rem 0;
+                            svg {
+                                width: 18.2rem;
+                                height: 18.2rem;
+                            }
+                        }
+
+                        .ch1 .ani-figure {
+                            svg:last-of-type {margin-left: -5rem;}
+                        }
+
+                        .ch2 .ani-figure {
+                            .box {
+                                &:last-of-type {margin-left: -5rem;}
+                            }
+                            .line1 {
+                                width: 16rem;
+                                height: 8.8rem;
+                            }
+                            .line2 {
+                                &.ty01 {
+                                    top: 0.7rem;
+                                    left: 3.2rem;
+                                    width: 2.8rem;
+                                    height: 16.8rem;
+                                }
+                                &.ty02 {
+                                    width: 0.3rem;
+                                    height: 18rem;
+                                }
+                                &.ty03 {
+                                    top: 0.7rem;
+                                    right: 3.2rem;
+                                    width: 2.8rem;
+                                    height: 16.8rem;
+                                }
+                            }
+                            .dash-circle {
+                                width: 3.1rem;
+                                height: 3.1rem;
+                            }
+                        }
+
+                        .ch3 .ani-figure {
+                            padding-top: 4rem;
+                            margin: 4rem 0 4rem 2rem;
+                            .triangle {
+                                width: 27.7rem;
+                                height: 24.3rem;
+                            }
+                        }
+
+                        .ch4 .ani-figure {
+                            padding: 3.9rem 6.6rem 7rem 6.3rem;
+                            .ani-circle {
+                                &.c5 {
+                                    top: 11rem;
+                                    width: 3.3rem;
+                                    height: 3.3rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 수상
+        .award-wrap {
+            .page-heading-layout {
+                margin-bottom: 6rem;
+            }
+            .list-award {
+                gap: 6rem 0.6rem;
+                margin-top: 6rem;
+                li {
+                    width: calc(50% - 0.3rem);
+                    a {
+                        .thumbnail {
+                            width: 11rem;
+                            height: 11rem;
+                            img {
+                                max-width: 4.5rem;
+                            }
+                        }
+                        .tit {
+                            margin: 2.4rem 0 0;
+                            @include text(400, 1.4rem, 1.85);
+                        }
+                        .txt {@include text(400, 1.2rem, 1.83, #555);}
+                    }
+                }
+            }
+        }
+
+        // 사무소
+        .office-wrap {
+            .tab-wrap .tab-list {
+                margin-bottom: 8rem;
+                li a,
+                li button {
+                    white-space: nowrap;
+                    &.on {
+                        font-weight: 600;
+                    }
+                }
+            }
+            .grid-layout {
+                flex-direction: column;
+                gap: 2.4rem;
+                .office-tit {
+                    @include text(700, 3.2rem, 1.12);
+                }
+                > .left {
+                    width: 100%;
+                }
+                > .right {
+                    .box-fold-wrap {
+                        margin-bottom: 8rem;
+                        padding-bottom: 0;
+                        border-bottom: none;
+
+                        .office-intro {
+                            .thumb {
+                                img {
+                                    width: 100%;
+                                }
+                                .txt {
+                                    display: none;
+                                }
+                            }
+                            .box-txt {
+                                margin: 6rem 0 0;
+                                strong {
+                                    @include text(700, 2.4rem, 1.58);
+                                }
+                                ul {
+                                    flex-direction: column;
+                                    gap: 1rem;
+                                    li {
+                                        gap: 1rem;
+                                        width: 100%;
+                                        p {
+                                            @include text(400, 1.4rem, 1.85);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .map-info {
+                        .info-txt {
+                            align-items: flex-start;
+                            flex-direction: column;
+                            gap: 0.6rem;
+                            li {
+                                display: flex;
+                                flex-direction: row;
+                                strong {
+                                    flex-shrink: 0;
+                                    width: 11rem;
+                                    margin-bottom: 0;
+                                    @include text(700, 1.6rem, 1.6);
+                                }
+                                span,
+                                a {
+                                    @include text(400, 1.6rem, 1.6);
+                                }
+
+                                &.addr {
+                                    flex-direction: column;
+                                    max-width: none;
+                                    width: auto !important;
+                                    margin-top: 0;
+                                    padding-bottom: 3rem;
+                                    strong {
+                                        width: 100%;
+                                        margin-bottom: 2rem;
+                                        @include text(700, 2.4rem, 1.4);
+                                    }
+                                    span {
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                        gap: 0.6rem;
+                                        @include text(700, 1.6rem, 1.77);
+                                        em {
+                                            width: 100%;
+                                            @include text(700, 1.6rem, 1);
+                                        }
+                                    }
+                                }
+                            }
+                            & ~ .info-txt {
+                                margin-top: 6rem;
+                            }
+                        }
+                        .map-area {
+                            margin: 4rem 0 0;
+                        }
+                        .map-util {
+                            justify-content: flex-start;
+                        }
+                    }
+                    .box-traffic {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0;
+                        margin-top: 8rem;
+                        padding-top: 0;
+                        border-top: none;
+                        .office-tit {
+                            margin-bottom: 2rem;
+                        }
+                        dl {
+                            width: 100%;
+                            & ~ dl {
+                                margin-top: 4rem;
+                            }
+                            dt {
+                                margin-bottom: 1rem;
+                                @include text(700, 1.8rem, 1.55);
+                            }
+                            dd {
+                                margin-bottom: 4rem;
+                                p {
+                                    display: flex;
+                                    gap: 1.4rem;
+                                    @include text(400, 1.6rem, 1.75);
+                                    em {
+                                        @include text(700, 1.6rem, 1.75);
+                                    }
+                                    & ~ ul {
+                                        margin-top: 1rem;
+                                    }
+                                }
+                                ul {
+                                    li {
+                                        display: flex;
+                                        gap: 1.4rem;
+                                        @include text(400, 1.6rem, 2);
+                                        em {
+                                            @include text(700, 1.6rem, 2);
+                                        }
+                                    }
+                                    &.bus {
+                                        em {
+                                            flex-shrink: 0;
+                                            width: 8rem;
+                                        }
+                                    }
+                                }
+                                .btn-txt-download {
+                                    margin-top: 4rem;
+                                }
+                                &:last-of-type {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

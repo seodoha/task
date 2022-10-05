@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    @@include('./pages/jp/includes/head.html', {
+        metaDescription: 'Footer',
+        pageTitle : 'Hwawoo - 法的通知',
+        cssPath : '../../../assets/jp/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="etc-wrap">
+        @@include('./pages/jp/includes/header.html')
+
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">法的通知</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">有限責任</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="有限責任 메뉴로 이동" aria-label="有限責任 메뉴로 이동" class="on">有限責任</a></li>
+                                        <li><a href="#" title="個人情報処理方針 메뉴로 이동" aria-label="個人情報処理方針 메뉴로 이동">個人情報処理方針</a></li>
+                                        <li><a href="#" title="免責公告 메뉴로 이동" aria-label="免責公告 메뉴로 이동">免責公告</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02">法的通知</h3>
+                    </div>
+                </div>
+
+                <article class="arti01">
+                    <div class="inner-wrap">
+
+                        <div class="tab-wrap">
+                            <ul class="tab-list">
+                                <li><a href="javascript:;" class="on">有限責任</a></li>
+                                <li><a href="javascript:;">個人情報処理方針</a></li>
+                                <li><a href="javascript:;">免責公告</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="terms-wrap">
+                                    <h4 class="typo-title-01">有限責任</h4>
+                                    <p class="terms-txt01">
+                                        法務法人(有)ファウは弁護士法に基づき設立された法務法人(有)で、担当弁護士が受任事件に関し故意又は過失により委任者に損害を発生させる場合には、弁護士法によりその担当弁護士が法務法人(有)ファウと連帯してその損害を賠償する責任を負います。
+                                    </p>
+                                    <p class="terms-txt01">
+                                        担当弁護士が損害賠償責任を負う場合、その受任事件に関し担当弁護士を指揮·監督した構成員弁護士も、その指揮·監督をするにあたって注意を怠らなかった場合を除き、損害を賠償する責任を負います。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        @@include('./pages/jp/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/jp/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

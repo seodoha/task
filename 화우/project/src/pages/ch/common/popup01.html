@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zn">
+    <head>
+        @@include('./pages/ch/includes/head.html',
+        { metaDescription: 'Solutions', pageTitle : 'Hwawoo - Alert', cssPath :
+        '../../../assets/ch/css/common.min.css' })
+    </head>
+    <body>
+        <div id="wrap" style="padding: 2rem;">
+            <button data-pop="test-popup" style="padding: 2rem;border: 1px solid #000;">팝업 오픈</button>
+        </div>
+
+        <!--웹접근성 팝업-->
+        <div id="test-popup" class="layer-popup-wrap">
+            <div class="layer-popup">
+                <div class="popup-header">
+                    <h4 class="tit">웹접근성</h4>
+                    <span class="right">
+                        <button class="icon-close popup-close"><span>닫기</span></button>
+                    </span>
+                </div>
+                <div class="popup-body">
+                    <p class="typo-body">
+                        법무법인(유) 화우는 장애인 및 비장애인이 동등하게 웹서비스를 이용하실 수 있도록, 웹접근성 지침을 준수하여 웹사이트를 제작하였습니다. 앞으로도 고객의 편리한 이용을 위해 지속적으로 개선해 나갈 예정입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/ch/includes/scriptImport.html', {pageMain : false,})
+    </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+<svg id="ico_main_big_02" xmlns="http://www.w3.org/2000/svg" width="548" height="548" viewBox="0 0 548 548">
+    <defs>
+        <style>
+            .cls-2,.cls-3{fill:none;stroke:#fff;stroke-miterlimit:10}.cls-2{stroke-dasharray:4 4}
+        </style>
+    </defs>
+    <g id="그룹_1659" data-name="그룹 1659" transform="translate(-1461.707 -151.697)">
+        <g id="_" data-name="+" transform="translate(1648.387 337.889)">
+            <path id="선_64" data-name="선 64" class="cls-2" transform="translate(.32 87.808)" d="M0 0h174"/>
+            <path id="선_65" data-name="선 65" class="cls-2" transform="translate(87.32 .809)" d="M0 0v174"/>
+        </g>
+        <g id="그룹_1663" data-name="그룹 1663">
+            <path id="선_60" data-name="선 60" class="cls-3" transform="translate(1565.707 256.697)" d="M0 116 116 0"/>
+            <path id="선_150" data-name="선 150" class="cls-3" transform="translate(1787.707 256.697)" d="M116 116 0 0"/>
+        </g>
+        <g id="그룹_1662" data-name="그룹 1662" transform="translate(0 182)">
+            <path id="선_151" data-name="선 151" class="cls-3" transform="translate(1565.707 296.697)" d="m0 0 116 116"/>
+            <path id="선_152" data-name="선 152" class="cls-3" transform="translate(1787.707 296.697)" d="M116 0 0 116"/>
+        </g>
+        <g id="그룹_1660" data-name="그룹 1660">
+            <circle id="타원_49" data-name="타원 49" class="cls-3" cx="59" cy="59" r="59" transform="translate(1675.707 171.697)"/>
+            <circle id="타원_114" data-name="타원 114" class="cls-3" cx="59" cy="59" r="59" transform="translate(1675.707 561.697)"/>
+        </g>
+        <g id="그룹_1661" data-name="그룹 1661" transform="rotate(90 1735.207 426.197)">
+            <circle id="타원_49-2" data-name="타원 49" class="cls-3" cx="59" cy="59" r="59" transform="translate(1675.707 171.697)"/>
+            <circle id="타원_114-2" data-name="타원 114" class="cls-3" cx="59" cy="59" r="59" transform="translate(1675.707 561.697)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg id="rnb_ico_02" xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-dasharray:2 2}
+        </style>
+    </defs>
+    <path id="area" style="fill:none" d="M0 0h144v144H0z"/>
+    <g id="그룹_195" data-name="그룹 195" transform="translate(-3.449 -2.006)">
+        <circle id="타원_31" data-name="타원 31" class="cls-2" cx="41.338" cy="41.338" r="41.338" transform="translate(60.11 9.006)"/>
+        <circle id="타원_32" data-name="타원 32" class="cls-2" cx="41.338" cy="41.338" r="41.338" transform="translate(8.451 55.871)"/>
+        <circle id="타원_33" data-name="타원 33" class="cls-2" cx="41.338" cy="41.338" r="41.338" transform="translate(60.11 55.871)"/>
+        <circle id="타원_34" data-name="타원 34" cx="41.338" cy="41.338" r="41.338" transform="translate(8.451 9.006)" style="stroke:#fff;stroke-miterlimit:10;fill:none"/>
+    </g>
+</svg>

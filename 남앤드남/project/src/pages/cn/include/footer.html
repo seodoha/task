@@ -1,0 +1,23 @@
+<div id="footer" class="footer">
+    <div class="footer-wrap">
+        @@if(pageMain === true){
+        <div class="footer-menu">
+            <ul class="footer-menuList">
+                <li class="footer-menuList__items"><a href="javascript:void(0)" target="_blank">NNI协议体系统</a></li>
+                <li class="footer-menuList__items"><a href="javascript:void(0)" onclick="uiCommon.popup.open('.popup-f1')">免责公告</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <div class="footer-info__address">中区西小门路95静安大厦4楼 (邮编04516)</div>
+            <div class="footer-info__tel">TEL : 02-779-5477</div>
+            <div class="footer-info__fax">FAX : 02-753-5279</div>
+        </div>
+        }
+        <div class="footer-copylight">©Copyright 2021 NAM & NAM international. All Rights Reserved.</div>
+    </div>
+</div>
+@@if(pageMain === false){
+<div class="goTop">
+    <button class="btn-top"><span class="hidden">go top</span></button>
+</div>
+}

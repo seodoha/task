@@ -1,0 +1,11 @@
+<svg id="ico_site_move_b" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-miterlimit:10;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="ic" transform="translate(1.88 .88)">
+        <path id="패스_7218" data-name="패스 7218" class="cls-2" d="M13.889 8.889V1H6" transform="translate(-2.269 .841)"/>
+        <path id="선_146" data-name="선 146" class="cls-2" transform="translate(.62 1.842)" d="M0 10.778 11 0"/>
+    </g>
+</svg>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        @@include('./pages/cn/include/head.html',{ pageTitle : 'NAM&NAM | 404 error', pageMain : false })
+    </head>
+    <body class="chn">
+        <div id="wrap" class="wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/cn/include/header.html',{ gnbLocation : 'business,0,0', lnbLocation : 'none' })
+            <!-- container -->
+            <div id="container" class="container footerFix">
+                <!-- no scrolling-->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap">
+                        <div class="error-wrap">
+                            <div class="error-inner">
+                                <div class="image"><img src="/assets/images/common/ico_404.svg" alt="" /></div>
+                                <div class="title">找不到您想要的页面</div>
+                                <div class="text">
+                                    找不到页面或发生错误<br />
+                                    请确认输入的地址是否正确
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btns w-xlg h-lg">转到主页</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--// container contents -->
+            </div>
+            <!--// container -->
+            @@include('./pages/cn/include/footer.html',{ pageMain : false })
+        </div>
+        @@include('./pages/cn/include/scriptImport.html', {pageMain : false})
+    </body>
+</html>

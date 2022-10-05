@@ -1,0 +1,13 @@
+<svg id="rnb_ico_04" xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
+    <defs>
+        <style>
+            .cls-3{fill:none;stroke:#fff;stroke-miterlimit:10}
+        </style>
+    </defs>
+    <path id="사각형_179" data-name="사각형 179" style="fill:none" d="M0 0h144v144H0z"/>
+    <g id="그룹_189" data-name="그룹 189" transform="translate(16.766 19.771)">
+        <path id="패스_30" data-name="패스 30" d="M63.134 7.757 8 97.35h110.268z" transform="translate(-8 -7.757)" style="stroke-dasharray:2;stroke:#fff;stroke-miterlimit:10;fill:none"/>
+        <path id="패스_31" data-name="패스 31" class="cls-3" d="M51.1 18.41 12.92 80.455h76.363z" transform="translate(4.033 18.299)"/>
+        <path id="패스_32" data-name="패스 32" class="cls-3" d="M38.088 28.8 18.006 61.437h40.163z" transform="translate(16.473 43.722)"/>
+    </g>
+</svg>

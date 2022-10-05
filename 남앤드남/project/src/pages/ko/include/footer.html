@@ -1,0 +1,25 @@
+<div id="footer" class="footer">
+    <div class="footer-wrap">
+@@if(pageMain === true){
+        <div class="footer-menu">
+            <ul class="footer-menuList">
+                <li class="footer-menuList__items"><a href="javascript:void(0)" target="_blank">NNI협의체시스템</a></li>
+                <li class="footer-menuList__items"><a href="javascript:void(0)" onclick="uiCommon.popup.open('.popup-f1')">면책공고</a></li>
+                <li class="footer-menuList__items"><a href="javascript:void(0)" target="_blank">개인정보처리방침</a></li>
+                <li class="footer-menuList__items"><a href="javascript:void(0)" onclick="uiCommon.popup.open('.popup-f2')">이메일무단수집거부</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <div class="footer-info__address">서울시 중구 서소문로 95 정안빌딩 4층 (우 04516)</div>
+            <div class="footer-info__tel">TEL : 02-779-5477</div>
+            <div class="footer-info__fax">FAX : 02-753-5279</div>
+        </div>
+}
+        <div class="footer-copylight">©Copyright 2021 NAM & NAM international. All Rights Reserved.</div>
+    </div>
+</div>
+@@if(pageMain === false){
+<div class="goTop">
+    <button class="btn-top"><span class="hidden">go top</span></button>
+</div>
+}

@@ -1,0 +1,16 @@
+<svg id="ico_bf_17" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-4{stroke:#111;stroke-width:2px;fill:#fff;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="그룹_1741" data-name="그룹 1741" transform="translate(-635.064 -796.225)">
+        <path id="패스_7058" data-name="패스 7058" d="M12.515 0A12.515 12.515 0 1 1 0 12.515 12.515 12.515 0 0 1 12.515 0z" transform="translate(677.064 814.224)" style="stroke-linecap:round;stroke-dasharray:28 23;stroke:#111;stroke-width:2px;fill:none"/>
+        <g id="그룹_1740" data-name="그룹 1740" transform="translate(667.065 823.307)">
+            <path id="합치기_81" data-name="합치기 81" d="M22.765 73.917v-7.225c-.981-.424-6.41-3.032-10.942-10.575-4.432-7.37-9.7-15.694-10.849-17.5a5.134 5.134 0 0 1 7.906-6.521l8.757 9.415V5.128a5.128 5.128 0 0 1 10.256 0V20.92v-.088a4.763 4.763 0 0 1 9.514-.231 4.762 4.762 0 0 1 8.8 2.523V25A4.76 4.76 0 0 1 55 27.543v20.566a4.815 4.815 0 0 1-.065.789v6.426a24.212 24.212 0 0 1-3.6 11.342v7.251z" style="stroke:#111;stroke-width:2px;fill:none"/>
+            <path id="패스_7055" data-name="패스 7055" class="cls-4" d="M-6754.034-5529.761v13.181" transform="translate(6781.928 5549.032)"/>
+            <path id="패스_7056" data-name="패스 7056" class="cls-4" d="M-6754.034-5529.761v13.181" transform="translate(6791.452 5549.958)"/>
+            <path id="패스_7057" data-name="패스 7057" class="cls-4" d="M-6754.034-5529.761v11.92" transform="translate(6800.244 5552.896)"/>
+        </g>
+    </g>
+</svg>

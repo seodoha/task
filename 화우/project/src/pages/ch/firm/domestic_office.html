@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zn">
+    <head>
+        @@include('./pages/ch/includes/head.html', { metaDescription: 'The Firm', pageTitle : 'Hwawoo - 사무소위치', cssPath :
+        '../../../assets/ch/css/common.min.css' })
+    </head>
+
+    <body>
+        <!--Menu별 클래스 추가 -->
+        <div id="wrap" class="firm-wrap">
+            @@include('./pages/ch/includes/header.html')
+
+            <!--Menu의 각 페이지별 클래스 추가-->
+            <main id="main" class="office-wrap domestic">
+                <section id="container">
+                    <h2 class="hidden">본문</h2>
+
+                    <div class="page-heading-layout">
+                        <div class="inner-wrap">
+                            <ol class="breadcrumbs">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">The Firm</a></li>
+                                <li class="current box-tooltip">
+                                    <button type="button">交通指南</button>
+                                    <div class="view-tooltip">
+                                        <ul class="custom-scroll">
+                                            <li><a href="#" title="和友简介 메뉴로 이동" aria-label="和友简介 메뉴로 이동">和友简介</a></li>
+                                            <li><a href="#" title="发展历程 메뉴로 이동" aria-label="发展历程 메뉴로 이동">发展历程</a></li>
+                                            <li><a href="#" title="奖项 메뉴로 이동" aria-label="奖项 메뉴로 이동">奖项</a></li>
+                                            <li><a href="#" title="海外事务所 메뉴로 이동" aria-label="海外事务所 메뉴로 이동">海外事务所</a></li>
+                                            <li><a href="#" title="交通指南 메뉴로 이동" aria-label="交通指南 메뉴로 이동" class="on">交通指南</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ol>
+                            <h3 class="typo-heading-02">交通指南</h3>
+                        </div>
+                    </div>
+                    <!--end of page-heading-layout-->
+
+                    <div class="inner-wrap">
+                        <div class="grid-layout">
+                            <div class="left pc">
+                                <h4 class="office-tit hidden">交通指南</h4>
+                            </div>
+                            <div class="right">
+                                <div class="map-info">
+                                    <ul class="info-txt">
+                                        <li class="addr">
+                                            <span>
+                                                <em>地址</em>
+                                                首尔市江南区永东大路517亚欧峰会大厦6、17、18、19、22、23、34楼  邮编：06164
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <strong>电话</strong>
+                                            <span>02-6003-7000</span>
+                                        </li>
+                                        <li>
+                                            <strong>传真</strong>
+                                            <span>02-6003-7800</span>
+                                        </li>
+                                        <li>
+                                            <strong>电子邮件</strong>
+                                            <a href="mailto:hwawoo@hwawoo.com">hwawoo@hwawoo.com</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="info-txt">
+                                        <li class="addr">
+                                            <span>
+                                                <em>和友研修院</em>
+                                                首尔市江南区永东大路517亚欧峰会大厦34楼  邮编：06164
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <strong>电话</strong>
+                                            <span>02-6003-7776</span>
+                                        </li>
+                                        <li>
+                                            <strong>传真</strong>
+                                            <span>02-6003-7333</span>
+                                        </li>
+                                        <li>
+                                            <strong>电子邮件</strong>
+                                            <a href="mailto:education@hwawoo.com​">education@hwawoo.com​</a>
+                                        </li>
+                                    </ul>
+                                    <div class="map-area">
+                                        <!--map api 들어갈 영역-->
+                                        <img src="../../../assets/ch/images/temp/map_api.png" alt="" />
+                                    </div>
+                                </div>
+                                <!--end of map-info-->
+                                <div class="box-traffic">
+                                    <dl>
+                                        <dt>地铁</dt>
+                                        <dd>
+                                            <ul>
+                                                <li>
+                                                    <em class="green">从2号线</em>
+                                                    三成站6号出口出来, 向永东大桥方向步行6-7分钟
+                                                </li>
+                                                <li>
+                                                    <em class="brown">从9号线</em>
+                                                    奉恩寺站7号出口出来, 向亚欧峰会大厦方向步行2-3分钟
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                        <dt>公交车</dt>
+                                        <dd>
+                                            <p>在奉恩寺、韩国电力、COEX东门、洲际大酒店公交车站等下车</p>
+                                            <ul class="bus">
+                                                <li>
+                                                    <em class="green">支线(绿色）</em>
+                                                    2415、3217、3411、3412、3414、4318、江南01、江南06
+                                                </li>
+                                                <li>
+                                                    <em class="blue">干线(蓝色）</em>
+                                                    146、301、351、352、401
+                                                </li>
+                                                <li>
+                                                    <em class="red">广域(红色）</em>
+                                                    9407、9414、9507、9607
+                                                </li>
+                                                <li>
+                                                    <em>机场大巴</em>
+                                                    6006、城区航站楼
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>自驾车</dt>
+                                        <dd>
+                                            <p>在奉恩寺路十字路口掉头或在奉恩寺前奉恩寺路十字路口右转直行 	约100M</p>
+                                            <ul>
+                                                <li>· 地下停车场入口：奉恩寺方向入口(Coex North）、亚欧峰会大厦入口</li>
+                                                <li>· 在地下2、3、4楼的橙色(Orange）区域停车</li>
+                                            </ul>
+                                            <a href="#" download="" class="btn-txt-download" title="Location information">Location information</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end of grid-layout-->
+                    </div>
+                    <!--end of inner-wrap-->
+                </section>
+            </main>
+
+            @@include('./pages/ch/includes/footer.html')
+        </div>
+
+        <!-- SCRIPT IMPORT -->
+        @@include('./pages/ch/includes/scriptImport.html', {pageMain : false,})
+    </body>
+</html>

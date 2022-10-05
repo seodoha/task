@@ -1,0 +1,199 @@
+// Layer popup
+.layer-popup-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(22, 22, 22, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all 0.3s;
+
+    &.show {
+        opacity: 200;
+        visibility: visible;
+        z-index: 200;
+        .layer-popup {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.2s;
+        }
+    }
+
+    .layer-popup {
+        width: 55rem;
+        background-color: #fff;
+        opacity: 0;
+        transform: translateY(-5rem);
+        transition: all 0.3s ease-out;
+        overflow: auto;
+
+        // 풀팝업
+        &.full-popup {
+            width: 100%;
+            height: 100%;
+            [class^="icon-close"] {
+                position: absolute;
+                top: 7rem;
+                right: 7rem;
+                z-index: 1;
+            }
+            .popup {
+                &-body {
+                    max-height: none;
+                    padding: 0;
+                }
+            }
+        }
+
+        // Alert 팝업
+        &.alert-popup {
+            position: relative;
+            text-align: center;
+            .ico-popup-close {
+                position: absolute;
+                right: 3rem;
+                top: 3rem;
+            }
+            .popup-body {
+                max-height: none;
+                padding: 9rem 5rem 5rem;
+                .msg {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 9.7rem;
+                    @include text(400, 2.4rem, 1.4);
+                }
+                .box-btn {
+                    margin-top: 7rem;
+                }
+            }
+        }
+
+        // 공지 팝업
+        &.notice-popup {
+            width: 40rem;
+            a {
+                display: block;
+                img {width: 100%;}
+            }
+        }
+        
+        .popup {
+            &-header {
+                display: flex;
+                gap: 1rem;
+                position: relative;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                padding: 4rem;
+                [class^="icon-close"] {
+                    width: 2.8rem;
+                    height: 2.8rem;
+                }
+                &.align-right {justify-content: flex-end;}
+                .tit {@include text(700, 3.2rem, 1.3);}
+                .right {
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                }
+            }
+            &-body {
+                position: relative;
+                padding: 0 4rem 4rem;
+
+                .typo-body {
+                    line-height: 1.85;
+                    color: #555;
+                }
+
+                .box-img {text-align: center;}
+            }
+        }
+        .box-contents-wrap {margin: 12rem 0 20rem;}
+    }
+}
+
+// MOBILE
+@include response("mobile") {
+
+    // Layer popup
+    .layer-popup-wrap {
+        .layer-popup {
+            width: 100%;
+            // 풀팝업
+            &.full-popup {
+                [class^="icon-close"] {
+                    position: absolute;
+                    top: 2.4rem;
+                    right: 2.4rem;
+                }
+                .icon-close-white {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                }
+                .box-contents-wrap {margin: 6rem 0 10rem;}
+            }
+            // Alert 팝업
+            &.alert-popup {
+                width: calc(100% - 4.8rem);
+                .popup-body {
+                    padding: 3rem 2.4rem;
+                    .msg {
+                        min-height: 9.7rem;
+                        @include text(400, 1.6rem, 1.6);
+                    }
+                    .box-btn {
+                        margin-top: 3rem;
+                    }
+                }
+                &.ty02 {
+                    .icon-close {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                    }
+                    .popup-header {
+                        padding: 2.4rem 3rem;
+                    }
+                    .popup-body {
+                        padding: 0 2.4rem 2.6rem;
+                        .util-sns {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 2.8rem 2.6rem;
+                            & > li {
+                                min-width: 10.9rem;
+                                a {
+                                    display: flex;
+                                    gap: 1rem;
+                                    width: 100%;
+                                    @include text(400, 1.4rem, 2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .popup {
+                &-header {
+                    padding: 3rem 2.4rem 4rem;
+                    .tit {@include text(700, 3.2rem, 1.3);}
+                }
+                &-body {
+                    position: relative;
+                    padding: 0 2.4rem 4.6rem;
+                    .box-img img {max-width: 70%;}
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,23 @@
+<svg id="ico_bf_05" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="그룹_1742" data-name="그룹 1742" transform="translate(-447 -98)">
+        <g id="그룹_1690" data-name="그룹 1690" transform="translate(-587.815 -518.849)">
+            <path id="패스_6905" data-name="패스 6905" class="cls-2" d="M1041.891 671.926v-43.077h47.025l17.944 19.427c.071.072 0 70.573 0 70.573h-42.225" transform="translate(24.924)"/>
+            <g id="그룹_1773" data-name="그룹 1773" transform="translate(1.647)">
+                <path id="패스_6906" data-name="패스 6906" class="cls-2" d="M1193.508 648.67H1175.3v-19.7" transform="translate(-63.34 -.123)"/>
+            </g>
+            <path id="패스_7084" data-name="패스 7084" class="cls-2" d="M7477.145 527.622c.4-.079 35 0 35 0" transform="translate(-6395.331 129.262)"/>
+            <path id="패스_7085" data-name="패스 7085" class="cls-2" d="M7477.145 527.622c.4-.079 35 0 35 0" transform="translate(-6395.331 140.262)"/>
+        </g>
+        <g id="그룹_1689" data-name="그룹 1689" transform="translate(-396 -501)">
+            <path id="빼기_63" data-name="빼기 63" d="M-14023 450v-22.818a14.972 14.972 0 0 0 10 3.822 14.975 14.975 0 0 0 10-3.819V450l-10-9.711-10 9.713z" transform="translate(14893 257)" style="stroke-linejoin:round;fill:none;stroke:#111;stroke-width:2px"/>
+            <g id="그룹_1831" data-name="그룹 1831" transform="translate(-34 2)">
+                <circle id="타원_279" data-name="타원 279" class="cls-2" cx="15" cy="15" r="15" transform="translate(899 656)"/>
+            </g>
+        </g>
+    </g>
+</svg>

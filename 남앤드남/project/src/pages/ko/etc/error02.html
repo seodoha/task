@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/ko/include/head.html',{
+        pageTitle : '남앤드남 | 서버장애',
+		pageMain : false
+	})
+    </head>
+    <body>
+        <div id="wrap" class="wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/ko/include/header.html',{
+                    gnbLocation : 'business,0,0',
+                    lnbLocation : 'none'
+            })
+            <!-- container -->
+            <div id="container" class="container footerFix"><!-- no scrolling-->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap">
+                        <div class="error-wrap">
+                            <div class="error-inner">
+                                <div class="image"><img src="/assets/images/common/ico_500.svg" alt=""></div>
+                                <div class="title pc">일시적인 서버 장애가 발생하였습니다.</div>
+                                <div class="title mobile">일시적인 서버 장애가<br>발생하였습니다.</div>
+                                <div class="text">
+                                    지금 서비스와 연결할 수 없습니다.<br>
+                                    잠시 후 다시 확인해주세요.
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btns h-lg">새로고침</button><button class="btns h-lg">메인으로 가기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--// container contents -->
+            </div>
+            <!--// container -->
+            @@include('./pages/ko/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        @@include('./pages/ko/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/ko/includes/head.html',
+        { metaDescription: 'Solutions', pageTitle : 'Hwawoo - Notice', cssPath :
+        '../../../assets/ko/css/common.min.css' })
+    </head>
+    <body>
+        <div id="wrap" style="padding: 2rem;">
+            <button data-pop="test-popup" style="padding: 2rem;border: 1px solid #000;">팝업 오픈</button>
+        </div>
+
+        <div id="test-popup" class="layer-popup-wrap ">
+            <div class="layer-popup notice-popup">
+                <div class="popup-header align-right">
+                    <span class="right">
+                        <button class="icon-close popup-close"><span>닫기</span></button>
+                    </span>
+                </div>
+                <div class="popup-body">
+                    <a href="#">
+                        <img src="../../../assets/ko/images/temp/notice-pop.png" alt="2022년 하계 법학전문대학원 인턴십 프로그램" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        @@include('./pages/ko/includes/scriptImport.html', {pageMain : false,})
+    </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,314 @@
+@charset "UTF-8";
+
+.btns{
+    position: relative;
+    min-width: 17rem;
+    height: 4.8rem;
+    border:1px solid $gray3;
+    background:$white;
+    text-align:center;
+    @include fontSize('fontS02');
+    font-weight:500;
+    color:$gray8;
+    &:disabled{
+        background: $gray1;
+        color: #8d8d8d;
+        cursor: default;
+    }
+    &.c-green{
+        color:$white;
+        background:$accent;
+        border:0;
+    }
+    &.w-md{
+        min-width:21rem;
+    }
+    &.w-lg{
+        min-width:32rem;
+    }
+    &.w-xlg{
+        min-width:38.4rem;
+    }
+    &.h-lg{
+        height:6rem;
+        @include fontSize('fontS03');
+    }
+    &.h-xlg{
+        height:6.4rem;
+        @include fontSize('fontS04');
+    }
+    &.h-xxlg{
+        height:8rem;
+        @include fontSize('fontS04');
+        font-weight:700;
+    }
+    &.b-gray{
+        border-color: $gray6;;
+    }
+    &.icon{
+        display:inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight:400;
+        i{
+            width:2.4rem;
+            height:2.4rem;
+            background-size: 2.4rem 2.4rem;
+            background-position:0 0;
+            background-repeat: no-repeat;
+            & + em{margin-left:0.8rem;}
+            &.i-print{
+                background-image: url('/assets/images/common/ico_print.svg');
+            }
+            &.i-list{
+                background-image: url('/assets/images/common/ico_list.svg');
+            }
+            &.i-file{
+                background-size: 2rem 2rem;
+                background-image: url('/assets/images/common/ico_fc_pdf_b.svg');
+            }
+        }
+        em{font-style: normal;}       
+    }
+}
+// file add
+.btn-has-icon {
+    .btn-has-icon__parent {
+        position: relative;
+        // .btn-icon{
+        //     position: absolute;
+        //     top: 50%;
+        //     transform: translateY(-50%);
+        //     &>img {
+        //         width: 100%;
+        //     }
+        //     &.icon-attach {
+        //         left: 2.8rem;
+        //         width: 1.8rem;
+        //         height: 1.8rem;
+        //     }
+        //     &.icon-print{
+        //         left: 4.2rem;
+        //         width: 2.4rem;
+        //         height: 2.4rem;
+        //     }
+        // }
+        span{
+            display: inline-block;
+            line-height: 100%;
+            &::before{
+                content: '';
+                display: inline-block;
+                width: 1.8rem;
+                height: 1.8rem;
+                background-image: url('/assets/images/common/ico_plus.svg');
+                background-repeat: no-repeat;
+                background-size: 1.8rem 1.8rem;
+                margin-right: 0.8rem;
+                vertical-align: bottom;
+            }
+        }
+        &.btn-print{
+            span::before{
+                background-image: url('/assets/images/common/ico_print.svg');
+            }
+        }
+    }    
+}
+/*file download*/
+.btn-download{
+    color:$gray6;
+    @include fontSize('fontS03');
+    display:inline-flex;   
+    i{
+        width:2.4rem;
+        height:2.4rem;
+        flex:0 0 2.4rem;
+        background-image: url('/assets/images/common/ico_file_download_b.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size:2.4rem 2.4rem;
+        & + span{
+            margin-left:1rem;
+            text-decoration:underline;
+        }
+    }
+} 
+.btn-arrow{
+    display:inline-block;
+    min-width:17rem;
+    font-size:1.6rem;
+    line-height:1.6rem;
+    padding-right:2rem;
+    padding-bottom:1.2rem;
+    border-bottom:1px solid $green5;
+    color:$green5;
+    background-image: url('/assets/images/common/ico_chevron_right.svg');
+    background-repeat: no-repeat;
+    background-position: right 0;
+    background-size:1.8rem 1.8rem;
+    &.underline{
+        min-width:initial;
+        padding-bottom:0;
+        padding-right:2.8rem;
+        @include fontSize('fontS02');
+        font-weight:700;
+        border-bottom:none;
+        text-decoration: underline;
+        color:$gray8;
+        background-image: url('/assets/images/common/ico_chevron_right_b.svg');
+        background-position: right center;
+    }
+    &.underline.arrow1{
+        padding-right:2.4rem;
+        background-size:1.6rem 1.6rem;
+        background-image: url('/assets/images/common/ico_site_move_b.svg');
+    }
+    &.download{
+        background-image: url('/assets/images/common/ico_chevron_pdf.svg');
+    }
+}
+// btn wrap
+.btn-wrap{
+    display: flex;
+    justify-content: center;
+}
+// go top
+.btn-top {
+    width: 6rem;
+    height: 6rem;
+    background-image: url(/assets/images/common/btn_top.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-color: #2A2F35;   
+}
+
+// link btn
+.btn-contents-hover{
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: #2A2F35;
+    background-image: url(/assets/images/common/hover_contents_circle.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.btn-link{
+    display: inline-block;
+    width: 5.4rem;
+    height: 5.4rem;
+    border-radius: 50%;
+    background-color: $white;
+    background-image: url(/assets/images/common/btn_link.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    &:hover{
+        background-color: $accent;
+        background-image: url(/assets/images/common/btn_link_hover.svg);
+    }
+}
+
+@include response('tablet') {
+    .btns{
+        &.h-lg{
+            height:5.8rem;
+            @include fontSize('fontS03');
+        }
+        &.h-xlg{
+            height:5.8rem;
+            @include fontSize('fontS03');
+        }
+        &.h-xxlg{
+            height:7rem;
+            @include fontSize('fontS03');
+        }
+    }
+    // list btn
+    .btn-list {
+        @include fontSize('fontS03');
+        height: 5.8rem;
+    }
+    /*file download*/
+    .btn-download{
+        @include fontSize('fontS02');
+        background-size:2rem 2rem;
+        i{
+            width:2rem;
+            height:2rem;
+            flex:0 0 2rem;
+            background-size:2rem 2rem;
+            & + span{
+                margin-left:1rem;
+            }
+        }
+    }
+}
+@include response('mobile') {
+    .m-btnBlock{//mobile block
+        display:block;
+        width:100%;
+    }
+    .btns{
+        &.h-lg{
+            height:5.6rem;
+            @include fontSize('fontS02');
+        }
+        &.h-xlg{
+            height:5.2rem;
+            @include fontSize('fontS02');
+        }
+        &.h-xxlg{
+            height:6rem;
+            @include fontSize('fontS02');
+        }
+    }
+    // top btn
+    .btn-top {
+        width: 4.8rem;
+        height: 4.8rem;
+        background-image: url(/assets/images/common/btn_top.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-color: #2A2F35;
+    }
+    /*file download*/
+    .btn-download{
+        @include fontSize('fontS01');
+        i{
+            width:1.6rem;
+            height:1.6rem;
+            flex:0 0 1.6rem;
+            background-size:1.6rem 1.6rem;
+            & + span{
+                margin-left:0.8rem;
+            }
+        }
+    }
+    // file add
+    .btn-has-icon {
+        .btn-has-icon__parent {
+            .btn-icon{
+                &.icon-attach {
+                    left: 10.8rem;
+                }
+                &.icon-print{
+                    left: 4.2rem;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
+        }    
+    }
+    .btn-arrow{
+        &.underline{
+            padding-right:2.6rem;
+            @include fontSize('fontS01');
+            font-weight:700;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('./pages/en/include/head.html',{
+        pageTitle : 'NAM&NAM | no page',
+		pageMain : false
+	})
+    </head>
+    <body class="eng">
+        <div id="wrap" class="wrap">
+            <div id="navSkip"><a href="#container">go to contents</a></div>
+            @@include('./pages/en/include/header.html',{
+                    gnbLocation : 'business,0,0',
+                    lnbLocation : 'none'
+            })
+            <!-- container -->
+            <div id="container" class="container footerFix"><!-- no scrolling-->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap">
+                        <div class="error-wrap">
+                            <div class="error-inner">
+                                <div class="image"><img src="/assets/images/common/ico_404.svg" alt=""></div>
+                                <div class="title">The page you are looking for cannot be found.</div>
+                                <div class="text">
+                                    The page you are looking for does not exist or an error has occurred.<br>
+                                    Please make sure the address you entered is correct.
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btns w-xlg h-lg">Go to the main</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--// container contents -->
+            </div>
+            <!--// container -->
+            @@include('./pages/en/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        @@include('./pages/en/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

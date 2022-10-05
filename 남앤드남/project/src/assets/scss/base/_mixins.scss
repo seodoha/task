@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+// Ellipsis
+// 적용 시 display 속성 필수(block, inline-block)
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Ellipsis for 2 line
+@mixin ellipsis2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+@mixin transition-hover {
+    transition: all 0.2s ease-in-out;
+}
+
+// Text break all
+@mixin text-break-all {
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+    line-height: 22px;
+}
+
+@mixin hidden {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+/* response */
+@mixin  response($screen-width){
+    @if $screen-width == "pc" {
+        @media (min-width: 1025px) and (max-width:1466px){
+            @content;
+        }
+    }
+    @else if $screen-width == "tablet" {
+        @media (min-width: 768px) and (max-width: 1024px){
+            @content;
+        }
+    } @else if $screen-width == "mobile" {
+        @media (min-width: 320px) and (max-width: 767px){
+            @content;
+        }
+    } 
+}
+
+@mixin fontSize($size) {
+    @if $size == "fontS00" {
+        font-size:1.2rem;
+        line-height:1.8rem;
+    }@else if $size == "fontS01" {
+        font-size:1.4rem;
+        line-height:2.1rem;
+    }@else if $size == "fontS02" {
+        font-size:1.6rem;
+        line-height:2.4rem;
+    }@else if $size == "fontS03" {
+        font-size:1.8rem;
+        line-height:2.7rem;
+    }@else if $size == "fontS04" {
+        font-size:2rem;
+        line-height:3rem;
+    }@else if $size == "fontS05" {
+        font-size:2.4rem;
+        line-height:3.6rem;
+    }@else if $size == "fontS06" {
+        font-size:2.4rem;
+        line-height:3.6rem;
+        font-weight:500;
+    }@else if $size == "fontS07" {
+        font-size:2.8rem;
+        line-height:4.2rem;
+        font-weight:700;
+    }@else if $size == "fontS08" {
+        font-size:3.2rem;
+        line-height:4.8rem;
+        font-weight:700;
+    }@else if $size == "fontS09" {
+        font-size:4.8rem;
+        line-height:6rem;
+        font-weight:700;
+    }@else if $size == "fontS10" {
+        font-size:6rem;
+        line-height:7.5rem;
+        font-weight:700;
+    }
+}

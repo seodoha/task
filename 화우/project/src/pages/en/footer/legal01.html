@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./pages/en/includes/head.html', {
+        metaDescription: 'Footer',
+        pageTitle : 'Hwawoo - Legal notice',
+        cssPath : '../../../assets/en/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="etc-wrap">
+        @@include('./pages/en/includes/header.html')
+
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Legal notice</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">Limited Liability</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="Limited Liability 메뉴로 이동" aria-label="Limited Liability 메뉴로 이동" class="on">Limited Liability</a></li>
+                                        <li><a href="#" title="Privacy Policy 메뉴로 이동" aria-label="Privacy Policy 메뉴로 이동">Privacy Policy</a></li>
+                                        <li><a href="#" title="Disclaimer 메뉴로 이동" aria-label="Disclaimer 메뉴로 이동">Disclaimer</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02">Legal notice</h3>
+                    </div>
+                </div>
+
+                <article class="arti01">
+                    <div class="inner-wrap">
+
+                        <div class="tab-wrap">
+                            <ul class="tab-list">
+                                <li><a href="javascript:;" class="on">Limited Liability</a></li>
+                                <li><a href="javascript:;">Privacy Policy</a></li>
+                                <li><a href="javascript:;">Disclaimer</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="terms-wrap">
+                                    <h4 class="typo-title-01">Limited Liability</h4>
+                                    <p class="terms-txt01">
+                                        Yoon & Yang LLC is established in accordance with the Attorney-at-Law Act.  In the event that a client incurs damages arising from an intentional or negligent act by the attorney-in-charge of a case, the relevant attorney will, together with Yoon & Yang LLC, be jointly liable for damages pursuant to the Attorney-at-Law Act.
+                                    </p>
+                                    <p class="terms-txt01">
+                                        In case where the attorney-in-charge assumes liability for damages, the partner who directed and supervised the attorney-in-charge with regards to the relevant case will likewise assume liability for damages, unless it is verified that he/she has not been negligent in directing and supervising that attorney-in-charge.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        @@include('./pages/en/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/en/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

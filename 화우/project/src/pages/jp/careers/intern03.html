@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    @@include('./pages/jp/includes/head_only_pc.html', {
+        metaDescription: 'careers',
+        pageTitle : 'Hwawoo - careers',
+        cssPath : '../../../assets/jp/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="form-input-wrap">
+        @@include('./pages/jp/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <h3 class="typo-heading-02">국내 인턴 지원</h3>
+                    </div>
+                    <!--end of inner-wrap-->
+                </div>
+                <!--end of page-heading-layout-->
+
+                <form>
+                    <div class="box-contents-wrap inner-wrap narrow">
+                        <article>
+                            <ol class="list-step">
+                                <!--
+                                    완료된 단계에는 complete 클래스 추가,
+                                    진행중인 단계에는 ing 클래스 추가
+                                -->
+                                <li class="complete">
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>01</strong>
+                                        <span>약관동의</span>
+                                    </div>
+                                </li>
+                                <li class="complete">
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>02</strong>
+                                        <span>기본정보</span>
+                                    </div>
+                                </li>
+                                <li class="ing">
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>03</strong>
+                                        <span>상세지원정보</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="bg"></span>
+                                    <div class="box-txt">
+                                        <strong>04</strong>
+                                        <span>서류제출</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </article>
+
+                        <article>
+                            <div class="form-input-layout">
+                                <div class="box-form-tit">
+                                    <h3 class="form-tit">로스쿨생 인턴</h3>
+                                </div>
+                                <dl class="form-dl">
+                                    <dt>
+                                        <h4 class="form-sub-tit">学歷사항</h4>
+                                        <span><i class="important">*</i>필수입력사항</span>
+                                    </dt>
+                                    <dd class="box-contents-wrap">
+                                        <!--고등학교-->
+                                        <div>
+                                            <div class="box-tit">
+                                                <h5 class="form-sub-tit ty02">고등학교</h5>
+                                            </div>
+                                            <ul class="form-input-list">
+                                                <li>
+                                                    <strong class="tit">학교명<i class="important">*</i></strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <div class="box-input-wrap">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="학교명 입력" title="학교명 입력">
+                                                                    <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-radio-wrap ty02">
+                                                                <div class="radio-wrap">
+                                                                    <label for="c1">
+                                                                        <input type="radio" id="c1" name="c1" checked="">
+                                                                        <span class="radio-txt long">고등학교</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio-wrap long">
+                                                                    <label for="c2">
+                                                                        <input type="radio" id="c2" name="c1">
+                                                                        <span class="radio-txt long">검정고시</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">입학/졸업연도</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <select class="select-ty">
+                                                                <option value="">입학연도 선택</option>
+                                                                <option value="">2022</option>
+                                                                <option value="">2021</option>
+                                                            </select>
+                                                            <select class="select-ty">
+                                                                <option value="">졸업연도 선택</option>
+                                                                <option value="">2022</option>
+                                                                <option value="">2021</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!--고등학교(검정고시)-->
+                                        <div>
+                                            <div class="box-tit">
+                                                <h5 class="form-sub-tit ty02">고등학교</h5>
+                                            </div>
+                                            <ul class="form-input-list">
+                                                <li>
+                                                    <strong class="tit">학교명<i class="important">*</i></strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <div class="box-input-wrap">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="학교명 입력" title="학교명 입력" disabled>
+                                                                    <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-radio-wrap ty02">
+                                                                <div class="radio-wrap">
+                                                                    <label for="c1">
+                                                                        <input type="radio" id="c3" name="c2">
+                                                                        <span class="radio-txt long">고등학교</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio-wrap long">
+                                                                    <label for="c2">
+                                                                        <input type="radio" id="c4" name="c2" checked="">
+                                                                        <span class="radio-txt long">검정고시</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">입학/졸업연도</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <select class="select-ty" disabled>
+                                                                <option value="">입학연도 선택</option>
+                                                                <option value="">2022</option>
+                                                                <option value="">2021</option>
+                                                            </select>
+                                                            <select class="select-ty" disabled>
+                                                                <option value="">졸업연도 선택</option>
+                                                                <option value="">2022</option>
+                                                                <option value="">2021</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!--대학교/대학원-->
+                                        <div>
+                                            <div class="box-tit">
+                                                <h5 class="form-sub-tit ty02">대학교/대학원</h5>
+                                                <a href="#" class="btn-circle-ani btn-add"><i></i>ADD</a>
+                                            </div>
+                                            <ul class="form-input-list">
+                                                <li>
+                                                    <strong class="tit">학교명<i class="important">*</i></strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <div class="box-input-wrap">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="학교명 입력" title="학교명 입력">
+                                                                    <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                            <select class="select-ty">
+                                                                <option value="">대학교</option>
+                                                                <option value="">대학원</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">재학기간<i class="important">*</i></strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid ty02">
+                                                            <select class="select-ty">
+                                                                <option value="">년 선택</option>
+                                                                <option value="">2022</option>
+                                                                <option value="">2021</option>
+                                                            </select>
+                                                            <select class="select-ty">
+                                                                <option value="">입학</option>
+                                                                <option value="">편입</option>
+                                                            </select>
+                                                            ~
+                                                            <select class="select-ty">
+                                                                <option value="">년 선택</option>
+                                                                <option value="">1950</option>
+                                                                <option value="">1951</option>
+                                                            </select>
+                                                            <select class="select-ty">
+                                                                <option value="">졸업</option>
+                                                                <option value="">재학</option>
+                                                                <option value="">수료</option>
+                                                                <option value="">휴학</option>
+                                                                <option value="">자퇴</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">전공<i class="important">*</i></strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid ty02">
+                                                            <select class="select-ty">
+                                                                <option value="">전공 선택</option>
+                                                                <option value="">주전공</option>
+                                                                <option value="">심화전공</option>
+                                                                <option value="">부전공</option>
+                                                                <option value="">복수전공</option>
+                                                                <option value="">연계전공</option>
+                                                                <option value="">직접입력</option>
+                                                            </select>
+                                                            <div class="box-input-wrap long">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="학과명 입력">
+                                                                    <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                    <span class="txt">학과</span>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn wAuto">추가</button>
+                                                        </div>
+                                                        <div class="box-grid ty02">
+                                                            <select class="select-ty">
+                                                                <option value="">전공 선택</option>
+                                                                <option value="">주전공</option>
+                                                                <option value="">심화전공</option>
+                                                                <option value="">부전공</option>
+                                                                <option value="">복수전공</option>
+                                                                <option value="">연계전공</option>
+                                                                <option value="">직접입력</option>
+                                                            </select>
+                                                            <div class="box-input-wrap long">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="학과명 입력">
+                                                                    <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                    <span class="txt">학과</span>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn wAuto">삭제</button>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">졸업평점</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid ty02">
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="0.0" title="점수 입력">
+                                                                </div>
+                                                            </div>
+                                                            /
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="0.0" title="점수 입력">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <!--end of form-input-list-->
+                                        </div>
+
+                                        <!--대학교/대학원 추가-->
+                                        <div>
+                                            <div class="box-tit">
+                                                <h5 class="form-sub-tit ty02">대학교/대학원</h5>
+                                                <a href="#" class="btn-circle-ani btn-minus"><i></i>DEL</a>
+                                            </div>
+                                            <ul class="form-input-list">
+                                                <li>
+                                                    <strong class="tit">학교명<i class="important">*</i></strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <div class="box-input-wrap">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="학교명 입력" title="학교명 입력">
+                                                                    <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                            <select class="select-ty">
+                                                                <option value="">대학교</option>
+                                                                <option value="">대학원</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">재학기간<i class="important">*</i></strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid ty02">
+                                                            <select class="select-ty">
+                                                                <option value="">년 선택</option>
+                                                                <option value="">2022</option>
+                                                                <option value="">2021</option>
+                                                            </select>
+                                                            <select class="select-ty">
+                                                                <option value="">입학</option>
+                                                                <option value="">편입</option>
+                                                            </select>
+                                                            ~
+                                                            <select class="select-ty">
+                                                                <option value="">년 선택</option>
+                                                                <option value="">1950</option>
+                                                                <option value="">1951</option>
+                                                            </select>
+                                                            <select class="select-ty">
+                                                                <option value="">졸업</option>
+                                                                <option value="">재학</option>
+                                                                <option value="">수료</option>
+                                                                <option value="">휴학</option>
+                                                                <option value="">자퇴</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">전공<i class="important">*</i></strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid ty02">
+                                                            <select class="select-ty">
+                                                                <option value="">전공 선택</option>
+                                                                <option value="">주전공</option>
+                                                                <option value="">심화전공</option>
+                                                                <option value="">부전공</option>
+                                                                <option value="">복수전공</option>
+                                                                <option value="">연계전공</option>
+                                                                <option value="">직접입력</option>
+                                                            </select>
+                                                            <div class="box-input-wrap long">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="학과명 입력">
+                                                                    <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                    <span class="txt">학과</span>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn wAuto">추가</button>
+                                                        </div>
+                                                        <div class="box-grid ty02">
+                                                            <select class="select-ty">
+                                                                <option value="">전공 선택</option>
+                                                                <option value="">주전공</option>
+                                                                <option value="">심화전공</option>
+                                                                <option value="">부전공</option>
+                                                                <option value="">복수전공</option>
+                                                                <option value="">연계전공</option>
+                                                                <option value="">직접입력</option>
+                                                            </select>
+                                                            <div class="box-input-wrap long">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="학과명 입력">
+                                                                    <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                    <span class="txt">학과</span>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn wAuto">삭제</button>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">졸업평점</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid ty02">
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="0.0" title="점수 입력">
+                                                                </div>
+                                                            </div>
+                                                            /
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="0.0" title="점수 입력">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <!--end of form-input-list-->
+                                        </div>
+
+                                        <!-- 로스쿨 -->
+                                        <div>
+                                            <div class="box-tit">
+                                                <h5 class="form-sub-tit ty02">로스쿨</h5>
+                                            </div>
+                                            <ul class="form-input-list">
+                                                <li>
+                                                    <strong class="tit">로스쿨명<i class="important">*</i></strong>
+                                                    <div class="cnts">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input width-txt">
+                                                                <input type="text" placeholder="로스쿨명" title="로스쿨명 입력">
+                                                                <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                <span class="txt">로스쿨</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">변호사시험</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input width-txt">
+                                                                <input type="text" title="회 입력">
+                                                                <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                <span class="txt">회</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">기수<i class="important">*</i></strong>
+                                                    <div class="cnts">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input width-txt">
+                                                                <input type="text" placeholder="기수 입력" title="기수 입력">
+                                                                <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                <span class="txt">기</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">지도교수<i class="important">*</i></strong>
+                                                    <div class="cnts">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input">
+                                                                <input type="text" placeholder="지도교수 입력" title="지도교수 입력">
+                                                                <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">학년</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input width-txt">
+                                                                <input type="text" placeholder="학년 입력" title="학년 입력">
+                                                                <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                <span class="txt">학년</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">학번</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input width-txt">
+                                                                <input type="text" placeholder="학번 입력" title="학번 입력">
+                                                                <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">
+                                                        성적 및 석차
+                                                        <span>(4.3만점 기준)</span>
+                                                    </strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid ty02">
+                                                            <em>1학기<i class="important">*</i></em>
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" placeholder="0.0" title="점수 입력">
+                                                                    <span class="txt">점</span>
+                                                                </div>
+                                                            </div>
+                                                            /
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="등수 입력">
+                                                                    <span class="txt">등</span>
+                                                                </div>
+                                                            </div>
+                                                            <em>2학기</em>
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" placeholder="0.0" title="점수 입력">
+                                                                    <span class="txt">점</span>
+                                                                </div>
+                                                            </div>
+                                                            /
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="등수 입력">
+                                                                    <span class="txt">등</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-grid ty02">
+                                                            <em>3학기</em>
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" placeholder="0.0" title="점수 입력">
+                                                                    <span class="txt">점</span>
+                                                                </div>
+                                                            </div>
+                                                            /
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="등수 입력">
+                                                                    <span class="txt">등</span>
+                                                                </div>
+                                                            </div>
+                                                            <em>4학기</em>
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" placeholder="0.0" title="점수 입력">
+                                                                    <span class="txt">점</span>
+                                                                </div>
+                                                            </div>
+                                                            /
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="등수 입력">
+                                                                    <span class="txt">등</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-grid ty02">
+                                                            <em>5학기</em>
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" placeholder="0.0" title="점수 입력">
+                                                                    <span class="txt">점</span>
+                                                                </div>
+                                                            </div>
+                                                            /
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="등수 입력">
+                                                                    <span class="txt">등</span>
+                                                                </div>
+                                                            </div>
+                                                            <em>6학기</em>
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" placeholder="0.0" title="점수 입력">
+                                                                    <span class="txt">점</span>
+                                                                </div>
+                                                            </div>
+                                                            /
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="등수 입력">
+                                                                    <span class="txt">등</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">최종 통합 성적</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid ty02">
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="점수 입력">
+                                                                    <span class="txt">점</span>
+                                                                </div>
+                                                            </div>
+                                                            <span><i class="important">*</i>(</span>
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="등수 입력">
+                                                                    <span class="txt">등</span>
+                                                                </div>
+                                                            </div>
+                                                            /
+                                                            <div class="box-input-wrap small">
+                                                                <div class="box-input width-txt">
+                                                                    <input type="text" title="명수 입력">
+                                                                    <span class="txt">명</span>
+                                                                </div>
+                                                            </div>
+                                                            )
+                                                            <span class="sup-txt">최근학기까지의 평균평점</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">휴학 여부</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <div class="box-check-wrap">
+                                                                <div class="check-wrap">
+                                                                    <label for="state">
+                                                                        <input type="checkbox" id="state" checked>
+                                                                        <i class="icon-check"></i>
+                                                                        <span class="chk-txt">휴학</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-grid">
+                                                            <div class="box-input-wrap full">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="휴학 사유 기입" title="휴학 사유 기입">
+                                                                    <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <!--end of form-dl-->
+                            </div>
+                            <!--end of form-input-layout-->
+                        </article>
+
+                        <article>
+                            <div class="form-input-layout">
+                                <dl class="form-dl">
+                                    <dt>
+                                        <h4 class="form-sub-tit">経歴사항</h4>
+                                    </dt>
+                                    <dd class="box-contents-wrap">
+                                        <!--経歴사항-->
+                                        <div>
+                                            <div class="box-tit">
+                                                <h5 class="form-sub-tit ty02">経歴사항</h5>
+                                                <a href="#" class="btn-circle-ani btn-add"><i></i>ADD</a>
+                                            </div>
+                                            <ul class="form-input-list">
+                                                <li>
+                                                    <strong class="tit">기관구분</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-radio-wrap">
+                                                            <div class="radio-wrap">
+                                                                <label>
+                                                                    <input type="radio" name="organ" checked="">
+                                                                    <span class="radio-txt">법조기관</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio-wrap">
+                                                                <label>
+                                                                    <input type="radio" name="organ">
+                                                                    <span class="radio-txt">기타기관</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">기관명</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input">
+                                                                <input type="text" placeholder="기관명 입력" title="기관명 입력">
+                                                                <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">근무기간</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid ty02">
+                                                            <select class="select-ty">
+                                                                <option value="">년 선택</option>
+                                                                <option value="">2022</option>
+                                                                <option value="">2021</option>
+                                                            </select>
+                                                            <select class="select-ty">
+                                                                <option value="">월 선택</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                                <option value="">6</option>
+                                                                <option value="">7</option>
+                                                                <option value="">8</option>
+                                                                <option value="">9</option>
+                                                                <option value="">10</option>
+                                                                <option value="">11</option>
+                                                                <option value="">12</option>
+                                                            </select>
+                                                            ~
+                                                            <select class="select-ty">
+                                                                <option value="">년 선택</option>
+                                                                <option value="">1950</option>
+                                                                <option value="">1951</option>
+                                                            </select>
+                                                            <select class="select-ty">
+                                                                <option value="">월 선택</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                                <option value="">6</option>
+                                                                <option value="">7</option>
+                                                                <option value="">8</option>
+                                                                <option value="">9</option>
+                                                                <option value="">10</option>
+                                                                <option value="">11</option>
+                                                                <option value="">12</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">부서 및 직위</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-input-wrap full">
+                                                            <div class="box-input">
+                                                                <input type="text" placeholder="내용 입력" title="내용 입력">
+                                                                <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!--受賞経歴-->
+                                        <div>
+                                            <div class="box-tit">
+                                                <h5 class="form-sub-tit ty02">受賞経歴</h5>
+                                                <a href="#" class="btn-circle-ani btn-add"><i></i>ADD</a>
+                                            </div>
+                                            <ul class="form-input-list">
+                                                <li>
+                                                    <strong class="tit">대회명</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <div class="box-input-wrap">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="대회명 입력"
+                                                                        title="대회명 입력">
+                                                                    <button type="button"
+                                                                        class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                            <select class="select-ty">
+                                                                <option value="">受賞연도 선택</option>
+                                                                <option value="">2022</option>
+                                                                <option value="">2021</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">기관명</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <div class="box-input-wrap">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="受賞처 입력"
+                                                                        title="受賞처 입력">
+                                                                    <button type="button"
+                                                                        class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-input-wrap">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="受賞내역 입력"
+                                                                        title="受賞내역 입력">
+                                                                    <button type="button"
+                                                                        class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!--受賞経歴 추가-->
+                                        <div>
+                                            <div class="box-tit">
+                                                <h5 class="form-sub-tit ty02">受賞経歴</h5>
+                                                <a href="#" class="btn-circle-ani btn-minus"><i></i>DEL</a>
+                                            </div>
+                                            <ul class="form-input-list">
+                                                <li>
+                                                    <strong class="tit">대회명</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <div class="box-input-wrap">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="대회명 입력"
+                                                                        title="대회명 입력">
+                                                                    <button type="button"
+                                                                        class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                            <select class="select-ty">
+                                                                <option value="">受賞연도 선택</option>
+                                                                <option value="">2022</option>
+                                                                <option value="">2021</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">기관명</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <div class="box-input-wrap">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="受賞처 입력"
+                                                                        title="受賞처 입력">
+                                                                    <button type="button"
+                                                                        class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-input-wrap">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="受賞내역 입력"
+                                                                        title="受賞내역 입력">
+                                                                    <button type="button"
+                                                                        class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="box-guide ty02">
+                                            <ul class="dot-list">
+                                                <li class="important">経歴사항(인턴, 실무수습, 해외연수) 및 受賞経歴은 가장 오래된 사항부터 순서대로 입력해주시기 바랍니다.</li>
+                                                <li>법조기관 経歴 : 로펌, 법원, 검찰, 헌법재판소에서의 근무経歴, 인턴, 국·내외 연수</li>
+                                                <li>기타기관 経歴 : 위 법조기관을 제외한 모든 기관에서의 근무経歴, 인턴, 국·내외 연수, 교환학생</li>
+                                                <li>受賞経歴 : 장학금 수혜 및 성적우受賞 受賞내역 제외</li>
+                                            </ul>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </article>
+
+                        <article>
+                            <div class="form-input-layout">
+                                <dl class="form-dl">
+                                    <dt>
+                                        <h4 class="form-sub-tit">기타사항</h4>
+                                    </dt>
+                                    <dd class="box-contents-wrap">
+                                        <!--기타사항-->
+                                        <div>
+                                            <div class="box-tit">
+                                                <h5 class="form-sub-tit ty02">외국어 <span>(기간 만료시에도 기재)</span></h5>
+                                                <a href="#" class="btn-circle-ani btn-add"><i></i>ADD</a>
+                                            </div>
+                                            <ul class="form-input-list">
+                                                <li>
+                                                    <strong class="tit">공인시험</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <div class="box-input-wrap medium02">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="ex) 토익, JLPT" title="자격증 입력">
+                                                                    <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-input-wrap medium02">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="ex) 800점, 1급" title="점수 입력">
+                                                                    <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">취득 날짜</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid ty02">
+                                                            <select class="select-ty">
+                                                                <option value="">년 선택</option>
+                                                                <option value="">2022</option>
+                                                                <option value="">2021</option>
+                                                            </select>
+                                                            <select class="select-ty">
+                                                                <option value="">월 선택</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                                <option value="">6</option>
+                                                                <option value="">7</option>
+                                                                <option value="">8</option>
+                                                                <option value="">9</option>
+                                                                <option value="">10</option>
+                                                                <option value="">11</option>
+                                                                <option value="">12</option>
+                                                            </select>
+                                                            <select class="select-ty">
+                                                                <option value="">일 선택</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                                <option value="">6</option>
+                                                                <option value="">7</option>
+                                                                <option value="">8</option>
+                                                                <option value="">9</option>
+                                                                <option value="">10</option>
+                                                                <option value="">11</option>
+                                                                <option value="">12</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">言語종류</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input">
+                                                                <input type="text" placeholder="ex) 영어, 일어" title="言語종류 입력">
+                                                                <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">구사능력</strong>
+                                                    <div class="cnts">
+                                                        <select class="select-ty">
+                                                            <option value="">상</option>
+                                                            <option value="">중</option>
+                                                            <option value="">하</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!--자격증-->
+                                        <div>
+                                            <div class="box-tit">
+                                                <h5 class="form-sub-tit ty02">자격증</h5>
+                                                <a href="#" class="btn-circle-ani btn-add"><i></i>ADD</a>
+                                            </div>
+                                            <ul class="form-input-list">
+                                                <li>
+                                                    <strong class="tit">자격사항</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input">
+                                                                <input type="text" placeholder="종류 입력" title="종류 입력">
+                                                                <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">발행기관</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-input-wrap">
+                                                            <div class="box-input">
+                                                                <input type="text" placeholder="기관명 입력" title="기관명 입력">
+                                                                <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">취득연도</strong>
+                                                    <div class="cnts">
+                                                        <select class="select-ty">
+                                                            <option value="">년 선택</option>
+                                                            <option value="">2022</option>
+                                                            <option value="">2021</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!--기타-->
+                                        <div>
+                                            <div class="box-tit">
+                                                <h5 class="form-sub-tit ty02">기타</h5>
+                                            </div>
+                                            <ul class="form-input-list">
+                                                <li>
+                                                    <strong class="tit">희망 業務分野</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-radio-wrap">
+                                                            <div class="radio-wrap">
+                                                                <label>
+                                                                    <input type="radio" name="category" checked="">
+                                                                    <span class="radio-txt">송무</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio-wrap">
+                                                                <label>
+                                                                    <input type="radio" name="category">
+                                                                    <span class="radio-txt">자문</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio-wrap">
+                                                                <label>
+                                                                    <input type="radio" name="category">
+                                                                    <span class="radio-txt">상관없음</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">관심 전문분야</strong>
+                                                    <div class="cnts">
+                                                        <div class="box-grid">
+                                                            <em>1순위<i class="important">*</i></em>
+                                                            <div class="box-input-wrap medium">
+                                                                <div class="box-input">
+                                                                    <input type="text" placeholder="ex) M&A, 금융, 국제거래" title="1순위 입력">
+                                                                </div>
+                                                            </div>
+                                                            <em>2순위</em>
+                                                            <div class="box-input-wrap medium">
+                                                                <div class="box-input">
+                                                                    <input type="text" title="2순위 입력">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-grid">
+                                                            <em>3순위</em>
+                                                            <div class="box-input-wrap medium">
+                                                                <div class="box-input">
+                                                                    <input type="text" title="3순위 입력">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">
+                                                        화우에<br>지원하는 이유<i class="important">*</i>
+                                                    </strong>
+                                                    <div class="cnts">
+                                                        <textarea class="txtarea-ty" placeholder="지원이유 작성"></textarea>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">
+                                                        화우 내 지인
+                                                    </strong>
+                                                    <div class="cnts">
+                                                        <textarea class="txtarea-ty"></textarea>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">
+                                                        기타 특이사항
+                                                    </strong>
+                                                    <div class="cnts">
+                                                        <textarea class="txtarea-ty"
+                                                        placeholder="ex) 학부·대학원·로스쿨 조기졸업 및 최우등 졸업, 국가고시 경험, 학회활동, 봉사활동 사항 등 기재"></textarea>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </article>
+
+                        <div class="box-btn">
+                            <a href="#" class="btn">이전</a>
+                            <a href="#" class="btn btn-yellow">다음</a>
+                        </div>
+                    </div>
+                </form>
+
+            </section>
+        </main>
+
+        @@include('./pages/jp/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/jp/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

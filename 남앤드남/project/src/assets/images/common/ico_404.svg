@@ -1,0 +1,19 @@
+<svg id="ico_404" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="그룹_2085" data-name="그룹 2085" transform="translate(-810.292 -256)">
+        <g id="그룹_2078" data-name="그룹 2078" transform="translate(464.755 215)">
+            <g id="그룹_2076" data-name="그룹 2076" transform="rotate(45 157.845 634.953)">
+                <g id="그룹_2077" data-name="그룹 2077" transform="rotate(-45 101.89 35.529)">
+                    <path id="패스_7239" data-name="패스 7239" class="cls-2" d="M110 0 0 110"/>
+                    <path id="패스_7240" data-name="패스 7240" class="cls-2" d="m0 0 110 110"/>
+                </g>
+            </g>
+            <path id="사각형_2068" data-name="사각형 2068" class="cls-2" transform="translate(405.245 101)" d="M0 0h180v180H0z"/>
+        </g>
+        <path id="패스_7271" data-name="패스 7271" class="cls-2" d="M-945.708 6306h-264" transform="translate(2038 -5900)"/>
+    </g>
+</svg>

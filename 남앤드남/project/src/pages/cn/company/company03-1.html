@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        @@include('./pages/cn/include/head.html',{
+        pageTitle : 'NAM&NAM | 公司简介 | 合作伙伴',
+		pageMain : false
+	})
+    </head>
+    <body class="chn">
+        <div id="wrap" class="wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/cn/include/header.html',{
+                    gnbLocation : 'company,2,0',
+                    lnbLocation : 'company,2,0'
+            })
+            <!-- container -->
+            <div id="container" class="container">
+                <!-- container header -->
+                <div class="container-header company">                            
+                    <div class="container-header__title"><div><span>合作伙伴</span></div></div>
+                    <div class="container-header__text">
+                        NAM & NAM国际股份有限公司通过与关联公司的合作，基于丰富的经验和战略，审查综合方法和各种响应选项，为客户成功开辟更广阔的道路。
+                    </div>
+                </div>
+                <div class="container-subMain-fixImg company">
+                    <img src="/assets/images/common/sub_top_img_4_3.jpg" alt="">
+                </div>
+                <!--// container header -->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap company">
+                        <ul class="tab-list">
+                            <!-- 활성화 시 on 클래스 추가 -->
+                            <!-- 20220127 | 모회사 텍스트 수정 -->
+                            <li class="tab-list__item"><a href="javascript:void(0)">母公司</a></li>
+                            <li class="tab-list__item"><a href="javascript:void(0)" class="on">子公司</a></li>
+                        </ul>
+                
+                        <!-- layout wrap -->
+                        <div class="layout-wrap type1 company">
+                            <div class="layout-wrap-header type-d1">
+                                <div class="layout-wrap-header__title">NAM & NAM Europe</div>
+                                <div class="btn-wrap">
+                                    <a href="javascript:void(0)" title="主页链接" class="btn-arrow underline arrow1">
+                                        <span>主页链接</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <div class="layout-wrap-conts__text">
+                                    <div>
+                                        NAM & NAM Europe是NAM&NAM国际股份有限公司为提供先进的欧洲环境管制应对服务，在欧洲当地设立的海外法人。特别是在当地快速获取以REACH等为中心的新规定内容及相关信息方面，发挥着为国内产业界提供应对方向和具体战略的核心作用。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// layout wrap -->                                                
+                    </div>
+                </div>
+
+                <!--// container contents -->
+            </div>
+            <!--// container -->
+            @@include('./pages/cn/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        @@include('./pages/cn/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

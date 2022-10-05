@@ -1,0 +1,100 @@
+.slider-wrap {
+    position: relative;
+    .progress-bar {
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 2px;
+        margin-top: 5.5rem;
+        background-color: #ddd;
+        &.mo {
+            display: none;
+        }
+        .ing-bar {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate3d(0, -50%, 0);
+            width: 0;
+            height: 2px;
+            background-color: $black;
+            transition: width 0.3s;
+            .arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                right: -3.2rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 3.2rem;
+                height: 3.2rem;
+                border-radius: 50%;
+                background-color: $black;
+                &::after {
+                    content: "";
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    @include backgroundImg("../images/icon/ico-arrow-right-white.svg", "center", "contain");
+                }
+            }
+        }
+    }
+}
+.swiper-notification {
+    display: none;
+}
+.swiper-drag-scroll {
+    overflow: hidden;
+    &.active {
+        padding: 5.5rem 0 1.6rem;
+    }
+    .swiper-scrollbar {
+        border-radius: 0;
+        background: #ddd;
+        .swiper-scrollbar-drag {
+            height: 2px;
+            background: #222;
+            border-radius: 0;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                background: #222;
+                width: 2000px;
+                margin-left: -2000px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 3.2rem;
+                height: 3.2rem;
+                border-radius: 50%;
+                @include backgroundImg("../images/icon/ico-drag.svg", "center", "contain");
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@include response("mobile") {
+    .slider-wrap {
+        .progress-bar {
+            &.mo {
+                display: block;
+            }
+            margin-top: 4.5rem;
+        }
+    }
+    .swiper-drag-scroll {
+        &.active {
+            padding: 4.5rem 0 1.6rem;
+        }
+    }
+}

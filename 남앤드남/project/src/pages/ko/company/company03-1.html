@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/ko/include/head.html',{
+        pageTitle : '남앤드남 | 회사소개 | 관계사',
+		pageMain : false
+	})
+    </head>
+    <body>
+        <div id="wrap" class="wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/ko/include/header.html',{
+                    gnbLocation : 'company,2,0',
+                    lnbLocation : 'company,2,0'
+            })
+            <!-- container -->
+            <div id="container" class="container">
+                <!-- container header -->
+                <div class="container-header company">                            
+                    <div class="container-header__title"><div><span>관계사</span></div></div>
+                    <div class="container-header__text">
+                        <!-- 20220121 | 텍스트수정 -->
+                        남앤드남인터내셔널은 관계사들의 협력을 통한 풍부한 경험과 전략을 기반으로, 포괄적인 접근 방식과 다양한 대응 옵션을 검토하여 고객의 성공을 위한 보다 넓은 길을 열어 드립니다.
+                    </div>
+                </div>
+                <div class="container-subMain-fixImg company">
+                    <img src="/assets/images/common/sub_top_img_4_3.jpg" alt="">
+                </div>
+                <!--// container header -->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap company">
+                        <ul class="tab-list">
+                            <!-- 활성화 시 on 클래스 추가 -->
+                            <li class="tab-list__item"><a href="javascript:void(0)">모회사</a></li>
+                            <li class="tab-list__item"><a href="javascript:void(0)" class="on">자회사</a></li>
+                        </ul>
+                
+                        <!-- layout wrap -->
+                        <div class="layout-wrap type1 company">
+                            <div class="layout-wrap-header type-d1">
+                                <div class="layout-wrap-header__title">NAM & NAM Europe</div>
+                                <div class="btn-wrap">
+                                    <a href="javascript:void(0)" title="홈페이지 바로가기" class="btn-arrow underline arrow1">
+                                        <span>홈페이지 바로가기</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <div class="layout-wrap-conts__text">
+                                    <div>
+                                        NAM & NAM Europe은 남앤드남인터내셔널이 선진적인 유럽 환경규제 대응서비스를 제공하기 위해 유럽 현지에 설립한 해외법인입니다. 특히
+                                        REACH 등을 중심으로 한 새로운 규제 내용 및 관련 정보를 현지에서 빠르게 입수하여 국내 산업계의 대응 방향 및 구체적인 전략을 제시하는
+                                        핵심적인 역할을 수행하고 있습니다. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// layout wrap -->                                                
+                    </div>
+                </div>
+
+                <!--// container contents -->
+            </div>
+            <!--// container -->
+            @@include('./pages/ko/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        @@include('./pages/ko/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

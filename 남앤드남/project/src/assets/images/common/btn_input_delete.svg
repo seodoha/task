@@ -1,0 +1,11 @@
+<svg id="btn_input_delete" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#999;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="x" transform="translate(-1.08 -1.08)">
+        <path id="선_85" data-name="선 85" class="cls-2" transform="translate(6.08 6.08)" d="M14 0 0 14"/>
+        <path id="선_86" data-name="선 86" class="cls-2" transform="translate(6.08 6.08)" d="m0 0 14 14"/>
+    </g>
+</svg>

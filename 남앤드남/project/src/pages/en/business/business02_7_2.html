@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('./pages/en/include/head.html',{
+        pageTitle : 'NAM&NAM | K-REACH | Preparation of chemical registration data',
+		pageMain : false
+	})
+    </head>
+    <body class="eng">
+        <div id="wrap" class="wrap business-wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/en/include/header.html',{
+                    gnbLocation : 'business,1,0',
+                    lnbLocation : 'business,1,0,6'
+            })
+            <!-- container -->
+            <div id="container" class="container">
+                <!-- container header -->
+                <div class="container-header business">                            
+                    <div class="container-header__title pc"><div><span>Preparation of chemical</span></div><div><span>registration data</span></div></div>
+                    <div class="container-header__title mobile"><div><span>Preparation</span></div><div><span>of chemical</span></div><div><span>registration</span></div><div><span>data</span></div></div>
+                    <div class="container-header__text empty"></div>
+                </div>
+                <!--// container header -->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap">
+                        <!-- layout wrap -->
+                        <div class="layout-wrap layout-imgMap">
+                            <div class="layout-wrap-header type-d col-2">
+                                <div class="tab-listWrap">
+                                    <ul class="tab-list">
+                                        <!-- 활성화 시 on 클래스 추가 -->
+                                        <li class="tab-list__item"><a href="javascript:void(0)">Data Gap Analysis</a></li>
+                                        <li class="tab-list__item"><a href="javascript:void(0)">Data Gap Filling</a></li>
+                                        <li class="tab-list__item"><a href="javascript:void(0)" class="on">Preparation of Chemical Safety Report (CSR)</a></li>
+                                    </ul>
+                                </div>
+                                <button class="btns icon">
+                                    <i class="i-print"></i><em>Print</em>
+                                </button>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <div class="imgMap-wrap pc">
+                                    <div class="imgMap-imgwrap">
+                                        <img src="/assets/images/contents/en/ENG_flow_chart_2_7_3.svg" title="flow chart">
+                                    </div>
+                                    <a href="javascript:void(0)" onclick="uiCommon.popup.open('.popup1')" class="imgMap-linkItems item1-24"></a>
+                                    <a href="javascript:void(0)" onclick="uiCommon.popup.open('.popup2')" class="imgMap-linkItems item1-25"></a>
+                                </div>    
+                                <div class="imgMap-wrap mobile">
+                                    <div class="tit-text">Please check the website for details.</div>
+                                    <div class="imgMap-imgwrap">
+                                        <img src="/assets/images/contents/en/ENG_flow_chart_2_7_3.svg" title="flow chart">
+                                    </div>
+                                    <div class="imgMap-dimmed">
+                                        <a href="/assets/images/contents/en/ENG_flow_chart_2_7_3.svg" title="flow chart">
+                                            After touching it, up, down, left, <br>and right. You can zoom in.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// layout wrap -->
+                        <div class="btn-wrap business-only-mobile">
+                            <button class="btns icon">
+                                <i class="i-file"></i><em>Download pdf</em>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--// container contents -->
+                <!-- call center -->
+                <div class="call-center">
+                    <div class="call-center-wrap">
+                        <div>
+                            <div class="call-center__header">
+                                <div class="title">Do you have further questions?</div>
+                                <div class="text">
+                                    Please send us a quote request or inquiry. A person in charge of each department will help.
+                                </div>                                
+                            </div>
+                            <div class="call-center__header">
+                                <div class="sub-title">K-REACH</div>
+                                <div class="title type1">02-6714-1091</div>
+                                <div class="text">
+                                    <span>K-REACH</span>
+                                    <span>Weekdays 09:00 ~18:00 <br class="mo-view">(not available on weekend/holidays)</span>
+                                </div>                                
+                            </div>      
+                        </div>
+                        <div class="call-center-link">
+                            <div class="title">Consultation/Inquiry </div>
+                            <div class="link-area">
+                                <a href="javascript:void(0)" class="btn-arrow"><span>FAQ</span></a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <!--// call center -->
+            </div>
+            <!--// container -->
+            @@include('./pages/en/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        <!-- popup1 -->
+        <div class="popup popup1"><!-- popup name 추가 ex)popup1 -->
+            <div class="popup__wrap popup__wrap-type1">
+                <div class="popup__title">Check basic information</div>
+                <div class="popup__conts">
+                    <ul class="list-dot list-dot--none">
+                        <li class="list-dot__items">1. Identification information of chemicals</li>
+                        <li class="list-dot__items">2. Manufactured and confirmed use</li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btns popup__close" onclick="uiCommon.popup.close('.popup1')">Check</button>
+                </div>
+            </div>
+        </div>
+        <!--// popup1 -->
+        <!-- popup2 -->
+        <div class="popup popup2"><!-- popup name 추가 ex)popup1 -->
+            <div class="popup__wrap popup__wrap-type1">
+                <div class="popup__title">Exposure assessment</div>
+                <div class="popup__conts">
+                    <ul class="list-dot list-dot--none">
+                        <li class="list-dot__items">1. Investigation of chemical life stages</li>
+                        <li class="list-dot__items">2. Preparation of exposure scenario</li>
+                        <li class="list-dot__items">3. Collection of exposure information</li>
+                        <li class="list-dot__items">4. Exposure assessment / Safety check</li>
+                        <li class="list-dot__items">5. Check the safety level of each member company</li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btns popup__close" onclick="uiCommon.popup.close('.popup2')">Check</button>
+                </div>
+            </div>
+        </div>
+        <!--// popup2 -->
+        @@include('./pages/en/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

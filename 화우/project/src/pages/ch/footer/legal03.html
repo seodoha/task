@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zn">
+
+<head>
+    @@include('./pages/ch/includes/head.html', {
+        metaDescription: 'Footer',
+        pageTitle : 'Hwawoo - 隐私政策',
+        cssPath : '../../../assets/ch/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="etc-wrap">
+        @@include('./pages/ch/includes/header.html')
+
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">隐私政策</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">免责声明</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="有限责任 메뉴로 이동" aria-label="有限责任 메뉴로 이동">有限责任</a></li>
+                                        <li><a href="#" title="隐私政策 메뉴로 이동" aria-label="隐私政策 메뉴로 이동">隐私政策</a></li>
+                                        <li><a href="#" title="免责声明 메뉴로 이동" aria-label="免责声明 메뉴로 이동" class="on">免责声明</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02">免责声明</h3>
+                    </div>
+                </div>
+
+                <article class="arti01">
+                    <div class="inner-wrap">
+
+                        <div class="tab-wrap">
+                            <ul class="tab-list">
+                                <li><a href="javascript:;">有限责任</a></li>
+                                <li><a href="javascript:;">隐私政策</a></li>
+                                <li><a href="javascript:;" class="on">免责声明</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="terms-wrap">
+                                    <h4 class="typo-title-01">免责声明</h4>
+                                    <p class="typo-title-02">
+                                        本网站旨在提供包括法人简介在内的一般信息, 而非用于提供法律咨询或宣传。
+                                    </p>
+                                    <p class="terms-txt01">
+                                        即使您因从本网站获得的信息而遭受到直接或间接损害, 法务法人(有）和友也不会承担任何法律责任。<br class="pc">
+                                        如果您对本网站上发布的信息有任何疑问或采取任何措施, 请您首先向我法人实体寻求法律意见。                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        @@include('./pages/ch/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/ch/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zn">
+@@include('../src/pages/ch/includes/guide/head.html', {title: '테이블 가이드 - Hwawoo'});
+
+<body>
+    <div id="wsg-wrap" class="wsg">
+        <header class="wsg-header">
+            <h1><a href="javascript:void(0);"><img src="../../../status/assets/ci.svg" alt=""></a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../../../status/iaList_ko.html">국문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_en.html">영문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_ch.html">중문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_jp.html">일문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_gr.html">독문 IA 목록</a></li>
+                    <li class=""><a href="../layouts/layout.html">레이아웃</a></li>
+                    <li class="on"><a href="../components/components.html">컴포넌트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <ul class="guideSubmenu">
+            <li><a href="./wsg.html">WSG</a></li>
+            <li><a href="./button.html">버튼</a></li>
+            <li><a href="./form.html">폼요소</a></li>
+            <li><a href="./layerpopup.html">레이어팝업</a></li>
+            <li><a href="./tab.html">탭</a></li>
+            <li><a href="./accordion.html">아코디언</a></li>
+            <li><a href="./slider.html">슬라이더</a></li>
+            <!-- <li><a href="./board.html">게시판</a></li>
+            <li><a href="./table.html" class="guideOn">테이블</a></li> -->
+        </ul>
+
+        <div class="guideContainer">
+
+            <section class="sample">
+                <h2 class="sampleTitle">Default Table (table.type-1)</h2>
+                <div class="sampleContent">
+                    <div class="container">
+                        <div class="contents">
+                            <div class="box-table type-1">
+                                <div class="icon-ellipse-mobile-swipe mobile"><span>좌우로 스와이프</span></div>
+                                <div class="table-header">
+                                    <h4 class="title-06">최근 3년</h4>
+                                </div>
+                                <span class="unit">*단위 : 백만원</span>
+                                <table>
+                                    <caption class="hidden">자본금 및 발행주식 현황</caption>
+                                    <colgroup>
+                                        <col style="width: 20rem;">
+                                        <col style="width: 36rem;">
+                                        <col style="width: 36rem;">
+                                        <col style="width: 36rem;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                구분
+                                            </th>
+                                            <th scope="col">
+                                                <span>2021년</span>
+                                                <br>
+                                                <span>(K-IFRS)</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span>2020년</span>
+                                                <br>
+                                                <span>(K-IFRS)</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span>2019년</span>
+                                                <br>
+                                                <span>(K-IFRS)</span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">유동자산</th>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">비유동자산</th>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">자산총계</th>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">유동부채</th>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">비유동부재</th>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">부채총계</th>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">자본금</th>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">자본총계</th>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                            <td>1,358,137</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="helptext">
+                                    자세한 각 분기별 대차대조표는 공시정보의 반기/분기 보고서 내용을 참조하시길 바랍니다.<br>
+                                    금융감독원 <strong>전자공시시스템(http://dart.fss.or.kr)</strong> 당시 공시 내역 참조
+                                </p>
+                            </div>
+                            <div class="description">
+                                <h3>GUIDE</h3>
+                                <strong>
+                                    &lt;tbody&gt;, &lt;td&gt; 의 Helper Class 활용
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TYPE 1 -->
+            <section class="sample">
+                <h2 class="sampleTitle">Excel Library Table 1</h2>
+                <div class="sampleContent">
+                    <div class="container">
+                        <div class="contents">
+                            <div class="box-table excel excel-type-1">
+                                <div class="icon-ellipse-mobile-swipe mobile"><span>좌우로 스와이프</span></div>
+                                <div class="table-header">
+                                    <h4 class="title-06">연결기준</h4>
+                                </div>
+                                <span class="unit">*단위 : 백만원</span>
+                                <table id="myTable">
+                                    <tbody>
+                                        <tr>
+                                            <td t="s" id="myTable-A2" v="구분">구분</td>
+                                            <td t="s" id="myTable-B2" v="2020년(K-IFRS)">2020년
+                                                <br>(K-IFRS)
+                                            </td>
+                                            <td t="s" id="myTable-C2" v="2020년(K-IFRS)">2020년
+                                                <br>(K-IFRS)
+                                            </td>
+                                            <td t="s" id="myTable-D2" v="2020년(K-IFRS)">2020년
+                                                <br>(K-IFRS)
+                                            </td>
+                                            <td t="s" id="myTable-E2" v="2020년(K-IFRS)">2020년
+                                                <br>(K-IFRS)
+                                            </td>
+                                            <td t="s" id="myTable-F2" v="2020년(K-IFRS)">2020년
+                                                <br>(K-IFRS)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td t="s" id="myTable-A3" v="유동자산">유동자산</td>
+                                            <td t="s" id="myTable-B3" v=" 1,063,170 " xml:space="preserve"> 1,063,170
+                                            </td>
+                                            <td t="s" id="myTable-C3" v=" 1,063,170 " xml:space="preserve"> 1,063,170
+                                            </td>
+                                            <td t="s" id="myTable-D3" v=" 1,063,170 " xml:space="preserve"> 1,063,170
+                                            </td>
+                                            <td t="s" id="myTable-E3" v=" 1,063,170 " xml:space="preserve"> 1,063,170
+                                            </td>
+                                            <td t="s" id="myTable-F3" v=" 1,063,170 " xml:space="preserve"> 1,063,170
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td t="s" id="myTable-A4" v="비유동자산">비유동자산</td>
+                                            <td t="s" id="myTable-B4" v=" 2,071,371 " xml:space="preserve"> 2,071,371
+                                            </td>
+                                            <td t="s" id="myTable-C4" v=" 2,071,371 " xml:space="preserve"> 2,071,371
+                                            </td>
+                                            <td t="s" id="myTable-D4" v=" 2,071,371 " xml:space="preserve"> 2,071,371
+                                            </td>
+                                            <td t="s" id="myTable-E4" v=" 2,071,371 " xml:space="preserve"> 2,071,371
+                                            </td>
+                                            <td t="s" id="myTable-F4" v=" 2,071,371 " xml:space="preserve"> 2,071,371
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td t="s" id="myTable-A5" v="자산총계">자산총계</td>
+                                            <td t="s" id="myTable-B5" v=" 3,134,541 " xml:space="preserve"> 3,134,541
+                                            </td>
+                                            <td t="s" id="myTable-C5" v=" 3,134,541 " xml:space="preserve"> 3,134,541
+                                            </td>
+                                            <td t="s" id="myTable-D5" v=" 3,134,541 " xml:space="preserve"> 3,134,541
+                                            </td>
+                                            <td t="s" id="myTable-E5" v=" 3,134,541 " xml:space="preserve"> 3,134,541
+                                            </td>
+                                            <td t="s" id="myTable-F5" v=" 3,134,541 " xml:space="preserve"> 3,134,541
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td t="s" id="myTable-A6" v="유동부채">유동부채</td>
+                                            <td t="s" id="myTable-B6" v=" 1,039,527 " xml:space="preserve"> 1,039,527
+                                            </td>
+                                            <td t="s" id="myTable-C6" v=" 1,039,527 " xml:space="preserve"> 1,039,527
+                                            </td>
+                                            <td t="s" id="myTable-D6" v=" 1,039,527 " xml:space="preserve"> 1,039,527
+                                            </td>
+                                            <td t="s" id="myTable-E6" v=" 1,039,527 " xml:space="preserve"> 1,039,527
+                                            </td>
+                                            <td t="s" id="myTable-F6" v=" 1,039,527 " xml:space="preserve"> 1,039,527
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td t="s" id="myTable-A7" v="비유동부채">비유동부채</td>
+                                            <td t="s" id="myTable-B7" v=" 689,344 " xml:space="preserve"> 689,344 </td>
+                                            <td t="s" id="myTable-C7" v=" 689,344 " xml:space="preserve"> 689,344 </td>
+                                            <td t="s" id="myTable-D7" v=" 689,344 " xml:space="preserve"> 689,344 </td>
+                                            <td t="s" id="myTable-E7" v=" 689,344 " xml:space="preserve"> 689,344 </td>
+                                            <td t="s" id="myTable-F7" v=" 689,344 " xml:space="preserve"> 689,344 </td>
+                                        </tr>
+                                        <tr>
+                                            <td t="s" id="myTable-A8" v="부채총계">부채총계</td>
+                                            <td t="s" id="myTable-B8" v=" 1,728,871 " xml:space="preserve"> 1,728,871
+                                            </td>
+                                            <td t="s" id="myTable-C8" v=" 1,728,871 " xml:space="preserve"> 1,728,871
+                                            </td>
+                                            <td t="s" id="myTable-D8" v=" 1,728,871 " xml:space="preserve"> 1,728,871
+                                            </td>
+                                            <td t="s" id="myTable-E8" v=" 1,728,871 " xml:space="preserve"> 1,728,871
+                                            </td>
+                                            <td t="s" id="myTable-F8" v=" 1,728,871 " xml:space="preserve"> 1,728,871
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td t="s" id="myTable-A9" v="자본금">자본금</td>
+                                            <td t="s" id="myTable-B9" v=" 34,300 " xml:space="preserve"> 34,300 </td>
+                                            <td t="s" id="myTable-C9" v=" 34,300 " xml:space="preserve"> 34,300 </td>
+                                            <td t="s" id="myTable-D9" v=" 34,300 " xml:space="preserve"> 34,300 </td>
+                                            <td t="s" id="myTable-E9" v=" 34,300 " xml:space="preserve"> 34,300 </td>
+                                            <td t="s" id="myTable-F9" v=" 34,300 " xml:space="preserve"> 34,300 </td>
+                                        </tr>
+                                        <tr>
+                                            <td t="s" id="myTable-A10" v="자본총계">자본총계</td>
+                                            <td t="s" id="myTable-B10" v=" 1,243,462 " xml:space="preserve"> 1,243,462
+                                            </td>
+                                            <td t="s" id="myTable-C10" v=" 1,243,462 " xml:space="preserve"> 1,243,462
+                                            </td>
+                                            <td t="s" id="myTable-D10" v=" 1,243,462 " xml:space="preserve"> 1,243,462
+                                            </td>
+                                            <td t="s" id="myTable-Hwawoo0" v=" 1,243,462 " xml:space="preserve"> 1,243,462
+                                            </td>
+                                            <td t="s" id="myTable-F10" v=" 1,243,462 " xml:space="preserve"> 1,243,462
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="helptext">
+                                    자세한 각 분기별 대차대조표는 공시정보의 반기/분기 보고서 내용을 참조하시길 바랍니다.<br>
+                                    금융감독원 <strong>전자공시시스템(http://dart.fss.or.kr)</strong> 당시 공시 내역 참조
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TYPE 2 -->
+            <section class="sample">
+                <h2 class="sampleTitle">Excel Library Table 2</h2>
+                <div class="sampleContent">
+                    <div class="container">
+                        <div class="contents">
+                            <div class="box-table excel excel-type-2">
+                                <div class="icon-ellipse-mobile-swipe mobile "><span>좌우로 스와이프</span></div>
+                                <div class="table-header">
+                                    <h4 class="title-06">연도별 배당 실적</h4>
+                                </div>
+                                <span class="unit">*단위 : 백만원</span>
+                                <table id="myTable">
+                                    <tbody>
+                                    <tr>
+                                        <td t="s" id="myTable-A2" v="구분" colspan="2">구분</td>
+                                        <td t="s" id="myTable-C2" v="2020(K-IFRS)">2020
+                                            <br>(K-IFRS)
+                                        </td>
+                                        <td t="s" id="myTable-D2" v="2020(K-IFRS)">2020
+                                            <br>(K-IFRS)
+                                        </td>
+                                        <td t="s" id="myTable-E2" v="2020(K-IFRS)">2020
+                                            <br>(K-IFRS)
+                                        </td>
+                                        <td t="s" id="myTable-F2" v="2020(K-IFRS)">2020
+                                            <br>(K-IFRS)
+                                        </td>
+                                        <td t="s" id="myTable-G2" v="2020(K-IFRS)">2020
+                                            <br>(K-IFRS)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td t="s" id="myTable-A3" v="당기순이익(백만원)" colspan="2">당기순이익(백만원)</td>
+                                        <td t="s" id="myTable-C3" v="81,043">81,043</td>
+                                        <td t="s" id="myTable-D3" v="81,043">81,043</td>
+                                        <td t="s" id="myTable-E3" v="81,043">81,043</td>
+                                        <td t="s" id="myTable-F3" v="81,043">81,043</td>
+                                        <td t="s" id="myTable-G3" v="81,043">81,043</td>
+                                    </tr>
+                                    <tr>
+                                        <td t="s" id="myTable-A4" v="주당순이익(원)" colspan="2">주당순이익(원)</td>
+                                        <td t="s" id="myTable-C4" v="14,017">14,017</td>
+                                        <td t="s" id="myTable-D4" v="14,017">14,017</td>
+                                        <td t="s" id="myTable-E4" v="14,017">14,017</td>
+                                        <td t="s" id="myTable-F4" v="14,017">14,017</td>
+                                        <td t="s" id="myTable-G4" v="14,017">14,017</td>
+                                    </tr>
+                                    <tr>
+                                        <td t="s" id="myTable-A5" v="배당금" rowspan="2">배당금</td>
+                                        <td t="s" id="myTable-B5" v="주당배당금(원)">주당배당금(원)</td>
+                                        <td t="s" id="myTable-C5" v="2,200">2,200</td>
+                                        <td t="s" id="myTable-D5" v="2,200">2,200</td>
+                                        <td t="s" id="myTable-E5" v="2,200">2,200</td>
+                                        <td t="s" id="myTable-F5" v="2,200">2,200</td>
+                                        <td t="s" id="myTable-G5" v="2,200">2,200</td>
+                                    </tr>
+                                    <tr>
+                                        <td t="s" id="myTable-B6" v="총배당금(백만원)">총배당금(백만원)</td>
+                                        <td t="s" id="myTable-C6" v="12,720">12,720</td>
+                                        <td t="s" id="myTable-D6" v="12,720">12,720</td>
+                                        <td t="s" id="myTable-E6" v="12,720">12,720</td>
+                                        <td t="s" id="myTable-F6" v="12,720">12,720</td>
+                                        <td t="s" id="myTable-G6" v="12,720">12,720</td>
+                                    </tr>
+                                    <tr>
+                                        <td t="s" id="myTable-A7" v="배당률" rowspan="2">배당률</td>
+                                        <td t="s" id="myTable-B7" v="액면배당률(%)">액면배당률(%)</td>
+                                        <td t="s" id="myTable-C7" v="44.00%">44.00%</td>
+                                        <td t="s" id="myTable-D7" v="44.00%">44.00%</td>
+                                        <td t="s" id="myTable-E7" v="44.00%">44.00%</td>
+                                        <td t="s" id="myTable-F7" v="44.00%">44.00%</td>
+                                        <td t="s" id="myTable-G7" v="44.00%">44.00%</td>
+                                    </tr>
+                                    <tr>
+                                        <td t="s" id="myTable-B8" v="시가배당률(%)">시가배당률(%)</td>
+                                        <td t="s" id="myTable-C8" v="4.82%">4.82%</td>
+                                        <td t="s" id="myTable-D8" v="4.82%">4.82%</td>
+                                        <td t="s" id="myTable-E8" v="4.82%">4.82%</td>
+                                        <td t="s" id="myTable-F8" v="4.82%">4.82%</td>
+                                        <td t="s" id="myTable-G8" v="4.82%">4.82%</td>
+                                    </tr>
+                                    <tr>
+                                        <td t="s" id="myTable-A9" v="배당성향(%)" colspan="2">배당성향(%)</td>
+                                        <td t="s" id="myTable-C9" v="15.70%">15.70%</td>
+                                        <td t="s" id="myTable-D9" v="15.70%">15.70%</td>
+                                        <td t="s" id="myTable-E9" v="15.70%">15.70%</td>
+                                        <td t="s" id="myTable-F9" v="15.70%">15.70%</td>
+                                        <td t="s" id="myTable-G9" v="15.70%">15.70%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="helptext">
+                                    자세한 각 분기별 대차대조표는 공시정보의 반기/분기 보고서 내용을 참조하시길 바랍니다.<br>
+                                    금융감독원 <strong>전자공시시스템(http://dart.fss.or.kr)</strong> 당시 공시 내역 참조
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/ch/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

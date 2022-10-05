@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <circle data-name="타원 67" cx="10" cy="10" r="10" transform="translate(2 2)" style="fill:none;stroke:#666;stroke-width:2px"/>
+    <path data-name="선 82" transform="translate(12 12)" style="stroke-linejoin:round;fill:none;stroke:#666;stroke-width:2px" d="M0 4V0"/>
+    <path data-name="선 83" transform="translate(12 8)" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#666;stroke-width:2px" d="M0 0h.01"/>
+</svg>

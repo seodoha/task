@@ -1,0 +1,467 @@
+@charset "UTF-8";
+
+.imgMap{
+    &-wrap{
+        &.pc{display:block;}
+        &.mobile{
+            display:none;
+            position:relative;
+            left:-3.2rem;
+            padding-top:4rem;
+            width:calc(100% + 6.4rem);
+            height:40rem;
+            overflow:hidden;
+            .tit-text{
+                position:absolute;
+                top:0;
+                left:0;
+                padding:0 3.2rem;
+                color:$gray7;
+                @include fontSize('fontS02');
+            }
+            .imgMap-dimmed{
+                position:absolute;
+                top:4rem;
+                left:0rem;
+                width:100%;
+                height:36rem;
+                a{
+                    display:block;
+                    width:100%;
+                    height:100%;
+                    padding-top:22rem;
+                    color:$white;
+                    text-align: center;
+                    @include fontSize('fontS02');
+                    font-weight:500;
+                    background-color:rgba(0, 0, 0, 0.6);
+                    background-image:url('/assets/images/common/ico_hand.svg');
+                    background-position: center 11.8rem;
+                    background-repeat: no-repeat;
+                    background-size: 10rem 10rem;
+                }
+            }
+        }
+        position:relative;
+        width:100%;
+        &>img{width:100%;}
+        .imgMap-imgwrap.type-term{margin:12rem 2rem 20rem;}
+    }
+    &-items{
+        position:absolute;
+        background-repeat:no-repeat;
+        background-position: center center;
+        background-size:100% 100%;
+        &:hover{
+            background-repeat:no-repeat;
+            background-position: center center;
+            background-size:100% 100%;
+            .imgMap-items__tooltip{display:block;}
+        }
+        &.eng-item1-1{
+            width:19.5%;
+            height:4.62%;
+            top:26.6%;
+            left:40.2%;       
+            background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_01-off.svg');  
+            &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_01.svg');}
+            .link{left:10%; width:80%;}
+        }
+        &.eng-item1-2{
+            width:26.32%;
+            height:5.46%;
+            top:46.46%;
+            left:15.5%;
+            background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_02-off.svg');  
+            &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_02.svg');}
+            .link{left:10%; width:80%; height:38%; top:32%;}
+        }
+        &.eng-item1-3{
+            width:26.32%;
+            height:4.6%;
+            top:55.06%;
+            left:8.4%;
+            background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_03-off.svg');  
+            &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_03.svg');}
+            .link{left:10%; width:80%;}
+        }
+        &.eng-item1-4{
+            width:26.32%;
+            height:4.6%;
+            top:55.06%;
+            left:36.8%;
+            background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_04-off.svg');  
+            &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_04.svg');}
+            .link{left:10%; width:80%;}
+        }
+        &.eng-item1-5{
+            width:12.66%;
+            height:4.56%;
+            top:66.12%;
+            left:65.4%;
+            background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_05-off.svg');  
+            &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_05.svg');}
+            .link{left:10%; width:80%;}
+        }
+        &.eng-item1-6{
+            width:12.66%;
+            height:4.56%;
+            top:66.12%;
+            left:79%;
+            background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_06-off.svg');  
+            &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_06.svg');}
+            .link{left:5%; width:90%;}
+        }
+        &.item1-1{
+            width:12.45%;
+            height:4.66%;
+            top:25.36%;
+            left:43.8%;            
+            background-image:url('/assets/images/contents/fc_box_smaller_color_01-off.svg');  
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_01.svg');}
+            .link{left:10%; width:80%;}
+        }
+        &.item1-2{
+            width:26.06%;
+            height:4.68%;
+            top:45.72%;
+            left:15.66%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_02-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_02.svg');}
+            .link{left:20%; width:60%;}
+        }
+        &.item1-3{
+            width:26.08%;
+            height:4.68%;
+            top:53.66%;
+            left:8.54%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_03-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_03.svg');}
+        }
+        &.item1-4{
+            width:26.06%;
+            height:4.68%;
+            top:53.66%;
+            left:37%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_04-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_04.svg');}
+        }
+        &.item1-5{
+            width:12.46%;
+            height:4.68%;
+            top:65.06%;
+            left:65.46%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_05-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_05.svg');}
+        }
+        &.item1-6{
+            width:12.46%;
+            height:4.68%;
+            top:65.06%;
+            left:79.06%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_06-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_06.svg');}
+        }
+        &.item2-1{
+            width:19.4%;
+            height:6.9%;
+            top:39.8%;
+            left:8.5%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_07-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_07.svg');}
+            .link{top:28%; left:16%; width:66%; height:50%;}
+        } 
+        &.item2-2{
+            width:12.5%;
+            height:7%;
+            top:69.7%;
+            left:8.5%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_08-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_08.svg');}
+            .link{top:27.6%; left:16%; width:66%; height:50%;}
+        }
+        &.item2-3{
+            width:12.6%;
+            height:7%;
+            top:69.7%;
+            left:26.1%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_09-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_09.svg');}
+            .link{top:27.6%; left:16%; width:66%; height:50%;}
+        }
+        &.item2-4{
+            width:12.6%;
+            height:7%;
+            top:69.7%;
+            left:61.4%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_10-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_10.svg');}
+            .link{top:14.6%; left:12%; width:77%; height:74%;}
+        }
+        &.item2-5{
+            width:12.6%;
+            height:7%;
+            top:69.7%;
+            left:78.9%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_11-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_11.svg');}
+            .link{top:27.6%; left:16%; width:66%; height:50%;}
+        }    
+        &.item2-6{
+            width:40.4%;
+            height:6.9%;
+            top:78.9%;
+            left:8.6%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_12-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_12.svg');}
+            .link{top:36%; left:37%; width:26%; height:32%;}
+        }
+        &.item2-7{
+            width:83%;
+            height:7%;
+            top:88%;
+            left:8.6%;
+            background-image:url('/assets/images/contents/fc_box_smaller_color_13-off.svg');
+            &:hover{background-image:url('/assets/images/contents/fc_box_smaller_color_13.svg');}
+            .link{top:36%; left:35%; width:30%; height:32%;}
+        }                                                                                                     
+        .link{
+            display:block;
+            position:absolute;
+            top:36%;
+            left:30%;
+            width:40%;
+            height:28%;        
+        }
+    }
+    &-linkItems{
+        position:absolute;
+        width:17.6%;
+        height:1.2%;
+        &.item1-1{top:6%; left:41%;}
+        &.item1-2{top:13.9%; left:20%;}
+        &.item1-3{top:21.8%; left:41%;}
+        &.item1-4{top:38%; left:41%;}
+        &.item1-5{width:9%; top:47%; left:45%;}
+        &.item1-6{width:9%; top:53.7%; left:45%;}
+        &.item1-7{width:9%; top:60.4%; left:45%;}
+        &.item1-8{width:9%; top:94.2%; left:45%;}
+        &.item1-9{width:11%; top:9.2%; left:44.2%;}
+        &.item1-10{width:8.8%; top:36.9%; left:66.6%;}
+        &.item1-11{width:8.8%; top:46.1%; left:66.6%;}
+        &.item1-12{width:8.8%; top:55.3%; left:66.6%;}
+        &.item1-13{width:8.8%; top:92.2%; left:45%;}
+        &.item1-14{width:8.8%; top:33.7%; left:66.4%;}
+        &.item1-15{width:8.8%; top:42.2%; left:66.4%;}
+        &.item1-16{width:8.8%; top:59%; left:66.4%;}
+        &.item1-17{width:8.8%; top:92.8%; left:45.2%;}
+        &.item1-18{width:8.8%; height:2%; top:14.4%; left:45.2%;}
+        &.item1-19{width:8.8%; height:2%; top:29%; left:45.2%;}
+        &.item1-20{width:8.8%; height:2%; top:43.6%; left:45.2%;}
+        &.item1-21{width:7.8%; height:3%; top:22.6%; left:46%;}
+        &.item1-22{width:8.8%; height:3%; top:52%; left:66.6%;}
+        &.item1-23{width:8.8%; height:3%; top:81%; left:66.6%;}
+        &.item1-24{width:8.8%; height:1.4%; top:17.8%; left:45.4%;}
+        &.item1-25{width:8.8%; height:1.4%; top:71.8%; left:24.2%;}
+        &.item2-1{height:1.4%; top:27.2%; left:20%;}
+        &.item3-1{width:10%; height:1.4%; top:34.6%; left:23.4%;}
+        &.item3-2{width:10%; height:1.4%; top:34.6%; left:66.2%;}
+        &.item3-3{width:16%; height:1.4%; top:17%; left:42%;}
+        &.item3-4{width:14%; top:33.8%; left:43%;}
+        &.item3-5{width:16%; height:1.4%; top:18%; left:42%;}
+        &.item3-6{width:13%; height:1.4%; top:31.2%; left:22%;}
+        &.item4-1{width:15%; top:43.4%; left:42.4%;}
+        &.item5-1{width:30%; height:1.8%; top:67.6%; left:13.4%;}
+        &.eng-item1-1{top:5.8%; left:35.2%; width:30%;}
+        &.eng-item1-2{top:14.4%; left:13.4%; width:30%;}
+        &.eng-item1-3{top:22.28%; left:39.8%; width:20%; height:1.8%;}
+        &.eng-item1-4{top:38.9%; left:39.8%; width:20%;}
+    }
+    &-items__tooltip{
+        &.line2{top:-60px;}
+        display:none;
+        position:absolute;
+        top:-50px;
+        left:50%;
+        transform: translateX(-50%);
+        width:auto;
+        white-space: nowrap;
+        border-radius:0.6rem;
+        padding:1.2rem 1.6rem;
+        background:rgba(51, 51, 51, 0.9);
+        text-align:center;
+        color:$white;
+        font-size:1.2rem;
+        line-height:1.5rem;
+        font-weight:500;
+        &:after{
+            content:'';
+            position:absolute;
+            bottom:-7px;
+            left:50%;
+            transform: translateX(-50%);
+            width: 0px;
+            height: 0px;
+            border-top: 8px solid rgba(51, 51, 51, 0.9);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+        }
+    }
+}
+.dv-mobile .imgMap-wrap{
+    &.pc{display:none;}
+    &.mobile{display:block;}
+}
+.eng{
+    .imgMap{
+        &-linkItems{
+            &.item1-10{width:12.6%; height:1.2%; top:36.1%; left:64.9%;}
+            &.item1-11{width:12.6%; height:1.2%; top:45.2%; left:64.9%;}
+            &.item1-18{width:11.2%; height:2%; top:16.6%; left:44.4%;}
+            &.item1-19{width:11.8%; height:2%; top:32.5%; left:44.2%;}
+            &.item1-20{width:11.8%; height:2%; top:46.6%; left:44.2%;}
+            &.item1-21{width:11.8%; height:3%; top:20.6%; left:44%;}
+            &.item1-22{width:11.8%; height:3%; top:51.4%; left:65.3%;}
+            &.item1-23{width:11.8%; height:3%; top:82%; left:65.3%;}
+            &.item1-24{width:11.8%; height:1.4%; top:17.8%; left:44.1%;}
+            &.item1-25{width:11.8%; height:1.4%; top:71.8%; left:22.8%;}
+            &.item2-1{width:27.6%; height:1.4%; top:26.2%; left:15%;}
+            &.item3-3{width:21.1%; height:2.3%; top:17%; left:39.6%;}
+            &.item3-5{width:21.1%; height:2.3%; top:18%; left:39.6%;}
+            &.item3-6{width:20%; height:1.4%; top:32.2%; left:18.7%;}
+            &.item4-1{width:17%; height:2.2%; top:43.4%; left:41.4%;}
+            &.item5-1{width:33%; height:2.8%; top:64.6%; left:13.4%;}
+        }
+        &-items{
+            &.item2-1{
+                width:19.4%;
+                height:7.5%;
+                top:38.1%;
+                left:8.5%;
+                background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_07-off.svg');
+                &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_07.svg');}
+                .link{top:13%; left:16%; width:66%; height:50%;}
+            } 
+            &.item2-2{
+                width:12.5%;
+                height:9%;
+                top:69.6%;
+                left:8.5%;
+                background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_08-off.svg');
+                &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_08.svg');}
+                .link{top:13%; left:16%; width:66%; height:50%;}
+            }
+            &.item2-3{
+                width:12.6%;
+                height:9%;
+                top:69.6%;
+                left:26.1%;
+                background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_09-off.svg');
+                &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_09.svg');}
+                .link{top:13%; left:16%; width:66%; height:50%;}
+            }
+            &.item2-4{
+                width:12.6%;
+                height:9%;
+                top:69.6%;
+                left:61.4%;
+                background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_10-off.svg');
+                &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_10.svg');}
+                .link{top:13%; left:12%; width:77%; height:74%;}
+            }
+            &.item2-5{
+                width:12.6%;
+                height:9%;
+                top:69.6%;
+                left:78.9%;
+                background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_11-off.svg');
+                &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_11.svg');}
+                .link{top:13%; left:16%; width:66%; height:50%;}
+            }    
+            &.item2-6{
+                width:40.4%;
+                height:6.9%;
+                top:80.7%;
+                left:8.6%;
+                background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_12-off.svg');
+                &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_12.svg');}
+                .link{top:36%; left:37%; width:26%; height:32%;}
+            }
+            &.item2-7{
+                width:83%;
+                height:7%;
+                top:88.5%;
+                left:8.6%;
+                background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_13-off.svg');
+                &:hover{background-image:url('/assets/images/contents/en/ENG_fc_box_smaller_color_13.svg');}
+                .link{top:36%; left:35%; width:30%; height:32%;}
+            }                                                                                                         
+        }
+    }
+}
+.chn{
+    .imgMap{
+        &-linkItems{
+            &.item2-1{top:28.2%;}
+        }
+    }
+}
+@include response('tablet') {    
+    .imgMap{
+        &-wrap{
+            .imgMap-imgwrap.type-term{margin:10rem 2rem 18rem;}
+        }
+        &-items__tooltip{    
+            &.line2{top:-52px;}       
+            top:-42px;
+            padding:1rem 1.4rem;
+            background:rgba(51, 51, 51, 0.9);
+            font-size:1rem;
+            line-height:1.3rem;
+            &:after{
+                content:'';
+                bottom:-6px;
+                border-top: 6px solid rgba(51, 51, 51, 0.9);
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+            }
+        }
+    }
+}
+@include response('mobile') {
+    .imgMap{
+        &-wrap{
+            &.pc{display:none;}
+            &.mobile{display:block;}
+            .imgMap-imgwrap.type-term{
+                margin:0 6%;
+                &>img{
+                    height:36rem;
+                    object-fit: contain;
+                }
+            
+            }
+        }
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .imgMap{
+        &-items{
+            &.item1-2{top:45.73%; left:15.6%;}
+            &.item1-4{height:4.66%; top:53.68%; left:36.94%;}
+            &.item1-5{width:12.44%; height:4.62%; top:65.06%;left:65.44%;}
+            &.item1-6{width:12.40%; height:4.62%; top:65.06%; left:79.06%;}
+            &.item2-1{width:19.3%;}
+            &.item2-2{width:12.4%; height:6.98%;}
+            &.item2-3{width:12.54%; height:6.96%;}
+            &.item2-4{width:12.5%; height:6.98%;}
+            &.item2-5{width:12.5%; height:6.98%;}
+            &.item2-7{height:6.98%;}
+            &.eng-item1-1{width:19.52%;}
+            &.eng-item1-2{width:26.32%;}
+            &.eng-item1-3{height:4.62%;}
+            &.eng-item1-4{height:4.62%;}                 
+        }
+    }
+}

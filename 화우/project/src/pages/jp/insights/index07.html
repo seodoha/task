@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    @@include('./pages/jp/includes/head.html', {
+        metaDescription: 'insights',
+        pageTitle : 'Hwawoo - insights',
+        cssPath : '../../../assets/jp/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="insights-wrap">
+        @@include('./pages/jp/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">insights</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">投稿および研究資料</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="ニュース 메뉴로 이동" aria-label="ニュース 메뉴로 이동" class="on">ニュース</a></li>
+                                        <li><a href="#" title="ニュースレター 메뉴로 이동" aria-label="ニュースレター 메뉴로 이동">ニュースレター</a></li>
+                                        <li><a href="#" title="投稿および研究資料 메뉴로 이동" aria-label="投稿および研究資料 메뉴로 이동">投稿および研究資料</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="current box-tooltip">
+                                <button type="button">著書</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="マスコミ報道 메뉴로 이동" aria-label="マスコミ報道 메뉴로 이동">マスコミ報道</a></li>
+                                        <li><a href="#" title="セミナー/イベント 메뉴로 이동" aria-label="セミナー/イベント 메뉴로 이동">セミナー/イベント</a></li>
+                                        <li><a href="#" title="和友ニュース 메뉴로 이동" aria-label="和友ニュース 메뉴로 이동">和友ニュース</a></li>
+                                        <li><a href="#" title="最近の業務事例 메뉴로 이동" aria-label="最近の業務事例 메뉴로 이동" class="on">最近の業務事例</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02">著書</h3>
+                    </div>
+                    <!--end of inner-wrap-->
+                </div>
+                <!--end of page-heading-layout-->
+                <article class="arti01">
+                    <div class="inner-wrap">
+                        <form>
+                            <fieldset class="page-search-layout">
+                                <legend>業務分野 検索</legend>
+                                <div class="box-input-wrap with-select ty-border">
+                                    <div class="box-select">
+                                        <select>
+                                            <option value="">ALL</option>
+                                            <option value="">TITLE</option>
+                                            <option value="">CONTENTS</option>
+                                        </select>
+                                    </div>
+                                    <div class="box-input ty-search">
+                                        <input type="text" placeholder="検索ワードを入力してください。" title="検索ワードを入力してください。">
+                                        <button type="button" class="icon-text-reset"><span>初期化</span></button>
+                                        <button type="search" class="icon-search-big"><span>検索</span></button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <ul class="board-text-list ty01">
+                                <li>
+                                    <div class="box-document-wrap">
+                                        <div class="box-document-info">
+                                            <strong class="tit">조세법 (2022년 개정판)</strong>
+                                            <div class="box-util">
+                                                <ul class="list-writer-info">
+                                                    <li>신승국, 이근우</li>
+                                                    <li>기업법무</li>
+                                                </ul>
+                                                <span class="date">2022.04.18</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-download" download=""><i></i>PDF</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-document-wrap">
+                                        <div class="box-document-info">
+                                            <strong class="tit">법률문장 어떻게 쓸 것인가 (제3판)</strong>
+                                            <div class="box-util">
+                                                <ul class="list-writer-info">
+                                                    <li>신승국, 이근우</li>
+                                                    <li>기업법무</li>
+                                                </ul>
+                                                <span class="date">2022.04.18</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-download" download=""><i></i>PDF</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-document-wrap">
+                                        <div class="box-document-info">
+                                            <strong class="tit">2021 화우총서 - 개인정보 보호</strong>
+                                            <div class="box-util">
+                                                <ul class="list-writer-info">
+                                                    <li>신승국, 이근우</li>
+                                                    <li>기업법무</li>
+                                                </ul>
+                                                <span class="date">2022.04.18</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-download" download=""><i></i>PDF</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-document-wrap">
+                                        <div class="box-document-info">
+                                            <strong class="tit">2021 화우총서 - 상장기업에 대한 규제실무</strong>
+                                            <div class="box-util">
+                                                <ul class="list-writer-info">
+                                                    <li>신승국, 이근우</li>
+                                                    <li>기업법무</li>
+                                                </ul>
+                                                <span class="date">2022.04.18</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-download" download=""><i></i>PDF</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-document-wrap">
+                                        <div class="box-document-info">
+                                            <strong class="tit">2021 화우총서 - 상장기업에 대한 규제실무</strong>
+                                            <div class="box-util">
+                                                <ul class="list-writer-info">
+                                                    <li>신승국, 이근우</li>
+                                                    <li>기업법무</li>
+                                                </ul>
+                                                <span class="date">2022.04.18</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-download" download=""><i></i>PDF</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-document-wrap">
+                                        <div class="box-document-info">
+                                            <strong class="tit">2021 화우총서 - 상장기업에 대한 규제실무</strong>
+                                            <div class="box-util">
+                                                <ul class="list-writer-info">
+                                                    <li>신승국, 이근우</li>
+                                                    <li>기업법무</li>
+                                                </ul>
+                                                <span class="date">2022.04.18</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-download" download=""><i></i>PDF</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <div class="box-btn box-board-more">
+                                <button type="button" class="btn-circle-ani btn-fold"><i></i>もっと見る</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        @@include('./pages/jp/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/jp/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

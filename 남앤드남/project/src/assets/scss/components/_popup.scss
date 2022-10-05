@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+
+.popup{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index:9999;
+    &__wrap{
+        position:relative;
+        &.popup__wrap-type1{           
+            width:42.4rem;
+            max-width:42.4rem;
+            padding:3.4rem 2rem 2rem;
+            background:$white;
+            box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.08);
+            overflow:hidden;
+        }
+        .btn-wrap{
+            button{
+                display:block;
+                width:100%;
+                min-width:auto;
+            }
+        }
+    }
+    &__title{
+        padding:0 1.2rem;
+        text-align:center;
+        @include fontSize('fontS05');
+        font-weight:700;
+        color:$gray8;
+        max-height:7rem;
+        overflow:hidden;
+        & + .popup__conts{margin-top:2rem;}
+    }
+    &__conts{
+        padding:0 1.2rem;
+        color:$gray6;        
+        max-height:calc(100vh - 34rem);
+        @include fontSize('fontS01');
+        overflow-y:auto;
+        overflow-x:hidden;
+        & + .btn-wrap{margin-top:3rem;}
+        .list-dot__items{
+            & + .list-dot__items{margin-top:0.4rem;}
+            @include fontSize('fontS01');
+            &:before{
+                top:8px;
+                left:0;
+            }
+        }
+        .popup__conts-title{
+            margin:2rem 0 1rem;
+            @include fontSize('fontS02');
+            color:$gray7;
+        }
+        &>.popup__conts-title:first-child{margin-top:0;}
+    }
+}
+
+.eng .popup{
+    &__title{
+        max-height: none;
+    }
+}
+
+@include response('mobile') {
+    .popup{
+        transform: translate(-50%, -50%);
+        &__wrap{
+            &.popup__wrap-type1{           
+                width:calc(100vw - 6.4rem);
+                max-width:42.4rem;
+            }
+            .btn-wrap{
+                button{
+                    display:block;
+                    width:100%;
+                    min-width:auto;
+                }
+            }
+        }
+        &__title{
+            @include fontSize('fontS04');
+            font-weight:700;
+            & + .popup__conts{margin-top:2.4rem;}
+        }
+        &__conts{
+            padding:0 1.2rem;
+            color:$gray6;            
+            max-height:calc(100vh - 34rem);
+            & + .btn-wrap{margin-top:3rem;}
+            .list-dot__items{
+                @include fontSize('fontS02');
+            }
+        }
+    }
+}

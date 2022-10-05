@@ -1,0 +1,14 @@
+<svg id="ico_hand" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+    <defs>
+        <style>
+            .cls-2,.cls-3{fill:none;stroke:#fff;stroke-linecap:round;stroke-width:2px}.cls-2{stroke-miterlimit:10}.cls-3{stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="그룹_999" data-name="그룹 999" transform="translate(-129.991 -965.088)">
+        <path id="선_140" data-name="선 140" class="cls-2" transform="rotate(50 -985.635 704.121)" d="m0 0 5.302 4.449"/>
+        <path id="선_141" data-name="선 141" class="cls-2" transform="rotate(50 -985.884 713.273)" d="m0 0 3.977 3.337"/>
+        <path id="패스_398" data-name="패스 398" class="cls-3" d="m20.336 20.337 2.226-2.651a4.662 4.662 0 0 1 3.549-1.538l2.226-2.653a3.634 3.634 0 0 1 4.875-.426l2.226-2.651a3.636 3.636 0 0 1 4.877-.427L56.884 23.9c2.682 2.251 5.932 9.5 7.718 10.994l1.665 1.4" transform="rotate(50 -955.266 684.197)"/>
+        <path id="패스_399" data-name="패스 399" class="cls-3" d="m59.884 56.2-5.3-4.449c-1.241-1.04-7.557-1.39-10.866-1.191-4.622.277-9.115-2.53-12.417-2.843-4.385-.415-9.044-.384-11.06-.621s-1.17-5.683 2.222-6.889a23.164 23.164 0 0 1 7.62-.974c.9-.078 3.593-.491 4.828-1.729a19.68 19.68 0 0 0-4.191-5.775c-7.42-6.49-18.561-15.572-18.561-15.572a3.462 3.462 0 0 1 4.449-5.3l17.235 14.458" transform="rotate(50 -952.454 676.53)"/>
+        <path id="패스_3741" data-name="패스 3741" class="cls-2" d="M10.191 21.345A10.2 10.2 0 1 1 21 8.385" transform="rotate(48 -1005.948 686.406)"/>
+    </g>
+</svg>

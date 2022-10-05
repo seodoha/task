@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    @@include('./pages/jp/includes/head.html', {
+        metaDescription: 'careers',
+        pageTitle : 'Hwawoo - careers',
+        cssPath : '../../../assets/jp/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap">
+        @@include('./pages/jp/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+                <div class="inner-wrap">
+                    <div class="no-pc-wrap">
+                        <strong class="typo-title-02">PC에서만 <br>지원 가능합니다.</strong>
+                        <span>지원을 원하시는분은 PC에서 <br>지원하시길 바랍니다.</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        @@include('./pages/jp/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/jp/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

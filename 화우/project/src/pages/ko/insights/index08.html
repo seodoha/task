@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./pages/ko/includes/head.html', {
+        metaDescription: 'insights',
+        pageTitle : 'Hwawoo - insights',
+        cssPath : '../../../assets/ko/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="insights-wrap youtube">
+        @@include('./pages/ko/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main">
+            <section id="container" class="">
+                <h2 class="hidden">본문</h2>
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">insights</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">기고 및 연구자료</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="뉴스 메뉴로 이동" aria-label="뉴스 메뉴로 이동" class="on">뉴스</a></li>
+                                        <li><a href="#" title="뉴스레터 메뉴로 이동" aria-label="뉴스레터 메뉴로 이동">뉴스레터</a></li>
+                                        <li><a href="#" title="기고 및 연구자료 메뉴로 이동" aria-label="기고 및 연구자료 메뉴로 이동">기고 및 연구자료</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="current box-tooltip">
+                                <button type="button">기타영상</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="언론보도 메뉴로 이동" aria-label="언론보도 메뉴로 이동">언론보도</a></li>
+                                        <li><a href="#" title="세미나/이벤트 메뉴로 이동" aria-label="세미나/이벤트 메뉴로 이동">세미나/이벤트</a></li>
+                                        <li><a href="#" title="화우소식 메뉴로 이동" aria-label="화우소식 메뉴로 이동">화우소식</a></li>
+                                        <li><a href="#" title="최근업무사례 메뉴로 이동" aria-label="최근업무사례 메뉴로 이동" class="on">최근업무사례</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02">기타영상</h3>
+                    </div>
+                    <!--end of inner-wrap-->
+                </div>
+                <!--end of page-heading-layout-->
+                <div class="inner-wrap narrow">
+                    <!-- 유튜브 영상 들어가는 영역 -->
+                    <div class="youtube-wrap">
+                        <div class="youtube-frame">
+                            <!--2022.09.20 src 변경-->
+                            <iframe src="https://www.youtube.com/embed/w9f5Km7SuX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="box-btn box-board-more">
+                        <a href="#" class="btn-circle-ani btn-view-all"><i></i>VIEW YouTube</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        @@include('./pages/ko/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/ko/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

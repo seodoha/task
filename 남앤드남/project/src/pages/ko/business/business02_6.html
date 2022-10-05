@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/ko/include/head.html',{
+        pageTitle : '남앤드남 | 화평법 | 화학물질 등록ㆍ신고 면제 확인',
+		pageMain : false
+	})
+    </head>
+    <body>
+        <div id="wrap" class="wrap business-wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/ko/include/header.html',{
+                    gnbLocation : 'business,1,0',
+                    lnbLocation : 'business,1,0,5'
+            })
+            <!-- container -->
+            <div id="container" class="container">
+                <!-- container header -->
+                <div class="container-header business">                            
+                    <div class="container-header__title pc"><div><span>화학물질 등록ㆍ</span></div><div><span>신고 면제 확인</span></div></div>
+                    <div class="container-header__title mobile"><div><span>화학물질</span></div><div><span>등록·신고</span></div><div><span>면제 확인</span></div></div>
+                    <div class="container-header__text">
+                        저우려 고분자 및 중간체 등에 대한 풍부한 경험과 전문성을 바탕으로 
+                        등록ㆍ신고 면제 확인 관련 컨설팅 서비스를 제공하며, 화평법 규제 
+                        이행에 필요한 비용과 시간을 절약할 수 있습니다.
+                    </div>
+                </div>
+                <!--// container header -->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap">
+                        <!-- layout wrap -->
+                        <div class="layout-wrap">
+                            <div class="layout-wrap-header type-d col-2">
+                                <div class="layout-wrap-header__title">면제 절차</div>
+                                <button class="btns icon">
+                                    <i class="i-print"></i><em>인쇄하기</em>
+                                </button>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <ol class="conts-list type3">
+                                    <li class="conts-list__items">
+                                        <div class="num">01.</div>
+                                        <div class="image"><img src="/assets/images/common/ico_bf_01.svg" alt=""></div>
+                                        <div class="title">대상<br>확인</div>
+                                        <div class="conts">
+                                            <div>하기 두가지 면제<br>대상에 해당</div>
+                                            <div>
+                                                <div class="btn-wrap">
+                                                    <a href="javascript:void(0)" title="자세히 보기" class="btn-arrow underline" onclick="uiCommon.popup.open('.popup1')">
+                                                        <span>무게별 등록 면제 대상 상세보기</span>
+                                                    </a>
+                                                    <a href="javascript:void(0)" title="자세히 보기" class="btn-arrow underline" onclick="uiCommon.popup.open('.popup2')">
+                                                        <span>물질별 등록 면제 대상 상세보기</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="num">02.</div>
+                                        <div class="image"><img src="/assets/images/common/ico_bf_02.svg" alt=""></div>
+                                        <div class="title">면제 서류<br>작성 및 제출</div>
+                                        <div class="conts">
+                                            <div class="list-term">화학물질 정보처리시스템<br>(한국환경공단)</div>
+                                            <div>면제내용 작성 후 제출</div>
+                                        </div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="num">03.</div>
+                                        <div class="image"><img src="/assets/images/common/ico_bf_03.svg" alt=""></div>
+                                        <div class="title">사후<br>관리</div>
+                                        <div class="conts">
+                                            <div class="list-term">변경 사항 발생 시 변경 신청<br>(30일 이내)</div>
+                                            <div>
+                                                <div class="btn-wrap">
+                                                    <a href="javascript:void(0)" title="자세히 보기" onclick="uiCommon.popup.open('.popup3')" class="btn-arrow underline"><span>변경 사항 상세보기</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <!--// layout wrap -->
+                        <!-- layout wrap -->
+                        <div class="layout-wrap type1 custom-mouse-area">
+                            <div class="layout-wrap-header type-d1">
+                                <div class="layout-wrap-header__title">관련 제공 서비스</div>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <ul class="conts-list type4">
+                                    <li class="conts-list__items">
+                                        <div>등록ㆍ신고 면제 대상 검토</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <a href="javascript:void(0)" onclick="uiCommon.popup.open('.popup4')">등록ㆍ신고 면제를 위한 컨설팅</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--// layout wrap -->
+                        <div class="btn-wrap business-only-mobile">
+                            <button class="btns icon">
+                                <i class="i-file"></i><em>PDF 다운로드</em>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--// container contents -->
+                <!-- call center -->
+                <!-- 20220102 callcenter 수정 -->
+                <div class="call-center">
+                    <div class="call-center-wrap">
+                        <div>
+                            <div class="call-center__header">
+                                <div class="title">더 궁금한 점이 있으신가요?</div>
+                                <!-- 20220127 | br태그 삭제 -->
+                                <div class="text">
+                                    견적 요청 또는 문의사항을 전달해주세요.
+                                    각 업무분야별 담당자가 도와드리겠습니다.
+                                </div>                                
+                            </div>
+                            <div class="call-center__header">
+                                <div class="sub-title">화평법</div>
+                                <div class="title type1">02-6714-1091</div>
+                                <div class="text">
+                                    <span>화평법</span>
+                                    <span>평일 09:00 ~18:00 (주말/공휴일 휴무)</span>
+                                </div>                                
+                            </div>      
+                        </div>
+                        <div class="call-center-link">
+                            <div class="title">상담/문의 관련 메뉴</div>
+                            <div class="link-area">
+                                <a href="javascript:void(0)" class="btn-arrow"><span>FAQ 바로가기</span></a>
+                                <a href="javascript:void(0)" class="btn-arrow"><span>온라인 상담 바로가기</span></a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <!--// 20220102 callcenter 수정 -->
+            </div>
+            <!--// container -->
+            @@include('./pages/ko/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        <!-- popup1 -->
+        <div class="popup popup1"><!-- popup name 추가 ex)popup1 -->
+            <div class="popup__wrap popup__wrap-type1">
+                <div class="popup__title">무게별 등록 면제 대상</div>
+                <div class="popup__conts">
+                    <div class="popup__conts-title">등록 면제</div>
+                    <ul class="list-dot">
+                        <li class="list-dot__items">연간 1톤 이상 제조ㆍ수입되는 기존화학물질</li>
+                        <li class="list-dot__items">연간 0.1톤 이상 제조ㆍ수입되는 기존화학물질 신고 면제</li>
+                        <!-- 20220117 | li 삭제 -->
+                    </ul>
+                    <!-- 20220117 | title 텍스트 수정 -->
+                    <div class="popup__conts-title">신고 면제</div>
+                    <ul class="list-dot">
+                        <li class="list-dot__items">연간 1톤 미만 제조ㆍ수입되는 기존화학물질 </li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btns popup__close" onclick="uiCommon.popup.close('.popup1')">확인</button>
+                </div>
+            </div>
+        </div>
+        <!--// popup1 -->
+        <!-- 20220126 | 팝업 추가 -->
+        <!-- popup2 -->
+        <div class="popup popup2"><!-- popup name 추가 ex)popup1 -->
+            <div class="popup__wrap popup__wrap-type1">
+                <div class="popup__title">물질별 등록 면제 대상</div>
+                <div class="popup__conts">
+                    <div class="popup__conts-title">아래 내용에 해당되는 경우, 면제 확인을 통해 화학물질의 등록 또는 신고를 하지 아니하고 제조ㆍ수입할 수 있습니다.
+                    </div>
+                    <ul class="list-dot">
+                        <li class="list-dot__items">국외로 전량 수출하기 위하여 제조하거나 수입하는 화학물질</li>
+                        <li class="list-dot__items">국외로 전량 수출하기 위한 다른 화학물질을 제조하기 위하여 제조하거나 수입하는 화학물질</li>
+                        <li class="list-dot__items">시약 등 과학적 실험ㆍ분석 또는 연구를 위한 화학물질</li>
+                        <li class="list-dot__items">연구개발용 화학물질</li>
+                        <li class="list-dot__items">저우려 고분자 화합물</li>
+                        <li class="list-dot__items">표면처리 물질</li>
+                        <li class="list-dot__items">비분리 중간체</li>
+                        <li class="list-dot__items">기술적인 방법으로 유출 또는 노출이 차단되어 있는 현장 분리 중간 체크</li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btns popup__close" onclick="uiCommon.popup.close('.popup2')">확인</button>
+                </div>
+            </div>
+        </div>
+        <!--// popup2 -->
+        <!-- popup3 -->
+        <div class="popup popup3"><!-- popup name 추가 ex)popup1 -->
+            <div class="popup__wrap popup__wrap-type1">
+                <div class="popup__title">제출 후 변경 사항</div>
+                <div class="popup__conts">
+                    <ul class="list-dot">
+                        <li class="list-dot__items">연구개발용 화학물질로서 연구개발에 드는 기간, 제조/수입 예정량, 연구기관이 변경된 경우</li>
+                        <li class="list-dot__items">표면처리 화학물질로서 표면처리의 대상이 되는 물질 또는 그 물질의 표면을 처리하는 물질의 항목이 변경된 경우</li>
+                        <li class="list-dot__items">선임된 자가 면제확인을 받고, 해당 화학물질을 수입하는 자의 구성이 변경된 경우</li>
+                        <li class="list-dot__items">제조/위탁자가 수탁자를 대신하여 면제확인을 받고, 수탁자의 구성이 변경된 경우</li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btns popup__close" onclick="uiCommon.popup.close('.popup3')">확인</button>
+                </div>
+            </div>
+        </div>
+        <!--// popup3 -->
+        <!-- popup4 -->
+        <div class="popup popup4"><!-- popup name 추가 ex)popup1 -->
+            <div class="popup__wrap popup__wrap-type1">
+                <div class="popup__title">등록ㆍ신고 면제를 위한 컨설팅</div>
+                 <div class="popup__conts">
+                    <ul class="list-dot">
+                        <li class="list-dot__items">등록ㆍ신고 면제 확인 서류 제출</li>
+                        <li class="list-dot__items">자료 보호 서류 제출</li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btns popup__close" onclick="uiCommon.popup.close('.popup4')">확인</button>
+                </div>
+            </div>
+        </div>
+        <!--// popup4 -->
+        @@include('./pages/ko/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

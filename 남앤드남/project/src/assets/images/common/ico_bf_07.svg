@@ -1,0 +1,32 @@
+<svg id="ico_bf_07" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2,.cls-4{fill:none}.cls-2{stroke:#111;stroke-width:2px}.cls-3{stroke:none}
+        </style>
+    </defs>
+    <g id="그룹_1702" data-name="그룹 1702" transform="translate(-690 -204.834)">
+        <path id="패스_6943" data-name="패스 6943" class="cls-2" d="m7554.586 1652.676-10.815 18.625" transform="translate(-6798.37 -1435.842)"/>
+        <path id="패스_7162" data-name="패스 7162" class="cls-2" d="m7552.3 1652.676-8.532 14.692" transform="translate(-6836.636 -1366.017)"/>
+        <path id="패스_6944" data-name="패스 6944" class="cls-2" d="m7555.424 1652.676-11.654 20.068" transform="translate(-6753.09 -1412.007)"/>
+        <g id="그룹_1700" data-name="그룹 1700" transform="translate(700.6 234.631)">
+            <g id="그룹_1699" data-name="그룹 1699" transform="translate(18.626 21.733)">
+                <g id="그룹_1698" data-name="그룹 1698">
+                    <path id="패스_6939" data-name="패스 6939" class="cls-2" d="M7517.218 1640h20" transform="translate(-7516.444 -1639.53)"/>
+                    <path id="패스_6941" data-name="패스 6941" class="cls-2" d="M7517.219 1640h12.481" transform="translate(-7516.445 -1631.887)"/>
+                </g>
+            </g>
+        </g>
+        <path id="빼기_67" data-name="빼기 67" class="cls-2" d="M-13627.751-136.639h-29.871l-12.378-21.49a5.079 5.079 0 0 0 2.981-4.618 5.036 5.036 0 0 0-2.813-4.539l10.34-17.951a3.625 3.625 0 0 0 1.675.4 3.672 3.672 0 0 0 3.663-3.65h26.4l14.934 25.923-14.934 25.923z" transform="translate(14373.152 423.114)"/>
+        <g id="그룹_1701" data-name="그룹 1701" transform="translate(745.4 260.737)">
+            <path id="다각형_2" data-name="다각형 2" class="cls-2" d="m44.8 0 14.933 25.922L44.8 51.844H14.933L0 25.922 14.933 0z"/>
+        </g>
+        <g id="타원_409" data-name="타원 409" class="cls-2" transform="translate(695.001 254.301)">
+            <circle class="cls-3" cx="6.067" cy="6.067" r="6.067"/>
+            <circle class="cls-4" cx="6.067" cy="6.067" r="5.067"/>
+        </g>
+        <g id="타원_411" data-name="타원 411" class="cls-2" transform="translate(710.667 229.948)">
+            <circle class="cls-3" cx="4.667" cy="4.667" r="4.667"/>
+            <circle class="cls-4" cx="4.667" cy="4.667" r="3.667"/>
+        </g>
+    </g>
+</svg>

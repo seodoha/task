@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../src/pages/ko/includes/guide/head.html', {title: '탭 가이드 - Hwawoo'});
+
+<body>
+    <div id="wsg-wrap" class="wsg">
+        <header class="wsg-header">
+            <h1><a href="javascript:void(0);"><img src="../../../status/assets/ci.svg" alt=""></a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../../../status/iaList_ko.html">국문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_en.html">영문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_ch.html">중문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_jp.html">일문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_gr.html">독문 IA 목록</a></li>
+                    <li class=""><a href="../layouts/layout.html">레이아웃</a></li>
+                    <li class="on"><a href="../components/components.html">컴포넌트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <ul class="guideSubmenu">
+            <li><a href="./wsg.html">WSG</a></li>
+            <li><a href="./button.html">버튼</a></li>
+            <li><a href="./form.html">폼요소</a></li>
+            <li><a href="./layerpopup.html">레이어팝업</a></li>
+            <li><a href="./tab.html" class="guideOn">탭</a></li>
+            <li><a href="./accordion.html">아코디언</a></li>
+            <li><a href="./slider.html">슬라이더</a></li>
+            <li><a href="./board.html">게시판</a></li>
+            <!-- <li><a href="./table.html">테이블</a></li> -->
+        </ul>
+
+        <div class="guideContainer">
+            <section class="sample">
+                <h2 class="sampleTitle">Tab</h2>
+                <div class="sampleContent">
+
+                    <div class="tab-wrap tab-ctrl">
+                        <ul class="tab-list">
+                            <li><a href="javascript:;">Title</a></li>
+                            <li><a href="javascript:;">Title</a></li>
+                            <li><a href="javascript:;">Title</a></li>
+                            <li><a href="javascript:;">Title</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div>content01</div>
+                            <div>content02</div>
+                            <div>content03</div>
+                            <div>content04</div>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                        <h3>GUIDE</h3>
+                        <p>
+                            위의 구조를 그대로 이용하고 tab-wrap과 tab-content 클래스는 스타일링에 이용하지 않는다.<br />
+                            tab-wrap 앨리먼트에 'tab-ctrl' 클래스가 붙는 경우 탭핑 기능 활성화.
+                        </p>
+                        <h3>MARKUP</h3>
+                        <pre>
+&lt;div class="tab-wrap tab-ctrl"&gt;
+    &lt;ul class="tab-list"&gt;
+        &lt;li&gt;&lt;a href="javascript:;"&gt; menu01&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;"&gt; menu02&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="tab-content"&gt;
+        &lt;div&gt;
+            content01
+        &lt;/div&gt;
+        &lt;div&gt;
+            content02
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sample">
+                <h2 class="sampleTitle">스타일별 탭</h2>
+                <div class="sampleContent">
+                    <h3><strong>simple</strong></h3>
+                    <div class="tab-wrap">
+                        <ul class="tab-list-simple">
+                            <li><a href="#" class="on">전체</a></li>
+                            <li><a href="#">관련소식</a></li>
+                            <li><a href="#">최근업무사례</a></li>
+                            <li><a href="#">뉴스레터</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            contents1
+                        </div>
+                    </div>
+                    <br><br>
+
+
+
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/ko/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<svg id="ico_bf_06" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-3{fill:none;stroke:#111;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="그룹_1708" data-name="그룹 1708" transform="translate(-610.06 -65.5)">
+        <path id="빼기_64" data-name="빼기 64" d="M-13514.707-242.014a7.841 7.841 0 0 0-.972-5.539l-17.877-30.422a22.638 22.638 0 0 1 5.1-4.831 22.608 22.608 0 0 1 6.432-3.066v-30.794h12.929v30.8a22.59 22.59 0 0 1 6.467 3.088 22.633 22.633 0 0 1 5.116 4.873 22.257 22.257 0 0 1 3.363 6.26 22.15 22.15 0 0 1 1.211 7.249 22.179 22.179 0 0 1-6.346 15.559 22.606 22.606 0 0 1-15.421 6.826z" transform="translate(14207.006 409)" style="stroke-linejoin:round;fill:none;stroke:#111;stroke-width:2px"/>
+        <g id="그룹_1706" data-name="그룹 1706" transform="translate(668.822 87)">
+            <g id="그룹_1705" data-name="그룹 1705">
+                <path id="사각형_1131" data-name="사각형 1131" class="cls-3" transform="translate(12.927)" d="M0 0h19.39v5.333H0z"/>
+            </g>
+        </g>
+        <g id="그룹_1832" data-name="그룹 1832" transform="translate(627.059 76.5)">
+            <path id="합치기_12" data-name="합치기 12" class="cls-3" d="M8.013 90.311a8 8 0 0 1-6.9-12.054l23.1-39.3V0h16.805v38.7l23.245 39.557a8 8 0 0 1-6.9 12.054z" transform="translate(0 6.69)"/>
+            <path id="사각형_1130" data-name="사각형 1130" class="cls-3" transform="translate(20.849)" d="M0 0h23.53v6.69H0z"/>
+        </g>
+    </g>
+</svg>

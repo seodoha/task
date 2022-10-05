@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=960" />
+    <title>I.A. 목록 - Hwawoo</title>
+    <link rel="stylesheet" href="./assets/wsg.css" />
+
+    <script type="text/javascript" src="./assets/jquery-1.6.4.min.js"></script>
+    <script src="./assets/markup.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- container -->
+        <div class="wsg-container">
+            <header class="wsg-header">
+                <h1><a href="javascript:void(0);"><img src="../assets/en/images/common/ci.svg" alt="Hwawoo 로고"></a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="./iaList_ko.html">국문 IA 목록</a></li>
+                        <li class="on"><a href="./iaList_en.html">영문 IA 목록</a></li>
+                        <li><a href="./iaList_ch.html">중문 IA 목록</a></li>
+                        <li><a href="./iaList_jp.html">일문 IA 목록</a></li>
+                        <li><a href="../pages/ko/layouts/layout.html" target="_blank">레이아웃</a></li>
+                        <li><a href="../pages/ko/components/wsg.html" target="_blank">컴포넌트</a></li>
+                        <li><a href="./email.html" target="_blank">이메일 탬플릿</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- contentPrimary -->
+            <section id="contentPrimary" class="content-primary">
+
+                <h2>#진행률</h2>
+                <!-- 대쉬보드 -->
+                <section class="progress-board"></section>
+                <!-- // 대쉬보드 -->
+
+                <!-- 마크업리스트 -->
+                <!-- 상태 클래스
+						* 대기 : hold
+						* 진행 : working
+						*  : complete
+						* 수정 : modify
+						* 삭제 : delete
+					 -->
+                <div class="progress-state">
+                    <p><strong>진행상황 표기</strong></p>
+                    <ul class="statebox">
+                        <li>.hold : <span class="state hold">대기</span></li>
+                        <li>.working : <span class="state working">진행</span></li>
+                        <li>.complete : <span class="state complete"></span></li>
+                        <li>.modify : <span class="state modify">수정</span></li>
+                        <li>.delete : <span class="state delete">삭제</span></li>
+                    </ul>
+                </div>
+
+                <!-- 공통 START -->
+                <section class="progress-list" data-type="pc">
+                    <h2>#공통</h2>
+                    <div class="utils">
+                        <div class="util-group">
+
+                        </div>
+                        <div class="util-group">
+                            <a class="go-top" href="#content">TOP</a>
+                        </div>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 8%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 11%" />
+                            <col style="width: 22%" />
+                            <col style="width: 8%" />
+                            <col style="width: 8%" />
+                            <col style="width: 10%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tbl-no">NO.</th>
+                                <th class="tbl-dep">depth 1</th>
+                                <th class="tbl-dep">depth 2</th>
+                                <th class="tbl-dep">depth 3</th>
+                                <th class="tbl-dep">depth 4</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">Alert 팝업</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/common/alert.html" target="_blank">../pages/en/common/alert.html</a></td>
+                                <td class="name"></td>
+                                <td class="state"></td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">Error 페이지</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/common/error.html" target="_blank">../pages/en/common/error.html</a></td>
+                                <td class="name">서도하</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">PC에서만 지원 가능합니다.</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/common/empty.html" target="_blank">../pages/en/common/empty.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Main END -->
+
+                <!-- Main START -->
+                <section class="progress-list" data-type="pc">
+                    <h2>#Main</h2>
+                    <div class="utils">
+                        <div class="util-group">
+
+                        </div>
+                        <div class="util-group">
+                            <a class="go-top" href="#content">TOP</a>
+                        </div>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 8%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 11%" />
+                            <col style="width: 22%" />
+                            <col style="width: 8%" />
+                            <col style="width: 8%" />
+                            <col style="width: 10%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tbl-no">NO.</th>
+                                <th class="tbl-dep">depth 1</th>
+                                <th class="tbl-dep">depth 2</th>
+                                <th class="tbl-dep">depth 3</th>
+                                <th class="tbl-dep">depth 4</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">Main</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/main/main.html" target="_blank">../pages/en/main/main.html</a></td>
+                                <td class="name"></td>
+                                <td class="state"></td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">통합검색결과</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/main/search.html" target="_blank">../pages/en/main/search.html</a></td>
+                                <td class="name"></td>
+                                <td class="state"></td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Main END -->
+
+                <!-- Solutions START -->
+                <section class="progress-list" data-type="pc">
+                    <h2>#Solutions</h2>
+                    <div class="utils">
+                        <div class="util-group">
+
+                        </div>
+                        <div class="util-group">
+                            <a class="go-top" href="#content">TOP</a>
+                        </div>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 8%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 11%" />
+                            <col style="width: 22%" />
+                            <col style="width: 8%" />
+                            <col style="width: 8%" />
+                            <col style="width: 10%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tbl-no">NO.</th>
+                                <th class="tbl-dep">depth 1</th>
+                                <th class="tbl-dep">depth 2</th>
+                                <th class="tbl-dep">depth 3</th>
+                                <th class="tbl-dep">depth 4</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="2">사이트맵</td>
+                                <td class="tbl-dep">전체</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/solutions/index01.html" target="_blank">../pages/en/solutions/index01.html</a></td>
+                                <td class="name">서도하</td>                                <td class="state">완료</td>
+
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">검색결과</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/solutions/index02.html" target="_blank">../pages/en/solutions/index02.html</a></td>
+                                <td class="name">서도하</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="4">상세</td>
+                                <td class="tbl-dep">템플릿1</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/solutions/detail01.html" target="_blank">../pages/en/solutions/detail01.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">템플릿2</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/solutions/detail02.html" target="_blank">../pages/en/solutions/detail02.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">주요구성원 상세화면</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/solutions/detail03.html" target="_blank">../pages/en/solutions/detail03.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">최근소식 상세화면</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/solutions/detail04.html" target="_blank">../pages/en/solutions/detail04.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Solutions END -->
+
+                <!-- Professionals START -->
+                <section class="progress-list" data-type="pc">
+                    <h2>#Professionals</h2>
+                    <div class="utils">
+                        <div class="util-group">
+
+                        </div>
+                        <div class="util-group">
+                            <a class="go-top" href="#content">TOP</a>
+                        </div>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 8%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 11%" />
+                            <col style="width: 22%" />
+                            <col style="width: 8%" />
+                            <col style="width: 8%" />
+                            <col style="width: 10%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tbl-no">NO.</th>
+                                <th class="tbl-dep">depth 1</th>
+                                <th class="tbl-dep">depth 2</th>
+                                <th class="tbl-dep">depth 3</th>
+                                <th class="tbl-dep">depth 4</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">검색</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/professonals/index01.html" target="_blank">../pages/en/professonals/index01.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="2">검색결과</td>
+                                <td class="tbl-dep">프로필</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/professonals/detail01.html" target="_blank">../pages/en/professonals/detail01.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">주요활동</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/professonals/detail02.html" target="_blank">../pages/en/professonals/detail02.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Professionals END -->
+
+                <!-- Insights START -->
+                <section class="progress-list" data-type="pc">
+                    <h2>#Insights</h2>
+                    <div class="utils">
+                        <div class="util-group">
+
+                        </div>
+                        <div class="util-group">
+                            <a class="go-top" href="#content">TOP</a>
+                        </div>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 8%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 11%" />
+                            <col style="width: 22%" />
+                            <col style="width: 8%" />
+                            <col style="width: 8%" />
+                            <col style="width: 10%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tbl-no">NO.</th>
+                                <th class="tbl-dep">depth 1</th>
+                                <th class="tbl-dep">depth 2</th>
+                                <th class="tbl-dep">depth 3</th>
+                                <th class="tbl-dep">depth 4</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="7">뉴스</td>
+                                <td class="tbl-dep">언론보도</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/index01.html" target="_blank">../pages/en/insights/index01.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <ul>
+                                        <li>
+                                            <strong class="date">2022.09.20 (Insight 화면 공통 적용)</strong>
+                                            <span>- 퍼블 수정</span>
+                                            <span>- 탭 추가</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="2">세미나/이벤트</td>
+                                <td class="tbl-dep">목록</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/index02.html" target="_blank">../pages/en/insights/index02.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">상세화면</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/detail01.html" target="_blank">../pages/en/insights/detail01.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="2">화우 소식</td>
+                                <td class="tbl-dep">목록</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/index03.html" target="_blank">../pages/en/insights/index03.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">상세화면</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/detail02.html" target="_blank">../pages/en/insights/detail02.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="2">최근업무사례</td>
+                                <td class="tbl-dep">목록</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/index04.html" target="_blank">../pages/en/insights/index04.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">상세화면</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/detail03.html" target="_blank">../pages/en/insights/detail03.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="3">뉴스레터</td>
+                                <td class="tbl-dep">목록</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/index05.html" target="_blank">../pages/en/insights/index05.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="2">상세화면</td>
+                                <td class="tbl-dep">기본</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/detail04.html" target="_blank">../pages/en/insights/detail04.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">템플릿</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/detail05.html" target="_blank">../pages/en/insights/detail05.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="4">기고 및 연구자료</td>
+                                <td class="tbl-dep">기고</td>
+                                <td class="tbl-dep">목록</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/index06.html" target="_blank">../pages/en/insights/index06.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">저서</td>
+                                <td class="tbl-dep">목록</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/index07.html" target="_blank">../pages/en/insights/index07.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">기타 영상</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/index08.html" target="_blank">../pages/en/insights/index08.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">브로슈어</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/insights/index09.html" target="_blank">../pages/en/insights/index09.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Insights END -->
+
+                <!-- The Firm START -->
+                <section class="progress-list" data-type="pc">
+                    <h2>#The Firm</h2>
+                    <div class="utils">
+                        <div class="util-group">
+
+                        </div>
+                        <div class="util-group">
+                            <a class="go-top" href="#content">TOP</a>
+                        </div>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 8%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 11%" />
+                            <col style="width: 22%" />
+                            <col style="width: 8%" />
+                            <col style="width: 8%" />
+                            <col style="width: 10%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tbl-no">NO.</th>
+                                <th class="tbl-dep">depth 1</th>
+                                <th class="tbl-dep">depth 2</th>
+                                <th class="tbl-dep">depth 3</th>
+                                <th class="tbl-dep">depth 4</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">화우 소개</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/firm/intro.html" target="_blank">../pages/en/firm/intro.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <ul>
+                                        <li>
+                                            <strong class="date">2022.09.20 (The firm 화면 공통 적용)</strong>
+                                            <span>- 탭 추가</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">연혁</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/firm/history.html" target="_blank">../pages/en/firm/history.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">수상</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/firm/award.html" target="_blank">../pages/en/firm/award.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="4">해외사무소</td>
+                                <td class="tbl-dep">Tashkent</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/firm/foreign_office01.html" target="_blank">../pages/en/firm/foreign_office01.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <ul>
+                                        <li>
+                                            <strong class="date">2022.09.16</strong>
+                                            <span>- 텍스트 수정</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">Ho Chi Minh City</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/firm/foreign_office02.html" target="_blank">../pages/en/firm/foreign_office02.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">Hanoi</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/firm/foreign_office03.html" target="_blank">../pages/en/firm/foreign_office03.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">Jakarta</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/firm/foreign_office04.html" target="_blank">../pages/en/firm/foreign_office04.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">사무소 위치</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/firm/domestic_office.html" target="_blank">../pages/en/firm/domestic_office.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- The Firm END -->
+
+                <!-- Careers START -->
+                <section class="progress-list" data-type="pc">
+                    <h2>#Careers</h2>
+                    <div class="utils">
+                        <div class="util-group">
+
+                        </div>
+                        <div class="util-group">
+                            <a class="go-top" href="#content">TOP</a>
+                        </div>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 8%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 11%" />
+                            <col style="width: 22%" />
+                            <col style="width: 8%" />
+                            <col style="width: 8%" />
+                            <col style="width: 10%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tbl-no">NO.</th>
+                                <th class="tbl-dep">depth 1</th>
+                                <th class="tbl-dep">depth 2</th>
+                                <th class="tbl-dep">depth 3</th>
+                                <th class="tbl-dep">depth 4</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="2">Recruitment</td>
+                                <td class="tbl-dep">목록</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/foreign01.html" target="_blank">../pages/en/careers/foreign01.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">지원하기</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/foreign02.html" target="_blank">../pages/en/careers/foreign02.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">영입안내</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/intro.html" target="_blank">../pages/en/careers/intro.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="2">영입공고</td>
+                                <td class="tbl-dep">공고</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/index01.html" target="_blank">../pages/en/careers/index01.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">상세</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/detail01.html" target="_blank">../pages/en/careers/detail01.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="17">지원</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/support.html" target="_blank">../pages/en/main/careers/support.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="4">신입 변호사</td>
+                                <td class="tbl-dep">약관 동의</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/newcomer01.html" target="_blank">../pages/en/main/careers/newcomer01.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">기본 정보</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/newcomer02.html" target="_blank">../pages/en/main/careers/newcomer02.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">상세 정보</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/newcomer03.html" target="_blank">../pages/en/main/careers/newcomer03.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">서류제출</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/newcomer04.html" target="_blank">../pages/en/main/careers/newcomer04.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="4">경력 변호사</td>
+                                <td class="tbl-dep">약관 동의</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/experienced01.html" target="_blank">../pages/en/main/careers/experienced01.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">기본 정보</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/experienced02.html" target="_blank">../pages/en/main/careers/experienced02.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">상세 정보</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/experienced03.html" target="_blank">../pages/en/main/careers/experienced03.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">서류제출</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/experienced04.html" target="_blank">../pages/en/main/careers/experienced04.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="2">외국 변호사, 해외 인턴</td>
+                                <td class="tbl-dep">목록</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/foreign01.html" target="_blank">../pages/en/main/careers/foreign01.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">지원하기</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/foreign02.html" target="_blank">../pages/en/main/careers/foreign02.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="2">기타전문가 지원</td>
+                                <td class="tbl-dep">약관 동의</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/etc_expert01.html" target="_blank">../pages/en/main/careers/etc_expert01.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">서류제출</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/etc_expert02.html" target="_blank">../pages/en/main/careers/etc_expert02.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="4">국내 인턴 지원</td>
+                                <td class="tbl-dep">약관 동의</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/intern01.html" target="_blank">../pages/en/main/careers/intern01.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">기본정보</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/intern02.html" target="_blank">../pages/en/main/careers/intern02.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">상세지원정보</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/intern03.html" target="_blank">../pages/en/main/careers/intern03.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">서류제출</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/intern04.html" target="_blank">../pages/en/main/careers/intern04.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="4">채용</td>
+                                <td class="tbl-dep">목록</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/index02.html" target="_blank">../pages/en/careers/index02.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">상세</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/detail02.html" target="_blank">../pages/en/careers/detail02.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="2">지원하기</td>
+                                <td class="tbl-dep">약관 동의</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/recruit01.html" target="_blank">../pages/en/careers/recruit01.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">지원 정보</td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/careers/recruit02.html" target="_blank">../pages/en/careers/recruit02.html</a></td>
+                                <td class="name"></td>
+                                <td class="state">삭제</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Careers END -->
+
+                <!-- Pro Bono START -->
+                <section class="progress-list" data-type="pc">
+                    <h2>#Pro Bono</h2>
+                    <div class="utils">
+                        <div class="util-group">
+
+                        </div>
+                        <div class="util-group">
+                            <a class="go-top" href="#content">TOP</a>
+                        </div>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 8%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 11%" />
+                            <col style="width: 22%" />
+                            <col style="width: 8%" />
+                            <col style="width: 8%" />
+                            <col style="width: 10%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tbl-no">NO.</th>
+                                <th class="tbl-dep">depth 1</th>
+                                <th class="tbl-dep">depth 2</th>
+                                <th class="tbl-dep">depth 3</th>
+                                <th class="tbl-dep">depth 4</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">법무법인 공익활동</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/probono/activity01.html" target="_blank">../pages/en/probono/activity01.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">화우공익재단</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/probono/activity02.html" target="_blank">../pages/en/probono/activity02.html</a></td>
+                                <td class="name">강성순</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Pro Bono END -->
+
+                <!-- Footer START -->
+                <section class="progress-list" data-type="pc">
+                    <h2>#Footer</h2>
+                    <div class="utils">
+                        <div class="util-group">
+
+                        </div>
+                        <div class="util-group">
+                            <a class="go-top" href="#content">TOP</a>
+                        </div>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 8%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 11%" />
+                            <col style="width: 22%" />
+                            <col style="width: 8%" />
+                            <col style="width: 8%" />
+                            <col style="width: 10%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tbl-no">NO.</th>
+                                <th class="tbl-dep">depth 1</th>
+                                <th class="tbl-dep">depth 2</th>
+                                <th class="tbl-dep">depth 3</th>
+                                <th class="tbl-dep">depth 4</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep" rowspan="3">법적고지</td>
+                                <td class="tbl-dep">유한책임</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/footer/legal01.html" target="_blank">../pages/en/footer/legal01.html</a></td>
+                                <td class="name">서도하</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">개인정보 처리방침</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/footer/legal02.html" target="_blank">../pages/en/footer/legal02.html</a></td>
+                                <td class="name">서도하</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-no"></td>
+                                <td class="tbl-dep">면책공고</td>
+                                <td class="tbl-dep"></td>
+                                <td class="tbl-dep"></td>
+                                <td class="url"><a href="../pages/en/footer/legal03.html" target="_blank">../pages/en/footer/legal03.html</a></td>
+                                <td class="name">서도하</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <!-- <ul>
+                                        <li>
+                                            <strong class="date"></strong>
+                                            <span></span>
+                                        </li>
+                                    </ul> -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Footer END -->
+
+
+
+                <!-- // 마크업리스트 -->
+            </section>
+            <!-- //contentPrimary -->
+        </div>
+        <!-- //container -->
+    </div>
+</body>
+
+</html>

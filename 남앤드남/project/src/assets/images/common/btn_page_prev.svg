@@ -1,0 +1,9 @@
+<svg id="btn_page_prev" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="btn_page_prev-2" data-name="btn_page_prev" transform="translate(820 2159) rotate(180)">
+    <g id="area" transform="translate(820 2159) rotate(180)" fill="red" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="36" height="36" stroke="none"/>
+      <rect x="0.5" y="0.5" width="35" height="35" fill="none"/>
+    </g>
+    <path id="패스_49" data-name="패스 49" d="M0,10,10,0,20,10" transform="translate(807 2131) rotate(90)" fill="none" stroke="#111" stroke-width="2"/>
+  </g>
+</svg>

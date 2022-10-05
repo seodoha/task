@@ -1,0 +1,27 @@
+<svg id="ico_bf_08" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2,.cls-3,.cls-4{fill:none}.cls-2,.cls-3,.cls-4,.cls-5{stroke:#111;stroke-width:2px}.cls-2,.cls-4,.cls-5{stroke-linejoin:round}.cls-4{stroke-linecap:round}.cls-5,.cls-6{fill:#fff}
+        </style>
+    </defs>
+    <g id="그룹_1709" data-name="그룹 1709" transform="translate(-446.112 -92)">
+        <path id="패스_6936" data-name="패스 6936" class="cls-2" d="m7557.624 1954.039-10.2 12.188 2.718 27.812h20.106v-5.79s3.176-3.61 3.176-7.065v-3.95h-9.139" transform="translate(-7081.311 -1795.039)"/>
+        <path id="패스_7154" data-name="패스 7154" class="cls-2" d="m7563.221 1954.039 10.2 12.188-2.718 27.812H7550.6v-5.79s-3.176-3.61-3.176-7.065v-4.041h9.667" transform="translate(-7027.311 -1795.039)"/>
+        <g id="그룹_1694" data-name="그룹 1694" transform="translate(476.112 105)">
+            <g id="그룹_1687" data-name="그룹 1687">
+                <path id="사각형_1105" data-name="사각형 1105" class="cls-3" d="M0 0h59.999v76.999H0z"/>
+            </g>
+            <path id="패스_6935" data-name="패스 6935" class="cls-3" d="M510 119v60.44" transform="translate(-480 -110.721)"/>
+            <path id="합치기_5" data-name="합치기 5" class="cls-4" d="M26.639 8.279H8.341L0 0h60l-8.342 8.279z" transform="translate(0 .001)"/>
+            <path id="합치기_6" data-name="합치기 6" class="cls-4" d="M26.639 0H8.341L0 8.279h60L51.658 0z" transform="translate(0 68.72)"/>
+        </g>
+        <g id="그룹_1695" data-name="그룹 1695" transform="translate(472.112 167)">
+            <path id="패스_6937" data-name="패스 6937" class="cls-5" d="m7556.261 1963.945 10.868-10.5a5.191 5.191 0 0 1 3.383-1.38c1.811.113 2.9 1.807 2.9 3.868s-2.9 4.913-2.9 4.913l-5.478 5.452s3.774.673 1.729 8.806" transform="translate(-7556.261 -1952.057)"/>
+            <ellipse id="타원_280" data-name="타원 280" class="cls-6" cx="3.269" cy="3.254" rx="3.269" ry="3.254" transform="translate(.676 13.255)"/>
+        </g>
+        <g id="그룹_1829" data-name="그룹 1829" transform="translate(522.961 167)">
+            <path id="패스_6937-2" data-name="패스 6937" class="cls-5" d="m7573.411 1963.945-10.868-10.5a5.191 5.191 0 0 0-3.383-1.38c-1.811.113-2.9 1.807-2.9 3.868s2.9 4.913 2.9 4.913l5.478 5.452s-3.774.673-1.729 8.806" transform="translate(-7556.26 -1952.057)"/>
+            <ellipse id="타원_280-2" data-name="타원 280" class="cls-6" cx="3.269" cy="3.254" rx="3.269" ry="3.254" transform="translate(9.936 13.255)"/>
+        </g>
+    </g>
+</svg>

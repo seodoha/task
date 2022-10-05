@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./pages/ko/includes/head.html', {
+        metaDescription: 'Footer',
+        pageTitle : 'Hwawoo - 법적고지',
+        cssPath : '../../../assets/ko/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="etc-wrap">
+        @@include('./pages/ko/includes/header.html')
+
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">법적고지</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">유한책임</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="유한책임 메뉴로 이동" aria-label="유한책임 메뉴로 이동" class="on">유한책임</a></li>
+                                        <li><a href="#" title="개인정보 처리방침 메뉴로 이동" aria-label="개인정보 처리방침 메뉴로 이동">개인정보 처리방침</a></li>
+                                        <li><a href="#" title="면책공고 메뉴로 이동" aria-label="면책공고 메뉴로 이동">면책공고</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02">법적고지</h3>
+                    </div>
+                </div>
+
+                <article class="arti01">
+                    <div class="inner-wrap">
+
+                        <div class="tab-wrap">
+                            <ul class="tab-list">
+                                <li><a href="javascript:;" class="on">유한책임</a></li>
+                                <li><a href="javascript:;">개인정보 처리방침</a></li>
+                                <li><a href="javascript:;">면책공고</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="terms-wrap">
+                                    <h4 class="typo-title-01">유한책임</h4>
+                                    <p class="terms-txt01">
+                                        법무법인(유)화우는 변호사법에 따라 설립된 법무법인(유)으로서, 담당변호사가 수임사건에 관하여 고의나 과실로 위임인에게 손해를 발생시키는 경우에는, 변호사법에 따라 그 담당변호사가 법무법인(유)화우와 연대하여 그 손해를 배상할 책임을 집니다.
+                                    </p>
+                                    <p class="terms-txt01">
+                                        담당변호사가 손해배상책임을 지는 경우, 그 수임사건에 관하여 담당변호사를 지휘.감독한 구성원변호사도 그 지휘.감독을 함에 있어서 주의를 게을리 하지 않은 경우를 제외하고 손해를 배상할 책임을 집니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        @@include('./pages/ko/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/ko/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

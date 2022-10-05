@@ -1,0 +1,45 @@
+<svg id="rnb_ico_03" xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
+    <defs>
+        <style>
+            .cls-1,.cls-3,.cls-4{fill:none}.cls-3,.cls-4{stroke:#fff}.cls-4{stroke-dasharray:2 2}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <path id="area" class="cls-1" d="M0 0h144v144H0z"/>
+    <g id="그룹_204" data-name="그룹 204" transform="translate(3.254 5.654)">
+        <circle id="타원_35" data-name="타원 35" cx="23.88" cy="23.88" r="23.88" transform="translate(45.218 43.818)" style="stroke-miterlimit:10;stroke:#fff;fill:none"/>
+        <g id="그룹_221" data-name="그룹 221" transform="translate(-1659.255 -740.654)">
+            <g id="타원_54" data-name="타원 54" class="cls-3" transform="translate(1716 739)">
+                <circle class="cls-5" cx="12" cy="12" r="12"/>
+                <circle class="cls-1" cx="12" cy="12" r="11.5"/>
+            </g>
+            <g id="타원_55" data-name="타원 55" class="cls-4" transform="translate(1757 756)">
+                <circle class="cls-5" cx="12" cy="12" r="12"/>
+                <circle class="cls-1" cx="12" cy="12" r="11.5"/>
+            </g>
+            <g id="타원_56" data-name="타원 56" class="cls-3" transform="translate(1773 796)">
+                <circle class="cls-5" cx="12" cy="12" r="12"/>
+                <circle class="cls-1" cx="12" cy="12" r="11.5"/>
+            </g>
+            <g id="타원_57" data-name="타원 57" class="cls-4" transform="translate(1756 836)">
+                <circle class="cls-5" cx="12" cy="12" r="12"/>
+                <circle class="cls-1" cx="12" cy="12" r="11.5"/>
+            </g>
+            <g id="타원_58" data-name="타원 58" class="cls-3" transform="translate(1716 852)">
+                <circle class="cls-5" cx="12" cy="12" r="12"/>
+                <circle class="cls-1" cx="12" cy="12" r="11.5"/>
+            </g>
+            <g id="타원_59" data-name="타원 59" class="cls-4" transform="translate(1675 836)">
+                <circle class="cls-5" cx="12" cy="12" r="12"/>
+                <circle class="cls-1" cx="12" cy="12" r="11.5"/>
+            </g>
+            <g id="타원_60" data-name="타원 60" class="cls-3" transform="translate(1659 796)">
+                <circle class="cls-5" cx="12" cy="12" r="12"/>
+                <circle class="cls-1" cx="12" cy="12" r="11.5"/>
+            </g>
+            <g id="타원_61" data-name="타원 61" class="cls-4" transform="translate(1676 755)">
+                <circle class="cls-5" cx="12" cy="12" r="12"/>
+                <circle class="cls-1" cx="12" cy="12" r="11.5"/>
+            </g>
+        </g>
+    </g>
+</svg>

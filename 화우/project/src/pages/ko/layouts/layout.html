@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../src/pages/ko/includes/guide/head.html', {title: '레이아웃 가이드 - Hwawoo'})
+
+<body>
+    <div id="wsg-wrap">
+        <header class="wsg-header">
+            <h1><a href="javascript:void(0);"><img src="../../../status/assets/ci.svg" alt=""></a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../../../status/iaList_ko.html">국문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_en.html">영문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_ch.html">중문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_jp.html">일문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_gr.html">독문 IA 목록</a></li>
+                    <li class="on"><a href="../../../pages/ko/layouts/layout.html">레이아웃</a></li>
+                    <li class=""><a href="../../../pages/ko/components/wsg.html">컴포넌트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <ul class="guideSubmenu">
+            <li><a href="./components.html" class="guideOn">서브 레이아웃</a></li>
+        </ul>
+
+        <div class="guideContainer">
+            <section class="sample">
+                <h2 class="sampleTitle">Sub Layout</h2>
+                <section id="container" style="background-color: #aaa;">
+
+                    <div class="description">
+                        <h4>#container</h4>
+                        <p>padding: 10rem 0 20rem;</p>
+                    </div>
+                    <section class="inner-wrap" style="background-color: #d1d1d1;">
+                        <div class="description">
+                            <h4>.inner-wrap</h4>
+                            <p>max-width: 160rem;</p>
+                            <p>margin: 0 auto;</p>
+                        </div>
+                    </section>
+                    <section class="inner-wrap narrow" style="background-color: #ccc;">
+                        <div class="description">
+                            <h4>.inner-wrap.narrow</h4>
+                            <p>max-width: 105.6rem;</p>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">서브 페이지 제목영역</h2>
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Solutions</a></li>
+                            <li><a href="#">분야별</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">공정거래</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="공정거래 메뉴로 이동" aria-label="공정거래 메뉴로 이동" class="on">공정거래</a></li>
+                                        <li><a href="#" title="형사 메뉴로 이동" aria-label="형사 메뉴로 이동">형사</a></li>
+                                        <li><a href="#" title="조세 메뉴로 이동" aria-label="조세 메뉴로 이동">조세</a></li>
+                                        <li><a href="#" title="베트남·동남아시아 메뉴로 이동" aria-label="베트남·동남아시아 메뉴로 이동">베트남·동남아시아</a></li>
+                                        <li><a href="#" title="인사·노동 메뉴로 이동" aria-label="인사·노동 메뉴로 이동">인사·노동</a></li>
+                                        <li><a href="#" title="지식재산권 메뉴로 이동" aria-label="지식재산권 메뉴로 이동">지식재산권</a></li>
+                                        <li><a href="#" title="기업자문 메뉴로 이동" aria-label="기업자문 메뉴로 이동">기업자문</a></li>
+                                        <li><a href="#" title="소송/중재 메뉴로 이동" aria-label="소송/중재 메뉴로 이동">소송/중재</a></li>
+                                        <li><a href="#" title="금융자본시장 메뉴로 이동" aria-label="금융자본시장 메뉴로 이동">금융자본시장</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="current box-tooltip">
+                                <button type="button">공정거래</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="공정거래 메뉴로 이동" aria-label="공정거래 메뉴로 이동" class="on">공정거래</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-01">공정거래</h3>
+                    </div>
+                </div>
+                <div class="description">
+                    <h3>GUIDE</h3>
+                    <p>
+                        - 기본 margin-bottom 15rem<br>
+                    </p>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/ko/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zn">
+
+<head>
+    @@include('./pages/ch/includes/head.html', {
+        metaDescription: 'Footer',
+        pageTitle : 'Hwawoo - 隐私政策',
+        cssPath : '../../../assets/ch/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="etc-wrap">
+        @@include('./pages/ch/includes/header.html')
+
+        <main id="main">
+            <section id="container">
+                <h2 class="hidden">본문</h2>
+
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">隐私政策</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">有限责任</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="有限责任 메뉴로 이동" aria-label="有限责任 메뉴로 이동" class="on">有限责任</a></li>
+                                        <li><a href="#" title="隐私政策 메뉴로 이동" aria-label="隐私政策 메뉴로 이동">隐私政策</a></li>
+                                        <li><a href="#" title="免责声明 메뉴로 이동" aria-label="免责声明 메뉴로 이동">免责声明</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02">隐私政策</h3>
+                    </div>
+                </div>
+
+                <article class="arti01">
+                    <div class="inner-wrap">
+
+                        <div class="tab-wrap">
+                            <ul class="tab-list">
+                                <li><a href="javascript:;" class="on">有限责任</a></li>
+                                <li><a href="javascript:;">隐私政策</a></li>
+                                <li><a href="javascript:;">免责声明</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="terms-wrap">
+                                    <h4 class="typo-title-01">有限责任</h4>
+                                    <p class="terms-txt01">
+                                        法务法人(有）和友是根据《律师法》成立的法务法人(有）。就接手案件, 因代理律师故意或过失而给委托人造成损害的, 该代理律师将根据《律师法》之规定, 与法务法人(有）和友连带承担损害赔偿责任。
+                                    </p>
+                                    <p class="terms-txt01">
+                                        代理律师承担损害赔偿责任的, 就该接手案件, 对代理律师实施指导和监督的成员律师也将承担损害赔偿责任, 除非在其指导和监督的过程中, 未疏于履行注意职责。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        @@include('./pages/ch/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/ch/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

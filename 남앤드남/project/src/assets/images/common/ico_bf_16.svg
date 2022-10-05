@@ -1,0 +1,16 @@
+<svg id="ico_bf_16" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}.cls-3{fill:#111;font-size:21px;font-family:Pretendard-Medium,Pretendard;font-weight:500}
+        </style>
+    </defs>
+    <g id="그룹_1830" data-name="그룹 1830" transform="translate(1.793 -.508)">
+        <path id="패스_7155" data-name="패스 7155" class="cls-2" d="m200 59.81 9.905-9.905L200 40" transform="translate(-105.698 -23.492)"/>
+        <path id="패스_7156" data-name="패스 7156" class="cls-2" d="M32 90.414C32 75.826 45.581 64 62.333 64H123" transform="translate(-18.793 -37.586)"/>
+        <path id="패스_7157" data-name="패스 7157" class="cls-2" d="M41.905 168 32 177.905l9.905 9.905" transform="translate(-18.793 -83.302)"/>
+        <path id="패스_7158" data-name="패스 7158" class="cls-2" d="M123 128c0 14.588-13.581 26.414-30.333 26.414H32" transform="translate(-18.793 -59.81)"/>
+        <text id="C" class="cls-3" transform="translate(78.207 68.508)"><tspan x="-7.386" y="0">C</tspan></text>
+        <text id="B" class="cls-3" transform="translate(58.207 68.508)"><tspan x="-6.563" y="0">B</tspan></text>
+        <text id="A" class="cls-3" transform="translate(38.207 68.508)"><tspan x="-7.027" y="0">A</tspan></text>
+    </g>
+</svg>

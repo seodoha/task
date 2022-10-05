@@ -1,0 +1,21 @@
+<svg id="ico_bf_18" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="그룹_1739" data-name="그룹 1739" transform="translate(-447 -89)">
+        <g id="그룹_1737" data-name="그룹 1737" transform="translate(472 115)">
+            <path id="사각형_1155" data-name="사각형 1155" class="cls-2" transform="translate(0 -1)" d="M0 0h70v20H0z"/>
+            <circle id="타원_358" data-name="타원 358" cx="3" cy="3" r="3" transform="translate(9 6)"/>
+        </g>
+        <g id="그룹_1736" data-name="그룹 1736" transform="translate(472 140)">
+            <path id="사각형_1156" data-name="사각형 1156" class="cls-2" transform="translate(0 -1)" d="M0 0h70v20H0z"/>
+            <circle id="타원_357" data-name="타원 357" cx="3" cy="3" r="3" transform="translate(9 6)"/>
+        </g>
+        <g id="그룹_1738" data-name="그룹 1738" transform="translate(472 165)">
+            <path id="사각형_1156-2" data-name="사각형 1156" class="cls-2" transform="translate(0 -1)" d="M0 0h70v20H0z"/>
+            <circle id="타원_350" data-name="타원 350" cx="3" cy="3" r="3" transform="translate(9 6)"/>
+        </g>
+    </g>
+</svg>

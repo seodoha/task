@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        @@include('./pages/jp/includes/head.html', { metaDescription: 'The Firm', pageTitle : 'Hwawoo - 소개', cssPath :
+        '../../../assets/jp/css/common.min.css' })
+    </head>
+
+    <body>
+        <!--Menu별 클래스 추가 -->
+        <div id="wrap" class="firm-wrap">
+            @@include('./pages/jp/includes/header.html')
+
+            <!--Menu의 각 페이지별 클래스 추가-->
+            <main id="main" class="intro-wrap">
+                <section id="container">
+                    <h2 class="hidden">본문</h2>
+
+                    <div class="page-heading-layout">
+                        <div class="inner-wrap">
+                            <ol class="breadcrumbs">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">The Firm</a></li>
+                                <li class="current box-tooltip">
+                                    <button type="button">当社の紹介</button>
+                                    <div class="view-tooltip">
+                                        <ul class="custom-scroll">
+                                            <li>
+                                                <a href="#" title="当社の紹介 메뉴로 이동" aria-label="当社の紹介 메뉴로 이동" class="on">当社の紹介</a>
+                                            </li>
+                                            <li><a href="#" title="沿革 메뉴로 이동" aria-label="沿革 메뉴로 이동">沿革</a></li>
+                                            <li><a href="#" title="受賞 메뉴로 이동" aria-label="受賞 메뉴로 이동">受賞</a></li>
+                                            <li><a href="#" title="海外事務所 메뉴로 이동" aria-label="海外事務所 메뉴로 이동">海外事務所</a></li>
+                                            <li><a href="#" title="アクセス 메뉴로 이동" aria-label="アクセス 메뉴로 이동">アクセス</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ol>
+                            <h3 class="typo-heading-02">当社の紹介</h3>
+                            <!--2022.09.20 탭추가-->
+                            <div class="tab-wrap depth-tab">
+                                <ul class="tab-list underline">
+                                    <li><a href="#" class="on">当社の紹介</a></li>
+                                    <li><a href="#">沿革</a></li>
+                                    <li><a href="#">受賞</a></li>
+                                    <li><a href="#">海外事務所</a></li>
+                                    <li><a href="#">アクセス</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of page-heading-layout-->
+
+                    <article class="box-visual">
+                        <h3 class="typo-heading-01">
+                            <em data-aos="fade-right" data-aos-duration="1000">Legal Services</em>
+                            <em data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400"><span>of the</span> Highest Caliber</em>
+                        </h3>
+                        <div class="bg"></div>
+                    </article>
+
+                    <article class="box-intro-txt">
+                        <span class="circle-ani"></span>
+                        <strong class="before-txt" data-aos="fade-right" data-aos-duration="1000">
+                            Performance.<br>
+                            Managing risk<br>
+                            Results
+                        </strong>
+                        <ul class="box-contents-wrap">
+                            <li>
+                                <div class="thumb" data-aos="fade-down" data-aos-duration="1000"><img src="../../../assets/jp/images/sub/intro01.png" alt="" /></div>
+                                <dl data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                                    <dt class="typo-heading-02">Breakthrough <br>Innovation</dt>
+                                    <dd>
+                                        急変する産業構造と企業法務環境を予測する専門家の洞察力と有機的な協<br class="pc">
+                                        業を通じて革新的なワンストップ総合法律サービスを提供します。
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <div class="thumb" data-aos="fade-left" data-aos-duration="1000"><img src="../../../assets/jp/images/sub/intro02.png" alt="" /></div>
+                                <dl data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                                    <dt class="typo-heading-02">Client Focus</dt>
+                                    <dd>
+                                        お客様の立場で考えます。 オーダーメイド型総合法<br class="pc">
+                                        律サービスを提供し、お客様の信頼と共に成長してい<br class="pc">
+                                        ます。
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <div class="thumb" data-aos="fade-right" data-aos-duration="1000"><img src="../../../assets/jp/images/sub/intro03.png" alt="" /></div>
+                                <dl data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                                    <dt class="typo-heading-02">Optimal Solution</dt>
+                                    <dd>
+                                        新しい政策変化と企業の成長戦略に歩調を合わせ、変化による法的リスク解決<br class="pc">のための最適なソリューションを提供します。
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </article>
+
+                </section>
+            </main>
+
+            @@include('./pages/jp/includes/footer.html')
+        </div>
+
+        <!-- SCRIPT IMPORT -->
+        @@include('./pages/jp/includes/scriptImport.html', {pageMain : false,})
+    </body>
+</html>

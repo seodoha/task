@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/ko/include/head.html',{
+        pageTitle : '남앤드남 | 페이지 없음',
+		pageMain : false
+	})
+    </head>
+    <body>
+        <div id="wrap" class="wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/ko/include/header.html',{
+                    gnbLocation : 'business,0,0',
+                    lnbLocation : 'none'
+            })
+            <!-- container -->
+            <div id="container" class="container footerFix"><!-- no scrolling-->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap">
+                        <div class="error-wrap">
+                            <div class="error-inner">
+                                <div class="image"><img src="/assets/images/common/ico_404.svg" alt=""></div>
+                                <div class="title pc">원하시는 페이지를 찾을 수 없습니다.</div>
+                                <div class="title mobile">원하시는 페이지를<br>찾을 수 없습니다.</div>
+                                <div class="text">
+                                    찾으시는 페이지가 없거나 오류가 발생하였습니다.<br>
+                                    입력하신 주소가 정확한지 확인해주세요.
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btns w-xlg h-lg">메인으로 가기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--// container contents -->
+            </div>
+            <!--// container -->
+            @@include('./pages/ko/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        @@include('./pages/ko/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

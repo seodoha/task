@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../src/pages/en/includes/guide/head.html', {title: '게시판 가이드 - Hwawoo'});
+
+<body>
+    <div id="wsg-wrap" class="wsg">
+        <header class="wsg-header">
+            <h1><a href="javascript:void(0);"><img src="../../../status/assets/ci.svg" alt=""></a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../../../status/iaList_ko.html">국문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_en.html">영문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_ch.html">중문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_jp.html">일문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_gr.html">독문 IA 목록</a></li>
+                    <li class=""><a href="../layouts/layout.html">레이아웃</a></li>
+                    <li class="on"><a href="../components/components.html">컴포넌트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <ul class="guideSubmenu">
+            <li><a href="./wsg.html">WSG</a></li>
+            <li><a href="./button.html">버튼</a></li>
+            <li><a href="./form.html">폼요소</a></li>
+            <li><a href="./layerpopup.html">레이어팝업</a></li>
+            <li><a href="./tab.html">탭</a></li>
+            <li><a href="./accordion.html">아코디언</a></li>
+            <li><a href="./slider.html">슬라이더</a></li>
+            <li><a href="./board.html" class="guideOn">게시판</a></li>
+            <!-- <li><a href="./table.html">테이블</a></li> -->
+        </ul>
+
+        <div class="guideContainer">
+            <section class="sample">
+                <h2 class="sampleTitle">Seraching dropdown</h2>
+                <div class="sampleContent">
+
+                    <div class="box-input-wrap with-select">
+                        <div class="box-select">
+                            <select>
+                                <option value="">Practice Areas 선택</option>
+                                <option value="">Solutions</option>
+                            </select>
+                        </div>
+                        <div class="box-input ty-search">
+                            <input type="text" placeholder="Please enter a search Term." title="Search어 입력">
+                            <button class="icon-text-reset"><span>초기화</span></button>
+                            <button class="icon-search" type="search" title="Search" aria-label="Search"><span>Search</span></button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">Text List</h2>
+                <div class="sampleContent">
+                    <ul class="board-text-list">
+                        <li>
+                            <div class="box-state ing"><span>접수중</span></div>
+                            <div class="box-title">
+                                <a href="#">
+                                    <strong class="tit">중대재해 대응 TF</strong>
+                                    <p>법무법인(유) 화우의 중대재해 대응 TF를 소개합니다.</p>
+                                </a>
+                            </div>
+                            <div class="box-date">2022.04.18</div>
+                        </li>
+                        <li>
+                            <div class="box-state"><span>종료</span></div>
+                            <div class="box-title">
+                                <a href="#">
+                                    <strong class="tit">[로펌 패트롤] 법무법인 화우-The Legal 500 공통 웨비나</strong>
+                                    <p>법무법인(유) 화우는 지난 5월 4일 세계적인 로펌 평가기관 Legal500과 ‘메타버스, NFT 및 블록체인 관련 분쟁대응 전략'을 주제로 웨비나를 공동 주최했습니다</p>
+                                </a>
+                            </div>
+                            <div class="box-date">2022.04.18</div>
+                        </li>
+                        <li>
+                            <div class="box-state"><span>접수마감</span></div>
+                            <div class="box-title">
+                                <a href="#">
+                                    <strong class="tit">[로펌 패트롤] 웨비나 Taxonomy에서 찾아보는 혁신경제</strong>
+                                    <p>법무법인(유) 화우는 매일경제와 공동으로 “Taxonomy에서 찾아보는 혁신경제” 웨비나를 개최할 예정입니다.</p>
+                                </a>
+                            </div>
+                            <div class="box-date">2022.04.18</div>
+                        </li>
+                        <li>
+                            <div class="box-state ing"><span>접수중</span></div>
+                            <div class="box-title">
+                                <a href="#">
+                                    <strong class="tit">[로펌 패트롤] 법무법인 화우, 부동산건설 아우른 융복합 맞춤형 서비스</strong>
+                                    <p>법무법인 화우 부동산·건설 그룹의 업무 성과와 현황을 소개한 기사입니다.</p>
+                                </a>
+                            </div>
+                            <div class="box-date">2022.04.18</div>
+                        </li>
+                        <li>
+                            <div class="box-state ing"><span>접수중</span></div>
+                            <div class="box-title">
+                                <a href="#">
+                                    <strong class="tit">[로펌 패트롤] 법무법인 화우, 부동산건설 아우른 융복합 맞춤형 서비스</strong>
+                                    <p>법무법인 화우 부동산·건설 그룹의 업무 성과와 현황을 소개한 기사입니다.</p>
+                                </a>
+                            </div>
+                            <div class="box-date">2022.04.18</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">Text List ty01</h2>
+                <div class="sampleContent">
+                    <ul class="board-text-list ty01">
+                        <li>
+                            <a href="#">
+                                <strong class="tit">코오롱인더스트리의 골프웨어 사업부문 물적분할 자문</strong>
+                                <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                <div class="box-util">
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong class="tit">코오롱인더스트리의 골프웨어 사업부문 물적분할 자문</strong>
+                                <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                <div class="box-util">
+                                    <ul class="list-hashtag">
+                                        <li>#기업 인수합병</li>
+                                    </ul>
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong class="tit">법무법인 화우, "4차 산업 중소형 M&amp;A딜 주목"</strong>
+                                <p class="txt">법무법인 화우가 핀테크, 플랫폼, 모빌리티 등 4차 산업 관련 인수합병(M&amp;A) 딜에 주목하고 있다는 김지욱 변호사의 인터뷰 기사입니다.</p>
+                                <div class="box-util source-util">
+                                    <span class="news-source">팍스넷 뉴스</span>
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="box-document-wrap">
+                                <div class="box-document-info">
+                                    <strong class="tit">Measuring the ESG impact and valuation in South Korea (IFLR Asia ESG Report 2022)</strong>
+                                    <p class="document-txt mobile">세계적인 권위의 금융/파이낸스 전문 계간지 International Financial Law Review(IFLR)가 ...</p>
+                                    <div class="box-util">
+                                        <ul class="list-writer-info">
+                                            <li>신승국, 이근우</li>
+                                            <li>International Financial Law Review</li>
+                                        </ul>
+                                        <span class="date">2022.04.18</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-circle-ani btn-download" download=""><i></i>다운로드</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">Text List ty02</h2>
+                <div class="sampleContent">
+                    <ul class="board-text-list ty02">
+                        <li>
+                            <div class="box-document-wrap">
+                                <a href="#" class="box-document-area">
+                                    <div class="box-thumbnail">
+                                        <img src="defaultimg.jpg" onerror="this.src='../../../assets/en/images/temp/default01.png';">
+                                    </div>
+                                    <div class="box-document-info">
+                                        <strong class="tit">Measuring the ESG impact and valuation in South Korea (IFLR Asia ESG Report 2022)</strong>
+                                        <p class="document-txt">세계적인 권위의 금융/파이낸스 전문 계간지 International Financial Law Review(IFLR)가 최근 IFLR Asia ESG Report 2022 특집호를 발간한 가운데 법무법인(유) 화우 ESG센터 신승국 외국변호사, 이 ...</p>
+                                        <div class="box-util">
+                                            <ul class="list-writer-info">
+                                                <li>신승국, 이근우</li>
+                                                <li>International Financial Law Review</li>
+                                            </ul>
+                                            <span class="date">2022.04.18</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn-circle-ani btn-download" download=""><i></i>다운로드</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box-document-wrap">
+                                <a href="#" class="box-document-area">
+                                    <div class="box-thumbnail">
+                                        <img src="../../../assets/en/images/temp/highlights01.png" alt="">
+                                    </div>
+                                    <div class="box-document-info">
+                                        <strong class="tit">Measuring the ESG impact and valuation in South Korea (IFLR Asia ESG Report 2022)</strong>
+                                        <p class="document-txt">세계적인 권위의 금융/파이낸스 전문 계간지 International Financial Law Review(IFLR)가 ...</p>
+                                        <div class="box-util">
+                                            <ul class="list-writer-info">
+                                                <li>임승순, 김용택</li>
+                                                <li>박영사</li>
+                                            </ul>
+                                            <span class="date">2022.04.18</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn-circle-ani btn-download" download=""><i></i>다운로드</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box-document-wrap">
+                                <a href="#" class="box-document-area">
+                                    <div class="box-thumbnail">
+                                        <img src="../../../assets/en/images/temp/highlights02.png" alt="">
+                                    </div>
+                                    <div class="box-document-info">
+                                        <strong class="tit">Measuring the ESG impact and valuation in South Korea (IFLR Asia ESG Report 2022)</strong>
+                                        <p class="document-txt">
+                                            세계적인 권위의 금융/파이낸스 전문 계간지 International Financial Law Review(IFLR)가 최근 IFLR Asia ESG Report 2022 특집호를 발간한 가운데 법무법인(유) 화우 ESG센터 신승국 외국변호사, 이 ...
+                                            세계적인 권위의 금융/파이낸스 전문 계간지 International Financial Law Review(IFLR)가 최근 IFLR Asia ESG Report 2022 특집호를 발간한 가운데 법무법인(유) 화우 ESG센터 신승국 외국변호사, 이 ...
+                                            세계적인 권위의 금융/파이낸스 전문 계간지 International Financial Law Review(IFLR)가 최근 IFLR Asia ESG Report 2022 특집호를 발간한 가운데 법무법인(유) 화우 ESG센터 신승국 외국변호사, 이 ...
+                                        </p>
+                                        <div class="box-util">
+                                            <ul class="list-writer-info">
+                                                <li>임승순, 김용택</li>
+                                                <li>박영사</li>
+                                            </ul>
+                                            <span class="date">2022.04.18</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn-circle-ani btn-download" download=""><i></i>다운로드</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box-document-wrap">
+                                <a href="#" class="box-document-area">
+                                    <div class="box-thumbnail">
+                                        <img src="../../../assets/en/images/temp/highlights03.png" alt="">
+                                    </div>
+                                    <div class="box-document-info">
+                                        <strong class="tit">Measuring the ESG impact and valuation in South Korea (IFLR Asia ESG Report 2022)</strong>
+                                        <p class="document-txt">세계적인 권위의 금융/파이낸스 전문 계간지 International Financial Law Review(IFLR)가 ...</p>
+                                        <div class="box-util">
+                                            <ul class="list-writer-info">
+                                                <li>임승순, 김용택</li>
+                                                <li>박영사</li>
+                                            </ul>
+                                            <span class="date">2022.04.18</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn-circle-ani btn-download" download=""><i></i>다운로드</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box-document-wrap">
+                                <a href="#" class="box-document-area">
+                                    <div class="box-thumbnail">
+                                        <img src="../../../assets/en/images/temp/highlights04.png" alt="">
+                                    </div>
+                                    <div class="box-document-info">
+                                        <strong class="tit">Measuring the ESG impact and valuation in South Korea (IFLR Asia ESG Report 2022)</strong>
+                                        <p class="document-txt">
+                                            세계적인 권위의 금융/파이낸스 전문 계간지 International Financial Law Review(IFLR)가 ...
+                                            세계적인 권위의 금융/파이낸스 전문 계간지 International Financial Law Review(IFLR)가 ...
+                                            세계적인 권위의 금융/파이낸스 전문 계간지 International Financial Law Review(IFLR)가 ...
+                                        </p>
+                                        <div class="box-util">
+                                            <ul class="list-writer-info">
+                                                <li>임승순, 김용택</li>
+                                                <li>박영사</li>
+                                            </ul>
+                                            <span class="date">2022.04.18</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn-circle-ani btn-download" download=""><i></i>다운로드</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">Card List ty01</h2>
+                <div class="sampleContent">
+                    <ul class="board-card-list">
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="card-text-info">
+                                    <strong class="tit">코오롱인더스트리의 골프웨어 사업부문 물적분할 자문</strong>
+                                    <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                    <span class="date">2022.04.18 (목) 14:00 ~ 16:00</span>
+                                </div>
+                            </a>
+                            <div class="box-btn">
+                                <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                            </div>
+                        </li>
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="card-text-info">
+                                    <strong class="tit">에셋원자산운용 매각 자문</strong>
+                                    <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                            </a>
+                            <div class="box-btn">
+                                <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                            </div>
+                        </li>
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="card-text-info">
+                                    <strong class="tit">코오롱인더스트리의 골프웨어 사업부문 물적분할 자문</strong>
+                                    <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                            </a>
+                            <div class="box-btn">
+                                <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                            </div>
+                        </li>
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="card-text-info">
+                                    <strong class="tit">에셋원자산운용 매각 자문</strong>
+                                    <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                            </a>
+                            <div class="box-btn">
+                                <a href="#" class="btn-circle-ani btn-view-all"><i></i>attend</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">Card List ty02</h2>
+                <div class="sampleContent">
+                    <ul class="board-card-list ty02">
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="util">
+                                    <em class="board-type">In the Media</em>
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                                <strong class="tit">찻잔 속 태풍?…벤처투자 마중물 'CVC' 단 1곳뿐</strong>
+                            </a>
+                        </li>
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="util">
+                                    <em class="board-type">Firrm News</em>
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                                <strong class="tit">Who’s Who Legal: Korea 2022, 10명 전문가 Areas National Leader 선정</strong>
+                            </a>
+                        </li>
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="util">
+                                    <em class="board-type">Newsletters</em>
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                                <strong class="tit">신정부 국정과제 - CVC 규제완화 및 벤처투자 활성화</strong>
+                            </a>
+                        </li>
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="util">
+                                    <em class="board-type">Publications</em>
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                                <strong class="tit">Lexology Getting The Deal Through: Competition in Digital Markets 2022 ...</strong>
+                            </a>
+                        </li>
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="util">
+                                    <em class="board-type">업무사례</em>
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                                <strong class="tit">로펌업계 첫 ‘기업형 벤처캐피털’ 전문팀 꾸린 법무법인 화우… “해외투자 비율 ...</strong>
+                            </a>
+                        </li>
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="util">
+                                    <em class="board-type">In the Media</em>
+                                    <span class="date">2022.04.18</span>
+                                </div>
+                                <strong class="tit">로펌업계 첫 ‘기업형 벤처캐피털’ 전문팀 꾸린 법무법인 화우… “해외투자 비율 ...</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">Card List ty03</h2>
+                <div class="sampleContent">
+                    <ul class="board-card-list ty03">
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="card-text-info">
+                                    <strong class="tit">코오롱인더스트리의 골프웨어 사업부문 물적분할 자문</strong>
+                                    <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                </div>
+                            </a>
+                            <div class="box-util">
+                                <ul class="list-hashtag">
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                </ul>
+                                <span class="date">2022.04.18</span>
+                            </div>
+                        </li>
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="card-text-info">
+                                    <strong class="tit">에셋원자산운용 매각 자문</strong>
+                                    <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                </div>
+                            </a>
+                            <div class="box-util">
+                                <ul class="list-hashtag">
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                </ul>
+                                <span class="date">2022.04.18</span>
+                            </div>
+                        </li>
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="card-text-info">
+                                    <strong class="tit">에셋원자산운용 매각 자문</strong>
+                                    <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                </div>
+                            </a>
+                            <div class="box-util">
+                                <ul class="list-hashtag">
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                </ul>
+                                <span class="date">2022.04.18</span>
+                            </div>
+                        </li>
+                        <li class="box-board-card">
+                            <a href="#">
+                                <div class="card-text-info">
+                                    <strong class="tit">코오롱인더스트리의 골프웨어 사업부문 물적분할 자문</strong>
+                                    <p class="txt">법무법인(유)화우는 코오롱인더스트리의 골프웨어 브랜드 ‘왁 (WACC)’ 사업부문을 물적분할하는 거래를 자문하였습니다.</p>
+                                </div>
+                            </a>
+                            <div class="box-util">
+                                <ul class="list-hashtag">
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                    <li><a href="#">#기업 인수합병</a></li>
+                                </ul>
+                                <span class="date">2022.04.18</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">List ty01</h2>
+                <div class="sampleContent">
+                    <div class="list-lawyer-wrap wide-bg">
+                        <div class="list-lawyer ty01">
+                            <div class="box-info-lawyer">
+                                <a href="#">
+                                    <div class="thumbnail">
+                                        <img src="../../../assets/en/images/temp/profile01.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <strong class="name">Hoil Yoon</strong>
+                                        <span class="grade">Managing Partner</span>
+                                        <ul class="contact">
+                                            <li>
+                                                <em>T.</em>
+                                                <span class="tel">(+82) 2 6003 8582</span>
+                                            </li>
+                                            <li>
+                                                <em>E.</em>
+                                                <span class="email">mskwak@hwawoo.com</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="box-info-lawyer">
+                                <a href="#">
+                                    <div class="thumbnail">
+                                        <img src="../../../assets/en/images/temp/profile02.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <strong class="name">김성식</strong>
+                                        <span class="grade">Managing Partner</span>
+                                        <ul class="contact">
+                                            <li>
+                                                <em>T.</em>
+                                                <span class="tel">(+82) 2 6003 8582</span>
+                                            </li>
+                                            <li>
+                                                <em>E.</em>
+                                                <span class="email">mskwak@hwawoo.com</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="box-info-lawyer">
+                                <a href="#">
+                                    <div class="thumbnail">
+                                        <img src="../../../assets/en/images/temp/profile03.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <strong class="name">김재영</strong>
+                                        <span class="grade">Managing Partner</span>
+                                        <ul class="contact">
+                                            <li>
+                                                <em>T.</em>
+                                                <span class="tel">(+82) 2 6003 8582</span>
+                                            </li>
+                                            <li>
+                                                <em>E.</em>
+                                                <span class="email">mskwak@hwawoo.com</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">List ty02</h2>
+                <div class="sampleContent">
+                    <div class="list-lawyer-wrap">
+                        <div class="list-lawyer ty02">
+                            <div class="box-info-lawyer">
+                                <a href="#">
+                                    <div class="thumbnail">
+                                        <img src="../../../assets/en/images/temp/profile01.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <strong class="name">Hoil Yoon</strong>
+                                        <span class="grade">Managing Partner</span>
+                                        <ul class="contact">
+                                            <li>
+                                                <em>T.</em>
+                                                <span class="tel">(+82) 2 6003 8582</span>
+                                            </li>
+                                            <li>
+                                                <em>E.</em>
+                                                <span class="email">mskwak@hwawoo.com</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="box-info-lawyer">
+                                <a href="#">
+                                    <div class="thumbnail">
+                                        <img src="../../../assets/en/images/temp/profile02.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <strong class="name">김성식</strong>
+                                        <span class="grade">Managing Partner</span>
+                                        <ul class="contact">
+                                            <li>
+                                                <em>T.</em>
+                                                <span class="tel">(+82) 2 6003 8582</span>
+                                            </li>
+                                            <li>
+                                                <em>E.</em>
+                                                <span class="email">mskwak@hwawoo.com</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="box-info-lawyer">
+                                <a href="#">
+                                    <div class="thumbnail">
+                                        <img src="../../../assets/en/images/temp/profile03.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <strong class="name">김재영</strong>
+                                        <span class="grade">Managing Partner</span>
+                                        <ul class="contact">
+                                            <li>
+                                                <em>T.</em>
+                                                <span class="tel">(+82) 2 6003 8582</span>
+                                            </li>
+                                            <li>
+                                                <em>E.</em>
+                                                <span class="email">mskwak@hwawoo.com</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="box-info-lawyer">
+                                <a href="#">
+                                    <div class="thumbnail">
+                                        <img src="../../../assets/en/images/temp/profile02.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <strong class="name">김철호</strong>
+                                        <span class="grade">Managing Partner</span>
+                                        <ul class="contact">
+                                            <li>
+                                                <em>T.</em>
+                                                <span class="tel">(+82) 2 6003 8582</span>
+                                            </li>
+                                            <li>
+                                                <em>E.</em>
+                                                <span class="email">mskwak@hwawoo.com</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="box-btn box-board-more">
+                            <button type="button" class="btn-circle-ani btn-fold"><i></i>MORE</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/en/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<svg id="btn_indi_pause" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <style>
+            .cls-2{fill:#fff}
+        </style>
+    </defs>
+    <g id="그룹_248" data-name="그룹 248" transform="translate(13.293 10.066)">
+        <path id="사각형_275" data-name="사각형 275" class="cls-2" transform="translate(-.293 -.066)" d="M0 0h2v16H0z"/>
+        <path id="사각형_276" data-name="사각형 276" class="cls-2" transform="translate(7.707 -.066)" d="M0 0h2v16H0z"/>
+    </g>
+</svg>

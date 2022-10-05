@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../src/pages/en/includes/guide/head.html', {title: '폼 요소 가이드 - Hwawoo'});
+
+<body>
+    <div id="wsg-wrap" class="wsg">
+        <header class="wsg-header">
+            <h1><a href="javascript:void(0);"><img src="../../../status/assets/ci.svg" alt=""></a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../../../status/iaList_ko.html">국문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_en.html">영문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_ch.html">중문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_jp.html">일문 IA 목록</a></li>
+                    <li><a href="../../../status/iaList_gr.html">독문 IA 목록</a></li>
+                    <li class=""><a href="../layouts/layout.html">레이아웃</a></li>
+                    <li class="on"><a href="../components/components.html">컴포넌트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <ul class="guideSubmenu">
+            <li><a href="./wsg.html">WSG</a></li>
+            <li><a href="./button.html">버튼</a></li>
+            <li><a href="./form.html" class="guideOn">폼요소</a></li>
+            <li><a href="./layerpopup.html">레이어팝업</a></li>
+            <li><a href="./tab.html">탭</a></li>
+            <li><a href="./accordion.html">아코디언</a></li>
+            <li><a href="./slider.html">슬라이더</a></li>
+            <li><a href="./board.html">게시판</a></li>
+            <!-- <li><a href="./table.html">테이블</a></li> -->
+        </ul>
+
+        <div class="guideContainer">
+            <section class="sample">
+                <h2 class="sampleTitle">Text Field</h2>
+                <div class="sampleContent">
+                    <div class="box">
+                        <h3><strong>일반 Text Field</strong></h3>
+                        <div class="box-input-wrap">
+                            <div class="box-input">
+                                <input type="text" placeholder="Please enter a search Term." title="Search어 입력">
+                                <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h3><strong>Search Text Field</strong></h3>
+                        <div class="box-input-wrap">
+                            <div class="box-input ty-search">
+                                <input type="text" placeholder="Please enter a search Term." title="Search어 입력">
+                                <button type="button" class="icon-text-reset"><span>초기화</span></button>
+                                <button type="search" class="icon-search-big"><span>Search</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                        <h3>GUIDE</h3>
+                        <p>
+                            위의 마크업 구조로 input 스타일 구현. <br>
+                            input 박스 입력 활성화 시 텍스트 리셋 버튼 활성화.<br>
+                            Search input 박스에는 "box-inupt-wrap" 앨리먼트에 "ty-search" 클래스 추가
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">Checkbox</h2>
+                <div class="box-check-wrap">
+                    <div class="check-wrap">
+                        <label for="state">
+                            <input type="checkbox" id="state" title="진행중만 보기">
+                            <i class="icon-check"></i>
+                            <span class="chk-txt">진행중만 보기</span>
+                        </label>
+                    </div>
+                    <div class="check-wrap">
+                        <label for="state-01">
+                            <input type="checkbox" id="state-01" title="진행중만 보기" checked>
+                            <i class="icon-check"></i>
+                            <span class="chk-txt">진행중만 보기</span>
+                        </label>
+                    </div>
+                    <div class="check-wrap">
+                        <label for="stateOff">
+                            <input type="checkbox" id="stateOff" title="진행중만 보기" disabled>
+                            <i class="icon-check"></i>
+                            <span class="chk-txt">진행중만 보기</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">Radio</h2>
+                <div class="sampleContent">
+                    <h3><strong>일반</strong></h3>
+                    <div class="box-radio-wrap">
+                        <div class="radio-wrap">
+                            <label for="category-01">
+                                <input type="radio" id="category-01" name="category" checked>
+                                <span class="radio-txt">사법시험</span>
+                            </label>
+                        </div>
+                        <div class="radio-wrap">
+                            <label for="category-02">
+                                <input type="radio" id="category-02" name="category">
+                                <span class="radio-txt">변호사 시험</span>
+                            </label>
+                        </div>
+                    </div>
+                    <br><br>
+                    <h3><strong>ty02</strong></h3>
+                    <div class="box-radio-wrap ty02">
+                        <div class="radio-wrap">
+                            <label for="m1">
+                                <input type="radio" id="m1" name="military" checked="">
+                                <span class="radio-txt">비대상</span>
+                            </label>
+                        </div>
+                        <div class="radio-wrap">
+                            <label for="m2">
+                                <input type="radio" id="m2" name="military">
+                                <span class="radio-txt">군필</span>
+                            </label>
+                        </div>
+                        <div class="radio-wrap">
+                            <label for="m3">
+                                <input type="radio" id="m3" name="military">
+                                <span class="radio-txt">미필</span>
+                            </label>
+                        </div>
+                        <div class="radio-wrap">
+                            <label for="m4">
+                                <input type="radio" id="m4" name="military">
+                                <span class="radio-txt">면제</span>
+                            </label>
+                        </div>
+                    </div>
+                    <br><br>
+                    <h3><strong>ty03</strong></h3>
+                    <div class="box-radio-wrap ty03">
+                        <div class="radio-wrap">
+                            <label for="case1">
+                                <input type="radio" id="case1" name="case" checked="">
+                                <span class="radio-txt">사법연수생</span>
+                            </label>
+                        </div>
+                        <div class="radio-wrap">
+                            <label for="case2">
+                                <input type="radio" id="case2" name="case">
+                                <span class="radio-txt">로스쿨생</span>
+                            </label>
+                        </div>
+                        <div class="radio-wrap">
+                            <label for="case3">
+                                <input type="radio" id="case3" name="case" disabled>
+                                <span class="radio-txt">법무관</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/en/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+.table{
+    width:100%;
+    &.type1{
+        border-collapse: collapse;
+        .table-w1{width:65%}
+        .table-w2{width:35%}
+        .table-w3{width:87%;}
+        .row{          
+            &>td:nth-child(1){
+                position:relative;   
+                border:1px solid $gray7;  
+                vertical-align:middle;           
+                &>div{
+                    position:relative;
+                    padding:4rem;
+                    width:100%;
+                    height:100%;                   
+                    @include fontSize('fontS05');   
+                    color: $gray7; 
+                    word-break: keep-all; 
+                }
+            }
+            &>td:nth-child(2){
+                position:relative;
+                padding-left:3.2rem;
+                vertical-align: top;
+                background-image: url('/assets/images/common/border.jpg');
+                background-size: 1px calc(100% - 2rem);
+                background-repeat: no-repeat;
+                background-position: 3.2rem 1rem;
+                &>div{
+                    position:relative;
+                    margin:1rem 0;
+                    padding-left:2rem;
+                    @include fontSize('fontS03');
+                    word-break: keep-all;
+                    color: $gray6;
+                }
+            }
+            &.row-3{
+                &>td:nth-child(1){
+                    border-bottom:0;
+                    &:after{
+                        content:'';
+                        position:absolute;
+                        top:0;
+                        left:10%;
+                        width:1px;
+                        height:100%;
+                        background:$gray7;
+                    }
+                    &>div{
+                        width:calc(100% - 40%);
+                        margin-left:40%;
+                        border-left:1px solid $gray7;  
+                        border-bottom:1px solid $gray7;
+                    }
+                }
+            }
+            &.row-4{
+                &>td:nth-child(1){
+                    border-top:0;
+                    border-bottom:0;
+                    &>div{
+                        width:calc(100% - 10%);
+                        margin-left:10%;
+                        border-left:1px solid $gray7;  
+                        border-bottom:1px solid $gray7;
+                    }
+                }
+            }
+            &.row-5{
+                &>td:nth-child(1){
+                    border-top:0;
+                }
+            }
+        }       
+    }
+    &.type2{
+        border-collapse: collapse;
+        border-top:2px solid $gray8;
+        border-bottom:1px solid $gray3;
+        .table-w1{width:28%}
+        .table-w2{width:12%}
+        tr>th:first-child{border-left:0;}
+        thead th:first-child{padding-left:3rem;}
+        tbody th{border-top:1px solid $gray3; padding-left:3rem;} 
+        th{
+            padding:3.2rem 0 4.2rem 1rem;
+            background:$gray1;
+            border-left:1px solid  $gray3;
+            @include fontSize('fontS04');
+            font-weight:700;
+            text-align:left;
+            vertical-align: top;
+        }
+        td{
+            padding:4rem 0;
+            text-align:center;
+            vertical-align: middle;
+            @include fontSize('fontS03');
+            border:1px solid $gray3;
+            border-right:0;
+        }
+        .pcText{font-size: 1.8rem;}
+        .mobileText{display:none;}
+    }
+}
+
+@include response('tablet') {
+    .table{        
+        &.type1{
+            .row{          
+                &>td:nth-child(1){
+                    &>div{
+                        padding:3rem;                 
+                        @include fontSize('fontS04');   
+                    }
+                }
+                &>td:nth-child(2){
+                    padding-left:2.6rem;
+                    background-position: 2.6rem 1rem;
+                    &:after{
+                        left:2.6rem;
+                    }
+                    &>div{
+                        padding-left:1.4rem;
+                        @include fontSize('fontS01');
+                    }
+                }
+                &.row-3{
+                    &>td:nth-child(1){
+                        &>div{
+                            width:calc(100% - 30%);
+                            margin-left:30%;
+                        }
+                    }
+                }
+            }       
+        }
+        &.type2{
+            .table-w1{width:22%}
+            .table-w2{width:13%}
+            thead th:first-child{padding-left:1.4rem;}
+            tbody th{border-top:1px solid $gray3; padding-left:1.4rem;} 
+            th{
+                padding:2.5rem .4rem 3rem .6rem;
+                @include fontSize('fontS02');
+                font-weight:700;
+            }
+            td{
+                padding:3rem 0.4rem;
+                @include fontSize('fontS02');
+            }
+            .pcText{display:none;}
+            .mobileText{display:block;}
+        }
+    }
+}
+@include response('mobile') {
+    .table{        
+        &.type1{
+            .table-w1{width:60%}
+            .table-w2{width:40%}          
+            .row{          
+                &>td:nth-child(1){
+                    &>div{
+                        padding:2.4rem;                 
+                        @include fontSize('fontS02');   
+                    }
+                }
+                &>td:nth-child(2){
+                    padding-left:2rem;
+                    background-position: 2rem 1rem;
+                    &:after{
+                        left:2rem;
+                    }
+                    &>div{
+                        padding-left:0.8rem;
+                        @include fontSize('fontS00');
+                    }
+                }
+                &.row-3{
+                    &>td:nth-child(1){
+                        &>div{
+                            width:calc(100% - 20%);
+                            margin-left:20%;
+                        }
+                    }
+                }
+            }       
+        }
+        &.type2{
+            .table-w1{width:16%}
+            .table-w2{width:14%}
+            thead th:first-child{padding-left:0.8rem;}
+            tbody th{border-top:1px solid $gray3; padding-left:0.8rem;} 
+            th{
+                padding:1.8rem 0.4rem 1.2rem 0.4rem;
+                @include fontSize('fontS00');
+                font-weight:700;
+            }
+            td{
+                padding:2rem 0.4rem;
+                @include fontSize('fontS00');
+            }
+            .pcText{display:none;}
+            .mobileText{display:block;}
+        }
+    }
+}

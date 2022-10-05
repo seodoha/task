@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./pages/en/includes/head.html', {
+        metaDescription: 'insights',
+        pageTitle : 'Hwawoo - insights',
+        cssPath : '../../../assets/en/css/common.min.css'
+    })
+</head>
+
+<body>
+    <!--Menu별 클래스 추가 -->
+    <div id="wrap" class="insights-wrap youtube">
+        @@include('./pages/en/includes/header.html')
+
+        <!--Menu의 각 페이지별 클래스 추가-->
+        <main id="main">
+            <section id="container" class="">
+                <h2 class="hidden">본문</h2>
+                <div class="page-heading-layout">
+                    <div class="inner-wrap">
+                        <ol class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">insights</a></li>
+                            <li class="current box-tooltip">
+                                <button type="button">Publications</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="News 메뉴로 이동" aria-label="News 메뉴로 이동" class="on">News</a></li>
+                                        <li><a href="#" title="Newsletters 메뉴로 이동" aria-label="Newsletters 메뉴로 이동">Newsletters</a></li>
+                                        <li><a href="#" title="Publications 메뉴로 이동" aria-label="Publications 메뉴로 이동">Publications</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="current box-tooltip">
+                                <button type="button">기타영상</button>
+                                <div class="view-tooltip">
+                                    <ul class="custom-scroll">
+                                        <li><a href="#" title="In the Media 메뉴로 이동" aria-label="In the Media 메뉴로 이동">In the Media</a></li>
+                                        <li><a href="#" title="Seminars/Events 메뉴로 이동" aria-label="Seminars/Events 메뉴로 이동">Seminars/Events</a></li>
+                                        <li><a href="#" title="Firm News 메뉴로 이동" aria-label="Firm News 메뉴로 이동">Firm News</a></li>
+                                        <li><a href="#" title="Recent Matters 메뉴로 이동" aria-label="Recent Matters 메뉴로 이동" class="on">Recent Matters</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3 class="typo-heading-02">기타영상</h3>
+                    </div>
+                    <!--end of inner-wrap-->
+                </div>
+                <!--end of page-heading-layout-->
+                <div class="inner-wrap narrow">
+                    <!-- 유튜브 영상 들어가는 영역 -->
+                    <div class="youtube-wrap">
+                        <div class="youtube-frame">
+                            <iframe src="https://www.youtube.com/embed/w9f5Km7SuX0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="box-btn box-board-more">
+                        <a href="#" class="btn-circle-ani btn-view-all"><i></i>VIEW YouTube</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        @@include('./pages/en/includes/footer.html')
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('./pages/en/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

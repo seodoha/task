@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/ko/include/head.html',{
+        pageTitle : '남앤드남 | 회사소개 | 오시는길',
+		pageMain : false
+	})
+    </head>
+    <body>
+        <div id="wrap" class="wrap">
+            <div id="navSkip"><a href="#container">본문으로 바로가기</a></div>
+            @@include('./pages/ko/include/header.html',{
+                    gnbLocation : 'company,4,0',
+                    lnbLocation : 'company,4,0'
+            })
+            <!-- container -->
+            <div id="container" class="container">
+                <!-- container header -->
+                <div class="container-header company">                            
+                    <div class="container-header__title"><div><span>오시는</span></div><div><span>길</span></div></div>
+                    <div class="container-header__text">
+                        남앤드남인터내셔널은 덕수궁의 고즈넉한 정취와 시청광장의 푸르름을 느낄 수 있는 <br class="pc-view">
+                        서울 교통의 중심 1,2호선 시청역 근처에 위치하고 있습니다.                    
+                    </div>
+                </div>
+                <!--// container header -->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="layout-img-wrap">
+                        <img src="/assets/images/company/map_pc.svg" alt="남앤드남 오시는길" class="pc-view">
+                        <img src="/assets/images/company/map_mo.svg" alt="남앤드남 오시는길" class="mo-view">
+                    </div>
+                    <div class="container-contents-wrap">
+                        <div class="layout-wrap type1">
+                            <div class="layout-wrap-header type-d1">
+                                <div class="layout-wrap-header__title">Contact</div>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <ul class="conts-list type5 company">
+                                    <li class="conts-list__items">
+                                        <div>
+                                            서울특별시 중구 서소문로 95 정안빌딩 3, 4, 5층(서소문동 57-10)
+                                            <!-- 20220117 | button 추가 -->
+                                            <button class="copy-btn"><span class="hidden">주소복사</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div>TEL 02-779-5477</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div>FAX 02-753-5279 </div>
+                                    </li>
+                                    <!-- 20220120 | class 추가 -->
+                                    <li class="conts-list__items no-line">
+                                        <div class="btn-wrap">
+                                            <a href="javascript:void(0)" title="네이버 길찾기" class="btn-arrow underline arrow1">
+                                                <span>네이버 길찾기</span>
+                                            </a>
+                                            <a href="javascript:void(0)" title="카카오 길찾기" class="btn-arrow underline arrow1">
+                                                <span>카카오 길찾기</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="layout-wrap type1">
+                            <div class="layout-wrap-header type-d1">
+                                <div class="layout-wrap-header__title">버스 이용 시</div>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <div class="layout-wrap-conts__title small company">시청.서소문청사, 서소문, 서소문KAL 빌딩 정류장 등에서 하차 후 정안빌딩으로 도보 이용</div>
+                                <ul class="conts-list type5 company">
+                                    <li class="conts-list__items">
+                                        <div class="title">시청.서소문청사</div>
+                                        <div>1002, 1004, 8600, 8601, G6005</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="title">서소문 (충정로역2호선 방면)</div>
+                                        <div>172, 472, 600, 602, 7019</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="title">서소문 (시청광장 방면)</div>
+                                        <div>101, 172, 472, 603</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="title">서소문KAL빌딩</div>
+                                        <div>6701 (공항버스 리무진)</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="layout-wrap type1">
+                            <div class="layout-wrap-header type-d1">
+                                <div class="layout-wrap-header__title">지하철 이용 시</div>
+                            </div>
+                            <div class="layout-wrap-conts type-d">
+                                <div class="layout-wrap-conts__title small company">시청역 1번, 10번 출구에서 정안빌딩으로 도보 이용</div>
+                                <ul class="conts-list type5 company">
+                                    <li class="conts-list__items">
+                                        <div class="title">1호선 시청역</div>
+                                        <div>1번 출구에서 약 250m 직진 후 우회전</div>
+                                    </li>
+                                    <li class="conts-list__items">
+                                        <div class="title">2호선 시청역</div>
+                                        <div>10번 출구에서 우회전 후 도보 약 50m 직진</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--// container contents -->
+            </div>
+            <!--// container -->
+            @@include('./pages/ko/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        @@include('./pages/ko/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

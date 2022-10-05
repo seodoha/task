@@ -1,0 +1,12 @@
+<svg id="ico_print" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-linecap:square;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="그룹_997" data-name="그룹 997" transform="translate(3 3)">
+        <path id="패스_369" data-name="패스 369" class="cls-2" d="M17 14v7H7v-7z" transform="translate(-3 -3)"/>
+        <path id="패스_370" data-name="패스 370" class="cls-2" d="M17 3v6H7V3z" transform="translate(-3 -3)"/>
+        <path id="패스_371" data-name="패스 371" class="cls-2" d="M7 18H3V9h18v9h-4" transform="translate(-3 -3)"/>
+    </g>
+</svg>

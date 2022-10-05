@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('./pages/en/include/head.html',{
+        pageTitle : 'NAM&NAM | server failure',
+		pageMain : false
+	})
+    </head>
+    <body class="eng">
+        <div id="wrap" class="wrap">
+            <div id="navSkip"><a href="#container">go to contents</a></div>
+            @@include('./pages/en/include/header.html',{
+                    gnbLocation : 'business,0,0',
+                    lnbLocation : 'none'
+            })
+            <!-- container -->
+            <div id="container" class="container footerFix"><!-- no scrolling-->
+                <!-- container contents -->
+                <div class="container-contents">
+                    <div class="container-contents-wrap">
+                        <div class="error-wrap">
+                            <div class="error-inner">
+                                <div class="image"><img src="/assets/images/common/ico_500.svg" alt=""></div>
+                                <div class="title">A temporary server failure.</div>
+                                <div class="text">
+                                    Service is not available now.<br>
+                                    Please check again later.
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btns h-lg">Refresh</button><button class="btns h-lg">Go to the main</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--// container contents -->
+            </div>
+            <!--// container -->
+            @@include('./pages/en/include/footer.html',{
+                pageMain : false
+            })
+        </div>
+        @@include('./pages/en/include/scriptImport.html', {pageMain : false})
+    </body>
+</html> 

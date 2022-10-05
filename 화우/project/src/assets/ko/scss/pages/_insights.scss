@@ -1,0 +1,109 @@
+#wrap.insights-wrap {
+    .detail-contents-layout {
+        .page-heading-layout {margin-bottom: 0;}
+    }
+
+    .box-check-wrap {justify-content: flex-end};
+    .board-img-list {gap: 10rem 3.2rem;}
+    .box-btn {
+        &.subs {
+            margin-bottom: 8rem;
+            .btn-view-all {
+                font-family: 'NotoSansKR';
+                @include text(400, 1.6rem, 1.6);
+            }
+        }
+        &.box-board-more {margin-top: 13rem;}
+    }
+    .board-text-list {
+        &.ty01 {
+            gap: 3.2rem;
+            border: none;
+            > li {
+                border: 4px solid $gray-05;
+                background-color: $gray-05;
+                &:hover {
+                    background-color: #fff;
+                    border: 4px solid $accent;
+                }
+            }
+            .box-document-wrap {padding: 4rem;}
+        }
+    }
+    &.newsletter {
+        .board-card-list {
+            & > li{
+                height: 34.4rem;
+            }
+        } 
+    }
+    &.youtube {
+        .page-heading-layout {
+            margin-bottom: 10rem;
+        }
+        .youtube-wrap {
+            position: relative; 
+            margin: 0 auto; 
+            max-width: 100%; 
+            width: 100%;
+            .youtube-frame {
+                width: 100%;
+                padding-bottom: 56.25%;
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute; 
+                    top: 0; 
+                    left: 0; 
+                    z-index: 1;
+                }
+            }
+        }
+        .box-btn {margin-top: 6rem;}
+    }
+}
+
+// MOBILE
+@include response("mobile") {
+    #wrap.insights-wrap {
+        .box-check-wrap {justify-content: flex-start};
+        .box-input {width: 100%;}
+        .board-img-list {gap: 6rem 0;}
+        .box-btn {
+            &.subs {margin-bottom: 4rem;}
+            &.box-board-more {margin-top: 6rem;}
+        }
+        .board-text-list {
+            &.ty01 {
+                gap: 3.2rem;
+                border: none;
+                > li {
+                    border: 4px solid $gray-05;
+                    background-color: $gray-05;
+                    &:hover {
+                        background-color: #fff;
+                        border: 4px solid $accent;
+                    }
+                }
+                .box-document-wrap {padding: 3rem 2rem;}
+            }
+        }
+        &.newsletter {
+            .board-card-list {
+                .box-board-card {
+                    height: inherit;
+                    .list-util { padding-bottom: 3rem;}
+                }
+            } 
+        }
+        &.youtube {
+            .page-heading-layout {
+                margin-bottom: 4rem;
+            }
+            iframe {
+                min-height: 17.3rem;
+            }
+            .box-btn {margin-top: 8rem;}
+        }
+    }
+}

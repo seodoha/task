@@ -1,0 +1,210 @@
+footer {
+    position: relative;
+    padding: 8rem 0;
+    background-color: #f5f5f5;
+    .btn-top-move {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        top: -11rem;
+        width: 6rem;
+        height: 6rem;
+        background-color: #1c1c1c;
+        font-size: 0;
+        &::before {
+            content: '';
+            width: 1.8rem;
+            height: 2.5rem;
+            @include backgroundImg('../images/icon/ico-arrow-top-white.svg');
+            background-size: contain;
+        }
+    }
+    .footer {
+        &-top {
+            padding-bottom: 5rem;
+            margin-bottom: 5rem;
+            border-bottom: 1px solid $black;
+            .city-list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 19.4rem;
+                li a {
+                    @include text(600, 3.2rem, 1.3);
+                    font-family: $en;
+                    &:hover {text-decoration: underline;}
+                }
+            }
+        }
+        &-bottom {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                .ci {
+                    width: 17rem;
+                    height: 3.4rem;
+                    margin-bottom: 4.8rem;
+                    @include backgroundImg('../images/common/ci.svg', 'center', 'contain');
+                    font-size: 0;
+                    transition: none !important;
+                }
+                .address {
+                    li {
+                        font-size: 1.4rem;
+                        line-height: 1.6;
+                        span {font-weight: 700;}
+                    }
+                }
+                .sns {
+                    display: flex;
+                    align-items: center;
+                    gap: 2.4rem;
+                    margin: 3.2rem 0 3.6rem;
+                }
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                gap: 9.2rem;
+                .family-list {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: right;
+                    dt {
+                        margin-bottom: 1.2rem;
+                        font-family: $en;
+                        @include text(400, 1.6rem, 1.6);
+                    }
+                    dd a {
+                        @include text(400, 1.4rem, 2);
+                        &:hover {text-decoration: underline;}
+                    }
+                }
+                .move-list {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 1rem 2.8rem;
+                    li {
+                        position: relative;
+                        a, button {
+                            @include text(400, 1.4rem, 2);
+                            &:hover {text-decoration: underline;}
+                        }
+                        & ~ li {
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: -1.4rem;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 1px;
+                                height: 1.2rem;
+                                background-color: #ddd;
+                            }
+                        }
+                    }
+                }
+            }
+            .copy {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                font-family: $en;
+                @include text(400, 1.4rem, 1.7);
+            }
+        }
+    }
+}
+
+// TABLET
+@include response("tablet") {
+    footer {
+        .btn-top-move {right: 2.4rem;}
+        .footer {
+            &-top {
+                .city-list {
+                    gap: 11rem;
+                    li a {@include text(600, 2.4rem, 1.3);}
+                }
+            }
+        }
+    }
+}
+
+// MOBILE
+@include response("mobile") {
+    footer {
+        padding: 3.5rem 0 8rem;
+        .btn-top-move {
+            right: 2.4rem;
+            top: -6rem;
+            width: 4.8rem;
+            height: 4.8rem;
+            &::before {
+                content: '';
+                width: 1.4rem;
+                height: 2rem;
+            }
+        }
+        .footer {
+            &-top {
+                padding-bottom: 2rem;
+                margin-bottom: 3rem;
+                .city-list {
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    gap: 0.9rem 2.3rem;
+                    li a {@include text(600, 1.4rem, 1.7);}
+                }
+            }
+            &-bottom {
+                justify-content: flex-start;
+                flex-direction: column;
+
+                .left {
+                    .ci {
+                        width: 13rem;
+                        height: 2.6rem;
+                        margin-bottom: 2rem;
+                    }
+                    .address {
+                        li {
+                            font-size: 1.2rem;
+                            line-height: 1.8;
+                        }
+                    }
+                    .sns {margin: 2.4rem 0 3rem;}
+                }
+                .right {
+                    flex-direction: column-reverse;
+                    gap: 3rem;
+                    .family-list {
+                        text-align: left;
+                        dt {
+                            margin-bottom: 1.4rem;
+                            @include text(400, 1.4rem, 1.7);
+                        }
+                        dd a {@include text(400, 1.2rem, 1.8);}
+                    }
+                    .move-list {
+                        li {
+                            a, button {@include text(400, 1.2rem, 1.8);}
+                        }
+                    }
+                }
+                .copy {
+                    position: relative;
+                    margin-top: 3rem;
+                    @include text(400, 1.2rem, 2);
+                }
+            }
+        }
+    }
+}
