@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="contents-popup">팝업 오픈</button>
+        </div>
+
+        <!--contents 팝업-->
+        <div id="contents-popup" class="layer-popup-wrap">
+            <div class="layer-popup full-popup">
+                <div class="popup-header isBack">
+                    <button class="ico-popup-close popup-close">닫기</button>
+                    <div class="right">
+                        <button class="btn-xs btn-white">삭제</button>
+                        <button class="btn-xs btn-black">수정</button>
+                    </div>
+                </div>
+                <div class="popup-body">
+                    <div class="story-detail">
+                        <div class="page-layout-header sub-visual">
+                            <div class="box-bg">
+                                <!--img cover case-->
+                                <img src="../../../assets/mobile/images/temp/temp-detail01.png" alt="">
+                                <!--video cover case-->
+                                <!-- <video
+                                    id="cover-video"
+                                    class="video-js"
+                                    controls
+                                    muted
+                                    autoplay
+                                    playsinline
+                                    loop
+                                    preload="auto"
+                                    data-setup="{}">
+                                    <source src="../../../assets/mobile/images/temp/temp-video.mp4" type="video/mp4" />
+                                </video> -->
+                            </div>
+                            <div class="box-txt">
+                                <div class="inner-wrap">
+                                    <div class="chips-wrap">
+                                        <span class="chip-label chip-label-sm">여행</span>
+                                        <span class="chip-label chip-label-sm yellow">지금 가장 뜨는 글</span>
+                                    </div>
+                                    <h1 class="board-tit">제주는 <br>도슨트가 필요해</h1>
+                                    <span class="board-txt">예술가의 영혼이 깃든 제주의 공간</span>
+                                    <div class="box-writer">
+                                        <span class="writer-thumb">
+                                            <img src="../../../assets/mobile/images/temp/temp-thumb.png" alt="">
+                                        </span>
+                                        <span class="writer-nick">고작가</span>
+                                        <span class="writer-date">
+                                            2022.01.04
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-layout-contents">
+                            <div class="layout-detail-view">
+                                <div class="inner-wrap">
+                                    <div class="detail-contents">
+                                        <!-- 에디터 내용 들어갈 영역 -->
+                                        <div class="box-editor-contents">
+                                            <p>
+                                                푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나
+                                                제주에서 꼭 들러야 하는 곳이 예술가의 공간이다.
+                                                세계적인 건축가, 미술가들의 작품이 곳곳에 숨어 있기
+                                                때문. 알고 방문하면 더 재미있고 의미 있는 제주의
+                                                아트 공간을 소개한다.
+                                            </p>
+                                            <img src="../../../assets/mobile/images/temp/img-edit01.png" alt="">
+                                            <!--video 삽입 case-->
+                                            <video
+                                                controls
+                                                playsinline
+                                                preload="auto">
+                                                <source src="../../../assets/mobile/images/temp/temp-video.mp4" type="video/mp4" />
+                                            </video>
+                                            <!--slider 삽입 case-->
+                                            <div class="slider-wrap">
+                                                <div class="default-slider">
+                                                    <div class="slider-item">
+                                                        <span class="slider-count">
+                                                            <em class="current">1</em>/<span class="total"></span>
+                                                        </span>
+                                                        <img src="../../../assets/mobile/images/temp/slick-test02.png" alt="">
+                                                    </div>
+                                                    <div class="slider-item">
+                                                        <span class="slider-count">
+                                                            <em class="current">1</em>/<span class="total"></span>
+                                                        </span>
+                                                        <img src="../../../assets/mobile/images/temp/slick-test02.png" alt="">
+                                                    </div>
+                                                    <div class="slider-item">
+                                                        <span class="slider-count">
+                                                            <em class="current">1</em>/<span class="total"></span>
+                                                        </span>
+                                                        <img src="../../../assets/mobile/images/temp/slick-test02.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--slider 삽입 case2-->
+                                            <div class="slider-wrap">
+                                                <div class="default-slider02">
+                                                    <div class="slider-item">
+                                                        <span class="slider-count">
+                                                            <em class="current">1</em>/<span class="total"></span>
+                                                        </span>
+                                                        <img src="../../../assets/mobile/images/temp/slick-test02.png" alt="">
+                                                    </div>
+                                                    <div class="slider-item">
+                                                        <span class="slider-count">
+                                                            <em class="current">1</em>/<span class="total"></span>
+                                                        </span>
+                                                        <img src="../../../assets/mobile/images/temp/slick-test02.png" alt="">
+                                                    </div>
+                                                    <div class="slider-item">
+                                                        <span class="slider-count">
+                                                            <em class="current">1</em>/<span class="total"></span>
+                                                        </span>
+                                                        <img src="../../../assets/mobile/images/temp/slick-test02.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--지도 영역-->
+                                            <div class="map-wrap">
+                                                <img src="../../../assets/mobile/images/temp/map.png" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="chips-wrap">
+                                            <a href="#" class="chip-label chip-label-hashtag">맛집</a>
+                                            <a href="#" class="chip-label chip-label-hashtag">부산</a>
+                                            <a href="#" class="chip-label chip-label-hashtag">혼밥</a>
+                                            <a href="#" class="chip-label chip-label-hashtag">라멘집</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+        <script>
+            uiCommon.slick.editorSlider($('.default-slider'));
+            uiCommon.slick.editorSlider($('.default-slider02'));
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+

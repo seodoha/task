@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html')
+        <style>
+            #wrap h2 {
+                margin: 15px 0;
+                font-size: 30px;
+                color: #222;
+                font-weight: 700;
+                text-align: center;
+            }
+            #wrap h3 {
+                margin: 30px 0;
+                font-size: 25px;
+                color: #222;
+                font-weight: 700;
+            }
+            #wrap h4 {
+                margin: 30px 0 10px 0;
+                font-size: 18px;
+                color: #222;
+                font-weight: 700;
+            }
+            .inner {padding: 0 30px;}
+            .sBtn {
+                display: inline-block;
+                border: 1px solid #222;
+                padding: 10px 20px;
+            }
+            .con p {
+                margin-bottom: 20px;
+                font-size: 15px;
+            }
+            #container {
+                margin: 0 auto;
+                padding: 0 0 200px;
+            }
+
+            .menu {
+                position: fixed;
+                top: 150px;
+                right: 20px;
+                z-index: 100;
+            }
+            .menu li {
+                width: 150px;
+                border: 1px solid #222;
+                border-width: 0 1px 1px 1px;
+            }
+            .menu li:first-child {
+                border-width: 1px;
+            }
+            .menu li a {
+                display: block;
+                padding-left: 20px;
+                line-height: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <ul class="menu">
+                <li><a href="#layer">레이어</a></li>
+                <li><a href="#toast">토스트팝업</a></li>
+                <li><a href="#tab">탭</a></li>
+                <li><a href="#slider">슬라이더(slick)</a></li>
+                <li><a href="#lottie">로티</a></li>
+            </ul>
+
+            <!-- container -->
+            <div id="container">
+                <div class="inner">
+                    <h2>스크립트 사용 가이드</h2>
+                    <!-- 레이어 -->
+                    <div id="layer">
+                        <h3>레이어 팝업 가이드</h3>
+                        <div>
+                            <h4 class="h4">열기 : Jquery click 이벤트를 이용한 예</h4>
+                            <div class="con">
+                                <p>
+                                    <strong>열기</strong> : data-pop의 속성값에 열고 싶은 레이어팝업의 아이디명을 입력한다.<br />
+                                    ex) &lta href="javascript:;" data-pop="test-layer"&gtjquery click
+                                    open&lt/a&gt
+                                </p>
+
+                                <a href="javascript:;" class="sBtn" data-pop="test-layer01">Layer Popup open(하단 버튼 있음)</a>
+                                <a href="javascript:;" class="sBtn" data-pop="test-layer02">Layer Popup open(하단 버튼 없음)</a>
+                                <a href="javascript:;" class="sBtn" data-pop="alert-layer">Alert Layer Popup open</a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="h4">열기 : javascript function을 이용한 예</h4>
+                            <div class="con">
+                                <p>
+                                    uiCommon.layer.open을 호출시에 매개변수로 열고 싶은 레이어팝업의 아이디명을 입력하면 된다.<br/>
+                                    ex) &lta href="javascript: uiCommon.layer.open('test-layer');"&gtjavascript function open&lt/a&gt<br />
+                                </p>
+
+                                <a href="javascript:;" onclick="uiCommon.layer.open('test-layer01')" class="sBtn">Layer Popup open function open</a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="h4">닫기 : Jquery click 이벤트를 이용한 예</h4>
+                            <div class="con">
+                                <p>
+                                    클래스명 'popup-close'를 붙여주면 해당 레이어 팝업은 닫힌다.<br />
+                                    ex) &lta href="javascript:;" class="popup-close"&gtjquery click
+                                    close&lt/a&gt<br />
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="h4">닫기 : javascript function을 이용한 예</h4>
+                            <div class="con">
+                                <p>
+                                    uiCommon.layer.close 호출 할때 매개변수로 타겟레이어의 클래스를
+                                    넣어준다<br />
+                                    ex) &lta href="javascript: uiCommon.layer.close('layer');"&gtjavascript
+                                    function close&lt/a&gt<br />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 레이어 -->
+
+                    <!-- 토스트 -->
+                    <div id="toast">
+                        <h3>토스트 팝업 가이드</h3>
+                        <div>
+                            <div class="con">
+                                <p>
+                                    <strong>열기</strong> : data-toast-pop의 속성값에 열고 싶은 토스트팝업의 아이디명을 입력한다.<br />
+                                    ex) &lta href="javascript:;" data-toast-pop="test-toast"&gtjquery click
+                                    open&lt/a&gt
+                                </p>
+                                <p>
+                                    <strong>열기</strong> : uiCommon.toast.open을 호출시에 매개변수로 열고 싶은 토스트팝업의 아이디명을 입력하면 된다.<br/>
+                                    ex) &lta href="javascript: uiCommon.toast.open('test-toast');"&gtjavascript function open&lt/a&gt<br />
+                                </p>
+                                <br />
+                                <div class="box-btn">
+                                    <button class="btn-md btn-black btn-pop-toast md-ripples ripples-light" data-toast-pop="test-toast">
+                                        toast popup
+                                    </button>
+                                    <div id="test-toast" class="pop-toast">URL이 복사되었습니다.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 토스트 -->
+
+                    <!-- 탭 -->
+                    <div id="tab">
+                        <h3>탭 가이드</h3>
+                        <div>
+                            <h4 class="h4">TAB</h4>
+                            <div class="con">
+                                <p>
+                                    아래의 구조를 그대로 이용하고 tab-wrap과 tab-content 클래스는 스타일링에 이용하지
+                                    않는다.<br />
+                                    tab-wrap 앨리먼트에 'tab-ctrl' 클래스가 붙는 경우 탭핑 기능 활성화.
+                                </p>
+                                <pre>
+        &ltdiv class="tab-wrap"&gt
+            &ltul class="tab-list"&gt
+                &ltli&gt&lta href="javascript:;"&gt menu01&lt/a&gt&lt/li&gt
+                &ltli&gt&lta href="javascript:;"&gt menu02&lt/a&gt&lt/li&gt
+            &lt/ul&gt
+            &ltdiv class="tab-content"&gt
+                &ltdiv&gt
+                    content01
+                &lt/div&gt
+                &ltdiv&gt
+                    content02
+                &lt/div&gt
+            &lt/div&gt
+        &lt/div&gt
+	</pre
+                                >
+                                <br />
+                                <div class="tab-wrap tab-ctrl">
+                                    <ul class="tab-list tab-list-line">
+                                        <li><a href="javascript:;">Title</a></li>
+                                        <li><a href="javascript:;">Title</a></li>
+                                        <li><a href="javascript:;">Title</a></li>
+                                        <li><a href="javascript:;">Title</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div>content01</div>
+                                        <div>content02</div>
+                                        <div>content03</div>
+                                        <div>content04</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 탭 -->
+
+                    <!-- 슬라이더 -->
+                    <div id="slider">
+                        <h3>슬라이더(slick) 가이드</h3>
+                        <div>
+                            <h4 class="h4">슬릭 호출 예</h4>
+                            <div class="con">
+                                <p>
+                                    <strong>열기</strong> : uiCommon.slick.init 함수를 호출하면서 첫번째 매개변수로 target의 jquery 객체와 두번째 매개변수로 slick 옵션을 객체로 넘기면 된다. <br />
+
+                                    ex) uiCommon.slick.init($('.popular-list'), {
+                                            infinite: false,
+                                            speed: 500,
+                                            slidesToShow: 4,
+                                            dots: false,
+                                        });
+                                </p>
+                                <a href="./slide.html" class="sBtn" target="_blank">페이지 바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 슬라이더 -->
+
+                    <!-- 로티 -->
+                    <div id="lottie">
+                        <h3>로티 가이드</h3>
+                        <div>
+                            <h4 class="h4">로티 호출 예</h4>
+                            <div class="con">
+                                <p>
+                                    <strong>열기</strong> : uiCommon.slick.init 함수를 호출하면서
+                                    첫번째 매개변수로 target의 선택자 아이디명과 두번째 매개변수로 json 파일명을 넘기면 된다. <br />
+
+                                    ex) uiCommon.lottie.init('icon-lottie', 'lottie-test.json');
+                                </p>
+                                <a href="./lottie.html" class="sBtn" target="_blank">페이지 바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 로티 -->
+                </div>
+            </div>
+            <!--// container -->
+        </div>
+
+        <!--레이어팝업-->
+        <div id="test-layer01" class="layer-popup-wrap">
+            <div class="layer-popup">
+                <div class="popup-header">
+                    <h4 class="tit">테스트</h4>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                        <!-- <button class="ico-popup-close" onclick="uiCommon.layer.close('test-layer');">닫기</button> -->
+                    </span>
+                </div>
+                <div class="popup-body">
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                </div>
+                <div class="popup-footer">
+                    <button class="btn-sm btn-white md-ripples">취소</button>
+                    <button class="btn-sm btn-black md-ripples ripples-light">삭제</button>
+                </div>
+            </div>
+        </div>
+        <div id="test-layer02" class="layer-popup-wrap">
+            <div class="layer-popup">
+                <div class="popup-header">
+                    <h4 class="tit">테스트</h4>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                        <!-- <button class="ico-popup-close" onclick="uiCommon.layer.close('test-layer');">닫기</button> -->
+                    </span>
+                </div>
+                <div class="popup-body">
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                </div>
+                <div class="popup-footer"></div>
+            </div>
+        </div>
+
+        <!--일반 Alert 팝업-->
+        <div id="alert-layer" class="layer-popup-wrap">
+            <div class="layer-popup alert-popup">
+                <div class="popup-body">
+                    <span class="msg">
+                        챌린지를 그만하시겠어요?<br>게시한 글은 삭제되지 않습니다.
+                    </span>
+                    <div class="box-btn">
+                        <button class="btn-sm btn-white md-ripples">취소</button>
+                        <button class="btn-sm btn-black md-ripples ripples-light popup-close">그만하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- script import -->
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

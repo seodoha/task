@@ -1,0 +1,138 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _gnb.scss
+* @Description : gnb 스타일
+* @Create Date: 2022-03-11
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+.gnb-wrap {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(22,22,22,0.4);
+    z-index: 201;
+
+    &.open {
+        #gnb {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    #gnb {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 31.7rem;
+        padding: 3rem 3.2rem 20rem;
+        background-color: #fff;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.2s ease;
+        transition-delay: 0.3s;
+        .box-login {
+            position: relative;
+            padding-right: 4rem;
+            margin-bottom: 5rem;
+            .btn-user {
+                display: inline-flex;
+                align-items: center;
+                .img-profile {
+                    display: inline-block;
+                    position: relative;
+                    width: 3.6rem;
+                    height: 3.6rem;
+                    border-radius: 1rem;
+                    overflow: hidden;
+                    background: url('../images/common/default_profile.svg') no-repeat center;
+                    background-size: contain;
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                        min-width: 3.6rem;
+                    }
+                }
+                .txt {
+                    display: inline-block;
+                    max-width: 13rem;
+                    margin-left: 1.4rem;
+                    font-size: 1.8rem;
+                    line-height: 1.5;
+                    @include ellipsis();
+                }
+            }
+            .ico-setting {
+                position: absolute;
+                right: 0;
+                top: 40%;
+                transform: translateY(-50%);
+            }
+        }
+        .gnb-list {
+            font-size: 0;
+            li {
+                & ~ li {margin-top: 2rem;}
+                .dep1 {
+                    display: block;
+                    width: 100%;
+                    position: relative;
+                    font-size: 2.2rem;
+                    font-weight: 600;
+                    text-align: left;
+                }
+            }
+        }
+        .gnb-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0 3rem 3rem;
+            .os-list {
+                display: flex;
+                align-items: center;
+                li {
+                    & ~ li {margin-left: 0.8rem;}
+                    a {
+                        font-size: 0;
+                        &.btn-app {width: 3.6rem;height: 3.6rem}
+                    }
+                }
+            }
+            .ft-list {
+                display: inline-flex;
+                flex-flow: column wrap;
+                height: 5.2rem;
+                margin: 2.5rem 0 2rem;
+                font-size: 0;
+                li {
+                    margin-right: 1.5rem;
+                    &:nth-of-type(even) {margin-top: 1rem;}
+                    a {
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        line-height: 1.5;
+                        color: $black;
+                    }
+                }
+            }
+            .copy {
+                display: block;
+                color: #999;
+                font-size: 1.2rem;
+                line-height: 1.6;
+            }
+
+
+        }
+    }
+}

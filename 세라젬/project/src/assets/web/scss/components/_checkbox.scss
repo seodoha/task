@@ -1,0 +1,53 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _checkbox.scss
+* @Description : checkbox 컴포넌트
+* @Create Date: 2022-02-16
+* @Update Date: 2022-03-22
+* @History: N/A
+* ================================================================================= */
+
+
+// 유효성 검사 체크박스
+
+.list-validation {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    .validation-checkbox {
+        display: inline-block;
+        cursor: pointer;
+        input[type="checkbox"] {@include hidden;}
+        .txt {
+            display: inline-flex;
+            position: relative;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #999;
+            line-height: 1.5;
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                display: block;
+                margin: 0.5rem 0.7rem 0;
+                width: .8rem;
+                height: 0.4rem;
+                border: 2px solid #999;
+                border-top: 0;
+                border-right: 0;
+                @include venderPrefix('transform',rotate(-45deg));
+            }
+        }
+        input[type="checkbox"]:checked ~ .txt {
+            color: #161616;
+            &::after {
+                display: block;
+                border: 2px solid #161616;
+                border-top: 0;
+                border-right: 0;
+            }
+        }
+    }
+}

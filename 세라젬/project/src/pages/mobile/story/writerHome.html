@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap" class="full-wrap">
+            <div class="sub-page-header shadow-bg">
+                <div class="left">
+                    <button class="ico-back-white">뒤로가기</button>
+                </div>
+                <div class="right">
+                    <button class="ico-declare-white">더보기</button>
+                </div>
+            </div>
+
+            <div id="container">
+                <section id="story" class="container-wrap user-home">
+                    <div class="page-layout-header sub-visual">
+                        <!--2022.07.06 첨부했을 경우 box-bg 앨리먼트 show-->
+                        <div class="box-bg">
+                            <img src="../../../assets/mobile/images/temp/writer-home-bg.png" alt="">
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <div class="writer-info-head">
+                                <div class="thumb">
+                                    <img src="../../../assets/mobile/images/temp/writer-profile.png" alt="">
+                                </div>
+                                <strong class="nick">고작가</strong>
+                                <span class="follower">팔로워 <em>1,234</em></span>
+                                <span class="right">
+                                    <button class="ico-share-gray">공유하기</button>
+                                    <div class="box-btn">
+                                        <input id="check1" type="checkbox" class="input-check">
+                                        <label for="check1" class="btn-xs btn-white btn-subscribe">
+                                            <span class="unchecked">팔로우</span>
+                                            <span class="checked">팔로잉</span>
+                                        </label>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="writer-info-contents">
+                                <div class="tab-wrap">
+                                    <ul class="tab-list tab-list-line">
+                                        <!-- 활성화 시 on class 추가 -->
+                                        <li><a href="#" class="on" title="소개">소개</a></li>
+                                        <li><a href="#" title="스토리">스토리</a></li>
+                                        <li><a href="#" title="커뮤니티">커뮤니티</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <!--소개-->
+                                        <div>
+                                            <div class="box-cnt">
+                                                <strong class="tit">소개</strong>
+                                                <p>평범한 일상 속의 예술을 이야기 합니다. 고작가의 방구석 예술철학을 구독하세요.</p>
+                                                <!--empty case-->
+                                                <!-- <p class="txt-empty">소개가 없습니다.</p> -->
+                                            </div>
+                                            <div class="box-cnt">
+                                                <strong class="tit">상세 프로필</strong>
+                                                <p>전시 큐레이터, 종종 칼럼을 쓰고 요리를 합니다. 실천 가능한 채식에 관한 유튜브 채널을 운영하고 있습니다. </p>
+                                                <!--empty case-->
+                                                <!-- <p class="txt-empty">프로필이 없습니다.</p> -->
+                                            </div>
+                                            <div class="box-cnt">
+                                                <strong class="tit">관심 키워드</strong>
+                                                <div class="chips-wrap">
+                                                    <a class="chip-label chip-label-hashtag">여행</a>
+                                                    <a class="chip-label chip-label-hashtag">예술</a>
+                                                    <a class="chip-label chip-label-hashtag">건축</a>
+                                                </div>
+                                                <!--empty case-->
+                                                <!-- <p class="txt-empty">프로필이 없습니다.</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

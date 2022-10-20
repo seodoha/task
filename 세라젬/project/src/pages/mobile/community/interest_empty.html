@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/mobile/include/header.html')
+            <div id="container" class="bg-gray">
+                <section id="community" class="container-wrap">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading04">커뮤니티</h2>
+                        </div>
+                    </div>
+                    <div class="tab-wrap sticky-header">
+                        <ul class="tab-list tab-list-round">
+                            <li>
+                                <!--비로그인 case-->
+                                <!-- <a href="#" class="btn-more">
+                                    <span class="ico-plus">설정</span>
+                                </a> -->
+                                <button class="btn-more">
+                                    <span class="ico-plus">설정</span>
+                                </button>
+                            </li>
+                            <li><a href="#">인기</a></li>
+                            <li><a href="#" class="on">관심</a></li>
+                            <li><a href="#">헬시라이프</a></li>
+                            <li><a href="#">로컬라이프</a></li>
+                            <li><a href="#">홈라이프</a></li>
+                            <li><a href="#">세라젬라이프</a></li>
+                            <li><a href="#">여행</a></li>
+                            <li><a href="#">뷰티</a></li>
+                            <li><a href="#">음악</a></li>
+                            <li><a href="#">건축/설계</a></li>
+                            <li><a href="#">반려동물</a></li>
+                            <li><a href="#">문화/예술</a></li>
+                            <li><a href="#">취미/레저</a></li>
+                            <li><a href="#">시사/이슈</a></li>
+                            <li><a href="#">인문학/철학</a></li>
+                            <li><a href="#">사진/촬영</a></li>
+                        </ul>
+                        <div class="btn-tab-wrap">
+                            <button class="btn-tab ico-1depth-close">열기</button>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <div class="box-noresult">
+                                <div class="box-lottie">
+                                    <div id="not-board" class="lottie"></div>
+                                </div>
+                                <strong class="empty-tit">등록된 게시물이 없습니다.</strong>
+                                <p class="detail-txt">
+                                    문득 스치는 생각이나 기분, 정보 등 다양한 이야기로<br>이 공간을 채워주세요.
+                                </p>
+                                <div class="box-btn">
+                                    <a href="#" class="btn-md btn-black">글 작성하기</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/mobile/include/bottomNavi.html')
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

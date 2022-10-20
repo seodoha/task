@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="gift-popup">팝업 오픈</button>
+        </div>
+
+        <!--기프트콘 상세정보 팝업-->
+        <div id="gift-popup" class="layer-popup-wrap">
+            <div class="layer-popup">
+                <div class="popup-header emptyTit">
+                    <button class="ico-popup-close popup-close">닫기</button>
+                </div>
+                <div class="popup-body">
+                    <div class="gift-info-wrap">
+                        <div class="gift-img">
+                            <img src="../../../assets/mobile/images/temp/pop01.png" alt="">
+                        </div>
+                        <div class="gift-tit">
+                            <span class="type">스타벅스</span>
+                            <strong class="tit">카페 아메리카노 T 2잔+7 레이어 가나슈 케이크+클라우드 치즈케이크 SET</strong>
+                        </div>
+                        <!--2022.04.28 상품 고시정보 추가 및 수정-->
+                        <div class="gift-info-box">
+                            <strong class="tit">상품고시정보 제공</strong>
+                            <dl>
+                                <dt>발행자</dt>
+                                <dd>한국선불카드</dd>
+                            </dl>
+                            <dl>
+                                <dt>유효기간</dt>
+                                <dd>
+                                    <!--DB 내용-->
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>공급자</dt>
+                                <dd>
+                                    <!--DB 내용-->
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>이용조건</dt>
+                                <dd>
+                                    <!--DB 내용-->
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>이용가능 매장</dt>
+                                <dd>
+                                    <!--DB 내용-->
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>환불 조건 및 방법</dt>
+                                <dd>
+                                    <!--DB 내용-->
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>고객센터</dt>
+                                <dd>1544-5570</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <button class="btn-sm btn-white md-ripples ripples-darken popup-close">닫기</button>
+                    <button class="btn-sm btn-black md-ripples ripples-light">교환</button>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>
+
+
+
+
+
+
+

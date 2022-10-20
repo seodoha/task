@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="load-popup">팝업 오픈</button>
+        </div>
+
+        <!--알림 팝업-->
+        <div id="load-popup" class="layer-popup-wrap">
+            <div class="layer-popup full-popup notification-setting">
+                <div class="popup-header">
+                    <h2>설정</h2>
+                    <button class="ico-popup-close popup-close">닫기</button>
+                </div>
+                <!--2022.06.22 내용 수정-->
+                <div class="popup-body">
+
+                    <div class="outer-wrap">
+                        <div class="inner-wrap">
+                            <ul>
+                                <li>
+                                    <strong>Push 알림</strong>
+                                    <div class="btn-switch">
+                                        <input type="checkbox" id="switch01" checked>
+                                        <label for="switch01">미체크</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>이벤트, 혜택 알림</strong>
+                                    <div class="btn-switch">
+                                        <input type="checkbox" id="switch02">
+                                        <label for="switch02">미체크</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="inner-wrap">
+                        <ul>
+                            <li>
+                                <strong>버전 정보</strong>
+                                <span>v1.23.5</span>
+                            </li>
+                            <li>
+                                <button type="button">캐시 삭제</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup-footer full">
+                    <button class="btn-large btn-white md-ripples ripples-dark">로그아웃</button>
+                </div>
+                <!--//2022.06.22 내용 수정-->
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>
+
+
+
+
+
+
+

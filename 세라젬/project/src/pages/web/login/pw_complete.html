@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+            pageTitle : '세라젬'
+        })
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="login" class="container-wrap">
+                    <div class="login-layout">
+                        <div class="box-lottie">
+                            <div id="icon-lottie06" class="lottie"></div>
+                        </div>
+                        <h5 class="font-heading05">비밀번호가 변경되었습니다.</h5>
+                        <p class="detail-txt">
+                            <!--2022.04.12 텍스트 수정-->
+                            변경된 비밀번호로 다시 로그인 해 주세요.
+                        </p>
+                        <div class="box-btn btn-footer">
+                            <button class="btn-large btn-black md-ripples ripples-light">로그인</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

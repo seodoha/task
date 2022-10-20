@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="sub-page-header">
+                <button class="ico-back">뒤로가기</button>
+            </div>
+
+            <div id="container">
+                <section id="welcafe" class="container-wrap">
+                    <div class="layout-detail-view">
+                        <div class="inner-wrap">
+                            <div class="detail-header">
+                                <div class="box-util">
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="bookmark1" tabindex="0">
+                                        <label for="bookmark1">북마크</label>
+                                    </span>
+                                    <button class="ico-declare-gray">더보기</button>
+                                </div>
+                                <div class="chips-wrap">
+                                    <span class="chip-label chip-label-sm">공지사항</span>
+                                </div>
+                                <strong class="detail-tit">코로나 19 관련 공지</strong>
+                                <div class="box-writer">
+                                    <span class="writer-thumb">
+                                        <img src="../../../assets/web/images/temp/profile09.svg" alt="">
+                                    </span>
+                                    <span class="writer-nick">세라젬 웰카페 학동 직영점</span>
+                                    <span class="writer-date">2022.10.13</span>
+                                </div>
+                            </div>
+                            <div class="detail-contents">
+                                <!-- 에디터 내용 들어갈 영역 -->
+                                <div class="box-editor-contents">
+                                    <p>
+                                        최근 코로나19 확진자 중 외국인의 발생 비율이 높게
+                                        나타나고 있는 반면, 외국인의 코로나19 백신접종률은
+                                        국민에 비해 낮아, 한국에서의 안전한 생활을 위해 반드시
+                                        코로나19 백신접종을 해주시기 바랍니다.
+                                    </p>
+                                </div>
+                                <!--2022.05.10 해쉬태그 삭제-->
+                                <!-- <div class="chips-wrap">
+                                    <a href="#" class="chip-label chip-label-hashtag">코로나19</a>
+                                    <a href="#" class="chip-label chip-label-hashtag">웰카페학동직영점</a>
+                                </div> -->
+                                <div class="bottom-bar detail-board-util">
+                                    <div class="left">
+                                        <span class="ico-view-count">999</span>
+                                        <!--로그인 case-->
+                                        <span class="btn-act-like-wrap">
+                                            <input type="checkbox" id="like01" tabindex="0">
+                                            <label for="like01">
+                                                <div class="box">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </div>
+                                                <span class="count">36</span>
+                                            </label>
+                                        </span>
+                                        <button class="ico-comment">3</button>
+
+                                        <!--비로그인 case-->
+                                        <!-- <a href="#" class="ico-heart">999</a>
+                                        <a href="#" class="ico-comment">999</a> -->
+                                    </div>
+                                    <div class="right">
+                                        <button class="ico-share-gray">공유하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layout-comment-wrap">
+                        <ul class="list-comment best-comment"><!--베스트 댓글 best-comment 클래스 추가-->
+                            <li>
+                                <div class="main-comment">
+                                    <a href="#" class="box-writer">
+                                        <span class="writer-thumb">
+                                            <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                        </span>
+                                        <span class="writer-txt">
+                                            <span class="writer-nick">김힐링</span>
+                                            <span class="writer-date">9시간 전</span>
+                                        </span>
+                                    </a>
+                                    <!--댓글 부분-->
+                                    <div class="comment-txt">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-xs red">BEST</span>
+                                        </div>
+                                        사진많이 찍고 돌아와서 포토북 같은거 만들어보세요. 부모님이 정말 많이 좋아하시고 자주보면서 이야기할수있어 좋더라구요 :)
+                                        <!--2022.07.06 댓글 첨부 이미지 마크업 변경(일괄적용)-->
+                                        <div class="attach-img-wrap">
+                                            <div class="attach-img-inner">
+                                                <button class="ico-expand">팝업열기</button>
+                                                <img src="../../../assets/mobile/images/temp/temp-img04.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-util">
+                                        <!--로그인 case-->
+                                        <span class="btn-act-like-wrap">
+                                            <input type="checkbox" id="like0002" tabindex="0">
+                                            <label for="like0002">
+                                                <div class="box">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </div>
+                                                <span class="count">340</span>
+                                            </label>
+                                        </span>
+                                        <button class="ico-comment">1</button>
+                                        <button class="btn-comment-more">답글 보기</button>
+                                        <!--비로그인 case-->
+                                        <!-- <a href="#" class="ico-heart">999</a>
+                                        <a href="#" class="ico-comment">1</a> -->
+                                    </div>
+                                    <div class="box-setting">
+                                        <button class="ico-declare" data-pop="detail-more">더보기</button>
+                                    </div>
+                                </div>
+                                <!--댓글에 댓글-->
+                                <ul class="sub-comment">
+                                    <li>
+                                        <a href="#" class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-txt">
+                                                <span class="writer-nick">
+                                                    고작가
+                                                    <span class="chip-label">작성자</span>
+                                                </span>
+                                                <span class="writer-date">9시간 전</span>
+                                            </span>
+                                        </a>
+                                        <!--댓글 부분-->
+                                        <div class="comment-txt">
+                                            <p><strong>@김힐링</strong>  지난 주 아내와 제주도 다녀왔는데 정말 좋았어요. 흔지않은 맛집도 정말 많고.. 즐거운 여행되세요.</p>
+                                        </div>
+                                        <div class="comment-util">
+                                            <!--로그인 case-->
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like0003" tabindex="0">
+                                                <label for="like0003">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <!--비로그인 case-->
+                                            <!-- <a href="#" class="ico-heart">999</a>-->
+                                        </div>
+                                        <div class="box-setting">
+                                            <button class="ico-declare" data-pop="detail-more">더보기</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-txt">
+                                                <span class="writer-nick">
+                                                    고작가
+                                                    <span class="chip-label">작성자</span>
+                                                </span>
+                                                <span class="writer-date">9시간 전</span>
+                                            </span>
+                                        </a>
+                                        <!--댓글 부분-->
+                                        <div class="comment-txt">
+                                            <div class="attach-img-wrap">
+                                                <div class="attach-img-inner">
+                                                    <button class="ico-expand">팝업열기</button>
+                                                    <img src="../../../assets/mobile/images/temp/temp-img04.png" alt="">
+                                                </div>
+                                            </div>
+                                            <p><strong>@김힐링</strong>  지난 주 아내와 제주도 다녀왔는데 정말 좋았어요. 흔지않은 맛집도 정말 많고.. 즐거운 여행되세요.</p>
+                                        </div>
+                                        <div class="comment-util">
+                                            <!--로그인 case-->
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like0003" tabindex="0">
+                                                <label for="like0003">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <!--비로그인 case-->
+                                            <!-- <a href="#" class="ico-heart">999</a>-->
+                                        </div>
+                                        <div class="box-setting">
+                                            <button class="ico-declare" data-pop="detail-more">더보기</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="msg-delete">삭제된 답글입니다.</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="main-comment">
+                                    <a href="#" class="box-writer">
+                                        <span class="writer-thumb">
+                                            <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                        </span>
+                                        <span class="writer-txt">
+                                            <span class="writer-nick">김힐링</span>
+                                            <span class="writer-date">9시간 전</span>
+                                        </span>
+                                    </a>
+                                    <!--댓글 부분-->
+                                    <div class="comment-txt">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-xs red">BEST</span>
+                                        </div>
+                                        사진많이 찍고 돌아와서 포토북 같은거 만들어보세요. 부모님이 정말 많이 좋아하시고 자주보면서 이야기할수있어 좋더라구요 :)
+                                    </div>
+                                    <div class="comment-util">
+                                        <!--로그인 case-->
+                                        <span class="btn-act-like-wrap">
+                                            <input type="checkbox" id="like0002" tabindex="0">
+                                            <label for="like0002">
+                                                <div class="box">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </div>
+                                                <span class="count">340</span>
+                                            </label>
+                                        </span>
+                                        <button class="ico-comment">1</button>
+                                        <button class="btn-comment-more">답글 보기</button>
+                                        <!--비로그인 case-->
+                                        <!-- <a href="#" class="ico-heart">999</a>
+                                        <a href="#" class="ico-comment">1</a> -->
+                                    </div>
+                                    <div class="box-setting">
+                                        <button class="ico-declare" data-pop="detail-more">더보기</button>
+                                    </div>
+                                </div>
+                                <!--댓글에 댓글-->
+                                <ul class="sub-comment">
+                                    <li>
+                                        <a href="#" class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-txt">
+                                                <span class="writer-nick">
+                                                    고작가
+                                                    <span class="chip-label">작성자</span>
+                                                </span>
+                                                <span class="writer-date">9시간 전</span>
+                                            </span>
+                                        </a>
+                                        <!--댓글 부분-->
+                                        <div class="comment-txt">
+                                            <p><strong>@김힐링</strong>  지난 주 아내와 제주도 다녀왔는데 정말 좋았어요. 흔지않은 맛집도 정말 많고.. 즐거운 여행되세요.</p>
+                                        </div>
+                                        <div class="comment-util">
+                                            <!--로그인 case-->
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like0003" tabindex="0">
+                                                <label for="like0003">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <!--비로그인 case-->
+                                            <!-- <a href="#" class="ico-heart">999</a>-->
+                                        </div>
+                                        <div class="box-setting">
+                                            <button class="ico-declare" data-pop="detail-more">더보기</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-txt">
+                                                <span class="writer-nick">
+                                                    고작가
+                                                    <span class="chip-label">작성자</span>
+                                                </span>
+                                                <span class="writer-date">9시간 전</span>
+                                            </span>
+                                        </a>
+                                        <!--댓글 부분-->
+                                        <div class="comment-txt">
+                                            <div class="attach-img-wrap">
+                                                <div class="attach-img-inner">
+                                                    <button class="ico-expand">팝업열기</button>
+                                                    <img src="../../../assets/mobile/images/temp/temp-img04.png" alt="">
+                                                </div>
+                                            </div>
+                                            <p><strong>@김힐링</strong>  지난 주 아내와 제주도 다녀왔는데 정말 좋았어요. 흔지않은 맛집도 정말 많고.. 즐거운 여행되세요.</p>
+                                        </div>
+                                        <div class="comment-util">
+                                            <!--로그인 case-->
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like0003" tabindex="0">
+                                                <label for="like0003">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <!--비로그인 case-->
+                                            <!-- <a href="#" class="ico-heart">999</a>-->
+                                        </div>
+                                        <div class="box-setting">
+                                            <button class="ico-declare" data-pop="detail-more">더보기</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="msg-delete">삭제된 답글입니다.</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="msg-delete">삭제된 댓글입니다.</span>
+                            </li>
+                        </ul>
+                        <div class="comment-header">
+                            <span>전체 댓글 <em>3</em></span>
+                            <button class="btn-select">최신순</button>
+                        </div>
+                        <ul class="list-comment">
+                            <li>
+                                <div class="main-comment">
+                                    <a href="#" class="box-writer">
+                                        <span class="writer-thumb">
+                                            <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                        </span>
+                                        <span class="writer-txt">
+                                            <span class="writer-nick">김힐링</span>
+                                            <span class="writer-date">9시간 전</span>
+                                        </span>
+                                    </a>
+                                    <!--댓글 부분-->
+                                    <div class="comment-txt">
+                                        <p>사진많이 찍고 돌아와서 포토북 같은거 만들어보세요. 부모님이 정말 많이 좋아하시고 자주보면서 이야기할수있어 좋더라구요 :)</p>
+                                    </div>
+                                    <div class="comment-util">
+                                        <!--로그인 case-->
+                                        <span class="btn-act-like-wrap">
+                                            <input type="checkbox" id="like0002" tabindex="0">
+                                            <label for="like0002">
+                                                <div class="box">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </div>
+                                                <span class="count">340</span>
+                                            </label>
+                                        </span>
+                                        <button class="ico-comment">1</button>
+                                        <button class="btn-comment-more on">답글 접기</button>
+                                        <!--비로그인 case-->
+                                        <!-- <a href="#" class="ico-heart">999</a>
+                                        <a href="#" class="ico-comment">1</a> -->
+                                    </div>
+                                    <div class="box-setting">
+                                        <button class="ico-declare" data-pop="detail-more">더보기</button>
+                                    </div>
+                                </div>
+                                <!--댓글에 댓글-->
+                                <ul class="sub-comment" style="display: block;">
+                                    <li>
+                                        <a href="#" class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-txt">
+                                                <span class="writer-nick">
+                                                    고작가
+                                                    <span class="chip-label">작성자</span>
+                                                </span>
+                                                <span class="writer-date">9시간 전</span>
+                                            </span>
+                                        </a>
+                                        <!--댓글 부분-->
+                                        <div class="comment-txt">
+                                            <p><strong>@김힐링</strong>  지난 주 아내와 제주도 다녀왔는데 정말 좋았어요. 흔지않은 맛집도 정말 많고.. 즐거운 여행되세요.</p>
+                                        </div>
+                                        <div class="comment-util">
+                                            <!--로그인 case-->
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like0003" tabindex="0">
+                                                <label for="like0003">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <!--비로그인 case-->
+                                            <!-- <a href="#" class="ico-heart">999</a>-->
+                                        </div>
+                                        <div class="box-setting">
+                                            <button class="ico-declare" data-pop="detail-more">더보기</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-txt">
+                                                <span class="writer-nick">
+                                                    고작가
+                                                    <span class="chip-label">작성자</span>
+                                                </span>
+                                                <span class="writer-date">9시간 전</span>
+                                            </span>
+                                        </a>
+                                        <!--댓글 부분-->
+                                        <div class="comment-txt">
+                                            <div class="attach-img-wrap">
+                                                <div class="attach-img-inner">
+                                                    <button class="ico-expand">팝업열기</button>
+                                                    <img src="../../../assets/mobile/images/temp/temp-img04.png" alt="">
+                                                </div>
+                                            </div>
+                                            <p><strong>@김힐링</strong>  지난 주 아내와 제주도 다녀왔는데 정말 좋았어요. 흔지않은 맛집도 정말 많고.. 즐거운 여행되세요.</p>
+                                        </div>
+                                        <div class="comment-util">
+                                            <!--로그인 case-->
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like0003" tabindex="0">
+                                                <label for="like0003">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <!--비로그인 case-->
+                                            <!-- <a href="#" class="ico-heart">999</a>-->
+                                        </div>
+                                        <div class="box-setting">
+                                            <button class="ico-declare" data-pop="detail-more">더보기</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="msg-delete">삭제된 답글입니다.</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="msg-delete">삭제된 댓글입니다.</span>
+                            </li>
+                        </ul>
+                        <div class="box-btn">
+                            <button type="button">다음 댓글 더보기</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="input-comment-wrap fix ty02">
+                <!--이미지 첨부 시 show-->
+                <!-- <div class="input-attach-img">
+                    <img src="../../../assets/web/images/temp/temp-img04.png" alt="">
+                    <button class="ico-popup-close-white">닫기</button>
+                </div> -->
+                <input type="text" placeholder="신민아님의 생각은 어떠신가요?">
+                <button class="ico-attach-image">이미지첨부</button>
+                <button class="ico-submit"></button>
+            </div>
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

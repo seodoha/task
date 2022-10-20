@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap" class="story-detail"><!--스토리 상세 페이지일 시 story-detail 클래스 추가-->
+            @@include('./pages/web/include/header.html')
+
+            <!--스토리 상세 페이지 sticky header-->
+            <div class="story-detail-header">
+                <div class="inner-wrap">
+                    <h2 class="logo">
+                        <a href="/">WelLife Lab.</a>
+                    </h2>
+                    <strong class="page-tit">제주는 도슨트가 필요해</strong>
+                    <div class="right">
+                        <a href="#" class="box-writer">
+                            <span class="writer-thumb">
+                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                            </span>
+                            <span class="writer-nick">고작가</span>
+                        </a>
+                        <div class="box-btn">
+                            <input id="check2" type="checkbox" class="input-check" checked>
+                            <label for="check2" class="btn-xs btn-white btn-subscribe">
+                                <span class="unchecked">팔로우</span>
+                                <span class="checked">팔로잉</span>
+                            </label>
+                        </div>
+                        <button class="btn-hamburger" title="메뉴"><span>메뉴</span></button>
+                    </div>
+                </div>
+                <div class="progressbar"><span class="in-progress"></span></div>
+            </div>
+
+            <div id="container">
+                <section id="story" class="container-wrap">
+                    <div class="page-layout-header sub-visual">
+                        <div class="box-bg">
+                            <!--img cover case-->
+                            <!-- <img src="../../../assets/web/images/temp/temp_cover01.png" alt=""> -->
+                            <!--video cover case-->
+                            <video
+                                id="cover-video"
+                                class="video-js"
+                                controls
+                                muted
+                                autoplay
+                                playsinline
+                                loop
+                                preload="auto"
+                                data-setup="{}">
+                                <source src="../../../assets/web/images/temp/temp-video.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <div class="box-txt">
+                            <div class="inner-cont-wrap">
+                                <span class="box-tooltip">
+                                    <button class="ico-declare-white btn-tooltip">더보기</button>
+                                    <ul class="active-toolBox list-declare">
+                                        <li><button>수정하기</button></li>
+                                        <li><button>삭제하기</button></li>
+                                    </ul>
+                                </span>
+                                <!-- 2022.04.07 a태그로 수정 -->
+                                <div class="chips-wrap">
+                                    <a href="#" class="chip-label chip-label-sm">여행</a>
+                                    <a href="#" class="chip-label chip-label-sm yellow">지금 가장 뜨는 글</a>
+                                </div>
+                                <h1 class="font-heading01">제주는 <br>도슨트가 필요해</h1>
+                                <span class="font-card-tit03">예술가의 영혼이 깃든 제주의 공간</span>
+                                <div class="box-writer">
+                                    <!-- 2022.04.07 a태그 추가 -->
+                                    <a href="#">
+                                        <span class="writer-thumb">
+                                            <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                        </span>
+                                        <span class="writer-nick">고작가</span>
+                                    </a>
+                                    <span class="write-date">
+                                        2022.01.04
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-cont-wrap">
+                            <!--2022.06.17 가이드 수정 (에디터 화면 공통 적용)-->
+                            <div class="layout-detail-view">
+                                <div class="detail-contents">
+                                    <!--블록단위별 스타일 퍼블리싱-->
+                                    <!--
+                                        블록 추가 시 'module-container' 클래스가 붙은 div 추가
+                                            + 동영상 입력 블록 추가 시 'input-module' 클래스 추가
+                                            + 영상 블록 추가 시 'video-module' 클래스 추가
+                                            + 투표 블록 추가 시 'vote-module' 클래스 추가
+                                            + 이미지 하나 블록 추가 시 'img-module' 클래스 추가
+                                            + 이미지 여러개 블록 추가 시 'img-slider-module' 클래스 추가
+                                            + 지도 블록 추가 시 'map-module' 클래스 추가
+                                            + 하이퍼링크 추가 시 a태그에 클래스 'link' 추가
+                                    -->
+                                    <div class="box-editor-contents">
+                                        <!--텍스트-->
+                                        <!--본문과 제목1 / 제목2의 텍스트 스타일 가이드입니다.-->
+                                        <div class="module-container text-format-ty01" tabindex="0">
+                                            <p>
+                                                부산출장을 가게 되었습니다. 시국이 좋지 않아 돌아다닐 수는 없지만 업무 마치고 밥 먹을 만한 곳 추천 좀 해주세요.<br>출장일정 빡센데 밥은 맛있는 거 먹고 싶어요 ㅠㅠ
+                                                <a href="www.naver.com" class="link">www.naver.com</a>
+                                            </p>
+                                        </div>
+                                        <div class="module-container text-format-ty02" tabindex="0">
+                                            <p>부산출장을 가게 되었습니다. 시국이 좋지 않아 돌아다닐 수는 없지만 업무 마치고 밥 먹을 만한 곳 추천 좀 해주세요.<br>출장일정 빡센데 밥은 맛있는 거 먹고 싶어요 ㅠㅠ</p>
+                                        </div>
+                                        <div class="module-container text-format-ty03" tabindex="0">
+                                            <p>부산출장을 가게 되었습니다. 시국이 좋지 않아 돌아다닐 수는 없지만 업무 마치고 밥 먹을 만한 곳 추천 좀 해주세요.<br>출장일정 빡센데 밥은 맛있는 거 먹고 싶어요 ㅠㅠ</p>
+                                        </div>
+
+                                        <!--이미지-->
+                                        <div class="module-container img-module" tabindex="0">
+                                            <img src="../../../assets/web/images/temp/img-edit01.png" alt="">
+                                        </div>
+
+                                        <!--영상-->
+                                        <div class="module-container video-module" tabindex="0">
+                                            <video
+                                                class="video-js"
+                                                controls
+                                                playsinline
+                                                preload="auto"
+                                                data-setup="{}">
+                                                <source src="../../../assets/web/images/temp/temp-video-test.mp4" type="video/mp4" />
+                                            </video>
+                                        </div>
+
+                                        <!--이미지 슬라이더-->
+                                        <div class="module-container img-slider-module" tabindex="0">
+                                            <div class="box-util">
+                                                <div class="box-img-add">
+                                                    <input type="file" id="textfile01">
+                                                    <label for="textfile01" class="btn-sm btn-white btn-img-add">이미지 추가</label>
+                                                </div>
+                                            </div>
+                                            <div class="slider-wrap">
+                                                <div class="default-slider">
+                                                    <div class="slider-item"><img src="../../../assets/web/images/temp/slick-test.jpg" alt=""></div>
+                                                    <div class="slider-item"><img src="../../../assets/web/images/temp/temp-slick-test.jpg" alt=""></div>
+                                                    <div class="slider-item"><img src="../../../assets/web/images/temp/temp-slick-test2.jpg" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--지도 영역-->
+                                        <div class="module-container map-module" tabindex="0">
+                                            <div class="box-map" style="height: 500px;background-color: #aaa;">
+                                            </div>
+                                        </div>
+
+                                        <!--중복비허용-->
+                                        <div class="module-container vote-view-wrap">
+                                            <div class="vote-head">
+                                                <div class="head-util">
+                                                    <strong>투표참여</strong>
+                                                    <span>0</span>
+                                                </div>
+                                                <strong class="vote-tit">오늘 점심, 당신의 선택은?</strong>
+                                                <span class="vote-txt">여러 개 선택할 수 있습니다.</span>
+                                            </div>
+                                            <div class="vote-body">
+                                                <ul class="vote-list">
+                                                    <li>
+                                                        <span class="btn-radio">
+                                                            <input type="radio" id="test01" name="test">
+                                                            <label for="test01">비빔냉면</label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="btn-radio">
+                                                            <input type="radio" id="test02" name="test">
+                                                            <label for="test02">물냉면</label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="btn-radio">
+                                                            <input type="radio" id="test03" name="test">
+                                                            <label for="test03">돼지국밥</label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="btn-radio">
+                                                            <input type="radio" id="test04" name="test">
+                                                            <label for="test04">떡갈비</label>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                                <div class="box-btn">
+                                                    <button class="btn-large btn-black md-ripples ripples-light">투표하기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--중복허용-->
+                                        <div class="module-container vote-view-wrap">
+                                            <div class="vote-head">
+                                                <div class="head-util">
+                                                    <strong>투표참여</strong>
+                                                    <span>0</span>
+                                                </div>
+                                                <strong class="vote-tit">오늘 점심, 당신의 선택은?</strong>
+                                                <span class="vote-txt">여러 개 선택할 수 있습니다.</span>
+                                            </div>
+                                            <div class="vote-body">
+                                                <ul class="vote-list">
+                                                    <li>
+                                                        <span class="btn-check">
+                                                            <input type="checkbox" id="chk1">
+                                                            <label for="chk1"><span>비빔냉면</span></label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="btn-check">
+                                                            <input type="checkbox" id="chk2">
+                                                            <label for="chk2"><span>물냉면</span></label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="btn-check">
+                                                            <input type="checkbox" id="chk3">
+                                                            <label for="chk3"><span>돼지국밥</span></label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="btn-check">
+                                                            <input type="checkbox" id="chk4">
+                                                            <label for="chk4"><span>떡갈비</span></label>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                                <div class="box-btn">
+                                                    <button class="btn-large btn-black md-ripples ripples-light">투표하기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--투표제목이 없는 경우-->
+                                        <div class="module-container vote-view-wrap">
+                                            <div class="vote-head">
+                                                <div class="head-util">
+                                                    <strong>투표참여</strong>
+                                                    <span>0</span>
+                                                </div>
+                                                <span class="vote-txt">여러 개 선택할 수 있습니다.</span>
+                                            </div>
+                                            <div class="vote-body">
+                                                <ul class="vote-list">
+                                                    <li>
+                                                        <span class="btn-check">
+                                                            <input type="checkbox" id="chk1">
+                                                            <label for="chk1"><span>비빔냉면</span></label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="btn-check">
+                                                            <input type="checkbox" id="chk2">
+                                                            <label for="chk2"><span>물냉면</span></label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="btn-check">
+                                                            <input type="checkbox" id="chk3">
+                                                            <label for="chk3"><span>돼지국밥</span></label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="btn-check">
+                                                            <input type="checkbox" id="chk4">
+                                                            <label for="chk4"><span>떡갈비</span></label>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                                <div class="box-btn">
+                                                    <button class="btn-large btn-black md-ripples ripples-light">투표하기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--투표참여후결과-->
+                                        <div class="module-container vote-view-wrap">
+                                            <div class="vote-head">
+                                                <div class="head-util">
+                                                    <strong>투표참여</strong>
+                                                    <span>0</span>
+                                                </div>
+                                                <strong class="vote-tit">오늘 점심, 당신의 선택은?</strong>
+                                                <span class="vote-txt">여러 개 선택할 수 있습니다.</span>
+                                            </div>
+                                            <div class="vote-body">
+                                                <ul class="vote-result-list">
+                                                    <!--득표수 많은 것은 'winning' 클래스 추가-->
+                                                    <!--자기가 투표한 것은 'my-pick' 클래스 추가-->
+                                                    <li class="my-pick winning">
+                                                        <span class="vote-progress-bar" style="width: 55%;"></span>
+                                                        <span class="vote-progress-wrap">
+                                                            <strong class="name">
+                                                                비빔냉면
+                                                            </strong>
+                                                            <span class="count">
+                                                                <strong>800명</strong>
+                                                                <span>(55%)</span>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="vote-progress-bar" style="width: 30%;"></span>
+                                                        <span class="vote-progress-wrap">
+                                                            <strong class="name">
+                                                                물냉면
+                                                            </strong>
+                                                            <span class="count">
+                                                                <strong>600명</strong>
+                                                                <span>(30%)</span>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="vote-progress-bar" style="width: 8%;"></span>
+                                                        <span class="vote-progress-wrap">
+                                                            <strong class="name">
+                                                                돼지국밥
+                                                            </strong>
+                                                            <span class="count">
+                                                                <strong>100명</strong>
+                                                                <span>(8%)</span>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="vote-progress-bar" style="width: 12%;"></span>
+                                                        <span class="vote-progress-wrap">
+                                                            <strong class="name">
+                                                                떡갈비
+                                                            </strong>
+                                                            <span class="count">
+                                                                <strong>150명</strong>
+                                                                <span>(12%)</span>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="chips-wrap">
+                                        <a href="#" class="chip-label chip-label-hashtag">맛집</a>
+                                        <a href="#" class="chip-label chip-label-hashtag">부산</a>
+                                        <a href="#" class="chip-label chip-label-hashtag">혼밥</a>
+                                        <a href="#" class="chip-label chip-label-hashtag">라멘집</a>
+                                    </div>
+                                </div>
+                                <!--상세유틸(조회수, 좋아요, 댓글 등)-->
+                                <div class="detail-util">
+                                    <div class="inner">
+                                        <div class="left">
+                                            <span class="ico-view-count">999</span>
+                                            <!--로그인 case-->
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like01" tabindex="0">
+                                                <label for="like01">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <button class="ico-comment">999</button>
+
+                                            <!--비로그인 case-->
+                                            <!-- <a href="#" class="ico-heart">999</a>
+                                            <a href="#" class="ico-comment">999</a> -->
+                                        </div>
+                                        <div class="right">
+                                            <button class="ico-share-gray">공유하기</button>
+                                            <span class="btn-act-bookmark ty-black">
+                                                <input type="checkbox" id="bookmark1" tabindex="0">
+                                                <label for="bookmark1">북마크</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--댓글-->
+                                <!-- 2022.03.23 댓글 include로 수정 -->
+                                @@include('./pages/web/include/comment.html')
+
+                                <!--작가소개-->
+                                <div class="detail-writer-info">
+                                    <div class="thumb">
+                                        <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <strong class="writer-nick">고작가</strong>
+                                        <div class="writer-util">
+                                            <span class="follower">팔로워 <em>1,234</em></span>
+                                            <a href="#" class="txt-more" title="글 전체보기">글 전체보기</a>
+                                        </div>
+                                        <p class="writer-descrip">
+                                            평범한 일상 속의 예술을 이야기 합니다.<br>고작가의 방구석 예술철학을 구독하세요.
+                                        </p>
+                                        <div class="box-btn">
+                                            <input id="check1" type="checkbox" class="input-check">
+                                            <label for="check1" class="btn-md btn-white btn-subscribe">
+                                                <span class="unchecked">팔로우</span>
+                                                <span class="checked">팔로잉</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--추천 스토리-->
+                                <div class="detail-recomm">
+                                    <div class="recomm-header">
+                                        <strong class="tit">추천 스토리</strong>
+                                        <!--2022.05.10 추천스토리에 더보기 삭제-->
+                                        <!-- <a href="#" class="txt-more">더보기</a> -->
+                                    </div>
+                                    <ul class="recomm-contents">
+                                        <li>
+                                            <a href="#">
+                                                <div class="txt">
+                                                    <strong>도심 속 방방곡곡 뉴 아트 플레이스를 찾아서</strong>
+                                                    <div class="box-writer">
+                                                        <span class="writer-thumb">
+                                                            <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                        </span>
+                                                        <span class="writer-txt">
+                                                            <span class="writer-nick">전지현</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="thumb">
+                                                    <img src="../../../assets/web/images/temp/temp-img05.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="txt">
+                                                    <strong>도심 속 방방곡곡 뉴 아트 플레이스를 찾아서</strong>
+                                                    <div class="box-writer">
+                                                        <span class="writer-thumb">
+                                                            <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                        </span>
+                                                        <span class="writer-txt">
+                                                            <span class="writer-nick">전지현</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="thumb">
+                                                    <img src="../../../assets/web/images/temp/temp-img05.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="txt">
+                                                    <strong>도심 속 방방곡곡 뉴 아트 플레이스를 찾아서</strong>
+                                                    <div class="box-writer">
+                                                        <span class="writer-thumb">
+                                                            <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                        </span>
+                                                        <span class="writer-txt">
+                                                            <span class="writer-nick">전지현</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="thumb">
+                                                    <img src="../../../assets/web/images/temp/temp-img05.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="txt">
+                                                    <strong>도심 속 방방곡곡 뉴 아트 플레이스를 찾아서</strong>
+                                                    <div class="box-writer">
+                                                        <span class="writer-thumb">
+                                                            <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                        </span>
+                                                        <span class="writer-txt">
+                                                            <span class="writer-nick">전지현</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="thumb">
+                                                    <img src="../../../assets/web/images/temp/temp-img05.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--//2022.06.17 가이드 수정 (에디터 화면 공통 적용)-->
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+        @@include('./pages/web/include/scriptImport.html')
+        <script>
+            uiCommon.slick.init($('.default-slider'), {
+                infinite: true,
+                pauseOnFocus: false,
+                pauseOnHover: false,
+                speed: 700,
+                slidesToShow: 1,
+                dots: true,
+                autoplay: false,
+                autoplaySpeed: 3000
+            });
+        </script>
+    </body>
+</html>

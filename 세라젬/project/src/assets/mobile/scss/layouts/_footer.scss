@@ -1,0 +1,55 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _footer.scss
+* @Description : footer 스타일
+* @Create Date: 2022-03-11
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+footer {
+    position: relative;
+    margin-top: auto;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    .inner-wrap {
+        display: flex;
+        height: 21.7rem;
+        padding-top: 3.5rem;
+        justify-content: space-between;
+    }
+
+    .left {
+        .ft-list {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            li {
+                & ~ li {margin-left: 3rem;}
+                a {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    color: $black;
+                    &:hover {text-decoration: underline;}
+                }
+            }
+        }
+        .copy {
+            display: block;
+            color: #999;
+            font-size: 1.3rem;
+        }
+
+    }
+
+    .right {
+        .os-list {
+            display: flex;
+            align-items: center;
+            li {
+                & ~ li {margin-left: 2rem;}
+                a {font-size: 0;}
+            }
+        }
+    }
+}

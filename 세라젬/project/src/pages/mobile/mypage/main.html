@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/mobile/include/header.html')
+            <div id="container" class="bg-gray">
+                <section id="mypage" class="container-wrap">
+                    <div class="page-layout-header ty02">
+                        <div class="inner-wrap">
+                            <div class="my-info-wrap">
+                                <div class="box-util">
+                                    <button class="ico-barcode">바코드</button>
+                                    <button class="ico-setting">설정</button>
+                                </div>
+                                <div class="box-user">
+                                    <div class="info">
+                                        <a href="#" class="nick">박세라</a>
+                                        <div class="follow">
+                                            <a href="#">
+                                                팔로워<em>15</em>
+                                            </a>
+                                            <a href="#">
+                                                팔로워<em>15</em>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="ranking">
+                                            유저랭킹 <em>22위</em>
+                                        </a>
+                                    </div>
+                                    <div class="thumb">
+                                        <img src="../../../assets/mobile/images/temp/profile01.svg" alt="">
+                                    </div>
+                                </div>
+                                <!--2022.07.06 퍼블리싱수정-->
+                                <dl class="box-mileage">
+                                    <dt>마일리지</dt>
+                                    <dd>10,240</dd>
+                                </dl>
+                                <ul class="box-benefits">
+                                    <li><a href="#"><span class="ico-gift"></span>선물샵</a></li>
+                                    <li><a href="#"><span class="ico-ticket"></span>선물함</a></li>
+                                </ul>
+                                <!--//2022.07.06 퍼블리싱수정-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <div class="tab-wrap tab-ctrl">
+                                <ul class="tab-list tab-list-line">
+                                    <li><a href="javascript:;">나의 활동</a></li>
+                                    <li><a href="javascript:;">나의 웰라이프</a></li>
+                                    <li><a href="javascript:;">나의 정보</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div>
+                                        <ul class="my-service-list">
+                                            <li>
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <button>스토리</button>
+                                                    </div>
+                                                    <div class="accordion-body">
+                                                        <ul>
+                                                            <li><a href="#">내가 작성한 콘텐츠 <em>10</em></a></li>
+                                                            <li><a href="#">스크랩한 콘텐츠 <em>10</em></a></li>
+                                                            <li><a href="#">최근 본 콘텐츠 <em>10</em></a></li>
+                                                            <li><a href="#">작성중인 콘텐츠 <em>10</em></a></li>
+                                                            <li><a href="#">콘텐츠 승인조회 <em>10</em></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <button>커뮤니티</button>
+                                                    </div>
+                                                    <div class="accordion-body">
+                                                        <ul>
+                                                            <li><a href="#">내가 작성한 게시글 <em>10</em></a></li>
+                                                            <li><a href="#">스크랩한 게시글 <em>10</em></a></li>
+                                                            <li><a href="#">최근 본 게시글 <em>10</em></a></li>
+                                                            <li><a href="#">작성중인 게시글 <em>10</em></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <button>웰카페</button>
+                                                    </div>
+                                                    <div class="accordion-body">
+                                                        <ul>
+                                                            <li><a href="#">자주 찾는 웰카페 <em>5</em></a></li>
+                                                            <li><a href="#">내가 작성한 게시글 <em>10</em></a></li>
+                                                            <li><a href="#">스크랩한 게시글 <em>10</em></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <button>챌린지</button>
+                                                    </div>
+                                                    <div class="accordion-body">
+                                                        <ul>
+                                                            <li><a href="#">참여중인 챌린지 <em>5</em></a></li>
+                                                            <li><a href="#">도전 종료 챌린지 <em>10</em></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <ul class="my-service-list">
+                                            <li><a href="#" class="link">유저목록</a></li>
+                                            <li><a href="#" class="link">마일리지</a></li>
+                                            <li><a href="#" class="link">쿠폰함</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <ul class="my-service-list">
+                                            <li><a href="#" class="link">회원정보 수정</a></li>
+                                            <li><a href="#" class="link">비밀번호 변경</a></li>
+                                            <li><a href="#" class="link">세라체크</a></li>
+                                            <li><a href="#" class="link">1:1 문의</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/mobile/include/bottomNavi.html')
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="etc" class="container-wrap bg-gray">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading02">고객센터</h2>
+                        </div>
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <div class="inner-left">
+                                <ul class="box-left-menu">
+                                    <li><a href="#" class="active">FAQ</a></li>
+                                    <li><a href="#">1:1 문의</a></li>
+                                    <li><a href="#" >공지사항</a></li>
+                                </ul>
+                            </div>
+                            <div class="inner-right">
+                                <div class="layout-detail-view notice-detail-view">
+                                    <div class="detail-header">
+                                        <div class="chips-wrap"><span class="chip-label chip-label-sm">회원</span></div>
+                                        <strong class="detail-tit">개인정보처리방침 개정 안내</strong>
+                                        <span class="detail-date">2022.03.07</span>
+                                        <div class="detail-attach">
+                                            <a href="#" download="커뮤니티공지.pdf">커뮤니티공지.pdf</a>
+                                        </div>
+                                    </div>
+                                    <div class="detail-contents">
+                                        <!--에디터 내용 들어갈 영역-->
+                                        <div class="box-editor-contents">
+                                            <img src="../../../assets/web/images/temp/img-edit01.png" alt="">
+                                            <img src="../../../assets/web/images/temp/img-edit01.png" alt="">
+                                            <img src="../../../assets/web/images/temp/img-edit01.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layout-detail-view-move">
+                                    <div class="left">
+                                        <a href="#" class="">이전</a>
+                                        <a href="#" class="">다음</a>
+                                    </div>
+                                    <div class="right">
+                                        <a href="#" class="btn-move-list">목록으로</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

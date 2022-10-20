@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    		<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+	<meta name="description" content="Ceragem">
+	<meta name="keywords" content="Ceragem">
+	<meta name="naver-site-verification" content="" />
+	<meta name="format-detection" content="telephone=no">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Ceragem">
+	<meta property="og:description" content="Ceragem">
+	<meta property="og:url" content="">
+	<title>Ceragem</title>
+    <link rel="shortcut icon" href="../../../assets/mobile/images/common/favicon.ico" />
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../../../assets/mobile/images/common/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../assets/mobile/images/common/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/mobile/images/common/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/mobile/images/common/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="../../../assets/mobile/images/common/apple-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/mobile/images/common/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../assets/mobile/images/common/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../assets/mobile/images/common/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../assets/mobile/images/common/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../assets/mobile/images/common/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/mobile/images/common/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../assets/mobile/images/common/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../assets/mobile/images/common/apple-icon-60x60.png">
+	<link href="../../../assets/mobile/css/common.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="sub-page-header">
+            <div class="left">
+                <button class="ico-back">뒤로가기</button>
+            </div>
+            <div class="right">
+                <!-- <button class="btn-xs btn-white">불러오기 <span>2</span></button>
+                    <button class="btn-xs btn-white">임시저장</button>
+                    <button class="btn-xs btn-black" disabled>등록</button> -->
+                <button class="btn-xs btn-black">등록</button>
+            </div>
+        </div>
+
+        <div id="container">
+            <section id="etc" class="container-wrap contact-write">
+                <div class="page-layout-header">
+                    <div class="inner-wrap">
+                        <h2 class="font-heading04">
+                            1:1 문의
+                        </h2>
+                    </div>
+                </div>
+                <div class="page-layout-contents">
+                    <div class="inner-wrap">
+                        <form>
+                            <fieldset>
+                                <legend class="hidden">1:1 문의 작성</legend>
+                                    <!-- error 시 error 클래스 추가 -->
+
+                                    <div class="select-input-wrap error">
+                                        <select>
+                                            <option value="" selected>문의 유형을 선택해주세요</option>
+                                            <option value="">게시물 작성</option>
+                                            <option value="">게시판 신청</option>
+                                            <option value="">활동지수/마일리지</option>
+                                            <option value="">이벤트</option>
+                                            <option value="">게시물 신고</option>
+                                            <option value="">기타</option>
+                                        </select>
+                                        <strong class="error-txt">문의 유형을 선택해주세요.</strong>
+                                    </div>
+
+                                    <div class="text-input-wrap small error">
+                                        <div class="box-input">
+                                            <input type="text" placeholder="제목을 입력해주세요 (30자 이내)" title="제목">
+                                            <button class="ico-search-delete" style="display: none;">삭제</button>
+                                        </div>
+                                        <strong class="error-txt">제목을 입력해주세요.</strong>
+                                    </div>
+
+                                    <div class="text-input-wrap error">
+                                        <div class="box-input">
+                                            <div class="box-textarea">
+                                                <textarea title="문의 내용" placeholder="문의하실 내용을 입력해주세요"></textarea>
+                                                <div class="txt-count">
+                                                    <!-- 타이핑 시 typing 클래스 추가(텍스트 color 변경됨) -->
+                                                    <span>0</span>
+                                                    /2000
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <strong class="error-txt">내용을 입력해주세요.</strong>
+                                    </div>
+
+                                    <div class="file-input-wrap">
+                                        <strong class="item-tit">사진 첨부<span>(선택사항)</span></strong>
+                                        <ul class="file-input-list">
+                                            <li>
+                                                <div class="input-img-wrap">
+                                                    <button class="ico-close">삭제</button>
+                                                    <img src="../../../assets/web/images/temp/temp-img03.png" alt="">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="box-file-input">
+                                                    <label for="file02">첨부</label>
+                                                    <input type="file" id="file02" title="사진 첨부">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="box-file-input">
+                                                    <label for="file03">첨부</label>
+                                                    <input type="file" id="file03" title="사진 첨부">
+                                                </div>
+                                            </li>
+                                            <!-- <li>
+                                                    <div class="box-file-input">
+                                                        <label for="file01">첨부</label>
+                                                        <input type="file" id="file01" title="사진 첨부">
+                                                    </div>
+                                                    <div class="input-img-wrap">
+                                                        <button class="ico-close">삭제</button>
+                                                        <img src="../../../assets/web/images/temp/temp-img03.png" alt="">
+                                                    </div>
+                                                </li> -->
+                                        </ul>
+                                        <ul class="list-dot gray">
+                                            <li>10MB 미만의 JPG, JPEG, GIF, PNG 파일만 등록 가능합니다.</li>
+                                            <li>상품과 무관한 내용이거나 음란 및 불법적인 내용은 통보없이 삭제될 수 있습니다.</li>
+                                            <li>내가 작성한 1:1문의 내역과 답변 확인은 마이페이지에서 확인 가능합니다.</li>
+                                        </ul>
+                                    </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="../../../assets/mobile/js/lib/jquery.import.js"></script>
+</body>
+
+</html>

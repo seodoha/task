@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap" class="full-wrap">
+            <div class="sub-page-header shadow-bg">
+                <div class="left">
+                    <button class="ico-back-white">뒤로가기</button>
+                </div>
+                <div class="right">
+                    <button class="ico-declare-white">더보기</button>
+                </div>
+            </div>
+
+            <div id="container">
+                <section id="story" class="container-wrap user-home">
+                    <div class="page-layout-header sub-visual">
+                        <div class="box-bg">
+                            <img src="../../../assets/mobile/images/temp/writer-home-bg.png" alt="">
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <div class="writer-info-head">
+                                <div class="thumb">
+                                    <img src="../../../assets/mobile/images/temp/writer-profile.png" alt="">
+                                </div>
+                                <strong class="nick">고작가</strong>
+                                <span class="follower">팔로워 <em>1,234</em></span>
+                                <span class="right">
+                                    <button class="ico-share-gray">공유하기</button>
+                                    <div class="box-btn">
+                                        <input id="check1" type="checkbox" class="input-check">
+                                        <label for="check1" class="btn-xs btn-white btn-subscribe">
+                                            <span class="unchecked">팔로우</span>
+                                            <span class="checked">팔로잉</span>
+                                        </label>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="writer-info-contents">
+                                <div class="tab-wrap">
+                                    <ul class="tab-list tab-list-line">
+                                        <!-- 활성화 시 on class 추가 -->
+                                        <li><a href="#" title="소개">소개</a></li>
+                                        <li><a href="#" title="스토리">스토리</a></li>
+                                        <li><a href="#" class="on" title="커뮤니티">커뮤니티</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <!--커뮤니티-->
+                                        <div>
+                                            <div class="box-board">
+                                                <div class="board-util">
+                                                    <button class="btn-select">최신순</button>
+                                                    <span class="board-count">총 <em>20</em>건</span>
+                                                </div>
+                                                <ul class="board-list">
+                                                    <li>
+                                                        <div class="box-txt-card ty-small">
+                                                            <a href="#">
+                                                                <div class="chips-wrap">
+                                                                    <span class="chip-label chip-label-sm">스몰토크</span>
+                                                                    <span class="chip-label chip-label-sm">게시판_2depth</span>
+                                                                </div>
+                                                                <div class="box-tit">
+                                                                    <strong class="tit">정말 잘샀다<br>이건 인생템이다 하는것</strong>
+                                                                    <span class="sub-tit">예술가의 영혼이 깃든 제주의 공간 </span>
+                                                                </div>
+                                                                <div class="box-cnts">
+                                                                    <p>
+                                                                        푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나 제주에서 꼭 들러야 하는 곳이 예술가의 공간이 푸르른 바다, 다양한 자연의 색을 머금은 오름...
+                                                                    </p>
+                                                                    <div class="thumb">
+                                                                        <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                            <div class="box-util">
+                                                                <span class="date">2022.03.04</span>
+                                                                <div class="right">
+                                                                    <span class="btn-act-like-wrap">
+                                                                        <input type="checkbox" id="like001">
+                                                                        <label for="like001">
+                                                                            <div class="box">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                                <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <span class="count">340</span>
+                                                                        </label>
+                                                                    </span>
+                                                                    <a href="#" class="ico-comment">999</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="box-txt-card ty-small">
+                                                            <a href="#">
+                                                                <div class="chips-wrap">
+                                                                    <span class="chip-label chip-label-sm">여행</span>
+                                                                </div>
+                                                                <div class="box-tit">
+                                                                    <strong class="font-card-tit02">제주는 도슨트가 필요해</strong>
+                                                                    <span class="sub-tit">예술가의 영혼이 깃든 제주의 공간 </span>
+                                                                </div>
+                                                                <div class="box-cnts">
+                                                                    <p>
+                                                                        푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나 제주에서 꼭 들러야 하는 곳이 예술가의 공간이 푸르른 바다, 다양한 자연의 색을 머금은 오름...
+                                                                    </p>
+                                                                    <div class="thumb">
+                                                                        <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                            <div class="box-util">
+                                                                <span class="date">2022.03.04</span>
+                                                                <div class="right">
+                                                                    <span class="btn-act-like-wrap">
+                                                                        <input type="checkbox" id="like001">
+                                                                        <label for="like001">
+                                                                            <div class="box">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                                <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <span class="count">340</span>
+                                                                        </label>
+                                                                    </span>
+                                                                    <a href="#" class="ico-comment">999</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="box-txt-card ty-small">
+                                                            <a href="#">
+                                                                <div class="chips-wrap">
+                                                                    <span class="chip-label chip-label-sm">여행</span>
+                                                                </div>
+                                                                <div class="box-tit">
+                                                                    <strong class="font-card-tit02">제주는 도슨트가 필요해</strong>
+                                                                    <span class="sub-tit">예술가의 영혼이 깃든 제주의 공간 </span>
+                                                                </div>
+                                                                <div class="box-cnts">
+                                                                    <p>
+                                                                        푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나 제주에서 꼭 들러야 하는 곳이 예술가의 공간이 푸르른 바다, 다양한 자연의 색을 머금은 오름...
+                                                                    </p>
+                                                                    <div class="thumb">
+                                                                        <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                            <div class="box-util">
+                                                                <span class="date">2022.03.04</span>
+                                                                <div class="right">
+                                                                    <span class="btn-act-like-wrap">
+                                                                        <input type="checkbox" id="like001">
+                                                                        <label for="like001">
+                                                                            <div class="box">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                                <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <span class="count">340</span>
+                                                                        </label>
+                                                                    </span>
+                                                                    <a href="#" class="ico-comment">999</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--empty case-->
+                                            <!-- <div class="box-noresult ty-small">
+                                                <div class="box-lottie">
+                                                    <div id="not-board" class="lottie"></div>
+                                                </div>
+                                                <strong class="empty-tit">
+                                                    등록된 게시물이 없습니다.
+                                                </strong>
+                                            </div> -->
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

@@ -1,0 +1,74 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _slider.scss
+* @Description : slider 컴포넌트
+* @Create Date: 2022-02-22
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+.slider-wrap{
+    .slick-arrow{
+        @include venderPrefix('transform',translateY(-50%));
+        position: absolute;
+        top: 50%;
+        width: 6.8rem;
+        height: 6.8rem;
+        text-indent: -9999999px;
+        &.slick-prev{
+            @include backgroundImg('../images/icon/ico-preview.svg',center,contain);
+            &.slick-disabled {
+                @include backgroundImg('../images/icon/ico-preview-disable.svg',center,contain);
+                cursor: default;
+            }
+            z-index: 1;
+        }
+        &.slick-next{
+            @include backgroundImg('../images/icon/ico-next.svg',center,contain);
+            right: 0;
+            // &.slick-disabled {
+            //     @include backgroundImg('../images/icon/ico-next-disable.svg',center,contain);
+            //     cursor: default;
+            // }
+        }
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 3rem;
+        & > li {
+            button{
+                width: 0.8rem;
+                height: 0.8rem;
+                border-radius: 50%;
+                background-color: #E5E5E5;
+                text-indent: -999999px;
+            }
+            &.slick-active{
+                button{background-color: $black;}
+            }
+            &:nth-of-type(n+2) {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+        .slider-item {
+            width: 32rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            & ~ .slider-item {margin-left: 1.2rem;}
+            & > a {display: block;}
+        }
+    }
+
+    .chart-slider {
+        img {width: 100%;}
+    }
+}

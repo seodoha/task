@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="share-popup">팝업 오픈</button>
+        </div>
+
+        <!--공유하기 팝업-->
+        <div id="share-popup" class="layer-popup-wrap">
+            <div class="layer-popup full-popup">
+                <div class="popup-header">
+                    <button class="ico-popup-close popup-close">닫기</button>
+                </div>
+                <div class="popup-body popup-share">
+                    <h4 class="pop-tit">공유하기</h4>
+                    <span class="pop-txt">포스트를 공유해보세요</span>
+                    <ul class="list-share">
+                        <li><button class="btn-share btn-share-kakao">kakao</button></li>
+                        <li><button class="btn-share btn-share-line">line</button></li>
+                        <li><button class="btn-share btn-share-facebook">facebook</button></li>
+                        <li><button class="btn-share btn-share-link">link</button></li>
+                    </ul>
+                    <div class="box-thumb">
+                        <div class="thumb"><img src="../../../assets/mobile/images/temp/share-thumb.png" alt=""></div>
+                        <p class="txt">
+                            <span>
+                                제주는 도슨트가 필요해
+                                제주는 도슨트가 필요해
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>
+
+
+
+
+
+
+

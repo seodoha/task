@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+
+            <div class="sub-page-header">
+                <button class="ico-back">뒤로가기</button>
+            </div>
+
+            <div id="container">
+                <section id="mypage" class="container-wrap">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading04">DNA 검사 리포트</h2>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents ty04">
+                        <div class="box-layout-contents ty02">
+                            <div class="inner-wrap">
+                                <div class="tab-wrap tab-ctrl">
+                                    <ul class="tab-list tab-list-line hasScroll">
+                                        <li><a href="javascript:void(0)" class="on">유전자 분석결과</a></li>
+                                        <li><a href="javascript:void(0)">Nutrition</a></li>
+                                        <li><a href="javascript:void(0)">타고난 성향</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div>
+                                            <div class="box-chart-wrap">
+                                                <div class="box-chart">
+                                                    <strong class="chart-tit ty02">두뇌 스트레스</strong>
+                                                    <span class="chart-sub-tit">두뇌의 긴장, 불안 상태</span>
+                                                    <!--차트영역-->
+                                                    <div class="box-graph-wrap">
+                                                        <span class="flt-txt">
+                                                            <em class="color"></em>
+                                                            적정범위
+                                                        </span>
+                                                        <div class="box-range">
+
+                                                            <div class="range-sec blue">
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">매우 낮음</strong>
+                                                            </div>
+                                                            <div class="range-sec teal">
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">낮음</strong>
+                                                            </div>
+                                                            <div class="range-sec green on"> <!--핀 꽂히는 부분 클래스 on 추가-->
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar">
+                                                                    <!--핀 꽂히는 bar에 추가-->
+                                                                    <div class="box-pin">
+                                                                        <strong class="pin-score">
+                                                                            <em>47.5</em>점
+                                                                        </strong>
+                                                                        <svg width="16" height="22" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M13 1C9.8174 1 6.76516 2.28633 4.51472 4.57602C2.26428 6.86571 1 9.97119 1 13.2093C1 24.2044 13 34.9972 13 34.9972C13 34.9972 25 24.2044 25 13.2093C25 9.97119 23.7357 6.86571 21.4853 4.57602C19.2348 2.28633 16.1826 1 13 1Z" fill="#20CFC2"></path>
+                                                                            <ellipse cx="12.7424" cy="10.2542" rx="3.36842" ry="3.25424" fill="white"></ellipse>
+                                                                            <path d="M6.89885 17.4109C6.13514 16.4617 6.81085 15.0508 8.02918 15.0508H17.9708C19.1891 15.0508 19.8649 16.4617 19.1012 17.4109L14.2355 23.4586C13.9602 23.8009 13.5445 23.9999 13.1052 23.9999H12.8948C12.4555 23.9999 12.0398 23.8009 11.7645 23.4586L6.89885 17.4109Z" fill="white"></path>
+                                                                        </svg>
+                                                                        <em class="pin"></em>
+                                                                    </div>
+                                                                </span>
+                                                                <strong class="txt">보통</strong>
+                                                            </div>
+                                                            <div class="range-sec orange">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">높음</strong>
+                                                            </div>
+                                                            <div class="range-sec red">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">매우 높음</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="consult-txt">두뇌 스트레스는 <strong>보통이하 (70점 미만)</strong>가 나올 수 있도록 관리해주세요.</span>
+                                                </div>
+                                                <div class="box-chart">
+                                                    <strong class="chart-tit ty02">신경계 건강도</strong>
+                                                    <span class="chart-sub-tit">자율신경의 교감·부교감 신경의 활성 상태</span>
+                                                    <!--차트영역-->
+                                                    <div class="box-graph-wrap">
+                                                        <span class="flt-txt">
+                                                            <em class="color"></em>
+                                                            적정범위
+                                                        </span>
+                                                        <div class="box-range">
+
+                                                            <div class="range-sec red">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">위험</strong>
+                                                            </div>
+                                                            <div class="range-sec orange">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">경고</strong>
+                                                            </div>
+                                                            <div class="range-sec green">
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">양호</strong>
+                                                            </div>
+                                                            <div class="range-sec teal on">
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar">
+                                                                    <div class="box-pin">
+                                                                        <strong class="pin-score">
+                                                                            <em>72.0</em>점
+                                                                        </strong>
+                                                                        <svg width="16" height="22" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M13 1C9.8174 1 6.76516 2.28633 4.51472 4.57602C2.26428 6.86571 1 9.97119 1 13.2093C1 24.2044 13 34.9972 13 34.9972C13 34.9972 25 24.2044 25 13.2093C25 9.97119 23.7357 6.86571 21.4853 4.57602C19.2348 2.28633 16.1826 1 13 1Z" fill="#20CFC2"></path>
+                                                                            <ellipse cx="12.7424" cy="10.2542" rx="3.36842" ry="3.25424" fill="white"></ellipse>
+                                                                            <path d="M6.89885 17.4109C6.13514 16.4617 6.81085 15.0508 8.02918 15.0508H17.9708C19.1891 15.0508 19.8649 16.4617 19.1012 17.4109L14.2355 23.4586C13.9602 23.8009 13.5445 23.9999 13.1052 23.9999H12.8948C12.4555 23.9999 12.0398 23.8009 11.7645 23.4586L6.89885 17.4109Z" fill="white"></path>
+                                                                        </svg>
+                                                                        <em class="pin"></em>
+                                                                    </div>
+                                                                </span>
+                                                                <strong class="txt">건강</strong>
+                                                            </div>
+                                                            <div class="range-sec blue">
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">매우 건강</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="consult-txt">신경계 건강도는 <strong>양호 이상(40점 이상)</strong>이 나올 수 있도록 관리해주세요.</span>
+                                                </div>
+                                                <div class="box-chart">
+                                                    <strong class="chart-tit ty02">혈압</strong>
+                                                    <span class="chart-sub-tit">심장 혈관계의 압력의 정도</span>
+                                                    <!--차트영역-->
+                                                    <div class="box-graph-wrap long">
+                                                        <span class="flt-txt">
+                                                            <em class="color"></em>
+                                                            적정범위
+                                                        </span>
+                                                        <div class="box-range">
+                                                            <span class="chart-tag">수축기</span>
+                                                            <div class="range-sec blue on">
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar">
+                                                                    <div class="box-pin">
+                                                                        <strong class="pin-score">
+                                                                            <em>99</em>mmHg
+                                                                        </strong>
+                                                                        <svg width="16" height="22" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M13 1C9.8174 1 6.76516 2.28633 4.51472 4.57602C2.26428 6.86571 1 9.97119 1 13.2093C1 24.2044 13 34.9972 13 34.9972C13 34.9972 25 24.2044 25 13.2093C25 9.97119 23.7357 6.86571 21.4853 4.57602C19.2348 2.28633 16.1826 1 13 1Z" fill="#20CFC2"></path>
+                                                                            <ellipse cx="12.7424" cy="10.2542" rx="3.36842" ry="3.25424" fill="white"></ellipse>
+                                                                            <path d="M6.89885 17.4109C6.13514 16.4617 6.81085 15.0508 8.02918 15.0508H17.9708C19.1891 15.0508 19.8649 16.4617 19.1012 17.4109L14.2355 23.4586C13.9602 23.8009 13.5445 23.9999 13.1052 23.9999H12.8948C12.4555 23.9999 12.0398 23.8009 11.7645 23.4586L6.89885 17.4109Z" fill="white"></path>
+                                                                        </svg>
+                                                                        <em class="pin"></em>
+                                                                    </div>
+                                                                </span>
+                                                                <strong class="txt">정상<br>(~119)</strong>
+                                                            </div>
+                                                            <div class="range-sec yellow">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">주의<br>(120~139)</strong>
+                                                            </div>
+                                                            <div class="range-sec orange">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">경고<br>(140~159)</strong>
+                                                            </div>
+                                                            <div class="range-sec red">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">위험<br>(160~)</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="box-graph-wrap long">
+                                                        <div class="box-range">
+                                                            <span class="chart-tag">이완기</span>
+                                                            <div class="range-sec blue on">
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar">
+                                                                    <div class="box-pin">
+                                                                        <strong class="pin-score">
+                                                                            <em>74</em>mmHg
+                                                                        </strong>
+                                                                        <svg width="16" height="22" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M13 1C9.8174 1 6.76516 2.28633 4.51472 4.57602C2.26428 6.86571 1 9.97119 1 13.2093C1 24.2044 13 34.9972 13 34.9972C13 34.9972 25 24.2044 25 13.2093C25 9.97119 23.7357 6.86571 21.4853 4.57602C19.2348 2.28633 16.1826 1 13 1Z" fill="#20CFC2"></path>
+                                                                            <ellipse cx="12.7424" cy="10.2542" rx="3.36842" ry="3.25424" fill="white"></ellipse>
+                                                                            <path d="M6.89885 17.4109C6.13514 16.4617 6.81085 15.0508 8.02918 15.0508H17.9708C19.1891 15.0508 19.8649 16.4617 19.1012 17.4109L14.2355 23.4586C13.9602 23.8009 13.5445 23.9999 13.1052 23.9999H12.8948C12.4555 23.9999 12.0398 23.8009 11.7645 23.4586L6.89885 17.4109Z" fill="white"></path>
+                                                                        </svg>
+                                                                        <em class="pin"></em>
+                                                                    </div>
+                                                                </span>
+                                                                <strong class="txt">정상<br>(~119)</strong>
+                                                            </div>
+                                                            <div class="range-sec yellow">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">주의<br>(120~139)</strong>
+                                                            </div>
+                                                            <div class="range-sec orange">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">경고<br>(140~159)</strong>
+                                                            </div>
+                                                            <div class="range-sec red">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">위험<br>(160~)</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="consult-txt">
+                                                        <strong>수축기 정상 (119mmHg 이하), 이완기 정상(79mmHg 이하) </strong> 수치가 나올 수 있도록 관리해주세요.
+                                                    </span>
+                                                </div>
+                                                <div class="box-chart">
+                                                    <strong class="chart-tit ty02">활력도</strong>
+                                                    <span class="chart-sub-tit">자율신경의 균형 정도로 본 신체 전반의 활력 상태</span>
+                                                    <!--차트영역-->
+                                                    <div class="box-graph-wrap">
+                                                        <span class="flt-txt">
+                                                            <em class="color"></em>
+                                                            적정범위
+                                                        </span>
+                                                        <div class="box-range">
+
+                                                            <div class="range-sec red">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">무기력</strong>
+                                                            </div>
+                                                            <div class="range-sec orange">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">약간</strong>
+                                                            </div>
+                                                            <div class="range-sec green">
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">보통</strong>
+                                                            </div>
+                                                            <div class="range-sec blue on">
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar">
+                                                                    <div class="box-pin">
+                                                                        <svg width="16" height="22" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M13 1C9.8174 1 6.76516 2.28633 4.51472 4.57602C2.26428 6.86571 1 9.97119 1 13.2093C1 24.2044 13 34.9972 13 34.9972C13 34.9972 25 24.2044 25 13.2093C25 9.97119 23.7357 6.86571 21.4853 4.57602C19.2348 2.28633 16.1826 1 13 1Z" fill="#20CFC2"></path>
+                                                                            <ellipse cx="12.7424" cy="10.2542" rx="3.36842" ry="3.25424" fill="white"></ellipse>
+                                                                            <path d="M6.89885 17.4109C6.13514 16.4617 6.81085 15.0508 8.02918 15.0508H17.9708C19.1891 15.0508 19.8649 16.4617 19.1012 17.4109L14.2355 23.4586C13.9602 23.8009 13.5445 23.9999 13.1052 23.9999H12.8948C12.4555 23.9999 12.0398 23.8009 11.7645 23.4586L6.89885 17.4109Z" fill="white"></path>
+                                                                        </svg>
+                                                                        <em class="pin"></em>
+                                                                    </div>
+                                                                </span>
+                                                                <strong class="txt">활력</strong>
+                                                            </div>
+                                                            <div class="range-sec purple">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">건강</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="consult-txt">
+                                                        활력도는 <strong>보통에서 활력 상태</strong>가 나올 수 있도록 관리해주세요.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="ceracheck-info-top">
+                                                <span class="ico-average">한국인 평균</span>
+                                                <span class="ico-my-point">내 점수</span>
+                                            </div>
+                                            <div class="report-box">
+                                                <span class="font-card-tit02">비타민 C 농도</span>
+                                                <ul class="point-list">
+                                                    <li>
+                                                        <span class="ico-average">한국인 평균</span>
+                                                        <div class="status-bar">
+                                                            <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                            <span class="current average" data-point="73" style="width: 73%;"></span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="ico-my-point">내 점수</span>
+                                                        <!--
+                                                            점수 낮으면 'low' 클래스 추가,
+                                                            점수 중간이면 'middle' 클래스 추가,
+                                                            점수 높으면 'high' 클래스 추가
+                                                        -->
+                                                        <div class="status-bar low">
+                                                            <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                            <span class="current" data-point="20" style="width: 20%;"></span>
+                                                            <span class="current-txt">낮음</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="report-box">
+                                                <span class="font-card-tit02">비타민 D 농도</span>
+                                                <ul class="point-list">
+                                                    <li>
+                                                        <span class="ico-average">한국인 평균</span>
+                                                        <div class="status-bar">
+                                                            <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                            <span class="current average" data-point="73" style="width: 73%;"></span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="ico-my-point">내 점수</span>
+                                                        <!--
+                                                            점수 낮으면 'low' 클래스 추가,
+                                                            점수 중간이면 'middle' 클래스 추가,
+                                                            점수 높으면 'high' 클래스 추가
+                                                        -->
+                                                        <div class="status-bar middle">
+                                                            <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                            <span class="current" data-point="57" style="width: 57%;"></span>
+                                                            <span class="current-txt">중간</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="report-box">
+                                                <span class="font-card-tit02">코엔자임Q10 농도</span>
+                                                <ul class="point-list">
+                                                    <li>
+                                                        <span class="ico-average">한국인 평균</span>
+                                                        <div class="status-bar">
+                                                            <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                            <span class="current average" data-point="49" style="width: 49%;"></span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="ico-my-point">내 점수</span>
+                                                        <!--
+                                                            점수 낮으면 'low' 클래스 추가,
+                                                            점수 중간이면 'middle' 클래스 추가,
+                                                            점수 높으면 'high' 클래스 추가
+                                                        -->
+                                                        <div class="status-bar high">
+                                                            <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                            <span class="current" data-point="63" style="width: 63%;"></span>
+                                                            <span class="current-txt">높음</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tendency-box">
+                                                <div class="box-txt">
+                                                    <strong class="date">2022년 04월 05일</strong>
+                                                    <span class="txt">고객님의 현재 상태를 고려하여<br>추천하는 세라메이트 입니다.</span>
+                                                </div>
+                                                <div class="box-medic">
+                                                    <div class="img-medic">
+                                                        <strong style="background-color: #F5B225;">비타민C 메이트</strong>
+                                                        <img src="../../../assets/web/images/sub/medic09.png" alt="비타민C메이트">
+                                                    </div>
+                                                    <div class="about-medic">
+                                                        <strong class="medic-tit">Nutra-C® 1,000mg</strong>
+                                                        <ul class="list-dot">
+                                                            <li>편안하게 섭취하는 중성화된 비타민C</li>
+                                                            <li>생체이용률 높은 비타민 C</li>
+                                                        </ul>
+                                                        <dl class="about">
+                                                            <dt>[제품정보]</dt>
+                                                            <dd>미국 특허 공법으로 킬레이트화 된 미네랄이 결합된 비타민C를 사용했습니다</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

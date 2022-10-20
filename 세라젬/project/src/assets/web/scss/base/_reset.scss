@@ -1,0 +1,234 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _reset.scss
+* @Description : 초기화
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    word-break: break-word;
+    // word-break: keep-all;
+}
+html,
+body {
+    min-height: 100vh;
+    height: 100%;
+    -webkit-margin-start: 0;
+    -webkit-padding-start: 0px;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    position: relative;
+    font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", "돋움", Dotum, "굴림", Gulim, Tahoma, Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: $black;
+    -webkit-text-size-adjust: none;
+}
+img,
+fieldset,
+button {
+    border: none;
+}
+hr{
+    display: none;
+}
+input {
+    border: none;
+    outline: 0;
+    font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", "돋움", Dotum, "굴림", Gulim, Tahoma, Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+input[type="submit"] {
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+textarea {
+    outline: 0;
+    -webkit-appearance: none;
+    resize: none;
+    font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", "돋움", Dotum, "굴림", Gulim, Tahoma, Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
+}
+button {
+    -webkit-appearance: button;
+    cursor: pointer;
+    background: none;
+    font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", "돋움", Dotum, "굴림", Gulim, Tahoma, Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
+    color: $black;
+    transform: translateZ(0);
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+    display: none;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    cursor: pointer;
+    padding: 0 3rem 0 1.5rem;
+}
+select::-ms-expand {
+    display: none;
+}
+option {
+    outline: 0;
+}
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    color: #161616;
+}
+a:hover,
+a:active,
+a:focus,
+a:visited {
+    text-decoration: none;
+}
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th,
+td {
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+form {
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+legend {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+} /* For Screen Reader */
+caption {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+strong {
+    font-weight: normal;
+}
+fieldset {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+em {font-style: normal;}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {margin: 0;}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+main,
+nav,
+section {
+    display: block;
+}
+address {
+    font-style: normal;
+}
+
+/* skip nav */
+#nav-skip {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+
+    a {
+        position: absolute;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        line-height: 1;
+
+        &:hover,
+        &:focus,
+        &:active {
+        display: block;
+        z-index: 10;
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+        background: #333;
+        color: #fff;
+        }
+    }
+}
+
+// helpers
+.dimmed {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(22,22,22,0.4);
+}
+.scrOff {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.hidden{@include hidden;}

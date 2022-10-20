@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="event" class="container-wrap bg-gray challenge">
+                    <!-- 이벤트 영역 -->
+                    <!--2022.03.25 이미지 교체 및 'box-date' 삭제-->
+                    <div class="box-event" style="background-color: #5956E9;"><!--배경색 관리자에서 삽입-->
+                        <div class="box-event-view">
+                            <div class="box-img">
+                                <!--관리자에서 이미지 삽입-->
+                                <img src="../../../assets/web/images/banner/event/event01.png" alt="">
+                                <div class="hidden">
+                                    <em>2022 효자 되자</em>
+                                    <strong>부모님께 문자 보내기 챌린지</strong>
+                                    <dl>
+                                        <dt>챌린지기간</dt>
+                                        <dd>2022.02.01(화) 07:00 ~ 03.01(화) 18:00</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <!-- <div class="box-date">
+                                <span>챌린지기간</span>
+                                <span>2022.02.01(화) 07:00 ~ 03.01(화) 18:00</span>
+                            </div> -->
+                            <div class="layout-detail-view">
+                                <span class="font-card-tit01">함께 챌린지에 참여하고 있어요!</span>
+                                <button class="ico-share">공유하기</button>
+                                <div class="box-number-wrap">
+                                    <div>
+                                        <span class="num-tit">현재 참여 인원</span>
+                                        <div><strong>183</strong>명</div>
+                                    </div>
+                                    <div>
+                                        <span class="num-tit">인증 글</span>
+                                        <div><strong>981</strong>명</div>
+                                    </div>
+                                </div>
+                                <!-- 참여 전 버튼 -->
+                                <button class="btn-large btn-black md-ripples ripples-light">챌린지 참여하기</button>
+                                <!-- 참여 후 버튼 -->
+                                <!-- <button class="btn-large btn-black md-ripples ripples-light">오늘 인증하기</button> -->
+                            </div>
+                            <div class="layout-detail-view">
+                                <span class="font-card-tit01">내 인증 현황</span>
+                                <ul class="box-stamp">
+                                    <!-- 완료 시 complete 클래스 추가 -->
+                                    <li class="stamp-list complete">
+                                        <span>1회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>2회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>3회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>4회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>5회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>6회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>7회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>8회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>9회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>10회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>11회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>12회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>13회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>14회</span>
+                                    </li>
+                                    <li class="stamp-list">
+                                        <span>15회</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <h2 class="font-heading02">참여 방법</h2>
+                            <ol class="block-list">
+                                <li>
+                                    <span class="list-num">1</span>
+                                    <span>부모님께 <strong>문자, 카톡</strong>보내주세요.</span>
+                                </li>
+                                <li>
+                                    <span class="list-num">2</span>
+                                    <span>인증 게시판에 내용을 <strong>캡쳐</strong>해서 올려주세요.</span>
+                                </li>
+                                <li>
+                                    <span class="list-num">3</span>
+                                    <span><strong>1일 최대 1회 참여</strong> 인정되며 <strong>15회 이상</strong> 참여 시 챌린지 성공!</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- 인증글 영역 -->
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <h3 class="font-heading05"><span class="imoji">🙌</span>챌린지 인증글 게시판</h3>
+                            <!-- 게시글 있을 경우 -->
+                            <div class="board-header">
+                                <ul class="list-sort">
+                                    <li>
+                                        <label class="rd-sort-btn">
+                                            <input type="radio" name="sortType" id="newTy" checked="">
+                                            <span class="txt">최신순</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="rd-sort-btn">
+                                            <input type="radio" name="sortType" id="recomTy">
+                                            <span class="txt">좋아요순</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="rd-sort-btn">
+                                            <input type="radio" name="sortType" id="viewTy">
+                                            <span class="txt">조회수순</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="sorting-wrap">
+                                    <span>내가 쓴 글 보기</span>
+                                    <div class="btn-switch">
+                                        <input type="checkbox" id="switch01" checked>
+                                        <label for="switch01">미체크</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="box-txt-list">
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">가방이 비싸다는 사람들에게...</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        2020년 여름 에르메스 핸드백이 한화로 약 3억 5천 6백만원에 팔리며 세계 최고가를 기록했습니다.그런데 제가 2020년 여름 에르메스 핸드백이 한화로 약 3억 5천 6백만원에
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="thumb">
+                                                <img src="../../../assets/web/images/temp/temp_img02.png" alt="">
+                                            </div>
+                                        </div>
+
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like2">
+                                                <label for="like2">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check2">
+                                        <label for="check2">북마크</label>
+                                    </span>
+                                </li>
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">반영구적으로 쓸 수 있어 오래 사용이 가능</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        요즘 시중에 피부 관리기기로 led마스크, 근적외선 마스크 같은게
+                                                        많이 나오는데 반영구적으로 쓸 수 있어 오래 사용이 가능하여...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like3">
+                                                <label for="like3">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check3">
+                                        <label for="check3">북마크</label>
+                                    </span>
+                                </li>
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">신혼집 안마의자 설치했더니 집콕해 설치했더니 설치했더니</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        2020년 여름 에르메스 핸드백이 한화로 약 3억 5천 6백만원에 팔리며 세계 최고가를 기록했습니다.그런데 제가 2020년 여름 에르메스 핸드백이 한화로 약 3억 5천 6백만원에
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like4">
+                                                <label for="like4">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check4">
+                                        <label for="check4">북마크</label>
+                                    </span>
+                                </li>
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">Led 마스크 혹시 부작용은 없을까요?</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        요즘 시중에 피부 관리기기로 led마스크, 근적외선 마스크 같은게
+                                                        많이 나오는데 반영구적으로 쓸 수 있어 오래 사용이 가능하여...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="thumb">
+                                                <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like5">
+                                                <label for="like5">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check5">
+                                        <label for="check5">북마크</label>
+                                    </span>
+                                </li>
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">Led 마스크 혹시 부작용은 없을까요?</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        요즘 시중에 피부 관리기기로 led마스크, 근적외선 마스크 같은게
+                                                        많이 나오는데 반영구적으로 쓸 수 있어 오래 사용이 가능하여...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="thumb">
+                                                <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like5">
+                                                <label for="like5">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check5">
+                                        <label for="check5">북마크</label>
+                                    </span>
+                                </li>
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">Led 마스크 혹시 부작용은 없을까요?</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        요즘 시중에 피부 관리기기로 led마스크, 근적외선 마스크 같은게
+                                                        많이 나오는데 반영구적으로 쓸 수 있어 오래 사용이 가능하여...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="thumb">
+                                                <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like5">
+                                                <label for="like5">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check5">
+                                        <label for="check5">북마크</label>
+                                    </span>
+                                </li>
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">가방이 비싸다는 사람들에게...</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        2020년 여름 에르메스 핸드백이 한화로 약 3억 5천 6백만원에 팔리며 세계 최고가를 기록했습니다.그런데 제가 2020년 여름 에르메스 핸드백이 한화로 약 3억 5천 6백만원에
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="thumb">
+                                                <img src="../../../assets/web/images/temp/temp_img02.png" alt="">
+                                            </div>
+                                        </div>
+
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like2">
+                                                <label for="like2">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check2">
+                                        <label for="check2">북마크</label>
+                                    </span>
+                                </li>
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">반영구적으로 쓸 수 있어 오래 사용이 가능</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        요즘 시중에 피부 관리기기로 led마스크, 근적외선 마스크 같은게
+                                                        많이 나오는데 반영구적으로 쓸 수 있어 오래 사용이 가능하여...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like3">
+                                                <label for="like3">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check3">
+                                        <label for="check3">북마크</label>
+                                    </span>
+                                </li>
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">신혼집 안마의자 설치했더니 집콕해 설치했더니 설치했더니</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        2020년 여름 에르메스 핸드백이 한화로 약 3억 5천 6백만원에 팔리며 세계 최고가를 기록했습니다.그런데 제가 2020년 여름 에르메스 핸드백이 한화로 약 3억 5천 6백만원에
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like4">
+                                                <label for="like4">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check4">
+                                        <label for="check4">북마크</label>
+                                    </span>
+                                </li>
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">Led 마스크 혹시 부작용은 없을까요?</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        요즘 시중에 피부 관리기기로 led마스크, 근적외선 마스크 같은게
+                                                        많이 나오는데 반영구적으로 쓸 수 있어 오래 사용이 가능하여...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="thumb">
+                                                <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like5">
+                                                <label for="like5">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check5">
+                                        <label for="check5">북마크</label>
+                                    </span>
+                                </li>
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">Led 마스크 혹시 부작용은 없을까요?</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        요즘 시중에 피부 관리기기로 led마스크, 근적외선 마스크 같은게
+                                                        많이 나오는데 반영구적으로 쓸 수 있어 오래 사용이 가능하여...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="thumb">
+                                                <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like5">
+                                                <label for="like5">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check5">
+                                        <label for="check5">북마크</label>
+                                    </span>
+                                </li>
+                                <li class="box-txt-card">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">취미/여행</span>
+                                        </div>
+                                        <div class="box-txt-wrap">
+                                            <div class="box-txt">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">Led 마스크 혹시 부작용은 없을까요?</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        요즘 시중에 피부 관리기기로 led마스크, 근적외선 마스크 같은게
+                                                        많이 나오는데 반영구적으로 쓸 수 있어 오래 사용이 가능하여...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="thumb">
+                                                <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="util-wrap">
+                                            <span class="ico-view-count">999</span>
+                                            <span class="btn-act-like-wrap">
+                                                <input type="checkbox" id="like5">
+                                                <label for="like5">
+                                                    <div class="box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="count">340</span>
+                                                </label>
+                                            </span>
+                                            <a href="#" class="ico-comment">999</a>
+                                        </div>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="check5">
+                                        <label for="check5">북마크</label>
+                                    </span>
+                                </li>
+                            </ul>
+
+                            <!-- 게시글 없을 경우 -->
+                            <!-- <div class="box-noresult">
+                                <div class="box-lottie">
+                                    <div id="not-challenge"></div>
+                                </div>
+                                <h5 class="font-heading05">아직 작성된 글이 없어요.</h5>
+                                <p class="detail-txt">
+                                    <span>신민아님</span>, 1등으로 챌린지 인증글을 남겨보세요!
+                                </p>
+                                <div class="box-btn">
+                                    <a href="#" class="btn-md btn-black md-ripples ripples-light">글쓰기</a>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

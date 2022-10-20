@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>component | input</title>
+        <link rel="stylesheet" href="../../../assets/mobile/css/common.css">
+        <style>
+            .component-wrap {
+                padding: 2rem;
+            }
+            .component-wrap h2{
+                padding: 1rem;
+                background: #eee;
+            }
+            .component-wrap h3{
+                padding: 1rem 0;
+                color: palevioletred;
+            }
+            .component-wrap .guide-cont{
+                padding: 2rem 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="component-wrap">
+            <div class="button-component">
+                <h2>Radio</h2>
+                <div class="guide-cont">
+                    <h3>기본 라디오 버튼</h3>
+                    <span class="btn-radio noTxt"> <!--텍스트없을 경우 noTxt 클래스 추가-->
+                        <input type="radio" id="test01" name="test" checked="">
+                        <label for="test01"></label>
+                    </span>
+                    &nbsp;&nbsp;
+                    <span class="btn-radio">
+                        <input type="radio" id="test02" name="test">
+                        <label for="test02">주제와 맞지 않음</label>
+                    </span>
+                    <h3>정렬 라디오 버튼</h3>
+                    <ul class="list-sort">
+                        <li>
+                            <label class="rd-sort-btn">
+                                <input type="radio" name="sortType" id="newTy" checked="">
+                                <span class="txt">최신순</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="rd-sort-btn">
+                                <input type="radio" name="sortType" id="recomTy">
+                                <span class="txt">추천순</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="rd-sort-btn">
+                                <input type="radio" name="sortType" id="viewTy">
+                                <span class="txt">조회순</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Checkbox</h2>
+                <div class="guide-cont">
+                    <h3>기본 체크박스 버튼</h3>
+                    <span class="btn-check noTxt">  <!--텍스트없을 경우 noTxt 클래스 추가-->
+                        <input type="checkbox" id="chk2">
+                        <label for="chk2"><span></span></label>
+                    </span>
+                    &nbsp;&nbsp;
+                    <span class="btn-check">
+                        <input type="checkbox" id="chkall" checked>
+                        <label for="chkall"><span>전체 커뮤니티 선택</span></label>
+                    </span>
+                    <h3>chips 체크박스 버튼</h3>
+                    <span class="chip-check">
+                        <input type="checkbox" id="chip1">
+                        <label for="chip1">디스크</label>
+                    </span>
+                    &nbsp;&nbsp;
+                    <span class="chip-check">
+                        <input type="checkbox" id="chip2">
+                        <label for="chip2">건강</label>
+                    </span>
+                    &nbsp;&nbsp;
+                    <h3>좋아요 체크박스 버튼</h3>
+                    <span class="btn-act-like-wrap">
+                        <input type="checkbox" id="like01" tabindex="0">
+                        <label for="like01">
+                            <div class="box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+                            <span class="count">340</span>
+                        </label>
+                    </span>
+                    <h3>북마크 체크박스 버튼</h3>
+                    <span class="btn-act-bookmark ty-black">
+                        <input type="checkbox" id="bookmark1" tabindex="0">
+                        <label for="bookmark1">북마크</label>
+                    </span>
+                    <h3>스위치 버튼</h3>
+                    <div class="btn-switch">
+                        <input type="checkbox" id="switch01" checked>
+                        <label for="switch01">미체크</label>
+                    </div>
+                </div>
+
+                <h2>Text Field input(small)</h2>
+                <div class="guide-cont">
+                    <h3>기본 텍스트필드</h3>
+                    <div class="text-input-wrap small">
+                        <div class="box-input">
+                            <input type="text" placeholder="투표 제목 입력" title="투표 제목">
+                            <button class="ico-search-delete">삭제</button>
+                        </div>
+                    </div>
+                    <h3>기본 텍스트필드 (비활성화)</h3>
+                    <div class="text-input-wrap small">
+                        <div class="box-input">
+                            <input type="text" placeholder="투표 제목 입력" title="투표 제목" disabled>
+                            <button class="ico-search-delete">삭제</button>
+                        </div>
+                    </div>
+                    <h3>기본 텍스트필드 (에러)</h3>
+                    <div class="text-input-wrap small error">
+                        <div class="box-input">
+                            <input type="text" placeholder="투표 제목 입력" title="투표 제목">
+                            <button class="ico-search-delete">삭제</button>
+                        </div>
+                        <strong class="error-txt">에러가 났습니다.</strong>
+                    </div>
+                </div>
+
+                <h2>Text Field Action input</h2>
+                <div class="guide-cont">
+                    <h3>기본 텍스트필드</h3>
+                    <div class="text-input-wrap">
+                        <div class="box-input">
+                            <label>
+                                <input type="text" placeholder="아이디 입력">
+                                <span class="placeholder">아이디</span>
+                                <button class="ico-search-delete">삭제</button>
+                            </label>
+                        </div>
+                    </div>
+                    &nbsp;
+                    <div class="text-input-wrap isBtn">
+                        <div class="box-input">
+                            <label>
+                                <input type="text" placeholder="아이디 입력">
+                                <span class="placeholder">아이디</span>
+                                <button class="btn-xs btn-action" disabled>중복 확인</button>
+                            </label>
+                        </div>
+                    </div>
+                    <h3>기본 텍스트필드 (비활성화)</h3>
+                    <div class="text-input-wrap disabled">
+                        <div class="box-input">
+                            <label>
+                                <input type="text" placeholder="아이디 입력" value="아이디" disabled>
+                                <span class="placeholder">아이디</span>
+                                <button class="ico-search-delete">삭제</button>
+                            </label>
+                        </div>
+                    </div>
+                    <h3>기본 텍스트필드 (에러)</h3>
+                    <div class="text-input-wrap error">
+                        <div class="box-input">
+                            <label>
+                                <input type="text" placeholder="아이디 입력">
+                                <span class="placeholder">아이디</span>
+                                <button class="ico-search-delete">삭제</button>
+                            </label>
+                        </div>
+                        <strong class="error-txt">에러가 났습니다.</strong>
+                    </div>
+                </div>
+
+                <h2>File Input</h2>
+                <div class="guide-cont">
+                    <div class="file-input-wrap">
+                        <ul class="file-input-list">
+                            <li>
+                                <div class="box-file-input">
+                                    <label for="file01">첨부</label>
+                                    <input type="file" id="file01" title="대표 이미지 첨부">
+                                </div>
+                            </li>
+                            <li>
+                                <!-- <div class="box-file-input">
+                                    <label for="file01">첨부</label>
+                                    <input type="file" id="file01" title="대표 이미지 첨부">
+                                </div> -->
+                                <div class="input-img-wrap">
+                                    <button class="ico-close">삭제</button>
+                                    <img src="../../../assets/mobile/images/temp/temp-img03.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-dot gray">
+                            <li>10MB 미만의 JPG, JPEG, GIF, PNG 파일만 등록 가능합니다.</li>
+                            <li>권장사이즈 1650*320 (가로 최소 1000px 이상 이미지 등록)</li>
+                            <li>상품과 무관한 내용이거나 음란 및 불법적인 내용은 통보없이 삭제될 수 있습니다.</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <h2>Select Style</h2>
+                <div class="guide-cont">
+                    <div class="box-select-wrap ty-black">
+                        <select>
+                            <option value="">최신순</option>
+                            <option value="">과거순</option>
+                            <option value="">조회수순</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../assets/mobile/js/lib/jquery.import.js"></script>
+    </body>
+</html>

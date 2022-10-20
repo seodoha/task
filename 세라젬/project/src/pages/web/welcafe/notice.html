@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap" class="welcafe-notice">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="welcafe" class="container-wrap bg-gray">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading03">웰카페</h2>
+                            <p class="font-subtitle">
+                                우리 동네 웰카페의 소식을 만나보세요. <br>
+                                온라인과 오프라인 웰카페에서 이웃들과 소통해보세요.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <div class="box-grid">
+                                <div class="grid-left">
+                                    <div class="layout-detail-view">
+                                        <div class="detail-header">
+                                            <div class="chips-wrap">
+                                                <span class="chip-label chip-label-sm">공지사항</span>
+                                            </div>
+                                            <strong class="detail-tit">코로나 19 관련 공지</strong>
+                                            <div class="box-writer">
+                                                <span class="writer-thumb">
+                                                    <img src="../../../assets/web/images/temp/profile09.svg" alt="">
+                                                </span>
+                                                <span class="writer-nick">세라젬 웰카페 학동 직영점</span>
+                                                <span class="writer-date">2022.10.13</span>
+                                            </div>
+                                        </div>
+                                        <div class="detail-contents">
+                                            <!-- 에디터 내용 들어갈 영역 -->
+                                            <div class="box-editor-contents">
+                                                <p>
+                                                    최근 코로나19 확진자 중 외국인의 발생 비율이 높게 나타나고 있는 반면, 외국인의 코로나19 백신접종률은 국민에 비해 낮아, 한국에서의 안전한 생활을 위해 반드시 코로나19 백신접종을 해주시기 바랍니다.
+                                                </p>
+                                            </div>
+                                            <!--2022.05.10 해쉬태그 삭제-->
+                                            <!-- <div class="chips-wrap">
+                                                <a href="#" class="chip-label chip-label-hashtag">코로나19</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">웰카페학동직영점</a>
+                                            </div> -->
+                                        </div>
+                                        <!--상세유틸(조회수, 좋아요, 댓글 등)-->
+                                        <div class="detail-util">
+                                            <div class="inner">
+                                                <div class="left">
+                                                    <span class="ico-view-count">999</span>
+                                                    <!--로그인 case-->
+                                                    <span class="btn-act-like-wrap">
+                                                        <input type="checkbox" id="like01" tabindex="0">
+                                                        <label for="like01">
+                                                            <div class="box">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <span class="count">340</span>
+                                                        </label>
+                                                    </span>
+                                                    <button class="ico-comment">999</button>
+
+                                                    <!--비로그인 case-->
+                                                    <!-- <a href="#" class="ico-heart">999</a>
+                                                    <a href="#" class="ico-comment">999</a> -->
+                                                </div>
+                                                <div class="right">
+                                                    <button class="ico-share-gray">공유하기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--댓글-->
+                                        <!-- 2022.03.23 댓글 include로 수정 -->
+                                        @@include('./pages/web/include/comment.html')
+                                    </div>
+                                </div>
+                                <div class="grid-right">
+                                    <div class="list-notice-wrap">
+                                        <div class="list-header">
+                                            <strong  class="list-title">공지사항</strong>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="txt">
+                                                        <strong>코로나 19 관련 공지</strong>
+                                                        <span>2022.10.13</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="txt">
+                                                        <strong>휴무일 관련 공지</strong>
+                                                        <span>2022.05.10</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="txt">
+                                                        <strong>웰카페 학동 직영점 휴무일 관련 공지</strong>
+                                                        <span>2022.03.20</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-banner-wrap">
+                                        <a class="list-banner">
+                                            <img src="../../../assets/web/images/banner/welcafe/welcafe_img13.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

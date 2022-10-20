@@ -1,0 +1,168 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _mixin.scss
+* @Description : mixin 정의
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+/* response */
+@mixin response($screen-width) {
+    @if $screen-width == "pc" {
+        /* 1025 ~ 1650 */
+        @media (min-width: 1025px) and (max-width: 1650px) {
+            @content;
+        }
+    } @else if $screen-width == "tablet" {
+        /* 769 ~ 1024 */
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+}
+
+// Ellipsis
+// 적용 시 display 속성 필수(block, inline-block)
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Ellipsis for 2 line
+@mixin ellipsis2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+// Ellipsis for 3 line
+@mixin ellipsis3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+// Ellipsis for 4 line
+@mixin ellipsis4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+
+// Ellipsis for 5 line
+@mixin ellipsis5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+@mixin hidden {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+@mixin noScrollBar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {display: none;}
+}
+
+@mixin venderPrefix($name, $value) {
+    @each $vendor in $vendors {
+        -#{$vendor}-#{$name}: $value;
+    }
+    #{$name}: $value;
+}
+
+// background IMG
+@mixin backgroundImg($url, $position: center, $size: auto) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: $position;
+    background-size: $size;
+}
+
+/* 아이콘 버튼 */
+@mixin iconBtn($url) {
+    display: inline-block;
+    text-indent: -9999px;
+    font-size: 0;
+    overflow: hidden;
+    border: none;
+    transition: all 0.3s;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url($url);
+    background-position: center;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+@mixin icoChkBtn($before, $after) {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: middle;
+    input[type=checkbox] {
+        display: none;
+    }
+    label {
+        @include iconBtn($before);
+        width: 3.2rem;
+        height: 3.2rem;
+        margin: 0;
+        cursor: pointer;
+    }
+    input[type=checkbox]:checked + label {
+        @include iconBtn($after);
+    }
+}
+
+// text btn icon position
+@mixin icoPosition($url, $position, $width, $height, $margin) {
+    @if $position == 'left' {
+        &::before{
+        content: '';
+        display: block;
+        width: $width;
+        height: $height;
+        background-image: url($url);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin-right: $margin;
+        }
+    } @else if $position == 'right' {
+        &::after{
+        content: '';
+        display: block;
+        width: $width;
+        height: $height;
+        background-image: url($url);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin-left: $margin;
+        }
+    }
+}

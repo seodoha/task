@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="contents-guide">팝업 오픈</button>
+        </div>
+
+        <!--콘텐츠 승인 팝업-->
+        <div id="contents-guide" class="layer-popup-wrap bottom-sheet-wrap">
+            <div class="layer-popup ty02">
+                <div class="popup-header">
+                    <h4 class="tit">스토리 콘텐츠 승인</h4>
+                    <button class="ico-popup-close popup-close">닫기</button>
+                </div>
+                <div class="popup-body">
+                    <ul class="list-dot">
+                        <li>스토리 메뉴는 콘텐츠 등록 후 관리자의 승인을 통해 게시됩니다.</li>
+                        <li>품질이 현저히 떨어지는 이미지와 영상, 글은 승인이 반려될 수 있습니다.</li>
+                        <li>스토리 관련 문의는 나의 정보 > 1:1문의를 이용해주세요.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

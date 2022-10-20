@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="mypage" class="container-wrap bg-gray mypage">
+                    <div class="page-layout-header">
+                        @@include('./pages/web/include/mypageInfo.html')
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <aside class="inner-left">
+                                @@include('./pages/web/include/aside.html')
+                            </aside>
+                            <div class="inner-right">
+                                <div class="box-section ceracheck-report">
+                                    <div class="box-section-head">
+                                        <h3>세라체크 검사결과 상세</h3>
+                                        <p class="date">2021년 09월 15일 12시 50분</p>
+                                    </div>
+                                    <!-- 2022.04.01 검사결과 상세 타이틀,텍스트 추가 -->
+                                    <div class="ceracheck-detail">
+                                        <dl class="report box-default">
+                                            <dt>
+                                                <strong class="chart-tit">두뇌 스트레스</strong>
+                                                <span class="chart-sub-tit">두뇌의 긴장, 불안 상태</span>
+                                            </dt>
+                                            <dd>
+                                                <!--차트영역-->
+                                                <div class="box-chart-wrap">
+                                                    <span class="flt-txt">
+                                                        <em class="color"></em>
+                                                        적정범위
+                                                    </span>
+                                                    <div class="box-range">
+
+                                                        <div class="range-sec blue">
+                                                            <!--적정 범위-->
+                                                            <div class="suit-range"></div>
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">매우 낮음</strong>
+                                                        </div>
+                                                        <div class="range-sec teal">
+                                                            <!--적정 범위-->
+                                                            <div class="suit-range"></div>
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">낮음</strong>
+                                                        </div>
+                                                        <div class="range-sec green on"> <!--핀 꽂히는 부분 클래스 on 추가-->
+                                                            <!--적정 범위-->
+                                                            <div class="suit-range"></div>
+                                                            <span class="bar">
+                                                                <!--핀 꽂히는 bar에 추가-->
+                                                                <div class="box-pin">
+                                                                    <strong class="pin-score">
+                                                                        <em>47.5</em>점
+                                                                    </strong>
+                                                                    <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M13 1C9.8174 1 6.76516 2.28633 4.51472 4.57602C2.26428 6.86571 1 9.97119 1 13.2093C1 24.2044 13 34.9972 13 34.9972C13 34.9972 25 24.2044 25 13.2093C25 9.97119 23.7357 6.86571 21.4853 4.57602C19.2348 2.28633 16.1826 1 13 1Z" fill="#20CFC2"/>
+                                                                        <ellipse cx="12.7424" cy="10.2542" rx="3.36842" ry="3.25424" fill="white"/>
+                                                                        <path d="M6.89885 17.4109C6.13514 16.4617 6.81085 15.0508 8.02918 15.0508H17.9708C19.1891 15.0508 19.8649 16.4617 19.1012 17.4109L14.2355 23.4586C13.9602 23.8009 13.5445 23.9999 13.1052 23.9999H12.8948C12.4555 23.9999 12.0398 23.8009 11.7645 23.4586L6.89885 17.4109Z" fill="white"/>
+                                                                    </svg>
+                                                                    <em class="pin"></em>
+                                                                </div>
+                                                            </span>
+                                                            <strong class="txt">보통</strong>
+                                                        </div>
+                                                        <div class="range-sec orange">
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">높음</strong>
+                                                        </div>
+                                                        <div class="range-sec red">
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">매우 높음</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                            <dd class="consult-txt">두뇌 스트레스는 <strong>보통이하 (70점 미만)</strong>가 나올 수 있도록 관리해주세요.</dd>
+                                        </dl>
+                                        <dl class="report box-default">
+                                            <dt>
+                                                <strong class="chart-tit">신경계 건강도</strong>
+                                                <span class="chart-sub-tit">자율신경의 교감·부교감 신경의 활성 상태</span>
+                                            </dt>
+                                            <dd>
+                                                <!--차트영역-->
+                                                <div class="box-chart-wrap">
+                                                    <span class="flt-txt">
+                                                        <em class="color"></em>
+                                                        적정범위
+                                                    </span>
+                                                    <div class="box-range">
+
+                                                        <div class="range-sec red">
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">위험</strong>
+                                                        </div>
+                                                        <div class="range-sec orange">
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">경고</strong>
+                                                        </div>
+                                                        <div class="range-sec green">
+                                                            <!--적정 범위-->
+                                                            <div class="suit-range"></div>
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">양호</strong>
+                                                        </div>
+                                                        <div class="range-sec teal on">
+                                                            <!--적정 범위-->
+                                                            <div class="suit-range"></div>
+                                                            <span class="bar">
+                                                                <div class="box-pin">
+                                                                    <strong class="pin-score">
+                                                                        <em>72.0</em>점
+                                                                    </strong>
+                                                                    <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M13 1C9.8174 1 6.76516 2.28633 4.51472 4.57602C2.26428 6.86571 1 9.97119 1 13.2093C1 24.2044 13 34.9972 13 34.9972C13 34.9972 25 24.2044 25 13.2093C25 9.97119 23.7357 6.86571 21.4853 4.57602C19.2348 2.28633 16.1826 1 13 1Z" fill="#20CFC2"/>
+                                                                        <ellipse cx="12.7424" cy="10.2542" rx="3.36842" ry="3.25424" fill="white"/>
+                                                                        <path d="M6.89885 17.4109C6.13514 16.4617 6.81085 15.0508 8.02918 15.0508H17.9708C19.1891 15.0508 19.8649 16.4617 19.1012 17.4109L14.2355 23.4586C13.9602 23.8009 13.5445 23.9999 13.1052 23.9999H12.8948C12.4555 23.9999 12.0398 23.8009 11.7645 23.4586L6.89885 17.4109Z" fill="white"/>
+                                                                    </svg>
+                                                                    <em class="pin"></em>
+                                                                </div>
+                                                            </span>
+                                                            <strong class="txt">건강</strong>
+                                                        </div>
+                                                        <div class="range-sec blue">
+                                                            <!--적정 범위-->
+                                                            <div class="suit-range"></div>
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">매우 건강</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                            <dd class="consult-txt">신경계 건강도는 <strong>양호 이상(40점 이상)</strong>이 나올 수 있도록 관리해주세요.</dd>
+                                        </dl>
+                                        <!-- 2022.04.01 type-big 클래스 추가 -->
+                                        <dl class="report box-default type-big">
+                                            <dt>
+                                                <strong class="chart-tit">혈압</strong>
+                                                <span class="chart-sub-tit">심장 혈관계의 압력의 정도</span>
+                                            </dt>
+                                            <dd>
+                                                <!--차트영역-->
+                                                <div class="box-chart-wrap">
+                                                    <span class="flt-txt">
+                                                        <em class="color"></em>
+                                                        적정범위
+                                                    </span>
+                                                    <div class="multi-wrap">
+                                                        <div class="box-range">
+                                                            <span class="chart-tag">수축기</span>
+                                                            <div class="range-sec blue on">
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar">
+                                                                    <div class="box-pin">
+                                                                        <strong class="pin-score">
+                                                                            <em>99</em>mmHg
+                                                                        </strong>
+                                                                        <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M13 1C9.8174 1 6.76516 2.28633 4.51472 4.57602C2.26428 6.86571 1 9.97119 1 13.2093C1 24.2044 13 34.9972 13 34.9972C13 34.9972 25 24.2044 25 13.2093C25 9.97119 23.7357 6.86571 21.4853 4.57602C19.2348 2.28633 16.1826 1 13 1Z" fill="#20CFC2"/>
+                                                                            <ellipse cx="12.7424" cy="10.2542" rx="3.36842" ry="3.25424" fill="white"/>
+                                                                            <path d="M6.89885 17.4109C6.13514 16.4617 6.81085 15.0508 8.02918 15.0508H17.9708C19.1891 15.0508 19.8649 16.4617 19.1012 17.4109L14.2355 23.4586C13.9602 23.8009 13.5445 23.9999 13.1052 23.9999H12.8948C12.4555 23.9999 12.0398 23.8009 11.7645 23.4586L6.89885 17.4109Z" fill="white"/>
+                                                                        </svg>
+                                                                        <em class="pin"></em>
+                                                                    </div>
+                                                                </span>
+                                                                <strong class="txt">정상<br>(~119)</strong>
+                                                            </div>
+                                                            <div class="range-sec yellow">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">주의<br>(120~139)</strong>
+                                                            </div>
+                                                            <div class="range-sec orange">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">경고<br>(140~159)</strong>
+                                                            </div>
+                                                            <div class="range-sec red">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">위험<br>(160~)</strong>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-range">
+                                                            <span class="chart-tag">이완기</span>
+                                                            <div class="range-sec blue on">
+                                                                <!--적정 범위-->
+                                                                <div class="suit-range"></div>
+                                                                <span class="bar">
+                                                                    <div class="box-pin">
+                                                                        <strong class="pin-score">
+                                                                            <em>74</em>mmHg
+                                                                        </strong>
+                                                                        <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M13 1C9.8174 1 6.76516 2.28633 4.51472 4.57602C2.26428 6.86571 1 9.97119 1 13.2093C1 24.2044 13 34.9972 13 34.9972C13 34.9972 25 24.2044 25 13.2093C25 9.97119 23.7357 6.86571 21.4853 4.57602C19.2348 2.28633 16.1826 1 13 1Z" fill="#20CFC2"/>
+                                                                            <ellipse cx="12.7424" cy="10.2542" rx="3.36842" ry="3.25424" fill="white"/>
+                                                                            <path d="M6.89885 17.4109C6.13514 16.4617 6.81085 15.0508 8.02918 15.0508H17.9708C19.1891 15.0508 19.8649 16.4617 19.1012 17.4109L14.2355 23.4586C13.9602 23.8009 13.5445 23.9999 13.1052 23.9999H12.8948C12.4555 23.9999 12.0398 23.8009 11.7645 23.4586L6.89885 17.4109Z" fill="white"/>
+                                                                        </svg>
+                                                                        <em class="pin"></em>
+                                                                    </div>
+                                                                </span>
+                                                                <strong class="txt">정상<br>(~119)</strong>
+                                                            </div>
+                                                            <div class="range-sec yellow">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">주의<br>(120~139)</strong>
+                                                            </div>
+                                                            <div class="range-sec orange">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">경고<br>(140~159)</strong>
+                                                            </div>
+                                                            <div class="range-sec red">
+                                                                <span class="bar"></span>
+                                                                <strong class="txt">위험<br>(160~)</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                            <dd class="consult-txt"><strong>수축기 정상 (119mmHg 이하), 이완기 정상(79mmHg 이하) </strong> 수치가 나올 수 있도록 관리해주세요.</dd>
+                                        </dl>
+                                        <dl class="report box-default">
+                                            <dt>
+                                                <strong class="chart-tit">활력도</strong>
+                                                <span class="chart-sub-tit">자율신경의 균형 정도로 본 신체 전반의 활력 상태</span>
+                                            </dt>
+                                            <dd>
+                                                <!--차트영역-->
+                                                <div class="box-chart-wrap">
+                                                    <span class="flt-txt">
+                                                        <em class="color"></em>
+                                                        적정범위
+                                                    </span>
+                                                    <div class="box-range">
+
+                                                        <div class="range-sec red">
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">무기력</strong>
+                                                        </div>
+                                                        <div class="range-sec orange">
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">약간</strong>
+                                                        </div>
+                                                        <div class="range-sec green">
+                                                            <!--적정 범위-->
+                                                            <div class="suit-range"></div>
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">보통</strong>
+                                                        </div>
+                                                        <div class="range-sec blue on">
+                                                            <!--적정 범위-->
+                                                            <div class="suit-range"></div>
+                                                            <span class="bar">
+                                                                <div class="box-pin">
+                                                                    <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M13 1C9.8174 1 6.76516 2.28633 4.51472 4.57602C2.26428 6.86571 1 9.97119 1 13.2093C1 24.2044 13 34.9972 13 34.9972C13 34.9972 25 24.2044 25 13.2093C25 9.97119 23.7357 6.86571 21.4853 4.57602C19.2348 2.28633 16.1826 1 13 1Z" fill="#20CFC2"/>
+                                                                        <ellipse cx="12.7424" cy="10.2542" rx="3.36842" ry="3.25424" fill="white"/>
+                                                                        <path d="M6.89885 17.4109C6.13514 16.4617 6.81085 15.0508 8.02918 15.0508H17.9708C19.1891 15.0508 19.8649 16.4617 19.1012 17.4109L14.2355 23.4586C13.9602 23.8009 13.5445 23.9999 13.1052 23.9999H12.8948C12.4555 23.9999 12.0398 23.8009 11.7645 23.4586L6.89885 17.4109Z" fill="white"/>
+                                                                    </svg>
+                                                                    <em class="pin"></em>
+                                                                </div>
+                                                            </span>
+                                                            <strong class="txt">활력</strong>
+                                                        </div>
+                                                        <div class="range-sec purple">
+                                                            <span class="bar"></span>
+                                                            <strong class="txt">건강</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                            <dd class="consult-txt">활력도는 <strong>보통에서 활력 상태</strong>가 나올 수 있도록 관리해주세요.</dd>
+                                        </dl>
+                                    </div>
+                                    <!-- 2022.04.01 이전버튼추가 -->
+                                    <div class="box-btn">
+                                        <button class="timeline-more md-ripples">이전</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

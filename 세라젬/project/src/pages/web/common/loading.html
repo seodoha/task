@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+
+        <!--로딩 마크업 수정 및 로딩 호출 method 추가(open, close)-->
+        <div id="wrap">
+            <button onclick="uiCommon.loading.open();">로딩 open</button>
+        </div>
+        <div class="loading-wrap">
+            <div class="box-lottie loading-lottie">
+                <div id="loading-bar"></div>
+            </div>
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+
+        <script>
+            // 로딩 close 메소드
+            // uiCommon.loading.close();
+        </script>
+        <!--//////로딩 마크업 수정 및 로딩 호출 method 추가(open, close)-->
+    </body>
+</html>
+
+
+
+
+
+
+

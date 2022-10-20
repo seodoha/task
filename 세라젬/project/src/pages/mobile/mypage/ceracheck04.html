@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+
+            <div class="sub-page-header">
+                <button class="ico-back">뒤로가기</button>
+            </div>
+
+            <div id="container">
+                <section id="mypage" class="container-wrap">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading04">검사 리포트</h2>
+                            <span class="sup-txt ty03">2021년 09월 15일 12시 50분</span>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="box-layout-contents ty02">
+                            <div class="inner-wrap">
+                                <div class="box-chart-wrap">
+                                    <dl>
+                                        <dt>멘탈헬스</dt>
+                                        <dd>
+                                            <div class="box-chart">
+                                                <strong class="chart-tit ico"><span class="ico-mental"></span>멘탈 헬스 스코어</strong>
+                                                <!--차트영역-->
+                                            </div>
+                                            <div class="box-chart">
+                                                <strong class="chart-tit ico"><span class="ico-nervous-system"></span>신경계 나이</strong>
+                                                <!--차트영역-->
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>바디헬스</dt>
+                                        <dd>
+                                            <div class="box-chart">
+                                                <strong class="chart-tit ico"><span class="ico-blood-pressure"></span>혈압 &amp; 맥압</strong>
+                                                <div class="health-result">
+                                                    <div>
+                                                        <span class="type">수축</span>
+                                                        <strong class="result warning">경고</strong>
+                                                        <span class="amount">(140 mmHg)</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="type">이완</span>
+                                                        <strong class="result danger">위험</strong>
+                                                        <span class="amount">(100 mmHg)</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="type">맥압</span>
+                                                        <strong class="result">적정</strong>
+                                                        <span class="amount">(40 mmHg)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-chart">
+                                                <strong class="chart-tit ico"><span class="ico-blood-sugar"></span>혈당</strong>
+                                                <div class="health-result">
+                                                    <div>
+                                                        <span class="type">식후2시간</span>
+                                                        <strong class="result">정상</strong>
+                                                        <span class="amount">(110 mg/dL)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-chart half">
+                                                <strong class="chart-tit ico"><span class="ico-dashboard"></span>BMI</strong>
+                                                <div class="health-result">
+                                                    <div>
+                                                        <strong class="result">정상</strong>
+                                                        <span class="amount">(20.8 kg/m2)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-chart half">
+                                                <strong class="chart-tit ico"><span class="ico-size"></span>복부둘레</strong>
+                                                <div class="health-result">
+                                                    <div>
+                                                        <strong class="result">정상</strong>
+                                                        <span class="amount">(80.0 cm)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-chart">
+                                                <strong class="chart-tit ico"><span class="ico-muscle"></span>체지방률 &amp; 근육량</strong>
+                                                <div class="health-result ty02">
+                                                    <div>
+                                                        <span class="type">체지방</span>
+                                                        <strong class="result">표준</strong>
+                                                        <span class="amount">(25.0 %)</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="type">근육</span>
+                                                        <strong class="result">표준</strong>
+                                                        <span class="amount">(20.0 kg)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

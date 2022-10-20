@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="community-setting">팝업 오픈</button>
+        </div>
+
+        <!--관심 커뮤니티 설정 팝업-->
+        <div id="community-setting" class="layer-popup-wrap bottom-sheet-wrap">
+            <div class="layer-popup">
+                <div class="popup-header">
+                    <h4 class="tit">관심 커뮤니티 설정</h4>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                    </span>
+                </div>
+                <div class="popup-body">
+                    <ul class="community-setting-list">
+                        <li>
+                            <span class="btn-check">
+                                <input type="checkbox" id="chkall">
+                                <label for="chkall"><span>전체 커뮤니티 선택</span></label>
+                            </span>
+                        </li>
+                        <!-- <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk1">
+                                        <label for="chk1"></label>
+                                    </span>
+                                    <button>건강</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip2">
+                                                    <label for="chip2">고혈압</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip3">
+                                                    <label for="chip3">혈액순환</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip4">
+                                                    <label for="chip4">혈당</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip5">
+                                                    <label for="chip5">고지혈증</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip6">
+                                                    <label for="chip6">탈모</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk2">
+                                        <label for="chk2"></label>
+                                    </span>
+                                    <button>취미/여행</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk3">
+                                        <label for="chk3"></label>
+                                    </span>
+                                    <button>주식/재테크</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk4">
+                                        <label for="chk4"></label>
+                                    </span>
+                                    <button>부동산</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk5">
+                                        <label for="chk5"></label>
+                                    </span>
+                                    <button>썸/연애</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk6">
+                                        <label for="chk6"></label>
+                                    </span>
+                                    <button>여행</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk7">
+                                        <label for="chk7"></label>
+                                    </span>
+                                    <button>헬스/다이어트</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk8">
+                                        <label for="chk8"></label>
+                                    </span>
+                                    <button>회사생활</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> -->
+                        <li>
+                            <span class="btn-check">
+                                <input type="checkbox" id="chk1">
+                                <label for="chk1"><span>건강</span></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="btn-check">
+                                <input type="checkbox" id="chk2">
+                                <label for="chk2"><span>취미/여행</span></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="btn-check">
+                                <input type="checkbox" id="chk3">
+                                <label for="chk3"><span>주식/재테크</span></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="btn-check">
+                                <input type="checkbox" id="chk4">
+                                <label for="chk4"><span>부동산</span></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="btn-check">
+                                <input type="checkbox" id="chk5">
+                                <label for="chk5"><span>썸/연애</span></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="btn-check">
+                                <input type="checkbox" id="chk6">
+                                <label for="chk6"><span>회사생활</span></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="btn-check">
+                                <input type="checkbox" id="chk7">
+                                <label for="chk7"><span>이직/커리어</span></label>
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="community-req">
+                        <strong>찾으시는 커뮤니티가 없나요?</strong>
+                        <a href="#" title="커뮤니티 신청하기">커뮤니티 신청하기</a>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <button class="btn-large btn-black" disabled>완료</button>
+                    <!-- <button class="btn-large btn-black">완료</button> -->
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

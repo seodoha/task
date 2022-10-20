@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="search" class="container-wrap bg-gray search-result">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading02">
+                                ‘제주’<span class="text-result">에 대한 검색 결과</span>
+                            </h2>
+                            <div class="tab-wrap subject-list">
+                                <ul class="tab-list tab-list-line">
+                                    <li><a href="javascript:void(0)">전체</a></li>
+                                    <li><a href="javascript:void(0)">스토리</a></li>
+                                    <li><a href="javascript:void(0)">커뮤니티</a></li>
+                                    <li><a href="javascript:void(0)" class="on">작가</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-layout-contents search-tab">
+                        <div class="inner-wrap">
+                            <div class="box-challenge box-recommend">
+                                <h3 class="font-heading05">작가<span class="challenge-count">4</span></h3>
+                                <ul class="list-sort">
+                                    <li>
+                                        <label class="rd-sort-btn">
+                                            <input type="radio" name="sortType" id="newTy" checked="">
+                                            <span class="txt">최신순</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="rd-sort-btn">
+                                            <input type="radio" name="sortType" id="recomTy">
+                                            <span class="txt">좋아요순</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="rd-sort-btn">
+                                            <input type="radio" name="sortType" id="viewTy">
+                                            <span class="txt">조회수순</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="box-story">
+                                    <ul class="list-recommend">
+                                        <li class="recommend-item">
+                                            <a href="#">
+                                                <div class="box-thumb">
+                                                    <img src="../../../assets/web/images/temp/temp-thumb-big.png" alt="">
+                                                </div>
+                                                <span class="recommend-tit font-card-tit02">고작가</span>
+                                                <p class="recommend-txt">
+                                                    평범한 일상 속의 예술을 이야기 합니다. 고작가의 방구석 예술철학을 구독하세요.
+                                                </p>
+                                                <div class="chips-wrap">
+                                                    <span class="chip-label chip-label-hashtag">제주여행</span>
+                                                    <span class="chip-label chip-label-hashtag">박물관</span>
+                                                    <span class="chip-label chip-label-hashtag chip-more"><span class="hidden">기타</span></span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="recommend-item">
+                                            <a href="#">
+                                                <div class="box-thumb">
+                                                    <img src="../../../assets/web/images/temp/temp-thumb-big.png" alt="">
+                                                </div>
+                                                <span class="recommend-tit font-card-tit02">의사사람친구</span>
+                                                <p class="recommend-txt">
+                                                    의사친 NEW 프로젝트! 의사 생활, 정말 슬기롭기만 한 걸까? 현실감 100% 리얼의사생존기
+                                                </p>
+                                                <div class="chips-wrap">
+                                                    <span class="chip-label chip-label-hashtag">성형외과</span>
+                                                    <span class="chip-label chip-label-hashtag">내과</span>
+                                                    <span class="chip-label chip-label-hashtag chip-more"><span class="hidden">기타</span></span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="recommend-item">
+                                            <a href="#">
+                                                <div class="box-thumb">
+                                                    <img src="../../../assets/web/images/temp/temp-thumb-big.png" alt="">
+                                                </div>
+                                                <span class="recommend-tit font-card-tit02">Kiu기우쌤</span>
+                                                <p class="recommend-txt">
+                                                    대한민국의 헤어 스타일리스트, 유튜버, 사업가이다. 어네이즈(ANAZE)라는 뷰티 브랜드를 런칭하기도 했다. 본명은 이성규.
+                                                </p>
+                                                <div class="chips-wrap">
+                                                    <span class="chip-label chip-label-hashtag">뷰티</span>
+                                                    <span class="chip-label chip-label-hashtag">심리상담</span>
+                                                    <span class="chip-label chip-label-hashtag chip-more"><span class="hidden">기타</span></span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="recommend-item">
+                                            <a href="#">
+                                                <div class="box-thumb">
+                                                    <img src="../../../assets/web/images/temp/temp-thumb-big.png" alt="">
+                                                </div>
+                                                <span class="recommend-tit font-card-tit02">애플아트매거진</span>
+                                                <p class="recommend-txt">
+                                                    평범한 일상 속의 예술을 이야기 합니다. 고작가의 방구석 예술철학을 구독하세요.
+                                                    평범한 일상 속의 예술을 이야기 합니다. 고작가의 방구석 예술철학을 구독하세요.
+                                                </p>
+                                                <div class="chips-wrap">
+                                                    <span class="chip-label chip-label-hashtag">현대미술</span>
+                                                    <span class="chip-label chip-label-hashtag">아트</span>
+                                                    <span class="chip-label chip-label-hashtag chip-more"><span class="hidden">기타</span></span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

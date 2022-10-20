@@ -1,0 +1,113 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _slider.scss
+* @Description : slider 컴포넌트
+* @Create Date: 2022-02-22
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+.slider-wrap{
+    .slick-list{
+        margin: 0 auto;
+    }
+    .slider-item{
+        width: 100%;
+        & > a{
+            display: block;
+            border-radius: 2rem !important;
+            overflow: hidden;
+            img{width: 100%;}
+        }
+    }
+    .slick-arrow{
+        @include venderPrefix('transform',translateY(-50%));
+        position: absolute;
+        top: 50%;
+        width: 6.8rem;
+        height: 6.8rem;
+        text-indent: -9999999px;
+        &.slick-prev{
+            @include backgroundImg('../images/icon/ico-preview.svg',center,contain);
+            &.slick-disabled {
+                @include backgroundImg('../images/icon/ico-preview-disable.svg',center,contain);
+                cursor: default;
+            }
+            z-index: 1;
+        }
+        &.slick-next{
+            @include backgroundImg('../images/icon/ico-next.svg',center,contain);
+            right: 0;
+            // &.slick-disabled {
+            //     @include backgroundImg('../images/icon/ico-next-disable.svg',center,contain);
+            //     cursor: default;
+            // }
+        }
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 3rem;
+        & > li {
+            button{
+                width: 0.8rem;
+                height: 0.8rem;
+                border-radius: 50%;
+                background-color: #E5E5E5;
+                text-indent: -999999px;
+            }
+            &.slick-active{
+                button{background-color: $black;}
+            }
+            &:nth-of-type(n+2) {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+
+    // challenge slide
+    .box-challenge-list{
+        &.ev-slide{
+            .slick-list{padding-bottom: 2rem;margin-left: -1.5rem;}
+            .slick-slide{
+                margin: 0 1.5rem !important;
+                // &:nth-of-type(4n) {margin-right: 3rem;}
+            }
+            .slick-prev{left: -7.7rem;}
+            .slick-next{right: -7.7rem;}
+        }
+    }
+
+    // notice slide
+    .box-notice-list{
+        .list-item{
+            padding: 0 1.5rem;
+            a{
+                width: 53rem;
+            }
+        }
+        .slick-prev{left: -6.2rem;}
+        .slick-next{right: -6.2rem;}
+    }
+
+    .chart-slider {
+        .slick-arrow{
+            width: 5rem;
+            height: 5rem;
+            &.slick-prev {
+                left: -6rem;
+            }
+            &.slick-next{
+                right: -6rem;
+                &.slick-disabled {
+                    @include backgroundImg('../images/icon/ico-next-disable.svg',center,contain);
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+}

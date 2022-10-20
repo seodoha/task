@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="mypage" class="container-wrap bg-gray mypage">
+                    <div class="page-layout-header">
+                        @@include('./pages/web/include/mypageInfo.html')
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <aside class="inner-left">
+                                @@include('./pages/web/include/aside.html')
+                            </aside>
+                            <div class="inner-right">
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>내가 작성한 콘텐츠<span class="count"></span></h3>
+                                    </div>
+                                    <div class="box-empty">
+                                        <div class="ico-coffee-cup"></div>
+                                        <p>작성한 콘텐츠가 없습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>스크랩한 콘텐츠<span class="count"></span></h3>
+                                    </div>
+                                    <div class="box-empty">
+                                        <div class="ico-coffee-cup"></div>
+                                        <p>스크랩한 콘텐츠가 없습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>
+                                            최근 본 콘텐츠
+                                            <span class="count"></span>
+                                            <span class="text-tip">최근 본 콘텐츠는 최대 30건까지 저장됩니다.</span>
+                                        </h3>
+                                    </div>
+                                    <div class="box-empty">
+                                        <div class="ico-coffee-cup"></div>
+                                        <p>최근 본 콘텐츠가 없습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>
+                                            작성중인 콘텐츠
+                                            <span class="count"></span>
+                                            <span class="text-tip">작성 중인 콘텐츠는 최종 저장일로부터 최대 30일간 보관되며, 이후 삭제됩니다.</span>
+                                        </h3>
+                                    </div>
+                                    <div class="box-empty">
+                                        <div class="ico-coffee-cup"></div>
+                                        <p>작성중인 콘텐츠가 없습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>
+                                            콘텐츠 승인조회
+                                            <div class="tooltip-wrapper box-tooltip">
+                                                <span class="tooltip-button ico-guide btn-tooltip">가이드</span>
+                                                <dl class="tooltip-content active-toolBox">
+                                                    <dt>스토리 콘텐츠 승인</dt>
+                                                    <dd>스토리 메뉴는 콘텐츠 등록 후 관리자의 승인을 통해 게시됩니다.</dd>
+                                                    <dd>품질이 현저히 떨어지는 이미지와 영상, 글은 승인이 반려될 수 있습니다.</dd>
+                                                    <dd>스토리 관련 문의는 나의 정보 > 1:1문의를 이용해주세요.</dd>
+                                                </dl>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                    <div class="box-empty">
+                                        <div class="ico-coffee-cup"></div>
+                                        <p>승인조회 중인 콘텐츠가 없습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

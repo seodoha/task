@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <ul class="box-txt-col-2">
+                <li class="box-txt-card">
+                    <a href="javascript:void(0)" data-pop="test-popup">
+                        <div class="chips-wrap">
+                            <span class="chip-label chip-label-sm">여행</span>
+                        </div>
+                        <div class="box-tit">
+                            <strong class="font-card-tit02">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                        </div>
+                        <div class="box-cnts">
+                            <p>
+                                2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                            </p>
+                            <div class="thumb">
+                                <span class="count">3</span>
+                                <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                            </div>
+                        </div>
+                        <div class="sub-txt">
+                            <span>최종저장</span>
+                            <span class="date">2022.03.07</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 심사중인 컨텐츠 팝업 -->
+        <!--2022.07.06 id -> class 적용-->
+        <div id="test-popup" class="layer-popup-wrap content-popup">
+            <div class="layer-popup">
+                <button class="ico-popup-close-white popup-close">
+                    닫기
+                </button>
+                <div class="popup-body custom-scroll">
+                    <div class="popup-title">
+                        <img src="../../../assets/web/images/temp/temp-content-popup-01.png" alt="대표이미지">
+                        <div class="popup-title-wrapper">
+                            <div class="chips-wrap">
+                                <span class="chip-label chip-label-sm">여행</span>
+                            </div>
+                            <h4 class="font-heading03">참을 수 없는 기침을 멈추는 꿀팁</h4>
+                            <p>경험에서 우러나온 기침 멈추는 법</p>
+                        </div>
+                    </div>
+                    <div class="popup-content">
+                        <p>밤에 기침을 지속적으로 하는 것은 당신 자신의 수면도 방해할 뿐더러 옆에서 같이 자는 사람을 짜증나게 할 수 있다. 게다가 밤에 기침을 하는 것은 감기나 기관지염, 백일해, 폐렴, 천식, 위식도 역류질환, 울혈성 심부전 등의 호흡기 질환이 원인인 경우가 많기 때문에, 밤에 기침하는 증상이 한 주 이상 지속된다면 병원에 가는 것이 좋다. 하지만 대부분의 경우 알레르기나 기도가 점액 등의 분비물로 자극받아 기침이 나오는 경우가 많으니 적절한 치료법을 사용했을 때는 바로 상태가 개선될 수도 있다.</p>
+                        <img src="../../../assets/web/images/temp/temp-content-popup-02.png" alt="이미지">
+                        <p>밤에 기침을 지속적으로 하는 것은 당신 자신의 수면도 방해할 뿐더러 옆에서 같이 자는 사람을 짜증나게 할 수 있다. 게다가 밤에 기침을 하는 것은 감기나 기관지염, 백일해, 폐렴, 천식, 위식도 역류질환, 울혈성 심부전 등의 호흡기 질환이 원인인 경우가 많기 때문에, 밤에 기침하는 증상이 한 주 이상 지속된다면 병원에 가는 것이 좋다. 하지만 대부분의 경우 알레르기나 기도가 점액 등의 분비물로 자극받아 기침이 나오는 경우가 많으니 적절한 치료법을 사용했을 때는 바로 상태가 개선될 수도 있다.</p>
+                        <div class="chips-wrap">
+                            <ul class="chip-list chip-list-hashtag">
+                                <li><a href="javascript:void(0)">건강</a></li>
+                                <li><a href="javascript:void(0)">취미/여행</a></li>
+                                <li><a href="javascript:void(0)">주식/재테크</a></li>
+                                <li><a href="javascript:void(0)">부동산</a></li>
+                                <li><a href="javascript:void(0)">썸/연애</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="popup-footer">
+                    <button class="btn-md btn-white md-ripples popup-close">삭제</button>
+
+                    <div>
+                        <button class="btn-md btn-white md-ripples popup-close">닫기</button>
+                        <button class="btn-md btn-black md-ripples ripples-light popup-close">수정</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

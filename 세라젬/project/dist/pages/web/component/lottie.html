@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>component | LottiesAll</title>
+        <link rel="stylesheet" href="../../../assets/web/css/common.css">
+
+        <style>
+            .testeeee {
+                width: 100px;
+            }
+
+            body {
+                height: 100vh;
+                padding: 20px;
+            }
+
+            .component-wrap h4 {
+                padding: 1rem;
+                background: #eee;
+            }
+
+            .component-wrap .guide-cont {
+                padding: 2rem 0;
+            }
+            .lottie {width: 15rem;height: 15rem;}
+        </style>
+    </head>
+    <body>
+        <div class="component-wrap">
+            <h1>Lottie</h1>
+            <div id="icon-lottie01" class="lottie"></div>
+            <div id="icon-lottie02" class="lottie"></div>
+            <div id="icon-lottie03" class="lottie"></div>
+            <div id="icon-lottie04" class="lottie"></div>
+            <div id="icon-lottie05" class="lottie"></div>
+            <div id="icon-lottie06" class="lottie"></div>
+            <div id="icon-lottie07" class="lottie"></div>
+        </div>
+        <script src="../../../assets/web/js/lib/jquery.import.js"></script>
+        <script>
+            uiCommon.lottie.init('icon-lottie01', '01_coffee_cup');
+            uiCommon.lottie.init('icon-lottie02', '02_wellcafe_pin');
+            uiCommon.lottie.init('icon-lottie03', '03_error_page');
+            uiCommon.lottie.init('icon-lottie04', '04_error_service');
+            uiCommon.lottie.init('icon-lottie05', '05_login_dormant');
+            uiCommon.lottie.init('icon-lottie06', '07_complete');
+            uiCommon.lottie.init('icon-lottie07', '08_community_empty');
+        </script>
+    </body>
+</html>

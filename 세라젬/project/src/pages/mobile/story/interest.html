@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="sub-page-header">
+                <div class="left">
+                    <button class="ico-back">뒤로가기</button>
+                    <h1 class="page-tit">관심작가 찾기</h1>
+                </div>
+            </div>
+
+            <div id="container">
+                <section id="story" class="container-wrap">
+                    <div class="page-layout-contents ty02">
+                        <div class="inner-wrap">
+                            <ul class="writer-list">
+                                <li>
+                                    <div class="box-writer">
+                                        <span class="writer-thumb">
+                                            <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                        </span>
+                                        <span class="writer-info">
+                                            <span class="writer-nick">전지현</span>
+                                            <span class="writer-intro">일상 속 예술을 이야기 합니다.</span>
+                                        </span>
+                                        <div class="box-btn">
+                                            <input id="check1" type="checkbox" class="input-check" checked>
+                                            <label for="check1" class="btn-xs btn-white btn-subscribe">
+                                                <span class="unchecked">팔로우</span>
+                                                <span class="checked">팔로잉</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-writer">
+                                        <span class="writer-thumb">
+                                            <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                        </span>
+                                        <span class="writer-info">
+                                            <span class="writer-nick">빅마마</span>
+                                            <span class="writer-intro">건강하고 맛있는 집밥을 소개 ...건강하고 맛있는 집밥을 소개 ...</span>
+                                        </span>
+                                        <div class="box-btn">
+                                            <input id="check2" type="checkbox" class="input-check">
+                                            <label for="check2" class="btn-xs btn-white btn-subscribe">
+                                                <span class="unchecked">팔로우</span>
+                                                <span class="checked">팔로잉</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-writer">
+                                        <span class="writer-thumb">
+                                            <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                        </span>
+                                        <span class="writer-info">
+                                            <span class="writer-nick">홈 뷰티 장인</span>
+                                            <span class="writer-intro">집에서 하는 셀프 에스테틱</span>
+                                        </span>
+                                        <div class="box-btn">
+                                            <input id="check3" type="checkbox" class="input-check">
+                                            <label for="check3" class="btn-xs btn-white btn-subscribe">
+                                                <span class="unchecked">팔로우</span>
+                                                <span class="checked">팔로잉</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/mobile/include/bottomNavi.html')
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

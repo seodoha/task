@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="mypage" class="container-wrap bg-gray mypage">
+                    <div class="page-layout-header">
+                        @@include('./pages/web/include/mypageInfo.html')
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <aside class="inner-left">
+                                @@include('./pages/web/include/aside.html')
+                            </aside>
+                            <div class="inner-right">
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>내가 작성한 게시글 <span class="count">20</span></h3>
+                                        <a href="#" class="more">
+                                            모두 보기
+                                            <span class="ico-more"></span>
+                                        </a>
+                                    </div>
+                                    <div class="tab-wrap tab-ctrl tab-total">
+                                        <ul class="tab-list tab-list-round">
+                                            <!-- 활성화 시 on class 추가 -->
+                                            <li><a href="javascript:void(0)" class="on">전체<span class="count">2,000,000</span></a></li>
+                                            <li><a href="javascript:void(0)">웰카페 학동점<span class="count">1</span></a></li>
+                                            <li><a href="javascript:void(0)">웰카페 대치 직영점<span class="count">200</span></a></li>
+                                            <li><a href="javascript:void(0)">웰카페 전주 효자 직영점<span class="count">1</span></a></li>
+                                            <li><a href="javascript:void(0)">웰카페 광교점<span class="count">2</span></a></li>
+                                        </ul>
+                                        <div class="btn-tab-wrap">
+                                            <button class="btn-tab ico-1depth-close">열기</button>
+                                        </div>
+
+                                        <div class="tab-content">
+                                            <div>
+                                                <ul class="list-sort">
+                                                    <li>
+                                                        <label class="rd-sort-btn">
+                                                            <input type="radio" name="sortType-1" id="newTy" checked>
+                                                            <span class="txt">최신순</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="rd-sort-btn">
+                                                            <input type="radio" name="sortType-1" id="recomTy">
+                                                            <span class="txt">과거순</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="rd-sort-btn">
+                                                            <input type="radio" name="sortType-1" id="viewTy">
+                                                            <span class="txt">가나다순</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <ul class="box-text-card-list">
+                                                    <li class="box-txt-card">
+                                                        <a href="#">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">취미/여행</span>
+                                                            </div>
+                                                            <div class="box-tit">
+                                                                <strong class="font-card-tit02">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                                                            </div>
+                                                            <div class="box-writer">
+                                                                <span class="writer-thumb">
+                                                                    <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                                </span>
+                                                                <span class="writer-nick">전지현</span>
+                                                            </div>
+                                                            <div class="box-cnts">
+                                                                <p>
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                </p>
+                                                                <div class="thumb">
+                                                                    <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="box-util">
+                                                            <span class="ico-view-count">999</span>
+                                                            <span class="btn-act-like-wrap">
+                                                                <input type="checkbox" id="mypage-community-like-1">
+                                                                <label for="mypage-community-like-1">
+                                                                    <div class="box">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <span class="count">340</span>
+                                                                </label>
+                                                            </span>
+                                                            <a href="#" class="ico-comment">999</a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="box-txt-card">
+                                                        <a href="#">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">취미/여행</span>
+                                                            </div>
+                                                            <div class="box-tit">
+                                                                <strong class="font-card-tit02">어제 길에서 만난 치즈냥이 자꾸 생각나요</strong>
+                                                            </div>
+                                                            <div class="box-writer">
+                                                                <span class="writer-thumb">
+                                                                    <img src="../../../assets/web/images/temp/profile01.svg" alt="">
+                                                                </span>
+                                                                <span class="writer-nick">박세라</span>
+                                                            </div>
+                                                            <div class="box-cnts">
+                                                                <p>
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                </p>
+                                                            </div>
+                                                        </a>
+                                                        <div class="box-util">
+                                                            <span class="ico-view-count">999</span>
+                                                            <span class="btn-act-like-wrap">
+                                                                <input type="checkbox" id="like01">
+                                                                <label for="like01">
+                                                                    <div class="box">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <span class="count">340</span>
+                                                                </label>
+                                                            </span>
+                                                            <a href="#" class="ico-comment">999</a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="box-txt-card">
+                                                        <a href="#">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">취미/여행</span>
+                                                            </div>
+                                                            <div class="box-tit">
+                                                                <strong class="font-card-tit02">건강하고 맛있게 채식
+                                                                    밥상을 차려보았어요</strong>
+                                                            </div>
+                                                            <div class="box-writer">
+                                                                <span class="writer-thumb">
+                                                                    <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                                </span>
+                                                                <span class="writer-nick">전지현</span>
+                                                            </div>
+                                                            <div class="box-cnts">
+                                                                <p>
+                                                                    두루두루 골고루 먹자 주의였는데 성장기 애들 키우다보니 알게모르게 제 몸이 소화할 수 있는 양보다 육류 섭취가 너무 많았나봐요. 위염, 요로결석...
+                                                                    두루두루 골고루 먹자 주의였는데 성장기 애들 키우다보니 알게모르게 제 몸이 소화할 수 있는 양보다 육류 섭취가 너무 많았나봐요. 위염, 요로결석...
+                                                                </p>
+                                                                <div class="thumb">
+                                                                    <img src="../../../assets/web/images/temp/temp_img02.png" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="box-util">
+                                                            <span class="ico-view-count">999</span>
+                                                            <span class="btn-act-like-wrap">
+                                                                <input type="checkbox" id="mypage-community-like-3">
+                                                                <label for="mypage-community-like-3">
+                                                                    <div class="box">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <span class="count">340</span>
+                                                                </label>
+                                                            </span>
+                                                            <a href="#" class="ico-comment">999</a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="box-txt-card">
+                                                        <a href="#">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">취미/여행</span>
+                                                            </div>
+                                                            <div class="box-tit">
+                                                                <strong class="font-card-tit02">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                                                            </div>
+                                                            <div class="box-writer">
+                                                                <span class="writer-thumb">
+                                                                    <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                                </span>
+                                                                <span class="writer-nick">전지현</span>
+                                                            </div>
+                                                            <div class="box-cnts">
+                                                                <p>
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                </p>
+                                                                <div class="thumb">
+                                                                    <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="box-util">
+                                                            <span class="ico-view-count">999</span>
+                                                            <span class="btn-act-like-wrap">
+                                                                <input type="checkbox" id="mypage-community-like-1">
+                                                                <label for="mypage-community-like-1">
+                                                                    <div class="box">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <span class="count">340</span>
+                                                                </label>
+                                                            </span>
+                                                            <a href="#" class="ico-comment">999</a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="box-txt-card">
+                                                        <a href="#">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">취미/여행</span>
+                                                            </div>
+                                                            <div class="box-tit">
+                                                                <strong class="font-card-tit02">어제 길에서 만난 치즈냥이 자꾸 생각나요</strong>
+                                                            </div>
+                                                            <div class="box-writer">
+                                                                <span class="writer-thumb">
+                                                                    <img src="../../../assets/web/images/temp/profile01.svg" alt="">
+                                                                </span>
+                                                                <span class="writer-nick">박세라</span>
+                                                            </div>
+                                                            <div class="box-cnts">
+                                                                <p>
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                </p>
+                                                            </div>
+                                                        </a>
+                                                        <div class="box-util">
+                                                            <span class="ico-view-count">999</span>
+                                                            <span class="btn-act-like-wrap">
+                                                                <input type="checkbox" id="like01">
+                                                                <label for="like01">
+                                                                    <div class="box">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <span class="count">340</span>
+                                                                </label>
+                                                            </span>
+                                                            <a href="#" class="ico-comment">999</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 스크랩한 게시글 -->
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>스크랩한 게시글 <span class="count">5</span></h3>
+                                        <a href="#" class="more">
+                                            모두 보기
+                                            <span class="ico-more"></span>
+                                        </a>
+                                    </div>
+                                    <ul class="box-text-card-list">
+                                        <li class="box-txt-card">
+                                            <a href="#">
+                                                <div class="chips-wrap">
+                                                    <span class="chip-label chip-label-sm">취미/여행</span>
+                                                </div>
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">건강하고 맛있게 채식
+                                                        밥상을 차려보았어요</strong>
+                                                </div>
+                                                <div class="box-writer">
+                                                    <span class="writer-thumb">
+                                                        <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                    </span>
+                                                    <span class="writer-nick">전지현</span>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <div class="box-util">
+                                                <span class="ico-view-count">999</span>
+                                                <span class="btn-act-like-wrap">
+                                                    <input type="checkbox" id="mypage-community-like-1">
+                                                    <label for="mypage-community-like-1">
+                                                        <div class="box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <span class="count">340</span>
+                                                    </label>
+                                                </span>
+                                                <a href="#" class="ico-comment">999</a>
+                                            </div>
+                                            <span class="btn-act-bookmark ty-black">
+                                                <input type="checkbox" id="mypage-community-bookmark-1">
+                                                <label for="mypage-community-bookmark-1">북마크</label>
+                                            </span>
+                                        </li>
+                                        <li class="box-txt-card">
+                                            <a href="#">
+                                                <div class="chips-wrap">
+                                                    <span class="chip-label chip-label-sm">취미/여행</span>
+                                                </div>
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">어제 길에서 만난 치즈냥이 자꾸 생각나요</strong>
+                                                </div>
+                                                <div class="box-writer">
+                                                    <span class="writer-thumb">
+                                                        <img src="../../../assets/web/images/temp/profile01.svg" alt="">
+                                                    </span>
+                                                    <span class="writer-nick">박세라</span>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <div class="box-util">
+                                                <span class="ico-view-count">999</span>
+                                                <span class="btn-act-like-wrap">
+                                                    <input type="checkbox" id="like01">
+                                                    <label for="like01">
+                                                        <div class="box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <span class="count">340</span>
+                                                    </label>
+                                                </span>
+                                                <a href="#" class="ico-comment">999</a>
+                                            </div>
+                                            <span class="btn-act-bookmark ty-black">
+                                                <input type="checkbox" id="mypage-community-bookmark-2">
+                                                <label for="mypage-community-bookmark-2">북마크</label>
+                                            </span>
+                                        </li>
+                                        <li class="box-txt-card">
+                                            <a href="#">
+                                                <div class="chips-wrap">
+                                                    <span class="chip-label chip-label-sm">취미/여행</span>
+                                                </div>
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">건강하고 맛있게 채식
+                                                        밥상을 차려보았어요</strong>
+                                                </div>
+                                                <div class="box-writer">
+                                                    <span class="writer-thumb">
+                                                        <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                    </span>
+                                                    <span class="writer-nick">전지현</span>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <div class="box-util">
+                                                <span class="ico-view-count">999</span>
+                                                <span class="btn-act-like-wrap">
+                                                    <input type="checkbox" id="mypage-community-like-1">
+                                                    <label for="mypage-community-like-1">
+                                                        <div class="box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <span class="count">340</span>
+                                                    </label>
+                                                </span>
+                                                <a href="#" class="ico-comment">999</a>
+                                            </div>
+                                            <span class="btn-act-bookmark ty-black">
+                                                <input type="checkbox" id="mypage-community-bookmark-1">
+                                                <label for="mypage-community-bookmark-1">북마크</label>
+                                            </span>
+                                        </li>
+                                        <li class="box-txt-card">
+                                            <a href="#">
+                                                <div class="chips-wrap">
+                                                    <span class="chip-label chip-label-sm">취미/여행</span>
+                                                </div>
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">어제 길에서 만난 치즈냥이 자꾸 생각나요</strong>
+                                                </div>
+                                                <div class="box-writer">
+                                                    <span class="writer-thumb">
+                                                        <img src="../../../assets/web/images/temp/profile01.svg" alt="">
+                                                    </span>
+                                                    <span class="writer-nick">박세라</span>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <div class="box-util">
+                                                <span class="ico-view-count">999</span>
+                                                <span class="btn-act-like-wrap">
+                                                    <input type="checkbox" id="like01">
+                                                    <label for="like01">
+                                                        <div class="box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <span class="count">340</span>
+                                                    </label>
+                                                </span>
+                                                <a href="#" class="ico-comment">999</a>
+                                            </div>
+                                            <span class="btn-act-bookmark ty-black">
+                                                <input type="checkbox" id="mypage-community-bookmark-2">
+                                                <label for="mypage-community-bookmark-2">북마크</label>
+                                            </span>
+                                        </li>
+                                        <li class="box-txt-card">
+                                            <a href="#">
+                                                <div class="chips-wrap">
+                                                    <span class="chip-label chip-label-sm">취미/여행</span>
+                                                </div>
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">건강하고 맛있게 채식
+                                                        밥상을 차려보았어요</strong>
+                                                </div>
+                                                <div class="box-writer">
+                                                    <span class="writer-thumb">
+                                                        <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                    </span>
+                                                    <span class="writer-nick">전지현</span>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        두루두루 골고루 먹자 주의였는데 성장기 애들 키우다보니 알게모르게 제 몸이 소화할 수 있는 양보다 육류 섭취가 너무 많았나봐요. 위염, 요로결석...
+                                                        두루두루 골고루 먹자 주의였는데 성장기 애들 키우다보니 알게모르게 제 몸이 소화할 수 있는 양보다 육류 섭취가 너무 많았나봐요. 위염, 요로결석...
+                                                    </p>
+                                                    <div class="thumb">
+                                                        <img src="../../../assets/web/images/temp/temp_img02.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="box-util">
+                                                <span class="ico-view-count">999</span>
+                                                <span class="btn-act-like-wrap">
+                                                    <input type="checkbox" id="mypage-community-like-3">
+                                                    <label for="mypage-community-like-3">
+                                                        <div class="box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <span class="count">340</span>
+                                                    </label>
+                                                </span>
+                                                <a href="#" class="ico-comment">999</a>
+                                            </div>
+                                            <span class="btn-act-bookmark ty-black">
+                                                <input type="checkbox" id="mypage-community-bookmark-3">
+                                                <label for="mypage-community-bookmark-3">북마크</label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

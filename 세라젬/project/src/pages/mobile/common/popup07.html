@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="comment-popup">팝업 오픈</button>
+        </div>
+
+        <!--댓글 팝업-->
+        <div id="comment-popup" class="layer-popup-wrap">
+            <div class="layer-popup full-popup">
+                <div class="popup-header isBack">
+                    <span class="comment-tit">댓글 <em>0</em></span>
+                    <button class="ico-popup-close popup-close">닫기</button>
+                </div>
+                <div class="popup-body">
+                    <div class="box-noresult full">
+                        <div class="box-lottie">
+                            <div id="not-search" class="lottie"></div>
+                        </div>
+                        <strong class="empty-tit">등록된 댓글이 없습니다.</strong>
+                        <p class="detail-txt">
+                            첫번째 댓글을 남겨 주세요.
+                        </p>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <!--이미지 첨부 시 show-->
+                    <!-- <div class="input-attach-img">
+                        <img src="../../../assets/mobile/images/temp/temp-img04.png" alt="">
+                        <button class="ico-popup-close-white">닫기</button>
+                    </div> -->
+                    <div class="input-comment-wrap">
+                        <input type="text" placeholder="신민아님의 생각은 어떠신가요?">
+                        <button class="ico-attach-image">이미지첨부</button>
+                        <button class="ico-submit"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>
+
+
+
+
+
+
+

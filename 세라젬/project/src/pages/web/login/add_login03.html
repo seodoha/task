@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+            pageTitle : '세라젬'
+        })
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="login" class="container-wrap">
+                    <div class="login-layout">
+                        <div class="form-header">
+                            <div class="font-card-tit01">
+                                이미 WellifeLab의 <br>회원이시군요!
+                            </div>
+                        </div>
+                        <div class="box-result">
+                            <div class="result-wrap">
+                                <span class="result-title">아이디</span>
+                                <span class="result-txt">abodflw4568</span>
+                            </div>
+                        </div>
+                        <div class="box-btn btn-footer">
+                            <a href="#" class="btn-large btn-black md-ripples ripples-light">로그인</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

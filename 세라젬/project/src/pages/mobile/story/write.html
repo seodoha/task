@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="sub-page-header">
+                <div class="left">
+                    <button class="ico-back">뒤로가기</button>
+                </div>
+                <div class="right">
+                    <button class="btn-xs btn-white">불러오기 <span>2</span></button>
+                    <button class="btn-xs btn-white">임시저장</button>
+                    <button class="btn-xs btn-black" disabled>등록</button>
+                    <!-- <button class="btn-xs btn-black">등록</button> -->
+                </div>
+            </div>
+
+            <div id="container">
+                <section id="story" class="container-wrap">
+                    <div class="layout-write-wrap">
+                        <div class="write-header cover-setting">
+                            <!--
+                                2022.07.06 컴포넌트 추가됐을 경우 퍼블리싱 화면 예시
+                                => 이미지나 비디오 커버 추가시 밑의 cover-bg 앨리먼트 포함시켜서 추가.
+                            -->
+                            <!-- <div class="cover-bg">
+                                <img src="../../../assets/mobile/images/temp/temp-detail01.png" alt=""> -->
+                                <!--video cover case-->
+                                <!-- <video
+                                    id="cover-video"
+                                    class="video-js"
+                                    controls
+                                    muted
+                                    autoplay
+                                    playsinline
+                                    loop
+                                    preload="auto"
+                                    data-setup="{}">
+                                    <source src="../../../assets/mobile/images/temp/temp-video.mp4" type="video/mp4" />
+                                </video> -->
+                            <!-- </div> -->
+                            <div class="inner-wrap">
+                                <div class="btn-cover-util">
+                                    <div>
+                                        <!--2022.06.17 텍스트 수정-->
+                                        <label for="file01" class="btn-setting btn-sm btn-white md-ripples ripples-dark">커버편집</label>
+                                        <input type="file" id="file01">
+                                    </div>
+
+                                    <!-- <button type="button" class="btn-delete btn-sm btn-white">삭제</button> -->
+                                    <span class="box-guide">
+                                        권장사이즈 1920*700<br>
+                                        가로 최소 1000px 이상 이미지 등록
+                                    </span>
+                                </div>
+                                <div class="box-board-head">
+                                    <div class="type-select">
+                                        <div class="box-select-wrap">
+                                            <select>
+                                                <option value="" selected>게시판 선택</option>
+                                                <option value="">테스트1</option>
+                                                <option value="">테스트2</option>
+                                                <option value="">테스트3</option>
+                                                <option value="">테스트4</option>
+                                                <option value="">테스트5</option>
+                                                <option value="">테스트6</option>
+                                                <option value="">테스트7</option>
+                                                <option value="">테스트8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="main-tit" title="제목 입력" placeholder="제목을 입력하세요">
+                                    <input type="text" class="sub-tit" title="소제목 입력" placeholder="소제목을 입력하세요">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="write-contents">
+                            <div class="inner-wrap">
+                                <!--에디터영역-->
+                                <!--
+                                    2022.07.06 컴포넌트 추가됐을 경우 퍼블리싱 화면 예시
+                                -->
+                                <div class="box-editor-contents">
+                                    <!--블록단위별 스타일 퍼블리싱-->
+                                    <!--
+                                        블록 추가 시 'module-container' 클래스가 붙은 div 추가
+                                            + 영상 블록 추가 시 'video-module' 클래스 추가
+                                            + 이미지 블록 추가 시 'img-module' 클래스 추가
+                                            + 지도 블록 추가 시 'map-module' 클래스 추가
+                                            + 투표 블록 추가 시 'vote-module' 클래스 추가
+                                    -->
+                                    <!-- <div class="edit-input-textarea">
+                                        <textarea placeholder="본문을 입력하세요."></textarea>
+                                    </div> -->
+
+                                    <!--이미지-->
+                                    <div class="module-container img-module">
+                                        <img src="../../../assets/mobile/images/temp/img-edit01.png" alt="">
+                                        <div class="box-util">
+                                            <button class="btn-sm btn-black md-ripples ripples-light btn-delete" type="button">이미지 삭제</button>
+                                        </div>
+                                    </div>
+
+                                    <!--영상-->
+                                    <div class="module-container video-module">
+                                        <video
+                                            class="video-js"
+                                            controls
+                                            playsinline
+                                            preload="auto"
+                                            data-setup="{}">
+                                            <source src="../../../assets/mobile/images/temp/temp-video.mp4" type="video/mp4" />
+                                        </video>
+                                        <div class="box-util">
+                                            <button class="btn-sm btn-black md-ripples ripples-light btn-delete" type="button">삭제</button>
+                                        </div>
+                                    </div>
+
+                                    <!--투표-->
+                                    <div class="module-container vote-module">
+                                        <strong>투표가 첨부되었습니다.</strong>
+                                        <span>글 등록 후에는 수정할 수 없습니다.</span>
+                                        <div class="box-util">
+                                            <button type="button" class="btn-sm btn-black md-ripples ripples-light btn-delete">삭제</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="box-attach-wrap">
+                                    <label for="file01" class="btn-xs btn-white md-ripples ripples-dark btn-ico left">파일 첨부</label>
+                                    <input type="file" id="file01" title="파일 첨부">
+                                    <div class="detail-attach">
+                                        <div class="attach-item">
+                                            <span>커뮤니티공지.pdf</span>
+                                            <button class="ico-black-close">닫기</button>
+                                        </div>
+                                        <div class="attach-item">
+                                            <span>커뮤니티공지.pdf커뮤니티공지.pdf커뮤니티공지.pdf커뮤니티공지.pdf</span>
+                                            <button class="ico-black-close">닫기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--태그 입력-->
+                                <div class="chips-wrap edit-chips">
+                                    <div class="chips-editable">
+                                        <div class="edit-input-wrap">
+                                            <span class="input-hashtag">#</span>
+                                            <input type="text" class="chip-edit" placeholder="태그입력">
+                                        </div>
+                                        <div id="input-width-calc">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/mobile/include/writeBottom.html')
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

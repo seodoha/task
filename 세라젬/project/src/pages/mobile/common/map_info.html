@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    <style>
+        .box-cafe-info {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            padding: 0.8rem 2rem;
+            border-radius: 115rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.85;
+            color: #fff;
+            background-color: #161616;
+        }
+        .box-cafe-info::before {
+            content: '';
+            position: absolute;
+            bottom: -1.2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            width: 2.4rem;
+            height: 2.4rem;
+            background: url('../../../assets/mobile/images/icon/ico-polygon-black-down.svg') no-repeat center;
+            background-size: contain;
+        }
+        .box-cafe-info::after {
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            background: url('../../../assets/mobile/images/icon/ico-arr-right.svg') no-repeat center;
+            background-size: contain;
+        }
+    </style>
+    </head>
+    <body>
+
+        <span class="box-cafe-info">세라젬 웰카페 강릉 중앙 직영점</span>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

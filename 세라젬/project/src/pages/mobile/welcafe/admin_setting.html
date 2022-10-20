@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap" class="full-wrap">
+            <div class="sub-page-header">
+                <div class="left">
+                    <button class="ico-back">뒤로가기</button>
+                </div>
+                <div class="right">
+                    <!-- <button class="btn-xs btn-white">불러오기 <span>2</span></button>
+                    <button class="btn-xs btn-white">임시저장</button> -->
+                    <!-- <button class="btn-xs btn-black" disabled>등록</button> -->
+                    <button class="btn-xs btn-black">저장</button>
+                </div>
+            </div>
+
+            <div id="container">
+                <section id="welcafe" class="container-wrap welcafe-detail">
+                    <div class="page-layout-header layout-write-wrap sub-visual">
+                        <div class="write-header cover-setting">
+                            <div class="box-bg">
+                                <!-- <img src="../../../assets/mobile/images/temp/welcafe-home-bg.png" alt=""> -->
+                            </div>
+                            <div class="btn-cover-util admin-setting">
+                                <!--2022.06.17 텍스트 수정-->
+                                <button type="button" class="btn-setting btn-sm btn-white">커버편집</button>
+                                <!-- <button type="button" class="btn-delete btn-sm btn-white">삭제</button> -->
+                                <span class="box-guide">
+                                    권장사이즈 1920*700<br>
+                                    가로 최소 1000px 이상 이미지 등록
+                                </span>
+                            </div>
+                            <div class="box-card">
+                                <h3 class="font-card-tit01">
+                                    세라젬 웰카페 합정<br>
+                                    메세나폴리스 직영점
+                                    <span class="btn-act-star">
+                                        <input type="checkbox" id="bookmark01">
+                                        <label for="bookmark01">
+                                            위치 즐겨찾기
+                                        </label>
+                                    </span>
+                                </h3>
+                                <div class="info-body">
+                                    <div class="info-text-area">
+                                        <textarea id="text1" placeholder="웰카페 한 줄 소개 최대 50자까지 입력"></textarea>
+                                        <span class="txt_limit"><em>0</em> /50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="writer-info-contents">
+                            <!--지점안내-->
+                            <div class="box-contents-wrap">
+                                <strong class="tit font-card-tit04">지점 소개</strong>
+                                <div class="info-body">
+                                    <div class="info-text-area">
+                                        <textarea id="text1" placeholder="최대 2,000자까지 입력
+                                        "></textarea>
+                                        <span class="txt_limit"><em>0</em> /2000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-layout-contents admin-info">
+                                <h4 class="tit font-card-tit04">
+                                    지점 공지
+                                    <button class="btn-add">공지 작성</button>
+                                </h4>
+                                <div class="item-info">
+                                    <div class="notice-show-wrap">
+                                        <ul class="list-dot gray">
+                                            <li><strong class="head-txt">게시판 메인 페이지에 노출될 공지사항을 최대 3개까지 지정할 수 있습니다.</strong></li>
+                                            <li><strong class="head-txt">공지사항 작성은 상단의 글쓰기 버튼을 통해 가능합니다.</strong></li>
+                                        </ul>
+                                        <div class="body">
+                                            <div class="degree">
+                                                <span>제목</span>
+                                                <span>노출여부</span>
+                                            </div>
+                                            <!-- 2022.04.06 fold부분 수정 -->
+                                            <div class="more-wrap">
+                                                <ul class="notice-show-list popular-list">
+                                                    <li>
+                                                        <div class="notice-info">
+                                                            <strong class="tit">코로나 19 관련 공지</strong>
+                                                            <span class="date">2022.10.13</span>
+                                                        </div>
+                                                        <div class="btn-switch">
+                                                            <input type="checkbox" id="switch01" checked="">
+                                                            <label for="switch01">미체크</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="notice-info">
+                                                            <strong class="tit">휴무일 관련 공지</strong>
+                                                            <span class="date">2022.10.13</span>
+                                                        </div>
+                                                        <div class="btn-switch">
+                                                            <input type="checkbox" id="switch02">
+                                                            <label for="switch02">미체크</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="notice-info">
+                                                            <strong class="tit">웰카페 학동 직영점 휴무일 관련</strong>
+                                                            <span class="date">2022.10.13</span>
+                                                        </div>
+                                                        <div class="btn-switch">
+                                                            <input type="checkbox" id="switch03" checked="">
+                                                            <label for="switch03">미체크</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="notice-info">
+                                                            <strong class="tit">주말 주차 관련 공지</strong>
+                                                            <span class="date">2022.10.13</span>
+                                                        </div>
+                                                        <div class="btn-switch">
+                                                            <input type="checkbox" id="switch04">
+                                                            <label for="switch04">미체크</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="notice-info">
+                                                            <strong class="tit">공지 게시물 제목을 표시합니다. 공지 게시물 제목을 표시합니다.</strong>
+                                                            <span class="date">2022.03.13</span>
+                                                        </div>
+                                                        <div class="btn-switch">
+                                                            <input type="checkbox" id="switch05">
+                                                            <label for="switch05">미체크</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="more-btn-wrap">
+                                                <button>
+                                                    <span class="before">5개 더보기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-contents-wrap">
+                                <div class="box-info-list">
+                                    <h4 class="tit font-card-tit04 notice">
+                                        <!-- 2022.04.06 텍스트수정 -->
+                                        지점 정보
+                                        <button class="ico-guide-02"></button>
+                                    </h4>
+                                    <div class="layout-detail-view notice-setting-view">
+                                        <ul class="info-list">
+                                            <!-- 2022.04.06 .ico-label-wrap 추가 -->
+                                            <li class="board-input-box">
+                                                <div class="ico-label-wrap">
+                                                    <span class="ico-pin">핀</span>
+                                                    <span class="info-txt">주소</span>
+                                                </div>
+                                                <div class="text-input-wrap">
+                                                    <div class="box-input">
+                                                        <input type="text" placeholder="지점 도로명 주소 입력" title="지점 도로명 주소">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="board-input-box">
+                                                <div class="ico-label-wrap">
+                                                    <span class="ico-phone">전화번호</span>
+                                                    <span class="info-txt">전화번호</span>
+                                                </div>
+                                                <div class="text-input-wrap">
+                                                    <div class="box-input">
+                                                        <input type="text" placeholder="000-000-0000 형태로 입력" title="전화번호">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="board-input-box">
+                                                <div class="ico-label-wrap">
+                                                    <span class="ico-clock">시간</span>
+                                                    <span class="info-txt">영업시간</span>
+                                                </div>
+                                                <div class="text-input-wrap">
+                                                    <div class="box-input">
+                                                        <input type="text" placeholder="‘여는 시간’ ~ ‘닫는 시간’ 순으로 입력" title="영업시간">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="board-input-box">
+                                                <div class="item-info">
+                                                    <div class="ico-label-wrap">
+                                                        <span class="ico-parking">주차</span>
+                                                        <span class="info-txt">주차 정보</span>
+                                                    </div>
+                                                    <span class="btn-check">
+                                                        <input type="checkbox" id="chkall" checked="">
+                                                        <label for="chkall"><span>주차 가능</span></label>
+                                                    </span>
+                                                </div>
+                                                <div class="text-input-wrap">
+                                                    <div class="box-input">
+                                                        <textarea placeholder="주차 정보 입력"></textarea>
+                                                        <!-- 체크박스 해제일때 -->
+                                                        <!-- <textarea placeholder="주차 정보 입력" disabled></textarea> -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-contents-wrap">
+                                <h4>
+                                    체험 가능 제품
+                                    <button class="btn-more"><span class="ico-edit""></span> 내용 편집</button>
+                                </h4>
+                                <div class="box-experience">
+                                    <ul class="list-experience">
+                                        <li class="experience-item">
+                                            <a href="#">
+                                                <div class="box-experience-thumb">
+                                                    <img src="../../../assets/web/images/banner/welcafe/welcafe_img09.png" alt="">
+                                                </div>
+                                                <div class="experience-txt">
+                                                    <p>마스터 체험용</p>
+                                                    <span>100대</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="experience-item">
+                                            <a href="#">
+                                                <div class="box-experience-thumb">
+                                                    <img src="../../../assets/web/images/banner/welcafe/welcafe_img10.png" alt="">
+                                                </div>
+                                                <div class="experience-txt">
+                                                    <p>마스터 DP용</p>
+                                                    <span>100대</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="experience-item">
+                                            <a href="#">
+                                                <div class="box-experience-thumb">
+                                                    <img src="../../../assets/web/images/banner/welcafe/welcafe_img11.png" alt="">
+                                                </div>
+                                                <div class="experience-txt">
+                                                    <p>세라젬 파우제</p>
+                                                    <span>100대</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="experience-item">
+                                            <a href="#">
+                                                <div class="box-experience-thumb">
+                                                    <img src="../../../assets/web/images/banner/welcafe/welcafe_img12.png" alt="">
+                                                </div>
+                                                <div class="experience-txt">
+                                                    <p>세라젬 파우제 S</p>
+                                                    <span>100대</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/mobile/include/bottomNavi.html')
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

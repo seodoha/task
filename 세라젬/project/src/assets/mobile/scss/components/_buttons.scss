@@ -1,0 +1,748 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _buttons.scss
+* @Description : 버튼 컴포넌트
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+@keyframes like {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(.2,.2);
+    }
+    30% {
+        transform: scale(.5,.5);
+    }
+    60% {
+        transform: scale(1,1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3,1.3);
+        opacity: 0;
+    }
+}
+
+.box-btn{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    button, a {
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
+    & > button,
+    & > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.btn {
+    // ***size
+    &-xs {
+        padding: 0.7rem 1.2rem;
+        border-radius: 4rem;
+        font-size: 1.3rem;
+        line-height: 1.2;
+        font-weight: 500;
+        // ***disable
+        &:disabled {
+            background-color: #fff;
+            color: #aaaaaa;
+            border: 1px solid #e5e5e5;
+            cursor: default;
+        }
+    }
+    &-sm{
+        padding: 0.8rem 1.2rem;
+        border-radius: 1.6rem;
+        font-size: 1.3rem;
+        line-height: 1.1;
+        font-weight: 600;
+        // ***disable
+        &:disabled {
+            background-color: #fff;
+            color: #aaaaaa;
+            border: 1px solid #e5e5e5;
+            cursor: default;
+        }
+    }
+    &-md{
+        padding: 1.5rem 2.3rem;
+        border-radius: 4rem;
+        min-height: 4.8rem;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        font-weight: 500;
+        // ***disable
+        &:disabled {
+            background-color: #fff;
+            color: #aaaaaa;
+            border: 1px solid #e5e5e5;
+            cursor: default;
+        }
+    }
+    &-large{
+        width: 33.3333%;
+        border-radius: 0.5rem;
+        line-height: 5.7rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        // ***disable
+        &:disabled {
+            background-color: #fff;
+            color: #aaaaaa;
+            border: 1px solid #e5e5e5;
+            cursor: default;
+        }
+    }
+
+    // ***color
+    &-black{
+        background-color: $black;
+        border: 1px solid $black;
+        color: #fff;
+        transition: background-color 0.3s;
+    }
+    &-white{
+        background-color: #fff;
+        color: $black;
+        border: 1px solid #e5e5e5;
+        transition: background-color 0.3s;
+    }
+
+    // ***disable
+    &-disable {
+        background-color: #fff;
+        color: #aaaaaa;
+        border: 1px solid #e5e5e5;
+        cursor: default;
+    }
+
+    // ***functional
+    &-text{
+        display: flex;
+        align-items: center;
+        color: #444;
+        line-height: 1.2;
+        font-weight: 500;
+
+        // btn-text size
+        &-xs{
+            font-size: 1.4rem;
+        }
+        &-sm{
+            font-size: 1.6rem;
+        }
+        &-md{
+            font-size: 1.8rem;
+        }
+
+        // btn-text disable
+        &-disable {
+            color: #c4c4c4;
+            cursor: default;
+        }
+
+        // etc btn-text
+        &-underline{
+            font-size: 1.8rem;
+            line-height: 1.5;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        &-challenge{
+            width: 9.3rem;
+            height: 3.9rem;
+            @include backgroundImg('../images/icon/ico_challenge.svg', center, contain);
+        }
+
+    }
+    &-ico{
+        @include icoPosition('../images/icon/ico-plus.svg','right',1.6rem, 1.6rem,1rem);
+        &.right {@include icoPosition('../images/icon/ico-pencil.svg','right',1.6rem, 1.6rem,1rem);}
+        &.left {@include icoPosition('../images/icon/ico-pencil.svg','left',1.6rem, 1.6rem,1rem); &::after{display: none}}
+    }
+
+    &-move-list {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 3rem;
+        padding: 1.2rem 2rem;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 30rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        @include icoPosition('../images/icon/ico-arr-left.svg','left',1.6rem, 1.6rem,0.8rem);
+        &::before {background-size: auto;}
+    }
+    &-top{
+        @include iconBtn('../images/icon/ico-top.svg');
+        width: 6rem;
+        height: 6rem;
+    }
+    &-top-move{
+        position: fixed;
+        right: 2.8rem;
+        bottom: 7rem;
+        z-index: 100;
+        width: 6rem;
+        height: 6rem;
+        @include iconBtn('../images/icon/ico-top.svg');
+        background-size: contain;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        &.on {
+            opacity: 1;
+            visibility: visible
+        }
+        &.fix {
+            position: absolute;
+            bottom: auto;
+            top: -8rem;
+        }
+    }
+    &-play{
+        @include iconBtn('../images/icon/ico-play.svg');
+        width: 7.2rem;
+        height: 7.2rem;
+        border-radius: 50%;
+    }
+    &-stop{
+        @include iconBtn('../images/icon/ico-stop.svg');
+        width: 7.2rem;
+        height: 7.2rem;
+        border-radius: 50%;
+    }
+    &-sns{
+        width: 6rem;
+        height: 6rem;
+        background-color: #fff;
+        border: 1px solid #e5e5e5 !important;
+        border-radius: 50% !important;
+        &-insta {
+            @include iconBtn('../images/icon/ico-insta.svg');
+            background-size: 2rem 2rem;
+        }
+        &-youtube {
+            @include iconBtn('../images/icon/ico-youtube.svg');
+            background-size: 2.2rem 1.5rem;
+        }
+        &-link {
+            @include iconBtn('../images/icon/ico-link.svg');
+            background-size: 2.6rem 2.6rem;
+        }
+    }
+    &-app{
+        width: 4rem;
+        height: 4rem;
+        &-aos {
+            @include iconBtn('../images/icon/ico-google-play.svg');
+        }
+        &-ios {
+            @include iconBtn('../images/icon/ico-appstore.svg');
+        }
+    }
+    &-share{
+        width: 6rem;
+        height: 6rem;
+        &-facebook{
+            @include iconBtn('../images/icon/ico-share-facebook.svg');
+        }
+        &-kakao{
+            @include iconBtn('../images/icon/ico-share-kakao.svg');
+        }
+        &-line{
+            @include iconBtn('../images/icon/ico-share-line.svg');
+        }
+        &-link{
+            @include iconBtn('../images/icon/ico-share-link.svg');
+        }
+    }
+    &-act-like-wrap {
+        display: inline-block;
+        input[type="checkbox"] {display: none;}
+        font-size: 0;
+        label {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            cursor: pointer;
+            font-size: 0;
+            .box {
+                position: relative;
+                svg {
+                    display: block;
+                    position: relative;
+                    z-index: 1;
+                    width: 2.4rem;
+                    transition: all 1s;
+                }
+            }
+        }
+
+        input[type="checkbox"] + label .box {
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 3.6rem;
+                height: 3.6rem;
+                margin-top: -1.8rem;
+                margin-left: -1.8rem;
+                background-color: #FFF3F3;
+                border-radius: 50%;
+                opacity: 0;
+            }
+        }
+
+        input[type="checkbox"]:checked + label .box {
+            &::after {
+                animation: circle .8s;
+            }
+            svg {
+                fill: #fa5252;
+                path {stroke: #fa5252;}
+                animation: like 0.8s ease-out;
+            }
+        }
+
+        .count {
+            display: inline-block;
+            margin-left: 0.7rem;
+            font-size: 1.4rem;
+            color: #aaa;
+        }
+        .text {
+            display: inline-block;
+            margin-left: 0.7rem;
+            font-size: 1.6rem;
+            color: #444;
+        }
+    }
+    &-act-bookmark {
+        @include icoChkBtn('../images/icon/ico-bm-white-outline.svg', '../images/icon/ico-bm-white.svg');
+        // &.ty-white {
+        //     @include icoChkBtn('../images/icon/ico-bm-black-outline.svg', '../images/icon/ico-bm-black.svg');
+        // }
+        &.ty-black {
+            @include icoChkBtn('../images/icon/ico-bm-black-outline.svg', '../images/icon/ico-bm-black.svg');
+        }
+    }
+    &-act-star {
+        @include icoChkBtn('../images/icon/ico-star-outline.svg', '../images/icon/ico-star-black.svg');
+    }
+    &-act-loc {
+        @include icoChkBtn('../images/icon/ico-loc-outline.svg', '../images/icon/ico-loc-black.svg');
+    }
+    &-hamburger {
+        position: relative;
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 0;
+        @include iconBtn('../images/icon/ico-hamburger.svg');
+        span {@include hidden;}
+    }
+    &-write-bottom {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 8.4rem;
+        right: 2.4rem;
+        z-index: 200;
+        width: 12.4rem;
+        height: 5.6rem;
+        background-color: $black;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 10rem;
+        transition: all 0.3s;
+        span {
+            font-size:  1.8rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        &::before {
+            content: '';
+            width: 2.2rem;
+            height: 2.2rem;
+            margin-right: 1rem;
+            background:url('../images/icon/ico-pencil.svg') no-repeat center;
+            background-size: contain;
+        }
+        &.on {
+            width: 5.6rem;
+            span {font-size: 0;width: 0;}
+            &::before{margin-right: 0}
+        }
+    }
+    &-select {
+        &::after {
+            content: '';
+            width: 1.6rem;
+            height: 1.6rem;
+            margin-left: 0.6rem;
+            background: url('../images/icon/ico-sorting.svg') no-repeat right center;
+        }
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+}
+
+// IconGraphy
+.ico {
+    &-bookmark {@include iconBtn('../images/icon/ico-bookmark.svg');width: 2.4rem;height: 2.4rem;}
+    &-dna {@include iconBtn('../images/icon/ico-dna.svg');width: 10rem;height: 10rem;}
+    &-muscle {@include iconBtn('../images/icon/ico-muscle.svg');width: 2.4rem;height: 2.4rem;}
+    &-size {@include iconBtn('../images/icon/ico-size.svg');width: 2.4rem;height: 2.4rem;}
+    &-blood-sugar {@include iconBtn('../images/icon/ico-blood_sugar.svg');width: 2.4rem;height: 2.4rem;}
+    &-blood-pressure {@include iconBtn('../images/icon/ico-blood_pressure.svg');width: 2.4rem;height: 2.4rem;}
+    &-nervous-system {@include iconBtn('../images/icon/ico-nervous_system.svg');width: 2.4rem;height: 2.4rem;}
+    &-more-gray-thin {@include iconBtn('../images/icon/ico-more-gray-thin.svg');width: 2.8rem;height: 2.8rem;}
+    &-calendar {@include iconBtn('../images/icon/ico-calendar.svg');width: 2.4rem;height: 2.4rem;}
+    &-coin {@include iconBtn('../images/icon/ico-coin.svg');width: 3.6rem;height: 3.6rem;}
+    &-ranking {@include iconBtn('../images/icon/ico-ranking.svg');width: 1.8rem;height: 1.8rem;}
+    &-barcode {@include iconBtn('../images/icon/ico-barcode.svg');width: 2.4rem;height: 2.4rem;}
+    &-share-white {@include iconBtn('../images/icon/ico-share-white.svg');width: 2.4rem;height: 2.4rem;}
+    &-tempo-delete {@include iconBtn('../images/icon/ico-temp-delete.svg');width: 2rem;height: 2rem;}
+    &-submit {@include iconBtn('../images/icon/ico-submit.svg');width: 3.4rem;height: 3.4rem;}
+    &-delete {@include iconBtn('../images/icon/ico-delete.svg');width: 2.4rem;height: 2.4rem;}
+    &-edit {@include iconBtn('../images/icon/ico-edit02.svg');width: 2.4rem;height: 2.4rem;}
+    &-flag {@include iconBtn('../images/icon/ico-flag.svg');width: 2.4rem;height: 2.4rem;}
+    &-bell {
+        @include iconBtn('../images/icon/ico-bell.svg');
+        width: 2.4rem;
+        height: 2.4rem;
+        &.on {@include iconBtn('../images/icon/ico-bell-on.svg');}
+    }
+    &-back-white {@include iconBtn('../images/icon/ico-back-white.svg');width: 2.4rem;height: 2.4rem;}
+    &-back {@include iconBtn('../images/icon/ico-back.svg');width: 2.4rem;height: 2.4rem;}
+    &-plus {@include iconBtn('../images/icon/ico-plus.svg');width: 1.6rem;height: 1.6rem;}
+    &-external-link {@include iconBtn('../images/icon/ico-external-link.svg');width: 1.6rem;height: 1.6rem;}
+    &-more {@include iconBtn('../images/icon/ico-more.svg');width: 1.6rem;height: 1.6rem;}
+    &-more-white {@include iconBtn('../images/icon/ico-more-white.svg');width: 2rem;height: 2rem;}
+    &-more-gray {@include iconBtn('../images/icon/ico-more-gray.svg');width: 1.6rem;height: 1.6rem;}
+    &-declare {@include iconBtn('../images/icon/ico-declare.svg');width: 2.4rem;height: 2.4rem;}
+    &-declare-gray {@include iconBtn('../images/icon/ico-declare-gray.svg');width: 2.4rem;height: 2.4rem;}
+    &-declare-white {@include iconBtn('../images/icon/ico-declare-white.svg');width: 2.4rem;height: 2.4rem;}
+    &-setting-cover {@include iconBtn('../images/icon/ico-setting-cover.svg');width: 1.6rem;height: 1.6rem;}
+    &-white-write {@include iconBtn('../images/icon/ico-white-write.svg');width: 1.6rem;height: 1.6rem;}
+    &-white-check {@include iconBtn('../images/icon/ico-white-check.svg');width: 1.6rem;height: 1.6rem;}
+    &-black-arr-down {@include iconBtn('../images/icon/ico-black-arr-down.svg');width: 2.4rem;height: 2.4rem;}
+    &-gray-arr-down {@include iconBtn('../images/icon/ico-gray-arr-down.svg');width: 1.6rem;height: 1.6rem;}
+    &-white-arr-down {@include iconBtn('../images/icon/ico-white-arr-down.svg');width: 1.6rem;height: 1.6rem;}
+    &-black-arr-up {@include iconBtn('../images/icon/ico-black-arr-up.svg');width: 1.6rem;height: 1.6rem;}
+    &-white-close {@include iconBtn('../images/icon/ico-white-close.svg');width: 1.6rem;height: 1.6rem;}
+    &-black-close {@include iconBtn('../images/icon/ico-black-close.svg');width: 1.6rem;height: 1.6rem;}
+    &-gray-close {@include iconBtn('../images/icon/ico-gray-close.svg');width: 1.6rem;height: 1.6rem;}
+    &-autocomplete {@include iconBtn('../images/icon/ico-autocomplete.svg');width: 2rem;height: 2rem;}
+    &-popup-close {@include iconBtn('../images/icon/ico-popup-close.svg');width: 2.4rem;height: 2.4rem;}
+    &-popup-close-white {@include iconBtn('../images/icon/ico-popup-close-white.svg');width: 2.4rem;height: 2.4rem;}
+    &-phone {@include iconBtn('../images/icon/ico-phone.svg');width: 2rem;height: 2rem;}
+    &-pin {@include iconBtn('../images/icon/ico-pin.svg');width: 2rem;height: 2rem;}
+    &-clock {@include iconBtn('../images/icon/ico-clock.svg');width: 2rem;height: 2rem;}
+    &-best-time {@include iconBtn('../images/icon/ico-bestsearch-time.svg');width: 2rem;height: 2rem;}
+    &-search {@include iconBtn('../images/icon/ico-search.svg');width: 2.4rem;height: 2.4rem;}
+    &-search-thin {@include iconBtn('../images/icon/ico-search-thin.svg');width: 2.4rem;height: 2.4rem;}
+    &-search-gray {@include iconBtn('../images/icon/ico-search-gray.svg');width: 2.4rem;height: 2.4rem;}
+    &-here {@include iconBtn('../images/icon/ico-here.svg');width: 2.4rem;height: 2.4rem;}
+    &-search-delete {@include iconBtn('../images/icon/ico-search-delete.svg');width: 2rem;height: 2rem;}
+    &-gift {@include iconBtn('../images/icon/ico-gift.svg');width: 2rem;height: 2rem;}
+    &-save {@include iconBtn('../images/icon/ico-save.svg');width: 2rem;height: 2rem;}
+    &-ticket {@include iconBtn('../images/icon/ico-ticket.svg');width: 2rem;height: 2rem;}
+    &-parking {@include iconBtn('../images/icon/ico-parking.svg');width: 2rem;height: 2rem;}
+    &-heart {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: #aaa;
+        @include icoPosition('../images/icon/ico-heart.svg','left',2.4rem, 2.4rem,0.7rem);
+    }
+    &-guide {@include iconBtn('../images/icon/ico-guide.svg');width: 2.4rem;height: 2.4rem;}
+    &-guide-02 {@include iconBtn('../images/icon/ico-guide-02.svg');width: 2.8rem;height: 2.8rem;}
+    &-guide-black {@include iconBtn('../images/icon/ico-guide-black.svg');width: 2.8rem;height: 2.8rem;}
+    &-attach-image {@include iconBtn('../images/icon/ico-attach-image.svg');width: 2.4rem;height: 2.4rem;}
+    &-setting {@include iconBtn('../images/icon/ico-setting.svg');width: 2.4rem;height: 2.4rem;}
+    &-close {@include iconBtn('../images/icon/ico-close.svg');width: 2.4rem;height: 2.4rem;}
+    &-url {@include iconBtn('../images/icon/ico-url.svg');width: 2.4rem;height: 2.4rem;}
+    &-share {@include iconBtn('../images/icon/ico-share.svg');width: 2.4rem;height: 2.4rem;}
+    &-share-gray {@include iconBtn('../images/icon/ico-share-gray.svg');width: 2.4rem;height: 2.4rem;}
+    &-play-solid {@include iconBtn('../images/icon/ico-play-solid.svg');width: 2.4rem;height: 2.4rem;}
+    &-play-fill {@include iconBtn('../images/icon/ico-play-fill.svg');width: 2.4rem;height: 2.4rem;}
+    &-1depth-close {@include iconBtn('../images/icon/ico-1depth-close.svg');width: 2.4rem;height: 2.4rem;}
+    &-1depth-open {@include iconBtn('../images/icon/ico-1depth-open.svg');width: 2.4rem;height: 2.4rem;}
+    &-chart-up {@include iconBtn('../images/icon/ico-chart-up.svg');width: 2.4rem;height: 2.4rem;}
+    &-chart-down {@include iconBtn('../images/icon/ico-chart-down.svg');width: 2.4rem;height: 2.4rem;}
+    &-chart-same {@include iconBtn('../images/icon/ico-chart-same.svg');width: 2.4rem;height: 2.4rem;}
+    &-chart-new {@include iconBtn('../images/icon/ico-chart-new.svg');width: 3.6rem;height: 2.4rem;background-size: auto;}
+    &-graph {@include iconBtn('../images/icon/ico-graph.svg');width: 3.6rem;height: 3.6rem;}
+    &-rank {@include iconBtn('../images/icon/ico-rank.svg');width: 3.6rem;height: 3.6rem;}
+    &-point {@include iconBtn('../images/icon/ico-point.svg');width: 3.6rem;height: 3.6rem;}
+    &-post-text {
+        @include iconBtn('../images/icon/ico-post-text.svg');
+        width: 2.8rem;
+        height: 2.8rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-text-unfocus.svg');
+        }
+    }
+    &-post-img {
+        @include iconBtn('../images/icon/ico-post-img.svg');
+        width: 2.8rem;
+        height: 2.8rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-img-unfocus.svg');
+        }
+    }
+    &-post-img-plural {
+        @include iconBtn('../images/icon/ico-post-img-plural.svg');
+        width: 2.8rem;
+        height: 2.8rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-img-plural-unfocus.svg');
+        }
+    }
+    &-post-mov {
+        @include iconBtn('../images/icon/ico-post-mov.svg');
+        width: 2.8rem;
+        height: 2.8rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-mov-unfocus.svg');
+        }
+    }
+    &-post-vote {
+        @include iconBtn('../images/icon/ico-post-vote.svg');
+        width: 2.8rem;
+        height: 2.8rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-vote-unfocus.svg');
+        }
+    }
+    &-post-tag {
+        @include iconBtn('../images/icon/ico-post-tag.svg');
+        width: 2.8rem;
+        height: 2.8rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-tag-unfocus.svg');
+        }
+    }
+    &-post-loc {
+        @include iconBtn('../images/icon/ico-post-loc.svg');
+        width: 2.8rem;
+        height: 2.8rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-loc-unfocus.svg');
+        }
+    }
+    &-post-delete {
+        @include iconBtn('../images/icon/ico-post-delete.svg');
+        width: 2.8rem;
+        height: 2.8rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-delete-unfocus.svg');
+        }
+    }
+    &-post-guide {@include iconBtn('../images/icon/ico-post-guide.svg');width: 2.8rem;height: 2.8rem;}
+    &-list-play {@include iconBtn('../images/icon/ico-list-play.svg');width: 2.8rem;height: 2.8rem;}
+    &-expand {@include iconBtn('../images/icon/ico-expand.svg');width: 3.2rem;height: 3.2rem;}
+    &-mental {@include iconBtn('../images/icon/ico-mental.svg');width: 3.6rem;height: 3.6rem;}
+    &-dashboard {@include iconBtn('../images/icon/ico-dashboard.svg');width: 3.6rem;height: 3.6rem;}
+    &-view-count {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: #aaa;
+        @include icoPosition('../images/icon/ico-view.svg','left',2.4rem, 2.4rem,0.7rem);
+    }
+    &-comment {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: #aaa;
+        @include icoPosition('../images/icon/ico-comment.svg','left',2.4rem, 2.4rem,0.7rem);
+    }
+
+    &-write-black {
+        display: inline-block;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.232 5.23209L18.768 8.76809L15.232 5.23209ZM16.732 3.73209C17.2009 3.26318 17.8369 2.99976 18.5 2.99976C19.1631 2.99976 19.7991 3.26318 20.268 3.73209C20.7369 4.20099 21.0003 4.83696 21.0003 5.50009C21.0003 6.16321 20.7369 6.79918 20.268 7.26809L6.5 21.0361H3V17.4641L16.732 3.73209V3.73209Z' stroke='%23161616' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+
+    &-file {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6433 5.83339L7.15501 11.3217C6.99582 11.4755 6.86885 11.6594 6.7815 11.8627C6.69416 12.0661 6.64818 12.2848 6.64626 12.5061C6.64433 12.7274 6.6865 12.9468 6.7703 13.1516C6.8541 13.3565 6.97786 13.5426 7.13435 13.699C7.29084 13.8555 7.47692 13.9793 7.68175 14.0631C7.88658 14.1469 8.10604 14.1891 8.32734 14.1871C8.54864 14.1852 8.76734 14.1392 8.97068 14.0519C9.17402 13.9645 9.35793 13.8376 9.51167 13.6784L14.8567 8.19006C15.4639 7.56138 15.7998 6.71937 15.7923 5.84538C15.7847 4.9714 15.4341 4.13535 14.8161 3.51733C14.198 2.8993 13.362 2.54874 12.488 2.54114C11.614 2.53355 10.772 2.86953 10.1433 3.47672L4.79751 8.96422C3.85974 9.90198 3.33292 11.1739 3.33292 12.5001C3.33292 13.8263 3.85974 15.0981 4.79751 16.0359C5.73527 16.9737 7.00714 17.5005 8.33334 17.5005C9.65953 17.5005 10.9314 16.9737 11.8692 16.0359L17.0833 10.8334' stroke='%23AAAAAA' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+
+    &-noti-circle-checked {
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.75 15.9618C27.6357 18.8157 26.4641 21.6317 24.2464 23.7724C19.6759 28.1844 12.3926 28.0573 7.9789 23.4886C3.56516 18.9198 3.69229 11.6396 8.26285 7.2276C12.8334 2.81564 20.1166 2.94272 24.5304 7.51144C25.9167 8.94645 26.8551 10.649 27.3484 12.4461' stroke='%23444444' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M12.75 16.3333L15.9851 19L20.75 13' stroke='%23444444' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+
+    &-noti-coin-mileage {
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.625 16.4819C28.5057 19.4598 27.2832 22.3983 24.9691 24.6321C20.1998 29.2359 12.5999 29.1033 7.99429 24.3359C3.38865 19.5685 3.5213 11.9717 8.29059 7.36793C13.0599 2.76414 20.6597 2.89675 25.2654 7.66411C26.712 9.16151 27.6911 10.9381 28.206 12.8133' stroke='%23444444' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M12.1492 19.5569C11.8798 19.5569 11.6802 19.5184 11.5505 19.4414C11.4307 19.3643 11.3559 19.2584 11.3259 19.1236C11.296 18.9889 11.281 18.8444 11.281 18.6904V13.2894C11.281 13.1353 11.296 12.9957 11.3259 12.8706C11.3559 12.7454 11.4357 12.6443 11.5654 12.5673C11.6952 12.4903 11.8997 12.4518 12.1792 12.4518C12.4686 12.4518 12.6781 12.5096 12.8079 12.6251C12.9476 12.7406 13.0174 12.9235 13.0174 13.1739L12.8827 13.5782C12.9326 13.4723 13.0174 13.3568 13.1372 13.2316C13.2569 13.1065 13.4016 12.9813 13.5713 12.8561C13.7509 12.731 13.9505 12.6299 14.17 12.5529C14.3896 12.4759 14.6191 12.4373 14.8586 12.4373C15.188 12.4373 15.4873 12.4903 15.7568 12.5962C16.0362 12.7021 16.2807 12.8561 16.4903 13.0583C16.7098 13.2605 16.8994 13.506 17.0591 13.7948C17.2287 13.5445 17.4184 13.3183 17.6279 13.1161C17.8375 12.9043 18.082 12.7406 18.3614 12.6251C18.6408 12.4999 18.9552 12.4373 19.3045 12.4373C19.8833 12.4373 20.3673 12.5769 20.7565 12.8561C21.1556 13.1353 21.455 13.5349 21.6546 14.0548C21.8642 14.565 21.969 15.1764 21.969 15.8888V18.6904C21.969 18.8541 21.949 19.0033 21.9091 19.1381C21.8792 19.2632 21.7993 19.3643 21.6696 19.4414C21.5498 19.5184 21.3502 19.5569 21.0708 19.5569C20.7914 19.5569 20.5868 19.5136 20.4571 19.4269C20.3274 19.3499 20.2475 19.2488 20.2176 19.1236C20.1876 18.9889 20.1727 18.8396 20.1727 18.676V15.8744C20.1727 15.5181 20.1278 15.2101 20.038 14.9501C19.9481 14.6902 19.8134 14.488 19.6338 14.3436C19.4641 14.1992 19.2396 14.127 18.9602 14.127C18.6608 14.127 18.4013 14.1992 18.1818 14.3436C17.9722 14.4784 17.8076 14.6757 17.6878 14.9357C17.568 15.1956 17.5082 15.5133 17.5082 15.8888V18.7048C17.5082 18.8685 17.4832 19.0226 17.4333 19.167C17.3834 19.3018 17.2836 19.4028 17.1339 19.4702C16.9942 19.5473 16.7896 19.5761 16.5202 19.5569C16.2707 19.5473 16.0861 19.4991 15.9663 19.4125C15.8566 19.3258 15.7867 19.2199 15.7568 19.0948C15.7368 18.96 15.7268 18.8204 15.7268 18.676V15.8744C15.7268 15.5181 15.6819 15.2101 15.5921 14.9501C15.5023 14.6806 15.3676 14.4784 15.188 14.3436C15.0183 14.1992 14.7888 14.127 14.4994 14.127C14.19 14.127 13.9256 14.204 13.706 14.358C13.4964 14.5121 13.3368 14.7191 13.227 14.979C13.1172 15.2389 13.0623 15.5374 13.0623 15.8744V18.7048C13.0623 18.8589 13.0424 19.0033 13.0025 19.1381C12.9725 19.2729 12.8927 19.374 12.763 19.4414C12.6432 19.5184 12.4386 19.5569 12.1492 19.5569Z' fill='%23444444'/%3E%3C/svg%3E%0A");
+    }
+
+    &-noti-coupon {
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.9785 8.05176L14.6625 9.73568M18.0303 13.1035L19.7142 14.7875M23.0821 18.1553L24.766 19.8392M3.24826 17.782L17.9284 3.10186M2.97704 18.2573L7.08481 22.3651C7.53142 21.9185 8.13714 21.6676 8.76874 21.6676C9.40033 21.6676 10.0061 21.9185 10.4527 22.3651C10.8993 22.8117 11.1502 23.4174 11.1502 24.049C11.1502 24.6806 10.8993 25.2864 10.4527 25.733L14.56 29.8404M14.7649 29.8404L29.444 15.1613M29.7155 14.6852L25.608 10.5776C25.1614 11.0243 24.5556 11.2752 23.9241 11.2752C23.2925 11.2752 22.6867 11.0243 22.2401 10.5776C21.7935 10.131 21.5426 9.52532 21.5426 8.89373C21.5426 8.26213 21.7935 7.65641 22.2401 7.2098L18.1322 3.10186' stroke='%23444444' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+
+    &-noti-heart {
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.75732 8.42401C5.20016 8.98116 4.7582 9.6426 4.45667 10.3706C4.15514 11.0985 3.99994 11.8787 3.99994 12.6667C3.99994 13.4546 4.15514 14.2348 4.45667 14.9628C4.7582 15.6908 5.20016 16.3522 5.75732 16.9093L16 27.152L26.2427 16.9093C27.3679 15.7841 28 14.258 28 12.6667C28 11.0754 27.3679 9.54924 26.2427 8.42401C25.1174 7.29879 23.5913 6.66664 22 6.66664C20.4087 6.66664 18.8825 7.29879 17.7573 8.42401L16 10.1813L14.2427 8.42401C13.6855 7.86685 13.0241 7.42489 12.2961 7.12336C11.5681 6.82182 10.7879 6.66663 9.99999 6.66663C9.21205 6.66663 8.43183 6.82182 7.70387 7.12336C6.97591 7.42489 6.31448 7.86685 5.75732 8.42401V8.42401Z' stroke='%23444444' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+
+    &-noti-megaphone {
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.89221 18.75C9.89221 21.5 9.89221 25.1667 14.2887 27' stroke='%23444444' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.3006 16.9167C23.647 16.9167 23.99 16.8455 24.3101 16.7073C24.6301 16.5691 24.9209 16.3666 25.1659 16.1112C25.4108 15.8558 25.6051 15.5527 25.7377 15.219C25.8703 14.8854 25.9385 14.5278 25.9385 14.1667C25.9385 13.8055 25.8703 13.4479 25.7377 13.1143C25.6051 12.7806 25.4108 12.4775 25.1659 12.2221C24.9209 11.9668 24.6301 11.7642 24.3101 11.626C23.99 11.4878 23.647 11.4167 23.3006 11.4167' stroke='%23444444' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.375 18.75H10.7715H12.5301C17.2844 18.7631 18.9436 20.37 22.7546 23.3333V5C18.8833 7.84086 17.2622 9.43453 12.5301 9.58334H6.375V18.75Z' stroke='%23444444' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+
+    &-noti-talk {
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.0339 6.00635H7.43669C7.27493 5.99808 7.11335 6.02595 6.96292 6.08806C6.81949 6.14569 6.68897 6.23307 6.57939 6.34483C6.46601 6.46053 6.37759 6.59975 6.31995 6.75334C6.26534 6.90622 6.24229 7.06923 6.25227 7.23188V20.8644C6.24159 21.0219 6.2728 21.1793 6.34251 21.3196C6.40178 21.4663 6.48938 21.5989 6.59995 21.7093C6.71051 21.8197 6.84171 21.9055 6.98548 21.9616C7.1287 22.0205 7.28309 22.0444 7.43669 22.0316H15.6262V26L19.4615 22.0316H24.955C25.1111 22.0663 25.2726 22.0663 25.4287 22.0316C25.5857 21.9878 25.7293 21.9035 25.8461 21.7865C25.968 21.6781 26.0644 21.5424 26.1281 21.3897C26.2008 21.2251 26.2356 21.0453 26.2296 20.8644V7.23188C26.2568 7.06969 26.2568 6.90387 26.2296 6.74167C26.1714 6.58553 26.0787 6.44564 25.9589 6.33316C25.8469 6.21322 25.7071 6.12484 25.5528 6.07638C25.3875 6.01128 25.2098 5.98729 25.0339 6.00635Z' fill='white' stroke='%23444444' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M11.78 15.204C12.0031 15.204 12.2212 15.1355 12.4067 15.0073C12.5922 14.879 12.7368 14.6968 12.8222 14.4835C12.9075 14.2702 12.9299 14.0355 12.8864 13.8091C12.8428 13.5827 12.7354 13.3747 12.5776 13.2115C12.4199 13.0483 12.2189 12.9371 12.0001 12.8921C11.7813 12.8471 11.5544 12.8702 11.3483 12.9585C11.1422 13.0468 10.966 13.1964 10.8421 13.3884C10.7181 13.5803 10.652 13.806 10.652 14.0368C10.652 14.3464 10.7708 14.6433 10.9824 14.8621C11.1939 15.081 11.4808 15.204 11.78 15.204Z' fill='%23444444'/%3E%3Cpath d='M16.2348 15.204C16.4579 15.204 16.676 15.1355 16.8615 15.0073C17.047 14.879 17.1916 14.6968 17.2769 14.4835C17.3623 14.2702 17.3847 14.0355 17.3411 13.8091C17.2976 13.5827 17.1902 13.3747 17.0324 13.2115C16.8747 13.0483 16.6737 12.9371 16.4548 12.8921C16.236 12.8471 16.0092 12.8702 15.8031 12.9585C15.597 13.0468 15.4208 13.1964 15.2969 13.3884C15.1729 13.5803 15.1068 13.806 15.1068 14.0368C15.1068 14.3464 15.2256 14.6433 15.4371 14.8621C15.6487 15.081 15.9356 15.204 16.2348 15.204Z' fill='%23444444'/%3E%3Cpath d='M20.7029 15.204C20.926 15.204 21.1441 15.1355 21.3296 15.0073C21.5151 14.879 21.6596 14.6968 21.745 14.4835C21.8304 14.2702 21.8527 14.0355 21.8092 13.8091C21.7657 13.5827 21.6582 13.3747 21.5005 13.2115C21.3427 13.0483 21.1417 12.9371 20.9229 12.8921C20.7041 12.8471 20.4773 12.8702 20.2712 12.9585C20.0651 13.0468 19.8889 13.1964 19.7649 13.3884C19.641 13.5803 19.5748 13.806 19.5748 14.0368C19.5748 14.3464 19.6937 14.6433 19.9052 14.8621C20.1168 15.081 20.4037 15.204 20.7029 15.204Z' fill='%23444444'/%3E%3C/svg%3E%0A");
+    }
+
+    &-noti-thunderbolt {
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.8278 3.49731L7.3634 16.9617H14.1855L12.1721 28.5027L25.6356 14.077H18.9043L20.8278 3.49731Z' stroke='%23444444' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+}
+
+// 텍스트 더보기 버튼
+.txt-more {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    @include icoPosition('../images/icon/ico-black-arr-right.svg','right',1.6rem, 1.6rem, 0.4rem);
+    &::after {margin-top: -0.2rem;}
+}
+
+// Input checkbox btn
+.input-check{
+    display: none;
+    &:checked+.btn-subscribe{
+        background-color: $black;
+        color: #fff;
+        border-color: $black;
+        &::before{
+            opacity: 0;
+        }
+        &::after{
+            width: 1.2rem;
+            opacity: 1;
+        }
+        .unchecked{
+            display: none;
+        }
+        .checked{
+            display: block;
+        }
+        &.btn-xs::after{width: 0.9rem;}
+    }
+}
+.btn-subscribe{
+    position: relative;
+    padding-left: 4.4rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    .unchecked{
+        display: block;
+    }
+    .checked{
+        display: none;
+    }
+    &::before{
+        @include backgroundImg('../images/icon/ico-plus.svg',center,contain);
+        @include venderPrefix('transform',translateY(-50%));
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 2.3rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        opacity: 1;
+        transition: all 0.3s;
+        transition-delay: 0.1s;
+    }
+    &::after{
+        @include venderPrefix('transform',rotate(-50deg));
+        content: "";
+        opacity: 0;
+        display: inline-block;
+        position: absolute;
+        left: 2.3rem;
+        top: 1.8rem;
+        width: 0;
+        height: 0.6rem;
+        border: 0.2rem solid #FFFFFF;
+        border-top: 0;
+        border-right: 0;
+        border-radius: 0.1rem;
+        transition: all 0.3s;
+        transition-delay: 0.1s;
+    }
+    &.btn-xs{
+        padding-left: 2.8rem;
+        &::before{
+            left: 1.2rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            top: 49%;
+        }
+        &::after{
+            top: 0.9rem;
+            left: 1.2rem;
+            height: 0.5rem;
+        }
+    }
+}

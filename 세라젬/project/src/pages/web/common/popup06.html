@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="vote-add">팝업 오픈</button>
+        </div>
+
+        <!--관심 커뮤니티 설정 팝업-->
+        <div id="vote-add" class="layer-popup-wrap">
+            <div class="layer-popup sz-medium">
+                <div class="popup-header">
+                    <h4 class="tit">투표</h4>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                    </span>
+                </div>
+                <div class="popup-body">
+                    <div class="vote-pop-wrap">
+                        <div class="box">
+                            <label class="tit">투표 제목</label>
+                            <div class="text-input-wrap">
+                                <div class="box-input">
+                                    <input type="text" placeholder="투표 제목 입력" title="투표 제목">
+                                    <button class="ico-search-delete">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box vote-list-wrap">
+                            <div class="head">
+                                <strong class="tit">투표 항목</strong>
+                                <button class="btn-add">항목 추가</button>
+                            </div>
+                            <ul class="vote-list">
+                                <li>
+                                    <div class="text-input-wrap">
+                                        <div class="box-input">
+                                            <span class="count">1</span>
+                                            <input type="text" placeholder="투표 항목 입력" title="투표 항목">
+                                            <button class="ico-search-delete">삭제</button>
+                                            <button class="ico-list-delete">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="text-input-wrap">
+                                        <div class="box-input">
+                                            <span class="count">2</span>
+                                            <input type="text" placeholder="투표 항목 입력" title="투표 항목">
+                                            <button class="ico-search-delete">삭제</button>
+                                            <button class="ico-list-delete">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="text-input-wrap">
+                                        <div class="box-input">
+                                            <span class="count">3</span>
+                                            <input type="text" placeholder="투표 항목 입력" title="투표 항목">
+                                            <button class="ico-search-delete">삭제</button>
+                                            <button class="ico-list-delete">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="text-input-wrap">
+                                        <div class="box-input">
+                                            <span class="count">4</span>
+                                            <input type="text" placeholder="투표 항목 입력" title="투표 항목">
+                                            <button class="ico-search-delete">삭제</button>
+                                            <button class="ico-list-delete">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <span class="btn-check">
+                                <input type="checkbox" id="chkall">
+                                <label for="chkall"><span>복수 선택 허용</span></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <button class="btn-md btn-white md-ripples ripples-dark">취소</button>
+                    <button class="btn-md md-ripples ripples-light" disabled>첨부</button>
+                    <!-- <button class="btn-md btn-black md-ripples ripples-light">첨부</button> -->
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

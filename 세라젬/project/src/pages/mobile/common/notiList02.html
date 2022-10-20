@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap" class="notification">
+            <div class="sub-page-header">
+                <div class="left">
+                    <button class="ico-back">뒤로가기</button>
+                </div>
+            </div>
+
+            <div id="container">
+                <section id="mypage" class="container-wrap">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading04">
+                                알림
+                            </h2>
+                            <div class="box-btn">
+                                <button class="btn-sm btn-white md-ripples ripples-dark">취소</button>
+                                <button class="btn-sm btn-black md-ripples ripples-light">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-layout-contents isBoundary">
+                        <div class="box-notice inner-wrap">
+                            <span class="btn-check">
+                                <input type="checkbox" id="chkall" checked="">
+                                <label for="chkall"><span>전체 선택</span></label>
+                            </span>
+                            <ul class="noti-list">
+                                <li>
+                                    <label class="rd-sort-btn">
+                                        <input type="checkbox" name="chknoti" checked="">
+                                        <p class="txt">회원님께서 부모님연구소에 등록하신 게시글에 댓글이 등록되었습니다.</p>
+                                        <span class="time">1분 전</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="rd-sort-btn">
+                                        <input type="checkbox" name="chknoti">
+                                        <p class="txt">‘부모님께 문자 보내기’ 챌린지에 성공하였습니다. 다음 챌린지에도 도전해 보세요.</p>
+                                        <span class="time">1시간 전</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="rd-sort-btn">
+                                        <input type="checkbox" name="chknoti">
+                                        <p class="txt">회원님께서 부모님연구소에 등록하신 게시글에 댓글이 등록되었습니다.</p>
+                                        <span class="time">1분 전</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="rd-sort-btn">
+                                        <input type="checkbox" name="chknoti">
+                                        <p class="txt">‘부모님께 문자 보내기’ 챌린지에 성공하였습니다. 다음 챌린지에도 도전해 보세요.</p>
+                                        <span class="time">13일 전</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="rd-sort-btn">
+                                        <input type="checkbox" name="chknoti">
+                                        <p class="txt">회원님께서 부모님연구소에 등록하신 게시글에 댓글이 등록되었습니다.</p>
+                                        <span class="time">2022.04.05</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="rd-sort-btn">
+                                        <input type="checkbox" name="chknoti">
+                                        <p class="txt">‘부모님께 문자 보내기’ 챌린지에 성공하였습니다. 다음 챌린지에도 도전해 보세요.</p>
+                                        <span class="time">13일 전</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

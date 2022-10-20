@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="alert-popup">팝업 오픈</button>
+        </div>
+
+        <!--일반 Alert 팝업-->
+        <div id="alert-popup" class="layer-popup-wrap">
+            <div class="layer-popup alert-popup">
+                <div class="popup-body">
+                    <span class="msg">
+                        챌린지를 그만하시겠어요?<br>게시한 글은 삭제되지 않습니다.
+                    </span>
+                    <div class="box-btn">
+                        <button class="btn-sm btn-white">취소</button>
+                        <button class="btn-sm btn-black popup-close">그만하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>
+
+
+
+
+
+
+

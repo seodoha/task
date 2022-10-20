@@ -1,0 +1,42 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _accodion.scss
+* @Description : accodion 컴포넌트
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+.accordion-wrap {
+    .accordion-head {
+        display: flex;
+        align-items: center;
+        font-size: 0;
+        button {
+            position: relative;
+            flex-grow: 1;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            text-align: left;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 3.2rem;
+                height: 3.2rem;
+                margin-top: -1.2rem;
+                @include iconBtn('../images/icon/ico-1depth-close02.svg');
+                transition: transform 0.3s;
+            }
+            &.open::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .accordion-body {
+        display: none;
+        padding: 0 3.6rem;
+    }
+}

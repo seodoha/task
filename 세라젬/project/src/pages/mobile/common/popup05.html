@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="challenge-popup">팝업 오픈</button>
+        </div>
+
+        <!--슬라이드 팝업-->
+        <div id="challenge-popup" class="layer-popup-wrap">
+            <div class="layer-popup slide-popup">
+                <div class="popup-body">
+                    <div class="popup-slider">
+                        <div>
+                            <a href="#"><img src="../../../assets/mobile/images/temp/popup-slide.png" alt=""></a>
+                        </div>
+                        <div>
+                            <a href="#"><img src="../../../assets/mobile/images/temp/popup-slide.png" alt=""></a>
+                        </div>
+                        <div>
+                            <a href="#"><img src="../../../assets/mobile/images/temp/popup-slide.png" alt=""></a>
+                        </div>
+                    </div>
+                    <span class="slider-count">
+                        <em class="current">1</em> / <span class="total"></span>
+                    </span>
+                </div>
+                <div class="popup-footer">
+                    <button class="popup-close">오늘하루 열지않음</button>
+                    <button class="popup-close">닫기</button>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

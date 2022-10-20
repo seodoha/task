@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./pages/web/include/head.html',{
+    pageTitle : '세라젬'
+
+    })
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./pages/web/include/header.html')
+        <div id="container">
+            <section id="mypage" class="container-wrap bg-gray mypage">
+                <div class="page-layout-header">
+                    @@include('./pages/web/include/mypageInfo.html')
+                </div>
+
+                <div class="page-layout-contents">
+                    <div class="inner-wrap inner-flex">
+                        <aside class="inner-left">
+                            @@include('./pages/web/include/aside.html')
+                        </aside>
+                        <div class="inner-right">
+                            <div class="box-section">
+                                <div class="box-section-head">
+                                    <h3>회원정보 수정</h3>
+                                </div>
+                                <div class="box-form change-password">
+                                    <form>
+                                        <fieldset>
+                                            <legend>회원정보 수정</legend>
+                                            <dl class="input-inform-list">
+                                                <dt>이름</dt>
+                                                <dd>
+                                                    <span class="data-value">박세라</span>
+                                                    <button class="btn-xs btn-black md-ripples ripples-light">정보 변경</button>
+                                                </dd>
+                                                <dt>휴대전화</dt>
+                                                <dd>
+                                                    <span class="data-value">01015775570</span>
+                                                    <button class="btn-xs btn-black md-ripples ripples-light">정보 변경</button>
+                                                </dd>
+                                                <dt>생년월일</dt>
+                                                <dd>
+                                                    <span class="data-value">1975.05.07</span>
+                                                    <button class="btn-xs btn-black md-ripples ripples-light">정보 변경</button>
+                                                </dd>
+                                                <dt>아이디</dt>
+                                                <dd>
+                                                    <span class="data-value full">gildonghong45</span>
+                                                </dd>
+                                                <dt>프로필 이미지</dt>
+                                                <dd>
+                                                    <div class="profile-file-wrap">
+                                                        <label for="profile-img">
+                                                            <img src="../../../assets/web/images/avatar/my_profile_1.svg" alt="">
+                                                        </label>
+                                                        <div class="input-file">
+                                                            <input type="file" id="profile-img">
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                                <dt>닉네임</dt>
+                                                <dd>
+                                                    <div class="box-input">
+                                                        <input type="text" title="닉네임" value="박세라">
+                                                        <!-- <button class="btn-xs btn-black md-ripples ripples-light">중복확인</button> -->
+                                                        <!--disable-->
+                                                        <button class="btn-xs btn-black md-ripples ripples-light" disabled>중복확인</button>
+                                                    </div>
+                                                    <strong class="error">사용 중인 닉네임입니다.</strong>
+                                                </dd>
+                                                <dt>이메일(선택)</dt>
+                                                <dd>
+                                                    <div class="box-input">
+                                                        <input type="text" title="이메일" value="abcde@naver.com">
+                                                        <!-- <button class="btn-xs btn-black md-ripples ripples-light">이메일변경</button> -->
+                                                        <!--disable-->
+                                                        <button class="btn-xs btn-black md-ripples ripples-light" disabled>이메일변경</button>
+                                                    </div>
+                                                </dd>
+                                                <dt>관심 키워드</dt>
+                                                <dd>
+                                                    <div class="guide-box">
+                                                        <span>최소 3개 이상 체크해주세요</span>
+                                                        <button class="gray-txt">선택 초기화</button>
+                                                    </div>
+                                                    <div class="chips-wrap">
+                                                        <ul class="chip-list chip-list-hashtag">
+                                                            <li>
+                                                                <input type="checkbox" id="hashtag01">
+                                                                <label for="hashtag01">식단관리</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="hashtag02">
+                                                                <label for="hashtag02">운동</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="hashtag03">
+                                                                <label for="hashtag03">홈트레이닝</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="hashtag04">
+                                                                <label for="hashtag04">키워드1</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="hashtag05">
+                                                                <label for="hashtag05">키워드2</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="hashtag06">
+                                                                <label for="hashtag06">키워드3</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </dd>
+                                                <dd><a href="#" class="gray-txt">탈퇴 안내</a></dd>
+                                            </dl>
+
+                                            <div class="box-btn">
+                                                <button class="btn-large btn-white md-ripples ripples-dark">취소</button>
+                                                <button class="btn-large btn-black md-ripples ripples-light">수정</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        @@include('./pages/web/include/footer.html')
+    </div>
+
+    @@include('./pages/web/include/scriptImport.html')
+</body>
+
+</html>

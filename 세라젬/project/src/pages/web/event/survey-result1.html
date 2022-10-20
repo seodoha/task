@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="event" class="container-wrap bg-gray survey survey-result">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading02">이벤트</h2>
+                            <a class="box-banner-wrap">
+                                <img src="../../../assets/web/images/banner/event//survey.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <div class="box-contents-wrap">
+                                <div class="layout-detail-view">
+                                    <!--설문조사 미참여 결과-->
+                                    <div class="vote-view-wrap">
+                                        <div class="vote-conts-wrap">
+                                            <div class="vote-head">
+                                                <strong class="vote-tit">이번 어버이날, 부모님께 선물을 드리실 생각인가요? (필수)</strong>
+                                            </div>
+                                            <div class="vote-body">
+                                                <ul class="vote-result-list">
+                                                    <!--득표수 많은 것은 'winning' 클래스 추가-->
+                                                    <!--자기가 투표한 것은 'my-pick' 클래스 추가-->
+                                                    <li class="winning">
+                                                        <span class="vote-progress-bar" style="width: 55%;"></span>
+                                                        <span class="vote-progress-wrap">
+                                                            <strong class="name">
+                                                                예
+                                                            </strong>
+                                                            <span class="count">
+                                                                <strong>500명</strong>
+                                                                <span>(80.5%)</span>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="vote-progress-bar" style="width: 30%;"></span>
+                                                        <span class="vote-progress-wrap">
+                                                            <strong class="name">
+                                                                아니오
+                                                            </strong>
+                                                            <span class="count">
+                                                                <strong>100명</strong>
+                                                                <span>(15%)</span>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="vote-conts-wrap">
+                                            <div class="vote-head">
+                                                <strong class="vote-tit">드리고 싶은 선물은 무엇인가요? (필수)</strong>
+                                            </div>
+                                            <div class="vote-body">
+                                                <ul class="vote-result-list">
+                                                    <!--득표수 많은 것은 'winning' 클래스 추가-->
+                                                    <!--자기가 투표한 것은 'my-pick' 클래스 추가-->
+                                                    <li class="winning">
+                                                        <span class="vote-progress-bar" style="width: 55%;"></span>
+                                                        <span class="vote-progress-wrap">
+                                                            <strong class="name">
+                                                                현금
+                                                            </strong>
+                                                            <span class="count">
+                                                                <strong>800명</strong>
+                                                                <span>(55%)</span>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="vote-progress-bar" style="width: 30%;"></span>
+                                                        <span class="vote-progress-wrap">
+                                                            <strong class="name">
+                                                                안마의자
+                                                            </strong>
+                                                            <span class="count">
+                                                                <strong>600명</strong>
+                                                                <span>(30%)</span>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="vote-progress-bar" style="width: 8%;"></span>
+                                                        <span class="vote-progress-wrap">
+                                                            <strong class="name">
+                                                                꽃
+                                                            </strong>
+                                                            <span class="count">
+                                                                <strong>100명</strong>
+                                                                <span>(8%)</span>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="vote-progress-bar" style="width: 12%;"></span>
+                                                        <span class="vote-progress-wrap">
+                                                            <strong class="name">
+                                                                건강식품
+                                                            </strong>
+                                                            <span class="count">
+                                                                <strong>150명</strong>
+                                                                <span>(12%)</span>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="box-btn">
+                                            <button class="btn-large btn-black md-ripples ripples-light">투표하러 가기</button>
+                                        </div>
+                                    </div>
+
+                                    <!--상세유틸(조회수, 좋아요, 댓글 등)-->
+                                    <div class="detail-util">
+                                        <div class="inner">
+                                            <div class="left">
+                                                <span class="ico-view-count">999</span>
+                                                <!--로그인 case-->
+                                                <span class="btn-act-like-wrap">
+                                                    <input type="checkbox" id="like01" tabindex="0">
+                                                    <label for="like01">
+                                                        <div class="box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <span class="count">340</span>
+                                                    </label>
+                                                </span>
+                                                <button class="ico-comment">999</button>
+                                                <!--비로그인 case-->
+                                                <!-- <a href="#" class="ico-heart">999</a>
+                                                <a href="#" class="ico-comment">999</a> -->
+                                            </div>
+                                            <div class="right">
+                                                <button class="ico-share-gray">공유하기</button>
+                                                <span class="btn-act-bookmark ty-black">
+                                                    <input type="checkbox" id="bookmark1" tabindex="0">
+                                                    <label for="bookmark1">북마크</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--댓글-->
+                                    <!-- 2022.03.23 댓글 include로 수정 -->
+                                    @@include('./pages/web/include/comment.html')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

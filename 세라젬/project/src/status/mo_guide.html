@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=1900, initial-scale=1, shrink-to-fit=no">
+        <title>mobile guide</title>
+        <link rel="stylesheet" href="../assets/mobile/css/common.min.css">
+        <style>
+            * {
+                -webkit-touch-cout: initial; /* IOS Safari */
+                -webkit-user-select: initial; /* Safari */
+                -moz-user-select: -moz-initial;
+                -khtml-user-select: initial;
+                user-select: initial;
+            }
+            body {
+                padding: 24px 24px 400px;
+            }
+            .guideTit2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .guideTit3 {
+                background: #00437c;
+                color: #fff;
+                font-size: 16px;
+                padding: 10px;
+                margin: 20px 0;
+            }
+
+            .tleft {
+                text-align: left !important;
+            }
+            .htmlList {
+                width: 100%;
+            }
+            .pattern-wrap > li > iframe {
+                width: 100%;
+                height: 600px;
+                overflow: hidden;
+                border: 1px #333 solid;
+                margin: 0;
+                padding: 0;
+            }
+            .pattern-content > p ~ p {
+                margin-top: 10px;
+            }
+            .pattern-name {
+                font-size: 18px;
+                color: #222;
+                padding: 10px 0;
+            }
+            .pattern-desc {
+                font-size: 14px;
+                color: #666;
+            }
+            .pattern-link {
+                display: inline-block;
+                margin-top: 10px;
+                padding: 7px 15px;
+                background: #333;
+                color: #fff;
+            }
+            .pattern-wrap + .guideTit3 {
+                margin-top: 40px;
+            }
+            .guideContainer {
+                position: relative;
+            }
+            .guideContainer .pattern-nav {
+                position: sticky;
+                top: 0;
+                left: 0;
+                /* width: 100vw; */
+                margin-left: -24px;
+                z-index: 1;
+            }
+            .pattern-menu {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                background: #544944;
+            }
+            .pattern-menu > li {
+                padding: 15px;
+            }
+            .pattern-menu > li > a {
+                display: block;
+                color: #fff;
+                font-weight: bold;
+            }
+            .btn-go-wrap {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 50;
+                display: block;
+                background: #000;
+                width: 50px;
+                height: 50px;
+                color: #fff;
+                border-radius: 25px;
+                opacity: 0.5;
+                text-align: center;
+                line-height: 50px;
+            }
+            .btn-go-wrap:before {
+                display: block;
+                content: "TOP";
+            }
+            div.codeGuide {
+                background: #f7f7f7;
+            }
+
+            .codeGuide {
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+
+            .codeGuide li {
+                position: relative;
+                margin-top: 5px;
+                color: #111;
+                word-break: break-all;
+            }
+
+            .codeGuide li:before {
+                content: '-';
+                display: inline-block;
+                width: 10px;
+            }
+
+            .codeGuide li ol {
+                padding-left: 10px;
+                counter-reset: section;
+            }
+
+            .codeGuide li ol li::before {
+                content: counter(section) ".";
+                counter-increment: section;
+                margin-right: 4px;
+                vertical-align: baseline;
+            }
+
+            .codeGuide li.flex-line {
+                display: flex;
+                align-items: baseline;
+            }
+            .codeView {
+                margin-bottom: 30px;
+                overflow: auto;
+                display: block;
+                max-height: 300px;
+                padding: 20px;
+                border: 5px solid #f5f5f5;
+            }
+
+            .codeView.in-ifr {
+                max-height: 640px;
+                max-width: 360px;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            .codeView.in-ifr iframe {
+                width: 100%;
+                height: 640px;
+            }
+
+            .codeView.preCode {
+                font-family: Tahoma, 'malgun gothic';
+                margin-top: -30px;
+                background: #f5f5f5;
+                padding: 5px 20px;
+            }
+
+            .codeView pre {
+                margin: 0;
+                padding: 0;
+                color: #111;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1.5;
+                font-family: Tahoma;
+            }
+
+            .codeView > .step-bar {
+                position: relative;
+            }
+
+            .codeView > div {
+                margin: 0;
+                padding: 0;
+                color: #111;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 1.5;
+                font-family: Tahoma;
+            }
+
+            .codeView > div > a {
+                display: inline-block;
+                margin-left: 10px;
+                padding: 1px 3px 2px;
+                color: #2a58e9;
+                text-decoration: underline;
+                letter-spacing: .1px;
+            }
+
+            .codeView > div .innerbox {
+                padding: 0 10px;
+            }
+
+            .codeView > div .innerbox ul {
+                padding-left: 20px;
+            }
+
+            .codeView.h_auto {
+                max-height: max-content;
+            }
+
+            textarea.codeView.preCode {
+                width: 100%;
+                min-height: 300px;
+                margin-top: 30px;
+            }
+            .guide-cont h3 {
+                padding: 1rem 0;
+                color: palevioletred;
+            }
+        </style>
+    </head>
+    <body id="goTop">
+        <a href="#goTop" class="btn-go-wrap"></a>
+        <section class="guideContainer">
+            <h1 class="guideTit2">Ceragem Mobile Publishing Guide</h1>
+            <nav class="pattern-nav">
+                <ul class="pattern-menu">
+                    <li><a href="#type1">기본가이드</a></li>
+                    <li><a href="#type2">Button</a></li>
+                    <li><a href="#type3">Check</a></li>
+                    <li><a href="#type4">Tab</a></li>
+                    <li><a href="#type5">Chips</a></li>
+                    <li><a href="#type6">Popup</a></li>
+                    <li><a href="../pages/mobile/component/script_guide.html">공통영역 스크립트</a></li>
+                    <li><a href="../pages/mobile/component/guide.html">Component</a></li>
+                    <li><a href="../pages/mobile/component/layout.html">Layout</a></li>
+                    <li><a href="./index_mobile.html" target="_blank">IA작업목록</a></li>
+                    <li><a href="./web_guide.html">web 퍼블리싱 가이드</a></li>
+                </ul>
+            </nav>
+
+            <h2 id="type1" class="guideTit3">[# 기본가이드]</h2>
+            <div class="codeGuide">
+				<ul>
+					<li><a href="./code_guide.pdf" target="_blank">코드 작성 (공통)</a> 🔗</li>
+					<li><a href="./html_guide.pdf" target="_blank">HTML 작성</a> 🔗</li>
+					<li><a href="./ceragem-guide.pdf" target="_blank">세라젬 퍼블리싱 폴더구조</a> 🔗</li>
+				</ul>
+			</div>
+            <h2 id="type2" class="guideTit3">[# Button]</h2>
+            <div class="codeGuide">
+				<ul>
+					<li>기본버튼은 button, input, a 태그를 모두 같이 사용할 수 있다. 용도에 따라 단순 링크인 버튼만 a 태그를 사용 기능적인 버튼은 button 태그를 사용한다.</li>
+					<li>기본 버튼 클래스는 btn으로 시작하며, xsmall은 btn-xs, small은 btn-sm, medium은 btn-md, large는 btn-large를 사용한다.</li>
+					<li>기본 크기별 클래스에 흰색버튼은 btn-white, 블랙버튼은 btn-black를 추가한다.</li>
+					<li>button이 disabled될시 disabled 속성을 추가하거나 btn-disable를 추가한다.</li>
+				</ul>
+			</div>
+            <h3 class="gd-tit01">Default Button</h3>
+            <ul class="codeGuide">
+				<li>button은 btn으로 시작하는 클래스를 기본으로 가진다.</li>
+				<li>색상별로 btn-white, btn-black 클래스를 추가로 가진다.</li>
+				<li>버튼 속성에 따라 disabeld를 적용할 수 있다.</li>
+                <li>web에서는 클릭 시 ripple 효과가 나오게 기본으로 md-ripples 클래스를 추가시키고, 검정 버튼일 경우에는 ripples-light 클래스를, 흰색 버튼일 경우에는 ripples-dark 클래스를 추가한다. </li>
+			</ul>
+
+            <div class="codeView">
+                <div class="guide-cont">
+                    <h3>XSmall</h3>
+                    <div class="box-btn">
+                        <button class="btn-xs" disabled>Button</button>
+                        <button class="btn-xs btn-black md-ripples ripples-light">Button</button>
+                        <button class="btn-xs btn-white md-ripples ripples-dark">Button</button>
+                    </div>
+                    <h3>Small</h3>
+                    <div class="box-btn">
+                        <button class="btn-sm" disabled>Button</button>
+                        <button class="btn-sm btn-black md-ripples ripples-light">Button</button>
+                        <button class="btn-sm btn-white md-ripples ripples-dark">Button</button>
+                    </div>
+                    <h3>Medium</h3>
+                    <div class="box-btn">
+                        <button class="btn-md" disabled>Button</button>
+                        <button class="btn-md btn-black md-ripples ripples-light">Button</button>
+                        <button class="btn-md btn-white md-ripples ripples-dark">Button</button>
+                    </div>
+                    <h3>Large</h3>
+                    <div class="box-btn">
+                        <button class="btn-large" disabled>Button</button>
+                        <button class="btn-large btn-black md-ripples ripples-light">Button</button>
+                        <button class="btn-large btn-white md-ripples ripples-dark">Button</button>
+                    </div>
+                </div>
+			</div>
+            <code class="codeView preCode">
+                <pre>
+&lt;h3&gt;XSmall&lt;/h3&gt;
+&lt;div class="box-btn"&gt;
+    &lt;button class="btn-xs" disabled&gt;Button&lt;/button&gt;
+    &lt;button class="btn-xs btn-black md-ripples ripples-light"&gt;Button&lt;/button&gt;
+    &lt;button class="btn-xs btn-white md-ripples ripples-dark"&gt;Button&lt;/button&gt;
+&lt;/div&gt;
+&lt;h3&gt;Small&lt;/h3&gt;
+&lt;div class="box-btn"&gt;
+    &lt;button class="btn-sm" disabled&gt;Button&lt;/button&gt;
+    &lt;button class="btn-sm btn-black md-ripples ripples-light"&gt;Button&lt;/button&gt;
+    &lt;button class="btn-sm btn-white md-ripples ripples-dark"&gt;Button&lt;/button&gt;
+&lt;/div&gt;
+&lt;h3&gt;Medium&lt;/h3&gt;
+&lt;div class="box-btn"&gt;
+    &lt;button class="btn-md" disabled&gt;Button&lt;/button&gt;
+    &lt;button class="btn-md btn-black md-ripples ripples-light"&gt;Button&lt;/button&gt;
+    &lt;button class="btn-md btn-white md-ripples ripples-dark"&gt;Button&lt;/button&gt;
+&lt;/div&gt;
+&lt;h3&gt;Large&lt;/h3&gt;
+&lt;div class="box-btn"&gt;
+    &lt;button class="btn-large" disabled&gt;Button&lt;/button&gt;
+    &lt;button class="btn-large btn-black md-ripples ripples-light"&gt;Button&lt;/button&gt;
+    &lt;button class="btn-large btn-white md-ripples ripples-dark"&gt;Button&lt;/button&gt;
+&lt;/div&gt;
+                </pre>
+            </code>
+
+            <h3 class="gd-tit01">Text Button</h3>
+            <div class="codeView" style="margin-top: 20px;">
+                <button class="btn-text btn-text-xs btn-ico">Text Button</button>
+                <button class="btn-text btn-text-md btn-ico">Text Button</button>
+                <button class="btn-text btn-text-sm btn-text-disable">Text Button</button>
+            </div>
+            <code class="codeView preCode">
+                <pre>
+&lt;button class="btn-text btn-text-xs btn-ico"&gt;Text Button&lt;/button&gt;
+&lt;button class="btn-text btn-text-md btn-ico"&gt;Text Button&lt;/button&gt;
+&lt;button class="btn-text btn-text-sm btn-text-disable"&gt;Text Button&lt;/button&gt;
+                </pre>
+            </code>
+
+            <h2 id="type3" class="guideTit3">[# CHECKBOX]</h2>
+            <h3 class="gd-tit01">Checkbox-switch</h3>
+            <div class="codeView">
+				<div class="btn-switch">
+                    <input type="checkbox" id="switch01" checked>
+                    <label for="switch01">미체크</label>
+                </div>
+			</div>
+            <code class="codeView preCode">
+                <pre>
+&lt;div class="btn-switch"&gt;
+    &lt;input type="checkbox" id="switch01" checked&gt;
+    &lt;label for="switch01"&gt;미체크&lt;/label&gt;
+&lt;/div&gt;
+                </pre>
+            </code>
+
+
+            <h2 id="type4" class="guideTit3">[# Tab]</h2>
+            <div class="codeGuide">
+				<ul>
+					<li>탭 목록이 디바이스 너비를 넘을 경우 자동으로 스크롤</li>
+					<li>모바일에서 탭이 상단 고정이 될경우 div.tab-wrap에 sticky-header 클래스 추가</li>
+					<li>Round 탭일 경우 tab-list에 tab-list-round 클래스 추가, Line 탭일 경우 tab-list에 tab-list-line 클래스 추가</li>
+                    <li>tab-wrap에 tab-ctrl 클래스를 추가하면 탭핑 기능 활성화</li>
+				</ul>
+			</div>
+			<h3 class="gd-tit01">Round TAB</h3>
+            <div class="codeView" style="margin-top: 1rem;">
+                <div class="tab-wrap tab-ctrl">
+                    <ul class="tab-list tab-list-round">
+                        <!-- 활성화 시 on class 추가 -->
+                        <li><a href="javascript:void(0)" class="on">인기</a></li>
+                        <li><a href="javascript:void(0)">사진·촬영</a></li>
+                        <li><a href="javascript:void(0)">사진·촬영</a></li>
+                        <li><a href="javascript:void(0)">사진·촬영</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div>content01</div>
+                        <div>content02</div>
+                        <div>content03</div>
+                        <div>content04</div>
+                    </div>
+                </div>
+            </div>
+            <code class="codeView preCode">
+                <pre>
+&lt;div class="tab-wrap tab-ctrl"&gt;
+    &lt;ul class="tab-list tab-list-round"&gt;
+        &lt;li&gt;&lt;a href="javascript:void(0)" class="on"&gt;인기&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:void(0)"&gt;사진·촬영&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:void(0)"&gt;사진·촬영&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:void(0)"&gt;사진·촬영&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="tab-content"&gt;
+        &lt;div&gt;content01&lt;/div&gt;
+        &lt;div&gt;content02&lt;/div&gt;
+        &lt;div&gt;content03&lt;/div&gt;
+        &lt;div&gt;content04&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+            </code>
+
+            <h3 class="gd-tit01">Line TAB</h3>
+            <div class="codeView" style="margin-top: 1rem;">
+                <div class="tab-wrap tab-ctrl">
+                    <ul class="tab-list tab-list-line">
+                        <li><a href="javascript:;">Title</a></li>
+                        <li><a href="javascript:;">Title</a></li>
+                        <li><a href="javascript:;">Title</a></li>
+                        <li><a href="javascript:;">Title</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div>content01</div>
+                        <div>content02</div>
+                        <div>content03</div>
+                        <div>content04</div>
+                    </div>
+                </div>
+            </div>
+            <code class="codeView preCode">
+                <pre>
+&lt;div class="tab-wrap tab-ctrl"&gt;
+    &lt;ul class="tab-list tab-list-line"&gt;
+        &lt;li&gt;&lt;a href="javascript:void(0)" class="on"&gt;인기&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:void(0)"&gt;사진·촬영&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:void(0)"&gt;사진·촬영&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:void(0)"&gt;사진·촬영&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="tab-content"&gt;
+        &lt;div&gt;content01&lt;/div&gt;
+        &lt;div&gt;content02&lt;/div&gt;
+        &lt;div&gt;content03&lt;/div&gt;
+        &lt;div&gt;content04&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+            </code>
+
+            <h2 id="type5" class="guideTit3">[# Chips]</h2>
+            <h3 class="gd-tit01">Editable HashTag</h3>
+            <div class="codeGuide" style="margin-top: 1rem;">
+				<ul>
+                    <li>chips-editable 하위 앨리먼트를 추가하면 해쉬태그 에디터 기능 활성화</li>
+                    <li>엔터치면 추가, 백스페이스로 삭제 가능, 중복이면 추가 x</li>
+                    <li>input-width-calc 앨리먼트는 눈에는 안보이지만 너비 계산하는 앨리먼트</li>
+				</ul>
+			</div>
+            <div class="codeView" style="margin-top: 1rem;">
+                <div class="chips-wrap">
+                    <div class="chips-editable">
+                        <div class="edit-input-wrap">
+                            <span class="input-hashtag">#</span>
+                            <input type="text" class="chip-edit" placeholder="태그입력">
+                        </div>
+
+                        <div id="input-width-calc"></div>
+                    </div>
+                </div>
+            </div>
+            <code class="codeView preCode">
+                <pre>
+&lt;div class="chips-wrap"&gt;
+    &lt;div class="chips-editable"&gt;
+        &lt;div class="edit-input-wrap"&gt;
+            &lt;span class="input-hashtag"&gt;#&lt;/span&gt;
+            &lt;input type="text" class="chip-edit" placeholder="태그입력"&gt;
+        &lt;/div&gt;
+
+        &lt;div id="input-width-calc"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+            </code>
+
+            <h2 id="type6" class="guideTit3">[# Popup]</h2>
+            <h3 class="gd-tit01">일반 레이어 팝업</h3>
+            <div class="codeGuide" style="margin-top: 1rem;">
+				<ul>
+                    <li>버튼에 속성으로 data-pop을 추가하여 open하는 방법과 uiCommon.layer.open('#ID') 호출을 통해 open하는 두가지 방법이 존재</li>
+                    <li>data-pop 속성에 값과 .open('#ID')에 들어가는 값은 호출되는 팝업에 id와 동일해야 함</li>
+                    <li>버튼에 클래스로 popup-close를 추가하여 close하는 방법과 uiCommon.layer.close('#ID') 호출을 통해 close하는 두가지 방법이 존재</li>
+                    <li>.close('#ID')에 들어가는 값은 호출되는 팝업에 id와 동일해야 함</li>
+                    <li>기본 레이어 팝업:.layer-popup</li>
+                    <li>img 레이어 팝업:.layer-popup.img-popup</li>
+                    <li>슬라이드 레이어 팝업:.layer-popup.slide-popup</li>
+                    <li>alert 레이어 팝업:.layer-popup.alert-popup</li>
+                    <li>바텀시트 레이어 팝업:.layer-popup-wrap.bottom-sheet-wrap</li>
+                    <li>풀 레이어 팝업:.layer-popup.full-popup</li>
+				</ul>
+			</div>
+            <div class="codeView" style="margin-top: 1rem;">
+                <a href="javascript:;" data-pop="test-layer01">Layer Popup open(하단 버튼 있음)</a><br>
+                <a href="javascript:;" data-pop="test-layer02">Layer Popup open(하단 버튼 없음)</a><br>
+                <a href="javascript:;" class="sBtn" data-pop="alert-layer01">Alert Layer Popup open(타이틀만 있는 경우)</a><br>
+                <a href="javascript:;" class="sBtn" data-pop="alert-layer02">Alert Layer Popup open(타이틀 + 본문이 있는 경우)</a><br>
+                <a href="javascript:;" class="sBtn" data-pop="full-popup">풀 팝업</a><br>
+                <a href="javascript:;" class="sBtn" data-pop="bottom-layer">바텀시트 팝업</a>
+            </div>
+            <code class="codeView preCode">
+                <pre>
+&lt;a href="javascript:;" data-pop="test-layer01">Layer Popup open(하단 버튼 있음)&lt;/a&gt;&lt;br&gt;
+&lt;a href="javascript:;" data-pop="test-layer02"&gt;Layer Popup open(하단 버튼 없음)&lt;/a&gt;&lt;br&gt;
+&lt;a href="javascript:;" class="sBtn" data-pop="alert-layer01"&gt;Alert Layer Popup open(타이틀만 있는 경우)&lt;/a&gt;&lt;br&gt;
+&lt;a href="javascript:;" class="sBtn" data-pop="alert-layer02"&gt;Alert Layer Popup open(타이틀 + 본문이 있는 경우)&lt;/a&gt;&lt;br&gt;
+&lt;a href="javascript:;" class="sBtn" data-pop="full-popup"&gt;풀 팝업&lt;/a&gt;&lt;br&gt;
+&lt;a href="javascript:;" class="sBtn" data-pop="bottom-layer"&gt;바텀시트 팝업&lt;/a&gt;
+
+&lt;div id="test-layer01" class="layer-popup-wrap"&gt;
+    &lt;div class="layer-popup"&gt;
+        &lt;div class="popup-header"&gt;
+            &lt;h4 class="tit"&gt;테스트&lt;/h4&gt;
+            &lt;span class="right"&gt;
+                &lt;button class="ico-popup-close popup-close"&gt;닫기&lt;/button&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="popup-body"&gt;
+            본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다.
+        &lt;/div&gt;
+        &lt;div class="popup-footer"&gt;
+            &lt;button class="btn-sm btn-white md-ripples"&gt;취소&lt;/button&gt;
+            &lt;button class="btn-sm btn-black md-ripples ripples-light"&gt;삭제&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="test-layer02" class="layer-popup-wrap"&gt;
+    &lt;div class="layer-popup"&gt;
+        &lt;div class="popup-header"&gt;
+            &lt;h4 class="tit"&gt;테스트&lt;/h4&gt;
+            &lt;span class="right"&gt;
+                &lt;button class="ico-popup-close popup-close"&gt;닫기&lt;/button&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="popup-body"&gt;
+            본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다.본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+        &lt;/div&gt;
+        &lt;div class="popup-footer"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="alert-layer01" class="layer-popup-wrap"&gt;
+    &lt;div class="layer-popup alert-popup"&gt;
+        &lt;div class="popup-body"&gt;
+            &lt;span class="msg"&gt;
+                챌린지를 그만하시겠어요?&lt;br&gt;게시한 글은 삭제되지 않습니다.
+            &lt;/span&gt;
+            &lt;div class="box-btn"&gt;
+                &lt;button class="btn-sm btn-white md-ripples"&gt;취소&lt;/button&gt;
+                &lt;button class="btn-sm btn-black md-ripples ripples-light popup-close"&gt;그만하기&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="alert-layer02" class="layer-popup-wrap"&gt;
+    &lt;div class="layer-popup alert-popup"&gt;
+        &lt;div class="popup-body"&gt;
+            &lt;span class="msg"&gt;
+                타이틀 텍스트
+                &lt;span class="txt"&gt;
+                    본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스
+                    본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스
+                    본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스
+                    본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스
+                &lt;/span&gt;
+            &lt;/span&gt;
+            &lt;div class="box-btn"&gt;
+                &lt;button class="btn-sm btn-white md-ripples"&gt;취소&lt;/button&gt;
+                &lt;button class="btn-sm btn-black md-ripples ripples-light popup-close"&gt;그만하기&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="full-popup" class="layer-popup-wrap"&gt;
+    &lt;div class="layer-popup full-popup"&gt;
+        &lt;div class="popup-header"&gt;
+            &lt;button class="ico-popup-close popup-close"&gt;닫기&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="popup-body popup-share"&gt;
+            &lt;h4 class="pop-tit"&gt;공유하기&lt;/h4&gt;
+            &lt;span class="pop-txt"&gt;포스트를 공유해보세요&lt;/span&gt;
+            &lt;ul class="list-share"&gt;
+                &lt;li&gt;&lt;button class="btn-share btn-share-facebook"&gt;facebook&lt;/button&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;button class="btn-share btn-share-kakao"&gt;kakao&lt;/button&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;button class="btn-share btn-share-line"&gt;line&lt;/button&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;button class="btn-share btn-share-link"&gt;link&lt;/button&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="box-thumb"&gt;
+                &lt;div class="thumb"&gt;&lt;img src="../../../assets/mobile/images/temp/share-thumb.png" alt=""&gt;&lt;/div&gt;
+                &lt;p class="txt"&gt;
+                    제주는 도슨트가 필요해
+                    제주는 도슨트가 필요해
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="bottom-layer" class="layer-popup-wrap bottom-sheet-wrap"&gt;
+    &lt;div class="layer-popup"&gt;
+        &lt;div class="popup-header"&gt;
+            &lt;h4 class="tit"&gt;관심 커뮤니티 설정&lt;/h4&gt;
+            &lt;span class="right"&gt;
+                &lt;button class="ico-popup-close popup-close"&gt;닫기&lt;/button&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="popup-body"&gt;
+            &lt;ul class="community-setting-list"&gt;
+                &lt;li&gt;
+                    &lt;span class="btn-check"&gt;
+                        &lt;input type="checkbox" id="chkall"&gt;
+                        &lt;label for="chkall"&gt;&lt;span&gt;전체 커뮤니티 선택&lt;/span&gt;&lt;/label&gt;
+                    &lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="community-req"&gt;
+                &lt;strong&gt;찾으시는 커뮤니티가 없나요?&lt;/strong&gt;
+                &lt;a href="#" title="커뮤니티 신청하기"&gt;커뮤니티 신청하기&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="popup-footer"&gt;
+            &lt;button class="btn-large btn-black md-ripples ripples-light"&gt;완료&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+            </code>
+
+            <!--레이어팝업-->
+        <div id="test-layer01" class="layer-popup-wrap">
+            <div class="layer-popup">
+                <div class="popup-header">
+                    <h4 class="tit">테스트</h4>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                        <!-- <button class="ico-popup-close" onclick="uiCommon.layer.close('test-layer');">닫기</button> -->
+                    </span>
+                </div>
+                <div class="popup-body">
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                </div>
+                <div class="popup-footer">
+                    <button class="btn-sm btn-white md-ripples">취소</button>
+                    <button class="btn-sm btn-black md-ripples ripples-light">삭제</button>
+                </div>
+            </div>
+        </div>
+        <div id="test-layer02" class="layer-popup-wrap">
+            <div class="layer-popup">
+                <div class="popup-header">
+                    <h4 class="tit">테스트</h4>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                        <!-- <button class="ico-popup-close" onclick="uiCommon.layer.close('test-layer');">닫기</button> -->
+                    </span>
+                </div>
+                <div class="popup-body">
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                    본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입니다. 본문내용입입니다. 본문내용입니다. 본문내용입니다. 본문내용입
+                </div>
+                <div class="popup-footer"></div>
+            </div>
+        </div>
+
+        <!--타이틀만 있는 Alert 팝업-->
+        <div id="alert-layer01" class="layer-popup-wrap">
+            <div class="layer-popup alert-popup">
+                <div class="popup-body">
+                    <span class="msg">
+                        챌린지를 그만하시겠어요?<br>게시한 글은 삭제되지 않습니다.
+                    </span>
+                    <div class="box-btn">
+                        <button class="btn-sm btn-white md-ripples">취소</button>
+                        <button class="btn-sm btn-black md-ripples ripples-light popup-close">그만하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--타이틀 + 본문이 있는 Alert 팝업-->
+        <div id="alert-layer02" class="layer-popup-wrap">
+            <div class="layer-popup alert-popup">
+                <div class="popup-body">
+                    <span class="msg">
+                        타이틀 텍스트
+                        <span class="txt">
+                            본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스
+                            본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스
+                            본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스
+                            본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스트 본문텍스
+                        </span>
+                    </span>
+                    <div class="box-btn">
+                        <button class="btn-sm btn-white md-ripples">취소</button>
+                        <button class="btn-sm btn-black md-ripples ripples-light popup-close">그만하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--풀팝업-->
+        <div id="full-popup" class="layer-popup-wrap">
+            <div class="layer-popup full-popup">
+                <div class="popup-header">
+                    <button class="ico-popup-close popup-close">닫기</button>
+                </div>
+                <div class="popup-body popup-share">
+                    <h4 class="pop-tit">공유하기</h4>
+                    <span class="pop-txt">포스트를 공유해보세요</span>
+                    <ul class="list-share">
+                        <li><button class="btn-share btn-share-facebook">facebook</button></li>
+                        <li><button class="btn-share btn-share-kakao">kakao</button></li>
+                        <li><button class="btn-share btn-share-line">line</button></li>
+                        <li><button class="btn-share btn-share-link">link</button></li>
+                    </ul>
+                    <div class="box-thumb">
+                        <div class="thumb"><img src="../../../assets/mobile/images/temp/share-thumb.png" alt=""></div>
+                        <p class="txt">
+                            제주는 도슨트가 필요해
+                            제주는 도슨트가 필요해
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--바텀 시트-->
+        <div id="bottom-layer" class="layer-popup-wrap bottom-sheet-wrap">
+            <div class="layer-popup">
+                <div class="popup-header">
+                    <h4 class="tit">관심 커뮤니티 설정</h4>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                    </span>
+                </div>
+                <div class="popup-body">
+                    <ul class="community-setting-list">
+                        <li>
+                            <span class="btn-check">
+                                <input type="checkbox" id="chkall">
+                                <label for="chkall"><span>전체 커뮤니티 선택</span></label>
+                            </span>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk1">
+                                        <label for="chk1"></label>
+                                    </span>
+                                    <button>건강</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip2">
+                                                    <label for="chip2">고혈압</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip3">
+                                                    <label for="chip3">혈액순환</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip4">
+                                                    <label for="chip4">혈당</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip5">
+                                                    <label for="chip5">고지혈증</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip6">
+                                                    <label for="chip6">탈모</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk2">
+                                        <label for="chk2"></label>
+                                    </span>
+                                    <button>취미/여행</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk3">
+                                        <label for="chk3"></label>
+                                    </span>
+                                    <button>주식/재테크</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk4">
+                                        <label for="chk4"></label>
+                                    </span>
+                                    <button>부동산</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk5">
+                                        <label for="chk5"></label>
+                                    </span>
+                                    <button>썸/연애</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk6">
+                                        <label for="chk6"></label>
+                                    </span>
+                                    <button>여행</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk7">
+                                        <label for="chk7"></label>
+                                    </span>
+                                    <button>헬스/다이어트</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-wrap">
+                                <div class="accordion-head">
+                                    <span class="btn-check">
+                                        <input type="checkbox" id="chk8">
+                                        <label for="chk8"></label>
+                                    </span>
+                                    <button>회사생활</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="chips-wrap">
+                                        <ul class="chip-list">
+                                            <li>
+                                                <span class="chip-check">
+                                                    <input type="checkbox" id="chip1">
+                                                    <label for="chip1">디스크</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="community-req">
+                        <strong>찾으시는 커뮤니티가 없나요?</strong>
+                        <a href="#" title="커뮤니티 신청하기">커뮤니티 신청하기</a>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <!-- <button class="btn-md" disabled>선택완료</button> -->
+                    <button class="btn-large btn-black md-ripples ripples-light">완료</button>
+                </div>
+            </div>
+        </div>
+
+            <h3 class="gd-tit01">토스트 팝업</h3>
+            <div class="codeGuide" style="margin-top: 1rem;">
+				<ul>
+                    <li>버튼에 속성으로 data-toast-pop을 추가하여 open하는 방법과 uiCommon.toast.open('#ID') 호출을 통해 open하는 두가지 방법이 존재</li>
+                    <li>data-toast-pop 속성에 값과 .open('#ID')에 들어가는 값은 호출되는 팝업에 id와 동일해야 함</li>
+				</ul>
+			</div>
+            <div class="codeView" style="margin-top: 1rem;">
+                <button class="btn-md btn-black btn-pop-toast md-ripples ripples-light" data-toast-pop="test-toast">
+                    toast popup
+                </button>
+            </div>
+            <div id="test-toast" class="pop-toast">URL이 복사되었습니다.</div>
+            <code class="codeView preCode">
+                <pre>
+&lt;button class="btn-md btn-black btn-pop-toast md-ripples ripples-light" data-toast-pop="test-toast"&gt;
+    toast popup
+&lt;/button&gt;
+&lt;div id="test-toast" class="pop-toast"&gt;URL이 복사되었습니다.&lt;/div&gt;
+                </pre>
+            </code>
+
+        </section>
+
+        <script src="../assets/mobile/js/lib/jquery-1.11.1.min.js"></script>
+        <script src="../assets/mobile/js/lib/slick.min.js"></script>
+        <script src="../assets/mobile/js/lib/lottie.min.js"></script>
+        <script src="../assets/mobile/js/lib/video.min.js"></script>
+        <script src="../assets/mobile/js/ui.common.min.js"></script>
+    </body>
+</html>

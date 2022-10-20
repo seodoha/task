@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+            pageTitle : '세라젬'
+
+        })
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="sub-page-header">
+                <button class="ico-back">뒤로가기</button>
+            </div>
+            <div id="container">
+                <section id="login" class="container-wrap">
+                    <div class="login-layout">
+                        <div class="form-header">
+                            <div class="font-card-tit01">회원가입</div>
+                            <div class="sub-tit">
+                                서비스 이용 약관에 동의해주세요
+                            </div>
+                        </div>
+                        <div class="check-wrap">
+                            <div class="btn-check all-check">
+                                <input type="checkbox" id="check-all">
+                                <label for="check-all"><span>전체 동의하기</span></label>
+                            </div>
+                            <!--2022.06.02 요소 수정 및 추가-->
+                            <div class="check-list">
+                                <span class="check-item">
+                                    <input type="checkbox" id="check1" checked>
+                                    <label for="check1"><span>(필수) 만 14세 이상입니다.</span></label>
+                                </span>
+                                <span class="check-item">
+                                    <input type="checkbox" id="check2">
+                                    <label for="check2"><span>(필수) 이용약관 동의</span></label>
+                                    <a href="#" class="ico-more-gray">더보기</a>
+                                </span>
+                                <span class="check-item">
+                                    <input type="checkbox" id="check3">
+                                    <label for="check3"><span>(필수) 개인정보 수집 및 이용 동의</span></label>
+                                    <a href="#" class="ico-more-gray">더보기</a>
+                                </span>
+                                <span class="check-item">
+                                    <input type="checkbox" id="check3">
+                                    <label for="check3"><span>(선택) 마케팅활용 및 광고성 정보 수신 동의</span></label>
+                                    <a href="#" class="ico-more-gray">더보기</a>
+                                </span>
+                                <div class="check-group">
+                                    <span class="check-item">
+                                        <input type="checkbox" id="check4">
+                                        <label for="check4"><span>알림톡</span></label>
+                                    </span>
+                                    <span class="check-item">
+                                        <input type="checkbox" id="check5">
+                                        <label for="check5"><span>E-mail</span></label>
+                                    </span>
+                                </div>
+                                <span class="check-item">
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-btn btn-footer fix">
+                            <!-- 비활성화시, btn-large btn-disable 제외 클래스 다 삭제 -->
+                            <!-- <button class="btn-large btn-disable">본인인증</button> -->
+                            <button class="btn-large btn-black md-ripples ripples-light">본인인증</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

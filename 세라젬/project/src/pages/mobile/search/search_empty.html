@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap" class="full-wrap">
+            <div class="sub-page-header">
+                <div class="left">
+                    <button class="ico-back">뒤로가기</button>
+                    <h1 class="page-tit">검색</h1>
+                </div>
+            </div>
+
+            <div id="container">
+                <section id="search" class="container-wrap user-home">
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <div class="box-hd-sch text-input-wrap">
+                                <div class="box-sch-input">
+                                    <input type="text"  title="관심있는 주제 검색" placeholder="관심있는 주제가 있으신가요?" class="sch-input" >
+                                    <button class="ico-search-gray">검색</button>
+                                    <button class="ico-search-delete">삭제</button>
+                                </div>
+                            </div>
+                            <div class="writer-info-contents">
+                                <div class="tab-wrap tab-ctrl">
+                                    <ul class="tab-list tab-list-line">
+                                        <!-- 활성화 시 on class 추가 -->
+                                        <li><a href="javascript:void(0)" class="on" title="현재 탭" aria-selected="true" role="tab">스토리</a></li>
+                                        <li><a href="javascript:void(0)" title="커뮤니티">커뮤니티</a></li>
+                                        <li><a href="javascript:void(0)" title="작가">작가</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <!--스토리-->
+                                        <div aria-hidden="true">
+                                            <div class="box-board">
+                                                <div class="board-util">
+                                                    <button class="btn-select">최신순</button>
+                                                    <span class="board-count">총 <em class="search-num">0</em>건</span>
+                                                </div>
+                                                <div class="box-challenge">
+                                                    <div class="box-noresult">
+                                                        <div class="box-lottie">
+                                                            <div id="not-search" class="lottie"></div>
+                                                        </div>
+                                                        <h5>‘제주’에 대한<br>검색결과가 없습니다.</h5>
+                                                        <p class="detail-txt">
+                                                            검색할 단어를 변경하거나,<br>
+                                                            단어의 철자가 정확한지 확인해 보세요.
+                                                        </p>
+                                                    </div>
+                                                    <div class="box-board empty">
+                                                        <h5 class="font-card-tit04">오늘의 인기 스토리</h5>
+                                                        <ul class="board-list">
+                                                            <li class="box-txt-card ty-small">
+                                                                <a href="#">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">여행</span>
+                                                                    </div>
+                                                                    <div class="box-cnts">
+                                                                        <div class="box-tit">
+                                                                            <strong class="tit">제주는 도슨트가 필요해</strong>
+                                                                            <p>
+                                                                                푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나 제주에서 꼭 들러야 하는 곳이 예술가의 공간이 푸르른 바다, 다양한 자연의 색을 머금은 오름...
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">전지현</span>
+                                                                        <span class="writer-date">2022.10.31</span>
+                                                                    </div>
+                                                                </a>
+                                                                <div class="chips-wrap hashtag">
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주여행</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">예술</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">맛집</a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="box-txt-card ty-small">
+                                                                <a href="#">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">여행</span>
+                                                                    </div>
+                                                                    <div class="box-cnts">
+                                                                        <div class="box-tit">
+                                                                            <strong class="tit">제주도 한달 살기 5일차 한달 살기 5일차 한달 살기 5일차</strong>
+                                                                            <p>제주의 겨울은 정말 춥다</p>
+                                                                        </div>
+                                                                        <div class="thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/profile05.svg" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">전종호</span>
+                                                                        <span class="writer-date">2022.10.31</span>
+                                                                    </div>
+                                                                </a>
+                                                                <div class="chips-wrap hashtag">
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주도맛집</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주도가볼만한곳</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주도카페</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주살이</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주흑돼지</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주애월맛집</a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="box-txt-card ty-small">
+                                                                <a href="#">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">여행</span>
+                                                                    </div>
+                                                                    <div class="box-cnts">
+                                                                        <div class="box-tit">
+                                                                            <strong class="tit">제주는 도슨트가 필요해</strong>
+                                                                            <p>
+                                                                                푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나 제주에서 꼭 들러야 하는 곳이 예술가의 공간이 푸르른 바다, 다양한 자연의 색을 머금은 오름...
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">전지현</span>
+                                                                        <span class="writer-date">2022.10.31</span>
+                                                                    </div>
+                                                                </a>
+                                                                <div class="chips-wrap hashtag">
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주여행</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">예술</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">맛집</a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="box-txt-card ty-small">
+                                                                <a href="#">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">여행</span>
+                                                                    </div>
+                                                                    <div class="box-cnts">
+                                                                        <div class="box-tit">
+                                                                            <strong class="tit">제주는 도슨트가 필요해</strong>
+                                                                            <p>
+                                                                                푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나 제주에서 꼭 들러야 하는 곳이 예술가의 공간이 푸르른 바다, 다양한 자연의 색을 머금은 오름...
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">전지현</span>
+                                                                        <span class="writer-date">2022.10.31</span>
+                                                                    </div>
+                                                                </a>
+                                                                <div class="chips-wrap hashtag">
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주여행</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">예술</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">맛집</a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="box-txt-card ty-small">
+                                                                <a href="#">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">여행</span>
+                                                                    </div>
+                                                                    <div class="box-cnts">
+                                                                        <div class="box-tit">
+                                                                            <strong class="tit">제주도 한달 살기 5일차 한달 살기 5일차 한달 살기 5일차</strong>
+                                                                            <p>제주의 겨울은 정말 춥다</p>
+                                                                        </div>
+                                                                        <div class="thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/profile05.svg" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">전종호</span>
+                                                                        <span class="writer-date">2022.10.31</span>
+                                                                    </div>
+                                                                </a>
+                                                                <div class="chips-wrap hashtag">
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주도맛집</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주도가볼만한곳</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주도카페</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주살이</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주흑돼지</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주애월맛집</a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="box-txt-card ty-small">
+                                                                <a href="#">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">여행</span>
+                                                                    </div>
+                                                                    <div class="box-cnts">
+                                                                        <div class="box-tit">
+                                                                            <strong class="tit">제주는 도슨트가 필요해</strong>
+                                                                            <p>
+                                                                                푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나 제주에서 꼭 들러야 하는 곳이 예술가의 공간이 푸르른 바다, 다양한 자연의 색을 머금은 오름...
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">전지현</span>
+                                                                        <span class="writer-date">2022.10.31</span>
+                                                                    </div>
+                                                                </a>
+                                                                <div class="chips-wrap hashtag">
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주여행</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">예술</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">맛집</a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--커뮤니티-->
+                                        <div aria-hidden="true">
+                                            <div class="box-board">
+                                                <div class="board-util">
+                                                    <button class="btn-select">최신순</button>
+                                                    <span class="board-count">총 <em class="search-num">0</em>건</span>
+                                                </div>
+                                                <div class="box-challenge">
+                                                    <div class="box-noresult">
+                                                        <div class="box-lottie">
+                                                            <div id="not-search" class="lottie"></div>
+                                                        </div>
+                                                        <h5>‘제주’에 대한<br>검색결과가 없습니다.</h5>
+                                                        <p class="detail-txt">
+                                                            검색할 단어를 변경하거나,<br>
+                                                            단어의 철자가 정확한지 확인해 보세요.
+                                                        </p>
+                                                    </div>
+                                                    <div class="box-board empty">
+                                                        <h5 class="font-card-tit04">오늘의 인기 커뮤니티</h5>
+                                                        <ul class="board-list community">
+                                                            <li class="box-txt-card ty-small">
+                                                                <a href="#">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">여행</span>
+                                                                    </div>
+                                                                    <div class="box-cnts">
+                                                                        <div class="box-tit">
+                                                                            <strong class="tit">설렘 가득한 제주 블루노트 커피</strong>
+                                                                            <div class="box-writer">
+                                                                                <span class="writer-date">30분 전</span>
+                                                                            </div>
+                                                                            <div class="comment-util">
+                                                                                <span class="btn-act-like-wrap">
+                                                                                    <input type="checkbox" id="like0002" tabindex="0">
+                                                                                    <label for="like0002">
+                                                                                        <div class="box">
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                        <span class="count">340</span>
+                                                                                    </label>
+                                                                                </span>
+                                                                                <button class="ico-comment">1</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/temp_img02.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                                <div class="chips-wrap hashtag">
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주여행</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">예술</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">맛집</a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="box-txt-card ty-small">
+                                                                <a href="#">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">여행</span>
+                                                                    </div>
+                                                                    <div class="box-cnts">
+                                                                        <div class="box-tit">
+                                                                            <strong class="tit">제주로렌트카, 2박 3일 제주여행 22년 현대 캐스퍼 제주도 렌트카 후기</strong>
+                                                                            <div class="box-writer">
+                                                                                <span class="writer-date">2022.01.30</span>
+                                                                            </div>
+                                                                            <div class="comment-util">
+                                                                                <span class="btn-act-like-wrap">
+                                                                                    <input type="checkbox" id="like0002" tabindex="0">
+                                                                                    <label for="like0002">
+                                                                                        <div class="box">
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                        <span class="count">340</span>
+                                                                                    </label>
+                                                                                </span>
+                                                                                <button class="ico-comment">1</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="box-txt-card ty-small">
+                                                                <a href="#">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">여행</span>
+                                                                    </div>
+                                                                    <div class="box-cnts">
+                                                                        <div class="box-tit">
+                                                                            <strong class="tit">설렘 가득한 제주 블루노트 커피</strong>
+                                                                            <div class="box-writer">
+                                                                                <span class="writer-date">30분 전</span>
+                                                                            </div>
+                                                                            <div class="comment-util">
+                                                                                <span class="btn-act-like-wrap">
+                                                                                    <input type="checkbox" id="like0002" tabindex="0">
+                                                                                    <label for="like0002">
+                                                                                        <div class="box">
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                        <span class="count">340</span>
+                                                                                    </label>
+                                                                                </span>
+                                                                                <button class="ico-comment">1</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/temp_img02.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                                <div class="chips-wrap hashtag">
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주여행</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">예술</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">맛집</a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="box-txt-card ty-small">
+                                                                <a href="#">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">여행</span>
+                                                                    </div>
+                                                                    <div class="box-cnts">
+                                                                        <div class="box-tit">
+                                                                            <strong class="tit">설렘 가득한 제주 블루노트 커피</strong>
+                                                                            <div class="box-writer">
+                                                                                <span class="writer-date">30분 전</span>
+                                                                            </div>
+                                                                            <div class="comment-util">
+                                                                                <span class="btn-act-like-wrap">
+                                                                                    <input type="checkbox" id="like0002" tabindex="0">
+                                                                                    <label for="like0002">
+                                                                                        <div class="box">
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                        <span class="count">340</span>
+                                                                                    </label>
+                                                                                </span>
+                                                                                <button class="ico-comment">1</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="thumb">
+                                                                            <img src="../../../assets/mobile/images/temp/temp_img02.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                                <div class="chips-wrap hashtag">
+                                                                    <a href="#" class="chip-label chip-label-hashtag">제주여행</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">예술</a>
+                                                                    <a href="#" class="chip-label chip-label-hashtag">맛집</a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="box-txt-card ty-small">
+                                                                <a href="#">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">여행</span>
+                                                                    </div>
+                                                                    <div class="box-cnts">
+                                                                        <div class="box-tit">
+                                                                            <strong class="tit">제주로렌트카, 2박 3일 제주여행 22년 현대 캐스퍼 제주도 렌트카 후기</strong>
+                                                                            <div class="box-writer">
+                                                                                <span class="writer-date">2022.01.30</span>
+                                                                            </div>
+                                                                            <div class="comment-util">
+                                                                                <span class="btn-act-like-wrap">
+                                                                                    <input type="checkbox" id="like0002" tabindex="0">
+                                                                                    <label for="like0002">
+                                                                                        <div class="box">
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                        <span class="count">340</span>
+                                                                                    </label>
+                                                                                </span>
+                                                                                <button class="ico-comment">1</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--작가-->
+                                        <div aria-hidden="true">
+                                            <div class="box-board">
+                                                <div class="board-util">
+                                                    <button class="btn-select">최신순</button>
+                                                    <span class="board-count">총 <em class="search-num">0</em>건</span>
+                                                </div>
+                                                <div class="box-challenge">
+                                                    <div class="box-noresult">
+                                                        <div class="box-lottie">
+                                                            <div id="not-search" class="lottie"></div>
+                                                        </div>
+                                                        <h5>‘제주’에 대한<br>검색결과가 없습니다.</h5>
+                                                        <p class="detail-txt">
+                                                            검색할 단어를 변경하거나,<br>
+                                                            단어의 철자가 정확한지 확인해 보세요.
+                                                        </p>
+                                                    </div>
+                                                    <div class="box-board empty">
+                                                        <h5 class="font-card-tit04">관심작가 찾기</h5>
+                                                        <ul class="writer-list">
+                                                            <li>
+                                                                <div class="box-writer">
+                                                                    <span class="writer-thumb">
+                                                                        <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                                                    </span>
+                                                                    <span class="writer-info">
+                                                                        <span class="writer-nick">전지현</span>
+                                                                        <span class="writer-intro">일상 속 예술을 이야기 합니다.</span>
+                                                                    </span>
+                                                                    <div class="box-btn">
+                                                                        <input id="check1" type="checkbox" class="input-check" checked="">
+                                                                        <label for="check1" class="btn-xs btn-white btn-subscribe">
+                                                                            <span class="unchecked">팔로우</span>
+                                                                            <span class="checked">팔로잉</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="box-writer">
+                                                                    <span class="writer-thumb">
+                                                                        <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                                                    </span>
+                                                                    <span class="writer-info">
+                                                                        <span class="writer-nick">빅마마</span>
+                                                                        <span class="writer-intro">건강하고 맛있는 집밥을 소개 ...건강하고 맛있는 집밥을 소개 ...</span>
+                                                                    </span>
+                                                                    <div class="box-btn">
+                                                                        <input id="check2" type="checkbox" class="input-check">
+                                                                        <label for="check2" class="btn-xs btn-white btn-subscribe">
+                                                                            <span class="unchecked">팔로우</span>
+                                                                            <span class="checked">팔로잉</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="box-writer">
+                                                                    <span class="writer-thumb">
+                                                                        <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                                                    </span>
+                                                                    <span class="writer-info">
+                                                                        <span class="writer-nick">홈 뷰티 장인</span>
+                                                                        <span class="writer-intro">집에서 하는 셀프 에스테틱</span>
+                                                                    </span>
+                                                                    <div class="box-btn">
+                                                                        <input id="check3" type="checkbox" class="input-check">
+                                                                        <label for="check3" class="btn-xs btn-white btn-subscribe">
+                                                                            <span class="unchecked">팔로우</span>
+                                                                            <span class="checked">팔로잉</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

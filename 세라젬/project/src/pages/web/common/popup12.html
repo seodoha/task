@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="community-setting">팝업 오픈</button>
+        </div>
+
+        <!--블라인드 처리 팝업-->
+        <div id="community-setting" class="layer-popup-wrap">
+            <div class="layer-popup">
+                <div class="popup-header">
+                    <h4 class="tit">블라인드 처리 안내</h4>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                    </span>
+                </div>
+                <div class="popup-body custom-scroll">
+                    <div class="use-stop-pop">
+                        <span class="txt">회원님이 작성하신 게시글이 운영방침에 따라 블라인드 처리 되었습니다.</span>
+                        <div class="bg-box">
+                            <ul>
+                                <li>제주는 도슨트가 필요해</li>
+                                <li>제주는 도슨트가 필요해</li>
+                            </ul>
+                        </div>
+                        <span class="txt">관련 문의는 이용약관을 확인하시거나 고객센터의 1:1 문의를 이용해주세요.</span>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <!-- <button class="btn-md" disabled>선택완료</button> -->
+                    <button class="btn-sm btn-white md-ripples ripples-light">닫기</button>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

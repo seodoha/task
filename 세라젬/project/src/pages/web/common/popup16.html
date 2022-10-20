@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="test-layer01">팝업 오픈</button>
+        </div>
+
+        <div id="test-layer01" class="layer-popup-wrap">
+            <div class="layer-popup sz-large">
+                <div class="popup-header">
+                    <strong class="tit">비타민 C 농도</strong>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                        <!-- <button class="ico-popup-close" onclick="uiCommon.layer.close('test-layer');">닫기</button> -->
+                    </span>
+                </div>
+                <div class="popup-body">
+                    <div class="pop-test-result">
+                        <div class="box-cont">
+                            <p class="txt">비타민 C는 수용성 비타민으로 식품을 통해 섭취해야만 하는 비타민 입니다. 세포를 서로 결속시키는 물질인 콜라겐의 합성과 항산화 기능을 통한 활성산소의 제거, 면역 기능에 중요한 역할을 하기 때문에 건강의 유지와 함께 피부관리에도 중요한 역할을 합니다.</p>
+                            <div class="result-wrap">
+                                <div class="box-tit">
+                                    <span>유성미</span>님의 비타민 C 농도에 대한<br>
+                                    유전적인 성향은 <strong>"낮음"</strong>입니다.
+                                </div>
+                                <!--
+                                    점수 낮으면 'low' 클래스 추가,
+                                    점수 중간이면 'middle' 클래스 추가,
+                                    점수 높으면 'high' 클래스 추가
+                                -->
+                                <div class="box-status-wrap high">
+                                    <div class="box-circle-status">
+                                        <span class="txt">
+                                            <span class="result-txt">낮음</span>
+                                            <strong class="point"><em>8</em>점</strong>
+                                        </span>
+                                    </div>
+                                    <div class="box-status">
+                                        <div class="top">
+                                            <span>한국인 평균</span>
+                                            <span class="my-point">내 점수</span>
+                                        </div>
+                                        <ul class="point-list">
+                                            <li>
+                                                <div class="status-bar">
+                                                    <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                    <span class="current average" data-point="73" style="width: 73%;"></span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <!--
+                                                    점수 낮으면 'low' 클래스 추가,
+                                                    점수 중간이면 'middle' 클래스 추가,
+                                                    점수 높으면 'high' 클래스 추가
+                                                -->
+                                                <div class="status-bar low">
+                                                    <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                    <span class="current" data-point="8" style="width: 8%;"></span>
+                                                    <span class="current-txt">낮음</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="box-txt">
+                                    ※ 100점에 가까울수록 체내 비타민 C 농도가 높은 유전적인 성향을 갖고 있는 것입니다.
+                                </div>
+                            </div>
+                            <div class="box-descrip">
+                                <p>비타민은 호르몬처럼 여러 기능을 조절하는 영양소입니다. 체내 흡수, 운반, 배출 과정의 유전적인 차이는 비타민 C의 체내 농도와 활용능력에 영향을 줄 수 있습니다. 유성미님과 같은 경우, 체내 비타민 C 농도가 낮은 수준으로 형성되는 경향이 있습니다.</p>
+                            </div>
+                        </div>
+                        <div class="box-cont">
+                            <div class="box-descrip ty02">
+                                <dl>
+                                    <dt>생활 속 실천하는 추천사항</dt>
+                                    <dd>비타민 C는 주름개선과 미용에 효과적입니다. 피부의 탄력과 관철의 연골, 그리고 결합조직을 구성하는 콜라겐의 체내 합성을 촉진하기 때문입니다. 만일 피부 노화에 불리한 유전적인 성향을 보유하셨다면 더 많은 관심을 기울여야 합니다. 성인에게 권하는 비타민 C 섭취량은 100mg 입니다. 다만 흡연자의 경우, 그보다. 많은 130mg 정도가 권장됩니다.</dd>
+                                </dl>
+                            </div>
+                            <div class="box-descrip ty03">
+                                <dl>
+                                    <dt>알아두면 도움되는 주의사항</dt>
+                                    <dd>비타민 C는 생리 기능을 활성화시키는 역할을 하므로, 잠들기 전 섭취는 수면을 방해할 수 있습니다. 저녁보다는 아침이나 오후에 섭취하는 것을 추천합니다. 비타민 C는 아침 공복에 섭취하면 위장 점막이 손상되어 속이 쓰리거나, 설사가 나타날 수 있습니다. 위장 기능이 좋지 않은 경우, 산성이 아닌 중성비타민 C 섭취를 권장합니다</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="box-cont">
+                            <div class="dna-wrap">
+                                <div class="box-tit">
+                                    <span class="tit">
+                                        <span>유성미</span>님의 변이 유전자는 <strong>0개</strong> 입니다.
+                                    </span>
+                                    <span class="txt">변이 유전자의 개수가 많을수록 유전자에 의한 영향력이 크다고 할 수 있습니다.</span>
+                                </div>
+                                <div class="box-result">
+                                    <div class="top">
+                                        <span class="isTrans">변이 있음</span>
+                                        <span>변이 없음</span>
+                                    </div>
+                                    <!--변이 있음일 시 trans 클래스 추가-->
+                                    <div class="box-dna-result trans">
+                                        <div class="dna-info">
+                                            <span class="ico-dna-wrap"></span>
+                                            <strong class="dna-tit">SLC23A1</strong>
+                                            <span class="dna-txt">비타민 C의 재흡수에 관여하는 유전자</span>
+                                        </div>
+                                        <div class="result-txt">낮은 비타민 C 농도</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-cont">
+                            <div class="box-tit">
+                                <strong class="tit">추천 영양 성분</strong>
+                                <span class="txt">변이 유전자의 개수가 많을수록 유전자에 의한 영향력이 크다고 할 수 있습니다.</span>
+                            </div>
+                            <ul class="list-nutri">
+                                <li>
+                                    <img src="../../../assets/web/images/sub/ico-nutri01.png" alt="콜레우스 포스콜리">
+                                </li>
+                                <li>
+                                    <img src="../../../assets/web/images/sub/ico-nutri02.png" alt="CoQ10">
+                                </li>
+                                <li>
+                                    <img src="../../../assets/web/images/sub/ico-nutri03.png" alt="호로파(남성)">
+                                </li>
+                                <li>
+                                    <img src="../../../assets/web/images/sub/ico-nutri04.png" alt="비수리(남성)">
+                                </li>
+                                <li>
+                                    <img src="../../../assets/web/images/sub/ico-nutri05.png" alt="녹차카테킨">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box-cont">
+                            <ul class="test-list">
+                                <li>
+                                    <dl>
+                                        <dt>검사명</dt>
+                                        <dd>세라체크DNA 유전자검사</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>결과보고일</dt>
+                                        <dd>20200528</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>검체번호</dt>
+                                        <dd>004-20046-14</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <div class="box-descrip ty04">
+                                <p>유전자 검사의 결과는 고객님의 유전자 정보를 분석한 결과이며,현재의 건강 상태를 의미하는 것이 아닌 타고난 유전적 경향을 제시한 것입니다. 결과에 대한 임상적인 해석은 전문 의료인의 상담이 필요합니다 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <button class="popup-close btn-sm btn-white md-ripples ripples-darker">닫기</button>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

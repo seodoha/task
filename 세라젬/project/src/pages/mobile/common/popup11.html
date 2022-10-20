@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="load-popup">팝업 오픈</button>
+        </div>
+
+        <!--불러오기 팝업-->
+        <div id="load-popup" class="layer-popup-wrap">
+            <div class="layer-popup full-popup">
+                <div class="popup-header isBack">
+                    <button class="ico-popup-close popup-close">닫기</button>
+                    <strong class="full-pop-tit">불러오기 <span>5</span></strong>
+                    <button class="util-button">전체삭제</button>
+                </div>
+                <div class="popup-body">
+                    <ul class="board-load-wrap">
+                        <li>
+                            <div class="item-info">
+                                <div class="chips-wrap">
+                                    <span class="chip-label chip-label-sm">여행</span>
+                                </div>
+                                <div class="item-tit">
+                                    <a href="#" class="tit">
+                                        푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나 제주에서 꼭 들러야 하는...
+                                    </a>
+                                </div>
+                                <span class="item-date">9분 전</span>
+                            </div>
+                            <button class="ico-tempo-delete">삭제</button>
+                        </li>
+                        <li>
+                            <div class="item-info">
+                                <div class="chips-wrap">
+                                    <span class="chip-label chip-label-sm">홈라이프</span>
+                                </div>
+                                <div class="item-tit">
+                                    <a href="#" class="tit">
+                                        감각적인 거실 만들기를 하려면 우선 전문가의 도움을 받는 것이 가장 좋습니다.
+                                    </a>
+                                </div>
+                                <span class="item-date">2시간 전</span>
+                            </div>
+                            <button class="ico-tempo-delete">삭제</button>
+                        </li>
+                        <li>
+                            <div class="item-info">
+                                <div class="chips-wrap">
+                                    <span class="chip-label chip-label-sm">로컬라이프</span>
+                                </div>
+                                <div class="item-tit">
+                                    <a href="#" class="tit">
+                                        눈이 즐거워지는 디저트 투어! 서울 디저트 맛집을 모두 가보았습니다.
+                                    </a>
+                                </div>
+                                <span class="item-date">2022.02.01</span>
+                            </div>
+                            <button class="ico-tempo-delete">삭제</button>
+                        </li>
+                        <li>
+                            <div class="item-info">
+                                <div class="chips-wrap">
+                                    <span class="chip-label chip-label-sm chip-label-disable">게시판 미선택</span>
+                                </div>
+                                <div class="item-tit">
+                                    <a href="#" class="tit">
+                                        나홀로 떠나는 전주 여행, 낯선 장소 그리고 사람들
+                                    </a>
+                                </div>
+                                <span class="item-date">2022.02.01</span>
+                            </div>
+                            <button class="ico-tempo-delete">삭제</button>
+                        </li>
+                        <li>
+                            <div class="item-info">
+                                <div class="chips-wrap">
+                                    <span class="chip-label chip-label-sm">여행</span>
+                                </div>
+                                <div class="item-tit">
+                                    <a href="#" class="tit">
+                                        봄이 오는 문턱에서 우리 부모님 생각
+                                    </a>
+                                    <div class="chips-wrap">
+                                        <span class="chip-label chip-label-xs red">심사 미통과</span>
+                                    </div>
+                                </div>
+                                <span class="item-date">2022.02.01</span>
+                            </div>
+                            <button class="ico-tempo-delete">삭제</button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>
+
+
+
+
+
+
+

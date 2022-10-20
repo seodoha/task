@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="barcode-pop">팝업 오픈</button>
+        </div>
+
+        <!--바코드 팝업-->
+        <div id="barcode-pop" class="layer-popup-wrap bottom-sheet-wrap">
+            <div class="layer-popup">
+                <div class="popup-header">
+                    <h4 class="tit">웰라이프 멤버쉽</h4>
+                    <button class="ico-popup-close popup-close">닫기</button>
+                </div>
+                <div class="popup-body">
+                    <div class="box-barcode">
+                        <img src="../../../assets/mobile/images/temp/barcode.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

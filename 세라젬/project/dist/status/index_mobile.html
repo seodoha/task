@@ -1,0 +1,3319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+	<meta name="viewport" content="width=1900, initial-scale=1, shrink-to-fit=no">
+    <title>iaList</title>
+    <style>
+        html { font-family: sans-serif; -ms-text-size-adjust: 100%; -mobilekit-text-size-adjust: 100%; }
+        body { height: 100%; line-height: 1.5; font-size: 12px; font-family: '맑은 고딕', 'Malgun Gothic', '돋움', Dotum, '굴림', Gulim, sans-serif; color: #444444; overflow-y: scroll; background-color: #fff; margin: 0;}
+        h1 { font-size: 2em; margin: 0.67em 0; }
+        img { border-style: none; }
+        ul {margin: 0;padding: 0;}
+        /* header */
+        #header { position: fixed; top: 0; left: 0; padding: 0 24px; width: 100%; height: 60px; color: #fff; background-color: #212121; display: -mobilekit-box; display: -ms-flexbox; display: flex; -mobilekit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -mobilekit-box-sizing: border-box; box-sizing: border-box; z-index: 4; }
+        #header h1 { position: static; margin: 0; width: auto; height: auto; font-size: 16px; line-height: 60px; }
+        #header h1 a { position: static; display: inline-block; text-decoration: none; color: #fff; }
+        #header h1 a:after { display: none; }
+        #header nav { margin-left: auto; }
+        #header nav li { display: inline-block; padding: 0 16px; }
+        #header nav li.on a { color: #fff; border-bottom-color: #fff; }
+        #header nav li:last-child { padding-right: 0; }
+        #header nav a { display: inline-block; height: 60px; color: #9e9e9e; font-size: 16px; text-decoration: none; -mobilekit-box-sizing: border-box; box-sizing: border-box; line-height: 60px; border-bottom: 6px transparent solid; }
+        #container { position: static; margin: 0; padding: 0; padding-top: 60px; }
+        #container:after { content: ""; display: block; clear: both; width: 0; height: 0; visibility: hidden; }
+        /* content-primary */
+        #contentPrimary {padding: 0 20px 60px;}
+        .content-primary { float: none; overflow-x: auto; -mobilekit-box-sizing: border-box; box-sizing: border-box; margin-top: 0; width: auto; background-color: #fff; }
+        .content-primary h1 { font-family: verdana, 'Malgun Gothic', Dotum, Gulim, sans-serif; line-height: 1.2em; letter-spacing: -0.05em; margin: 0 0 20px;}
+        .content-primary > h1 { font-weight: normal; font-size: 3em; color: #333333; }
+        .content-primary > h1 > .em { font-size: 16px; line-height: 1.2em; vertical-align: bottom; }
+        .content-primary > p { margin: 0 0 1em; }
+        .content-primary > section { position: relative; margin-top: 20px;}
+        .content-primary > section:first-child { margin-top: 0; }
+        .content-primary > section > h1 { font-weight: normal; font-size: 1.8em; margin-top: 0; margin-bottom: 10px; color: #333333; }
+        .content-primary > section > p { margin: 0.5em 0; }
+        .content-primary > section > .aside { position: absolute; top: 0; right: 0; }
+        .content-primary > section figure { margin: 1.5em 0; }
+        .content-primary > section figure figcaption { margin-top: .5em; }
+
+        /* data-table small */
+        .data-table.wsg { border-bottom: 1px solid #e0e0e0; width: 100%; table-layout: fixed; border-collapse: collapse; border-spacing: 0; }
+        .data-table.wsg caption { margin: 0; padding: 0; width: 1px; height: 1px; line-height: 0; font-size: 0; visibility: hidden; }
+        .data-table.wsg th, .data-table.wsg td { padding: 0 4px; height: 30px; color: #333333; border-top: 1px solid #e0e0e0; border-color: #e0e0e0; }
+        .data-table.wsg th { background-color: #fafafa; }
+        .data-table.wsg tbody td + td { border-left-width: 1px; border-left-style: dotted; }
+        .data-table.wsg tbody td{border: 1px solid #e0e0e0; text-align: left;}
+        .data-table.wsg tbody td.date,
+        .data-table.wsg tbody td.name,
+        .data-table.wsg tbody td.page,
+        .data-table.wsg tbody td.state{ text-align:center;}
+
+        .cancel {text-decoration: line-through;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- container -->
+        <div id="container">
+            <header id="header">
+                <h1><a href="javascript:void(0);">Ceragem Mobile 커뮤니티</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="./index_web.html" target="_blank">Web 세라젬</a></li>
+                        <li><a href="../pages/mobile/component/guide.html" target="_blank">UI컴포넌트</a></li>
+                        <li><a href="../pages/mobile/component/layout.html" target="_blank">레이아웃</a></li>
+                        <li><a href="../pages/mobile/component/script_guide.html" target="_blank">스크립트 사용 가이드</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- contentPrimary -->
+            <section id="contentPrimary" class="content-primary">
+                <!-- 00 공통 (팝업, 페이지 등) -->
+                <section class="progress-list" data-type="pc">
+                    <h2>00 공통 (팝업, 페이지 등)</h2>
+                    <div class="utils">
+                        <p><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제, 기존</p>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 150px" />
+                            <col style="width: 200px" />
+                            <col style="width: 400px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>타입</th>
+                                <th></th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>시작일</th>
+                                <th>완료일</th>
+                                <th>코딩</th>
+                                <th>수정이력</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="9">레이어 일반 팝업</td>
+                                <td>일반 Alert 팝업</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup00.html" target="_blank">../pages/mobile/common/popup00.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.10</td>
+                                <td class="date">2022.3.10</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>챌린지 팝업</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup05.html" target="_blank">../pages/mobile/common/popup05.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.10</td>
+                                <td class="date">2022.3.10</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>기프트콘 상세정보 팝업</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup97.html" target="_blank">../pages/mobile/common/popup97.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.30</td>
+                                <td class="date">2022.3.30</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.28</strong><br />
+                                    <span>상품 고시정보 추가 및 수정</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>기프트콘 구매완료 팝업</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup96.html" target="_blank">../pages/mobile/common/popup96.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.30</td>
+                                <td class="date">2022.3.30</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>이용정지 안내 팝업</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup20.html" target="_blank">../pages/mobile/common/popup20.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.4.26</td>
+                                <td class="date">2022.4.26</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>블라인드처리 안내 팝업</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup21.html" target="_blank">../pages/mobile/common/popup21.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.4.28</td>
+                                <td class="date">2022.4.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DNA 결과 없을때 팝업</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup22.html" target="_blank">../pages/mobile/common/popup22.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.5.11</td>
+                                <td class="date">2022.5.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>색소 침착</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup23.html" target="_blank">../pages/mobile/common/popup23.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.5.20</td>
+                                <td class="date">2022.5.20</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>비타민 C 농도</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup24.html" target="_blank">../pages/mobile/common/popup24.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.5.20</td>
+                                <td class="date">2022.5.20</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="10">레이어 풀팝업</td>
+                                <td>공유하기</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup01.html" target="_blank">../pages/mobile/common/popup01.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.6</td>
+                                <td class="date">2022.3.6</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>댓글 이미지 확대</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup04.html" target="_blank">../pages/mobile/common/popup04.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.8</td>
+                                <td class="date">2022.3.8</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>댓글 팝업</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup06.html" target="_blank">../pages/mobile/common/popup06.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.21</td>
+                                <td class="date">2022.3.21</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>등록된 댓글이 없습니다.</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup07.html" target="_blank">../pages/mobile/common/popup07.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.21</td>
+                                <td class="date">2022.3.21</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>작성글 불러오기</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup11.html" target="_blank">../pages/mobile/common/popup11.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>투표</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup12.html" target="_blank">../pages/mobile/common/popup12.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>마이페이지 > 심사중 콘텐츠</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup99.html" target="_blank">../pages/mobile/common/popup99.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.29</td>
+                                <td class="date">2022.3.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>네이티브 > 알림설정</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup19.html" target="_blank">../pages/mobile/common/popup19.html</a>
+                                </td>
+                                <td class="name">조현준</td>
+                                <td class="date">2022.3.31</td>
+                                <td class="date">2022.3.31</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.06.22</strong><br />
+                                    <span>내용 수정</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>본인인증</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup95.html" target="_blank">../pages/mobile/common/popup95.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.4.01</td>
+                                <td class="date">2022.4.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>이용약관</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup94.html" target="_blank">../pages/mobile/common/popup94.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.4.12</td>
+                                <td class="date">2022.4.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="12">바텀시트</td>
+                                <td>관심 커뮤니티 설정</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup02.html" target="_blank">../pages/mobile/common/popup02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.6</td>
+                                <td class="date">2022.3.6</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>게시물 정렬 (정렬 Default 타입 팝업)</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup98.html" target="_blank">../pages/mobile/common/popup98.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.29</td>
+                                <td class="date">2022.3.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>스토리 상세 관리</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup08.html" target="_blank">../pages/mobile/common/popup08.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.21</td>
+                                <td class="date">2022.3.21</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>스토리 작성 커버설정</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup09.html" target="_blank">../pages/mobile/common/popup09.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>스토리 작성 가이드</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup10.html" target="_blank">../pages/mobile/common/popup10.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>공지사항</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup13.html" target="_blank">../pages/mobile/common/popup13.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>신고하기, 탈퇴사유</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup03.html" target="_blank">../pages/mobile/common/popup03.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.7</td>
+                                <td class="date">2022.3.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.28</strong><br />
+                                    <span>기타 사유 input 박스 추가</span><br />
+                                    <strong class="date">2022.03.28</strong><br />
+                                    <span>- 레이어 일반 팝업에서 바텀 시트로 변경</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>웰라이프 멤버쉽 바코드</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup14.html" target="_blank">../pages/mobile/common/popup14.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.28</td>
+                                <td class="date">2022.3.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>스토리 콘텐츠 승인</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup15.html" target="_blank">../pages/mobile/common/popup15.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.28</td>
+                                <td class="date">2022.3.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>웰카페 작성 가이드</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup16.html" target="_blank">../pages/mobile/common/popup16.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.3.28</td>
+                                <td class="date">2022.3.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>웰카페 체험가능 제품</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup17.html" target="_blank">../pages/mobile/common/popup17.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.3.28</td>
+                                <td class="date">2022.3.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.07.06</strong><br />
+                                    <span>클래스 추가</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>마이페이지 프로필 이미지 설정</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/popup18.html" target="_blank">../pages/mobile/common/popup18.html</a>
+                                </td>
+                                <td class="name">박서연</td>
+                                <td class="date">2022.3.31</td>
+                                <td class="date">2022.3.31</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">페이지</td>
+                                <td>대댓글 입력 중</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/commentInput.html" target="_blank">../pages/mobile/common/commentInput.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.21</td>
+                                <td class="date">2022.3.21</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>알림</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/notiList.html" target="_blank">../pages/mobile/common/notiList.html</a>
+                                </td>
+                                <td class="name">조현준</td>
+                                <td class="date">2022.3.31</td>
+                                <td class="date">2022.3.31</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.06.22</strong><br />
+                                    <span>내용 수정</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>알림 > 편집모드</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/notiList02.html" target="_blank">../pages/mobile/common/notiList02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.06.22</td>
+                                <td class="date">2022.06.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Error</td>
+                                <td>400페이지</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/400_error.html" target="_blank">../pages/mobile/common/400_error.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>404페이지</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/404_error.html" target="_blank">../pages/mobile/common/404_error.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>500페이지</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/500_error.html" target="_blank">../pages/mobile/common/500_error.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>무한 로딩 바</td>
+                                <td></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/loading.html" target="_blank">../pages/mobile/common/loading.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>지도 지점 정보</td>
+                                <td></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/common/map_info.html" target="_blank">../pages/mobile/common/map_info.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.6.17</td>
+                                <td class="date">2022.6.17</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- 00 공통 (팝업, 등) -->
+                <!-- 01 메인 / Footer -->
+                <section class="progress-list" data-type="pc">
+                    <h2>01 메인</h2>
+                    <div class="utils">
+                        <p><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제, 기존</p>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 150px" />
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                            <col style="width: 150px" />
+                            <col style="width: 400px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>1depth</th>
+                                <th>2depth</th>
+                                <th>3depth</th>
+                                <th>PAGE ID</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>시작일</th>
+                                <th>완료일</th>
+                                <th>코딩</th>
+                                <th>수정이력</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="cancel">
+                                <td rowspan="3">01 메인</td>
+                                <td>로그인 전/대시보드없음</td>
+                                <td></td>
+                                <td class="page">CCPC_MAI_01</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/main/logout.html" target="_blank">../pages/mobile/main/logout.html</a>
+                                </td>
+                                <td class="name">조현준</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">메인</td>
+                                <td></td>
+                                <td class="page" rowspan="2">CCPC_MEN_01</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/main/dashboard.html" target="_blank">../pages/mobile/main/dashboard.html</a>
+                                </td>
+                                <td class="name">조현준</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.26</strong><br />
+                                    <span>chip label case 추가</span><br />
+                                    <strong class="date">2022.04.22</strong><br />
+                                    <span>메인 퍼블리싱 수정 (로그인/비로그인 같은 화면)</span><br />
+                                </td>
+                            </tr>
+                            <tr class="cancel">
+                                <td>건강측정데이터, 챌린지 없음</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/main/dashboard_nodata.html" target="_blank">../pages/mobile/main/dashboard_nodata.html</a>
+                                </td>
+                                <td class="name">조현준</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- // 01 메인 / Footer -->
+                <!-- 02 스토리 -->
+                <section class="progress-list" data-type="pc">
+                    <h2>02 스토리</h2>
+                    <div class="utils">
+                        <p><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제, 기존</p>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 150px" />
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                            <col style="width: 150px" />
+                            <col style="width: 400px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>1depth</th>
+                                <th>2depth</th>
+                                <th>3depth</th>
+                                <th>PAGE ID</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>시작일</th>
+                                <th>완료일</th>
+                                <th>코딩</th>
+                                <th>수정이력</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="14">02 스토리</td>
+                                <td rowspan="5">목록</td>
+                                <td>인기</td>
+                                <td class="page">CCPC_STR_01</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/main.html" target="_blank">../pages/mobile/story/main.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>팔로잉</td>
+                                <td class="page">CCMO_STR_01_S1</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/subscribe.html" target="_blank">../pages/mobile/story/subscribe.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>팔로잉(작가없음)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/subscribe_empty.html" target="_blank">../pages/mobile/story/subscribe_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>일반</td>
+                                <td class="page">CCMO_STR_01_S2</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/general.html" target="_blank">../pages/mobile/story/general.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.27</strong><br />
+                                    <span>- 비주얼 영역 추가</span><br />
+                                    <span>- sort 추가</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>일반(등록된 콘텐츠 없음)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/general_empty.html" target="_blank">../pages/mobile/story/general_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>관심작가 찾기</td>
+                                <td></td>
+                                <td class="page">CCPC_STR_04</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/interest.html" target="_blank">../pages/mobile/story/interest.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>상세</td>
+                                <td></td>
+                                <td class="page">CCMO_STR_02</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/detail.html" target="_blank">../pages/mobile/story/detail.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="date">2022.3.17</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.07.06</strong><br />
+                                    <span>- 댓글 첨부 이미지 마크업 변경(일괄적용)</span><br />
+                                    <span>- 북마크 추가</span><br />
+                                    <span>- 댓글 퍼블리싱 수정 (일괄적용)</span><br />
+                                    <span>- 퍼블리싱 추가, 수정</span><br />
+                                    <strong class="date">2022.06.17</strong><br />
+                                    <span>- 가이드 적용(에디터 화면 공통 적용)</span><br />
+                                    <strong class="date">2022.05.10</strong><br />
+                                    <span>- 추천스토리에 더보기 삭제</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>작성</td>
+                                <td></td>
+                                <td class="page">CCMO_STR_03</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/write.html" target="_blank">../pages/mobile/story/write.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.07.06</strong><br />
+                                    <span>- 컴포넌트 추가됐을 경우 퍼블리싱 화면 예시(일괄적용)</span><br />
+                                    <strong class="date">2022.06.17</strong><br />
+                                    <span>- 텍스트 수정</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>수정</td>
+                                <td></td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/update.html" target="_blank">../pages/mobile/story/update.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="date">2022.3.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr  class="cancel">
+                                <td rowspan="4">작가홈</td>
+                                <td>소개tab(empty case 포함)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/writerHome.html" target="_blank">../pages/mobile/story/writerHome.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.5.11</td>
+                                <td class="date">2022.5.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr class="cancel">
+                                <td>스토리tab(empty case 포함)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/writerHome02.html" target="_blank">../pages/mobile/story/writerHome02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.5.11</td>
+                                <td class="date">2022.5.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr class="cancel">
+                                <td>커뮤니티tab(empty case 포함)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/writerHome03.html" target="_blank">../pages/mobile/story/writerHome03.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.5.11</td>
+                                <td class="date">2022.5.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr class="cancel">
+                                <td>empty case</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/story/writerHome-empty.html" target="_blank">../pages/mobile/story/writerHome-empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.3.25</td>
+                                <td class="date">2022.3.25</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- // 02 스토리 -->
+                <!-- 03 커뮤니티 -->
+                <section class="progress-list" data-type="pc">
+                    <h2>03 커뮤니티</h2>
+                    <div class="utils">
+                        <p><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제, 기존</p>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 150px" />
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                            <col style="width: 150px" />
+                            <col style="width: 400px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>1depth</th>
+                                <th>2depth</th>
+                                <th>3depth</th>
+                                <th>PAGE ID</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>시작일</th>
+                                <th>완료일</th>
+                                <th>코딩</th>
+                                <th>수정이력</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="12">03 커뮤니티</td>
+                                <td rowspan="5">목록</td>
+                                <td>인기</td>
+                                <td class="page">CCMO_COM_01</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/community/main.html" target="_blank">../pages/mobile/community/main.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.22</td>
+                                <td class="date">2022.03.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>관심</td>
+                                <td class="page">CCMO_COM_01_S1</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/community/interest.html" target="_blank">../pages/mobile/community/interest.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.22</td>
+                                <td class="date">2022.03.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>일반</td>
+                                <td class="page">CCMO_COM_01_S2</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/community/general.html" target="_blank">../pages/mobile/community/general.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.22</td>
+                                <td class="date">2022.03.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.07.06</strong><br />
+                                    <span>- 퍼블리싱 수정</span><br />
+                                    <strong class="date">2022.04.27</strong><br />
+                                    <span>- intro-txt 위치 변경</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>등록된 게시물이 없습니다.(관심)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/community/interest_empty.html" target="_blank">../pages/mobile/community/interest_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>등록된 게시물이 없습니다.(일반)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/community/general_empty.html" target="_blank">../pages/mobile/community/general_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>상세</td>
+                                <td></td>
+                                <td class="page">CCMO_COM_02</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/community/detail.html" target="_blank">../pages/mobile/community/detail.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.06.17</strong><br />
+                                    <span>- 베스트댓글 마크업 추가 (댓글 포함된 화면 공통 적용)</span><br />
+                                    <span>- 댓글 정렬 추가 (댓글 포함된 화면 공통 적용)</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>작성</td>
+                                <td></td>
+                                <td class="page">CCMO_COM_03</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/community/write.html" target="_blank">../pages/mobile/community/write.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">공지사항</td>
+                                <td>상세</td>
+                                <td class="page">CCMO_COM_02</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/community/notice_detail.html" target="_blank">../pages/mobile/community/notice_detail.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>작성</td>
+                                <td class="page">CCMO_COM_04</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/community/notice_write.html" target="_blank">../pages/mobile/community/notice_write.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">관리자</td>
+                                <td>타게시판</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/community/admin_board.html" target="_blank">../pages/mobile/community/admin_board.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.22</td>
+                                <td class="date">2022.03.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>게시판 설정</td>
+                                <td class="page">CCMO_COM_03</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/community/board_setting.html" target="_blank">../pages/mobile/community/board_setting.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.22</td>
+                                <td class="date">2022.03.22</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.05.20</strong><br />
+                                    <span>게시판 커버항목 추가 및 위치 변경</span><br />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- // 03 커뮤니티 -->
+                <!-- 04 웰카페 -->
+                <section class="progress-list" data-type="pc">
+                    <h2>04 웰카페</h2>
+                    <div class="utils">
+                        <p><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제, 기존</p>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 150px" />
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                            <col style="width: 150px" />
+                            <col style="width: 400px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>1depth</th>
+                                <th>2depth</th>
+                                <th>3depth</th>
+                                <th>PAGE ID</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>시작일</th>
+                                <th>완료일</th>
+                                <th>코딩</th>
+                                <th>수정이력</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="9">04 웰카페</td>
+                                <td>설명+목록+검색</td>
+                                <td></td>
+                                <td class="page">CCPC_WEL_01</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/welcafe/main.html" target="_blank">../pages/mobile/welcafe/main.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.06</strong><br />
+                                    <span>fold부분 수정</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">상세</td>
+                                <td>지점안내</td>
+                                <td class="page">CCPC_WEL_02</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/welcafe/detail.html" target="_blank">../pages/mobile/welcafe/detail.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.27</strong><br />
+                                    <span>헤더 공유버튼으로 변경</span><br />
+                                    <strong class="date">2022.04.06</strong><br />
+                                    <span>subject-list 클래스 제거</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>커뮤니티</td>
+                                <td class="page">CCPC_WEL_02_T1</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/welcafe/detailCommunity.html" target="_blank">../pages/mobile/welcafe/detailCommunity.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.27</strong><br />
+                                    <span>헤더 공유버튼으로 변경</span><br />
+                                    <strong class="date">2022.04.06</strong><br />
+                                    <span>subject-list 클래스 제거</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>공지뷰</td>
+                                <td></td>
+                                <td class="page">CCPC_WEL_03</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/welcafe/notice.html" target="_blank">../pages/mobile/welcafe/notice.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.05.10</strong><br />
+                                    <span>- 해쉬태그 삭제</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>커뮤니티뷰</td>
+                                <td></td>
+                                <td class="page">CCPC_WEL_05</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/welcafe/community.html" target="_blank">../pages/mobile/welcafe/community.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>작성</td>
+                                <td></td>
+                                <td class="page">CCPC_WEL_06</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/welcafe/write.html" target="_blank">../pages/mobile/welcafe/write.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">관리자</td>
+                                <td>접속</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/welcafe/admin_board.html" target="_blank">../pages/mobile/welcafe/admin_board.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.06</strong><br />
+                                    <span>subject-list 클래스 제거</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>지점 설정</td>
+                                <td class="page">CCPC_WEL_07</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/welcafe/admin_setting.html" target="_blank">../pages/mobile/welcafe/admin_setting.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.06.17</strong><br />
+                                    <span>- 텍스트 수정</span><br />
+                                    <strong class="date">2022.04.06</strong><br />
+                                    <span>fold부분 수정</span><br />
+                                    <span>텍스트수정</span><br />
+                                    <span>.ico-label-wrap 추가</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>공지 작성</td>
+                                <td class="page">CCPC_WEL_08</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/welcafe/admin_write.html" target="_blank">../pages/mobile/welcafe/admin_write.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="date">2022.03.23</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- // 04 웰카페 -->
+                <!-- 05 이벤트 -->
+                <section class="progress-list" data-type="pc">
+                    <h2>05 이벤트</h2>
+                    <div class="utils">
+                        <p><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제, 기존</p>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 150px" />
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                            <col style="width: 150px" />
+                            <col style="width: 400px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>1depth</th>
+                                <th>2depth</th>
+                                <th>3depth</th>
+                                <th>PAGE ID</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>시작일</th>
+                                <th>완료일</th>
+                                <th>코딩</th>
+                                <th>수정이력</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="12">05 이벤트</td>
+                                <td rowspan="3">서브메인</td>
+                                <td></td>
+                                <td class="page">CCMO_EVT_01</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/submain.html" target="_blank">../pages/mobile/event/submain.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.22</strong><br />
+                                    <span>전체적인 마크업 수정</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>참여중인 챌린지 없음</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/no-event.html" target="_blank">../pages/mobile/event/no-event.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.22</strong><br />
+                                    <span>전체적인 마크업 수정</span><br />
+                                </td>
+                            </tr>
+                            <tr class="cancel">
+                                <td>비로그인</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/logout-event.html" target="_blank">../pages/mobile/event/logout-event.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">챌린지 상세(case1)</td>
+                                <td></td>
+                                <td class="page">CCMO_EVT_02</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/challenge-case1.html" target="_blank">../pages/mobile/event/challenge-case1.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>인기글 empty case</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/challenge-empty.html" target="_blank">../pages/mobile/event/challenge-empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>인증글 상세</td>
+                                <td class="page">CCMO_EVT_03</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/board-detail.html" target="_blank">../pages/mobile/event/board-detail.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>인증글 작성</td>
+                                <td class="page">CCMO_EVT_04</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/write.html" target="_blank">../pages/mobile/event/write.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>챌린지 상세(case2)</td>
+                                <td></td>
+                                <td class="page">CCMO_EVT_02_S1</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/challenge-case2.html" target="_blank">../pages/mobile/event/challenge-case2.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="date">2022.03.25</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.29</strong><br />
+                                    <span>인증 글 카운트 삭제</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>일반 이벤트 상세</td>
+                                <td></td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/event-detail.html" target="_blank">../pages/mobile/event/event-detail.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.05.10</td>
+                                <td class="date">2022.05.10</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">설문조사 상세</td>
+                                <td></td>
+                                <td class="page">CCMO_EVT_05</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/survey.html" target="_blank">../pages/mobile/event/survey.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>설문조사 결과 - 참여</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/survey-result1.html" target="_blank">../pages/mobile/event/survey-result1.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>설문조사 결과 - 미참여</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/event/survey-result2.html" target="_blank">../pages/mobile/event/survey-result2.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="date">2022.03.24</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- // 05 챌린지 -->
+                <!-- 06 마이페이지 -->
+                <section class="progress-list" data-type="pc">
+                    <h2>06 마이페이지</h2>
+                    <div class="utils">
+                        <p><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제, 기존</p>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 150px" />
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                            <col style="width: 150px" />
+                            <col style="width: 400px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>1depth</th>
+                                <th>2depth</th>
+                                <th>3depth</th>
+                                <th>PAGE ID</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>시작일</th>
+                                <th>완료일</th>
+                                <th>코딩</th>
+                                <th>수정이력</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="47">06 마이페이지</td>
+                                <td rowspan="20">나의활동</td>
+                                <td>메인</td>
+                                <td class="page">CCMO_MYP_01</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/main.html" target="_blank">../pages/mobile/mypage/main.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.07.06</strong><br />
+                                    <span>- 퍼블리싱 수정</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    스토리/내가 작성한 콘텐츠,<br>
+                                    스토리/스크랩한 콘텐츠
+                                </td>
+                                <td class="page">
+                                    CCMO_MYP_01_L1<br>
+                                    CCMO_MYP_01_L2
+                                </td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/story01.html" target="_blank">../pages/mobile/mypage/story01.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>스토리/콘텐츠 empty case</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/story01_empty.html" target="_blank">../pages/mobile/mypage/story01_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>스토리/최근 본 콘텐츠</td>
+                                <td class="page">CCMO_MYP_01_L3</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/story02.html" target="_blank">../pages/mobile/mypage/story02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>스토리/작성중인 콘텐츠</td>
+                                <td class="page">CCMO_MYP_01_L4</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/story03.html" target="_blank">../pages/mobile/mypage/story03.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>스토리/콘텐츠 승인조회-심사 중</td>
+                                <td class="page">CCMO_MYP_01_L5</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/story04.html" target="_blank">../pages/mobile/mypage/story04.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>스토리/콘텐츠 승인조회-대체 문구</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/story05.html" target="_blank">../pages/mobile/mypage/story05.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>스토리/콘텐츠 승인조회-반려</td>
+                                <td class="page">CCMO_MYP_01_L5_T1</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/story06.html" target="_blank">../pages/mobile/mypage/story06.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>커뮤니티/내가 작성한 게시글</td>
+                                <td class="page">CCMO_MYP_02_L1</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/community01.html" target="_blank">../pages/mobile/mypage/community01.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>커뮤니티/내가 작성한 게시글 empty case</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/community01_empty.html" target="_blank">../pages/mobile/mypage/community01_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>커뮤니티/스크랩 한 게시글</td>
+                                <td class="page">CCMO_MYP_02_L2</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/community02.html" target="_blank">../pages/mobile/mypage/community02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>커뮤니티/최근 본 게시글</td>
+                                <td class="page">CCMO_MYP_02_L3</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/community03.html" target="_blank">../pages/mobile/mypage/community03.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>커뮤니티/작성중인 게시글</td>
+                                <td class="page">CCMO_MYP_02_L4</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/community04.html" target="_blank">../pages/mobile/mypage/community04.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>웰카페/자주 찾는 웰카페</td>
+                                <td class="page">CCMO_MYP_03_L3</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/wellcafe01.html" target="_blank">../pages/mobile/mypage/wellcafe01.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>웰카페/자주 찾는 웰카페 empty case</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/wellcafe01_empty.html" target="_blank">../pages/mobile/mypage/wellcafe01_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>웰카페/내가 작성한 게시글</td>
+                                <td class="page">CCMO_MYP_03_L1</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/wellcafe02.html" target="_blank">../pages/mobile/mypage/wellcafe02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>웰카페/스크랩한 게시글</td>
+                                <td class="page">CCMO_MYP_03_L2</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/wellcafe03.html" target="_blank">../pages/mobile/mypage/wellcafe03.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>챌린지/참여 중인 챌린지</td>
+                                <td class="page">CCMO_MYP_04_L1</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/challenge01.html" target="_blank">../pages/mobile/mypage/challenge01.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>챌린지/참여 중인 챌린지 empty case</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/challenge01_empty.html" target="_blank">../pages/mobile/mypage/challenge01_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>챌린지/도전 종료 챌린지</td>
+                                <td class="page">CCMO_MYP_04_L2</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/challenge02.html" target="_blank">../pages/mobile/mypage/challenge02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="6">나의 웰라이프</td>
+                                <td>유저목록</td>
+                                <td class="page">
+                                    CCMO_MYP_05<br>
+                                    CCMO_MYP_05_T1
+                                </td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/userList.html" target="_blank">../pages/mobile/mypage/userList.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>마일리지</td>
+                                <td class="page">
+                                    CCMO_MYP_07
+                                </td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/mileage.html" target="_blank">../pages/mobile/mypage/mileage.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>기프티샵</td>
+                                <td class="page">
+                                    CCMO_MYP_08
+                                </td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/giftshop.html" target="_blank">../pages/mobile/mypage/giftshop.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>쿠폰함 사용가능</td>
+                                <td class="page">
+                                    CCMO_MYP_09
+                                </td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/coupon01.html" target="_blank">../pages/mobile/mypage/coupon01.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.05.20</strong><br />
+                                    <span>탭 삭제(보유중인 쿠폰만 보이도록함)</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>쿠폰함 empty case</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/coupon01_empty.html" target="_blank">../pages/mobile/mypage/coupon01_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.05.20</strong><br />
+                                    <span>탭 삭제(보유중인 쿠폰만 보이도록함)</span><br />
+                                </td>
+                            </tr>
+                            <tr class="cancel">
+                                <td>쿠폰함 사용완료</td>
+                                <td class="page">CCMO_MYP_09_T1</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/coupon02.html" target="_blank">../pages/mobile/mypage/coupon02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="16">나의 정보</td>
+                                <td>회원정보 진입화면</td>
+                                <td class="page">CCMO_MYP_10</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/userInfo01.html" target="_blank">../pages/mobile/mypage/userInfo01.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.03.31</td>
+                                <td class="date">2022.03.31</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>회원정보 수정</td>
+                                <td class="page">CCMO_MYP_10</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/userInfo01_update.html" target="_blank">../pages/mobile/mypage/userInfo01_update.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.28</td>
+                                <td class="date">2022.04.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>탈퇴안내</td>
+                                <td class="page">CCMO_MYP_13</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/userInfo02.html" target="_blank">../pages/mobile/mypage/userInfo02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.28</td>
+                                <td class="date">2022.04.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.06.13</strong><br />
+                                    <span>내용수정</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호 변경</td>
+                                <td class="page">CCMO_MYP_15</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/password01.html" target="_blank">../pages/mobile/mypage/password01.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>세라체크 진입화면</td>
+                                <td class="page">CCMO_MYP_15</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/ceracheck01.html" target="_blank">../pages/mobile/mypage/ceracheck01.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>세라체크 히스토리</td>
+                                <td class="page">CCMO_MYP_16<br>CCMO_MYP_16_T1</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/ceracheck02.html" target="_blank">../pages/mobile/mypage/ceracheck02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.05.10</strong><br />
+                                    <span>ty02 클래스 추가</span><br />
+                                    <strong class="date">2022.05.10</strong><br />
+                                    <span>차트 슬라이드로 수정</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>세라체크 히스토리 empty-case</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/ceracheck02_empty.html" target="_blank">../pages/mobile/mypage/ceracheck02_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>세라체크 검사목록</td>
+                                <td class="page">CCMO_MYP_17</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/ceracheck03.html" target="_blank">../pages/mobile/mypage/ceracheck03.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>세라체크 검사목록 empty case</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/ceracheck03_empty.html" target="_blank">../pages/mobile/mypage/ceracheck03_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>세라체크 검사리포트</td>
+                                <td class="page">CCMO_MYP_18</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/ceracheck04.html" target="_blank">../pages/mobile/mypage/ceracheck04.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>세라체크 검사리포트 empty case</td>
+                                <td class="page">CCMO_MYP_18</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/ceracheck04_empty.html" target="_blank">../pages/mobile/mypage/ceracheck04_empty.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>세라체크 검사결과 상세</td>
+                                <td class="page">CCMO_MYP_19</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/ceracheck05.html" target="_blank">../pages/mobile/mypage/ceracheck05.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>세라체크 DNA 검사 리포트</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/ceracheck06.html" target="_blank">../pages/mobile/mypage/ceracheck06.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.05.20</td>
+                                <td class="date">2022.05.20</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1:1 문의 목록</td>
+                                <td class="page">CCMO_MYP_21</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/contact01.html" target="_blank">../pages/mobile/mypage/contact01.html</a>
+                                </td>
+                                <td class="name">박서연</td>
+                                <td class="date">2022.03.31</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1:1 문의 상세</td>
+                                <td class="page">CCMO_MYP_22</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/contact02.html" target="_blank">../pages/mobile/mypage/contact02.html</a>
+                                </td>
+                                <td class="name">박서연</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="date">2022.04.01</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1:1 문의 작성</td>
+                                <td class="page">CCMO_MYP_23</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/contact-write.html" target="_blank">../pages/mobile/etc/contact-write.html</a>
+                                </td>
+                                <td class="name">박서연</td>
+                                <td class="date">2022.03.31</td>
+                                <td class="date">2022.03.31</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="5">유저홈</td>
+                                <td>소개tab(empty case포함)</td>
+                                <td class="page">
+                                    CCMO_USR_01
+                                </td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/userHome01.html" target="_blank">../pages/mobile/mypage/userHome01.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.05.11</td>
+                                <td class="date">2022.05.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.07.06</strong><br />
+                                    <span>- 커버 이미지 첨부 안했을 시 box-bg 앨리먼트 hide</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>스토리tab(empty case포함)</td>
+                                <td class="page">
+                                    CCMO_USR_01_T1
+                                </td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/userHome01_02.html" target="_blank">../pages/mobile/mypage/userHome01_02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.05.11</td>
+                                <td class="date">2022.05.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>커뮤니티tab(empty case포함)</td>
+                                <td class="page">
+                                    CCMO_USR_01_T2
+                                </td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/userHome01_03.html" target="_blank">../pages/mobile/mypage/userHome01_03.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.05.11</td>
+                                <td class="date">2022.05.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr class="cancel">
+                                <td>empty case</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/userHome01_empty.html" target="_blank">../pages/mobile/mypage/userHome01_empty.html</a>
+                                </td>
+                                <td class="name">박서연</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>마이홈 설정</td>
+                                <td class="page">CCMO_USR_02</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/mypage/userHome02.html" target="_blank">../pages/mobile/mypage/userHome02.html</a>
+                                </td>
+                                <td class="name">박서연</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="date">2022.03.31</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.07.06</strong><br />
+                                    <span>- 퍼블리싱 수정</span><br />
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </section>
+                <!-- // 06 마이페이지 -->
+                <!-- 07 회원/로그인 -->
+                <section class="progress-list" data-type="pc">
+                    <h2>07 회원/로그인</h2>
+                    <div class="utils">
+                        <p><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제, 기존</p>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 150px" />
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                            <col style="width: 150px" />
+                            <col style="width: 400px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>1depth</th>
+                                <th>2depth</th>
+                                <th>3depth</th>
+                                <th>PAGE ID</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>시작일</th>
+                                <th>완료일</th>
+                                <th>코딩</th>
+                                <th>수정이력</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="26">07 회원/로그인</td>
+                                <td rowspan="7">SNS 로그인 & 회원가입</td>
+                                <td>SNS 로그인</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/login02.html" target="_blank">../pages/mobile/login/login02.html</a>
+                                </td>
+                                <td class="name">박서연</td>
+                                <td class="date">2022.03.11</td>
+                                <td class="date">2022.03.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>약관동의</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/agree.html" target="_blank">../pages/mobile/login/agree.html</a>
+                                </td>
+                                <td class="name">박서연</td>
+                                <td class="date">2022.03.11</td>
+                                <td class="date">2022.03.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.06.02</strong><br />
+                                    <span>요소 수정 및 추가</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SNS 가입 case1 (이미 가입한 회원)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/add_login.html" target="_blank">../pages/mobile/login/add_login.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SNS 가입 case2</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/add_login02.html" target="_blank">../pages/mobile/login/add_login02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>회원가입</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/join.html" target="_blank">../pages/mobile/login/join.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.06.02</strong><br />
+                                    <span>추천인아이디 입력필드 추가</span>
+                                    <strong class="date">2022.04.21</strong><br />
+                                    <span>- id 입력 필드 추가</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>회원가입 - 관심 키워드 설정</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/join02.html" target="_blank">../pages/mobile/login/join02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>회원가입 완료</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/complete.html" target="_blank">../pages/mobile/login/complete.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.21</strong><br />
+                                    <span>- 헤더추가</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">아이디 로그인</td>
+                                <td>SNS 로그인</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/login02.html" target="_blank">../pages/mobile/login/login02.html</a>
+                                </td>
+                                <td class="name">박서연</td>
+                                <td class="date">2022.03.11</td>
+                                <td class="date">2022.03.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/login01.html" target="_blank">../pages/mobile/login/login01.html</a>
+                                </td>
+                                <td class="name">박서연</td>
+                                <td class="date">2022.03.11</td>
+                                <td class="date">2022.03.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">아이디 회원가입</td>
+                                <td>약관동의</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/agree.html" target="_blank">../pages/mobile/login/agree.html</a>
+                                </td>
+                                <td class="name">박서연</td>
+                                <td class="date">2022.03.11</td>
+                                <td class="date">2022.03.11</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.06.02</strong><br />
+                                    <span>요소 수정 및 추가</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>이미 회원가입한 회원</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/add_login03.html" target="_blank">../pages/mobile/login/add_login03.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.21</strong><br />
+                                    <span>- 헤더추가</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>회원가입</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/join03.html" target="_blank">../pages/mobile/login/join03.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">기존 맴버십 회원 최초 로그인</td>
+                                <td>약관동의</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/agree.html" target="_blank">../pages/mobile/login/agree.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.06.02</strong><br />
+                                    <span>요소 수정 및 추가</span><br />
+                                    <strong class="date">2022.04.21</strong><br />
+                                    <span>- 텍스트 수정</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>정보 이전 완료</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/info.html" target="_blank">../pages/mobile/login/info.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">휴면회원</td>
+                                <td>SNS 로그인</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/login02.html" target="_blank">../pages/mobile/login/login02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>휴면회원</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/dormant.html" target="_blank">../pages/mobile/login/dormant.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">비밀번호 장기 미변경 케이스</td>
+                                <td>비밀번호 장기 미변경</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/unchanged.html" target="_blank">../pages/mobile/login/unchanged.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date">2022.04.29</strong><br />
+                                    <span>ty02 클래스 추가</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호 변경 성공</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/pw_complete.html" target="_blank">../pages/mobile/login/pw_complete.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">아이디 찾기</td>
+                                <td></td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/find_id.html" target="_blank">../pages/mobile/login/find_id.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>아이디 찾기 결과</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/find_id_result.html" target="_blank">../pages/mobile/login/find_id_result.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>결과 없음</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/noMember.html" target="_blank">../pages/mobile/login/noMember.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="5">비밀번호 재설정</td>
+                                <td></td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/pw_change.html" target="_blank">../pages/mobile/login/pw_change.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호 변경</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/pw_change02.html" target="_blank">../pages/mobile/login/pw_change02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호 변경 성공</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/pw_complete.html" target="_blank">../pages/mobile/login/pw_complete.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호 재설정 결과</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/login/pw_change_result.html" target="_blank">../pages/mobile/login/pw_change_result.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="date">2022.04.12</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </section>
+                <!-- // 07 회원/로그인 -->
+                <!-- 08 검색 / Alert / Error -->
+                <section class="progress-list" data-type="pc">
+                    <h2>08 검색 / Alert / Error</h2>
+                    <div class="utils">
+                        <p><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제, 기존</p>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 150px" />
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                            <col style="width: 150px" />
+                            <col style="width: 400px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>1depth</th>
+                                <th>2depth</th>
+                                <th>3depth</th>
+                                <th>PAGE ID</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>시작일</th>
+                                <th>완료일</th>
+                                <th>코딩</th>
+                                <th>수정이력</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="5">08 검색 / Alert / Error</td>
+                                <td rowspan="2">검색/통합검색</td>
+                                <td>최근검색어</td>
+                                <td class="page">CCPC_SEC_01</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/search/search.html" target="_blank">../pages/mobile/search/search.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td >자동완성</td>
+                                <td class="page">CCPC_SEC_02</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/search/search_autocomplete.html" target="_blank">../pages/mobile/search/search_autocomplete.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="date">2022.03.30</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">검색/검색결과</td>
+                                <td >전체결과</td>
+                                <td class="page">CCPC_SEC_02</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/search/search_result.html" target="_blank">../pages/mobile/search/search_result.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td >결과 없음</td>
+                                <td class="page">CCPC_SEC_02</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/search/search_empty.html" target="_blank">../pages/mobile/search/search_empty.html</a>
+                                </td>
+                                <td class="name">강성순</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- // 08 검색 / Alert / Error -->
+
+                <!-- 01 Footer -->
+                <section class="progress-list" data-type="pc">
+                    <h2>01 Footer / 유틸리티 / 고객센터</h2>
+                    <div class="utils">
+                        <p><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제, 기존</p>
+                    </div>
+                    <!-- data-table small -->
+                    <table class="data-table wsg">
+                        <colgroup>
+                            <col style="width: 150px" />
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                            <col style="width: 150px" />
+                            <col style="width: 400px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>1depth</th>
+                                <th>2depth</th>
+                                <th>3depth</th>
+                                <th>PAGE ID</th>
+                                <th>URL</th>
+                                <th>담당자</th>
+                                <th>시작일</th>
+                                <th>완료일</th>
+                                <th>코딩</th>
+                                <th>수정이력</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="12">01 Footer</td>
+                                <td rowspan="5">고객센터</td>
+                                <td></td>
+                                <td class="page">CCMO_CSC_01</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/customer-main.html" target="_blank">../pages/mobile/etc/customer-main.html</a>
+                                </td>
+                                <td class="name">조현준</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>공지사항/목록</td>
+                                <td class="page">CCMO_CSC_02</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/notice-list.html" target="_blank">../pages/mobile/etc/notice-list.html</a>
+                                </td>
+                                <td class="name">조현준</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>공지사항/상세</td>
+                                <td class="page">CCMO_CSC_03</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/notice-view.html" target="_blank">../pages/mobile/etc/notice-view.html</a>
+                                </td>
+                                <td class="name">조현준</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>FAQ/목록</td>
+                                <td class="page">CCMO_CSC_04</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/faq-list.html" target="_blank">../pages/mobile/etc/faq-list.html</a>
+                                </td>
+                                <td class="name">조현준</td>
+                                <td class="date">2022.03.28</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1:1문의/작성</td>
+                                <td class="page">CCMO_MYP_23</td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/contact-write.html" target="_blank">../pages/mobile/etc/contact-write.html</a>
+                                </td>
+                                <td class="name">조현준</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="date">2022.03.29</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="6">이용약관전문</td>
+                                <td>개인정보수집 및 이용동의 (풀팝업)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/terms01.html" target="_blank">../pages/mobile/etc/terms01.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>개인정보처리방침 (풀팝업)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/terms02.html" target="_blank">../pages/mobile/etc/terms02.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>개인정보처리방침 (페이지)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/terms03.html" target="_blank">../pages/mobile/etc/terms03.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>마케팅활용 및 광고성 정보수신동의 (풀팝업)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/terms04.html" target="_blank">../pages/mobile/etc/terms04.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>통합 멤버십 이용약관 (풀팝업)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/terms05.html" target="_blank">../pages/mobile/etc/terms05.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>통합 멤버십 이용약관 (페이지)</td>
+                                <td class="page"></td>
+                                <td class="url">
+                                    <a href="../pages/mobile/etc/terms06.html" target="_blank">../pages/mobile/etc/terms06.html</a>
+                                </td>
+                                <td class="name">서도하</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="date">2022.07.04</td>
+                                <td class="state">완료</td>
+                                <td class="history">
+                                    <!-- 수정사항은 최신날짜가 위로 가도록 -->
+                                    <strong class="date"></strong><br />
+                                    <span></span><br />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- // 01 Footer -->
+
+                <!-- // 마크업리스트 -->
+            </section>
+            <!-- //contentPrimary -->
+        </div>
+        <!-- //container -->
+    </div>
+</body>
+</html>
+<script>
+
+</script>

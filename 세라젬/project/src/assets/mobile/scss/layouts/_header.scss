@@ -1,0 +1,42 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _header.scss
+* @Description : header 스타일
+* @Create Date: 2022-03-11
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+    padding-top: var(--safe-top);
+    background-color: #fff;
+
+    .inner-wrap {
+        display: flex;
+        height: 6rem;
+        align-items: center;
+        justify-content: space-between;
+
+        // logo
+        .logo {
+            // margin: -0.4rem 0 0 0;
+            a {
+                @include iconBtn('../images/common/logo.svg');
+                display: block;
+                width: 14rem;
+                height: 3.5rem;
+                font-size: 0;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            & > * ~ * {margin-left: 1.6rem;}
+        }
+    }
+}

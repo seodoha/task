@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="mypage" class="container-wrap bg-gray mypage">
+                    <div class="page-layout-header">
+                        @@include('./pages/web/include/mypageInfo.html')
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <aside class="inner-left">
+                                @@include('./pages/web/include/aside.html')
+                            </aside>
+                            <div class="inner-right">
+                                <div class="box-section ceracheck-report">
+                                    <div class="box-section-head">
+                                        <h3>세라체크 검사 리포트</h3>
+                                        <p class="date">2021년 09월 15일 12시 50분</p>
+                                    </div>
+                                    <dl class="ceracheck-report-list">
+                                        <!-- 2022.04.01 아이콘 추가 및 결과추가 -->
+                                        <div class="report">
+                                            <dt class="font-card-tit03">멘탈헬스</dt>
+                                            <dd class="report-mental-health">
+                                                <div class="box-default">
+                                                    <h5 class="font-card-tit04 ico"><span class="ico-mental"></span>멘탈헬스 스코어</h5>
+                                                    <!--차트영역-->
+                                                </div>
+                                                <div class="box-default">
+                                                    <h5 class="font-card-tit04 ico"><span class="ico-nervous-system"></span>신경계 나이 </h5>
+                                                    <!--차트영역-->
+                                                </div>
+                                            </dd>
+                                        </div>
+                                        <div class="report">
+                                            <dt class="font-card-tit03">바디헬스</dt>
+                                            <dd class="report-body-health">
+                                                <div class="box-default">
+                                                    <h5 class="font-card-tit04 ico"><span class="ico-blood-pressure"></span>혈압 & 맥압</h5>
+                                                    <div class="health-result">
+                                                        <div>
+                                                            <span class="type">수축</span>
+                                                            <strong class="result warning">경고</strong>
+                                                            <span class="amount">(140 mmHg)</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="type">이완</span>
+                                                            <strong class="result danger">위험</strong>
+                                                            <span class="amount">(100 mmHg)</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="type">맥압</span>
+                                                            <strong class="result">적정</strong>
+                                                            <span class="amount">(40 mmHg)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-default">
+                                                    <h5 class="font-card-tit04 ico"><span class="ico-blood-sugar"></span>혈당</h5>
+                                                    <div class="health-result">
+                                                        <div>
+                                                            <span class="type">식후2시간</span>
+                                                            <strong class="result">정상</strong>
+                                                            <span class="amount">(110 mg/dL)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-default">
+                                                    <h5 class="font-card-tit04 ico"><span class="ico-dashboard"></span>BMI</h5>
+                                                    <div class="health-result">
+                                                        <div>
+                                                            <strong class="result">정상</strong>
+                                                            <span class="amount">(20.8 kg/m2)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-default">
+                                                    <h5 class="font-card-tit04 ico"><span class="ico-size"></span>복부둘레</h5>
+                                                    <div class="health-result">
+                                                        <div>
+                                                            <strong class="result">정상</strong>
+                                                            <span class="amount">(80.0 cm)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-default">
+                                                    <h5 class="font-card-tit04 ico"><span class="ico-muscle"></span>체지방률 & 근육량</h5>
+                                                    <div class="health-result ty02">
+                                                        <div>
+                                                            <span class="type">체지방</span>
+                                                            <strong class="result">표준</strong>
+                                                            <span class="amount">(25.0 %)</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="type">근육</span>
+                                                            <strong class="result">표준</strong>
+                                                            <span class="amount">(20.0 kg)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                    <!-- 2022.04.01 이전버튼추가 -->
+                                    <div class="box-btn">
+                                        <button class="timeline-more md-ripples">이전</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

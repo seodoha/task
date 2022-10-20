@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="sub-page-header">
+                <div class="left">
+                    <button class="ico-back">뒤로가기</button>
+                </div>
+                <div class="right">
+                    <button class="btn-xs btn-black" disabled>등록</button>
+                    <!-- <button class="btn-xs btn-black">등록</button> -->
+                </div>
+            </div>
+
+            <div id="container">
+                <section id="event" class="container-wrap">
+                    <div class="layout-write-wrap">
+                        <div class="write-header">
+                            <div class="inner-wrap">
+                                <div class="box-board-head">
+                                    <div class="type-select">
+                                        <span class="notice-tit">부모님께 문자 보내기</span>
+                                    </div>
+                                    <input type="text" class="main-tit" title="제목 입력" placeholder="제목을 입력하세요">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="write-contents">
+                            <div class="inner-wrap">
+                                <!--에디터영역-->
+                                <div class="box-edit-wrap">
+                                    <!--블록단위별 스타일 퍼블리싱-->
+                                    <!--
+                                        블록 추가 시 'module-container' 클래스가 붙은 div 추가
+                                            + 영상 블록 추가 시 'video-module' 클래스 추가
+                                            + 이미지 블록 추가 시 'img-module' 클래스 추가
+                                            + 지도 블록 추가 시 'map-module' 클래스 추가
+                                            + 투표 블록 추가 시 'vote-module' 클래스 추가
+                                    -->
+
+                                    <div class="edit-input-textarea">
+                                        <textarea placeholder="본문을 입력하세요."></textarea>
+                                    </div>
+
+                                </div>
+                                <!--태그 입력-->
+                                <div class="chips-wrap edit-chips">
+                                    <div class="chips-editable">
+                                        <div class="edit-input-wrap">
+                                            <span class="input-hashtag">#</span>
+                                            <input type="text" class="chip-edit" placeholder="태그입력">
+                                        </div>
+                                        <div id="input-width-calc">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/mobile/include/writeBottom.html')
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

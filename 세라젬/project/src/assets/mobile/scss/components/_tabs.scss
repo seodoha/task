@@ -1,0 +1,147 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _tab.scss
+* @Description : tab 컴포넌트
+* @Create Date: 2022-03-11
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+.tab-wrap {
+    position: relative;
+    &.subject-list {
+        .tab-list {border-bottom: 0;}
+    }
+    .tab-list{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        overflow-x: auto;
+        @include noScrollBar;
+        &.active{
+            flex-wrap: wrap;
+            padding-right: 2rem !important;
+            & + .btn-tab-wrap .btn-tab{
+                transform: rotate(180deg);
+            }
+        }
+        &-round{
+            gap: 1.2rem 0.4rem;
+            li{
+                a, button{
+                    padding: 0.8rem 1.4rem;
+                    font-size: 1.6rem;
+                    line-height: 1.2;
+                    color: #444;
+                    background-color: #fff;
+                    border-radius: 10rem;
+                    white-space: nowrap;
+                    &.on{
+                        background-color: $black;
+                        color: #fff;
+                        font-weight: 700;
+                    }
+                    &.ico-plus {
+                        width: 4.3rem;
+                        height: 4.3rem;
+                        background-size: auto;
+                        background-color: #f8f8f8;
+                    }
+                }
+            }
+        }
+        &-line{
+            border-bottom: 1px solid #e5e5e5;
+            li{
+                a, button{
+                    position: relative;
+                    padding: 1rem 0;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    line-height: 1.5;
+                    color: #aaa;
+                    white-space: nowrap;
+                    &.on{
+                        color: $black;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 2px;
+                            background-color: $black;
+                        }
+                    }
+                }
+                &:nth-of-type(n+1){
+                    margin-right: 2.4rem;
+                }
+            }
+        }
+        &.isScroll {padding-right: 6rem;}
+        &.hasScroll li {
+            flex-shrink: 0;
+        }
+    }
+    .tab-content {
+        padding: 4rem 0 0;
+    }
+    &.tab-ctrl {
+        .tab-content {
+            & > * {display: none;}
+            [aria-hidden="false"] {display: block;}
+        }
+    }
+    .btn-tab-wrap{
+        display: none;
+        position: absolute;
+        right: 2rem;
+        top: 0;
+        &::before{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 3.5rem;
+            width: 5rem;
+            height: 3.5rem;
+            background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        .btn-tab{
+            background-color: #fff;
+            width: 3.5rem;
+            height: 3.5rem;
+            background-size: 2.4rem 2.4rem;
+            border-radius: 0;
+            transition: transform 0.3s;
+            transform-origin: center;
+            overflow: visible;
+        }
+    }
+
+    // sticky
+    &.sticky-header {
+        position: sticky;
+        top: 6rem;
+        z-index: 10;
+        padding: 0 2rem 1rem;
+        background-color: #fff;
+        font-size: 0;
+        .tab-list {
+            li a {
+                &.on em {
+                    color: #fff;
+                }
+                em {
+                    display: none;
+                    font-weight: 700;
+                    color: #aaa;
+                }
+            }
+        }
+    }
+}

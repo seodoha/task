@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+            pageTitle : '세라젬'
+        })
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="login" class="container-wrap">
+                    <div class="login-layout">
+                        <div class="box-lottie">
+                            <div id="icon-lottie06" class="lottie"></div>
+                        </div>
+                        <h5 class="font-heading05">정보 이전을 완료했습니다.</h5>
+                        <p class="detail-txt">
+                            건강한 커뮤니티 생활!<br>
+                            시작할 준비 되셨나요?
+                        </p>
+                        <div class="box-btn btn-footer">
+                            <button class="btn-large btn-black md-ripples ripples-light">메인으로</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

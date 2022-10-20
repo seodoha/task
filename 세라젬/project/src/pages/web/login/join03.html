@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+            pageTitle : '세라젬'
+        })
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="login" class="container-wrap">
+                    <div class="login-layout">
+                        <div class="form-header">
+                            <div class="font-card-tit01">회원가입</div>
+                            <div class="sub-tit">
+                                정보를 입력해주세요
+                            </div>
+                        </div>
+                        <div class="text-input-wrap ty02 isBtn">
+                            <div class="box-input">
+                                <label>
+                                    <input type="text" placeholder="아이디 입력">
+                                    <span class="placeholder">아이디</span>
+                                    <button class="btn-xs btn-action btn-black">중복 확인</button>
+                                </label>
+                            </div>
+                            <strong class="normal-txt">사용가능한 닉네임입니다.</strong>
+                            <!--에러메세지-->
+                            <!-- <strong class="normal-txt error-txt">에러가 났습니다.</strong> -->
+                        </div>
+                        <div class="text-input-wrap ty02 isVali">
+                            <div class="box-input">
+                                <label>
+                                    <input type="password" placeholder="비밀번호">
+                                    <span class="placeholder">비밀번호</span>
+                                    <button class="ico-search-delete">삭제</button>
+                                </label>
+                            </div>
+                            <!--에러메세지-->
+                            <strong class="normal-txt error-txt">비밀번호에 3자리 이상의 연속된 숫자를 사용할 수 없습니다.</strong>
+                            <ul class="list-validation">
+                                <li>
+                                    <label class="validation-checkbox">
+                                        <input type="checkbox" name="sortType" id="newTy" disabled="disabled" checked="">
+                                        <span class="txt">영문포함</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="validation-checkbox">
+                                        <input type="checkbox" name="sortType" id="recomTy" disabled="disabled">
+                                        <span class="txt">숫자포함</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="validation-checkbox">
+                                        <input type="checkbox" name="sortType" id="viewTy" disabled="disabled">
+                                        <span class="txt">특수문자포함</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="validation-checkbox">
+                                        <input type="checkbox" name="sortType" id="viewTy" disabled="disabled">
+                                        <span class="txt">8자-20자</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-input-wrap ty02 isVali">
+                            <div class="box-input">
+                                <label>
+                                    <input type="password" placeholder="비밀번호 확인">
+                                    <span class="placeholder">비밀번호 확인</span>
+                                    <button class="ico-search-delete">삭제</button>
+                                </label>
+                            </div>
+                            <!--에러메세지-->
+                            <strong class="normal-txt error-txt">비밀번호에 3자리 이상의 연속된 숫자를 사용할 수 없습니다.</strong>
+                            <ul class="list-validation">
+                                <li>
+                                    <label class="validation-checkbox">
+                                        <input type="checkbox" name="sortType" id="newTy" disabled="disabled" checked="">
+                                        <span class="txt">비밀번호 일치</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box-btn btn-footer">
+                            <!-- 비활성화시 -->
+                            <a href="#" class="btn-large btn-disable">다음</a>
+                            <!-- 활성화 시 -->
+                            <!-- <a href="#" class="btn-large btn-black md-ripples ripples-light">다음</a> -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

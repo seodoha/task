@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/mobile/include/header.html')
+            <div id="container" class="bg-gray isWriteBtn">
+                <section id="event" class="container-wrap challenge">
+                    <div class="page-layout-contents ty03">
+                        <div class="box-event" style="background-color: #5956E9;"> <!--배경색 관리자에서 삽입-->
+                            <div class="box-event-view">
+                                <button class="ico-share-white">공유하기</button>
+                                <div class="box-img">
+                                    <!--이미지 관리자에서 삽입-->
+                                    <img src="../../../assets/mobile/images/banner/challenge01.png" alt="">
+                                </div>
+                                <div class="layout-detail-view">
+                                    <span class="font-card-tit01">함께 챌린지에 <br>참여하고 있어요!</span>
+                                    <div class="box-number-wrap">
+                                        <div>
+                                            <span class="num-tit">현재 참여 인원</span>
+                                            <div><strong>183</strong>명</div>
+                                        </div>
+                                        <div>
+                                            <span class="num-tit">인증 글</span>
+                                            <div><strong>981</strong>개</div>
+                                        </div>
+                                    </div>
+                                    <!-- 참여 전 버튼 -->
+                                    <button class="btn-large btn-black md-ripples ripples-light">챌린지 참여하기</button>
+                                    <!-- 참여 후 버튼 -->
+                                    <!-- <button class="btn-large btn-black md-ripples ripples-light">오늘 인증하기</button> -->
+                                </div>
+                                <div class="layout-detail-view">
+                                    <span class="font-card-tit01">내 인증 현황</span>
+                                    <ul class="box-stamp">
+                                        <!-- 완료 시 complete 클래스 추가 -->
+                                        <li class="stamp-list complete">
+                                            <span>1회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>2회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>3회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>4회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>5회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>6회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>7회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>8회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>9회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>10회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>11회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>12회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>13회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>14회</span>
+                                        </li>
+                                        <li class="stamp-list">
+                                            <span>15회</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h2 class="font-heading02">참여 방법</h2>
+                                <ol class="block-list">
+                                    <li>
+                                        <span class="list-num">1</span>
+                                        <span>부모님께 <strong>문자, 카톡</strong>보내주세요.</span>
+                                    </li>
+                                    <li>
+                                        <span class="list-num">2</span>
+                                        <span>인증 게시판에 내용을 <strong>캡쳐</strong>해서 올려주세요.</span>
+                                    </li>
+                                    <li>
+                                        <span class="list-num">3</span>
+                                        <span><strong>1일 최대 1회 참여</strong> 인정되며 <strong>15회 이상</strong> 참여 시 챌린지 성공!</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="box-layout-contents ty03">
+                            <h2 class="ly-cnts-tit ty02">🙌 챌린지 인기글 게시판</h2>
+                            <div class="ly-cnts-info ty02">
+                                <div class="box-noresult">
+                                    <div class="box-lottie">
+                                        <div id="not-challenge" class="lottie"></div>
+                                    </div>
+                                    <strong class="empty-tit">
+                                        아직 작성된 글이 없어요.
+                                    </strong>
+                                    <p class="detail-txt">
+                                        <span>신민아님,</span>1등으로 챌린지 <br>인증글을 남겨보세요!
+                                    </p>
+                                    <div class="box-btn">
+                                        <a href="#" class="btn-md btn-black md-ripples ripples-light">글쓰기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/mobile/include/bottomNavi.html')
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

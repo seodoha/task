@@ -1,0 +1,283 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _header.scss
+* @Description : header 스타일
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    min-width: 1024px;
+    width: 100%;
+    background-color: #fff;
+    // transition: all 0.3s ease;
+    // 스크롤 시 border bottom
+    &.scrolling {border-bottom: 1px solid #f8f8f8;}
+
+    .inner-wrap {
+        display: flex;
+        height: 9rem;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            // logo
+            .logo {
+                margin: -0.4rem 8rem 0 0;
+                a {
+                    @include iconBtn('../images/common/logo.svg');
+                    display: block;
+                    width: 16rem;
+                    height: 4rem;
+                    font-size: 0;
+                    transition: none !important;
+                }
+            }
+
+            // 1depth menu
+            .home-menu {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    li {
+                        & ~ li {margin-left: 4.5rem;}
+                        & > * {
+                            &.on {color: $black;}
+                            font-size: 2rem;
+                            font-weight: 700;
+                            line-height: 1.2;
+                            color: #999;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+
+            // Header Search
+            .box-hd-sch {
+                position: relative;
+                margin-right: 2.5rem;
+                .box-sch-input {
+                    position: relative;
+                    input[type="text"] {
+                        width: 25.5rem;
+                        height: 4rem ;
+                        padding: 0 2rem 0 4.3rem;
+                        background-color: #f8f8f8;
+                        border-radius: 90rem;
+                        font-size: 1.4rem;
+                        transition: width 0.3s;
+                        &::placeholder {
+                            color: #aaa;
+                        }
+                        &.isFocus {width: 34rem;}
+                    }
+                    button {
+                        position: absolute;
+                        left: 1.5rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        &.ico-search-delete{
+                            display: none;
+                            left: auto;
+                            right: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            // my
+            .box-my {
+                position: relative;
+                margin-right: 2rem;
+                font-size: 0;
+                .btn-profile {
+                    &.default {
+                        &::after {display: none;}
+                        width: 3.6rem;
+                        padding: 0;
+                        @include backgroundImg('../images/common/default_profile.svg', center, contain);
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        margin-top: -0.8rem;
+                        transition: all 0.3s;
+                        @include backgroundImg('../images/icon/ico-arr.svg', center, contain);
+                    }
+                    position: relative;
+                    width: 5.6rem;
+                    height: 3.6rem;
+                    border-radius: 2rem;
+                    font-size: 0;
+                    span {
+                        display: block;
+                        position: relative;
+                        width: 3.6rem;
+                        height: 3.6rem;
+                        border-radius: 1.5rem;
+                        font-size: 0;
+                        overflow: hidden;
+                        img {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%,-50%);
+                            width: 100%;
+                        }
+                    }
+                }
+                .box-profile {
+                    position: absolute;
+                    top: 5.1rem;
+                    right: 0;
+                    width: 16rem;
+                    height: 17rem;
+                    padding: 2rem;
+                    background-color: #fff;
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+                    border-radius: 10px;
+                    transition: all 0.3s;
+                    opacity: 0;
+                    visibility: hidden;
+                    dl {
+                        dt{
+                            margin-bottom: 1.5rem;
+                            a {
+                                font-size: 1.4rem;
+                                font-weight: 700;
+                                line-height: 1.5;
+                            }
+                        }
+                        dd {
+                            & ~ dd {margin-top: 1rem;}
+                            a {
+                                font-size: 1.4rem;
+                                line-height: 1.5;
+                            }
+                        }
+                    }
+                }
+                &:hover .box-profile {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+// 메인 페이지 헤더 스타일
+#wrap.main-wrap {
+    header {
+        &.scrolling {
+            border-bottom: 0;
+
+            .inner-wrap .left .logo{
+                a{@include iconBtn('../images/common/logo.svg');}
+            }
+            background-color: #fff;
+            .inner-wrap{
+                .left{
+                    .home-menu{
+                        ul{
+                            li{
+                                a{
+                                    color: #999;
+                                    &.on{color: $black;}
+                                }
+                            }
+                        }
+                    }
+                }
+                .right{
+                    span{
+                        background-color: $black;
+                        &::after,&::before{background-color: $black;}
+                    }
+                    .btn-profile{
+                        span {background-color: transparent;}
+                        &::after {background-image: url(../images/icon/ico-arr.svg);}
+                    }
+                }
+            }
+        }
+        .inner-wrap .left .logo{
+            a{@include iconBtn('../images/common/logo-white.svg');}
+        }
+        background-color: transparent;
+        .inner-wrap{
+            .left{
+                .home-menu{
+                    ul{
+                        li{
+                            a{
+                                color: rgba(255,255,255,0.6);
+                                &.on{color: #fff;}
+                            }
+                        }
+                    }
+                }
+            }
+            .right{
+                span{
+                    background-color: #fff;
+                    &::after,&::before{background-color: #fff;}
+                }
+                .btn-profile{
+                    span {background-color: transparent;}
+                    &::after {background-image: url(../images/icon/ico-arrow-white.svg);}
+                }
+            }
+        }
+    }
+}
+
+// 스토리 상세 페이지 헤더 스타일
+#wrap.story-detail {
+    header {
+        .inner-wrap .left .logo{
+            a{@include iconBtn('../images/common/logo-white.svg');}
+        }
+        background-color: transparent;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        .inner-wrap{
+            .left{
+                .home-menu{
+                    ul{
+                        li{
+                            a{
+                                color: rgba(255,255,255,0.6);
+                                &.on{color: #fff;}
+                            }
+                        }
+                    }
+                }
+            }
+            .right{
+                span{
+                    background-color: #fff;
+                    &::after,&::before{background-color: #fff;}
+                }
+                .btn-profile::after{
+                    background-image: url(../images/icon/ico-arrow-white.svg);
+                }
+            }
+        }
+    }
+}

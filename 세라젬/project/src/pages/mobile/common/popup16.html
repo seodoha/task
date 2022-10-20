@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="welcafe-guide">팝업 오픈</button>
+        </div>
+
+
+        <!--커버설정 팝업-->
+        <div id="welcafe-guide" class="layer-popup-wrap bottom-sheet-wrap">
+            <div class="layer-popup ty02">
+                <div class="popup-header">
+                    <span class="left">
+                        <h4 class="tit">작성 가이드</h4>
+                    </span>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                    </span>
+                </div>
+                <div class="popup-body">
+                    <div class="guide-body">
+                        <h4 class="font-card-tit04">주소</h4>
+                        <ul class="list-dot">
+                            <li>도로명 주소를 사용해 주세요.</li>
+                            <li>
+                                특별시, 광역시, 특별자치시 등은 모두 표기해 주세요.<br>
+                                <span><em>ex</em>서울특별시 강남구 선릉로 323 1층</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="guide-body">
+                        <h4 class="font-card-tit04">전화번호</h4>
+                        <ul class="list-dot">
+                            <li>
+                                000-000-0000 형태로 입력해 주세요.<br>
+                                <span><em>ex</em>02-651-0325</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="guide-body">
+                        <h4 class="font-card-tit04">영업시간</h4>
+                        <ul class="list-dot">
+                            <li>24시간 형태로 입력해 주세요.</li>
+                            <li>
+                                ‘여는 시간’ ~ ‘닫는 시간’ ‘휴무 요일’ 순으로 입력해 주세요.<br>
+                                <span><em>ex</em>11:00 ~ 20:00 토요일, 월요일 휴무</span>
+                            </li>
+                            <li>
+                                휴일이 없는 경우 앞에 ‘매일’을 붙여주세요.<br>
+                                <span><em>ex</em>매일 10:00 ~ 21:00 </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="guide-body">
+                        <h4 class="font-card-tit04">주차 정보</h4>
+                        <ul class="list-dot">
+                            <li>근처에 주차가 가능한 경우 ‘주차 가능’에 체크하고 고객이 사용 가능한 주차 정보를 입력해 주세요.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

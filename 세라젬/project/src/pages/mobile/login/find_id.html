@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+            pageTitle : '세라젬'
+
+        })
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="sub-page-header">
+                <button class="ico-back">뒤로가기</button>
+            </div>
+            <div id="container">
+                <section id="login" class="container-wrap">
+                    <div class="login-layout">
+                        <div class="form-header">
+                            <div class="font-card-tit01">아이디 찾기</div>
+                            <div class="sub-tit">
+                                아이디를 찾기 위해<br>본인 인증을 진행 해 주세요.
+                            </div>
+                        </div>
+                        <div class="box-btn btn-footer fix">
+                            <!-- 비활성화시, btn-large btn-disable 제외 클래스 다 삭제 -->
+                            <!-- <button class="btn-large btn-disable">본인인증</button> -->
+                            <button class="btn-large btn-black md-ripples ripples-light">본인인증</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

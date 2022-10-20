@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        		<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Ceragem">
+	<meta name="keywords" content="Ceragem">
+	<meta name="naver-site-verification" content="" />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Ceragem">
+	<meta property="og:description" content="Ceragem">
+	<meta property="og:url" content="">
+	<title>Ceragem</title>
+    <link rel="shortcut icon" href="../../../assets/web/images/common/favicon.ico" />
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../../../assets/web/images/common/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../assets/web/images/common/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/web/images/common/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/web/images/common/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="../../../assets/web/images/common/apple-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/web/images/common/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../assets/web/images/common/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../assets/web/images/common/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../assets/web/images/common/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../assets/web/images/common/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/web/images/common/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../assets/web/images/common/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../assets/web/images/common/apple-icon-60x60.png">
+	<link href="../../../assets/web/css/common.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="test-layer01">팝업 오픈</button>
+        </div>
+
+        <div id="test-layer01" class="layer-popup-wrap">
+            <div class="layer-popup sz-large">
+                <div class="popup-header">
+                    <strong class="tit">색소 침착</strong>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                        <!-- <button class="ico-popup-close" onclick="uiCommon.layer.close('test-layer');">닫기</button> -->
+                    </span>
+                </div>
+                <div class="popup-body">
+                    <div class="pop-pigment">
+                        <div class="box-result">
+                            <div class="box-step">
+                                <span class="step1 on">좋음</span> <!--활성화시 클래스 on추가-->
+                                <span class="step2 on">보통</span>
+                                <span class="step3 on">관심</span>
+                                <span class="step4">주의</span>
+                            </div>
+                            <div class="box-descrip">
+                                <ul class="list-dot">
+                                    <li>특정 유전자형 보유 여부와 한국인 통계에 따라 색소 침착 위험도를 좋음/보통/주의로 구분했습니다.</li>
+                                </ul>
+                            </div>
+                            <div class="box-graph">
+                                <div class="box-chart-wrap">
+                                    <div class="box-range">
+                                        <div class="range-sec green02 on"> <!--핀 꽂히는 부분 클래스 on 추가-->
+                                            <!--적정 범위-->
+                                            <span class="bar">
+                                                <!--핀 꽂히는 bar에 추가-->
+                                                <div class="box-pin">
+                                                    <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M13 1C9.8174 1 6.76516 2.28633 4.51472 4.57602C2.26428 6.86571 1 9.97119 1 13.2093C1 24.2044 13 34.9972 13 34.9972C13 34.9972 25 24.2044 25 13.2093C25 9.97119 23.7357 6.86571 21.4853 4.57602C19.2348 2.28633 16.1826 1 13 1Z" fill="#20CFC2"/>
+                                                        <ellipse cx="12.7424" cy="10.2542" rx="3.36842" ry="3.25424" fill="white"/>
+                                                        <path d="M6.89885 17.4109C6.13514 16.4617 6.81085 15.0508 8.02918 15.0508H17.9708C19.1891 15.0508 19.8649 16.4617 19.1012 17.4109L14.2355 23.4586C13.9602 23.8009 13.5445 23.9999 13.1052 23.9999H12.8948C12.4555 23.9999 12.0398 23.8009 11.7645 23.4586L6.89885 17.4109Z" fill="white"/>
+                                                    </svg>
+                                                    <em class="pin"></em>
+                                                </div>
+                                            </span>
+                                            <strong class="txt">좋음</strong>
+                                        </div>
+                                        <div class="range-sec brown">
+                                            <span class="bar"></span>
+                                            <strong class="txt">보통</strong>
+                                        </div>
+                                        <div class="range-sec orange02">
+                                            <span class="bar"></span>
+                                            <strong class="txt">관심</strong>
+                                        </div>
+                                        <div class="range-sec red02">
+                                            <span class="bar"></span>
+                                            <strong class="txt">주의</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--em 태그에 클래스 'step1', 'step2', 'step3', 'step4'을 붙여 '좋음', '보통', '관심', '주의'색을 입히면됨-->
+                                <div class="chart-result step3">
+                                    <!--원형차트 들어갈 영역-->
+                                    <div class="box-circle-chart">
+                                    </div>
+                                    <strong class="txt">
+                                        한국인의 <em>43%</em>가 고객님과 같은<br>
+                                        <em>좋음</em>에 속합니다.
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="box-descrip">
+                                <p>고객님은 색소 침착과 주근깨 생성 경향이 낮은 유전자형을 보유하고 있습니다. 설문 결과, 현재 피부의 색소 침착 상태는 좋은 편입니다. 외출할 때는 꼭 자외선 차단제를 꼼꼼히 바르고, 반드시 전문가와 상의하여 피부 관리에 주의를 기울여 색소 침착을 방지할 것을 권장합니다.</p>
+                            </div>
+                            <p class="txt">피부 색소침착의 원인인 멜라닌 색소 관련 MCIR 유전자를 확인하였습니다. 멜라닌 색소는 유해한 자외선이 인체 내로 침투하는 것을 차단하는 역할을 하며, 일정량 이상의 자외선을 흡수했을 경우 주근깨, 반점 등과 같은 색소침착에 영향을 줍니다.</p>
+                        </div>
+                        <div class="box-result ty02">
+                            <strong class="box-tit">추천활동</strong>
+                            <dl class="recom-list">
+                                <dt>생활</dt>
+                                <dd>
+                                    <dl>
+                                        <dt>색소침착의 종류를 파악하기</dt>
+                                        <dd>이게 뭐지? 하며 머뭇거리다가 어느새 피부가 거뭇해지는 것이 색소침착입니다. 색소침착은 기미, 주근깨, 검버섯, 여드름 흉터 등 종류가 다양합니다. 기미와 주근깨는 유전의 원인이 크며 여드름 흉터는 염증 등 다른 피부 질병의 후유증으로 생깁니다. 유전적으로 색소침착에 유리한 성향을 갖고 있다 하더라도 자외선은 모든 색소침착의 공통의 적이라는 사실을 명심하세요.</dd>
+                                    </dl>
+                                </dd>
+                                <dt>식단</dt>
+                                <dd>
+                                    <dl>
+                                        <dt>비타민C 섭취하기</dt>
+                                        <dd>항산화 기능이 있는 비타민C는 자외선에 의해 피부가 노화되는 것을 막아줍니다. 콜라겐을 안정시키고 생성을 촉진하는 작용도 하지요. 비타민C가 많은 음식으로는 레몬, 브로콜리, 키위, 토마토, 석류 등이 있습니다.</dd>
+                                    </dl>
+                                </dd>
+                                <dt>관리</dt>
+                                <dd>
+                                    <dl>
+                                        <dt>자외선 차단제 꼭 바르기</dt>
+                                        <dd>모든 색소침착의 공통 원인은 자외선입니다. 자외선 차단제의 수치를 알아 두세요. 자외선 차단제에 적힌 SPF는 표피까지 닿는 자외선 B, PA는 진피까지 닿는 자외선 A를 막는 수치입니다.ㅍ 외출 시에는 되도록 SPF30, PA++ 이상 제품을 바르는 것이 좋습니다.</dd>
+                                        <dt>유산소 운동을 하자</dt>
+                                        <dd>깨끗하고 균일한 피부톤을 위해서는 혈액순환이 원활해야 합니다. 타고난 유전형에 비해 피부톤이 만족스럽지 않다면, 혈액순환 기능이 떨어져 독소와 노폐물을 배출하지 못하기 때문일 수 있습니다. 혈액순환 기능을 증가시키는 기본 활동은 유산소 운동과 스트레칭입니다. 일주일에 3번, 30분 정도 가볍게 숨이 찰 정도의 유산소 운동을 해주세요.</dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+                            <div class="box-descrip">
+                                <p>본 검사에서 제공하는 결과는 색소 침착에 영향을 주는 환경 및 생활 습관 등의 다른 요인을 고려하지 않고 유전자형에만 근거하여 분석하므로 현재의 상태와 다를 수 있습니다. 또한 색소 침착과 관계가 있는 모든 유전자를 분석한 것은 아닙니다. 본 검사는 유전적 위험도를 예측하는 자료이며, 위험도가 높다고 하여 반드시 색소 침착이 높다는 이미는 아니며, 위험도가 낮다고 해서 색소침착이 낮다는 의미는 아닙니다. 결과의 해석은 새로운 정보가 추가됨에 따라 변경될 수 있으며 질병의 진단 및 치료의 목적으로 사용될 수 없습니다. 의학적인 소견이 필요한 경우 의사와 상담하시기 바랍니다.</p>
+                            </div>
+                            <ul class="test-list">
+                                <li>
+                                    <dl>
+                                        <dt>검사명</dt>
+                                        <dd>세라체크DNA 유전자검사</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>결과보고일</dt>
+                                        <dd>20200528</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>검체번호</dt>
+                                        <dd>004-20046-14</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <button class="popup-close btn-sm btn-white md-ripples ripples-darker">닫기</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../../assets/web/js/lib/jquery.import.js"></script>
+    </body>
+</html>

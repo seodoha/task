@@ -1,0 +1,125 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _tab.scss
+* @Description : tab 컴포넌트
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+.tab-wrap {
+    position: relative;
+    .tab-list{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        transition: all 0.3s;
+        overflow-x: auto;
+        @include noScrollBar;
+        &.active{
+            flex-wrap: wrap;
+            & + .btn-tab-wrap .btn-tab{
+                transform: rotate(180deg);
+            }
+        }
+        &-round{
+            li{
+                margin: 0.5rem 0;
+                a, button{
+                    padding: 0 1.8rem;
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    line-height: 2.1;
+                    color: #444;
+                    background-color: #fff;
+                    border-radius: 2.2rem;
+                    white-space: nowrap;
+                    &.on{
+                        background-color: $black;
+                        color: #fff;
+                    }
+                    &.ico-plus {
+                        width: 4.3rem;
+                        height: 4.3rem;
+                        background-size: auto;
+                        background-color: #f8f8f8;
+                    }
+                }
+                &:nth-of-type(n+1){
+                    margin-right: 0.6rem;
+                }
+            }
+        }
+        &-line{
+            border-bottom: 1px solid #e5e5e5;
+            li{
+                a, button{
+                    padding: 1.5rem 0;
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    line-height: 1.4;
+                    color: #aaa;
+                    white-space: nowrap;
+                    &.on{
+                        position: relative;
+                        color: $black;
+                        // border-bottom: 2px solid $black;
+                        &::after{
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            bottom: 0;
+                            z-index: 1;
+                            width: 100%;
+                            height: 2px;
+                            background-color: $black;
+                        }
+                    }
+                }
+                &:nth-of-type(n+1){
+                    margin-right: 4rem;
+                }
+            }
+        }
+        &.isScroll {padding-right: 10rem;}
+    }
+    .tab-content {
+        padding: 6rem 0 0;
+    }
+    &.tab-ctrl {
+        .tab-content {
+            & > * {display: none;}
+            [aria-hidden="false"] {display: block;}
+        }
+    }
+    .btn-tab-wrap{
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        &::before{
+            @include backgroundImg('../images/icon/ico-tab-gra.svg',center,contain);
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            width: 6rem;
+            height: 4.3rem;
+        }
+    }
+    .btn-tab{
+        background-color: #fff;
+        height: 4.3rem;
+        width: 4.3rem;
+        height: 4.3rem;
+        background-size: 2.4rem 2.4rem;
+        border-radius: 0;
+        transition: transform 0.3s;
+        transform-origin: center;
+        overflow: visible;
+    }
+}

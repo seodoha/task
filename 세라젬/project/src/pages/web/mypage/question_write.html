@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./pages/web/include/head.html',{
+    pageTitle : '세라젬'
+
+    })
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./pages/web/include/header.html')
+        <div id="container">
+            <section id="mypage" class="container-wrap bg-gray mypage">
+                <div class="page-layout-header">
+                    @@include('./pages/web/include/mypageInfo.html')
+                </div>
+
+                <div class="page-layout-contents">
+                    <div class="inner-wrap inner-flex">
+                        <aside class="inner-left">
+                            @@include('./pages/web/include/aside.html')
+                        </aside>
+                        <div class="inner-right">
+                            <div class="box-section">
+                                <div class="box-section-head">
+                                    <h3>1:1 문의</h3>
+                                </div>
+                                <div class="layout-detail-view notice-setting-view">
+                                    <div class="board-input-box">
+                                        <strong class="item-tit">문의 유형</strong>
+                                        <div class="item-info">
+                                            <!-- error 시 error 클래스 추가 -->
+                                            <div class="text-input-wrap error">
+                                                <select class="plugin-select">
+                                                    <option value="" selected>문의 유형을 선택해주세요</option>
+                                                    <option value="">게시물 작성</option>
+                                                    <option value="">게시판 신청</option>
+                                                    <option value="">활동지수/마일리지</option>
+                                                    <option value="">이벤트</option>
+                                                    <option value="">게시물 신고</option>
+                                                    <option value="">기타</option>
+                                                </select>
+                                                <strong class="error-txt">문의 유형을 선택해주세요.</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="board-input-box">
+                                        <strong class="item-tit">제목</strong>
+                                        <div class="item-info">
+                                            <!-- error 시 error 클래스 추가 -->
+                                            <div class="text-input-wrap error">
+                                                <div class="box-input">
+                                                    <input type="text" placeholder="30자 이내로 입력해주세요" title="제목">
+                                                    <button class="ico-search-delete">삭제</button>
+                                                </div>
+                                                <strong class="error-txt">제목을 입력해주세요.</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="board-input-box">
+                                        <strong class="item-tit">문의 내용</strong>
+                                        <div class="item-info">
+                                            <!-- error 시 error 클래스 추가 -->
+                                            <div class="text-input-wrap error">
+                                                <div class="box-input">
+                                                    <div class="box-textarea">
+                                                        <textarea title="문의 내용" placeholder="문의하실 내용을 입력해주세요"></textarea>
+                                                        <div class="txt-count">
+                                                            <!-- 타이핑 시 typing 클래스 추가(텍스트 color 변경됨) -->
+                                                            <span>0</span>
+                                                            /2000
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <strong class="error-txt">내용을 입력해주세요.</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="board-input-box">
+                                        <strong class="item-tit">사진 첨부<span>(선택사항)</span></strong>
+                                        <div class="item-info">
+                                            <div class="file-input-wrap">
+                                                <ul class="file-input-list">
+                                                    <li>
+                                                        <div class="input-img-wrap">
+                                                            <button class="ico-close">삭제</button>
+                                                            <img src="../../../assets/web/images/temp/temp-img03.png" alt="">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="box-file-input">
+                                                            <label for="file02">첨부</label>
+                                                            <input type="file" id="file02" title="사진 첨부">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="box-file-input">
+                                                            <label for="file03">첨부</label>
+                                                            <input type="file" id="file03" title="사진 첨부">
+                                                        </div>
+                                                    </li>
+                                                    <!-- <li>
+                                                        <div class="box-file-input">
+                                                            <label for="file01">첨부</label>
+                                                            <input type="file" id="file01" title="사진 첨부">
+                                                        </div>
+                                                        <div class="input-img-wrap">
+                                                            <button class="ico-close">삭제</button>
+                                                            <img src="../../../assets/web/images/temp/temp-img03.png" alt="">
+                                                        </div>
+                                                    </li> -->
+                                                </ul>
+                                                <ul class="list-dot gray">
+                                                    <li>10MB 미만의 JPG, JPEG, GIF, PNG 파일만 등록 가능합니다.</li>
+                                                    <li>상품과 무관한 내용이거나 음란 및 불법적인 내용은 통보없이 삭제될 수 있습니다.</li>
+                                                    <li>내가 작성한 1:1문의 내역과 답변 확인은 마이페이지에서 확인 가능합니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-btn">
+                                        <button class="btn-large btn-white md-ripples ripples-dark">취소</button>
+                                        <button class="btn-large btn-black md-ripples ripples-light">등록하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        @@include('./pages/web/include/footer.html')
+    </div>
+
+    @@include('./pages/web/include/scriptImport.html')
+</body>
+
+</html>

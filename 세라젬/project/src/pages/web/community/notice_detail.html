@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="community" class="container-wrap bg-gray">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading02">커뮤니티</h2>
+                            <div class="tab-wrap">
+                                <!--비로그인 case-->
+                                <!-- <a href="#" class="btn-more">
+                                    <span class="ico-plus">설정</span>
+                                </a> -->
+                                <button class="btn-more">
+                                    <span class="ico-plus">설정</span>
+                                </button>
+                                <ul class="tab-list tab-list-round">
+                                    <li><a href="#">인기</a></li>
+                                    <li><a href="#">관심</a></li>
+                                    <li><a href="#" class="on">취미/여행</a></li>
+                                    <li><a href="#">주식/재테크</a></li>
+                                    <li><a href="#">부동산</a></li>
+                                    <li><a href="#">썸/연애</a></li>
+                                    <li><a href="#">여행</a></li>
+                                    <li><a href="#">헬스/다이어트</a></li>
+                                    <li><a href="#">회사생활</a></li>
+                                    <li><a href="#">자동차</a></li>
+                                    <li><a href="#">직장인 취미생활</a></li>
+                                    <li><a href="#">지름/쇼핑</a></li>
+                                    <li><a href="#">반려동물</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                </ul>
+                                <div class="btn-tab-wrap">
+                                    <button class="btn-tab ico-1depth-close">열기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-board-wrap">
+                            <div class="layout-detail-view notice-detail-view">
+                                <div class="detail-header">
+                                    <strong class="detail-tit">개인정보처리방침 개정 안내</strong>
+                                    <span class="detail-date">2022.03.07</span>
+                                    <div class="detail-attach">
+                                        <a href="#">커뮤니티공지.pdf</a>
+                                    </div>
+                                </div>
+                                <div class="detail-contents">
+                                    <!--에디터 내용 들어갈 영역-->
+                                    <div class="box-editor-contents">
+                                        <img src="../../../assets/web/images/temp/img-edit01.png" alt="">
+                                        <img src="../../../assets/web/images/temp/img-edit01.png" alt="">
+                                        <img src="../../../assets/web/images/temp/img-edit01.png" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="layout-detail-view-move">
+                                <div class="left">
+                                    <a href="#" class="">이전</a>
+                                    <a href="#" class="">다음</a>
+                                </div>
+                                <div class="right">
+                                    <a href="#" class="btn-move-list">목록으로</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

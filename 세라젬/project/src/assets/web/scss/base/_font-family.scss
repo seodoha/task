@@ -1,0 +1,62 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _font-family.scss
+* @Description : 폰트 정의
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+// Pretendard
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('webfonts/Pretendard-Regular.woff2') format('woff2'),
+        url('webfonts/Pretendard-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-style: normal;
+	src: url('webfonts/Pretendard-Medium.woff2') format('woff2'),
+	url('webfonts/Pretendard-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-style: normal;
+	src: url('webfonts/Pretendard-SemiBold.woff2') format('woff2'),
+	url('webfonts/Pretendard-SemiBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-style: normal;
+	src: url('webfonts/Pretendard-Bold.woff2') format('woff2'),
+	url('webfonts/Pretendard-Bold.woff') format('woff');
+}
+
+// CERAGEMWell
+@font-face {
+    font-family: 'CERAGEMWell';
+    font-weight: 400;
+    font-style: normal;
+    src: url('webfonts/CERAGEMWellLight.woff2') format('woff2'),
+        url('webfonts/CERAGEMWellLight.woff') format('woff');
+}
+@font-face {
+    font-family: 'CERAGEMWell';
+    font-weight: 500;
+    font-style: normal;
+    src: url('webfonts/CERAGEMWellMedium.woff2') format('woff2'),
+        url('webfonts/CERAGEMWellMedium.woff') format('woff');
+}
+@font-face {
+    font-family: 'CERAGEMWell';
+    font-weight: 700;
+    font-style: normal;
+    src: url('webfonts/CERAGEMWellBold.woff2') format('woff2'),
+        url('webfonts/CERAGEMWellBold.woff') format('woff');
+}

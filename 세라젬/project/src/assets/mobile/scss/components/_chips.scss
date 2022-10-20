@@ -1,0 +1,227 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _chips.scss
+* @Description : chip 컴포넌트
+* @Create Date: 2022-02-21
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+.chips-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    .chip-list{
+        display: flex;
+        li{
+            a{
+                padding: 1rem 1.6rem;
+                font-size: 1.6rem;
+                line-height: 1.2;
+                color: $black;
+                background-color: #F8F8F8;
+                border-radius: 6rem;
+                white-space: nowrap;
+                &.on{
+                    color: #fff;
+                    background-color: $black;
+                }
+            }
+            &:nth-of-type(n+1){
+                margin-right: 0.8rem;
+            }
+
+        }
+        &-hashtag{
+            li{
+                a{
+                    &::before{
+                        content: '#';
+                        display: inline-block;
+                        margin-right: 0.4rem;
+                        color: #aaa;
+                    }
+                    &.on::before{color: #fff;}
+                }
+                input[type="checkbox"] {display: none;}
+                label {
+                    &::before{
+                        content: '#';
+                        margin-right: 0.4rem;
+                        color: #aaa;
+                    }
+                    display: flex;
+                    align-items: center;
+                    padding: 1rem 1.2rem;
+                    border: 1px solid #e5e5e5;
+                    border-radius: 4rem;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    line-height: 1.2;
+                    color: $black;
+                    cursor: pointer;
+                }
+                input[type="checkbox"]:checked ~ label {
+                    background-color: $black;
+                    border-color: $black;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .chip-label{
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 1.3rem;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        background-color: #F7F7F7;
+        color: $black;
+        border-radius: 0.3rem;
+
+        &.chip-label-red {
+            background-color: #FFF3F3;
+            color: #FA5252;
+        }
+
+        &.chip-label-disable {
+            color: #c4c4c4;
+        }
+
+        &-hashtag{
+            border-radius: 4rem;
+            &::before{
+                content: '#';
+                display: inline-block;
+                margin-right: 0.4rem;
+                font-size: 1.4rem;
+                line-height: 1.2;
+                color: #aaa;
+            }
+            &.chip-more{
+                @include backgroundImg('../images/icon/ico-chips-circle.svg', center, 1.2rem 0.2rem);
+                &::before{display: none;}
+                width: 4.2rem;
+                height: 3.4rem;
+            }
+        }
+        &-md {
+            padding: 0.6rem 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #444;
+            background: #F8F8F8;
+            border-radius: 0.4rem;
+        }
+        &-sm{
+            padding: 0.4rem 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #444;
+            background: #F8F8F8;
+            border-radius: 0.4rem;
+            &.yellow{
+                background: #FAF736;
+            }
+            &.gradation{
+                background: linear-gradient(90.3deg, #B03FA4 -1.2%, #EB5957 50.87%, #FCB321 99.78%);
+                color: #fff;
+            }
+        }
+        &-xs{
+            padding: 0.3rem 0.7rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #444;
+            background: none;
+            border: 1px solid #444;
+            border-radius: 10rem;
+            &.red{
+                color: $red;
+                border-color: $red;
+            }
+        }
+    }
+    .chips-editable{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.8rem;
+        input.chip-edit {
+            width: 8.6rem;
+        }
+        .chip-edit{
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            padding: 1rem 1.2rem 1rem 2.7rem;
+            border-radius: 4rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            text-align: left;
+            line-height: 1.18;
+            outline: none;
+            appearance: none;
+            border: none;
+            background-color: #fff;
+            &::placeholder {color: #c4c4c4;}
+
+            &-done{
+                padding: 1rem 1.2rem;
+                color: $black;
+                background-color: #F8F8F8;
+                &::before{
+                    content: '#';
+                    display: inline-block;
+                    margin-right: 0.4rem;
+                    font-size: 1.3rem;
+                    line-height: 1.2;
+                    color: #aaa;
+                }
+                &::after{
+                    @include backgroundImg('../images/icon/ico-black-close.svg');
+                    content: '';
+                    display: inline-block;
+                    margin-left: 0.4rem;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+            }
+        }
+        .edit-input-wrap{
+            display: inline-block;
+            position: relative;
+            .input-hashtag{
+                @include venderPrefix('transform',translateY(-50%));
+                display: inline-block;
+                position: absolute;
+                top: 47%;
+                left: 1.6rem;
+                font-size: 1.4rem;
+                line-height: 1.2;
+                color: #aaa;
+            }
+        }
+        #input-width-calc{
+            position: absolute;
+            visibility: hidden;
+            left: -100%;
+            height: auto;
+            width: auto;
+            min-width: 8.6rem;
+            padding: 1rem 1.2rem 1rem 2.7rem;
+            white-space: nowrap;
+            font-size: 1.4rem;
+        }
+    }
+    .error {
+        display: block;
+        width: 100%;
+        margin-top: 0.8rem;
+        font-size: 1.4rem;
+        color: #FA5252;
+        line-height: 1.5;
+    }
+}

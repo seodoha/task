@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+
+            <div class="sub-page-header">
+                <button class="ico-back">뒤로가기</button>
+            </div>
+
+            <div id="container">
+                <section id="mypage" class="container-wrap">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading04">탈퇴 안내</h2>
+                            <span class="sup-txt">
+                                회원탈퇴를 진행하기 전에 안내사항을 꼭 확인해 주세요.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents isBoundary">
+                        <!--2022.06.13 내용 수정-->
+                        <div class="inner-wrap quit-box">
+                            <strong>
+                                탈퇴 시 회원님의 계정과 관련된 데이터가 영구 삭제 되어 복구가 불가하니 신중하게 선택하시기 바랍니다.
+                            </strong>
+                            <p class="txt">탈퇴 시 세라젬 통합 멤버십 서비스에서 탈퇴됩니다.</p>
+                            <dl>
+                                <dt>[탈퇴 서비스]</dt>
+                                <dd>
+                                    <ul class="list-dot">
+                                        <li>부모님연구소</li>
+                                        <li>세라젬 웰라이프 멤버십</li>
+                                        <li>세라젬 IoT</li>
+                                        <li>세라체크</li>
+                                    </ul>
+                                    <p>사용중인 아이디와 정보는 탈퇴할 경우 복구가 불가능합니다.</p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>[삭제 대상 데이터]</dt>
+                                <dd>
+                                    <ul class="list-dot">
+                                        <li>아이디, 패스워드, 회원정보(개인 정보는 3개월간 보관 되며 이후 완전히 삭제) 및 이용기록 </li>
+                                        <li>마일리지, 기프티콘 교환, 사용내역 등 </li>
+                                        <li>웰라이프 멤버십에 보유한 적립 쿠폰 및 스탬프는 탈퇴 즉시 소멸되며, 재가입 시 복구되지 않습니다.(10회 체험쿠폰, 1회 체험쿠폰 포함)</li>
+                                        <li>탈퇴 후에도 부모님연구소에 등록한 게시물 및 댓글은 삭제되지 않고 그대로 남아 있습니다.</li>
+                                        <li>회원 탈퇴 후 회원정보가 삭제되어 작성자 본인을 확인할 수 없으므로 게시물 편집 및 삭제 처리가 원천적으로 불가능 합니다. </li>
+                                        <li>게시물 삭제를 원하시는 경우에는 탈퇴 전 해당 게시물을 삭제하기시 바랍니다. </li>
+                                    </ul>
+                                    <p>탈퇴 시 3개월간 재가입이 불가합니다.</p>
+                                </dd>
+                            </dl>
+                            <span class="btn-check">
+                                <input type="checkbox" id="chkall" checked="">
+                                <label for="chkall"><span>탈퇴 시 3개월간 재가입이 불가합니다. </span></label>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="fix-btn-bar">
+                <button class="btn-large btn-black md-ripples ripples-light">탈퇴하기</button>
+            </div>
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

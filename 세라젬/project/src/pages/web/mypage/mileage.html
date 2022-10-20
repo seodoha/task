@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./pages/web/include/head.html',{
+    pageTitle : '세라젬'
+
+    })
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./pages/web/include/header.html')
+        <div id="container">
+            <section id="mypage" class="container-wrap bg-gray mypage">
+                <div class="page-layout-header">
+                    @@include('./pages/web/include/mypageInfo.html')
+                </div>
+
+                <div class="page-layout-contents">
+                    <div class="inner-wrap inner-flex">
+                        <aside class="inner-left">
+                            @@include('./pages/web/include/aside.html')
+                        </aside>
+                        <div class="inner-right">
+                            <div class="box-section">
+                                <div class="box-section-head">
+                                    <h3>마일리지</h3>
+                                </div>
+                                <div class="box-mileage">
+                                    <div class="mileage-item">
+                                        <div class="mileage-left">
+                                            <h4 class="font-card-tit03">보유 마일리지</h4>
+                                            <span class="guide">마일리지 유효기간은 2년으로, 일 단위로 자동 소멸됩니다.</span>
+                                        </div>
+                                        <div class="mileage-right">
+                                            <a href="#" class="btn-sm btn-white md-ripples ripples-dark">기프티샵<span class="ico-more"></span></a>
+
+                                            <div class="mileage-count">
+                                                <h5 class="font-heading04">10,240</h5>
+                                                <span class="ico-coin">마일리지</span>
+                                            </div>
+
+                                            <span class="notice">30일이내 소멸예정 마일리지 1,500m</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-section">
+                                <div class="box-section-head">
+                                    <h3>마일리지 내역</h3>
+                                </div>
+                                <div class="tab-wrap tab-ctrl mileage">
+                                    <ul class="tab-list tab-list-round">
+                                        <!-- 활성화 시 on class 추가 -->
+                                        <li><a href="javascript:void(0)" class="on">전체</a></li>
+                                        <li><a href="javascript:void(0)">적립</a></li>
+                                        <li><a href="javascript:void(0)">사용</a></li>
+                                        <li><a href="javascript:void(0)">소멸</a></li>
+                                        <li><a href="javascript:void(0)">사용취소</a></li>
+                                    </ul>
+
+                                    <div class="tab-content">
+                                        <div>
+                                            <ul class="list-sort">
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType" id="viewTy">
+                                                        <span class="txt">1개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType" id="viewTy">
+                                                        <span class="txt">3개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType" id="viewTy" checked>
+                                                        <span class="txt">6개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType" id="viewTy">
+                                                        <span class="txt">1년</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType" id="viewTy">
+                                                        <span class="txt">2년</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <div class="box-mileage">
+                                                <ul class="mileage-list">
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">적립</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">스토리 콘텐츠 등록 1건</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04">+100</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">적립</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">출석</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04">+50</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">사용취소</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">기프티샵 구매 취소</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04">+1,000,000,000,000</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">사용</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">기프티샵 구매</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04 minus">-1,000,000</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">소멸</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">마일리지 유효기간 만료</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04 minus">-1</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <ul class="list-sort">
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-1" id="viewTy">
+                                                        <span class="txt">1개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-1" id="viewTy">
+                                                        <span class="txt">3개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-1" id="viewTy" checked>
+                                                        <span class="txt">6개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-1" id="viewTy">
+                                                        <span class="txt">1년</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-1" id="viewTy">
+                                                        <span class="txt">2년</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <div class="box-mileage">
+                                                <ul class="mileage-list">
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">적립</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">스토리 콘텐츠 등록 1건</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04">+100</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">적립</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">출석</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04">+50</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">소멸</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">마일리지 유효기간 만료</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04 minus">-1</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <ul class="list-sort">
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-2" id="newTy">
+                                                        <span class="txt">1개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-2" id="recomTy">
+                                                        <span class="txt">3개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-2" id="viewTy" checked>
+                                                        <span class="txt">6개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-2" id="viewTy">
+                                                        <span class="txt">1년</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-2" id="viewTy">
+                                                        <span class="txt">2년</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <div class="box-mileage">
+                                                <ul class="mileage-list">
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">적립</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">출석</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04">+50</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">소멸</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">마일리지 유효기간 만료</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04 minus">-1</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <ul class="list-sort">
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-3" id="newTy">
+                                                        <span class="txt">1개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-3" id="recomTy">
+                                                        <span class="txt">3개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-3" id="viewTy" checked>
+                                                        <span class="txt">6개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-3" id="viewTy">
+                                                        <span class="txt">1년</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-3" id="viewTy">
+                                                        <span class="txt">2년</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <div class="box-mileage">
+                                                <ul class="mileage-list">
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">적립</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">스토리 콘텐츠 등록 1건</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04">+100</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">적립</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">출석</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04">+50</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <ul class="list-sort">
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-4" id="newTy">
+                                                        <span class="txt">1개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-4" id="recomTy">
+                                                        <span class="txt">3개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-4" id="viewTy" checked>
+                                                        <span class="txt">6개월</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-4" id="viewTy">
+                                                        <span class="txt">1년</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="rd-sort-btn">
+                                                        <input type="radio" name="sortType-4" id="viewTy">
+                                                        <span class="txt">2년</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <div class="box-mileage">
+                                                <ul class="mileage-list">
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">적립</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">스토리 콘텐츠 등록 1건</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04">+100</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">적립</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">출석</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04">+50</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mileage-item">
+                                                        <div class="mileage-left">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">소멸</span>
+                                                            </div>
+                                                            <h4 class="font-card-tit03">마일리지 유효기간 만료</h4>
+                                                            <span class="date">2022.02.22</span>
+                                                        </div>
+                                                        <div class="mileage-right">
+                                                            <div class="mileage-count">
+                                                                <h5 class="font-heading04 minus">-1</h5>
+                                                                <span class="ico-coin">마일리지</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        @@include('./pages/web/include/footer.html')
+    </div>
+
+    @@include('./pages/web/include/scriptImport.html')
+</body>
+
+</html>

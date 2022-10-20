@@ -1,0 +1,126 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _response.scss
+* @Description : 반응형 미디어쿼리
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+@include response('pc'){
+    html {font-size: 50%;}
+    .inner-wrap {
+        max-width: none;
+        padding: 0 6rem;
+    }
+    .layout-write-wrap .write-contents .box-module-wrap.fix {
+        position: absolute;
+        right: -10rem;
+        top: 0;
+    }
+    .box-btn-crud {right: 6rem;}
+
+    .box-my-dashboard .my-activity li {
+        margin-right: 3rem;
+    }
+
+    .box-activity-rank .user-ranking li {
+        margin-left: 3rem;
+    }
+
+    // MY PAGE
+    #mypage {
+        .page-layout-contents {
+            .inner {
+                &-left {
+                    max-width: 24rem;
+                    margin-right: 6rem;
+                }
+
+                &-right {
+                    max-width: calc(100% - 30rem);
+                }
+            }
+        }
+
+
+        .box-gift-coupon {
+            right: 6rem;
+        }
+    }
+    #event.challenge .box-event .box-img img {max-width: 100%;}
+    .slick-arrow{
+        &.slick-next{
+            right: -3.4rem !important;
+        }
+        &.slick-prev{
+            left: -3.4rem !important;
+        }
+    }
+}
+
+@include response('tablet'){
+    html {font-size: 40%;}
+    .inner-wrap,
+    .inner-cont-wrap {
+        max-width: 100%;
+        padding: 0 6rem;
+    }
+    .story-detail .sub-visual .box-txt {
+        max-width: 100%;
+        padding: 0 6rem 8rem;
+    }
+    .layout-write-wrap .write-contents .box-module-wrap.fix {
+        position: absolute;
+        right: -10rem;
+        top: 0;
+    }
+    .box-btn-crud {right: 6rem;}
+
+    .box-my-dashboard .my-activity li {
+        margin-right: 0;
+    }
+    .box-activity-rank {
+        .description {
+            margin-bottom: 4rem;
+        }
+        .user-ranking {
+            margin-left: 3rem;
+            li {
+                margin-left: 3rem;
+            }
+        }
+    }
+    .slick-arrow{
+        &.slick-next{
+            right: -3.4rem !important;
+        }
+        &.slick-prev{
+            left: -3.4rem !important;
+        }
+    }
+
+    // MY PAGE
+    #mypage{
+        .page-layout-contents {
+            .inner {
+                &-left {
+                    max-width: 24rem;
+                    margin-right: 6rem;
+                }
+
+                &-right {
+                    max-width: calc(100% - 30rem);
+                }
+            }
+        }
+
+        .box-gift-coupon {
+            right: 6rem;
+        }
+    }
+
+    #event.challenge .box-event .box-img img {max-width: 100%;}
+
+}

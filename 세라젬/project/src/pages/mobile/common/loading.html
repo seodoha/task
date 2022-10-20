@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button onclick="uiCommon.loading.open();">로딩 open</button>
+        </div>
+        <div class="loading-wrap">
+            <div class="box-lottie loading-lottie">
+                <div id="loading-bar"></div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+
+        <script>
+            // 로딩 close 메소드
+            // uiCommon.loading.close();
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="mypage" class="container-wrap bg-gray mypage">
+                    <div class="page-layout-header">
+                        @@include('./pages/web/include/mypageInfo.html')
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <aside class="inner-left">
+                                @@include('./pages/web/include/aside.html')
+                            </aside>
+                            <div class="inner-right">
+                                <div class="box-section ceracheck-history">
+                                    <div class="box-section-head">
+                                        <h3>세라체크 히스토리</h3>
+                                        <a href="#" class="btn-sm btn-white md-ripples ripples-dark">검사목록<span class="ico-more"></span></a>
+                                    </div>
+                                    <div class="tab-wrap tab-ctrl">
+                                        <ul class="tab-list tab-list-line">
+                                            <li><a href="javascript:void(0)" class="on">멘탈헬스</a></li>
+                                            <li><a href="javascript:void(0)">바디헬스</a></li>
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div class="box-noresult box-empty">
+                                                <div class="box-lottie">
+                                                    <div id="ceracheck"></div>
+                                                </div>
+                                                <p>측정 내역이 없습니다.</p>
+                                            </div>
+                                            <div class="box-noresult box-empty">
+                                                <div class="box-lottie">
+                                                    <div id="ceracheck"></div>
+                                                </div>
+                                                <p>측정 내역이 없습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+            pageTitle : '세라젬'
+        })
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="login" class="container-wrap">
+                    <div class="login-layout">
+                        <div class="form-header">
+                            <div class="font-card-tit01">약관동의</div>
+                            <div class="sub-tit">
+                                이용약관 동의 후 <br>WellifeLab을 이용하실 수 있습니다.
+                            </div>
+                        </div>
+                        <div class="check-wrap">
+                            <div class="btn-check all-check">
+                                <input type="checkbox" id="check-all">
+                                <label for="check-all"><span>전체 동의하기</span></label>
+                            </div>
+                            <div class="check-list">
+                                <span class="check-item">
+                                    <input type="checkbox" id="check1" checked>
+                                    <label for="check1"><span>(필수) 만 14세 이상입니다.</span></label>
+                                </span>
+                                <span class="check-item">
+                                    <input type="checkbox" id="check2">
+                                    <label for="check2"><span>(필수) WellifeLab 이용약관 동의</span></label>
+                                    <a href="#" class="ico-more-gray">더보기</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-btn btn-footer">
+                            <!-- 비활성화시, btn-large btn-disable 제외 클래스 다 삭제 -->
+                            <!--2022.04.21 텍스트 수정-->
+                            <!-- <button class="btn-large" disabled>본인인증</button> -->
+                            <button class="btn-large btn-black md-ripples ripples-light">본인인증</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

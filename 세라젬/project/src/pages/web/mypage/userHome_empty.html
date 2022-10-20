@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+            pageTitle : '세라젬'
+        })
+    </head>
+    <body>
+        <div id="wrap" class="writer-home user-home"><!--작가 홈 페이지일 시 writer-home 클래스 추가-->
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="story" class="container-wrap">
+                    <div class="page-layout-header sub-visual">
+                        <div class="box-bg empty"> <!--커버 이미지 없을 경우 empty 클래스 추가-->
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-cont-wrap">
+                            <div class="writer-info-head">
+                                <div class="thumb">
+                                    <img src="../../../assets/web/images/temp/writer-profile.png" alt="">
+                                </div>
+                                <strong class="nick">박세라</strong>
+                                <span class="follower">팔로워 <em>1,234</em></span>
+                                <span class="right">
+                                    <div class="box-btn">
+                                        <button class="btn-sm btn-white md-ripples ripples-dark">
+                                        <span class="ico-setting"></span>
+                                            마이홈 설정
+                                        </button>
+                                    </div>
+                                    <button class="ico-share-gray">공유하기</button>
+                                </span>
+                            </div>
+                            <div class="writer-info-contents">
+                                <div class="tab-wrap tab-ctrl">
+                                    <ul class="tab-list tab-list-line">
+                                        <!-- 활성화 시 on class 추가 -->
+                                        <li><a href="javascript:void(0)" class="on" title="소개">소개</a></li>
+                                        <li><a href="javascript:void(0)" title="스토리">스토리</a></li>
+                                        <li><a href="javascript:void(0)" title="커뮤니티">커뮤니티</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <!--소개-->
+                                        <div>
+                                            <div class="box-cnt">
+                                                <strong class="tit">소개</strong>
+                                                <p class="txt-empty">소개가 없습니다.</p>
+                                            </div>
+                                            <div class="box-cnt">
+                                                <strong class="tit">상세 프로필</strong>
+                                                <p class="txt-empty">프로필이 없습니다.</p>
+                                            </div>
+                                            <div class="box-cnt">
+                                                <strong class="tit">관심 키워드</strong>
+                                                <p class="txt-empty">관심 키워드가 없습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!--스토리-->
+                                        <div>
+                                            <div class="box-board">
+                                                <span class="board-count">총 <span class="count">0</span>건</span>
+                                                <div class="box-noresult ty-small">
+                                                    <div class="box-lottie">
+                                                        <div id="not-search"></div>
+                                                    </div>
+                                                    <h5 class="font-heading05">등록된 콘텐츠가 없습니다.</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--커뮤니티-->
+                                        <div>
+                                            <div class="box-board">
+                                                <span class="board-count">총 <span class="count">0</span>건</span>
+                                                <div class="box-noresult ty-small">
+                                                    <div class="box-lottie">
+                                                        <div id="not-board"></div>
+                                                    </div>
+                                                    <h5 class="font-heading05">등록된 게시물이 없습니다.</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

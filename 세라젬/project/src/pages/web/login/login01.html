@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+            pageTitle : '세라젬'
+        })
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="login" class="container-wrap">
+                    <div class="login-layout">
+                        <div class="login-logo">
+                            <div class="img-wrap">
+                                <img src="../../../assets/web/images/common/logo.svg" alt="웰라이프 랩">
+                            </div>
+                            <span>세라젬 웰라이프 ID로도 이용하실 수 있습니다.</span>
+                        </div>
+                        <!--2022.04.12 퍼블리싱 수정-->
+                        <div class="main-login-wrap">
+                            <div class="text-input-wrap ty02">
+                                <div class="box-input">
+                                    <label>
+                                        <input type="text" placeholder="아이디">
+                                        <span class="placeholder">아이디</span>
+                                        <button class="ico-search-delete">삭제</button>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="text-input-wrap ty02">
+                                <div class="box-input">
+                                    <label>
+                                        <input type="password" placeholder="비밀번호">
+                                        <span class="placeholder">비밀번호</span>
+                                        <button class="ico-search-delete">삭제</button>
+                                    </label>
+                                </div>
+                                <!--에러메세지-->
+                                <strong class="normal-txt error-txt">
+                                    비밀번호 연속 5회 오류로 로그인이 제한되었습니다.<br>
+                                    비밀번호를 다시 설정하고 로그인 해주시기 바랍니다.
+                                </strong>
+                            </div>
+                            <span class="btn-check">
+                                <input type="checkbox" id="auto-login" checked>
+                                <label for="auto-login" class="check-label"><span>자동 로그인</span></label>
+                            </span>
+                        </div>
+                        <div class="box-btn btn-footer">
+                            <button class="btn-large btn-black md-ripples ripples-light">로그인</button>
+                        </div>
+                        <div class="login-footer">
+                            <a href="#">아이디 찾기</a>
+                            <a href="#">비밀번호 재설정</a>
+                            <a href="#">회원가입</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

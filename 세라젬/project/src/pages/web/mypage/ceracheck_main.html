@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="mypage" class="container-wrap bg-gray mypage">
+                    <div class="page-layout-header">
+                        @@include('./pages/web/include/mypageInfo.html')
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <aside class="inner-left">
+                                @@include('./pages/web/include/aside.html')
+                            </aside>
+                            <div class="inner-right">
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>세라체크</h3>
+                                    </div>
+                                    <div class="box-default ceracheck">
+                                        <h4 class="font-heading04">세라체크 멘탈헬스 & 바디헬스</h4>
+
+                                        <h5 class="font-card-tit03">세라체크란?</h5>
+                                        <p>멘탈 헬스(스트레스, 피로도 등)와 바디 헬스(혈압, 체성분 등)를 측정하고 관리해드리는 세라젬의 고객 맞춤형 건강관리 서비스입니다.</p>
+                                        <span class="notice">※ 전국 세라젬 웰카페 및 HC(Health Curator)를 통해 세라체크 서비스를 만날 수 있습니다.</span>
+                                        <div class="ico-dashboard"></div>
+                                        <div class="box-btn">
+                                            <button class="view-result btn-md btn-black md-ripples ripples-light" data-pop="alert-popup">결과보기</button>
+                                        </div>
+                                    </div>
+                                    <!-- 2022.04.01 세라체크 DNA 추가 -->
+                                    <div class="box-default ceracheck">
+                                        <h4 class="font-heading04">세라체크 DNA</h4>
+                                        <h5 class="font-card-tit03">세라체크 DNA란?</h5>
+                                        <p>유전자 분석 전문기업 엔젠바이오가 제공하는 DTC 유전자 검사 ‘세라체크 DNA’를 통한 유전자 분석 서비스입니다.</p>
+                                        <span class="notice type2">질병관리청 제286호 유전자검사기관 (주)엔젠바이오</span>
+                                        <span class="notice">※ HC(Health Curator) 및 NC(Nutrition Curator)를 통해 유전자 분석 서비스를 만날 수 있습니다.</span>
+                                        <div class="ico-dna"></div>
+                                        <div class="box-btn">
+                                            <button class="view-result btn-md btn-black md-ripples ripples-light" data-pop="alert-popup">결과보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--일반 Alert 팝업-->
+                <div id="alert-popup" class="layer-popup-wrap">
+                    <div class="layer-popup alert-popup">
+                        <div class="popup-body">
+                            <span class="msg">
+                                세라체크 검사결과 확인을 위해서는<br>
+                                최초 1회 본인인증이 필요합니다.
+                            </span>
+                            <div class="box-btn">
+                                <button class="btn-sm btn-white md-ripples  popup-close">닫기</button>
+                                <button class="btn-sm btn-black md-ripples ripples-light">본인인증</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

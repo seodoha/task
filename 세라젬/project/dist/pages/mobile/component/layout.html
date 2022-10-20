@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        		<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+	<meta name="description" content="Ceragem">
+	<meta name="keywords" content="Ceragem">
+	<meta name="naver-site-verification" content="" />
+	<meta name="format-detection" content="telephone=no">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Ceragem">
+	<meta property="og:description" content="Ceragem">
+	<meta property="og:url" content="">
+	<title>Ceragem</title>
+    <link rel="shortcut icon" href="../../../assets/mobile/images/common/favicon.ico" />
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../../../assets/mobile/images/common/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../assets/mobile/images/common/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/mobile/images/common/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/mobile/images/common/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="../../../assets/mobile/images/common/apple-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/mobile/images/common/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../assets/mobile/images/common/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../assets/mobile/images/common/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../assets/mobile/images/common/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../assets/mobile/images/common/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/mobile/images/common/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../assets/mobile/images/common/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../assets/mobile/images/common/apple-icon-60x60.png">
+	<link href="../../../assets/mobile/css/common.min.css" rel="stylesheet">
+
+        <style>
+            .component-wrap h2{
+                padding: 1rem;
+                background: #eee;
+            }
+            .component-wrap h3{
+                padding: 1rem 0;
+                color: palevioletred;
+            }
+            /* .guide-cnt {padding: 20px 0;} */
+        </style>
+    </head>
+    <body>
+        <div class="component-wrap">
+            <div class="button-component">
+                <h2>GNB Header(Sticky)</h2>
+                <div class="guide-cnt">
+                    <header style="position: relative;">
+                        <div class="inner-wrap">
+                            <h1 class="logo">
+                                <a href="/">WelLife Lab.</a>
+                            </h1>
+                            <div class="right">
+                                <!-- <a href="#" class="ico-bell">알림</a> -->
+                                <a href="#" class="ico-bell">알림</a>
+                                <a href="#" class="ico-search">검색</a>
+                                <button class="btn-hamburger" title="메뉴"><span>메뉴</span></button>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- gnb menu -->
+                    <div class="gnb-wrap">
+                        <div id="gnb">
+                            <div class="box-login">
+                                <!-- 비로그인 case -->
+                                <a href="#" class="btn-user">
+                                    <span class="img-profile"></span>
+                                    <span class="txt">로그인 해주세요</span>
+                                </a>
+                                <!-- 로그인 case -->
+                                <!-- <a href="#" class="btn-user">
+                                    <span class="img-profile"><img src="../../../assets/mobile/images/temp/profile01.svg" alt=""></span>
+                                    <span class="txt">신민아님</span>
+                                </a> -->
+                                <a href="#" class="ico-setting" title="설정화면으로 이동">설정</a>
+                            </div>
+                            <ul class="gnb-list">
+                                <li><a href="#" class="dep1">스토리</a></li>
+                                <li><a href="#" class="dep1">커뮤니티</a></li>
+                                <li><a href="#" class="dep1">지역 커뮤니티</a></li>
+                                <li><a href="#" class="dep1">이벤트</a></li>
+                            </ul>
+                            <div class="gnb-footer">
+                                <ul class="os-list">
+                                    <li><a href="#" class="btn-app btn-app-aos">구글 플레이스토어</a></li>
+                                    <li><a href="#" class="btn-app btn-app-ios">앱스토어</a></li>
+                                </ul>
+                                <ul class="ft-list">
+                                    <li><a href="#" title="고객센터">고객센터</a></li>
+                                    <li><a href="#" title="이용약관">이용약관</a></li>
+                                    <li><a href="#" title="회사소개">회사소개</a></li>
+                                    <li><a href="#" title="개인정보 처리방침">개인정보 처리방침</a></li>
+                                </ul>
+                                <span class="copy">Ⓒ 2022 CERAGEM Corp.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Bottom Navigation</h2>
+                <div class="guide-cnt">
+                    <nav class="bottom-navi" style="position: relative;">
+                        <ul>
+                            <li><a href="#" class="nav-menu home on">홈</a></li> <!--활성화 시 'on' 클래스 추가-->
+                            <li><a href="#" class="nav-menu story">스토리</a></li>
+                            <li><a href="#" class="nav-menu community">커뮤니티</a></li>
+                            <li>
+                                <a href="#" class="my">
+                                    <!--비로그인 case-->
+                                    <!-- <span class="thumb"></span> -->
+
+                                    <!--로그인 case-->
+                                    <span class="thumb">
+                                        <img src="../../../assets/mobile/images/temp/profile01.svg" alt="">
+                                    </span>
+                                    My
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <h2>Sub Page Header</h2>
+                <div class="guide-cnt">
+                    <h3>타입1</h3>
+                    <div class="sub-page-header" style="position: relative;">
+                        <div class="left">
+                            <button class="ico-back">뒤로가기</button>
+                            <h1 class="page-tit">운동 인증 챌린지 이벤트</h1>
+                        </div>
+                        <div class="right">
+                            <button class="ico-popup-close">닫기</button>
+                        </div>
+                    </div>
+                    <h3>타입2</h3>
+                    <div class="sub-page-header transparent" style="position: relative;">
+                        <div class="left">
+                            <button class="ico-back">뒤로가기</button>
+                        </div>
+                    </div>
+                    <h3>타입3</h3>
+                    <div class="sub-page-header transparent" style="position: relative;">
+                        <div class="left">
+                            <button class="ico-back">뒤로가기</button>
+                        </div>
+                        <div class="right">
+                            <button class="ico-declare">더보기</button>
+                        </div>
+                    </div>
+                    <h3>타입4</h3>
+                    <div class="sub-page-header" style="position: relative;">
+                        <div class="left">
+                            <button class="ico-popup-close">닫기</button>
+                        </div>
+                        <div class="right">
+                            <button class="btn-xs btn-white">불러오기 <span>2</span></button>
+                            <button class="btn-xs btn-white">임시저장</button>
+                            <button class="btn-xs btn-black">등록</button>
+                        </div>
+                    </div>
+                    <h3>타입5</h3>
+                    <div class="sub-page-header shadow-bg" style="position: relative;">
+                        <div class="left">
+                            <button class="ico-back-white">뒤로가기</button>
+                        </div>
+                        <div class="right">
+                            <button class="ico-declare-white">더보기</button>
+                        </div>
+                    </div>
+                </div>
+                <h2>Bottom Bar</h2>
+                <div class="guide-cnt">
+                    <h3>Bottom bar (Story View)</h3>
+                    <div class="bottom-bar" style="position: relative;">
+                        <div class="left">
+                            <span class="ico-view-count">999</span>
+                            <!--로그인 case-->
+                            <span class="btn-act-like-wrap">
+                                <input type="checkbox" id="like01" tabindex="0">
+                                <label for="like01">
+                                    <div class="box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="count">340</span>
+                                </label>
+                            </span>
+                            <button class="ico-comment">999</button>
+
+                            <!--비로그인 case-->
+                            <!-- <a href="#" class="ico-heart">999</a>
+                            <a href="#" class="ico-comment">999</a> -->
+                        </div>
+                        <div class="right">
+                            <button class="ico-share-gray">공유하기</button>
+                            <span class="btn-act-bookmark ty-black">
+                                <input type="checkbox" id="bookmark1" tabindex="0">
+                                <label for="bookmark1">북마크</label>
+                            </span>
+                        </div>
+                    </div>
+                    <h3>Bottom bar (Write Page)</h3>
+                    <div class="bottom-bar write-bottom-bar" style="position: relative;">
+                        <div class="left">
+                            <button class="ico-post-img">이미지 추가</button>
+                            <button class="ico-post-mov">영상 추가</button>
+                            <button class="ico-post-vote">투표 추가</button>
+                        </div>
+                        <button class="ico-guide-black">가이드</button>
+                    </div>
+                </div>
+
+                <h2>Popular Search Word List (Toggle)</h2>
+                <div class="guide-cnt">
+                    <div class="accordion-wrap box-search-word">
+                        <div class="accordion-head">
+                            <h3>인기</h3>
+                            <div class="rolling-wrap">
+                                <ul class="search-word-list">
+                                    <li>
+                                        <a href="#">
+                                            <span class="search-word-rank">1</span>
+                                            <span class="search-word">오미크론</span>
+                                            <span class="ico-chart-same">유지</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="search-word-rank">2</span>
+                                            <span class="search-word">뇌동맥</span>
+                                            <span class="ico-chart-up">상승</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="search-word-rank">3</span>
+                                            <span class="search-word">신장투석</span>
+                                            <span class="ico-chart-down">하락</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="search-word-rank">4</span>
+                                            <span class="search-word">간병사</span>
+                                            <span class="ico-chart-same">유지</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="search-word-rank">5</span>
+                                            <span class="search-word">요양원</span>
+                                            <span class="ico-chart-up">상승</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="search-word-rank">6</span>
+                                            <span class="search-word">홍삼</span>
+                                            <span class="ico-chart-down">하락</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="search-word-rank">7</span>
+                                            <span class="search-word">세라젬 웰카페</span>
+                                            <span class="ico-chart-same">유지</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="search-word-rank">8</span>
+                                            <span class="search-word">DNA 검사</span>
+                                            <span class="ico-chart-up">상승</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="search-word-rank">9</span>
+                                            <span class="search-word">증여세</span>
+                                            <span class="ico-chart-down">하락</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="search-word-rank">10</span>
+                                            <span class="search-word">국내 여행</span>
+                                            <span class="ico-chart-up">상승</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="ico-black-arr-down">열기</button>
+                        </div>
+                        <div class="accordion-body" style="display: none;">
+                            <div class="list-popular-wrap">
+                                <div class="list-header">
+                                    <strong class="list-title">인기 검색어</strong>
+                                    <div class="list-time">11시 기준</div>
+                                </div>
+                                <ul class="list-popular">
+                                    <li class="popular-item">
+                                        <a href="#" title="" class="status-up">
+                                        <span class="popular-lank">1</span>
+                                        <span class="popular-keyword">세라젬 V6세라젬 V6세라젬 V6세라젬 V6세라젬 V6</span>
+                                        </a>
+                                    </li>
+                                    <li class="popular-item">
+                                        <a href="#" title="" class="status-up">
+                                        <span class="popular-lank">2</span>
+                                        <span class="popular-keyword">프리지아 사과</span>
+                                        </a>
+                                    </li>
+                                    <li class="popular-item">
+                                        <a href="#" title="" class="status-up">
+                                        <span class="popular-lank">3</span>
+                                        <span class="popular-keyword">아크로서울포레스트아크로서울포레스트아크로서울포레스트아크로서울포레스트아크로서울포레스트아크로서울포레스트</span>
+                                        </a>
+                                    </li>
+                                    <li class="popular-item">
+                                        <a href="#" title="" class="status-down">
+                                        <span class="popular-lank">4</span>
+                                        <span class="popular-keyword">그 해 우리는</span>
+                                        </a>
+                                    </li>
+                                    <li class="popular-item">
+                                        <a href="#" title="" class="status-same">
+                                        <span class="popular-lank">5</span>
+                                        <span class="popular-keyword">현대산업개발</span>
+                                        </a>
+                                    </li>
+                                    <li class="popular-item">
+                                        <a href="#" title="" class="status-same">
+                                        <span class="popular-lank">6</span>
+                                        <span class="popular-keyword">악의 마음을 읽는 자들</span>
+                                        </a>
+                                    </li>
+                                    <li class="popular-item">
+                                        <a href="#" title="" class="status-up">
+                                        <span class="popular-lank">7</span>
+                                        <span class="popular-keyword">자동차세 연납</span>
+                                        </a>
+                                    </li>
+                                    <li class="popular-item">
+                                        <a href="#" title="" class="status-up">
+                                        <span class="popular-lank">8</span>
+                                        <span class="popular-keyword">박신혜</span>
+                                        </a>
+                                    </li>
+                                    <li class="popular-item">
+                                        <a href="#" title="" class="status-down">
+                                        <span class="popular-lank">9</span>
+                                        <span class="popular-keyword">연말정산</span>
+                                        </a>
+                                    </li>
+                                    <li class="popular-item">
+                                        <a href="#" title="" class="status-new">
+                                        <span class="popular-lank">10</span>
+                                        <span class="popular-keyword">LG 에너지솔루션</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Box-text-card</h2>
+                <div class="guide-cnt">
+                    <h3>Default</h3>
+                    <div class="box-txt-card">
+                        <a href="#">
+                            <div class="chips-wrap">
+                                <span class="chip-label chip-label-md">회사생활</span>
+                                <span class="chip-label chip-label-md">게시판_2depth</span>
+                            </div>
+                            <div class="box-tit">
+                                <strong class="tit">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                            </div>
+                            <div class="box-writer">
+                                <span class="writer-thumb">
+                                    <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                </span>
+                                <span class="writer-nick">전지현</span>
+                                <span class="writer-date">1일 전</span>
+                            </div>
+                            <div class="box-cnts">
+                                <p>
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                </p>
+                                <div class="thumb">
+                                    <img src="../../../assets/mobile/images/temp/temp001.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="box-util">
+                            <div class="left">
+                                <span class="ico-view-count">999</span>
+                                <span class="btn-act-like-wrap">
+                                    <input type="checkbox" id="like111">
+                                    <label for="like111">
+                                        <div class="box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="count">340</span>
+                                    </label>
+                                </span>
+                                <a href="#" class="ico-comment">999</a>
+                            </div>
+                            <div class="right">
+                                <button class="ico-share-gray">공유하기</button>
+                            </div>
+                        </div>
+                        <span class="btn-act-bookmark ty-black">
+                            <input type="checkbox" id="bookmark7">
+                            <label for="bookmark7">북마크</label>
+                        </span>
+                    </div>
+                    <div class="box-txt-card">
+                        <a href="#">
+                            <div class="chips-wrap">
+                                <span class="chip-label chip-label-md">회사생활</span>
+                                <span class="chip-label chip-label-md">게시판_2depth</span>
+                            </div>
+                            <div class="box-tit">
+                                <strong class="tit">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                            </div>
+                            <div class="box-writer">
+                                <span class="writer-thumb">
+                                    <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                </span>
+                                <span class="writer-nick">전지현</span>
+                                <span class="writer-date">1일 전</span>
+                            </div>
+                            <div class="box-cnts">
+                                <p>
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                </p>
+                            </div>
+                        </a>
+                        <div class="box-util">
+                            <div class="left">
+                                <span class="ico-view-count">999</span>
+                                <span class="btn-act-like-wrap">
+                                    <input type="checkbox" id="like111">
+                                    <label for="like111">
+                                        <div class="box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="count">340</span>
+                                    </label>
+                                </span>
+                                <a href="#" class="ico-comment">999</a>
+                            </div>
+                            <div class="right">
+                                <button class="ico-share-gray">공유하기</button>
+                            </div>
+                        </div>
+                        <span class="btn-act-bookmark ty-black">
+                            <input type="checkbox" id="bookmark7">
+                            <label for="bookmark7">북마크</label>
+                        </span>
+                    </div>
+                    <div class="box-txt-card">
+                        <a href="#">
+                            <div class="chips-wrap">
+                                <span class="chip-label chip-label-md">회사생활</span>
+                                <span class="chip-label chip-label-md">게시판_2depth</span>
+                            </div>
+                            <div class="box-tit">
+                                <strong class="tit">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                            </div>
+                            <div class="box-writer">
+                                <span class="writer-thumb">
+                                    <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                </span>
+                                <span class="writer-nick">전지현</span>
+                                <span class="writer-date">1일 전</span>
+                            </div>
+                            <div class="box-cnts">
+                                <p>
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                </p>
+                                <!--
+                                    첨부된 이미지가 여러개일 때 many 클래스 추가
+                                    여러개일 때 img 태그 div로 감싸야됨
+                                -->
+                                <div class="thumb many">
+                                    <div><img src="../../../assets/mobile/images/temp/temp0001.png" alt=""></div>
+                                    <div><img src="../../../assets/mobile/images/temp/temp0002.png" alt=""></div>
+                                    <div>
+                                        <span class="thumb-count">+3</span>
+                                        <img src="../../../assets/mobile/images/temp/temp0003.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="box-util">
+                            <div class="left">
+                                <span class="ico-view-count">999</span>
+                                <span class="btn-act-like-wrap">
+                                    <input type="checkbox" id="like111">
+                                    <label for="like111">
+                                        <div class="box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="count">340</span>
+                                    </label>
+                                </span>
+                                <a href="#" class="ico-comment">999</a>
+                            </div>
+                            <div class="right">
+                                <button class="ico-share-gray">공유하기</button>
+                            </div>
+                        </div>
+                        <span class="btn-act-bookmark ty-black">
+                            <input type="checkbox" id="bookmark7">
+                            <label for="bookmark7">북마크</label>
+                        </span>
+                    </div>
+                    <div class="box-txt-card">
+                        <a href="#">
+                            <div class="chips-wrap">
+                                <span class="chip-label chip-label-md">썸/연애</span>
+                                <span class="chip-label chip-label-md">게시판_2depth</span>
+                            </div>
+                            <div class="box-tit">
+                                <strong class="tit">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                            </div>
+                            <div class="box-writer">
+                                <span class="writer-thumb">
+                                    <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                </span>
+                                <span class="writer-nick">전지현</span>
+                                <span class="writer-date">1일 전</span>
+                            </div>
+                            <div class="box-cnts">
+                                <p>
+                                    목소리 작은 애들한테 우롱차 선물해조 그럼 목소리가 우렁차!!! ☺️
+                                </p>
+                                <!--
+                                    첨부된 이미지가 두개일 때 double 클래스 추가
+                                    여러개일 때 img 태그 div로 감싸야됨
+                                -->
+                                <div class="thumb double">
+                                    <div><img src="../../../assets/mobile/images/temp/temp0004.png" alt=""></div>
+                                    <div><img src="../../../assets/mobile/images/temp/temp0005.png" alt=""></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="box-util">
+                            <div class="left">
+                                <span class="ico-view-count">999</span>
+                                <span class="btn-act-like-wrap">
+                                    <input type="checkbox" id="like111">
+                                    <label for="like111">
+                                        <div class="box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="count">340</span>
+                                    </label>
+                                </span>
+                                <a href="#" class="ico-comment">999</a>
+                            </div>
+                            <div class="right">
+                                <button class="ico-share-gray">공유하기</button>
+                            </div>
+                        </div>
+                        <span class="btn-act-bookmark ty-black">
+                            <input type="checkbox" id="bookmark7">
+                            <label for="bookmark7">북마크</label>
+                        </span>
+                    </div>
+                    <h3>Small</h3>
+                    <div class="box-txt-card ty-small">
+                        <a href="#">
+                            <div class="chips-wrap">
+                                <span class="chip-label chip-label-sm">여행</span>
+                            </div>
+                            <div class="box-tit">
+                                <strong class="tit">제주는 도슨트가 필요해</strong>
+                                <span class="sub-tit">예술가의 영혼이 깃든 제주의 공간 </span>
+                            </div>
+                            <div class="box-cnts">
+                                <p>
+                                    푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나 제주에서 꼭 들러야 하는 곳이 예술가의 공간이 푸르른 바다, 다양한 자연의 색을 머금은 오름...
+                                </p>
+                                <div class="thumb">
+                                    <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="box-util">
+                            <span class="date">2022.03.04</span>
+                            <div class="right">
+                                <span class="btn-act-like-wrap">
+                                    <input type="checkbox" id="like001">
+                                    <label for="like001">
+                                        <div class="box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="count">340</span>
+                                    </label>
+                                </span>
+                                <a href="#" class="ico-comment">999</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Simple</h3>
+                    <div class="box-txt-card ty-simple">
+                        <a href="#">
+                            <div class="chips-wrap">
+                                <span class="chip-label chip-label-sm">취미/여행</span>
+                            </div>
+                            <div class="box-tit">
+                                <strong class="tit">눈이 오면 생각나는 곳, 대관령 하늘목장</strong>
+                            </div>
+                        </a>
+                        <div class="box-util">
+                            <div class="left">
+                                <span class="ico-view-count">999</span>
+                                <span class="btn-act-like-wrap">
+                                    <input type="checkbox" id="like001">
+                                    <label for="like001">
+                                        <div class="box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="count">340</span>
+                                    </label>
+                                </span>
+                                <a href="#" class="ico-comment">999</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Box-text-card-list</h3>
+                    <ul class="box-txt-card-list">
+                        <li class="box-txt-card ty-small">
+                            <a href="#">
+                                <div class="chips-wrap">
+                                    <span class="chip-label chip-label-sm">문자 보내기</span>
+                                </div>
+                                <div class="box-tit">
+                                    <strong class="tit">제주는 도슨트가 필요해</strong>
+                                </div>
+                                <div class="box-writer">
+                                    <span class="writer-thumb">
+                                        <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                    </span>
+                                    <span class="writer-nick">전지현</span>
+                                    <span class="writer-date">1일 전</span>
+                                </div>
+                                <div class="box-cnts">
+                                    <p>
+                                        푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나 제주에서 꼭 들러야 하는 곳이 예술가의 공간이 푸르른 바다, 다양한 자연의 색을 머금은 오름...
+                                    </p>
+                                    <div class="thumb">
+                                        <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="box-util">
+                                <div class="left">
+                                    <span class="ico-view-count">999</span>
+                                    <span class="btn-act-like-wrap">
+                                        <input type="checkbox" id="like002">
+                                        <label for="like002">
+                                            <div class="box">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                            </div>
+                                            <span class="count">340</span>
+                                        </label>
+                                    </span>
+                                    <a href="#" class="ico-comment">999</a>
+                                </div>
+                            </div>
+                            <span class="btn-act-bookmark ty-black">
+                                <input type="checkbox" id="bookmark7">
+                                <label for="bookmark7">북마크</label>
+                            </span>
+                        </li>
+                        <li class="box-txt-card ty-small">
+                            <a href="#">
+                                <div class="chips-wrap">
+                                    <span class="chip-label chip-label-sm">문자 보내기</span>
+                                </div>
+                                <div class="box-tit">
+                                    <strong class="tit">제주는 도슨트가 필요해</strong>
+                                </div>
+                                <div class="box-writer">
+                                    <span class="writer-thumb">
+                                        <img src="../../../assets/mobile/images/temp/profile02.svg" alt="">
+                                    </span>
+                                    <span class="writer-nick">전지현</span>
+                                    <span class="writer-date">1일 전</span>
+                                </div>
+                                <div class="box-cnts">
+                                    <p>
+                                        푸르른 바다, 다양한 자연의 색을 머금은 오름만큼이나 제주에서 꼭 들러야 하는 곳이 예술가의 공간이 푸르른 바다, 다양한 자연의 색을 머금은 오름...
+                                    </p>
+                                    <div class="thumb">
+                                        <img src="../../../assets/mobile/images/temp/temp_img01.png" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="box-util">
+                                <div class="left">
+                                    <span class="ico-view-count">999</span>
+                                    <span class="btn-act-like-wrap">
+                                        <input type="checkbox" id="like002">
+                                        <label for="like002">
+                                            <div class="box">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                            </div>
+                                            <span class="count">340</span>
+                                        </label>
+                                    </span>
+                                    <a href="#" class="ico-comment">999</a>
+                                </div>
+                            </div>
+                            <span class="btn-act-bookmark ty-black">
+                                <input type="checkbox" id="bookmark8">
+                                <label for="bookmark8">북마크</label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <h2>Box-Thumbnail-card</h2>
+                <div class="guide-cnt">
+                    <h3>챌린지 리스트</h3>
+                    <ul class="box-thumb-list box-challenge-list">
+                        <li class="box-thumb-card">
+                            <a href="#">
+                                <div class="box-conts">
+                                    <div class="box-thumb">
+                                        <img src="../../../assets/mobile/images/temp/temp-challenge.png" alt="">
+                                    </div>
+                                    <div class="box-txt-wrap">
+                                        <p class="main-txt">2022 작심한달 <br>운동인증 챌린지운동인증 챌린지운동인증 챌린지</p>
+                                        <span class="sub-txt">D-<span class="end-date">70</span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="box-thumb-card">
+                            <a href="#">
+                                <div class="box-conts">
+                                    <div class="box-thumb">
+                                        <img src="../../../assets/mobile/images/temp/temp-challenge.png" alt="">
+                                    </div>
+                                    <div class="box-txt-wrap">
+                                        <p class="main-txt">2022 작심한달 <br>운동인증 챌린지운동인증 챌린지운동인증 챌린지</p>
+                                        <span class="sub-txt">D-<span class="end-date">70</span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <h3>종료된 챌린지 리스트</h3>
+                    <ul class="box-thumb-list box-challenge-list">
+                        <li class="box-thumb-card">
+                            <a href="#">
+                                <div class="box-conts">
+                                    <div class="box-thumb">
+                                        <span class="txt-end">종료</span>
+                                        <img src="../../../assets/mobile/images/temp/temp-challenge.png" alt="">
+                                    </div>
+                                    <div class="box-txt-wrap">
+                                        <p class="main-txt">2022 작심한달 <br>운동인증 챌린지운동인증 챌린지운동인증 챌린지</p>
+                                        <span class="sub-txt">D-<span class="end-date">70</span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="box-thumb-card">
+                            <a href="#">
+                                <div class="box-conts">
+                                    <div class="box-thumb">
+                                        <span class="txt-end">종료</span>
+                                        <img src="../../../assets/mobile/images/temp/temp-challenge.png" alt="">
+                                    </div>
+                                    <div class="box-txt-wrap">
+                                        <p class="main-txt">2022 작심한달 <br>운동인증 챌린지운동인증 챌린지운동인증 챌린지</p>
+                                        <span class="sub-txt">D-<span class="end-date">70</span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <h2>공지사항 리스트</h2>
+                <div class="guide-cnt">
+                    <ul class="box-notice-list">
+                        <li class="list-item">
+                            <a href="#">
+                                <strong class="notice-title">공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.</strong>
+                                <span class="notice-date">2022.10.13</span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">
+                                <strong class="notice-title">어버이날 부모님 선물은? 설문조사 결과 발표</strong>
+                                <span class="notice-date">2022.10.13</span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">
+                                <strong class="notice-title">미라클 모닝 챌린지 3차 당첨자 및 결과 발표</strong>
+                                <span class="notice-date">2022.10.13</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <h2>자주찾는 웰카페</h2>
+                <div class="guide-cnt">
+                    <div class="box-place">
+                        <ul class="list-place ">
+                            <li class="place-item slider-wrap">
+                                <a href="#">
+                                    <div class="box-place-thumb">
+                                        <img src="../../../assets/web/images/banner/welcafe/welcafe_img03.png" alt="">
+                                    </div>
+                                    <div class="place-txt">
+                                        <p class="font-card-tit04">세라젬 웰카페<br> 대치 직영점</p>
+                                        <span class="btn-act-star">
+                                            <input type="checkbox" id="bookmark01">
+                                            <label for="bookmark01">
+                                                위치 즐겨찾기
+                                            </label>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="place-item">
+                                <a href="#">
+                                    <div class="box-place-thumb">
+                                        <img src="../../../assets/web/images/banner/welcafe/welcafe_img04.png" alt="">
+                                    </div>
+                                    <div class="place-txt">
+                                        <p class="font-card-tit04">세라젬 웰카페<br> 압구정 직영점</p>
+                                        <span class="btn-act-star">
+                                            <input type="checkbox" id="bookmark02">
+                                            <label for="bookmark02">
+                                                위치 즐겨찾기
+                                            </label>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="place-item">
+                                <a href="#">
+                                    <div class="box-place-thumb">
+                                        <img src="../../../assets/web/images/banner/welcafe/welcafe_img05.png" alt="">
+                                    </div>
+                                    <div class="place-txt">
+                                        <p class="font-card-tit04">세라젬 웰카페<br> 청담점 직영점</p>
+                                        <span class="btn-act-star">
+                                            <input type="checkbox" id="bookmark03">
+                                            <label for="bookmark03">
+                                                위치 즐겨찾기
+                                            </label>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="place-item">
+                                <a href="#">
+                                    <div class="box-place-thumb">
+                                        <img src="../../../assets/web/images/banner/welcafe/welcafe_img06.png" alt="">
+                                    </div>
+                                    <div class="place-txt">
+                                        <p class="font-card-tit04">세라젬 웰카페<br> 학동 직영점</p>
+                                        <span class="btn-act-star">
+                                            <input type="checkbox" id="bookmark04">
+                                            <label for="bookmark04">
+                                                위치 즐겨찾기
+                                            </label>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="place-item">
+                                <a href="#">
+                                    <div class="box-place-thumb">
+                                        <img src="../../../assets/web/images/banner/welcafe/welcafe_img07.png" alt="">
+                                    </div>
+                                    <div class="place-txt">
+                                        <p class="font-card-tit04">세라젬 웰카페 합정 메세나 폴리스 직영점</p>
+                                        <span class="btn-act-star">
+                                            <input type="checkbox" id="bookmark05">
+                                            <label for="bookmark05">
+                                                위치 즐겨찾기
+                                            </label>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h2>Places List</h2>
+                <div class="guide-cnt">
+                    <div class="box-place-map">
+                        <div class="box-map">
+                            <!-- 카카오맵 들어가는 영역 -->
+                            <div class="box-place-list">
+                                <div class="box-search">
+                                    <form>
+                                        <input type="text" placeholder ="지역명 또는 주소를 입력하세요" id="keyword" size="18">
+                                        <button class="ico-search-thin">검색</button>
+                                        <button class="ico-here">위치</button>
+                                    </form>
+                                </div>
+                                <div class="box-search-result">
+                                    <span>검색결과 <em>118</em></span>
+                                    <ul class="box-places custom-scroll">
+                                        <li class="list-item">
+                                            <div class="info-place">
+                                                <h4>세라젬 웰카페 강릉 중앙 직영점</h4>
+                                                <span>서울 강남구 역삼동 756-14 1층</span>
+                                                <span> 02-000-0000</span>
+                                            </div>
+                                            <div class="bnt-place">
+                                                <span class="btn-act-star">
+                                                    <input type="checkbox" id="bookmark11">
+                                                    <label for="bookmark11">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                                <span class="btn-act-loc">
+                                                    <input type="checkbox" id="bookmark12">
+                                                    <label for="bookmark12">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="info-place">
+                                                <h4>세라젬 웰카페 거제 고현 직영점</h4>
+                                                <span>서울 강남구 압구정로 140</span>
+                                                <span> 02-000-0000</span>
+                                            </div>
+                                            <div class="bnt-place">
+                                                <span class="btn-act-star">
+                                                    <input type="checkbox" id="bookmark13">
+                                                    <label for="bookmark13">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                                <span class="btn-act-loc">
+                                                    <input type="checkbox" id="bookmark14">
+                                                    <label for="bookmark14">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="info-place">
+                                                <h4>세라젬 웰카페 경산 정평 직영점</h4>
+                                                <span>서울 강남구 청담동 63-18 , 1층</span>
+                                                <span> 02-000-0000</span>
+                                            </div>
+                                            <div class="bnt-place">
+                                                <span class="btn-act-star">
+                                                    <input type="checkbox" id="bookmark15">
+                                                    <label for="bookmark15">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                                <span class="btn-act-loc">
+                                                    <input type="checkbox" id="bookmark16">
+                                                    <label for="bookmark16">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="info-place">
+                                                <h4>세라젬 웰카페 경주 노동 직영점</h4>
+                                                <span>서울 강남구 논현동 88-7, 씨엘타워 102호,103호,104호</span>
+                                                <span> 02-000-0000</span>
+                                            </div>
+                                            <div class="bnt-place">
+                                                <span class="btn-act-star">
+                                                    <input type="checkbox" id="bookmark17">
+                                                    <label for="bookmark17">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                                <span class="btn-act-loc">
+                                                    <input type="checkbox" id="bookmark18">
+                                                    <label for="bookmark18">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="info-place">
+                                                <h4>세라젬 웰카페 고덕 직영점</h4>
+                                                <span>서울 강남구 서초동, 서초타워 102호</span>
+                                                <span> 02-000-0000</span>
+                                            </div>
+                                            <div class="bnt-place">
+                                                <span class="btn-act-star">
+                                                    <input type="checkbox" id="bookmark19">
+                                                    <label for="bookmark19">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                                <span class="btn-act-loc">
+                                                    <input type="checkbox" id="bookmark20">
+                                                    <label for="bookmark20">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="info-place">
+                                                <h4>세라젬 웰카페 강릉 중앙 직영점</h4>
+                                                <span>서울 강남구 역삼동 756-14 1층</span>
+                                                <span> 02-000-0000</span>
+                                            </div>
+                                            <div class="bnt-place">
+                                                <span class="btn-act-star">
+                                                    <input type="checkbox" id="bookmark11">
+                                                    <label for="bookmark11">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                                <span class="btn-act-loc">
+                                                    <input type="checkbox" id="bookmark12">
+                                                    <label for="bookmark12">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="info-place">
+                                                <h4>세라젬 웰카페 거제 고현 직영점</h4>
+                                                <span>서울 강남구 압구정로 140</span>
+                                                <span> 02-000-0000</span>
+                                            </div>
+                                            <div class="bnt-place">
+                                                <span class="btn-act-star">
+                                                    <input type="checkbox" id="bookmark13">
+                                                    <label for="bookmark13">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                                <span class="btn-act-loc">
+                                                    <input type="checkbox" id="bookmark14">
+                                                    <label for="bookmark14">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="info-place">
+                                                <h4>세라젬 웰카페 경산 정평 직영점</h4>
+                                                <span>서울 강남구 청담동 63-18 , 1층</span>
+                                                <span> 02-000-0000</span>
+                                            </div>
+                                            <div class="bnt-place">
+                                                <span class="btn-act-star">
+                                                    <input type="checkbox" id="bookmark15">
+                                                    <label for="bookmark15">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                                <span class="btn-act-loc">
+                                                    <input type="checkbox" id="bookmark16">
+                                                    <label for="bookmark16">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="info-place">
+                                                <h4>세라젬 웰카페 경주 노동 직영점</h4>
+                                                <span>서울 강남구 논현동 88-7, 씨엘타워 102호,103호,104호</span>
+                                                <span> 02-000-0000</span>
+                                            </div>
+                                            <div class="bnt-place">
+                                                <span class="btn-act-star">
+                                                    <input type="checkbox" id="bookmark17">
+                                                    <label for="bookmark17">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                                <span class="btn-act-loc">
+                                                    <input type="checkbox" id="bookmark18">
+                                                    <label for="bookmark18">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="info-place">
+                                                <h4>세라젬 웰카페 고덕 직영점</h4>
+                                                <span>서울 강남구 서초동, 서초타워 102호</span>
+                                                <span> 02-000-0000</span>
+                                            </div>
+                                            <div class="bnt-place">
+                                                <span class="btn-act-star">
+                                                    <input type="checkbox" id="bookmark19">
+                                                    <label for="bookmark19">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                                <span class="btn-act-loc">
+                                                    <input type="checkbox" id="bookmark20">
+                                                    <label for="bookmark20">
+                                                        위치 즐겨찾기
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- script import -->
+        <script src="../../../assets/mobile/js/lib/jquery.import.js"></script>
+    </body>
+</html>

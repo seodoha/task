@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+            pageTitle : '세라젬'
+
+        })
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="sub-page-header">
+                <button class="ico-back">뒤로가기</button>
+            </div>
+            <div id="container">
+                <section id="login" class="container-wrap">
+                    <div class="login-layout">
+                        <div class="login-logo">
+                            <div class="img-wrap">
+                                <img src="../../../assets/mobile/images/common/logo.svg" alt="웰라이프 랩">
+                            </div>
+                            <span>간편하게 웰라이프랩을 시작해보세요.</span>
+                        </div>
+                        <div class="box-sns">
+                            <a href="#" class="md-ripples ripples-light btn-kakao">카카오로 시작하기</a>
+                            <a href="#" class="md-ripples ripples-light btn-naver">네이버로 시작하기</a>
+                            <a href="#" class="md-ripples ripples-light btn-apple">Apple로 시작하기</a>
+                            <a href="#" class="md-ripples ripples-black btn-id">아이디로 로그인</a>
+                        </div>
+                        <div class="login-footer">
+                            <span>웰라이프랩이 처음이신가요?</span>
+                            <div class="box-btn">
+                                <button class="btn-text btn-text-underline">회원가입</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

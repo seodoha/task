@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+            pageTitle : '세라젬'
+        })
+    </head>
+    <body>
+        <div id="wrap" class="writer-home user-home"><!--작가 홈 페이지일 시 writer-home 클래스 추가-->
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="story" class="container-wrap user-write">
+                    <div class="page-layout-header sub-visual">
+                        <div class="box-bg"> <!--커버 이미지 없을 경우 empty 클래스 추가-->
+                            <img src="../../../assets/web/images/temp/writer-home-bg.png" alt="">
+                            <div class="inner-cont-wrap">
+                                <div class="btn-cover-util">
+                                    <!-- <div>
+                                        <label for="file01" class="btn-setting btn-sm btn-white md-ripples ripples-dark">커버설정</label>
+                                        <input type="file" id="file01">
+                                    </div>
+                                    <span class="box-guide">
+                                        권장사이즈 1920*700<br>
+                                        가로 최소 1000px 이상 이미지 등록
+                                    </span> -->
+                                    <button type="button" class="btn-delete btn-sm btn-white md-ripples ripples-dark">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-cont-wrap">
+                            <fieldset class="user-profile-write">
+                                <legend>프로필 입력</legend>
+                                <dl>
+                                    <dt>프로필 이미지</dt>
+                                    <dd class="pic">
+                                        <div class="pic-attach">
+                                            <img src="../../../assets/web/images/temp/profile01.svg" alt="">
+                                            <button data-pop="pic-attach">이미지 첨부</button>
+                                        </div>
+                                    </dd>
+                                    <dt><label for="nick">닉네임</label></dt>
+                                    <dd class="nick">
+                                        <div class="text-input-wrap">
+                                            <div class="box-input">
+                                                <input type="text" id="nick" placeholder="닉네임 입력" title="닉네임">
+                                                <button class="ico-search-delete">한글 10자까지 입력하실 수 있습니다</button>
+                                            </div>
+                                            <button class="btn-xs btn-black md-ripples ripples-light">중복확인</button>
+                                            <!-- <button class="btn-xs btn-disable">확인완료</button> -->
+                                        </div>
+                                    </dd>
+                                    <dt><label for="single">한줄 소개</label></dt>
+                                    <dd>
+                                        <div class="text-input-wrap error">
+                                            <div class="box-input">
+                                                <input type="text" id="single" placeholder="한줄 소개 입력" title="한줄 소개">
+                                                <button class="ico-search-delete">한글 50자까지 입력하실 수 있습니다</button>
+                                            </div>
+                                            <strong class="error-txt">에러가 났습니다.</strong>
+                                        </div>
+                                    </dd>
+                                    <dt><label for="profile">상세 프로필</label></dt>
+                                    <dd class="profile">
+                                        <div class="textarea-wrap">
+                                            <div class="box-input">
+                                                <textarea id="profile" placeholder="프로필 내용을 입력해주세요"></textarea>
+                                            </div>
+                                            <span class="count"><strong>156</strong>/2000</span>
+                                        </div>
+                                    </dd>
+                                    <dt>관심 키워드</dt>
+                                    <dd class="keyword">
+                                        <strong>최소 3개 이상 체크해주세요</strong>
+                                        <div class="chips-wrap">
+                                            <ul class="chip-list chip-list-hashtag">
+                                                <!-- 활성화 시 on class 추가 -->
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword1">
+                                                    <label for="keyword1">식단관리</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword2">
+                                                    <label for="keyword2">영양제</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword3">
+                                                    <label for="keyword3">운동</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword4">
+                                                    <label for="keyword4">건축</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword5">
+                                                    <label for="keyword5">홈트레이닝</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword6">
+                                                    <label for="keyword6">키워드1</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword7">
+                                                    <label for="keyword7">자색고구마칩</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword8">
+                                                    <label for="keyword8">키워드3</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword9">
+                                                    <label for="keyword9">키워드4</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword10">
+                                                    <label for="keyword10">키워드5</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword11">
+                                                    <label for="keyword11">키워드6</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword12">
+                                                    <label for="keyword12">키워드7</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword13">
+                                                    <label for="keyword13">키워드8</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword14">
+                                                    <label for="keyword14">키워드9</label>
+                                                </li>
+                                                <li class="chip-check">
+                                                    <input type="checkbox" id="keyword15">
+                                                    <label for="keyword15">키워드10</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button class="btn-text-underline">선택 초기화</button>
+                                    </dd>
+                                </dl>
+                                <div class="box-btn">
+                                    <button class="btn-large btn-white md-ripples ripples-dark">취소</button>
+                                    <button class="btn-large btn-black md-ripples ripples-light">등록하기</button>
+                                </div>
+                            </fieldset>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+        @@include('./pages/web/include/scriptImport.html')
+        <!-- 레이어 팝업 -->
+        <div id="pic-attach" class="layer-popup-wrap">
+            <div class="layer-popup">
+                <div class="popup-header">
+                    <h4 class="tit">프로필 이미지 설정</h4>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                        <!-- <button class="ico-popup-close" onclick="uiCommon.layer.close('test-layer');">닫기</button> -->
+                    </span>
+                </div>
+                <div class="popup-body">
+                    <p class="desc">이미지 업로드로 프로필을 등록 시, 비율이 1:1인 이미지를 추천드려요.</p>
+                    <fieldset>
+                        <legend>프로필 이미지 설정</legend>
+                        <dl>
+                            <dt>기본 이미지 선택</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <label for="">
+                                            <input type="radio" name="pic" checked />
+                                            <span>
+                                                <img src="../../../assets/web/images/avatar/my_profile_1.svg" alt="">
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input type="radio" name="pic" />
+                                            <span>
+                                                <img src="../../../assets/web/images/avatar/my_profile_2.svg" alt="">
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input type="radio" name="pic" />
+                                            <span>
+                                                <img src="../../../assets/web/images/avatar/my_profile_3.svg" alt="">
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input type="radio" name="pic" />
+                                            <span>
+                                                <img src="../../../assets/web/images/avatar/my_profile_4.svg" alt="">
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input type="radio" name="pic" />
+                                            <span>
+                                                <img src="../../../assets/web/images/avatar/my_profile_5.svg" alt="">
+                                            </span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </dd>
+                            <dt>직접 업로드</dt>
+                            <dd class="file-input-wrap">
+                                <ul class="file-input-list">
+                                    <li>
+                                        <div class="box-file-input">
+                                            <label for="file01">첨부</label>
+                                            <input type="file" id="file01" title="대표 이미지 첨부">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- <div class="box-file-input">
+                                            <label for="file01">첨부</label>
+                                            <input type="file" id="file01" title="대표 이미지 첨부">
+                                        </div> -->
+                                        <div class="input-img-wrap">
+                                            <button class="ico-close">삭제</button>
+                                            <img src="../../../assets/web/images/temp/temp-img03.png" alt="">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-dot gray">
+                                    <li>10MB 미만의 JPG, JPEG, GIF, PNG 파일만 등록 가능합니다.</li>
+                                    <li>음란 및 불법적인 내용은 통보없이 삭제될 수 있습니다.</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </fieldset>
+                </div>
+                <div class="popup-footer">
+                    <button class="btn-sm btn-white md-ripples">취소</button>
+                    <button class="btn-sm btn-black md-ripples ripples-light">저장</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

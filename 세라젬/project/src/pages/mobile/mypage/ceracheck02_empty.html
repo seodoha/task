@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+
+            <div class="sub-page-header">
+                <button class="ico-back">뒤로가기</button>
+                <button class="ico-calendar">검사목록으로가기</button>
+            </div>
+
+            <div id="container">
+                <section id="mypage" class="container-wrap">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading04">세라체크</h2>
+                            <span class="sup-txt ty02">히스토리</span>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents ty04">
+                        <div class="box-layout-contents ty02">
+                            <div class="inner-wrap">
+                                <div class="tab-wrap">
+                                    <ul class="tab-list tab-list-line">
+                                        <li><a href="javascript:void(0)" class="on">멘탈헬스</a></li>
+                                        <li><a href="javascript:void(0)">바디헬스</a></li>
+                                    </ul>
+                                    <div class="box-noresult">
+                                        <div class="box-lottie">
+                                            <div id="not-ceracheck" class="lottie"></div>
+                                        </div>
+                                        <strong class="empty-tit">측정 내역이 없습니다.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

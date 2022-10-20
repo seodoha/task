@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/mobile/include/header.html')
+            <div id="container" class="bg-gray">
+                <section id="error" class="container-wrap">
+                    <div class="inner-wrap">
+                        <div class="box-challenge">
+                            <div class="box-noresult">
+                                <div class="box-lottie">
+                                    <div id="not-service" class="lottie"></div>
+                                </div>
+                                <h5 class="font-card-tit03">인터넷에 연결되어있지 않습니다.</h5>
+                                <p class="detail-txt">네트워크 연결 상태를 확인 해 주세요.</p>
+                                <div class="box-btn">
+                                    <button class="btn-md btn-black md-ripples ripples-light">재시도</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/mobile/include/bottomNavi.html')
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+</html>

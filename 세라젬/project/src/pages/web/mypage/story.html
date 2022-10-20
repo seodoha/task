@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="mypage" class="container-wrap bg-gray mypage">
+                    <div class="page-layout-header">
+                        @@include('./pages/web/include/mypageInfo.html')
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <aside class="inner-left">
+                                @@include('./pages/web/include/aside.html')
+                            </aside>
+                            <div class="inner-right">
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>내가 작성한 콘텐츠 <span class="count">20</span></h3>
+                                        <a href="#" class="more">
+                                            모두 보기
+                                            <span class="ico-more"></span>
+                                        </a>
+                                    </div>
+                                    <ul class="box-thumb-list column-3">
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">Kiu기우쌤</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">심리테스트</span>
+                                                        </div>
+                                                        <p class="main-txt">I가 있네, 친구없지? MBTI 환상과 환장</p>
+                                                        <span class="sub-txt">MBTI 환상의 케미, 환장의 케미</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <video muted="" autoplay="" loop="" playsinline="" preload="auto">
+                                                        <source src="../../../assets/web/images/temp/temp-video.mp4">
+                                                    </video>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">데일리 헬스</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">헬시라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">운동에 진심인 이들의 운동루틴운동에 진심인 이들의 운동루틴</p>
+                                                        <span class="sub-txt">일상에 활력을 불어넣기 위한 운동 루틴일상에 활력을 불어넣기 위한 운동 루틴</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-0.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">딱일분만</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">세라젬라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">안마의자도 가전테리어가 대세</p>
+                                                        <span class="sub-txt">디자인과 실용성 모두 갖췄다</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-1.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>스크랩한 콘텐츠 <span class="count">40</span></h3>
+                                        <a href="#" class="more">
+                                            모두 보기
+                                            <span class="ico-more"></span>
+                                        </a>
+                                    </div>
+                                    <ul class="box-thumb-list column-3">
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">바리스타아카데미바리스타아카데미바리스타아카데미</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">홈라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">지속가능한 라테는 말이야</p>
+                                                        <span class="sub-txt">카페라떼, 얼마나 알고 계세요?</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-2.png" alt="">
+                                                </div>
+                                            </a>
+                                            <span class="btn-act-bookmark">
+                                                <input type="checkbox" id="bookmark_story_4" checked>
+                                                <label for="bookmark_story_4">
+                                                    북마크
+                                                </label>
+                                            </span>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">바리스타아카데미바리스타아카데미바리스타아카데미</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">홈라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">지속가능한 라테는 말이야</p>
+                                                        <span class="sub-txt">카페라떼, 얼마나 알고 계세요?</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-3.png" alt="">
+                                                </div>
+                                            </a>
+                                            <span class="btn-act-bookmark">
+                                                <input type="checkbox" id="bookmark_story_5" checked>
+                                                <label for="bookmark_story_5">
+                                                    북마크
+                                                </label>
+                                            </span>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">바리스타아카데미바리스타아카데미바리스타아카데미</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">홈라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">지속가능한 라테는 말이야</p>
+                                                        <span class="sub-txt">카페라떼, 얼마나 알고 계세요?</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-4.png" alt="">
+                                                </div>
+                                            </a>
+                                            <span class="btn-act-bookmark">
+                                                <input type="checkbox" id="bookmark_story_6" checked>
+                                                <label for="bookmark_story_6">
+                                                    북마크
+                                                </label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>
+                                            최근 본 콘텐츠
+                                            <span class="count">5</span>
+                                            <span class="text-tip">최근 본 콘텐츠는 최근 7일, 최대 30건까지 저장됩니다.</span>
+                                        </h3>
+                                        <a href="#" class="more">
+                                            모두 보기
+                                            <span class="ico-more"></span>
+                                        </a>
+                                    </div>
+                                    <ul class="box-thumb-list column-3">
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">바리스타아카데미바리스타아카데미바리스타아카데미</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">홈라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">지속가능한 라테는 말이야</p>
+                                                        <span class="sub-txt">카페라떼, 얼마나 알고 계세요?</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-3.png" alt="">
+                                                </div>
+                                            </a>
+                                            <span class="btn-act-bookmark">
+                                                <input type="checkbox" id="bookmark_story_4">
+                                                <label for="bookmark_story_4">
+                                                    북마크
+                                                </label>
+                                            </span>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">바리스타아카데미바리스타아카데미바리스타아카데미</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">홈라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">해독이 필요한 시간</p>
+                                                        <span class="sub-txt">카페라떼, 얼마나 알고 계세요?</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-4.png" alt="">
+                                                </div>
+                                            </a>
+                                            <span class="btn-act-bookmark">
+                                                <input type="checkbox" id="bookmark_story_5">
+                                                <label for="bookmark_story_5">
+                                                    북마크
+                                                </label>
+                                            </span>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">바리스타아카데미바리스타아카데미바리스타아카데미</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">홈라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">겨울의 맛을 담은 티타임 플레이스</p>
+                                                        <span class="sub-txt">카페라떼, 얼마나 알고 계세요?</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-0.png" alt="">
+                                                </div>
+                                            </a>
+                                            <span class="btn-act-bookmark">
+                                                <input type="checkbox" id="bookmark_story_6">
+                                                <label for="bookmark_story_6">
+                                                    북마크
+                                                </label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>작성중인 콘텐츠<span class="count">5</span></h3>
+                                    </div>
+                                    <ul class="box-txt-col-2">
+                                        <li class="box-txt-card">
+                                            <a href="#">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                    </p>
+                                                    <div class="thumb">
+                                                        <span class="count">3</span>
+                                                        <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="sub-txt">
+                                                    <span>최종저장</span>
+                                                    <span class="date">2022.03.07</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-txt-card">
+                                            <a href="#">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">어제 길에서 만난 치즈냥이 자꾸 생각나요</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐깁니다.
+                                                    </p>
+                                                </div>
+                                                <div class="sub-txt">
+                                                    <span>최종저장</span>
+                                                    <span class="date">2022.03.07</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-txt-card">
+                                            <a href="#">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">건강하고 맛있게 채식
+                                                        밥상을 차려보았어요</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        두루두루 골고루 먹자 주의였는데 성장기 애들 키우다보니 알게모르게 제 몸이 소화할 수 있는 양보다 육류 섭취가 너무 많았나봐요. 위염, 요로결석...
+                                                        두루두루 골고루 먹자 주의였는데 성장기 애들 키우다보니 알게모르게 제 몸이 소화할 수 있는 양보다 육류 섭취가 너무 많았나봐요. 위염, 요로결석...
+                                                    </p>
+                                                    <div class="thumb">
+                                                        <span class="count">3</span>
+                                                        <img src="../../../assets/web/images/temp/temp_img02.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="sub-txt">
+                                                    <span>최종저장</span>
+                                                    <span class="date">2022.03.07</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-txt-card">
+                                            <a href="#">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">아직 입력된 제목이 없습니다. </strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        요즘 부쩍 날씨가 추워졌네요. 이런 추운 겨울에는 괜히 더 움츠리게 되고 더 피곤한
+                                                    </p>
+                                                    <div class="thumb">
+                                                        <span class="count">3</span>
+                                                        <img src="../../../assets/web/images/temp/temp_img02.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="sub-txt">
+                                                    <span>최종저장</span>
+                                                    <span class="date">2022.03.07</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-txt-card">
+                                            <a href="#">
+                                                <div class="box-tit">
+                                                    <strong class="font-card-tit02">참을 수 없는 기침을 멈추는 꿀팁</strong>
+                                                </div>
+                                                <div class="box-cnts">
+                                                    <p>
+                                                        두루두루 골고루 먹자 주의였는데 성장기 애들 키우다보니 알게모르게 제 몸이 소화할 수 있는 양보다 육류 섭취가 너무 많았나봐요. 위염, 요로결석...
+                                                        두루두루 골고루 먹자 주의였는데 성장기 애들 키우다보니 알게모르게 제 몸이 소화할 수 있는 양보다 육류 섭취가 너무 많았나봐요. 위염, 요로결석...
+                                                    </p>
+                                                </div>
+                                                <div class="sub-txt">
+                                                    <span>최종저장</span>
+                                                    <span class="date">2022.03.07</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>
+                                            콘텐츠 승인조회
+                                            <div class="tooltip-wrapper box-tooltip">
+                                                <span class="tooltip-button ico-guide btn-tooltip">가이드</span>
+                                                <dl class="tooltip-content active-toolBox">
+                                                    <dt>스토리 콘텐츠 승인</dt>
+                                                    <dd>스토리 메뉴는 콘텐츠 등록 후 관리자의 승인을 통해 게시됩니다.</dd>
+                                                    <dd>품질이 현저히 떨어지는 이미지와 영상, 글은 승인이 반려될 수 있습니다.</dd>
+                                                    <dd>스토리 관련 문의는 나의 정보 > 1:1문의를 이용해주세요.</dd>
+                                                </dl>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                    <div class="tab-wrap tab-ctrl">
+                                        <ul class="tab-list tab-list-round">
+                                            <!-- 활성화 시 on class 추가 -->
+                                            <li><a href="javascript:void(0)" class="on">심사 중<span class="count">3</span></a></li>
+                                            <li><a href="javascript:void(0)">반려<span class="count">1</span></a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <!-- 심사중 -->
+                                            <div>
+                                                <div class="box-txt-col-2">
+                                                    <div class="box-txt-card">
+                                                        <a href="javascript:void(0)" data-pop="content-popup">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">여행</span>
+                                                            </div>
+                                                            <div class="box-tit">
+                                                                <strong class="font-card-tit02">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                                                            </div>
+                                                            <div class="box-cnts">
+                                                                <p>
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                </p>
+                                                                <div class="thumb">
+                                                                    <span class="count">3</span>
+                                                                    <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="sub-txt">
+                                                                <span>최종저장</span>
+                                                                <span class="date">2022.03.07</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="box-txt-card">
+                                                        <a href="javascript:void(0)" data-pop="content-popup">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">여행</span>
+                                                            </div>
+                                                            <div class="box-tit">
+                                                                <strong class="font-card-tit02">어제 길에서 만난 치즈냥이 자꾸 생각나요</strong>
+                                                            </div>
+                                                            <div class="box-cnts">
+                                                                <p>
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐깁니다.
+                                                                </p>
+                                                            </div>
+                                                            <div class="sub-txt">
+                                                                <span>최종저장</span>
+                                                                <span class="date">2022.03.07</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="box-txt-card">
+                                                        <a href="javascript:void(0)" data-pop="content-popup">
+                                                            <div class="box-tit">
+                                                                <strong class="font-card-tit02">건강하고 맛있게 채식
+                                                                    밥상을 차려보았어요</strong>
+                                                            </div>
+                                                            <div class="box-cnts">
+                                                                <p>
+                                                                    두루두루 골고루 먹자 주의였는데 성장기 애들 키우다보니 알게모르게 제 몸이 소화할 수 있는 양보다 육류 섭취가 너무 많았나봐요. 위염, 요로결석...
+                                                                    두루두루 골고루 먹자 주의였는데 성장기 애들 키우다보니 알게모르게 제 몸이 소화할 수 있는 양보다 육류 섭취가 너무 많았나봐요. 위염, 요로결석...
+                                                                </p>
+                                                                <div class="thumb">
+                                                                    <span class="count">3</span>
+                                                                    <img src="../../../assets/web/images/temp/temp_img02.png" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="sub-txt">
+                                                                <span>최종저장</span>
+                                                                <span class="date">2022.03.07</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- 반려 -->
+                                            <div>
+                                                <span class="text-tip">반려된 콘텐츠는 최종 저장일로부터 최대 30일간 보관되며, 이후 삭제됩니다.</span>
+                                                <div class="box-txt-col-2">
+                                                    <div class="box-txt-card">
+                                                        <a href="javascript:void(0)" data-pop="content-popup">
+                                                            <div class="chips-wrap">
+                                                                <span class="chip-label chip-label-sm">여행</span>
+                                                            </div>
+                                                            <div class="box-tit">
+                                                                <strong class="font-card-tit02">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                                                            </div>
+                                                            <div class="box-cnts">
+                                                                <p>
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                    2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                                </p>
+                                                                <div class="thumb">
+                                                                    <span class="count">3</span>
+                                                                    <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="sub-txt">
+                                                                <span>최종저장</span>
+                                                                <span class="date">2022.03.07</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>
+                                            콘텐츠 승인조회
+                                            <div class="tooltip-wrapper box-tooltip">
+                                                <span class="tooltip-button ico-guide btn-tooltip">가이드</span>
+                                                <dl class="tooltip-content active-toolBox">
+                                                    <dt>스토리 콘텐츠 승인</dt>
+                                                    <dd>스토리 메뉴는 콘텐츠 등록 후 관리자의 승인을 통해 게시됩니다.</dd>
+                                                    <dd>품질이 현저히 떨어지는 이미지와 영상, 글은 승인이 반려될 수 있습니다.</dd>
+                                                    <dd>스토리 관련 문의는 나의 정보 > 1:1문의를 이용해주세요.</dd>
+                                                </dl>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                    <div class="box-txt-card power-user">
+                                        <div class="icon-wrapper">
+                                            <div class="ico-lightblue-ellipse"></div>
+                                            <span class="emoji">🌟</span>
+                                        </div>
+
+                                        <p>웰라이프랩을 풍성하게 가꿔주신 <span class="user-name">박세라</span>님!<br><span class="user-name">박세라</span>님의 스토리 콘텐츠는 심사 없이 즉시 등록됩니다</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--2022.07.06 id -> class 적용-->
+                <div class="layer-popup-wrap content-popup">
+                    <div class="layer-popup">
+                        <button class="ico-popup-close-white popup-close">
+                            닫기
+                        </button>
+                        <div class="popup-body custom-scroll">
+                            <div class="popup-title">
+                                <img src="../../../assets/web/images/temp/temp-content-popup-01.png" alt="대표이미지">
+                                <div class="popup-title-wrapper">
+                                    <div class="chips-wrap">
+                                        <span class="chip-label chip-label-sm">여행</span>
+                                    </div>
+                                    <h4 class="font-heading03">참을 수 없는 기침을 멈추는 꿀팁</h4>
+                                    <p>경험에서 우러나온 기침 멈추는 법</p>
+                                </div>
+                            </div>
+                            <div class="popup-content">
+                                <p>밤에 기침을 지속적으로 하는 것은 당신 자신의 수면도 방해할 뿐더러 옆에서 같이 자는 사람을 짜증나게 할 수 있다. 게다가 밤에 기침을 하는 것은 감기나 기관지염, 백일해, 폐렴, 천식, 위식도 역류질환, 울혈성 심부전 등의 호흡기 질환이 원인인 경우가 많기 때문에, 밤에 기침하는 증상이 한 주 이상 지속된다면 병원에 가는 것이 좋다. 하지만 대부분의 경우 알레르기나 기도가 점액 등의 분비물로 자극받아 기침이 나오는 경우가 많으니 적절한 치료법을 사용했을 때는 바로 상태가 개선될 수도 있다.</p>
+                                <img src="../../../assets/web/images/temp/temp-content-popup-02.png" alt="이미지">
+                                <p>밤에 기침을 지속적으로 하는 것은 당신 자신의 수면도 방해할 뿐더러 옆에서 같이 자는 사람을 짜증나게 할 수 있다. 게다가 밤에 기침을 하는 것은 감기나 기관지염, 백일해, 폐렴, 천식, 위식도 역류질환, 울혈성 심부전 등의 호흡기 질환이 원인인 경우가 많기 때문에, 밤에 기침하는 증상이 한 주 이상 지속된다면 병원에 가는 것이 좋다. 하지만 대부분의 경우 알레르기나 기도가 점액 등의 분비물로 자극받아 기침이 나오는 경우가 많으니 적절한 치료법을 사용했을 때는 바로 상태가 개선될 수도 있다.</p>
+                                <div class="chips-wrap">
+                                    <ul class="chip-list chip-list-hashtag">
+                                        <li><a href="javascript:void(0)">건강</a></li>
+                                        <li><a href="javascript:void(0)">취미/여행</a></li>
+                                        <li><a href="javascript:void(0)">주식/재테크</a></li>
+                                        <li><a href="javascript:void(0)">부동산</a></li>
+                                        <li><a href="javascript:void(0)">썸/연애</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="popup-footer">
+                            <button class="btn-md btn-white md-ripples popup-close">삭제</button>
+
+                            <div>
+                                <button class="btn-md btn-white md-ripples popup-close">닫기</button>
+                                <button class="btn-md btn-black md-ripples ripples-light popup-close">수정</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

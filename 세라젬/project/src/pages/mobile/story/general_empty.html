@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/mobile/include/header.html')
+            <div id="container" class="isWriteBtn"> <!--글쓰기 플로팅 버튼 유무-->
+                <section id="story" class="container-wrap">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading04">스토리</h2>
+                        </div>
+                    </div>
+                    <div class="tab-wrap sticky-header">
+                        <ul class="tab-list tab-list-round">
+                            <li><a href="#">인기</a></li>
+                            <li><a href="#">팔로잉</a></li>
+                            <li><a href="#" class="on">헬시라이프</a></li>
+                            <li><a href="#">로컬라이프</a></li>
+                            <li><a href="#">홈라이프</a></li>
+                            <li><a href="#">세라젬라이프</a></li>
+                            <li><a href="#">여행</a></li>
+                            <li><a href="#">뷰티</a></li>
+                            <li><a href="#">음악</a></li>
+                            <li><a href="#">건축/설계</a></li>
+                            <li><a href="#">반려동물</a></li>
+                            <li><a href="#">문화/예술</a></li>
+                            <li><a href="#">취미/레저</a></li>
+                            <li><a href="#">시사/이슈</a></li>
+                            <li><a href="#">인문학/철학</a></li>
+                            <li><a href="#">사진/촬영</a></li>
+                        </ul>
+                        <div class="btn-tab-wrap">
+                            <button class="btn-tab ico-1depth-close">열기</button>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <div class="box-noresult">
+                                <div class="box-lottie">
+                                    <div id="not-search" class="lottie"></div>
+                                </div>
+                                <strong class="empty-tit">등록된 콘텐츠가 없습니다.</strong>
+                                <p class="detail-txt">
+                                    이 게시판의 첫 번째 스토리를 <br>작성해서 공유해 보시는 건 어떨까요?
+                                </p>
+                                <div class="box-btn">
+                                    <a href="#" class="btn-md btn-black md-ripples ripples-light">스토리 작성하기</a>
+                                    <button class="btn-text btn-text-underline">인기 스토리 둘러보기</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/mobile/include/bottomNavi.html')
+        </div>
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>component | buttons</title>
+        <link rel="stylesheet" href="../../../assets/web/css/common.css">
+        <style>
+            .component-wrap h2{
+                padding: 1rem;
+                background: #eee;
+            }
+            .component-wrap h3{
+                padding: 1rem 0;
+                color: palevioletred;
+            }
+            .component-wrap .guide-cont{
+                padding: 2rem 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="component-wrap">
+            <div class="button-component">
+                <h2>Button</h2>
+                <div class="guide-cont">
+                    <h3>XSmall</h3>
+                    <div class="box-btn">
+                        <button class="btn-xs btn-disable">Button</button>
+                        <button class="btn-xs btn-black md-ripples ripples-light">Button</button>
+                        <button class="btn-xs btn-white md-ripples ripples-dark">Button</button>
+                    </div>
+                    <h3>Small</h3>
+                    <div class="box-btn">
+                        <button class="btn-sm btn-disable">Button</button>
+                        <button class="btn-sm btn-black md-ripples ripples-light">Button</button>
+                        <button class="btn-sm btn-white md-ripples ripples-dark">Button</button>
+                    </div>
+                    <h3>Medium</h3>
+                    <div class="box-btn">
+                        <button class="btn-md btn-disable">Button</button>
+                        <button class="btn-md btn-black md-ripples ripples-light">Button</button>
+                        <button class="btn-md btn-white md-ripples ripples-dark">Button</button>
+                    </div>
+                    <h3>Large</h3>
+                    <div class="box-btn">
+                        <button class="btn-large btn-disable">Button</button>
+                        <button class="btn-large btn-black md-ripples ripples-light">Button</button>
+                        <button class="btn-large btn-white md-ripples ripples-dark">Button</button>
+                    </div>
+                </div>
+                <h2>Button Inner Icon</h2>
+                <div class="guide-cont">
+                    <div class="box-btn">
+                        <button class="btn-md btn-text-xs btn-ico btn-black right md-ripples ripples-light">
+                        right-ico Button
+                        </button>
+                        <button class="btn-md btn-text-xs btn-ico btn-black left md-ripples ripples-light">
+                        left-ico Button
+                        </button>
+                    </div>
+                </div>
+                <h2>Button with toast popup</h2>
+                <div class="guide-cont">
+                    <div class="box-btn">
+                        <button class="btn-md btn-black btn-pop-toast md-ripples ripples-light" data-toast-pop="test-toast">
+                            toast popup
+                        </button>
+                        <div id="test-toast" class="pop-toast">URL이 복사되었습니다.</div>
+                    </div>
+                </div>
+                <h2>Button for subscribe</h2>
+                <div class="guide-cont">
+                    <!-- 댓글 구독 -->
+                    <div class="box-btn">
+                        <input id="check1" type="checkbox" class="input-check">
+                        <label for="check1" class="btn-md btn-white btn-subscribe">
+                            <span class="unchecked">팔로우</span>
+                            <span class="checked">팔로잉</span>
+                        </label>
+                    </div>
+                    <!-- 작가 구독 -->
+                    <div class="box-btn">
+                        <input id="check2" type="checkbox" class="input-check">
+                        <label for="check2" class="btn-xs btn-white btn-subscribe">
+                            <span class="unchecked">팔로우</span>
+                            <span class="checked">팔로잉</span>
+                        </label>
+                    </div>
+                </div>
+                <h2>Text Button</h2>
+                <div class="guide-cont">
+                    <h3>XSmall</h3>
+                    <div class="box-btn">
+                        <button class="btn-text btn-text-xs btn-ico">Text Button</button>
+                    </div>
+                    <h3>Small</h3>
+                    <div class="box-btn">
+                        <button class="btn-text btn-text-sm btn-text-disable">Text Button</button>
+                    </div>
+                    <h3>Medium</h3>
+                    <div class="box-btn">
+                        <button class="btn-text btn-text-md btn-ico">Text Button</button>
+                    </div>
+                    <h3>ETC</h3>
+                    <div class="box-btn">
+                        <button class="btn-text btn-text-underline">바로가기</button>
+                        <button class="btn-text btn-text-challenge">
+                            <span class="hidden">챌린지</span>
+                        </button>
+                    </div>
+                </div>
+                <h2>Icon Button</h2>
+                <div class="guide-cont">
+                    <div class="box-btn">
+                        <button class="btn-top">
+                            <span class="hidden">go Top</span>
+                        </button>
+                        <button class="btn-play md-ripples ripples-light">play</button>
+                        <button class="btn-stop md-ripples ripples-light">pause</button>
+                        <button class="btn-sns btn-sns-insta md-ripples ripples-dark">insta</button>
+                        <button class="btn-sns btn-sns-youtube md-ripples ripples-dark">youtube</button>
+                        <button class="btn-sns btn-sns-link md-ripples ripples-dark">link</button>
+                        <button class="btn-app btn-app-aos">구글 플레이스토어</button>
+                        <button class="btn-app btn-app-ios">앱스토어</button>
+                        <button class="btn-share btn-share-facebook">facebook</button>
+                        <button class="btn-share btn-share-kakao">kakao</button>
+                        <button class="btn-share btn-share-line">line</button>
+                        <button class="btn-share btn-share-link">link</button>
+                    </div>
+                </div>
+                <h2>IconGraphy</h2>
+                <div class="guide-cont">
+                    <div>
+                        <button class="ico-plus">추가</button>&nbsp;
+                        <button class="ico-external-link">공유</button>&nbsp;
+                        <button class="ico-more">더보기</button>&nbsp;
+                        <button class="ico-more-gray">더보기</button>&nbsp;
+                        <button class="ico-setting-cover">배경적용</button>&nbsp;
+                        <button class="ico-white-write">텍스트 첨부</button>&nbsp;
+                        <button class="ico-white-check">체크</button>&nbsp;
+                        <button class="ico-black-arr-down">아래</button>&nbsp;
+                        <button class="ico-gray-arr-down">아래</button>&nbsp;
+                        <button class="ico-white-arr-down">아래</button>&nbsp;
+                        <button class="ico-black-arr-up">위</button>&nbsp;
+                        <button class="ico-edit">편집</button>&nbsp;
+                        <button class="ico-white-close">닫기</button>&nbsp;
+                        <button class="ico-black-close">닫기</button>&nbsp;
+                        <button class="ico-gray-close">닫기</button>&nbsp;
+                        <button class="ico-popup-close">닫기</button>&nbsp;
+                        <br><br>
+                        <button class="ico-phone">전화번호</button>&nbsp;
+                        <button class="ico-pin">핀</button>&nbsp;
+                        <button class="ico-clock">시간</button>&nbsp;
+                        <button class="ico-best-time">best time</button>&nbsp;
+                        <button class="ico-search">검색</button>&nbsp;
+                        <button class="ico-search-delete">삭제</button>&nbsp;
+                        <button class="ico-radio-checked">라디오 버튼 선택</button>&nbsp;
+                        <button class="ico-here">위치</button>&nbsp;
+                        <button class="ico-gift">선물</button>&nbsp;
+                        <button class="ico-save">저장</button>&nbsp;
+                        <button class="ico-ticket">티켓</button>&nbsp;
+                        <button class="ico-parking">주차</button>&nbsp;
+                        <br><br>
+                        <button class="ico-heart">즐겨찾기</button>&nbsp;
+                        <button class="ico-guide">가이드</button>&nbsp;
+                        <button class="ico-attach-image">이미지첨부</button>&nbsp;
+                        <button class="ico-setting">설정</button>&nbsp;
+                        <button class="ico-close">닫기</button>&nbsp;
+                        <button class="ico-url">url복사</button>&nbsp;
+                        <button class="ico-share">공유하기</button>&nbsp;
+                        <button class="ico-play-solid">재생</button>&nbsp;
+                        <button class="ico-play-fill">재생</button>&nbsp;
+                        <button class="ico-1depth-close">열기</button>&nbsp;
+                        <button class="ico-1depth-open">닫기</button>&nbsp;
+                        <button class="ico-chart-up">상승</button>&nbsp;
+                        <button class="ico-chart-down">하락</button>&nbsp;
+                        <button class="ico-chart-same">유지</button>&nbsp;
+                        <br><br>
+                        <button class="ico-graph">그래프</button>&nbsp;
+                        <button class="ico-rank">랭킹</button>&nbsp;
+                        <button class="ico-point">포인트</button>&nbsp;
+                        <br><br>
+                        <button class="ico-post-text unfocus">텍스트 추가</button>&nbsp;
+                        <button class="ico-post-text">텍스트 추가</button>&nbsp;
+                        <button class="ico-post-img unfocus">이미지 추가</button>&nbsp;
+                        <button class="ico-post-img">이미지 추가</button>&nbsp;
+                        <button class="ico-post-img-plural unfocus">이미지 추가</button>&nbsp;
+                        <button class="ico-post-img-plural">이미지 추가</button>&nbsp;
+                        <button class="ico-post-mov unfocus">영상 추가</button>&nbsp;
+                        <button class="ico-post-mov">영상 추가</button>&nbsp;
+                        <button class="ico-post-vote unfocus">투표 추가</button>&nbsp;
+                        <button class="ico-post-vote">투표 추가</button>&nbsp;
+                        <button class="ico-post-tag unfocus">태그 추가</button>&nbsp;
+                        <button class="ico-post-tag">태그 추가</button>&nbsp;
+                        <button class="ico-post-loc unfocus">위치 추가</button>&nbsp;
+                        <button class="ico-post-loc">위치 추가</button>&nbsp;
+                        <button class="ico-post-delete unfocus">삭제</button>&nbsp;
+                        <button class="ico-post-delete">삭제</button>&nbsp;
+                        <button class="ico-post-guide">가이드</button>&nbsp;
+                        <button class="ico-list-play">재생 영상</button>&nbsp;
+                        <button class="ico-expand">확장</button>&nbsp;
+                        <br><br>
+                        <button class="ico-coffee-cup">콘텐츠가 없습니다.</button>
+                        <button class="ico-post">게시글이 없습니다.</button>
+                        <button class="ico-marker">웹카페가 없습니다.</button>
+                        <button class="ico-thunder">챌린지가 없습니다.</button>
+                        <button class="ico-coupon">쿠폰이 없습니다.</button>
+                        <br><br>
+                        <button class="ico-coin">coin</button>&nbsp;
+                        <button class="ico-mental">mental</button>&nbsp;
+                        <button class="ico-dashboard">dashboard</button>&nbsp;
+                        <button class="ico-dna">dashboard</button>&nbsp;
+                        <button class="ico-yellow-ellipse">Yellow Ellipse</button>&nbsp;
+                        <button class="ico-thumbup">thumbup</button>&nbsp;
+                        <br><br>
+                        <div class="btn-act-like-wrap">
+                            <input type="checkbox" id="like">
+                            <label for="like">
+                                <div class="box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="text">좋아요</span>
+                                <span class="count">340</span>
+                            </label>
+                        </div>
+                        &nbsp;
+                        <span class="btn-act-bookmark">
+                            <input type="checkbox" id="bookmark1">
+                            <label for="bookmark1">
+                                북마크
+                            </label>
+                        </span>
+                        &nbsp;
+                        <span class="btn-act-bookmark ty-black">
+                            <input type="checkbox" id="bookmark2">
+                            <label for="bookmark2">
+                                북마크
+                            </label>
+                        </span>
+                        &nbsp;
+                        <span class="btn-act-star">
+                            <input type="checkbox" id="bookmark3">
+                            <label for="bookmark3">
+                                위치 즐겨찾기
+                            </label>
+                        </span>
+                        &nbsp;
+                        <span class="btn-act-loc">
+                            <input type="checkbox" id="bookmark4">
+                            <label for="bookmark4">
+                                위치 즐겨찾기
+                            </label>
+                        </span>
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../assets/web/js/lib/jquery.import.js"></script>
+    </body>
+</html>

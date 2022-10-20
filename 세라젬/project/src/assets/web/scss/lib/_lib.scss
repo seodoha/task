@@ -1,0 +1,213 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _lib.scss
+* @Description : 라이브러리
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+@import './ripples';
+@import './slick';
+@import './selectric';
+@import './video-js.min';
+@import './scrollbar';
+@import './nice-select';
+
+.nice-select {
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding-left: 0;
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    float: none;
+    font-size: 1.4rem;
+    color: #c4c4c4;
+    line-height: 1.7;
+    .current {
+        margin-right: 0.4rem;
+    }
+    &::after {
+        right: 0;
+        width: 1.6rem !important;
+        height: 1.6rem;
+        margin: -0.8rem 0 0 0;
+        border: 0;
+        transform: none;
+        transform-origin: 50%;
+        @include iconBtn('../images/icon/ico-gray-arr-down.svg');
+        font-size: 0;
+        background-color: transparent;
+    }
+    .list {
+        padding: 1rem;
+        font-size: 0;
+        line-height: 0;
+        min-height: auto;
+        height: 28.5rem;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 0.2rem;
+            border-radius: 0.5rem;
+        }
+        &::-webkit-scrollbar-thumb {background-color: #999;}
+        &::-webkit-scrollbar-track {background-color: #e5e5e5;}
+        li {
+            display: flex;
+            align-items: center;
+            position: relative;
+            height: 4.4rem;
+            padding: 0 8rem 0 1rem;
+            font-size: 1.6rem;
+            color: #aaa;
+            white-space: nowrap;
+            &.highlighted, &.selected {
+                background: none;
+                color: $black;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 1.3rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background: url('../images/icon/ico-sel-check.svg') no-repeat center;
+                    background-size: contain;
+                }
+            }
+            &:hover {
+                background: #f8f8f8;
+                color: $black;
+            }
+        }
+    }
+    &.open {
+        &::after {transform: rotate(-180deg);}
+    }
+    &.on {
+        .current {color: $black;}
+        &::after {background-image: url('../images/icon/ico-black-arr-down.svg');}
+    }
+}
+
+.selectric-wrapper {
+    display: inline-block;
+    .selectric {
+        display: flex;
+        align-items: center;
+        border: none;
+        background: none;
+
+        .label {
+            height: auto;
+            margin: 0 0.4rem 0 0;
+            font-size: 1.6rem;
+            color: #c4c4c4;
+            line-height: 1.5;
+        }
+        .button {
+            &::after {display: none;}
+            position: relative;
+            width: 1.6rem;
+            height: 1.6rem;
+            @include iconBtn('../images/icon/ico-gray-arr-down.svg');
+            font-size: 0;
+            background-color: transparent;
+            transition: none;
+        }
+    }
+    .selectric-items {
+        width: auto !important;
+        margin-top: 1rem;
+        background: #fff;
+        border: none;
+        border-radius: 0.5rem;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform-origin: 50% 0;
+        transform: scale(0.75) translateY(-21px);
+        transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+        ul {
+            padding: 1rem;
+            font-size: 0;
+            line-height: 0;
+            min-height: auto;
+            li {
+                display: flex;
+                align-items: center;
+                position: relative;
+                height: 4.4rem;
+                padding: 0 8rem 0 1rem;
+                font-size: 1.6rem;
+                color: #aaa;
+                white-space: nowrap;
+                &.highlighted, &.selected {
+                    background: none;
+                    color: $black;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: 1.3rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        background: url('../images/icon/ico-sel-check.svg') no-repeat center;
+                        background-size: contain;
+                    }
+                }
+                &:hover {
+                    background: #f8f8f8;
+                    color: $black;
+                }
+            }
+        }
+        .selectric-scroll {
+            &::-webkit-scrollbar {
+                width: 0.2rem;
+                border-radius: 0.5rem;
+            }
+            &::-webkit-scrollbar-thumb {
+            background-color: #999;
+            }
+            &::-webkit-scrollbar-track {
+            background-color: #e5e5e5;
+            }
+        }
+    }
+    &.selectric-open {
+        .selectric-items {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1) translateY(0);
+        }
+    }
+}
+
+.video-js {
+    .vjs-big-play-button {
+        .vjs-icon-placeholder{display: none;}
+        top: 50%;
+        left: 50%;
+        width: 10rem;
+        height: 10rem;
+        transform: translate(-50%,-50%);
+        background: url('../images/common/ico-video-stop.svg') no-repeat !important;
+        background-size: contain !important;
+        border: none;
+        border-radius: 50%;
+        transition: none;
+    }
+    &.vjs-paused .vjs-big-play-button {
+        background: url('../images/common/ico-video-play.svg') no-repeat !important;
+        background-size: contain !important;
+    }
+    // 재생 후
+    &:hover .vjs-big-play-button {
+        display: block;
+    }
+}

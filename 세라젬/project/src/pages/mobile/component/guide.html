@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html')
+        <style>
+            * {
+                -webkit-touch-cout: initial; /* IOS Safari */
+                -webkit-user-select: initial; /* Safari */
+                -moz-user-select: -moz-initial;
+                -khtml-user-select: initial;
+                user-select: initial;
+            }
+            body {
+                padding: 24px 24px 400px;
+            }
+            .guideTit2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .guideTit3 {
+                background: #00437c;
+                color: #fff;
+                font-size: 16px;
+                padding: 10px;
+                margin: 20px 0;
+            }
+
+            .tleft {
+                text-align: left !important;
+            }
+            .htmlList {
+                width: 100%;
+            }
+            .pattern-wrap > li > iframe {
+                width: 100%;
+                height: 600px;
+                overflow: hidden;
+                border: 1px #333 solid;
+                margin: 0;
+                padding: 0;
+            }
+            .pattern-content > p ~ p {
+                margin-top: 10px;
+            }
+            .pattern-name {
+                font-size: 18px;
+                color: #222;
+                padding: 10px 0;
+            }
+            .pattern-desc {
+                font-size: 14px;
+                color: #666;
+            }
+            .pattern-link {
+                display: inline-block;
+                margin-top: 10px;
+                padding: 7px 15px;
+                background: #333;
+                color: #fff;
+            }
+            .pattern-wrap + .guideTit3 {
+                margin-top: 40px;
+            }
+            .guideContainer {
+                position: relative;
+            }
+            .guideContainer .pattern-nav {
+                position: sticky;
+                top: 0;
+                left: 0;
+                /* width: 100vw; */
+                margin-left: -24px;
+            }
+            .pattern-menu {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                background: #544944;
+            }
+            .pattern-menu > li {
+                padding: 15px;
+            }
+            .pattern-menu > li > a {
+                display: block;
+                color: #fff;
+                font-weight: bold;
+            }
+            .btn-go-wrap {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 50;
+                display: block;
+                background: #000;
+                width: 50px;
+                height: 50px;
+                color: #fff;
+                border-radius: 25px;
+                opacity: 0.5;
+                text-align: center;
+                line-height: 50px;
+            }
+            .btn-go-wrap:before {
+                display: block;
+                content: "TOP";
+            }
+        </style>
+    </head>
+    <body id="goTop">
+        <a href="#goTop" class="btn-go-wrap"></a>
+        <section class="guideContainer">
+            <h1 class="guideTit2">Ceragem Component Guide</h1>
+            <nav class="pattern-nav">
+                <ul class="pattern-menu">
+                    <li><a href="#type1">Typography</a></li>
+                    <li><a href="#type2">Button</a></li>
+                    <li><a href="#type7">Input</a></li>
+                    <li><a href="#type3">Tab</a></li>
+                    <li><a href="#type4">Chips</a></li>
+                    <li><a href="#type5">Slides</a></li>
+                    <li><a href="#type6">Lottie</a></li>
+                </ul>
+            </nav>
+            <h2 id="type1" class="guideTit3">[# Typography]</h2>
+            <ul class="pattern-wrap">
+                <li class="pattern-content">
+                    <p class="pattern-name">타이틀 : TypoGraphy</p>
+                    <a href="./typography.html" class="pattern-link" target="_blank">페이지 바로가기</a>
+                    <iframe src="./typography.html" frameborder="0" scrolling=""></iframe>
+                </li>
+            </ul>
+            <h2 id="type2" class="guideTit3">[# Button]</h2>
+            <ul class="pattern-wrap">
+                <li class="pattern-content">
+                    <p class="pattern-name">타이틀 : Button</p>
+                    <a href="./button.html" class="pattern-link" target="_blank">페이지 바로가기</a>
+                    <iframe src="./button.html" frameborder="0" scrolling=""></iframe>
+                </li>
+            </ul>
+            <h2 id="type1" class="guideTit3">[# Input]</h2>
+            <ul class="pattern-wrap">
+                <li class="pattern-content">
+                    <p class="pattern-name">타이틀 : Input</p>
+                    <a href="./input.html" class="pattern-link" target="_blank">페이지 바로가기</a>
+                    <iframe src="./input.html" frameborder="0" scrolling=""></iframe>
+                </li>
+            </ul>
+            <h2 id="type3" class="guideTit3">[# Tab]</h2>
+            <ul class="pattern-wrap">
+                <li class="pattern-content">
+                    <p class="pattern-name">타이틀 : Tab</p>
+                    <a href="./tab.html" class="pattern-link" target="_blank">페이지 바로가기</a>
+                    <iframe src="./tab.html" frameborder="0" scrolling=""></iframe>
+                </li>
+            </ul>
+            <h2 id="type4" class="guideTit3">[# Chips]</h2>
+            <ul class="pattern-wrap">
+                <li class="pattern-content">
+                    <p class="pattern-name">타이틀 : Chip</p>
+                    <a href="./chip.html" class="pattern-link" target="_blank">페이지 바로가기</a>
+                    <iframe src="./chip.html" frameborder="0" scrolling=""></iframe>
+                </li>
+            </ul>
+            <h2 id="type5" class="guideTit3">[# Slides]</h2>
+            <ul class="pattern-wrap">
+                <li class="pattern-content">
+                    <p class="pattern-name">타이틀 : Slide</p>
+                    <a href="./slide.html" class="pattern-link" target="_blank">페이지 바로가기</a>
+                    <iframe src="./slide.html" frameborder="0" scrolling=""></iframe>
+                </li>
+            </ul>
+            <h2 id="type6" class="guideTit3">[# Lottie]</h2>
+            <ul class="pattern-wrap">
+                <li class="pattern-content">
+                    <p class="pattern-name">타이틀 : Lottie</p>
+                    <a href="./lottie.html" class="pattern-link" target="_blank">페이지 바로가기</a>
+                    <iframe src="./lottie.html" frameborder="0" scrolling=""></iframe>
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>

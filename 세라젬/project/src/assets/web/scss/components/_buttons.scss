@@ -1,0 +1,728 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _buttons.scss
+* @Description : 버튼 컴포넌트
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+@keyframes like {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(.2,.2);
+    }
+    30% {
+        transform: scale(.5,.5);
+    }
+    60% {
+        transform: scale(1,1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3,1.3);
+        opacity: 0;
+    }
+}
+
+.box-btn{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    button, a {
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
+    & > button,
+    & > a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.btn {
+    // ***size
+    &-xs {
+        padding: 0.8rem 1.6rem;
+        border-radius: 4rem;
+        min-height: 3.4rem;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        font-weight: 500;
+        transform: translate3d(0,0,0);
+        // ***disable
+        &:disabled {
+            background-color: #fff;
+            color: #aaaaaa;
+            border: 1px solid #e5e5e5;
+            cursor: default;
+            &:hover {background-color: #fff;}
+        }
+    }
+    &-sm{
+        padding: 0.8rem 2rem;
+        border-radius: 4rem;
+        min-height: 4rem;
+        font-size: 1.4rem;
+        line-height: 1.7;
+        font-weight: 600;
+        transform: translate3d(0,0,0);
+        // ***disable
+        &:disabled {
+            background-color: #fff;
+            color: #aaaaaa;
+            border: 1px solid #e5e5e5;
+            cursor: default;
+        }
+    }
+    &-md{
+        padding: 1.3rem 2rem;
+        border-radius: 4rem;
+        min-height: 4.8rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        font-weight: 500;
+        transform: translate3d(0,0,0);
+        // ***disable
+        &:disabled {
+            background-color: #fff;
+            color: #aaaaaa;
+            border: 1px solid #e5e5e5;
+            cursor: default;
+        }
+    }
+    &-large{
+        width: 33.3333%;
+        border-radius: 1rem;
+        line-height: 8.4rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        transform: translate3d(0,0,0);
+        // ***disable
+        &:disabled {
+            background-color: #fff;
+            color: #aaaaaa;
+            border: 1px solid #e5e5e5;
+            cursor: default;
+        }
+    }
+
+    // ***color
+    &-black{
+        background-color: $black;
+        color: #fff;
+        transition: background-color 0.3s;
+        transform: translate3d(0,0,0);
+        &:hover{
+            background-color: #000;
+        }
+    }
+    &-white{
+        background-color: #fff;
+        color: $black;
+        border: 1px solid #e5e5e5;
+        transition: background-color 0.3s;
+        transform: translate3d(0,0,0);
+        &:hover{
+            background-color: rgba(0,0,0,0.05);
+            &:disabled {background-color: #fff;}
+        }
+    }
+
+    // ***disable
+    &-disable {
+        background-color: #fff;
+        color: #aaaaaa;
+        border: 1px solid #e5e5e5;
+        cursor: default;
+    }
+
+    // ***functional
+    &-text{
+        display: flex;
+        align-items: center;
+        color: #444;
+        line-height: 1.2;
+        font-weight: 500;
+
+        // btn-text size
+        &-xs{
+            font-size: 1.4rem;
+        }
+        &-sm{
+            font-size: 1.6rem;
+        }
+        &-md{
+            font-size: 1.8rem;
+        }
+
+        // btn-text disable
+        &-disable {
+            color: #c4c4c4;
+            cursor: default;
+        }
+
+        // etc btn-text
+        &-underline{
+            font-size: 1.6rem;
+            line-height: 1.5;
+            text-decoration: underline;
+            text-underline-position: under;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &-challenge{
+            width: 9.3rem;
+            height: 3.9rem;
+            @include backgroundImg('../images/icon/ico_challenge.svg', center, contain);
+        }
+
+    }
+    &-ico{
+        @include icoPosition('../images/icon/ico-plus.svg','right',1.6rem, 1.6rem,0.7rem);
+        &.right {@include icoPosition('../images/icon/ico-pencil.svg','right',1.6rem, 1.6rem,0.7rem);}
+        &.left {@include icoPosition('../images/icon/ico-pencil.svg','left',1.6rem, 1.6rem,0.7rem); &::after{display: none}}
+    }
+
+    &-move-list {
+        display: inline-flex;
+        align-items: center;
+        padding: 1.2rem 2rem;
+        background-color: #fff;
+        border-radius: 30rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+        @include icoPosition('../images/icon/ico-list.svg','left',1.6rem, 1.6rem,0.8rem);
+        &::before {background-size: auto;}
+    }
+    &-top{
+        @include iconBtn('../images/icon/ico-top.svg');
+        width: 6rem;
+        height: 6rem;
+    }
+    &-top-move{
+        width: 6rem;
+        height: 6rem;
+        @include iconBtn('../images/icon/ico-top.svg');
+        background-size: contain;
+    }
+    &-play{
+        @include iconBtn('../images/icon/ico-play.svg');
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+    }
+    &-stop{
+        @include iconBtn('../images/icon/ico-stop.svg');
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+    }
+    &-sns{
+        width: 6rem;
+        height: 6rem;
+        background-color: #fff;
+        border: 1px solid #e5e5e5 !important;
+        border-radius: 50% !important;
+        &-insta {
+            @include iconBtn('../images/icon/ico-insta.svg');
+            background-size: 2rem 2rem;
+        }
+        &-youtube {
+            @include iconBtn('../images/icon/ico-youtube.svg');
+            background-size: 2.2rem 1.5rem;
+        }
+        &-link {
+            @include iconBtn('../images/icon/ico-link.svg');
+            background-size: 2.6rem 2.6rem;
+        }
+    }
+    &-app{
+        width: 4.4rem;
+        height: 4.4rem;
+        &-aos {
+            @include iconBtn('../images/icon/ico-google-play.svg');
+        }
+        &-ios {
+            @include iconBtn('../images/icon/ico-appstore.svg');
+        }
+    }
+    &-share{
+        width: 4.8rem;
+        height: 4.8rem;
+        &-facebook{
+            @include iconBtn('../images/icon/ico-share-facebook.svg');
+        }
+        &-kakao{
+            @include iconBtn('../images/icon/ico-share-kakao.svg');
+        }
+        &-line{
+            @include iconBtn('../images/icon/ico-share-line.svg');
+        }
+        &-link{
+            @include iconBtn('../images/icon/ico-share-link.svg');
+        }
+    }
+    &-act-like-wrap {
+        display: inline-block;
+        input[type="checkbox"] {display: none;}
+        font-size: 0;
+        label {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            cursor: pointer;
+            font-size: 0;
+            .box {
+                position: relative;
+                svg {
+                    display: block;
+                    position: relative;
+                    z-index: 1;
+                    width: 2.4rem;
+                    transition: all 1s;
+                }
+            }
+        }
+
+        input[type="checkbox"] + label .box {
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 3.6rem;
+                height: 3.6rem;
+                margin-top: -1.8rem;
+                margin-left: -1.8rem;
+                background-color: #FFF3F3;
+                border-radius: 50%;
+                opacity: 0;
+            }
+        }
+
+        input[type="checkbox"]:checked + label .box {
+            &::after {
+                animation: circle .8s;
+            }
+            svg {
+                fill: #fa5252;
+                path {stroke: #fa5252;}
+                animation: like 0.8s ease-out;
+            }
+        }
+
+        .count {
+            display: inline-block;
+            margin-left: 4px;
+            font-size: 1.4rem;
+            color: #aaa;
+        }
+        .text {
+            display: inline-block;
+            margin-left: 4px;
+            font-size: 1.6rem;
+            color: #444;
+        }
+    }
+    &-act-bookmark {
+        @include icoChkBtn('../images/icon/ico-bm-white-outline.svg', '../images/icon/ico-bm-white.svg');
+        & > label{
+            transition: none !important;
+        }
+        &.ty-black {
+            @include icoChkBtn('../images/icon/ico-bm-black-outline.svg', '../images/icon/ico-bm-black.svg');
+        }
+    }
+    &-act-star {
+        @include icoChkBtn('../images/icon/ico-star-outline.svg', '../images/icon/ico-star-black.svg');
+        & > label{
+            transition: none !important;
+        }
+    }
+    &-act-loc {
+        @include icoChkBtn('../images/icon/ico-loc-outline.svg', '../images/icon/ico-loc-black.svg');
+        filter: blur(0px);
+        transform: translate3d(0px, 0px, 0px);
+        transform: unset !important;
+    }
+    &-hamburger {
+        position: relative;
+        width: 2.8rem;
+        height: 2.8rem;
+        font-size: 0;
+        span {
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0.2rem;
+            width: 2.4rem;
+            height: 2px;
+            background-color: #161616;
+            border-radius: 2rem;
+            transition: all 0.3s ease;
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #161616;
+                border-radius: 20px;
+                transition: all 0.3s ease;
+            }
+            &::before {top: -0.8rem;}
+            &::after {top: 0.8rem;}
+        }
+        &.close {
+            span {
+                background-color: transparent;
+                &::before, &::after {top: 0;}
+                &::before {transform: rotate(45deg);}
+                &::after {transform: rotate(-45deg);}
+            }
+        }
+    }
+    &-board-setting {
+        @include icoPosition('../images/icon/ico-setting.svg', 'left', 1.6rem, 1.6rem, 0.6rem);
+        display: flex;
+        align-items: center;
+        padding: 0.8rem 2rem;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 4rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.7;
+    }
+}
+
+// IconGraphy
+.ico {
+    &-edit-util {@include iconBtn('../images/icon/ico-edit-util.svg');width: 1.6rem;height: 1.6rem;}
+    &-muscle {@include iconBtn('../images/icon/ico-muscle.svg');width: 2.4rem;height: 2.4rem;}
+    &-size {@include iconBtn('../images/icon/ico-size.svg');width: 2.4rem;height: 2.4rem;}
+    &-blood-sugar {@include iconBtn('../images/icon/ico-blood_sugar.svg');width: 2.4rem;height: 2.4rem;}
+    &-blood-pressure {@include iconBtn('../images/icon/ico-blood_pressure.svg');width: 2.4rem;height: 2.4rem;}
+    &-nervous-system {@include iconBtn('../images/icon/ico-nervous_system.svg');width: 2.4rem;height: 2.4rem;}
+    &-circle { @include iconBtn('../images/icon/ico-circle.svg'); width: 1.1rem; height: 1.1rem; }
+    &-coupon { @include iconBtn('../images/icon/ico-coupon.svg'); width: 9.2rem; height: 9.2rem; }
+    &-coffee-cup { @include iconBtn('../images/icon/ico-coffee-cup.svg'); width: 9.2rem; height: 9.2rem; }
+    &-marker { @include iconBtn('../images/icon/ico-marker.svg'); width: 9.6rem; height: 9.6rem; }
+    &-post { @include iconBtn('../images/icon/ico-post.svg'); width: 9.6rem; height: 9.6rem; }
+    &-thunder { @include iconBtn('../images/icon/ico-thunder.svg'); width: 9.2rem; height: 9.2rem; }
+    &-coin { @include iconBtn('../images/icon/ico-coin.svg'); width: 3.2rem; height: 3.2rem; }
+    &-3dot { @include iconBtn('../images/icon/ico-3dot.svg'); width: 2.4rem; height: 2.4rem; }
+    &-tempo-delete {@include iconBtn('../images/icon/ico-temp-delete.svg');width: 2.4rem;height: 2.4rem;}
+    &-plus {@include iconBtn('../images/icon/ico-plus.svg');width: 1.6rem;height: 1.6rem;}
+    &-external-link {@include iconBtn('../images/icon/ico-external-link.svg');width: 1.6rem;height: 1.6rem;}
+    &-more {@include iconBtn('../images/icon/ico-more.svg');width: 1.6rem;height: 1.6rem;}
+    &-more-white {@include iconBtn('../images/icon/ico-more-white.svg');width: 1.6rem;height: 1.6rem;}
+    &-more-gray {@include iconBtn('../images/icon/ico-more-gray.svg');width: 1.6rem;height: 1.6rem;}
+    &-more-gray-thin {@include iconBtn('../images/icon/ico-more-gray-thin.svg');width: 3.2rem;height: 3.2rem;}
+    &-declare {@include iconBtn('../images/icon/ico-declare.svg');width: 2.4rem;height: 2.4rem;}
+    &-declare-gray {@include iconBtn('../images/icon/ico-declare-gray.svg');width: 2.4rem;height: 2.4rem;}
+    &-declare-white {@include iconBtn('../images/icon/ico-declare-white.svg');width: 2.4rem;height: 2.4rem;}
+    &-setting-cover {@include iconBtn('../images/icon/ico-setting-cover.svg');width: 1.6rem;height: 1.6rem;}
+    &-white-write {@include iconBtn('../images/icon/ico-white-write.svg');width: 1.6rem;height: 1.6rem;}
+    &-white-check {@include iconBtn('../images/icon/ico-white-check.svg');width: 1.6rem;height: 1.6rem;}
+    &-black-arr-down {@include iconBtn('../images/icon/ico-black-arr-down.svg');width: 1.6rem;height: 1.6rem;}
+    &-gray-arr-down {@include iconBtn('../images/icon/ico-gray-arr-down.svg');width: 1.6rem;height: 1.6rem;}
+    &-white-arr-down {@include iconBtn('../images/icon/ico-white-arr-down.svg');width: 1.6rem;height: 1.6rem;}
+    &-black-arr-up {@include iconBtn('../images/icon/ico-black-arr-up.svg');width: 1.6rem;height: 1.6rem;}
+    &-white-close {@include iconBtn('../images/icon/ico-white-close.svg');width: 1.6rem;height: 1.6rem;}
+    &-black-close {@include iconBtn('../images/icon/ico-black-close.svg');width: 1.6rem;height: 1.6rem;}
+    &-gray-close {@include iconBtn('../images/icon/ico-gray-close.svg');width: 1.6rem;height: 1.6rem;}
+    &-edit {@include iconBtn('../images/icon/ico-edit.svg');width: 1.6rem;height: 1.6rem;}
+    &-popup-close {@include iconBtn('../images/icon/ico-popup-close.svg');width: 3.2rem;height: 3.2rem;}
+    &-popup-close-white {@include iconBtn('../images/icon/ico-popup-close-white.svg');width: 4rem;height: 4rem;}
+    &-phone {@include iconBtn('../images/icon/ico-phone.svg');width: 2rem;height: 2rem;}
+    &-pin {@include iconBtn('../images/icon/ico-pin.svg');width: 2rem;height: 2rem;}
+    &-clock {@include iconBtn('../images/icon/ico-clock.svg');width: 2rem;height: 2rem;}
+    &-best-time {@include iconBtn('../images/icon/ico-bestsearch-time.svg');width: 2rem;height: 2rem;}
+    &-search {@include iconBtn('../images/icon/ico-search.svg');width: 2rem;height: 2rem;}
+    &-search-thin {@include iconBtn('../images/icon/ico-search-thin.svg');width: 2.4rem;height: 2.4rem;}
+    &-search-delete {@include iconBtn('../images/icon/ico-search-delete.svg');width: 2rem;height: 2rem;}
+    &-radio-checked {@include iconBtn('../images/icon/ico-radio-checked.svg');width: 2.4rem;height: 2.4rem;}
+    &-here {@include iconBtn('../images/icon/ico-here.svg');width: 2.2rem;height: 2.2rem;}
+    &-gift {@include iconBtn('../images/icon/ico-gift.svg');width: 2rem;height: 2rem;}
+    &-save {@include iconBtn('../images/icon/ico-save.svg');width: 2rem;height: 2rem;}
+    &-ticket {@include iconBtn('../images/icon/ico-ticket.svg');width: 2rem;height: 2rem;}
+    &-parking {@include iconBtn('../images/icon/ico-parking.svg');width: 2rem;height: 2rem;}
+    &-heart {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: #aaa;
+        @include icoPosition('../images/icon/ico-heart.svg','left',2.4rem, 2.4rem,0.4rem);
+    }
+    &-guide {@include iconBtn('../images/icon/ico-guide.svg');width: 2.4rem;height: 2.4rem;}
+    &-attach-image {@include iconBtn('../images/icon/ico-attach-image.svg');width: 2.4rem;height: 2.4rem;}
+    &-setting {@include iconBtn('../images/icon/ico-setting.svg');width: 2.4rem;height: 2.4rem;}
+    &-close {@include iconBtn('../images/icon/ico-close.svg');width: 2.4rem;height: 2.4rem;}
+    &-url {@include iconBtn('../images/icon/ico-url.svg');width: 2.4rem;height: 2.4rem;}
+    &-share {@include iconBtn('../images/icon/ico-share.svg');width: 2.4rem;height: 2.4rem;}
+    &-share-gray {@include iconBtn('../images/icon/ico-share-gray.svg');width: 2.6rem;height: 2.6rem;}
+    &-play-solid {@include iconBtn('../images/icon/ico-play-solid.svg');width: 2.4rem;height: 2.4rem;}
+    &-play-fill {@include iconBtn('../images/icon/ico-play-fill.svg');width: 2.4rem;height: 2.4rem;}
+    &-1depth-close {@include iconBtn('../images/icon/ico-1depth-close.svg');width: 2.4rem;height: 2.4rem;}
+    &-1depth-open {@include iconBtn('../images/icon/ico-1depth-open.svg');width: 2.4rem;height: 2.4rem;}
+    &-chart-up {@include iconBtn('../images/icon/ico-chart-up.svg');width: 2.4rem;height: 2.4rem;}
+    &-chart-down {@include iconBtn('../images/icon/ico-chart-down.svg');width: 2.4rem;height: 2.4rem;}
+    &-chart-same {@include iconBtn('../images/icon/ico-chart-same.svg');width: 2.4rem;height: 2.4rem;}
+    &-chart-new {@include iconBtn('../images/icon/ico-chart-new.svg');width: 3.6rem;height: 2.4rem;background-size: auto;}
+    &-graph {@include iconBtn('../images/icon/ico-graph.svg');width: 3.6rem;height: 3.6rem;}
+    &-rank {@include iconBtn('../images/icon/ico-rank.svg');width: 3.6rem;height: 3.6rem;}
+    &-point {@include iconBtn('../images/icon/ico-point.svg');width: 3.6rem;height: 3.6rem;}
+    &-post-text {
+        @include iconBtn('../images/icon/ico-post-text.svg');
+        width: 4rem;
+        height: 4rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-text-unfocus.svg');
+        }
+    }
+    &-post-img {
+        @include iconBtn('../images/icon/ico-post-img.svg');
+        width: 4rem;
+        height: 4rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-img-unfocus.svg');
+        }
+    }
+    &-post-img-plural {
+        @include iconBtn('../images/icon/ico-post-img-plural.svg');
+        width: 4rem;
+        height: 4rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-img-plural-unfocus.svg');
+        }
+    }
+    &-post-mov {
+        @include iconBtn('../images/icon/ico-post-mov.svg');
+        width: 4rem;
+        height: 4rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-mov-unfocus.svg');
+        }
+    }
+    &-post-vote {
+        @include iconBtn('../images/icon/ico-post-vote.svg');
+        width: 4rem;
+        height: 4rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-vote-unfocus.svg');
+        }
+    }
+    &-post-tag {
+        @include iconBtn('../images/icon/ico-post-tag.svg');
+        width: 4rem;
+        height: 4rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-tag-unfocus.svg');
+        }
+    }
+    &-post-loc {
+        @include iconBtn('../images/icon/ico-post-loc.svg');
+        width: 4rem;
+        height: 4rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-loc-unfocus.svg');
+        }
+    }
+    &-post-delete {
+        @include iconBtn('../images/icon/ico-post-delete.svg');
+        width: 4rem;
+        height: 4rem;
+        &.unfocus {
+            @include iconBtn('../images/icon/ico-post-delete-unfocus.svg');
+        }
+    }
+    &-post-guide {@include iconBtn('../images/icon/ico-post-guide.svg');width: 4rem;height: 4rem;}
+    &-list-play {@include iconBtn('../images/icon/ico-list-play.svg');width: 4rem;height: 4rem;}
+    &-expand {@include iconBtn('../images/icon/ico-expand.svg');width: 4rem;height: 4rem;}
+    &-mental {@include iconBtn('../images/icon/ico-mental.svg');width: 5.2rem;height: 5.2rem;}
+    &-dashboard {@include iconBtn('../images/icon/ico-dashboard.svg');width: 5.2rem;height: 5.2rem;}
+    &-dna {@include iconBtn('../images/icon/ico-dna.svg');width: 9rem;height: 9rem;}
+    &-yellow-ellipse { @include iconBtn('../images/icon/ico-yellow-ellipse.svg'); width: 8.8rem; height: 8.8rem; }
+    &-lightblue-ellipse { @include iconBtn('../images/icon/ico-lightblue-ellipse.svg'); width: 8.8rem; height: 8.8rem; }
+    &-thumbup { @include iconBtn('../images/icon/ico-thumbup.svg'); width: 9.2rem; height: 7.7rem; }
+    &-view-count {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: #aaa;
+        @include icoPosition('../images/icon/ico-view.svg','left',2.4rem, 2.4rem,0.4rem);
+    }
+    &-comment {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: #aaa;
+        @include icoPosition('../images/icon/ico-comment.svg','left',2.4rem, 2.4rem,0.4rem);
+    }
+}
+
+// 텍스트 더보기 버튼
+.txt-more {
+    display: inline-flex;
+    align-items: center;
+    color: #444;
+    @include icoPosition('../images/icon/ico-black-arr-right.svg','right',1.6rem, 1.6rem, 0.4rem);
+    &::after {margin-top: -0.3rem;}
+}
+
+// Input checkbox btn
+.input-check{
+    display: none;
+    &:checked+.btn-subscribe{
+        background-color: $black;
+        color: #fff;
+        &::before{
+            opacity: 0;
+        }
+        &::after{
+            width: 1.2rem;
+            opacity: 1;
+        }
+        .unchecked{
+            display: none;
+        }
+        .checked{
+            display: block;
+        }
+
+        &.btn-xs::after{width: 0.9rem;}
+    }
+}
+.btn-subscribe{
+    position: relative;
+    padding-left: 4.4rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    .unchecked{
+        display: block;
+    }
+    .checked{
+        display: none;
+    }
+    &::before{
+        @include backgroundImg('../images/icon/ico-plus.svg',center,contain);
+        @include venderPrefix('transform',translateY(-50%));
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 2.3rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        opacity: 1;
+        transition: all 0.3s;
+        transition-delay: 0.1s;
+    }
+    &::after{
+        @include venderPrefix('transform',rotate(-45deg));
+        content: "";
+        opacity: 0;
+        display: inline-block;
+        position: absolute;
+        left: 2.3rem;
+        top: 1.8rem;
+        width: 0;
+        height: 0.6rem;
+        border: 0.2rem solid #FFFFFF;
+        border-top: 0;
+        border-right: 0;
+        transition: all 0.3s;
+        transition-delay: 0.1s;
+    }
+    &.btn-xs{
+        padding-left: 3.8rem;
+        &::before{
+            left: 1.9rem;
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+        &::after{
+            top: 1rem;
+            left: 2rem;
+            height: 0.5rem;
+        }
+    }
+}
+
+.btn-write {
+    &-head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 11.1rem;
+        height: 4.8rem;
+        background-color: #000;
+        @include icoPosition('../images/icon/ico-pencil.svg','left',1.6rem, 1.6rem,1rem);
+        border-radius: 30rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        color: #fff;
+    }
+    &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 15.8rem;
+        height: 7rem;
+        padding: 0 3.2rem 0 6.2rem;
+        background-color: #000;
+        border-radius: 30rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+        color: #fff;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        transition: width 0.3s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 2.8rem;
+            top: 50%;
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-top: -1.2rem;
+            background: url('../images/icon/ico-pencil.svg') no-repeat center;
+            background-size: contain;
+        }
+        &.reduce {
+            width: 7rem;
+            padding: 0;
+            font-size: 0;
+            &::before {
+                left: 50%;
+                margin-left: -1.2rem;
+            }
+        }
+    }
+}

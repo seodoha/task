@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="mypage" class="container-wrap bg-gray mypage">
+                    <div class="page-layout-header">
+                        @@include('./pages/web/include/mypageInfo.html')
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <aside class="inner-left">
+                                @@include('./pages/web/include/aside.html')
+                            </aside>
+                            <div class="inner-right">
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>자주 찾는 웰카페 <span class="count"></span></h3>
+                                    </div>
+                                    <div class="box-empty">
+                                        <div class="ico-marker"></div>
+                                        <p>자주 찾는 웰카페가 없습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>내가 작성한 게시글</h3>
+                                    </div>
+                                    <div class="box-empty">
+                                        <div class="ico-post"></div>
+                                        <p>작성한 게시글이 없습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

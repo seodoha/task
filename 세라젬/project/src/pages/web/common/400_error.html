@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="error" class="container-wrap">
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <div class="box-noresult">
+                                <div class="box-lottie">
+                                    <div id="icon-lottie04"></div>
+                                </div>
+                                <h5 class="font-heading05">일시적으로 서비스가<br>원활하지 않습니다. </h5>
+                                <p class="detail-txt">
+                                    잠시 후 다시 시도해 주세요.
+                                </p>
+                                <div class="box-btn">
+                                    <a href="#" class="btn-md btn-black md-ripples ripples-light">홈으로 가기</a>
+                                    <a href="#" class="btn-md btn-white md-ripples ripples-black">뒤로가기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

@@ -1,0 +1,430 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _input.scss
+* @Description : input 컴포넌트
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+/*라디오*/
+// 정렬 라디오 버튼
+.rd-sort-btn {
+    display: inline-block;
+    cursor: pointer;
+    input {@include hidden;}
+    .txt {
+        display: inline-flex;
+        position: relative;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #999;
+        line-height: 1.5;
+        transition: all 0.3s;
+        &::before {
+            content: "";
+            display: none;
+            flex-shrink: 0;
+            margin: 0.5rem 0.5rem 0 0;
+            width: 1.3rem;
+            height: 0.7rem;
+            border: 0.2rem solid #161616;
+            border-top: 0;
+            border-right: 0;
+            @include venderPrefix('transform',rotate(-50deg));
+        }
+    }
+    input:checked ~ .txt {
+        color: #161616;
+        &::before {display: block;}
+    }
+}
+// 버튼 라디오박스
+.btn-radio {
+    display: inline-block;
+    font-size: 0;
+    input[type="radio"] {@include hidden;}
+    .more-input {
+        display: none;
+        width: calc(100% - 4rem);
+        height: 5.2rem;
+        margin: 1.2rem 0 0 4rem;
+        padding: 0 2rem;
+        border: 1px solid #e5e5e5;
+        border-radius: 0.5rem;
+        font-size: 1.6rem;
+    }
+    &.noTxt {
+        label::before {margin-right: 0;}
+    }
+    label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        &::before {
+            content: '';
+            display: inline-block;
+            margin-right: 1rem;
+            width: 2.8rem;
+            height: 2.8rem;
+            @include backgroundImg('../images/icon/ico-radio-off.svg',center,contain);
+        }
+    }
+
+    input[type="radio"]:checked ~ label {
+        &::before {@include backgroundImg('../images/icon/ico-radio-on.svg',center,contain);}
+    }
+    input[type="radio"]:checked ~ .more-input {display: block;}
+}
+
+/*체크박스*/
+// 버튼 체크박스
+.btn-check {
+    display: inline-block;
+    font-size: 0;
+    input[type="checkbox"] {@include hidden;}
+    &.noTxt {
+        label span {margin-left: 0;}
+    }
+    label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 2.8rem;
+            height: 2.8rem;
+            @include backgroundImg('../images/icon/ico-check-off.svg',center,contain);
+        }
+        span {
+            display: inline-block;
+            margin-left: 1rem;
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+    }
+
+    input[type="checkbox"]:checked ~ label {
+        &::before {@include backgroundImg('../images/icon/ico-check-on.svg',center,contain);}
+    }
+}
+// 칩 체크박스
+.chip-check {
+    display: inline-block;
+    input[type="checkbox"] {@include hidden;}
+    label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 1rem 1.6rem;
+        font-size: 1.6rem;
+        background-color: #f8f8f8;
+        border-radius: 2rem;
+    }
+
+    input[type="checkbox"]:checked ~ label {
+        background-color: $black;
+        color: #fff;
+    }
+}
+// 스위치 버튼
+.btn-switch {
+    input[type="checkbox"] {@include hidden;}
+    label {
+        display: block;
+        position: relative;
+        width: 3.6rem;
+        height: 1.2rem;
+        background-color: #e5e5e5;
+        border-radius: 5rem;
+        font-size: 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -0.3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2rem;
+            height: 2rem;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+    }
+    input[type="checkbox"]:checked ~ label {
+        background-color: #ffecec;
+        &::before {
+            background-color: #fa5252;
+            left: 2rem;
+        }
+    }
+}
+// 유효성 체크 검사
+.list-validation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    margin-top: 0.8rem;
+
+    .validation-checkbox {
+        display: inline-block;
+        cursor: pointer;
+        input[type="checkbox"] {@include hidden;}
+        .txt {
+            display: inline-flex;
+            position: relative;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #999;
+            line-height: 1.5;
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                display: block;
+                margin: 0.5rem 0.7rem 0;
+                width: .8rem;
+                height: 0.4rem;
+                border: 2px solid #999;
+                border-top: 0;
+                border-right: 0;
+                @include venderPrefix('transform',rotate(-45deg));
+            }
+        }
+        input[type="checkbox"]:checked ~ .txt {
+            color: #161616;
+            &::after {
+                display: block;
+                border: 2px solid #161616;
+                border-top: 0;
+                border-right: 0;
+            }
+        }
+    }
+}
+
+
+/*텍스트 필드*/
+.text-input-wrap {
+    position: relative;
+    .box-input {
+        label {
+            display: block;
+            position: relative;
+            width: 100%;
+            input {
+                width: 100%;
+                height: 7.2rem;
+                padding: 3.1rem 4.5rem 1.4rem 2rem;
+                background-color: #fff;
+                border: 1px solid #e5e5e5;
+                border-radius: 0.5rem;
+                font-size: 1.8rem;
+
+                &::placeholder{
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                &:focus{
+                    border: 1px solid $black;
+                    & + .placeholder{
+                        top: 1.9rem;
+                        font-size: 1.2rem;
+                    }
+                    &:not(:placeholder-shown) ~ button{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                &:not(:placeholder-shown){
+                    & + .placeholder{
+                        top: 1.9rem;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .placeholder {
+                position: absolute;
+                top: 50%;
+                left: 2rem;
+                transform: translateY(-50%);
+                font-size: 1.8rem;
+                font-weight: 500;
+                line-height: 1.5;
+                color: #c4c4c4;
+                transition: all .2s cubic-bezier(.9,-.15,.1,1.15);
+            }
+        }
+
+        textarea {
+
+            &:focus {
+                border: 1px solid #161616;
+            }
+        }
+    }
+    .btn-action {
+        display: none;
+        position: absolute;
+        right: 2rem;
+        bottom: 1.4rem;
+        border-radius: 0.5rem;
+    }
+    .ico-search-delete {
+        display: none;
+        position: absolute;
+        right: 1.8rem;
+        top: 62%;
+        transform: translateY(-50%);
+    }
+    &.isBtn {
+        .box-input {
+            input {padding-right: 12rem;}
+        }
+    }
+    &.isVali {
+        .normal-txt {margin: 0.8rem 0;}
+    }
+    &.error {
+        &.small {
+            .box-input > input {border-color: #fa5252;}
+        }
+        .error-txt {
+            display: block;
+            margin: 0.8rem 0 0;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.5;
+            color: $red;
+        }
+    }
+    &.small {
+        .box-input {
+            position: relative;
+            input {
+                &::placeholder{color: #c4c4c4;}
+                &:disabled {background-color: #F8F8F8;}
+                &:focus {border-color: $black;}
+                width: 100%;
+                height: 5.6rem;
+                padding: 0 5rem 0 2rem;
+                background-color: #fff;
+                border: 1px solid #e5e5e5;
+                border-radius: 0.5rem;
+            }
+        }
+        .ico-search-delete {top: 50%;}
+    }
+    &.disabled {
+        .box-input {
+            // .placeholder {top: 1.9rem;font-size: 1.2rem;}
+            input {color: #c4c4c4;}
+        }
+    }
+    .normal-txt {
+        display: block;
+        margin: 0.8rem 0 2.5rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.5;
+        &.error-txt{color: $red;}
+    }
+}
+.text-action-input-wrap {
+    position: relative;
+    &.error {
+        .error-txt {
+            display: block;
+            margin-top: 0.8rem;
+            font-size: 1.4rem;
+            color: #fa5252;
+            line-height: 1.5;
+        }
+    }
+
+}
+
+/*파일첨부*/
+.file-input-wrap {
+    .file-input-list {
+        display: flex;
+        align-items: center;
+        li {
+            & ~ li {margin-left: 0.8rem;}
+        }
+    }
+
+    .list-dot {
+        margin-top: 2rem;
+    }
+
+    .box-file-input {
+        input[type="file"] {@include hidden;}
+        label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 7.2rem;
+            height: 7.2rem;
+            background-color: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 0.5rem;
+            font-size: 0;
+            cursor: pointer;
+            &::before {
+                content: '';
+                width: 2.4rem;
+                height: 2.4rem;
+                background: url("../images/icon/ico-attach-image.svg") no-repeat center;
+                background-size: contain;
+            }
+        }
+    }
+
+    .input-img-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 7.2rem;
+        height: 7.2rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        img {object-fit: cover;}
+        .ico-close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+    }
+}
+
+/*셀렉트*/
+.box-select-wrap {
+    &.ty-black {
+        select {
+            color: $black;
+            font-weight: 700;
+            background: url('../images/icon/ico-black-arr-down.svg') no-repeat right center;
+        }
+    }
+    select {
+        padding: 0 2.2rem 0 0;
+        background: url('../images/icon/ico-gray-arr-down.svg') no-repeat right center;
+        border: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #c4c4c4;
+        line-height: 1.5;
+    }
+}

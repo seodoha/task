@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="sub-page-header">
+                <div class="left">
+                    <button class="ico-back">뒤로가기</button>
+                </div>
+                <div class="right">
+                    <button class="btn-xs btn-white">불러오기 <span>2</span></button>
+                    <button class="btn-xs btn-white">임시저장</button>
+                    <!-- <button class="btn-xs btn-black" disabled>등록</button> -->
+                    <button class="btn-xs btn-black">등록</button>
+                </div>
+            </div>
+
+            <div id="container">
+                <section id="story" class="container-wrap">
+                    <div class="layout-write-wrap">
+                        <div class="write-header cover-setting">
+                            <div class="cover-bg">
+                                <!-- <img src="../../../assets/mobile/images/temp/temp_cover02.png" alt=""> -->
+                                <!--video cover case-->
+                                <video
+                                    id="cover-video"
+                                    class="video-js"
+                                    controls
+                                    muted
+                                    autoplay
+                                    playsinline
+                                    loop
+                                    preload="auto"
+                                    data-setup="{}">
+                                    <source src="../../../assets/mobile/images/temp/temp-video.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                            <div class="inner-wrap">
+                                <div class="btn-cover-util">
+                                    <!--
+                                        <div>
+                                            <label for="file01" class="btn-setting btn-sm btn-white md-ripples ripples-dark">커버설정</label>
+                                            <input type="file" id="file01">
+                                        </div>
+                                     -->
+                                    <button type="button" class="btn-delete btn-sm btn-white">삭제</button>
+                                    <span class="box-guide">
+                                        권장사이즈 1920*700<br>
+                                        가로 최소 1000px 이상 이미지 등록
+                                    </span>
+                                </div>
+                                <div class="box-board-head">
+                                    <div class="type-select">
+                                        <div class="box-select-wrap">
+                                            <select>
+                                                <option value="">게시판 선택</option>
+                                                <option value="">테스트1</option>
+                                                <option value="" selected>테스트2</option>
+                                                <option value="">테스트3</option>
+                                                <option value="">테스트4</option>
+                                                <option value="">테스트5</option>
+                                                <option value="">테스트6</option>
+                                                <option value="">테스트7</option>
+                                                <option value="">테스트8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="main-tit" title="제목 입력" placeholder="제목을 입력하세요"
+                                    value="제주는 도슨트가 필요해">
+                                    <input type="text" class="sub-tit" title="소제목 입력" placeholder="소제목을 입력하세요" value="예술가의 영혼이 깃든 제주의 공간">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="write-contents">
+                            <div class="inner-wrap">
+                                <!--에디터영역-->
+                                <div class="box-edit-wrap">
+                                    <!--블록단위별 스타일 퍼블리싱-->
+                                    <!--
+                                        블록 추가 시 'module-container' 클래스가 붙은 div 추가
+                                            + 영상 블록 추가 시 'video-module' 클래스 추가
+                                            + 이미지 블록 추가 시 'img-module' 클래스 추가
+                                            + 지도 블록 추가 시 'map-module' 클래스 추가
+                                            + 투표 블록 추가 시 'vote-module' 클래스 추가
+                                    -->
+                                    <!--텍스트-->
+                                    <div class="module-container" tabindex="0">
+                                        <div class="box-util">
+                                            <button type="button" class="btn-sm btn-white md-ripples ripples-dark btn-update">수정</button>
+                                            <button type="button" class="btn-sm btn-black md-ripples ripples-light btn-delete">삭제</button>
+                                        </div>
+                                        <p>부산출장을 가게 되었습니다. 시국이 좋지 않아 돌아다닐 수는 없지만 업무 마치고 밥 먹을 만한 곳 추천 좀 해주세요.<br>출장일정 빡센데 밥은 맛있는 거 먹고 싶어요 ㅠㅠ</p>
+                                    </div>
+
+                                    <!--영상-->
+                                    <div class="module-container video-module" tabindex="0">
+                                        <div class="box-util">
+                                            <button type="button" class="btn-sm btn-black md-ripples ripples-light btn-delete">삭제</button>
+                                        </div>
+                                        <video
+                                            class="video-js"
+                                            controls
+                                            playsinline
+                                            preload="auto"
+                                            data-setup="{}">
+                                            <source src="../../../assets/mobile/images/temp/temp-video.mp4" type="video/mp4" />
+                                        </video>
+                                    </div>
+
+                                    <!--이미지-->
+                                    <div class="module-container img-module" tabindex="0">
+                                        <div class="box-util">
+                                            <button type="button" class="btn-sm btn-black md-ripples ripples-light btn-delete">삭제</button>
+                                        </div>
+                                        <img src="../../../assets/mobile/images/temp/temp-write.png" alt="">
+                                    </div>
+
+                                    <!--지도-->
+                                    <div class="module-container map-module" tabindex="0">
+                                        <div class="box-util">
+                                            <button type="button" class="btn-sm btn-black md-ripples ripples-light btn-delete">삭제</button>
+                                        </div>
+                                        <div class="box-map" style="height: 300px;background-color: #aaa;">
+                                        </div>
+                                    </div>
+
+                                    <!--투표-->
+                                    <div class="module-container vote-module" tabindex="0">
+                                        <div class="box-util">
+                                            <button type="button" class="btn-sm btn-black md-ripples ripples-light btn-delete">삭제</button>
+                                        </div>
+                                        <strong>투표가 첨부되었습니다.</strong>
+                                        <span>글 등록 후에는 수정할 수 없습니다.</span>
+                                    </div>
+                                </div>
+                                <!--태그 입력-->
+                                <div class="chips-wrap edit-chips">
+                                    <div class="chips-editable">
+                                        <button class="chip-edit chip-edit-done">
+                                            태그입력
+                                        </button>
+                                        <div class="edit-input-wrap">
+                                            <span class="input-hashtag">#</span>
+                                            <input type="text" class="chip-edit" placeholder="태그입력">
+                                        </div>
+                                        <div id="input-width-calc">
+                                        </div>
+                                    </div>
+                                    <strong class="error">해시태그에는 특수문자를 사용할 수 없습니다.</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/mobile/include/writeBottom.html')
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

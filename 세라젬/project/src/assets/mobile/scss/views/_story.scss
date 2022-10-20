@@ -1,0 +1,178 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _story.scss
+* @Description : 스토리 scss
+* @Create Date: 2022-02-25
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+.story-detail {
+    .sub-visual{
+        position: relative;
+        height: 48rem;
+        overflow: hidden;
+        .box-bg{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            object-fit: cover;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 7.3%, rgba(0, 0, 0, 0.15) 50.91%, rgba(0, 0, 0, 0.4) 97.24%);
+            }
+            .video-js {
+                width: 100%;
+                height: 100%;
+                .vjs-control-bar {
+                    height: 0.4rem;
+                    background: rgba(255,255,255,0.2);
+                    opacity: 1;
+                    .vjs {
+                        &-play-control,
+                        &-volume-panel,
+                        &-picture-in-picture-control,
+                        &-fullscreen-control {display: none;}
+                        &-progress-control {
+                            width: 100%;
+                            background: rgba(255,255,255,0.2);
+                            .vjs-slider {
+                                background: rgba(255,255,255,0.2);
+                                .vjs-load-progress{opacity: 0;}
+                            }
+                            .vjs-play-progress {background: rgba(255,255,255,0.8);}
+                            .vjs-progress-holder {
+                                height: 0.4rem;
+                                margin: 0;
+                                background: rgba(255,255,255,0.2);
+                            }
+                            .vjs-play-progress::before {opacity: 0;}
+                        }
+                        &-time-control {display: none;}
+                    }
+                }
+            }
+        }
+        .box-txt{
+            display: flex;
+            flex-direction: column-reverse;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 4.4rem;
+            color: #fff;
+            .board-tit{
+                display: block;
+                margin: 1.2rem 0;
+                font-size: 3.4rem;
+                font-weight: 700;
+                line-height: 1.3;
+            }
+            .board-txt {
+                display: block;
+                margin-bottom: 2rem;
+                font-size: 1.6rem;
+                line-height: 1.2;
+            }
+            .box-writer{
+                .writer {
+                    &-thumb {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        margin-right: 0.8rem;
+                    }
+                    &-nick {
+                        color: #fff;
+                    }
+                    &-date {
+                        font-size: 1.4rem;
+                        color: #c4c4c4;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+
+    .page-layout-contents {
+        padding: 2.4rem 0 6rem;
+        overflow: hidden;
+    }
+
+}
+
+#story {
+    .box-board-intro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+        height: 20rem;
+        margin-bottom: 4rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        transform: translateZ(0);
+        &.empty-thumb {
+            .box-txt {
+                .intro-txt {color: #999;}
+                .board-name {color: $black;}
+            }
+        }
+        .box {
+            &-thumb {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background-color: rgba(0,0,0,0.4);
+                    z-index: 1;
+                }
+            }
+            &-txt {
+                position: relative;
+                z-index: 1;
+                text-align: center;
+                font-family: 'CERAGEMWell';
+                .intro-txt {
+                    display: block;
+                    font-size: 1.5rem;
+                    color: #fff;
+                    line-height: 1.5;
+                }
+                .board-name {
+                    display: block;
+                    margin-bottom: 1rem;
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                    color: #fff;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+    .box-story .btn-select {
+        margin-bottom: 2rem;
+    }
+}

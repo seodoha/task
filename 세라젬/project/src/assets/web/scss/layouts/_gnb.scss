@@ -1,0 +1,169 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _gnb.scss
+* @Description : gnb 스타일
+* @Create Date: 2022-02-16
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+.gnb-wrap {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(22,22,22,0.4);
+    z-index: 201;
+
+    &.open {
+        #gnb {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    #gnb {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 40rem;
+        padding: 6rem 5rem 25.5rem;
+        background-color: #fff;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.2s ease;
+        transition-delay: 0.3s;
+        .box-login {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            // padding-right: 4rem;
+            margin-bottom: 7rem;
+            .btn-user {
+                display: inline-flex;
+                align-items: center;
+                .img-profile {
+                    display: inline-block;
+                    position: relative;
+                    width: 4.8rem;
+                    height: 4.8rem;
+                    border-radius: 1rem;
+                    overflow: hidden;
+                    background: url('../images/common/default_profile.svg') no-repeat center;
+                    background-size: contain;
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                        min-width: 4.8rem;
+                    }
+                }
+                .txt {
+                    display: inline-block;
+                    max-width: 20rem;
+                    margin-left: 1.5rem;
+                    font-size: 2.2rem;
+                    line-height: 1.9;
+                    @include ellipsis();
+                }
+                .ico-more{margin-left: 7.4rem;}
+            }
+            .ico-setting {
+                position: absolute;
+                right: 0;
+                top: 45%;
+                transform: translateY(-50%);
+            }
+        }
+        .gnb-list {
+            font-size: 0;
+            li {
+                & ~ li {margin-top: 3rem;}
+                .dep1 {
+                    display: block;
+                    width: 100%;
+                    position: relative;
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                    text-align: left;
+                    &.isDep2 {
+                        padding-right: 4rem;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            width: 2.4rem;
+                            height: 2.4rem;
+                            margin-top: -1.2rem;
+                            background: url('../images/icon/ico-1depth-close.svg') no-repeat center center;
+                            transition: transform 0.3s;
+                        }
+                    }
+                    &.open {
+                        &.isDep2::after {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+                .dep2-list {
+                    display: none;
+                    margin: 2.5rem 2rem 1rem;
+                    li {
+                        & ~ li {margin-top: 1.8rem;}
+                        a {
+                            font-size: 1.8rem;
+                            line-height: 1.5;
+                            color: #444;
+                        }
+                    }
+                }
+
+            }
+        }
+        .gnb-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 4rem 5rem;
+            .os-list {
+            display: flex;
+            align-items: center;
+            li {
+                & ~ li {margin-left: 0.8rem;}
+                a {
+                    font-size: 0;
+                    &.btn-app {width: 4rem;height: 4rem}
+                }
+            }
+            }
+            .ft-list {
+                margin: 3rem 0;
+                li {
+                    & ~ li {margin-top: 1.2rem;}
+                    a {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        line-height: 1.1;
+                        color: $black;
+                        &:hover {text-decoration: underline;}
+                    }
+                }
+            }
+            .copy {
+                display: block;
+                color: #999;
+                font-size: 1.3rem;
+            }
+
+
+        }
+    }
+}

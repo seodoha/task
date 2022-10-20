@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+            pageTitle : '세라젬'
+
+        })
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="sub-page-header">
+                <button class="ico-back">뒤로가기</button>
+                <button class="sup-txt">건너뛰기</button>
+            </div>
+            <div id="container">
+                <section id="login" class="container-wrap">
+                    <div class="login-layout">
+                        <div class="form-header">
+                            <div class="font-card-tit01">
+                                추가 정보를 <br>입력 해 주세요
+                            </div>
+                        </div>
+                        <dl class="keyword-wrap">
+                            <dt><strong>관심 키워드 설정</strong> (3개 이상 선택)</dt>
+                            <dd>
+                                <div class="chips-wrap">
+                                    <ul class="chip-list chip-list-hashtag">
+                                        <li>
+                                            <input type="checkbox" id="hashtag01">
+                                            <label for="hashtag01">식단관리</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="hashtag02">
+                                            <label for="hashtag02">운동</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="hashtag03">
+                                            <label for="hashtag03">홈트레이닝</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="hashtag04">
+                                            <label for="hashtag04">키워드1</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="hashtag05">
+                                            <label for="hashtag05">키워드2</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="hashtag06">
+                                            <label for="hashtag06">키워드3</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+
+
+                        <div class="box-btn btn-footer fix">
+                            <!-- 비활성화시, btn-large btn-disable 제외 클래스 다 삭제 -->
+                            <!-- <a href="#" class="btn-large btn-disable">회원가입</a> -->
+                            <a href="#" class="btn-large btn-black md-ripples ripples-light">회원가입</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

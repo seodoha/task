@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap"  class="welcafe-detail">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="welcafe" class="container-wrap bg-gray dtCommunity">
+                    <div class="page-layout-header sub-visual sub-nomal">
+                        <div class="box-bg">
+                            <img src="../../../assets/web/images/banner/welcafe/welcafe_img08.png" alt="">
+                        </div>
+                        <div class="inner-cont-wrap">
+                            <div class="box-info">
+                                <div class="box-place-info">
+                                    <div class="description">
+                                        <h3 class="font-heading03">
+                                            세라젬 웰카페 합정<br>
+                                            메세나폴리스 직영점
+                                            <span class="btn-act-star">
+                                                <input type="checkbox" id="bookmark01">
+                                                <label for="bookmark01">
+                                                    위치 즐겨찾기
+                                                </label>
+                                            </span>
+                                        </h3>
+                                        <p>고객님의 가까이에서 건강을 함께 가꿔나가는 세라젬 웰카페 합정 메세나 직영점입니다. </p>
+                                    </div>
+                                </div>
+                                <div class="box-info-list">
+                                    <h2>지점 정보</h2>
+                                    <ul class="info-list">
+                                        <li>
+                                            <span class="ico-pin">핀</span>
+                                            <span class="info-txt">서울 강남구 학동로 215 1층 세라젬</span>
+                                        </li>
+                                        <li>
+                                            <span class="ico-phone">전화번호</span>
+                                            <span class="info-txt">02-6951-5325</span>
+                                        </li>
+                                        <li>
+                                            <span class="ico-clock">시간</span>
+                                            <span class="info-txt">매일  11:00 - 20:00</span>
+                                        </li>
+                                        <li>
+                                            <span class="ico-parking">주차</span>
+                                            <span class="info-txt">주차 가능</span>
+                                        </li>
+                                    </ul>
+                                    <!--2022.04.27 공유하기 버튼 추가-->
+                                    <button class="b-share">공유하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-cont-wrap">
+                            <div class="tab-wrap">
+                                <ul class="tab-list tab-list-line">
+                                    <li><a href="javascript:void(0)">지점안내</a></li>
+                                    <li><a href="javascript:void(0)" class="on">커뮤니티</a></li>
+                                </ul>
+                            </div>
+                            <div class="community-card-board">
+                                <ul class="list-sort">
+                                    <li>
+                                        <label class="rd-sort-btn">
+                                            <input type="radio" name="sortType" id="newTy" checked="">
+                                            <span class="txt">최신순</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="rd-sort-btn">
+                                            <input type="radio" name="sortType" id="recomTy">
+                                            <span class="txt">추천순</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="rd-sort-btn">
+                                            <input type="radio" name="sortType" id="viewTy">
+                                            <span class="txt">조회순</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="box-txt-card ty-small">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">세라젬 웰카페 학동 직영점</span>
+                                        </div>
+                                        <div class="box-tit">
+                                            <strong class="font-card-tit02">오랜만이네요, 저도 웰카페 갔다 왔습니다!</strong>
+                                        </div>
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile06.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">풀소유</span>
+                                            <span class="writer-date">1일 전</span>
+                                        </div>
+                                        <div class="box-cnts">
+                                            <p>
+                                                부산 출장 다녀왔다가 몸이 계속 피곤한 차에 친구랑 웰카페 학동 직영점에 다녀왔습니다. 피로가 싹 풀리고 힐링이 되더군요. 아참, 제가 성수 라멘 맛집 사진 올렸었나요? 사진 첨부합니다.
+                                            </p>
+                                            <div class="thumb">
+                                                <img src="../../../assets/web/images/temp/temp-img07.png" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <span class="ico-view-count">999</span>
+                                        <span class="btn-act-like-wrap">
+                                            <input type="checkbox" id="like001">
+                                            <label for="like001">
+                                                <div class="box">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                                <span class="count">340</span>
+                                            </label>
+                                        </span>
+                                        <a href="#" class="ico-comment">999</a>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="bookmark02">
+                                        <label for="bookmark02">북마크</label>
+                                    </span>
+                                </div>
+                                <div class="box-txt-card ty-small">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">세라젬 웰카페 학동 직영점</span>
+                                        </div>
+                                        <div class="box-tit">
+                                            <strong class="font-card-tit02">웰카페 학동 직영점 방문 후기</strong>
+                                        </div>
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile07.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">박세라</span>
+                                            <span class="writer-date">2일 전</span>
+                                        </div>
+                                        <div class="box-cnts">
+                                            <p>
+                                                몸이 계속 피곤한 차에 친구랑 웰카페 학동 직영점에 다녀왔습니다. 직원분들이 정말 친절하십니다. 덕분에 편하게 쉬다 왔어요. 요즘 안풀리던 피로가 드디어 풀리네요. 이번 주말에 친구들이랑 또 방문할 예정입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <span class="ico-view-count">999</span>
+                                        <span class="btn-act-like-wrap">
+                                            <input type="checkbox" id="like002">
+                                            <label for="like002">
+                                                <div class="box">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                                <span class="count">340</span>
+                                            </label>
+                                        </span>
+                                        <a href="#" class="ico-comment">999</a>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="bookmark03">
+                                        <label for="bookmark03">북마크</label>
+                                    </span>
+                                </div>
+                                <div class="box-txt-card ty-small">
+                                    <a href="#">
+                                        <div class="chips-wrap">
+                                            <span class="chip-label chip-label-sm">세라젬 웰카페 학동 직영점</span>
+                                        </div>
+                                        <div class="box-tit">
+                                            <strong class="font-card-tit02">세라젬 v6 체험하고 왔습니다. 추천해요!</strong>
+                                        </div>
+                                        <div class="box-writer">
+                                            <span class="writer-thumb">
+                                                <img src="../../../assets/web/images/temp/profile08.svg" alt="">
+                                            </span>
+                                            <span class="writer-nick">이지은</span>
+                                            <span class="writer-date">2일 전</span>
+                                        </div>
+                                        <div class="box-cnts">
+                                            <p>
+                                                직원분들도 친절하시고 쌍화차 달지 않아서 좋고 카이로프랙틱 체험도 완전 좋아요!
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <div class="box-util">
+                                        <span class="ico-view-count">999</span>
+                                        <span class="btn-act-like-wrap">
+                                            <input type="checkbox" id="like003">
+                                            <label for="like003">
+                                                <div class="box">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                                <span class="count">340</span>
+                                            </label>
+                                        </span>
+                                        <a href="#" class="ico-comment">999</a>
+                                    </div>
+                                    <span class="btn-act-bookmark ty-black">
+                                        <input type="checkbox" id="bookmark04">
+                                        <label for="bookmark04">북마크</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

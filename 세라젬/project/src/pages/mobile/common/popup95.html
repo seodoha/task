@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="load-popup">팝업 오픈</button>
+        </div>
+
+        <!--본인인증 팝업-->
+        <div id="load-popup" class="layer-popup-wrap">
+            <div class="layer-popup full-popup">
+                <div class="popup-header">
+                    <button class="ico-popup-close popup-close">닫기</button>
+                </div>
+                <div class="popup-body">
+                    <div class="box-intro-certi">
+                        <div class="inner-wrap">
+                            <strong class="tit">본인 인증</strong>
+                            <img src="../../../assets/mobile/images/common/logo_ceragem.png" alt="CERAGEM">
+                            <p class="txt">
+                                세라젬 웰라이프 맴버십 <br>서비스 이용을 위한 <br>본인 인증 절차가 필요합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-footer full">
+                    <button class="btn-md btn-black md-ripples ripples-light">본인 인증</button>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>
+
+
+
+
+
+
+

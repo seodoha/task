@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./pages/web/include/head.html',{
+    pageTitle : '세라젬'
+
+    })
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('./pages/web/include/header.html')
+        <div id="container">
+            <section id="mypage" class="container-wrap bg-gray mypage">
+                <div class="page-layout-header">
+                    @@include('./pages/web/include/mypageInfo.html')
+                </div>
+
+                <div class="page-layout-contents">
+                    <div class="inner-wrap inner-flex">
+                        <aside class="inner-left">
+                            @@include('./pages/web/include/aside.html')
+                        </aside>
+                        <div class="inner-right">
+                            <div class="box-section">
+                                <div class="box-section-head">
+                                    <h3>1:1 문의</h3>
+                                    <a href="#" class="more">
+                                        1:1 문의하기
+                                        <span class="ico-more"></span>
+                                    </a>
+                                </div>
+                                <div class="box-questions">
+                                    <ul class="question-list">
+                                        <li>
+                                            <a href="#" class="question-item">
+                                                <div class="question-left">
+                                                    <div class="chips-wrap">
+                                                        <span class="chip-label chip-label-sm">게시물 신고</span>
+                                                    </div>
+                                                    <h4 class="font-card-tit03">제 글을 도용한 게시물을 신고합니다. </h4>
+                                                    <span class="date">2022.02.22</span>
+                                                </div>
+                                                <div class="question-right">
+                                                    <h5 class="status waiting">답변대기</h5>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="question-item">
+                                                <div class="question-left">
+                                                    <div class="chips-wrap">
+                                                        <span class="chip-label chip-label-sm">게시물 작성</span>
+                                                    </div>
+                                                    <h4 class="font-card-tit03">콘텐츠 미승인 사유를 알 수 있나요?</h4>
+                                                    <span class="date answered">2022.02.22</span>
+                                                </div>
+                                                <div class="question-right">
+                                                    <h5 class="status">답변완료</h5>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="question-item">
+                                                <div class="question-left">
+                                                    <div class="chips-wrap">
+                                                        <span class="chip-label chip-label-sm">게시물 신청</span>
+                                                    </div>
+                                                    <h4 class="font-card-tit03">게시판이 필요해요.</h4>
+                                                    <span class="date">2022.02.22</span>
+                                                </div>
+                                                <div class="question-right">
+                                                    <h5 class="status answered">답변완료</h5>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="question-item">
+                                                <div class="question-left">
+                                                    <div class="chips-wrap">
+                                                        <span class="chip-label chip-label-sm">게시물 신고</span>
+                                                    </div>
+                                                    <h4 class="font-card-tit03">도배 및 광고글 신고합니다</h4>
+                                                    <span class="date">2022.02.22</span>
+                                                </div>
+                                                <div class="question-right">
+                                                    <h5 class="status answered">답변완료</h5>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        @@include('./pages/web/include/footer.html')
+    </div>
+
+    @@include('./pages/web/include/scriptImport.html')
+</body>
+
+</html>

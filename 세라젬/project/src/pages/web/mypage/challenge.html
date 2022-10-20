@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="mypage" class="container-wrap bg-gray mypage">
+                    <div class="page-layout-header">
+                        @@include('./pages/web/include/mypageInfo.html')
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <aside class="inner-left">
+                                @@include('./pages/web/include/aside.html')
+                            </aside>
+                            <div class="inner-right">
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>참여 중인 챌린지 <span class="count">5</span></h3>
+                                    </div>
+                                    <ul class="box-thumb-list box-challenge-list">
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-thumb">
+                                                        <img src="../../../assets/web/images/temp/temp-challenge.png" alt="">
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <p class="main-txt">2022 작심한달 <br>운동인증 챌린지운동인증 챌린지운동인증 챌린지</p>
+                                                        <span class="sub-txt">D-<span class="end-date">70</span></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-thumb">
+                                                        <img src="../../../assets/web/images/temp/temp-challenge.png" alt="">
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <p class="main-txt">기적같은 하루를 위한 10일<br> 미라클 모닝 챌린지</p>
+                                                        <span class="sub-txt">D-<span class="end-date">70</span></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-thumb">
+                                                        <img src="../../../assets/web/images/temp/temp-challenge.png" alt="">
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <p class="main-txt">새해 다짐 프로젝트<br> 30분 걷기 챌린지</p>
+                                                        <span class="sub-txt">D-<span class="end-date">70</span></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>도전 종료 챌린지</h3>
+                                    </div>
+                                    <ul class="box-thumb-list box-challenge-list end-event">
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-thumb">
+                                                        <img src="../../../assets/web/images/temp/temp-challenge.png" alt="">
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <p class="main-txt">2022 작심한달 <br>운동인증 챌린지운동인증 챌린지운동인증 챌린지</p>
+                                                        <div class="sub-txt">
+                                                            <span>참여 인원<span class="count">100</span>명</span>
+                                                            <span>인증 글<span class="count">150</span>개</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-thumb">
+                                                        <img src="../../../assets/web/images/temp/temp-challenge.png" alt="">
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <p class="main-txt">기적같은 하루를 위한 10일<br> 미라클 모닝 챌린지</p>
+                                                        <div class="sub-txt">
+                                                            <span>참여 인원<span class="count">100</span>명</span>
+                                                            <span>인증 글<span class="count">150</span>개</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-thumb">
+                                                        <img src="../../../assets/web/images/temp/temp-challenge.png" alt="">
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <p class="main-txt">새해 다짐 프로젝트<br> 30분 걷기 챌린지</p>
+                                                        <div class="sub-txt">
+                                                            <span>참여 인원<span class="count">100</span>명</span>
+                                                            <span>인증 글<span class="count">150</span>개</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

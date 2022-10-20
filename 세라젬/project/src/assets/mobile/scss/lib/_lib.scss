@@ -1,0 +1,41 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _lib.scss
+* @Description : 라이브러리
+* @Create Date: 2022-03-11
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+@import './ripples';
+@import './slick';
+@import './video-js.min';
+
+.video-js {
+    .vjs-big-play-button {
+        .vjs-icon-placeholder{display: none;}
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 7.2rem;
+        height: 7.2rem;
+        transform: translate(-50%,-50%);
+        background: url('../images/common/ico-video-stop.svg') no-repeat !important;
+        background-size: contain !important;
+        border: none;
+        border-radius: 50%;
+        opacity: 0;
+        transition: none;
+    }
+    &.vjs-paused .vjs-big-play-button {
+        background: url('../images/common/ico-video-play.svg') no-repeat !important;
+        background-size: contain !important;
+        opacity: 1;
+    }
+}
+@keyframes showPlay {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="mypage" class="container-wrap bg-gray mypage">
+                    <div class="page-layout-header">
+                        @@include('./pages/web/include/mypageInfo.html')
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <aside class="inner-left">
+                                @@include('./pages/web/include/aside.html')
+                            </aside>
+                            <div class="inner-right">
+                                <div class="box-section ceracheck-report">
+                                    <div class="box-section-head">
+                                        <h3>세라체크 DNA 검사 리포트</h3>
+                                    </div>
+
+                                    <div class="tab-wrap tab-ctrl">
+                                        <ul class="tab-list tab-list-line">
+                                            <li><a href="javascript:void(0)" class="on">유전자 분석결과</a></li>
+                                            <li><a href="javascript:void(0)">Nutrition</a></li>
+                                            <li><a href="javascript:void(0)">타고난 성향</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div>
+                                                <div class="ceracheck-detail">
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">색소침착</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">피부노화</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">탈모</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">모발굵기</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">비타민C 흡수</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">카페인 대사</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">체질량지수</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">중성지방</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">LDL콜레스테롤</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">HDL콜레스테롤</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">혈당</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">혈압</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="ceracheck-info-top">
+                                                    <span class="ico-average">한국인 평균</span>
+                                                    <span class="ico-my-point">내 점수</span>
+                                                </div>
+                                                <div class="ceracheck-detail">
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">비타민 C 농도</span>
+                                                        <ul class="point-list">
+                                                            <li>
+                                                                <span class="ico-average">한국인 평균</span>
+                                                                <div class="status-bar">
+                                                                    <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                                    <span class="current average" data-point="73" style="width: 73%;"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <span class="ico-my-point">내 점수</span>
+                                                                <!--
+                                                                    점수 낮으면 'low' 클래스 추가,
+                                                                    점수 중간이면 'middle' 클래스 추가,
+                                                                    점수 높으면 'high' 클래스 추가
+                                                                -->
+                                                                <div class="status-bar low">
+                                                                    <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                                    <span class="current" data-point="8" style="width: 8%;"></span>
+                                                                    <span class="current-txt">낮음</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">비타민 D 농도</span>
+                                                        <ul class="point-list">
+                                                            <li>
+                                                                <span class="ico-average">한국인 평균</span>
+                                                                <div class="status-bar">
+                                                                    <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                                    <span class="current average" data-point="73" style="width: 73%;"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <span class="ico-my-point">내 점수</span>
+                                                                <!--
+                                                                    점수 낮으면 'low' 클래스 추가,
+                                                                    점수 중간이면 'middle' 클래스 추가,
+                                                                    점수 높으면 'high' 클래스 추가
+                                                                -->
+                                                                <div class="status-bar middle">
+                                                                    <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                                    <span class="current" data-point="57" style="width: 57%;"></span>
+                                                                    <span class="current-txt">중간</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">코엔자임Q10 농도</span>
+                                                        <ul class="point-list">
+                                                            <li>
+                                                                <span class="ico-average">한국인 평균</span>
+                                                                <div class="status-bar">
+                                                                    <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                                    <span class="current average" data-point="49" style="width: 49%;"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <span class="ico-my-point">내 점수</span>
+                                                                <!--
+                                                                    점수 낮으면 'low' 클래스 추가,
+                                                                    점수 중간이면 'middle' 클래스 추가,
+                                                                    점수 높으면 'high' 클래스 추가
+                                                                -->
+                                                                <div class="status-bar high">
+                                                                    <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                                    <span class="current" data-point="63" style="width: 63%;"></span>
+                                                                    <span class="current-txt">높음</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">마그네슘 농도</span>
+                                                        <ul class="point-list">
+                                                            <li>
+                                                                <span class="ico-average">한국인 평균</span>
+                                                                <div class="status-bar">
+                                                                    <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                                    <span class="current average" data-point="73" style="width: 73%;"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <span class="ico-my-point">내 점수</span>
+                                                                <!--
+                                                                    점수 낮으면 'low' 클래스 추가,
+                                                                    점수 중간이면 'middle' 클래스 추가,
+                                                                    점수 높으면 'high' 클래스 추가
+                                                                -->
+                                                                <div class="status-bar high">
+                                                                    <!--현재 점수 data-point에 기입, 너비는 style에 직접 기입-->
+                                                                    <span class="current" data-point="64" style="width: 64%;"></span>
+                                                                    <span class="current-txt">높음</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">아연 농도</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">철 저장 및 농도</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">칼슘 농도</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">아르기닌 농도</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">타이로신 농도</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">베타인 농도</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">식욕(배고픔)</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">식욕(정서적 식욕)</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">포만감</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">단맛 민감도</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">쓴맛 민감도</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                    <div class="report box-default">
+                                                        <span class="font-card-tit02">짠맛 민감도</span>
+                                                        <!-- 차트영역 -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="tendency-box">
+                                                    <div class="box-txt">
+                                                        <strong class="date">2022년 04월 05일</strong>
+                                                        <span class="txt">고객님의 현재 상태를 고려하여 추천하는 세라메이트 입니다.</span>
+                                                    </div>
+                                                    <div class="box-medic">
+                                                        <div class="img-medic">
+                                                            <strong style="background-color: #F5B225;">비타민C 메이트</strong>
+                                                            <img src="../../../assets/web/images/sub/medic09.png" alt="비타민C메이트">
+                                                        </div>
+                                                        <div class="about-medic">
+                                                            <strong class="medic-tit">Nutra-C® 1,000mg</strong>
+                                                            <ul class="list-dot">
+                                                                <li>편안하게 섭취하는 중성화된 비타민C</li>
+                                                                <li>생체이용률 높은 비타민 C</li>
+                                                            </ul>
+                                                            <dl class="about">
+                                                                <dt>[제품정보]</dt>
+                                                                <dd>미국 특허 공법으로 킬레이트화 된 미네랄이 결합된 비타민C를 사용했습니다</dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-btn">
+                                            <button class="timeline-more md-ripples">이전</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

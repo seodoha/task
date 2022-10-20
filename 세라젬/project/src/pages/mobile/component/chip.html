@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>component | ChipsAll</title>
+        <link rel="stylesheet" href="../../../assets/mobile/css/common.css">
+        <style>
+            .component-wrap {
+                padding: 20px;
+                background: #efefef;
+            }
+
+            .component-wrap h4 {
+                padding: 1rem;
+                background: #eee;
+            }
+
+            .component-wrap .guide-cont {
+                padding: 2rem 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="component-wrap">
+            <h1>Chips</h1>
+            <div class="chips-component">
+                <h4>Basic Filter Chips</h4>
+                <div class="guide-cont">
+                    <div class="chips-wrap">
+                        <ul class="chip-list">
+                            <!-- 활성화 시 on class 추가 -->
+                            <li><a href="javascript:void(0)" class="on">스몰토크</a></li>
+                            <li><a href="javascript:void(0)">건강</a></li>
+                            <li><a href="javascript:void(0)">취미/여행</a></li>
+                            <li><a href="javascript:void(0)">주식/재테크</a></li>
+                            <li><a href="javascript:void(0)">부동산</a></li>
+                            <li><a href="javascript:void(0)">썸/연애</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h4>Basic Filter Chips with hashtag</h4>
+                <div class="guide-cont">
+                    <div class="chips-wrap">
+                        <ul class="chip-list chip-list-hashtag">
+                            <!-- 활성화 시 on class 추가 -->
+                            <li><a href="javascript:void(0)" class="on">스몰토크</a></li>
+                            <li><a href="javascript:void(0)">건강</a></li>
+                            <li><a href="javascript:void(0)">취미/여행</a></li>
+                            <li><a href="javascript:void(0)">주식/재테크</a></li>
+                            <li><a href="javascript:void(0)">부동산</a></li>
+                            <li><a href="javascript:void(0)">썸/연애</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h4>Label Chips</h4>
+                <div class="guide-cont">
+                    <div class="chips-wrap">
+                        <span class="chip-label chip-label-hashtag">제주여행</span>
+                        <span class="chip-label chip-label-hashtag chip-more"><span class="hidden">기타</span></span>
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="chips-wrap">
+                        <span class="chip-label chip-label-sm">헬시라이프</span>
+                        <span class="chip-label chip-label-sm yellow">지금 가장 뜨는 글</span>
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="chips-wrap">
+                        <span class="chip-label chip-label-xs">작성자</span>
+                        <span class="chip-label chip-label-xs red">MY</span>
+                    </div>
+                </div>
+                <h4>Editable Chips</h4>
+                <div class="guide-cont">
+                    <div class="chips-wrap">
+                        <div class="chips-editable">
+                            <div class="edit-input-wrap">
+                                <span class="input-hashtag">#</span>
+                                <input type="text" class="chip-edit" placeholder="태그입력">
+                            </div>
+
+                            <div id="input-width-calc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../assets/mobile/js/lib/jquery.import.js"></script>
+    </body>
+</html>

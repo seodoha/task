@@ -1,0 +1,223 @@
+/* =================================================================================
+* INFORMATION
+* -----------------------------------------------------------------------
+* @File Name: _community.scss
+* @Description : 커뮤니티 scss
+* @Create Date: 2022-02-25
+* @Update Date: N/A
+* @History: N/A
+* ================================================================================= */
+
+#community {
+    .tab-wrap {
+        padding-left: 5.5rem;
+        .btn-more {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0.2rem;
+            left: 0;
+            width: 4.3rem;
+            height: 4.3rem;
+            background-color: #f8f8f8;
+            border-radius: 50%;
+        }
+        .tab-list{border-bottom: none;}
+        &.subject-list{
+            li:nth-of-type(n+1){margin-right: 4.8rem;}
+        }
+    }
+    .text-input-wrap{
+        .list-dot{margin-top: 1.4rem;}
+    }
+    .page-layout-contents {
+        .grid {
+            &-top {
+                margin-bottom: 10rem;
+                .font-heading05 {
+                    .imoji {
+                        display: inline-block;
+                        margin-right: 0.8rem;
+                        font-size: 3.4rem;
+                    }
+                    margin-bottom: 1rem;
+                }
+                .popular-list {
+                    margin: 0 -1.5rem;
+                    .slick-slide {
+                        padding: 2rem 1.5rem;
+                    }
+                    .slick-arrow {
+                        z-index: 1;
+                        &.slick-prev {left: -6.4rem;}
+                        &.slick-next {right: -6.4rem;}
+                    }
+                }
+            }
+        }
+    }
+
+    .popular-card-board {margin-bottom: 4rem;}
+
+    .box {
+        &-txt-card {
+            .chips-wrap {margin-bottom: 2rem;}
+            .box-tit {margin-top: 0;}
+        }
+        &-board-intro {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            width: 100%;
+            height: 32rem;
+            margin-top: 3rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            transform: translateZ(0);
+            .box {
+                &-thumb {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 100%;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        background-color: rgba(0,0,0,0.4);
+                        z-index: 1;
+                    }
+                }
+                &-txt {
+                    position: relative;
+                    z-index: 1;
+                    text-align: center;
+                    font-family: 'CERAGEMWell';
+                    .intro-txt {
+                        display: block;
+                        margin-top: 0.8rem;
+                        font-size: 2.4rem;
+                        color: #fff;
+                        line-height: 1.5;
+                        font-weight: 500;
+                    }
+                    .board-name {
+                        font-size: 5rem;
+                        font-weight: 700;
+                        color: #fff;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+        &-notice-wrap {
+            display: flex;
+            align-items: center;
+            margin: 3rem 0 7.5rem;
+            strong {
+                flex: 0 0 4.3rem;
+                padding: 0.6rem 1rem;
+                margin-right: 1rem;
+                background-color: $black;
+                border-radius: 0.4rem;
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: #f8f8f8;
+            }
+            .rolling {
+                &-list {
+                    display: flex;
+                    align-items: center;
+                    width: 45rem;
+                    .slick-slide {
+                        font-size: 0;
+                        a {
+                            display: inline-block;
+                            max-width: 100%;
+                            @include ellipsis;
+                            font-size: 1.8rem;
+                            line-height: 1.5;
+                            color: #444;
+                        }
+                    }
+                }
+                &-util {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 4rem;
+                    .rolling {
+                        &-count {
+                            display: inline-block;
+                            width: 2.9rem;
+                            margin-right: 1.5rem;
+                            font-size: 1.4rem;
+                            line-height: 1.5;
+                            color: #c4c4c4;
+                            .current {color: #444;}
+                        }
+                        &-arrow {
+                            font-size: 0;
+                            button {
+                                & ~ button {margin-left: 0.8rem;}
+                                @include iconBtn('../images/icon/ico-arr-next.svg');width: 2.8rem;height: 2.8rem;
+                                &.prev {transform: rotate(180deg);}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .subject-list {
+        margin-top: 2.5rem;
+        padding: 0;
+        // padding: 0 5.5rem 0 0;
+        .btn-tab-wrap {
+            top: 1rem;
+        }
+    }
+
+    &.general-community {
+        .page-layout-header {padding-bottom: 0;}
+    }
+
+    .btn-board-setting {
+        height: 4.8rem;
+        font-size: 1.8rem;
+    }
+    .notice-setting-view{
+        .item-info{max-width: 61rem;}
+        .notice-show-wrap{
+            .box-btn{
+                justify-content: center;
+                margin: 3rem 0 8rem;
+                .btn-ico.right{
+                    border-color: #C4C4C4;
+                    &::after{background-image: url(../images/icon/ico-black-arr-down.svg);}
+                }
+            }
+        }
+        & > .box-btn{
+            justify-content: center;
+            & > button{
+                max-width: 30rem;
+                font-size: 2.4rem;
+                font-weight: 600;
+                &:nth-of-type(n+2){margin-left: 1rem;}
+            }
+        }
+    }
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="community" class="container-wrap bg-gray">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <!--2022.03.11: 글쓰기 버튼 추가-->
+                            <div class="box-btn-crud">
+                                <a href="#" class="btn-write-head">글쓰기</a>
+                            </div>
+
+                            <h2 class="font-heading02">커뮤니티</h2>
+                            <div class="tab-wrap">
+                                <!--비로그인 case-->
+                                <!-- <a href="#" class="btn-more">
+                                    <span class="ico-plus">설정</span>
+                                </a> -->
+                                <button class="btn-more">
+                                    <span class="ico-plus">설정</span>
+                                </button>
+                                <ul class="tab-list tab-list-round">
+                                    <li><a href="#">인기</a></li>
+                                    <li><a href="#" class="on">관심</a></li>
+                                    <li><a href="#">취미/여행</a></li>
+                                    <li><a href="#">주식/재테크</a></li>
+                                    <li><a href="#">부동산</a></li>
+                                    <li><a href="#">썸/연애</a></li>
+                                    <li><a href="#">여행</a></li>
+                                    <li><a href="#">헬스/다이어트</a></li>
+                                    <li><a href="#">회사생활</a></li>
+                                    <li><a href="#">자동차</a></li>
+                                    <li><a href="#">직장인 취미생활</a></li>
+                                    <li><a href="#">지름/쇼핑</a></li>
+                                    <li><a href="#">반려동물</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                    <li><a href="#">코로나 바이러스</a></li>
+                                </ul>
+                                <div class="btn-tab-wrap">
+                                    <button class="btn-tab ico-1depth-close">열기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <!--2022.03.12 레이아웃 수정('grid-bottom' div 삭제)-->
+                            <!--2022.03.21 탭 이름 수정 -->
+                            <ul class="list-sort">
+                                <li>
+                                    <label class="rd-sort-btn">
+                                        <input type="radio" name="sortType" id="newTy" checked>
+                                        <span class="txt">최신순</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="rd-sort-btn">
+                                        <input type="radio" name="sortType" id="recomTy">
+                                        <span class="txt">좋아요순</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="rd-sort-btn">
+                                        <input type="radio" name="sortType" id="viewTy">
+                                        <span class="txt">조회수순</span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="box-grid">
+                                <div class="grid-left">
+                                    <ul class="card-list">
+                                        <li>
+                                            <div class="box-txt-card ty-small">
+                                                <a href="#">
+                                                    <div class="chips-wrap">
+                                                        <span class="chip-label chip-label-sm">취미/여행</span>
+                                                    </div>
+                                                    <div class="box-tit">
+                                                        <strong class="font-card-tit02">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                                                    </div>
+                                                    <div class="box-writer">
+                                                        <span class="writer-thumb">
+                                                            <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                        </span>
+                                                        <span class="writer-nick">전지현</span>
+                                                        <span class="writer-date">1일 전</span>
+                                                    </div>
+                                                    <div class="box-cnts">
+                                                        <p>
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        </p>
+                                                        <div class="thumb">
+                                                            <span class="count">3</span>
+                                                            <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="box-util">
+                                                    <span class="ico-view-count">999</span>
+                                                    <span class="btn-act-like-wrap">
+                                                        <input type="checkbox" id="like001">
+                                                        <label for="like001">
+                                                            <div class="box">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <span class="count">340</span>
+                                                        </label>
+                                                    </span>
+                                                    <a href="#" class="ico-comment">999</a>
+                                                </div>
+                                                <span class="btn-act-bookmark ty-black">
+                                                    <input type="checkbox" id="bookmark7">
+                                                    <label for="bookmark7">북마크</label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="box-txt-card ty-small">
+                                                <a href="#">
+                                                    <div class="chips-wrap">
+                                                        <span class="chip-label chip-label-sm">취미/여행</span>
+                                                    </div>
+                                                    <div class="box-tit">
+                                                        <strong class="font-card-tit02">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                                                    </div>
+                                                    <div class="box-writer">
+                                                        <span class="writer-thumb">
+                                                            <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                        </span>
+                                                        <span class="writer-nick">전지현</span>
+                                                        <span class="writer-date">1일 전</span>
+                                                    </div>
+                                                    <div class="box-cnts">
+                                                        <p>
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        </p>
+                                                        <div class="thumb isVideo">
+                                                            <span class="count">3</span>
+                                                            <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="box-util">
+                                                    <span class="ico-view-count">999</span>
+                                                    <span class="btn-act-like-wrap">
+                                                        <input type="checkbox" id="like002">
+                                                        <label for="like002">
+                                                            <div class="box">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <span class="count">340</span>
+                                                        </label>
+                                                    </span>
+                                                    <a href="#" class="ico-comment">999</a>
+                                                </div>
+                                                <span class="btn-act-bookmark ty-black">
+                                                    <input type="checkbox" id="bookmark8">
+                                                    <label for="bookmark8">북마크</label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="box-txt-card ty-small">
+                                                <a href="#">
+                                                    <div class="chips-wrap">
+                                                        <span class="chip-label chip-label-sm">취미/여행</span>
+                                                    </div>
+                                                    <div class="box-tit">
+                                                        <strong class="font-card-tit02">눈이 오면 생각나는 곳 대관령 하늘목장</strong>
+                                                    </div>
+                                                    <div class="box-writer">
+                                                        <span class="writer-thumb">
+                                                            <img src="../../../assets/web/images/temp/profile02.svg" alt="">
+                                                        </span>
+                                                        <span class="writer-nick">전지현</span>
+                                                        <span class="writer-date">1일 전</span>
+                                                    </div>
+                                                    <div class="box-cnts">
+                                                        <p>
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                            2월 16일 서울에 함박눈이 하루 종일 펑펑 내렸다. SNS상에는 여기저기 눈꽃과 설경을 즐기...
+                                                        </p>
+                                                        <div class="thumb isVideo">
+                                                            <span class="count">3</span>
+                                                            <img src="../../../assets/web/images/temp/temp_img01.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="box-util">
+                                                    <span class="ico-view-count">999</span>
+                                                    <span class="btn-act-like-wrap">
+                                                        <input type="checkbox" id="like002">
+                                                        <label for="like002">
+                                                            <div class="box">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <span class="count">340</span>
+                                                        </label>
+                                                    </span>
+                                                    <a href="#" class="ico-comment">999</a>
+                                                </div>
+                                                <span class="btn-act-bookmark ty-black">
+                                                    <input type="checkbox" id="bookmark8">
+                                                    <label for="bookmark8">북마크</label>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid-right">
+                                    <div class="list-popular-wrap">
+                                        <div class="list-header">
+                                            <strong class="list-title">인기 검색어</strong>
+                                            <div class="list-time">11시 기준</div>
+                                        </div>
+                                        <ul class="list-popular">
+                                            <!--
+                                                up: status-up class 붙음
+                                                down: status-down class 붙음
+                                                same: status-same class 붙음
+                                                new: status-new class 붙음
+                                            -->
+                                            <!-- <li v-for="item in items" :key="item.lank" class="popular-item">
+                                                <a href="#" title="" class="status-new">
+                                                <span class="popular-lank">{{item.lank}}</span>
+                                                {{item.txt}}
+                                                </a>
+                                            </li> -->
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-up">
+                                                <span class="popular-lank">1</span>
+                                                <span class="popular-keyword">세라젬 V6세라젬 V6세라젬 V6세라젬 V6세라젬 V6</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-up">
+                                                <span class="popular-lank">2</span>
+                                                <span class="popular-keyword">프리지아 사과</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-up">
+                                                <span class="popular-lank">3</span>
+                                                <span class="popular-keyword">아크로서울포레스트아크로서울포레스트아크로서울포레스트아크로서울포레스트아크로서울포레스트아크로서울포레스트</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-down">
+                                                <span class="popular-lank">4</span>
+                                                <span class="popular-keyword">그 해 우리는</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-same">
+                                                <span class="popular-lank">5</span>
+                                                <span class="popular-keyword">현대산업개발</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-same">
+                                                <span class="popular-lank">6</span>
+                                                <span class="popular-keyword">악의 마음을 읽는 자들</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-up">
+                                                <span class="popular-lank">7</span>
+                                                <span class="popular-keyword">자동차세 연납</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-up">
+                                                <span class="popular-lank">8</span>
+                                                <span class="popular-keyword">박신혜</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-down">
+                                                <span class="popular-lank">9</span>
+                                                <span class="popular-keyword">연말정산</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-new">
+                                                <span class="popular-lank">10</span>
+                                                <span class="popular-keyword">LG 에너지솔루션</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-keyword-wrap">
+                                        <div class="list-recommend">
+                                            <div class="list-header">
+                                                <strong  class="list-title">인기 태그</strong>
+                                            </div>
+                                            <div class="chips-wrap">
+                                                <a href="#" class="chip-label chip-label-hashtag">코로나</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">효도</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">셀프인테리어</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">가슴으로낳아지갑으로모셨다</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">강릉</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">세라메이트</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">스피드스케이트</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">안마의자</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">한정식</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">호텔</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

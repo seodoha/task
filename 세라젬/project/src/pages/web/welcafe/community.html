@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap" class="welcafe-community">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="welcafe" class="container-wrap bg-gray">
+                    <div class="page-layout-header">
+                        <div class="inner-wrap">
+                            <h2 class="font-heading03">웰카페</h2>
+                            <p class="font-subtitle">
+                                우리 동네 웰카페의 소식을 만나보세요. <br>
+                                온라인과 오프라인 웰카페에서 이웃들과 소통해보세요.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <div class="box-grid">
+                                <div class="grid-left">
+                                    <div class="layout-detail-view">
+                                        <div class="detail-header">
+                                            <div class="box-util">
+                                                <span class="btn-act-bookmark ty-black">
+                                                    <input type="checkbox" id="bookmark1" tabindex="0">
+                                                    <label for="bookmark1">북마크</label>
+                                                </span>
+                                                <span class="box-tooltip">
+                                                    <button class="ico-declare-gray btn-tooltip">더보기</button>
+                                                    <ul class="active-toolBox list-declare">
+                                                        <li><button>신고하기</button></li>
+                                                    </ul>
+                                                </span>
+                                            </div>
+                                            <div class="chips-wrap">
+                                                <span class="chip-label chip-label-sm">세라젬 웰카페 학동 직영점</span>
+                                            </div>
+                                            <strong class="detail-tit">오랜만이네요, 저도 웰카페 갔다 왔습니다!</strong>
+                                            <div class="box-writer">
+                                                <span class="writer-thumb">
+                                                    <img src="../../../assets/web/images/temp/profile06.svg" alt="">
+                                                </span>
+                                                <span class="writer-nick">풀소유</span>
+                                                <span class="writer-date">1일 전</span>
+                                            </div>
+                                        </div>
+                                        <div class="detail-contents">
+                                            <!-- 에디터 내용 들어갈 영역 -->
+                                            <div class="box-editor-contents">
+                                                <p>
+                                                    부산 출장 다녀왔다가 몸이 계속 피곤한 차에 친구랑 웰카페 학동 직영점에 다녀왔습니다. 피로가 싹 풀리고 힐링이 되더군요. 아참, 제가 성수 라멘 맛집 사진 올렸었나요? 사진 첨부합니다.
+                                                </p>
+                                                <img src="../../../assets/web/images/temp/img-edit01.png" alt="">
+                                            </div>
+                                            <div class="chips-wrap">
+                                                <a href="#" class="chip-label chip-label-hashtag">맛집</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">부산</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">혼밥</a>
+                                            </div>
+                                        </div>
+                                        <!--상세유틸(조회수, 좋아요, 댓글 등)-->
+                                        <div class="detail-util">
+                                            <div class="inner">
+                                                <div class="left">
+                                                    <span class="ico-view-count">999</span>
+                                                    <!--로그인 case-->
+                                                    <span class="btn-act-like-wrap">
+                                                        <input type="checkbox" id="like01" tabindex="0">
+                                                        <label for="like01">
+                                                            <div class="box">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path d="M4.31804 6.31798C3.90017 6.73584 3.5687 7.23192 3.34255 7.77789C3.1164 8.32386 3 8.90903 3 9.49998C3 10.0909 3.1164 10.6761 3.34255 11.2221C3.5687 11.768 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.49998C21.0001 8.3065 20.526 7.1619 19.682 6.31798C18.8381 5.47406 17.6935 4.99995 16.5 4.99995C15.3066 4.99995 14.162 5.47406 13.318 6.31798L12 7.63598L10.682 6.31798C10.2642 5.90011 9.7681 5.56864 9.22213 5.34249C8.67616 5.11634 8.09099 4.99994 7.50004 4.99994C6.90909 4.99994 6.32392 5.11634 5.77795 5.34249C5.23198 5.56864 4.7359 5.90011 4.31804 6.31798V6.31798Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <span class="count">999</span>
+                                                        </label>
+                                                    </span>
+                                                    <button class="ico-comment">3</button>
+
+                                                    <!--비로그인 case-->
+                                                    <!-- <a href="#" class="ico-heart">999</a>
+                                                    <a href="#" class="ico-comment">999</a> -->
+                                                </div>
+                                                <div class="right">
+                                                    <button class="ico-share-gray">공유하기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--댓글-->
+                                        <!-- 2022.03.23 댓글 include로 수정 -->
+                                        @@include('./pages/web/include/comment.html')
+                                    </div>
+                                </div>
+                                <div class="grid-right">
+                                    <div class="list-popular-wrap">
+                                        <div class="list-header">
+                                            <strong class="list-title">인기 검색어</strong>
+                                            <div class="list-time">11시 기준</div>
+                                        </div>
+                                        <ul class="list-popular">
+                                            <!--
+                                                up: status-up class 붙음
+                                                down: status-down class 붙음
+                                                same: status-same class 붙음
+                                                new: status-new class 붙음
+                                            -->
+                                            <!-- <li v-for="item in items" :key="item.lank" class="popular-item">
+                                                <a href="#" title="" class="status-new">
+                                                <span class="popular-lank">{{item.lank}}</span>
+                                                {{item.txt}}
+                                                </a>
+                                            </li> -->
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-up">
+                                                <span class="popular-lank">1</span>
+                                                <span class="popular-keyword">세라젬 V6세라젬 V6세라젬 V6세라젬 V6세라젬 V6</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-up">
+                                                <span class="popular-lank">2</span>
+                                                <span class="popular-keyword">프리지아 사과</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-up">
+                                                <span class="popular-lank">3</span>
+                                                <span class="popular-keyword">아크로서울포레스트아크로서울포레스트아크로서울포레스트아크로서울포레스트아크로서울포레스트아크로서울포레스트</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-down">
+                                                <span class="popular-lank">4</span>
+                                                <span class="popular-keyword">그 해 우리는</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-same">
+                                                <span class="popular-lank">5</span>
+                                                <span class="popular-keyword">현대산업개발</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-same">
+                                                <span class="popular-lank">6</span>
+                                                <span class="popular-keyword">악의 마음을 읽는 자들</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-up">
+                                                <span class="popular-lank">7</span>
+                                                <span class="popular-keyword">자동차세 연납</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-up">
+                                                <span class="popular-lank">8</span>
+                                                <span class="popular-keyword">박신혜</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-down">
+                                                <span class="popular-lank">9</span>
+                                                <span class="popular-keyword">연말정산</span>
+                                                </a>
+                                            </li>
+                                            <li class="popular-item">
+                                                <a href="#" title="" class="status-new">
+                                                <span class="popular-lank">10</span>
+                                                <span class="popular-keyword">LG 에너지솔루션</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-keyword-wrap">
+                                        <div class="list-recommend">
+                                            <div class="list-header">
+                                                <strong  class="list-title">인기 태그</strong>
+                                            </div>
+                                            <div class="chips-wrap">
+                                                <a href="#" class="chip-label chip-label-hashtag">코로나</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">효도</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">셀프인테리어</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">가슴으로낳아지갑으로모셨다</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">강릉</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">세라메이트</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">스피드스케이트</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">안마의자</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">한정식</a>
+                                                <a href="#" class="chip-label chip-label-hashtag">호텔</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

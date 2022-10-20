@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/web/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            @@include('./pages/web/include/header.html')
+            <div id="container">
+                <section id="mypage" class="container-wrap bg-gray mypage">
+                    <div class="page-layout-header">
+                        @@include('./pages/web/include/mypageInfo.html')
+                    </div>
+
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap inner-flex">
+                            <aside class="inner-left">
+                                @@include('./pages/web/include/aside.html')
+                            </aside>
+                            <div class="inner-right">
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>내가 작성한 콘텐츠 <span class="count">20</span></h3>
+                                        <!-- <h3>스크랩한 콘텐츠 <span class="count">40</span></h3> -->
+                                    </div>
+                                    <div class="tab-wrap tab-ctrl tab-total">
+                                        <ul class="tab-list tab-list-round">
+                                            <!-- 활성화 시 on class 추가 -->
+                                            <li><a href="javascript:void(0)" class="on">전체<span class="count">2,000,000</span></a></li>
+                                            <li><a href="javascript:void(0)">헬시라이프<span class="count">1</span></a></li>
+                                            <li><a href="javascript:void(0)">로컬라이프<span class="count">200</span></a></li>
+                                            <li><a href="javascript:void(0)">홈라이프<span class="count">1</span></a></li>
+                                            <li><a href="javascript:void(0)">세라젬라이프<span class="count">2</span></a></li>
+                                            <li><a href="javascript:void(0)">여행<span class="count">1</span></a></li>
+                                            <li><a href="javascript:void(0)">뷰티<span class="count">1</span></a></li>
+                                            <li><a href="javascript:void(0)">음악<span class="count">1</span></a></li>
+                                            <li><a href="javascript:void(0)">건축/설계<span class="count">1</span></a></li>
+                                            <li><a href="javascript:void(0)">건축/설계<span class="count">1</span></a></li>
+                                            <li><a href="javascript:void(0)">건축/설계<span class="count">1</span></a></li>
+                                            <li><a href="javascript:void(0)">건축/설계<span class="count">1</span></a></li>
+                                            <li><a href="javascript:void(0)">건축/설계<span class="count">1</span></a></li>
+                                        </ul>
+                                        <div class="btn-tab-wrap">
+                                            <button class="btn-tab ico-1depth-close">열기</button>
+                                        </div>
+
+                                        <div class="tab-content">
+                                            <div>
+                                                <ul class="list-sort">
+                                                    <li>
+                                                        <label class="rd-sort-btn">
+                                                            <input type="radio" name="sortType-1" id="newTy" checked>
+                                                            <span class="txt">최신순</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="rd-sort-btn">
+                                                            <input type="radio" name="sortType-1" id="recomTy">
+                                                            <span class="txt">과거순</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="rd-sort-btn">
+                                                            <input type="radio" name="sortType-1" id="viewTy">
+                                                            <span class="txt">가나다순</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <ul class="box-thumb-list column-3">
+                                                    <li class="box-thumb-card">
+                                                        <a href="#">
+                                                            <div class="box-conts">
+                                                                <div class="box-header">
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">Kiu기우쌤</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box-txt-wrap">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">심리테스트</span>
+                                                                    </div>
+                                                                    <p class="main-txt">I가 있네, 친구없지? MBTI 환상과 환장</p>
+                                                                    <span class="sub-txt">MBTI 환상의 케미, 환장의 케미</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-bg">
+                                                                <video muted="" autoplay="" loop="" playsinline="" preload="auto">
+                                                                    <source src="../../../assets/web/images/temp/temp-video.mp4">
+                                                                </video>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-thumb-card">
+                                                        <a href="#">
+                                                            <div class="box-conts">
+                                                                <div class="box-header">
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">데일리 헬스</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box-txt-wrap">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">헬시라이프</span>
+                                                                    </div>
+                                                                    <p class="main-txt">운동에 진심인 이들의 운동루틴운동에 진심인 이들의 운동루틴</p>
+                                                                    <span class="sub-txt">일상에 활력을 불어넣기 위한 운동 루틴일상에 활력을 불어넣기 위한 운동 루틴</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-bg">
+                                                                <img src="../../../assets/web/images/temp/temp-story-col3-0.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-thumb-card">
+                                                        <a href="#">
+                                                            <div class="box-conts">
+                                                                <div class="box-header">
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">딱일분만</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box-txt-wrap">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">세라젬라이프</span>
+                                                                    </div>
+                                                                    <p class="main-txt">안마의자도 가전테리어가 대세</p>
+                                                                    <span class="sub-txt">디자인과 실용성 모두 갖췄다</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-bg">
+                                                                <img src="../../../assets/web/images/temp/temp-story-col3-1.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-thumb-card">
+                                                        <a href="#">
+                                                            <div class="box-conts">
+                                                                <div class="box-header">
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">Kiu기우쌤</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box-txt-wrap">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">심리테스트</span>
+                                                                    </div>
+                                                                    <p class="main-txt">I가 있네, 친구없지? MBTI 환상과 환장</p>
+                                                                    <span class="sub-txt">MBTI 환상의 케미, 환장의 케미</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-bg">
+                                                                <video muted="" autoplay="" loop="" playsinline="" preload="auto">
+                                                                    <source src="../../../assets/web/images/temp/temp-video.mp4">
+                                                                </video>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-thumb-card">
+                                                        <a href="#">
+                                                            <div class="box-conts">
+                                                                <div class="box-header">
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">데일리 헬스</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box-txt-wrap">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">헬시라이프</span>
+                                                                    </div>
+                                                                    <p class="main-txt">운동에 진심인 이들의 운동루틴운동에 진심인 이들의 운동루틴</p>
+                                                                    <span class="sub-txt">일상에 활력을 불어넣기 위한 운동 루틴일상에 활력을 불어넣기 위한 운동 루틴</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-bg">
+                                                                <img src="../../../assets/web/images/temp/temp-story-col3-0.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-thumb-card">
+                                                        <a href="#">
+                                                            <div class="box-conts">
+                                                                <div class="box-header">
+                                                                    <div class="box-writer">
+                                                                        <span class="writer-thumb">
+                                                                            <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                                        </span>
+                                                                        <span class="writer-nick">딱일분만</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box-txt-wrap">
+                                                                    <div class="chips-wrap">
+                                                                        <span class="chip-label chip-label-sm">세라젬라이프</span>
+                                                                    </div>
+                                                                    <p class="main-txt">안마의자도 가전테리어가 대세</p>
+                                                                    <span class="sub-txt">디자인과 실용성 모두 갖췄다</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-bg">
+                                                                <img src="../../../assets/web/images/temp/temp-story-col3-1.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-section">
+                                    <div class="box-section-head">
+                                        <h3>최근 본 콘텐츠 <span class="count">5</span></h3>
+                                        <ul class="list-sort">
+                                            <li>
+                                                <label class="rd-sort-btn">
+                                                    <input type="radio" name="sortType-3" id="newTy" checked>
+                                                    <span class="txt">최신순</span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="rd-sort-btn">
+                                                    <input type="radio" name="sortType-3" id="recomTy">
+                                                    <span class="txt">과거순</span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="rd-sort-btn">
+                                                    <input type="radio" name="sortType-3" id="viewTy">
+                                                    <span class="txt">가나다순</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="box-thumb-list column-3">
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">바리스타아카데미바리스타아카데미바리스타아카데미</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">홈라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">지속가능한 라테는 말이야</p>
+                                                        <span class="sub-txt">카페라떼, 얼마나 알고 계세요?</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-3.png" alt="">
+                                                </div>
+                                            </a>
+                                            <span class="btn-act-bookmark">
+                                                <input type="checkbox" id="bookmark_story_4">
+                                                <label for="bookmark_story_4">
+                                                    북마크
+                                                </label>
+                                            </span>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">바리스타아카데미바리스타아카데미바리스타아카데미</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">홈라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">해독이 필요한 시간</p>
+                                                        <span class="sub-txt">카페라떼, 얼마나 알고 계세요?</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-4.png" alt="">
+                                                </div>
+                                            </a>
+                                            <span class="btn-act-bookmark">
+                                                <input type="checkbox" id="bookmark_story_5">
+                                                <label for="bookmark_story_5">
+                                                    북마크
+                                                </label>
+                                            </span>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">데일리 헬스</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">헬시라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">운동에 진심인 이들의 운동루틴운동에 진심인 이들의 운동루틴</p>
+                                                        <span class="sub-txt">일상에 활력을 불어넣기 위한 운동 루틴일상에 활력을 불어넣기 위한 운동 루틴</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-0.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">딱일분만</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">세라젬라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">안마의자도 가전테리어가 대세</p>
+                                                        <span class="sub-txt">디자인과 실용성 모두 갖췄다</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-1.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="box-thumb-card">
+                                            <a href="#">
+                                                <div class="box-conts">
+                                                    <div class="box-header">
+                                                        <div class="box-writer">
+                                                            <span class="writer-thumb">
+                                                                <img src="../../../assets/web/images/temp/temp-thumb.png" alt="">
+                                                            </span>
+                                                            <span class="writer-nick">바리스타아카데미바리스타아카데미바리스타아카데미</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-txt-wrap">
+                                                        <div class="chips-wrap">
+                                                            <span class="chip-label chip-label-sm">홈라이프</span>
+                                                        </div>
+                                                        <p class="main-txt">겨울의 맛을 담은 티타임 플레이스</p>
+                                                        <span class="sub-txt">카페라떼, 얼마나 알고 계세요?</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box-bg">
+                                                    <img src="../../../assets/web/images/temp/temp-story-col3-0.png" alt="">
+                                                </div>
+                                            </a>
+                                            <span class="btn-act-bookmark">
+                                                <input type="checkbox" id="bookmark_story_6">
+                                                <label for="bookmark_story_6">
+                                                    북마크
+                                                </label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('./pages/web/include/footer.html')
+        </div>
+
+        @@include('./pages/web/include/scriptImport.html')
+    </body>
+</html>

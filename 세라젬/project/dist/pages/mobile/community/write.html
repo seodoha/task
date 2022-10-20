@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        		<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+	<meta name="description" content="Ceragem">
+	<meta name="keywords" content="Ceragem">
+	<meta name="naver-site-verification" content="" />
+	<meta name="format-detection" content="telephone=no">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Ceragem">
+	<meta property="og:description" content="Ceragem">
+	<meta property="og:url" content="">
+	<title>Ceragem</title>
+    <link rel="shortcut icon" href="../../../assets/mobile/images/common/favicon.ico" />
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../../../assets/mobile/images/common/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../assets/mobile/images/common/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/mobile/images/common/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/mobile/images/common/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="../../../assets/mobile/images/common/apple-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/mobile/images/common/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../assets/mobile/images/common/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../assets/mobile/images/common/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../assets/mobile/images/common/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../assets/mobile/images/common/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/mobile/images/common/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../assets/mobile/images/common/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../assets/mobile/images/common/apple-icon-60x60.png">
+	<link href="../../../assets/mobile/css/common.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="sub-page-header">
+                <div class="left">
+                    <button class="ico-back">뒤로가기</button>
+                </div>
+                <div class="right">
+                    <button class="btn-xs btn-white">불러오기 <span>2</span></button>
+                    <button class="btn-xs btn-white">임시저장</button>
+                    <button class="btn-xs btn-black" disabled>등록</button>
+                    <!-- <button class="btn-xs btn-black">등록</button> -->
+                </div>
+            </div>
+
+            <div id="container">
+                <section id="community" class="container-wrap">
+                    <div class="layout-write-wrap">
+                        <div class="write-header">
+                            <div class="inner-wrap">
+                                <div class="box-board-head">
+                                    <div class="type-select">
+                                        <div class="box-select-wrap">
+                                            <select>
+                                                <option value="" selected>게시판 선택</option>
+                                                <option value="">테스트1</option>
+                                                <option value="">테스트2</option>
+                                                <option value="">테스트3</option>
+                                                <option value="">테스트4</option>
+                                                <option value="">테스트5</option>
+                                                <option value="">테스트6</option>
+                                                <option value="">테스트7</option>
+                                                <option value="">테스트8</option>
+                                            </select>
+                                        </div>
+                                        <div class="box-select-wrap">
+                                            <select>
+                                                <option value="" selected>말머리 선택</option>
+                                                <option value="">테스트1</option>
+                                                <option value="">테스트2</option>
+                                                <option value="">테스트3</option>
+                                                <option value="">테스트4</option>
+                                                <option value="">테스트5</option>
+                                                <option value="">테스트6</option>
+                                                <option value="">테스트7</option>
+                                                <option value="">테스트8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="main-tit" title="제목 입력" placeholder="제목을 입력하세요">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="write-contents">
+                            <div class="inner-wrap">
+                                <!--에디터영역-->
+                                <div class="box-edit-wrap">
+                                    <!--블록단위별 스타일 퍼블리싱-->
+                                    <!--
+                                        블록 추가 시 'module-container' 클래스가 붙은 div 추가
+                                            + 영상 블록 추가 시 'video-module' 클래스 추가
+                                            + 이미지 블록 추가 시 'img-module' 클래스 추가
+                                            + 지도 블록 추가 시 'map-module' 클래스 추가
+                                            + 투표 블록 추가 시 'vote-module' 클래스 추가
+                                    -->
+
+                                    <div class="edit-input-textarea">
+                                        <textarea placeholder="본문을 입력하세요."></textarea>
+                                    </div>
+
+                                </div>
+                                <!--태그 입력-->
+                                <div class="chips-wrap edit-chips">
+                                    <div class="chips-editable">
+                                        <div class="edit-input-wrap">
+                                            <span class="input-hashtag">#</span>
+                                            <input type="text" class="chip-edit" placeholder="태그입력">
+                                        </div>
+                                        <div id="input-width-calc">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="bottom-bar write-bottom-bar">
+    <div class="left">
+        <button class="ico-post-img">이미지 추가</button>
+        <button class="ico-post-mov">영상 추가</button>
+        <button class="ico-post-vote">투표 추가</button>
+    </div>
+    <button class="ico-guide-black">가이드</button>
+</div>
+
+        </div>
+
+        <script src="../../../assets/mobile/js/lib/jquery.import.js"></script>
+    </body>
+</html>

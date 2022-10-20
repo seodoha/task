@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap" class="full-wrap">
+            <div class="sub-page-header shadow-bg">
+                <div class="left">
+                    <button class="ico-back-white">뒤로가기</button>
+                </div>
+                <div class="right">
+                    <button class="ico-declare-white">더보기</button>
+                </div>
+            </div>
+
+            <div id="container">
+                <section id="story" class="container-wrap user-home">
+                    <div class="page-layout-header sub-visual">
+                        <div class="box-bg empty"> <!--비어있을시 empty 클래스 추가-->
+                        </div>
+                    </div>
+                    <div class="page-layout-contents">
+                        <div class="inner-wrap">
+                            <div class="writer-info-head">
+                                <div class="thumb">
+                                    <img src="../../../assets/mobile/images/temp/writer-profile.png" alt="">
+                                </div>
+                                <strong class="nick">고작가</strong>
+                                <span class="follower">팔로워 <em>1,234</em></span>
+                                <span class="right">
+                                    <button class="ico-share-gray">공유하기</button>
+                                    <div class="box-btn">
+                                        <input id="check1" type="checkbox" class="input-check">
+                                        <label for="check1" class="btn-xs btn-white btn-subscribe">
+                                            <span class="unchecked">팔로우</span>
+                                            <span class="checked">팔로잉</span>
+                                        </label>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="writer-info-contents">
+                                <div class="tab-wrap tab-ctrl">
+                                    <ul class="tab-list tab-list-line">
+                                        <!-- 활성화 시 on class 추가 -->
+                                        <li><a href="javascript:void(0)" class="on" title="현재 탭" aria-selected="true" role="tab">소개</a></li>
+                                        <li><a href="javascript:void(0)" title="스토리">스토리</a></li>
+                                        <li><a href="javascript:void(0)" title="커뮤니티">커뮤니티</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <!--소개-->
+                                        <div aria-hidden="false">
+                                            <div class="box-cnt">
+                                                <strong class="tit">소개</strong>
+                                                <p class="txt-empty">소개가 없습니다.</p>
+                                            </div>
+                                            <div class="box-cnt">
+                                                <strong class="tit">상세 프로필</strong>
+                                                <p class="txt-empty">프로필이 없습니다.</p>
+                                            </div>
+                                            <div class="box-cnt">
+                                                <strong class="tit">관심 키워드</strong>
+                                                <p class="txt-empty">관심 키워드가 없습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!--스토리-->
+                                        <div aria-hidden="true">
+                                            <div class="box-noresult ty-small">
+                                                <div class="box-lottie">
+                                                    <div id="not-search" class="lottie"></div>
+                                                </div>
+                                                <strong class="empty-tit">
+                                                    등록된 콘텐츠가 없습니다.
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <!--커뮤니티-->
+                                        <div aria-hidden="true">
+                                            <div class="box-noresult ty-small">
+                                                <div class="box-lottie">
+                                                    <div id="not-board" class="lottie"></div>
+                                                </div>
+                                                <strong class="empty-tit">
+                                                    등록된 게시물이 없습니다.
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>

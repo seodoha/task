@@ -1,0 +1,49 @@
+/*===================================================================
+* INFORMATION: ;
+* -------------------------------------------------------------------
+* @File Name: common.scss
+* @Description : css 랜더링용
+* @Create Date: 2022-03-11
+* @Last Update Date: N/A
+* @History: N/A
+* ====================================================================*/
+
+// base
+@import './base/font-family';
+@import './base/variables';
+@import './base/mixins';
+@import './base/reset';
+
+// components
+@import './components/accodion';
+@import './components/buttons';
+@import './components/input';
+@import './components/list';
+@import './components/popup';
+@import './components/tabs';
+@import './components/chips';
+@import './components/slider';
+
+// layouts
+@import './layouts/bottomNavi';
+@import './layouts/footer';
+@import './layouts/gnb';
+@import './layouts/header';
+@import './layouts/layout';
+
+// lib
+@import './lib/lib';
+
+// views
+@import './views/community';
+@import './views/story';
+@import './views/welcafe';
+@import './views/main';
+@import './views/event';
+@import './views/mypage';
+@import './views/etc';
+@import './views/search';
+@import './views/login';
+
+// response
+@import 'response';

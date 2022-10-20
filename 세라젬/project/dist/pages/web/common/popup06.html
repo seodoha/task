@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        		<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Ceragem">
+	<meta name="keywords" content="Ceragem">
+	<meta name="naver-site-verification" content="" />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Ceragem">
+	<meta property="og:description" content="Ceragem">
+	<meta property="og:url" content="">
+	<title>Ceragem</title>
+    <link rel="shortcut icon" href="../../../assets/web/images/common/favicon.ico" />
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../../../assets/web/images/common/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../assets/web/images/common/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/web/images/common/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/web/images/common/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="../../../assets/web/images/common/apple-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/web/images/common/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../assets/web/images/common/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../assets/web/images/common/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../assets/web/images/common/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../assets/web/images/common/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/web/images/common/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../assets/web/images/common/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../assets/web/images/common/apple-icon-60x60.png">
+	<link href="../../../assets/web/css/common.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="vote-add">팝업 오픈</button>
+        </div>
+
+        <!--관심 커뮤니티 설정 팝업-->
+        <div id="vote-add" class="layer-popup-wrap">
+            <div class="layer-popup sz-medium">
+                <div class="popup-header">
+                    <h4 class="tit">투표</h4>
+                    <span class="right">
+                        <button class="ico-popup-close popup-close">닫기</button>
+                    </span>
+                </div>
+                <div class="popup-body">
+                    <div class="vote-pop-wrap">
+                        <div class="box">
+                            <label class="tit">투표 제목</label>
+                            <div class="text-input-wrap">
+                                <div class="box-input">
+                                    <input type="text" placeholder="투표 제목 입력" title="투표 제목">
+                                    <button class="ico-search-delete">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box vote-list-wrap">
+                            <div class="head">
+                                <strong class="tit">투표 항목</strong>
+                                <button class="btn-add">항목 추가</button>
+                            </div>
+                            <ul class="vote-list">
+                                <li>
+                                    <div class="text-input-wrap">
+                                        <div class="box-input">
+                                            <span class="count">1</span>
+                                            <input type="text" placeholder="투표 항목 입력" title="투표 항목">
+                                            <button class="ico-search-delete">삭제</button>
+                                            <button class="ico-list-delete">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="text-input-wrap">
+                                        <div class="box-input">
+                                            <span class="count">2</span>
+                                            <input type="text" placeholder="투표 항목 입력" title="투표 항목">
+                                            <button class="ico-search-delete">삭제</button>
+                                            <button class="ico-list-delete">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="text-input-wrap">
+                                        <div class="box-input">
+                                            <span class="count">3</span>
+                                            <input type="text" placeholder="투표 항목 입력" title="투표 항목">
+                                            <button class="ico-search-delete">삭제</button>
+                                            <button class="ico-list-delete">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="text-input-wrap">
+                                        <div class="box-input">
+                                            <span class="count">4</span>
+                                            <input type="text" placeholder="투표 항목 입력" title="투표 항목">
+                                            <button class="ico-search-delete">삭제</button>
+                                            <button class="ico-list-delete">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <span class="btn-check">
+                                <input type="checkbox" id="chkall">
+                                <label for="chkall"><span>복수 선택 허용</span></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <button class="btn-md btn-white md-ripples ripples-dark">취소</button>
+                    <button class="btn-md md-ripples ripples-light" disabled>첨부</button>
+                    <!-- <button class="btn-md btn-black md-ripples ripples-light">첨부</button> -->
+                </div>
+            </div>
+        </div>
+
+        <script src="../../../assets/web/js/lib/jquery.import.js"></script>
+    </body>
+</html>

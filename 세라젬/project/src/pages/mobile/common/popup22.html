@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/mobile/include/head.html',{
+        pageTitle : '세라젬'
+	})
+    </head>
+    <body>
+        <div id="wrap">
+            <button class="btn-more" data-pop="test-layer01">팝업 오픈</button>
+        </div>
+
+        <div id="test-layer01" class="layer-popup-wrap">
+            <div class="layer-popup">
+                <div class="popup-header emptyTit">
+                    <button class="ico-popup-close popup-close">닫기</button>
+                </div>
+                <div class="popup-body">
+                    <strong class="pop-sub-tit">
+                        고객님의 정보와 일치하는<br>유전자 분석결과가 없습니다.
+                    </strong>
+                    <p class="pop-normal-txt">
+                        유전자 검사를 진행했으나 결과를 확인하실 수 없는 경우 검사기관으로 문의해주세요.<br>
+                        검사기간 [070-4435-8118]
+                    </p>
+                    <p class="pop-normal-txt">
+                        유전자 검사를 진행하지 않았으나 검사에 관심이 있으신 경우 문의해 주세요.<br>
+                        제품문의 [1522-4422]
+                    </p>
+                </div>
+                <div class="popup-footer">
+                    <button class="btn-sm btn-black md-ripples ripples-light popup-close">확인</button>
+                </div>
+            </div>
+        </div>
+
+        @@include('./pages/mobile/include/scriptImport.html')
+    </body>
+</html>
+
+
+
+
+
+
+
