@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/include/head.html')
+    </head>
+    <body>
+        <div id="wrap" class="sub-wrap webtoon">
+            <!-- header -->
+            @@include('./pages/include/header.html')
+
+            <!-- container -->
+            <div id="container">
+                <div class="webtoon-view-container">
+                    <div class="view-header">
+                        <a href="/iwest/pages/webtoon/list.html" class="btn-back">뒤로가기</a>
+                        <span class="ep">제 3화</span>
+                        <strong class="ep-tit">한국전력주식회사의 탄생과 전원개발 5개년계획</strong>
+                    </div>
+                    <div class="view-body">
+                        <img src="../../assets/images/webtoon/ep0301.jpg" alt="">
+                        <img src="../../assets/images/webtoon/ep0302.jpg" alt="">
+                        <img src="../../assets/images/webtoon/ep0303.jpg" alt="">
+                        <img src="../../assets/images/webtoon/ep0304.jpg" alt="">
+                        <img src="../../assets/images/webtoon/ep0305.jpg" alt="">
+                        <img src="../../assets/images/webtoon/ep0306.jpg" alt="">
+                        <img src="../../assets/images/webtoon/ep0307.jpg" alt="">
+                        <img src="../../assets/images/webtoon/ep0308.jpg" alt="">
+                        <img src="../../assets/images/webtoon/ep0309.jpg" alt="">
+                        <img src="../../assets/images/webtoon/ep0310.jpg" alt="">
+                        <img src="../../assets/images/webtoon/ep0311.jpg" alt="">
+                    </div>
+                    <div class="view-footer">
+                        <button class="btn-share" target-layer-bottom-open="shareLayer">공유</button>
+                        <div class="paging-nav">
+                            <a href="/iwest/pages/webtoon/ep02.html" class="btn-prev">뒤로가기</a>
+                            <a href="/iwest/pages/webtoon/ep04.html" class="btn-next">앞으로가기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            @@include('./pages/include/footer.html')
+        </div>
+
+        <div id="shareLayer" class="layer">
+            <div class="bottom-pop layer-pop">
+                <button class="btn-pop-close" target-layer-bottom-close="shareLayer">닫기</button>
+                <div class="pop-head">
+                    <strong class="pop-tit">공유하기</strong>
+                </div>
+                <div class="pop-cnt">
+                    <ul class="share-list">
+                        <li><a href="#" onclick="uiCommon.share.sns('facebook');return false;" class="sns-facebook" target="_self" title="페이스북 새창열림">페이스북</a></li>
+                        <li><a href="#" onclick="uiCommon.share.sns('band');return false;" class="sns-band" target="_self" title="네이버 새창열림">네이버 밴드</a></li>
+                        <li><a href="#" onclick="uiCommon.share.copy();return false;" class="copy-url">url 복사</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- script import -->
+        @@include('./pages/include/scriptImport.html', {pageMain : false,})
+        
+    </body>
+</html>

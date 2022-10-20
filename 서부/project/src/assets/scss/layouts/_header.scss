@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+// ---------------------------------------------------------------
+// Layouts > Header
+// ---------------------------------------------------------------
+header {position: fixed;top: 0;max-width: 375px;width: 100%;z-index: 98;font-size: 0;transition: transform 0.3s;
+    .inner {padding: 1.5rem 2.5rem;
+        .logo {display: inline-block;position: relative;width: 9.2rem;font-size: 0;z-index: 1;
+            img {
+                .white {display: none;}
+            }
+        }
+        .btn-hamburger {position: absolute;right: 2.5rem;top: 50%;transform: translateY(-50%);width: 3.6rem;height: 3.6rem;font-size: 0;z-index: 1;
+            &::before,
+            &::after {content: '';position: absolute;left: 50%;width: 3.2rem;height: 0.2rem;margin-left: -1.6rem;background-color: #fff;border-radius: 10px;transition: transform 0.3s, top 0.3s 0.3s, bottom 0.3s 0.3s;}
+            &::before {top: 1rem;}
+            &::after {bottom: 1rem;}
+            &.active {
+                &::before,
+                &::after {transition: top 0.3s, bottom 0.3s, transform 0.3s 0.3s;}
+                &::before {transform: rotate(45deg);top: calc(50% - 0.1rem);}
+                &::after {transform: rotate(-45deg);bottom: calc(50% - 0.1rem);}
+            }
+        }
+        .moMenu {display: flex;position: fixed;top: 0;left: 50%;transform: translateX(-50%);max-width: 375px;width: 100%;height: 100%;padding: 14rem 4rem 3.5rem 2.5rem;background-color: #111;z-index: -1;opacity: 0;visibility: hidden;transition: opacity 0.2s;
+            &.open {z-index: 0;opacity: 1;visibility: visible;
+                #gnb li,
+                .box-down {opacity: 1;transform: translateY(0);}
+            }
+            #gnb {
+                li ~ li {margin-top: 2rem;}
+                li {opacity: 0;transform: translateY(2rem);transition: all 0.3s;
+                    a {display: inline-flex;
+                        span {display: inline-block;margin-right: 2rem;padding-top: 0.2rem;font-size: 2.4rem;font-family: niagara;font-weight: 400;color: #fff;}
+                        strong {position: relative;font-size: 5.2rem;font-family: rift;font-weight: 700;color: #fff;line-height: 1.1;}
+                        &.active {
+                            // strong {text-decoration-line: line-through;text-decoration-color: #dd141c;}
+                            strong::before {content: '';position: absolute;left: 0;top: 50%;transform: translateY(-50%);width: 100%;height: 4px;background-color: #dd141c;z-index: -1;}
+                        }
+                    }
+                    &:nth-of-type(1) {transition-delay: 0.5s;}
+                    &:nth-of-type(2) {transition-delay: 0.4s;}
+                    &:nth-of-type(3) {transition-delay: 0.3s;}
+                }
+            }
+            .box-down {position: absolute;left: 3.5rem;bottom: 3.5rem;opacity: 0;transform: translateY(2rem);transition: all 0.3s;transition-delay: 0.2s;
+                a {font-size: 20px;font-family: rift;font-weight: 700;color: #dd141c;letter-spacing: 2px;}
+                span {display: block;font-size: 1.6rem;color: #fff;
+                    strong {font-family: "pre_bold";}
+                }
+            }
+        }
+    }
+}

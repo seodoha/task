@@ -1,0 +1,26 @@
+@charset "UTF-8";
+// ---------------------------------------------------------------
+// 최종 SCSS 파일 - 각 요소에 적용될 SCSS를 한곳에 모아서 관리함
+// ---------------------------------------------------------------
+
+// 공통으로 적용되는 스타일
+@import "base/font-family";
+@import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+@import "base/helpers";
+
+/* layouts - 웹페이지 전체 레이아웃에 대한 스타일 */
+@import "layouts/layout";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/component";
+
+/*  plugins - 모션 등 플러그 인 관련 스타일 */
+@import "plugins/override";
+
+/*  pages - 로그인 등 개별로 존재하는 화면 스타일*/
+@import "pages/main";
+@import "pages/timeline";
+@import "pages/webtoon";
+@import "pages/story";

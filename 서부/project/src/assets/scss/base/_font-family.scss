@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/* 기본 font */
+@font-face {
+	font-family: 'pre_regular';
+	font-style: normal;
+	font-weight: normal;
+	src:url('webfonts/Pretendard-Regular.woff2') format('woff2'),
+	url('webfonts/Pretendard-Regular.woff') format('woff'),
+}
+@font-face {
+	font-family: 'pre_medium';
+	font-style: normal;
+	font-weight: normal;
+	src:url('webfonts/Pretendard-Medium.woff2') format('woff2'),
+	url('webfonts/Pretendard-Medium.woff') format('woff'),
+}
+@font-face {
+	font-family: 'pre_bold';
+	font-style: normal;
+	font-weight: normal;
+	src:url('webfonts/Pretendard-Bold.woff2') format('woff2'),
+	url('webfonts/Pretendard-Bold.woff') format('woff'),
+}

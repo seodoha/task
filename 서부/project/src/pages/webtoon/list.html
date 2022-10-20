@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./pages/include/head.html')
+    </head>
+    <body>
+        <div id="wrap" class="sub-wrap webtoon">
+            <!-- header -->
+            @@include('./pages/include/header.html')
+
+            <!-- container -->
+            <div id="container">
+                <div class="pg-tit-box">
+                    <h2>WEBTOON</h2>
+                    <button class="btn-share" target-layer-bottom-open="shareLayer">공유</button>
+                </div>
+                <ul class="webtoon-list">
+                    <li>
+                        <a href="/iwest/pages/webtoon/ep01.html">
+                            <img src="../../assets/images/webtoon/img_list01.png" alt="">
+                            <div class="box-txt">
+                                <span class="num">1</span>
+                                <strong class="tit">전기의 시작과 <br>최초의 화력발전소</strong>
+                                <!-- <dl>
+                                    <dt>전기의 시작과 최초의 화력발전소</dt>
+                                    <dd>조그만 전구에서 쏟아지는 불빛에 <br>많은 사람들은 경탄을 금치 못했다.</dd>
+                                </dl> -->
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/iwest/pages/webtoon/ep02.html">
+                            <img src="../../assets/images/webtoon/img_list02.png" alt="">
+                            <div class="box-txt">
+                                <span class="num">2</span>
+                                <strong class="tit">5.14단전과 <br>화력발전의 중요성</strong>
+                                <!-- <dl>
+                                    <dt>5.14단전과 화력발전의 중요성</dt>
+                                    <dd>개화운동이 확산되면서 전기사업이 <br>본격적으로 전개됐다.</dd>
+                                </dl> -->
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/iwest/pages/webtoon/ep03.html">
+                            <img src="../../assets/images/webtoon/img_list03.png" alt="">
+                            <div class="box-txt">
+                                <span class="num">3</span>
+                                <strong class="tit">한국전력주식회사의 탄생과 전원개발 5개년계획</strong>
+                                <!-- <dl>
+                                    <dt>한국전력주식회사의 탄생과 전원개발 5개년계획</dt>
+                                    <dd>개화운동이 확산되면서 전기사업이 <br>본격적으로 전개됐다.</dd>
+                                </dl> -->
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/iwest/pages/webtoon/ep04.html">
+                            <img src="../../assets/images/webtoon/img_list04.png" alt="">
+                            <div class="box-txt">
+                                <span class="num">4</span>
+                                <strong class="tit">장기전원개발계획과 국내 발전소 건설의 성장</strong>
+                                <!-- <dl>
+                                    <dt>장기전원개발계획과 국내 발전소 건설의 성장</dt>
+                                    <dd>개화운동이 확산되면서 전기사업이 <br>본격적으로 전개됐다.</dd>
+                                </dl> -->
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/iwest/pages/webtoon/ep05.html">
+                            <img src="../../assets/images/webtoon/img_list05.png" alt="">
+                            <div class="box-txt">
+                                <span class="num">5</span>
+                                <strong class="tit">화력발전의 <br>오늘과 내일</strong>
+                                <!-- <dl>
+                                    <dt>화력발전의 오늘과 내일</dt>
+                                    <dd>개화운동이 확산되면서 전기사업이 <br>본격적으로 전개됐다.</dd>
+                                </dl> -->
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- footer -->
+            @@include('./pages/include/footer.html')
+        </div>
+
+        <div id="shareLayer" class="layer">
+            <div class="bottom-pop layer-pop">
+                <button class="btn-pop-close" target-layer-bottom-close="shareLayer">닫기</button>
+                <div class="pop-head">
+                    <strong class="pop-tit">공유하기</strong>
+                </div>
+                <div class="pop-cnt">
+                    <ul class="share-list">
+                        <li><a href="#" onclick="uiCommon.share.sns('facebook');return false;" class="sns-facebook" target="_self" title="페이스북 새창열림">페이스북</a></li>
+                        <li><a href="#" onclick="uiCommon.share.sns('band');return false;" class="sns-band" target="_self" title="네이버 새창열림">네이버 밴드</a></li>
+                        <li><a href="#" onclick="uiCommon.share.copy();return false;" class="copy-url">url 복사</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- script import -->
+        @@include('./pages/include/scriptImport.html', {pageMain : false,})
+        
+    </body>
+</html>

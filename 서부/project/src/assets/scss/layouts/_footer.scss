@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+// ---------------------------------------------------------------
+// Layouts > Footer
+// ---------------------------------------------------------------
+footer {position: relative;background-color: #eeeae6;border-top: 1px solid #d9d9d9;
+    .btn-top {position: absolute;top: 3.2rem;right: 2.5rem;width: 3rem;height: 3rem;background: url('../../assets/images/common/btn_top.svg') no-repeat center;background-size: 100%;font-size: 0;z-index: 1;}
+    .inner {padding: 3rem 2.5rem 4rem;
+        .ft-contact {display: block;padding-right: 7.4rem;font-size: 1.4rem;color: #111;
+            a {color: #111;}
+        }
+        ul {display: flex;margin: 3rem 0;
+            li ~ li {margin-left: 1.7rem;}
+            li {font-size: 0;
+                a {width: 2.6rem;
+                    img {width: 100%;}
+                }
+            }
+        }
+        .copy {display: block;font-size: 1.1rem;line-height: 1.64;color: #666;}
+    }
+}

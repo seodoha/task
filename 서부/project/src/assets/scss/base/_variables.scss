@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+// ---------------------------------------------------------------
+// 프로젝트 전체에 적용되는 변수에 대해 정의합니다.
+// ---------------------------------------------------------------
+
+// Fonts
+$font-family: "pre_medium", "Malgun Gothic", "맑은 고딕", "돋움", Dotum, "굴림", Gulim, Tahoma, Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
+$line-height: 1.5;
+
+// Colors
+
+// Layout
+
+// Media query Breakpoints
+$wide : 1920px;
+$mainDesktop: 1440px;
+$desktop: 1280px;
+$mobile: 768px;
+
+// Vendor
+$vendors: webkit, moz, ms, o;
+
+// Popup Contents Scroll Height
+// $popHeight: 660px;
+// $popLargeHeight: 706px;
